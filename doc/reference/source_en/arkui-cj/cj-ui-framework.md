@@ -1323,10 +1323,10 @@ public static func getOrCreate(): LocalStorageInterOp
 |:----|:----|
 | [LocalStorageInterOp](#class-localstorageinterop) | The obtained or created LocalStorageInterOp object. |
 
-### func `prop`\<T>(String) where T \<: JSInteropType \<T>
+### func property\<T>(String) where T \<: JSInteropType \<T>
 
 ```cangjie
-public func `prop`<T>(propName: String): ObservedProperty<T> where T <: JSInteropType<T>
+public func property<T>(propName: String): ObservedProperty<T> where T <: JSInteropType<T>
 ```
 
 **Function:** For UI framework usage.

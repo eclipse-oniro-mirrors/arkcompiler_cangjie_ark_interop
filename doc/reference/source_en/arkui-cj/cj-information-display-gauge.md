@@ -45,7 +45,7 @@ public init(value!: Float64, min!: Float64 = 0.0, max!: Float64 = 100.0, child!:
 
 ```cangjie
 
-public func colors(value: Array<(ResourceColor, Float32)>): This
+public func colors(value: Array<(ResourceColor, Int32)>): This
 ```
 
 **Description:** Sets the colors of the gauge.
@@ -58,13 +58,13 @@ public func colors(value: Array<(ResourceColor, Float32)>): This
 
 | Name | Type | Required | Default | Description |
 |:---|:---|:---|:---|:---|
-| value | Array\<([ResourceColor](../BasicServicesKit/cj-apis-base.md#interface-resourcecolor),Float32)> | Yes | - | The colors of the gauge, supporting segmented color settings. |
+| value | Array\<([ResourceColor](../BasicServicesKit/cj-apis-base.md#interface-resourcecolor), Int32)> | Yes | - | The colors of the gauge, supporting segmented color settings. |
 
-### func colors(Array\<(LinearGradient,Float32)>)
+### func colors(Array\<(LinearGradient, Int32)>)
 
 ```cangjie
 
-public func colors(value: Array<(LinearGradient, Float32)>): This
+public func colors(value: Array<(LinearGradient, Int32)>): This
 ```
 
 **Description:** Sets the segmented gradient color groups for the gauge.
@@ -77,7 +77,7 @@ public func colors(value: Array<(LinearGradient, Float32)>): This
 
 | Name | Type | Required | Default | Description |
 |:---|:---|:---|:---|:---|
-| value | Array\<([LinearGradient](cj-information-display-datapanel.md),Float32)> | Yes | - | The gradient colors of the gauge, supporting segmented color settings (up to 9 groups). LinearGradient type is defined in the datapanel component, and Float32 represents the width range of the color segment. |
+| value | Array\<([LinearGradient](cj-information-display-datapanel.md),Int32)> | Yes | - | The gradient colors of the gauge, supporting segmented color settings (up to 9 groups). LinearGradient type is defined in the datapanel component, and Int32 represents the width range of the color segment. |
 
 ### func colors(ResourceColor)
 
@@ -256,11 +256,11 @@ public func trackShadow(radius!: Float64 = 20.0, offsetX!: Float64 = 5.0, offset
 | offsetX | Float64 | No | 5.0 | **Named parameter.** The X-axis offset. |
 | offsetY | Float64 | No | 5.0 | **Named parameter.** The Y-axis offset. |
 
-### func value(Float32)
+### func value(Float64)
 
 ```cangjie
 
-public func value(value: Float32): This
+public func value(value: Float64): This
 ```
 
 **Description:** Sets the data value of the gauge.
@@ -273,4 +273,4 @@ public func value(value: Float32): This
 
 | Name | Type | Required | Default | Description |
 |:---|:---|:---|:---|:---|
-| value | Float32 | Yes | - | The data value of the gauge, used to dynamically update the gauge's value.<br>Default: 0.0. |
+| value | Float64 | Yes | - | The data value of the gauge, used to dynamically update the gauge's value.<br>Default: 0.0. |

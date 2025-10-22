@@ -415,7 +415,7 @@ public class SpringBackAction {}
 #### func springBack()
 
 ```cangjie
-public func springBack()
+public func springBack(): Unit
 ```
 
 **Function:** Controls the rebound function before semi-modal page closure. Developers should call this when semi-modal rebound is required.

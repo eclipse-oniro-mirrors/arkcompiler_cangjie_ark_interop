@@ -219,7 +219,7 @@ class EntryView {
 
 ### Adding Callbacks Triggered Before and After Input Method Content Entry
 
-Before input method content entry, use [aboutToIMEInput](../../../reference/source_en/arkui-cj/cj-text-input-richeditor.md#func-abouttoimeinputcallbackricheditorinsertvaluebool) to trigger a callback. After input method content entry is completed, use [onIMEInputComplete](../../../reference/source_en/arkui-cj/cj-text-input-richeditor.md#func-onimeinputcompletecallbackricheditortextspanresultunit) to trigger a callback.
+Before input method content entry, use [aboutToImeInput](../../../reference/source_en/arkui-cj/cj-text-input-richeditor.md#func-abouttoimeinputcallbackricheditorinsertvaluebool) to trigger a callback. After input method content entry is completed, use [onImeInputComplete](../../../reference/source_en/arkui-cj/cj-text-input-richeditor.md#func-onimeinputcompletecallbackricheditortextspanresultunit) to trigger a callback.
 
 These callback mechanisms are suitable for intelligent input assistance. For example, before a user starts entering text, the callback can provide word suggestions. After the user completes input, the callback can perform automated error correction or format conversion.
 
@@ -244,11 +244,11 @@ class EntryView {
                     .onReady({=>
                         this.controller.addTextSpan(value:"Before input method content entry, trigger callback.\nAfter input method content entry is completed, trigger callback.")
                     })
-                    .aboutToIMEInput({value:   RichEditorInsertValue=>
+                    .aboutToImeInput({value:   RichEditorInsertValue=>
                         this.controller1.addTextSpan(value:"Before input method content entry, trigger callback:\n123")
                         return true;
                     })
-                    .onIMEInputComplete({value: RichEditorTextSpanResult=>
+                    .onImeInputComplete({value: RichEditorTextSpanResult=>
                         this.controller1.addTextSpan(value:"After input method content entry is completed, trigger callback:\n456")
                     }).width(200).height(200)
 

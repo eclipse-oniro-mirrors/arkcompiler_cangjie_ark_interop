@@ -218,7 +218,7 @@ class EntryView {
 
 ### 添加输入法输入内容前和完成输入后可触发的回调
 
-在添加输入法输入内容前，可以通过[aboutToIMEInput](../../../reference/source_zh_cn/arkui-cj/cj-text-input-richeditor.md#func-abouttoimeinputcallbackricheditorinsertvaluebool)触发回调。在输入法完成输入后，可以通过[onIMEInputComplete](../../../reference/source_zh_cn/arkui-cj/cj-text-input-richeditor.md#func-onimeinputcompletecallbackricheditortextspanresultunit)触发回调。
+在添加输入法输入内容前，可以通过[aboutToImeInput](../../../reference/source_zh_cn/arkui-cj/cj-text-input-richeditor.md#func-abouttoimeinputcallbackricheditorinsertvaluebool)触发回调。在输入法完成输入后，可以通过[onImeInputComplete](../../../reference/source_zh_cn/arkui-cj/cj-text-input-richeditor.md#func-onimeinputcompletecallbackricheditortextspanresultunit)触发回调。
 
 这两种回调机制适用于智能输入辅助。例如：在用户开始输入文本前，利用回调提供词汇联想，在用户完成输入后，利用回调执行自动化纠错或格式转换。
 
@@ -243,11 +243,11 @@ class EntryView {
                     .onReady({=>
                         this.controller.addTextSpan(content:"输入法输入内容前，触发回调。\n输入法完成输入后，触发回调。")
                     })
-                    .aboutToIMEInput({value:   RichEditorInsertValue=>
+                    .aboutToImeInput({value:   RichEditorInsertValue=>
                         this.controller1.addTextSpan(content:"输入法输入内容前，触发回调：\n123")
                         return true;
                     })
-                    .onIMEInputComplete({value: RichEditorTextSpanResult=>
+                    .onImeInputComplete({value: RichEditorTextSpanResult=>
                         this.controller1.addTextSpan(content:"输入法完成输入后，触发回调：\n456")
                     }).width(200).height(200)
 
