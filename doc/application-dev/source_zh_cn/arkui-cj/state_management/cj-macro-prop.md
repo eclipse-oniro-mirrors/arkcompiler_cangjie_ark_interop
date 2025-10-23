@@ -271,9 +271,9 @@ class CountDownComponent {
             // @Prop装饰的变量不会同步给父组件
             Button("Try again")
                 .margin(10)
-                .onClick {
+                .onClick({
                     evt => this.count -= this.costOfOneAttempt
-                }
+                })
         }
     }
 }
