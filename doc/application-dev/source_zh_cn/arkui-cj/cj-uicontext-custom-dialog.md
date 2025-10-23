@@ -4,7 +4,7 @@
 
 > **说明：**
 >
-> 弹出框（openCustomDialog）存在两种入参方式创建自定义弹出框：
+> 弹出框（[openCustomDialog](../../../reference/source_zh_cn/arkui-cj/cj-apis-uicontext-promptaction.md#func-opencustomdialogcustomdialogoptions-int32---unit)）存在两种入参方式创建自定义弹出框：
 >
 > - openCustomDialog（传参为CustomDialogOptions形式）：通过CustomDialogOptions封装内容可以与UI界面解耦，调用更加灵活，可以满足开发者的封装诉求。拥有更强的灵活性，弹出框样式是完全自定义的，且在弹出框打开之后可以使用updateCustomDialog方法动态更新弹出框的一些参数。
 >

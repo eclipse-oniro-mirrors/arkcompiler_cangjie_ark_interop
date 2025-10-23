@@ -120,7 +120,7 @@ class EntryView {
 
   ![Canvas2](figures/Canvas2.jpg)
 
-- 先单独定义path2d对象构造理想的路径，再通过调用CanvasRenderingContext2D对象和OffscreenCanvasRenderingContext2D对象的stroke接口或者fill接口进行绘制，具体使用可以参考path2d。
+- 先单独定义path2d对象构造理想的路径，再通过调用CanvasRenderingContext2D对象和OffscreenCanvasRenderingContext2D对象的stroke接口或者fill接口进行绘制，具体使用可以参考[path2d](../../../reference/source_zh_cn/arkui-cj/cj-canvas-drawing-path2d.md#class-path2d)。
 
      <!-- run -->
 
