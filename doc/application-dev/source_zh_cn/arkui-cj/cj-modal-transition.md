@@ -514,7 +514,6 @@ class EntryView {
                     CustomPopupOptions(
                         builder: bind(popupBuilder, this),
                         placement: Placement.Top,
-                        maskColor: Color(0x33000000),
                         popupColor: Color(0xf56c6c),
                         enableArrow: true,
                         autoCancel: true,

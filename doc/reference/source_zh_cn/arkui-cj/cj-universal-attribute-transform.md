@@ -8,10 +8,10 @@
 import kit.ArkUI.*
 ```
 
-## func rotate(?Float32, ?Float32, ?Float32, ?Float32, ?Length, ?Length)
+## func rotate(?Float64, ?Float64, ?Float64, ?Float64, ?Length, ?Length)
 
 ```cangjie
-public func rotate(x!: ?Float32 = None, y!: ?Float32 = None, z!: ?Float32 = None, angle!: ?Float32 = None,
+public func rotate(x!: ?Float64 = None, y!: ?Float64 = None, z!: ?Float64 = None, angle!: ?Float64 = None,
     centerX!: ?Length = None, centerY!: ?Length = None): T
 ```
 
@@ -32,10 +32,10 @@ public func rotate(x!: ?Float32 = None, y!: ?Float32 = None, z!: ?Float32 = None
 
 |参数名|类型|必填|默认值|说明|
 |:---|:---|:---|:---|:---|
-|x|?Float32|否|None|**命名参数。** 旋转轴向量x坐标。初始值:  0.0|
-|y|?Float32|否|None|**命名参数。** 旋转轴向量y坐标。初始值:  0.0|
-|z|?Float32|否|None|**命名参数。** 旋转轴向量z坐标。初始值:  1.0|
-|angle|?Float32|否|None|**命名参数。** 旋转角度。取值为正时相对于旋转轴方向顺时针转动，取值为负时相对于旋转轴方向逆时针转动。初始值:  0.0|
+|x|?Float64|否|None|**命名参数。** 旋转轴向量x坐标。初始值:  0.0|
+|y|?Float64|否|None|**命名参数。** 旋转轴向量y坐标。初始值:  0.0|
+|z|?Float64|否|None|**命名参数。** 旋转轴向量z坐标。初始值:  1.0|
+|angle|?Float64|否|None|**命名参数。** 旋转角度。取值为正时相对于旋转轴方向顺时针转动，取值为负时相对于旋转轴方向逆时针转动。初始值:  0.0|
 |centerX|?[Length](./cj-common-types.md#interface-length)|否|None|**命名参数。** 变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。初始值:  50.percent|
 |centerY|?[Length](./cj-common-types.md#interface-length)|否|None|**命名参数。** 变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。初始值:  50.percent|
 
@@ -125,25 +125,25 @@ class EntryView {
                 .width(120)
                 .height(50)
                 .backgroundColor(Color.Blue)
-            
+
             Text("旋转45度")
                 .width(120)
                 .height(50)
                 .backgroundColor(Color.Blue)
                 .rotate(angle: 45.0)
-            
+
             Text("缩放1.5倍")
                 .width(120)
                 .height(50)
                 .backgroundColor(Color.Green)
                 .scale(x: 1.5, y: 1.5)
-            
+
             Text("平移(50, 20)")
                 .width(120)
                 .height(50)
                 .backgroundColor(Color.Gray)
                 .translate(x: 50.vp, y: 20.vp)
-            
+
             Text("组合变换")
                 .width(120)
                 .height(50)

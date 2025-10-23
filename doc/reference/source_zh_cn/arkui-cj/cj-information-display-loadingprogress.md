@@ -2,7 +2,7 @@
 
 用于显示加载动效的组件。
 
-加载动效在组件不可见时停止，组件的可见状态基于[onVisibleAreaChange](./cj-ui-framework.md#func-onvisibleareachangearea-area-raitos-raitos---unit)处理，可见阈值raitos大于0即视为可见状态。
+加载动效在组件不可见时停止，组件的可见状态基于[onVisibleAreaChange](./cj-ui-framework.md#func-onvisibleareachangearea-area-ratios-ratios---unit)处理，可见阈值raitos大于0即视为可见状态。
 
 ## 导入模块
 

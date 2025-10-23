@@ -36,8 +36,8 @@ class View_Position {
                         .backgroundColor(0xff3333)
                         .alignRules(
                             AlignRuleOptions(
-                                 left: HorizontalAlignment("guideline1", HorizontalAlign.End),
-                                top: VerticalAlignment("guideline2", VerticalAlign.Top)
+                                 left: HorizontalAlignParam("guideline1", HorizontalAlign.End),
+                                top: VerticalAlignParam("guideline2", VerticalAlign.Top)
                             )
                         )
                         .id("Test_Row")

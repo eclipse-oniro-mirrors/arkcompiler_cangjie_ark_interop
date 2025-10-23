@@ -80,7 +80,7 @@ public func createWindow(config: Configuration): Window
 ## func shiftAppWindowFocus(Int32, Int32)
 
 ```cangjie
-public func shiftAppWindowFocus(sourceWindowId: Int32, targetWindowId: Int32): Unit
+public func shiftAppWindowFocus(sourceWindowID: Int32, targetWindowID: Int32): Unit
 ```
 
 **功能：** 将窗口焦点从源窗口转移到同一应用程序中的目标窗口。窗口焦点可以在主窗口和子窗口之间转移。
@@ -93,8 +93,8 @@ public func shiftAppWindowFocus(sourceWindowId: Int32, targetWindowId: Int32): U
 
 |参数名|类型|必填|默认值|说明|
 |:---|:---|:---|:---|:---|
-|sourceWindowId|Int32|是|-|焦点转移的源窗口ID。|
-|targetWindowId|Int32|是|-|焦点转移的目标窗口ID。|
+|sourceWindowID|Int32|是|-|焦点转移的源窗口ID。|
+|targetWindowID|Int32|是|-|焦点转移的目标窗口ID。|
 
 **异常：**
 
@@ -289,16 +289,16 @@ public init(
 ```cangjie
 public class Configuration {
     public var ctx: BaseContext
-    public var displayId: Int64
+    public var displayID: Int64
     public var name: String
-    public var parentId: Int64
+    public var parentID: Int64
     public var windowType: WindowType
     public init(
       name!: String,
       windowType!: WindowType,
       ctx!: BaseContext,
-      displayId!: Int64 = -1,
-      parentId!: Int64 = -1
+      displayID!: Int64 = -1,
+      parentID!: Int64 = -1
     )
 }
 ```
@@ -325,10 +325,10 @@ public var ctx: BaseContext
 
 **起始版本：** 22
 
-### var displayId
+### var displayID
 
 ```cangjie
-public var displayId: Int64
+public var displayID: Int64
 ```
 
 **功能：** 当前物理屏幕ID。
@@ -357,10 +357,10 @@ public var name: String
 
 **起始版本：** 22
 
-### var parentId
+### var parentID
 
 ```cangjie
-public var parentId: Int64
+public var parentID: Int64
 ```
 
 **功能：** 父窗口ID。
@@ -396,8 +396,8 @@ public init(
     name!: String,
     windowType!: WindowType,
     ctx!: BaseContext,
-    displayId!: Int64 = -1,
-    parentId!: Int64 = -1
+    displayID!: Int64 = -1,
+    parentID!: Int64 = -1
 )
 ```
 
@@ -414,8 +414,8 @@ public init(
 |name|String|是|-| **命名参数。** 窗口名称。|
 |windowType|[WindowType](#enum-windowtype)|是|-| **命名参数。** 窗口类型。|
 |ctx|[BaseContext](../AbilityKit/cj-apis-app-ability.md#class-basecontext)|是|-| **命名参数。** 当前应用上下文信息。|
-|displayId|Int64|否|-1| **命名参数。** 当前物理屏幕ID。|
-|parentId|Int64|否|-1| **命名参数。** 父窗口ID。|
+|displayID|Int64|否|-1| **命名参数。** 当前物理屏幕ID。|
+|parentID|Int64|否|-1| **命名参数。** 父窗口ID。|
 
 ## class Rect
 

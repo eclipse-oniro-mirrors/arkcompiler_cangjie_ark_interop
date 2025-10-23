@@ -210,7 +210,7 @@ public interface CommonMethod<T> {
     func onTouch(event: ?(TouchEvent) -> Unit): T
     func onHover(event: ?(Bool) -> Unit): T
     func onAreaChange(event: ?(Area, Area) -> Unit): T
-    func onVisibleAreaChange(raitos: ?Array<Float64>, event: ?(Bool, Float64) -> Unit): T
+    func onVisibleAreaChange(ratios: ?Array<Float64>, event: ?(Bool, Float64) -> Unit): T
     func onMouse(event: ?(MouseEvent) -> Unit): T
     func onKeyEvent(event: ?(KeyEvent) -> Unit): T
     func onFocus(event: ?() -> Unit): T
