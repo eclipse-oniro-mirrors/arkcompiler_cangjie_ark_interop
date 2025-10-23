@@ -63,10 +63,10 @@ public func aboutToDelete(callback: Callback<RichEditorDeleteValue, Bool>): This
 |:---|:---|:---|:---|:---|
 | callback | [Callback](../BasicServicesKit/cj-apis-base.md#type-Callback)\<[RichEditorDeleteValue](#class-richeditordeletevalue),Bool> | Yes | - | Callback function triggered before the input method deletes content.<br>[RichEditorDeleteValue](#class-richeditordeletevalue): Text span information where the content to be deleted resides.<br>true: The component performs the delete operation.<br>false: The component does not perform the delete operation. |
 
-### func aboutToIMEInput(Callback\<RichEditorInsertValue,Bool>)
+### func aboutToImeInput(Callback\<RichEditorInsertValue,Bool>)
 
 ```cangjie
-public func aboutToIMEInput(callback: Callback<RichEditorInsertValue, Bool>): This
+public func aboutToImeInput(callback: Callback<RichEditorInsertValue, Bool>): This
 ```
 
 **Function:** Triggers an event before the input method inputs content.
@@ -181,10 +181,10 @@ public func onDidChange(callback: OnDidChangeCallback): This
 |:---|:---|:---|:---|:---|
 | callback | [OnDidChangeCallback](#type-ondidchangecallback) | Yes | - | Callback function triggered after the component performs add or delete operations. The callback is not triggered if no actual text addition or deletion occurs. Parameter: Content range before and after the change. |
 
-### func onIMEInputComplete(Callback\<RichEditorTextSpanResult,Unit>)
+### func onImeInputComplete(Callback\<RichEditorTextSpanResult,Unit>)
 
 ```cangjie
-public func onIMEInputComplete(callback: Callback<RichEditorTextSpanResult, Unit>): RichEditor
+public func onImeInputComplete(callback: Callback<RichEditorTextSpanResult, Unit>): RichEditor
 ```
 
 **Function:** Triggers an event after the input method completes input.

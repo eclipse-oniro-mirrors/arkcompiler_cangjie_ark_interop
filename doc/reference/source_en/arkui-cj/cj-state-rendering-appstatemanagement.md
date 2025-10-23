@@ -30,10 +30,10 @@ public class AppStorage {}
 
 **Initial Version:** 21
 
-### static func `prop`\<T>(String)
+### static func property\<T>(String)
 
 ```cangjie
-public static func `prop`<T>(propName: String): ?ObservedProperty<T>
+public static func property<T>(propName: String): ?ObservedProperty<T>
 ```
 
 **Function:** Establishes a one-way property binding with the corresponding propName in AppStorage. If the given propName exists in AppStorage, it returns the one-way bound data corresponding to the propName in AppStorage. If the propName does not exist in AppStorage, it returns None. Modifications to the one-way bound data will not be synchronized back to AppStorage.
@@ -399,10 +399,10 @@ public init()
 
 **Since:** 21
 
-### func `prop`\<T>(String)
+### func property\<T>(String)
 
 ```cangjie
-public func `prop`<T>(propName: String): ?ObservedProperty<T>
+public func property<T>(propName: String): ?ObservedProperty<T>
 ```
 
 **Function:** If the given propName exists in LocalStorage, returns the one-way bound data corresponding to the propName attribute in LocalStorage. If propName does not exist in LocalStorage, returns None. Modifications to the one-way bound data will not be synchronized back to LocalStorage.

@@ -4998,7 +4998,7 @@ public class SpringBackAction {}
 ### func springBack()
 
 ```cangjie
-public func springBack()
+public func springBack(): Unit
 ```
 
 **功能：** 半模态页面关闭前控制回弹函数，开发者需要半模态回弹时调用。

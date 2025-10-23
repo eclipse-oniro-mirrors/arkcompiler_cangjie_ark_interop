@@ -146,10 +146,10 @@ public func onReady(callback: ?VoidCallback): This
 |:---|:---|:---|:---|:---|
 |callback|?VoidCallback|是|-|回调函数，富文本组件初始化完成后触发回调。<br>初始值：{ => }。|
 
-### func aboutToIMEInput(?Callback\<RichEditorInsertValue, Bool>)
+### func aboutToImeInput(?Callback\<RichEditorInsertValue, Bool>)
 
 ```cangjie
-public func aboutToIMEInput(callback: ?Callback<RichEditorInsertValue, Bool>): This
+public func aboutToImeInput(callback: ?Callback<RichEditorInsertValue, Bool>): This
 ```
 
 **功能：** 输入法输入内容前，触发事件。
@@ -164,10 +164,10 @@ public func aboutToIMEInput(callback: ?Callback<RichEditorInsertValue, Bool>): T
 |:---|:---|:---|:---|:---|
 |callback|?Callback\<RichEditorInsertValue, Bool>|是|-|回调函数，输入法输入内容前触发。RichEditorInsertValue：输入法将要输入内容信息。true：组件执行添加内容操作。false：组件不执行添加内容操作。<br>初始值：{ _ => false }。|
 
-### func onIMEInputComplete(?Callback\<RichEditorTextSpanResult, Unit>)
+### func onImeInputComplete(?Callback\<RichEditorTextSpanResult, Unit>)
 
 ```cangjie
-public func onIMEInputComplete(callback: ?Callback<RichEditorTextSpanResult, Unit>): RichEditor
+public func onImeInputComplete(callback: ?Callback<RichEditorTextSpanResult, Unit>): RichEditor
 ```
 
 **功能：** 输入法完成输入后，触发事件。

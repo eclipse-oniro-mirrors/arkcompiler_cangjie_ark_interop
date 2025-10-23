@@ -41,10 +41,10 @@ public init(value!: ?Float64, min!: ?Float64 = None, max!: ?Float64 = None, chil
 
 ## 组件属性
 
-### func colors(?Array\<(ResourceColor,Float32)>)
+### func colors(?Array\<(ResourceColor, Int32)>)
 
 ```cangjie
-public func colors(value: ?Array<(ResourceColor, Float32)>): This
+public func colors(value: ?Array<(ResourceColor, Int32)>): This
 ```
 
 **功能：** 设置量规图的颜色。
@@ -57,12 +57,12 @@ public func colors(value: ?Array<(ResourceColor, Float32)>): This
 
 |参数名|类型|必填|默认值|说明|
 |:---|:---|:---|:---|:---|
-|value|?Array\<([ResourceColor](../apis/BasicServicesKit/cj-apis-base.md#interface-resourcecolor), Float32)>|是|-|量规图的颜色，支持分段颜色设置。|
+|value|?Array\<([ResourceColor](../apis/BasicServicesKit/cj-apis-base.md#interface-resourcecolor), Int32)>|是|-|量规图的颜色，支持分段颜色设置。|
 
-### func colors(?Array\<(LinearGradient,Float32)>)
+### func colors(?Array\<(LinearGradient, Int32)>)
 
 ```cangjie
-public func colors(value: ?Array<(LinearGradient, Float32)>): This
+public func colors(value: ?Array<(LinearGradient, Int32)>): This
 ```
 
 **功能：** 设置量规图的分段渐变颜色组。
@@ -75,7 +75,7 @@ public func colors(value: ?Array<(LinearGradient, Float32)>): This
 
 |参数名|类型|必填|默认值|说明|
 |:---|:---|:---|:---|:---|
-|value|?Array\<([LinearGradient](cj-information-display-datapanel.md), Float32)>|是|-|量规图的渐变色，支持分段颜色设置，最多9组。LinearGradient类型见datapanel组件，Float32为该段颜色的宽度范围。|
+|value|?Array\<([LinearGradient](cj-information-display-datapanel.md), Int32)>|是|-|量规图的渐变色，支持分段颜色设置，最多9组。LinearGradient类型见datapanel组件，Int32为该段颜色的宽度范围。|
 
 ### func colors(?LinearGradient)
 
@@ -236,10 +236,10 @@ public func trackShadow(radius!: ?Float64 = None, offsetX!: ?Float64 = None, off
 |offsetX|?Float64|否|None| **命名参数。** 初始值: 5.0 X轴的偏移量。|
 |offsetY|?Float64|否|None| **命名参数。** 初始值: 5.0 Y轴的偏移量 。|
 
-### func value(?Float32)
+### func value(?Float64)
 
 ```cangjie
-public func value(value: ?Float32): This
+public func value(value: ?Float64): This
 ```
 
 **功能：** 设置量规图的数据值。
@@ -252,4 +252,4 @@ public func value(value: ?Float32): This
 
 |参数名|类型|必填|默认值|说明|
 |:---|:---|:---|:---|:---|
-|value|?Float32|是|-|量规图的数据值，可用于动态修改量规图的数据值。<br>初始值: 0.0。|
+|value|?Float64|是|-|量规图的数据值，可用于动态修改量规图的数据值。<br>初始值: 0.0。|

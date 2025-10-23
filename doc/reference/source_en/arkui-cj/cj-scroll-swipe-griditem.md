@@ -60,7 +60,7 @@ Common Events: All supported.
 ### func columnEnd(Int32)
 
 ```cangjie
-public func columnEnd(columnEnd: Int32): This
+public func columnEnd(value: Int32): This
 ```
 
 **Function:** Sets the ending column number of the current element.
@@ -73,12 +73,12 @@ public func columnEnd(columnEnd: Int32): This
 
 | Name | Type | Required | Default | Description |
 |:---|:---|:---|:---|:---|
-| columnEnd | Int32 | Yes | - | The ending column number of the current element, used in conjunction with columnStart. For scenarios requiring specification of GridItem's starting row/column numbers and occupied rows/columns, it is recommended to use [Grid's layoutOptions parameter](./cj-scroll-swipe-grid.md#class-gridlayoutoptions).<br/>Valid range: [0, total columns - 1]. |
+| value | Int32 | Yes | - | The ending column number of the current element, used in conjunction with columnStart. For scenarios requiring specification of GridItem's starting row/column numbers and occupied rows/columns, it is recommended to use [Grid's layoutOptions parameter](./cj-scroll-swipe-grid.md#class-gridlayoutoptions).<br/>Valid range: [0, total columns - 1]. |
 
 ### func columnStart(Int32)
 
 ```cangjie
-public func columnStart(columnStart: Int32): This
+public func columnStart(value: Int32): This
 ```
 
 **Function:** Sets the starting column number of the current element.
@@ -91,7 +91,7 @@ public func columnStart(columnStart: Int32): This
 
 | Name | Type | Required | Default | Description |
 |:---|:---|:---|:---|:---|
-| columnStart | Int32 | Yes | - | The starting column number of the current element, used in conjunction with columnEnd. For scenarios requiring specification of GridItem's starting row/column numbers and occupied rows/columns, it is recommended to use [Grid's layoutOptions parameter](./cj-scroll-swipe-grid.md#class-gridlayoutoptions).<br/>Valid range: [0, total columns - 1] |
+| value | Int32 | Yes | - | The starting column number of the current element, used in conjunction with columnEnd. For scenarios requiring specification of GridItem's starting row/column numbers and occupied rows/columns, it is recommended to use [Grid's layoutOptions parameter](./cj-scroll-swipe-grid.md#class-gridlayoutoptions).<br/>Valid range: [0, total columns - 1] |
 
 ### func rowEnd(Int32)
 

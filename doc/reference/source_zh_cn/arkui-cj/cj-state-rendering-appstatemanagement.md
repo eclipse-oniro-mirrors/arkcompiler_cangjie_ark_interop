@@ -158,10 +158,10 @@ public static func link<T>(propName: String): ?ObservedProperty<T>
 |:----|:----|
 |?[ObservedProperty](./cj-state-rendering-componentstatemanagement.md#class-observedproperty)\<T>|返回双向绑定的数据，如果AppStorage中不存在对应的属性值，则返回None。|
 
-### static func `prop`\<T>(String)
+### static func property\<T>(String)
 
 ```cangjie
-public static func `prop`<T>(propName: String): ?ObservedProperty<T>
+public static func property<T>(propName: String): ?ObservedProperty<T>
 ```
 
 **功能：** 与AppStorage中对应的propName建立单向属性绑定。
@@ -537,10 +537,10 @@ public func link<T>(propName: String): ?ObservedProperty<T>
 |:----|:----|
 |?[ObservedProperty](./cj-state-rendering-componentstatemanagement.md#class-observedproperty)\<T>|返回双向绑定的数据，如果LocalStorage中不存在对应的属性值，则返回None。|
 
-### func `prop`\<T>(String)
+### func property\<T>(String)
 
 ```cangjie
-public func `prop`<T>(propName: String): ?ObservedProperty<T>
+public func property<T>(propName: String): ?ObservedProperty<T>
 ```
 
 **功能：** 与LocalStorage中对应的propName建立单向属性绑定。

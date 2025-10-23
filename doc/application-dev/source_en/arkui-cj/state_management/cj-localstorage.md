@@ -77,7 +77,7 @@ If we need to synchronize updates from a custom component's state variables back
 `@LocalStorageLink(key)` establishes two-way data synchronization with the property corresponding to `key` in LocalStorage:
 
 1. Local modifications are written back to LocalStorage.
-2. Modifications in LocalStorage are synchronized to all properties bound to the corresponding `key` in LocalStorage, including one-way (`@LocalStorageProp` and variables created via `prop`) and two-way (`@LocalStorageLink` and variables created via `link`) bindings.
+2. Modifications in LocalStorage are synchronized to all properties bound to the corresponding `key` in LocalStorage, including one-way (`@LocalStorageProp` and variables created via `property`) and two-way (`@LocalStorageLink` and variables created via `link`) bindings.
 
 ### Macro Usage Rules
 

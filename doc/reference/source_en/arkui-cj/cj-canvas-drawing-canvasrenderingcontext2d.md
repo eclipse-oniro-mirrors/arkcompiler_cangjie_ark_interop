@@ -1295,7 +1295,7 @@ public func scale(x: Float64, y: Float64): Unit
 ### func setLineDash(Array\<Float64>)
 
 ```cangjie
-public func setLineDash(dashArr: Array<Float64>): Unit
+public func setLineDash(segments: Array<Float64>): Unit
 ```
 
 **Function:** Sets the dashed line style for the canvas.
@@ -1308,7 +1308,7 @@ public func setLineDash(dashArr: Array<Float64>): Unit
 
 | Parameter | Type          | Required | Default | Description |
 |:----------|:--------------|:---------|:--------|:------------|
-| dashArr   | Array\<Float64> | Yes      | -       | An array describing the alternating line segments and spacing lengths.<br>Default unit: vp. |
+| segments   | Array\<Float64> | Yes      | -       | An array describing the alternating line segments and spacing lengths.<br>Default unit: vp. |
 
 ### func setPixelMap(Option\<PixelMap>)
 

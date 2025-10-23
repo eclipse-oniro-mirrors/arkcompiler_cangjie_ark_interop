@@ -557,7 +557,7 @@ public func setLineDash(dashArr: ?Array<Float64>): Unit
 
 |参数名|类型|必填|默认值|说明|
 |:---|:---|:---|:---|:---|
-|dashArr|?Array\<Float64>|否|-|描述线段如何交替和线段间距长度的数组。<br>默认单位：vp|
+|segments|?Array\<Float64>|否|-|描述线段如何交替和线段间距长度的数组。<br>默认单位：vp|
 
 ### func fillRect(Float64, Float64, Float64, Float64)
 
@@ -703,7 +703,7 @@ public func stroke(): Unit
 ### func stroke(Path2D)
 
 ```cangjie
-public func stroke(path2D: Path2D): Unit
+public func stroke(path: Path2D): Unit
 ```
 
 **功能：** 进行边框绘制操作。
@@ -716,7 +716,7 @@ public func stroke(path2D: Path2D): Unit
 
 |参数名|类型|必填|默认值|说明|
 |:---|:---|:---|:---|:---|
-|path2D|Path2D|是|-|指定的描边路径对象。|
+|path|Path2D|是|-|指定的描边路径对象。|
 
 ### func beginPath()
 

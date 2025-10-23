@@ -365,4 +365,7 @@
     - [ohos.business_exception（通用异常信息）](source_zh_cn/arkinterop/cj-api-business_exception.md)
     - [ohos.callback_invoke（通用回调信息）](source_zh_cn/arkinterop/cj-api-callback_invoke.md)
     - [ohos.labels（通用接口标签）](source_zh_cn/arkinterop/cj-api-labels.md)
+- 公共基础能力
+    - 仓颉API
+        - [sysCap（系统能力）](source_zh_cn/arkui-cj/cj-syscap.md)
 - [仓颉编程语言库API](source_zh_cn/cj-libs-api.md)
