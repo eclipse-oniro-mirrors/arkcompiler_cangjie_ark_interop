@@ -282,7 +282,7 @@ public open class AlertDialogParam {
     public var width: ?Length
     public var height: ?Length
     public var borderWidth: ?Length
-    public var borderColor: ?ResourceColor
+    public var borderColor: ?BorderColor
     public var borderStyle: ?EdgeStyles
     public var shadow: ?ShadowOptions
     public var textStyle: ?WordBreak
@@ -306,7 +306,7 @@ public open class AlertDialogParam {
         width!: ?Length = None,
         height!: ?Length = None,
         borderWidth!: ?Length = None,
-        borderColor!: ?ResourceColor = None,
+        borderColor!: ?BorderColor = None,
         borderStyle!: ?EdgeStyles = None,
         shadow!: ?ShadowOptions = None,
         textStyle!: ?WordBreak = None
@@ -387,12 +387,12 @@ public var backgroundColor: ?ResourceColor
 ### var borderColor
 
 ```cangjie
-public var borderColor: ?ResourceColor
+public var borderColor: ?BorderColor
 ```
 
 **功能：** 设置弹窗背板的边框颜色。如果使用borderColor属性，需要和borderWidth属性一起使用。
 
-**类型：** ?[ResourceColor](../apis/BasicServicesKit/cj-apis-base.md#interface-resourcecolor)
+**类型：** ?[BorderColor](class-borderColor)
 
 **读写能力：** 可读写
 
@@ -711,7 +711,7 @@ public init(
     width!: ?Length = None,
     height!: ?Length = None,
     borderWidth!: ?Length = None,
-    borderColor!: ?ResourceColor = None,
+    borderColor!: ?BorderColor = None,
     borderStyle!: ?EdgeStyles = None,
     shadow!: ?ShadowOptions = None,
     textStyle!: ?WordBreak = None
@@ -747,7 +747,7 @@ public init(
 |width|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 设置弹窗背板的宽度。**说明：** - 弹窗宽度默认最大值：None。 - 百分比参数方式：弹窗参考宽度为所在窗口的宽度，在此基础上调小或调大。 |
 |height|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 设置弹窗背板的高度。**说明：** - 弹窗高度默认最大值：None。 - 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。 |
 |borderWidth|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 可分别设置4个边框宽度。 百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。**说明：** 当borderWidth属性类型为LocalizedEdgeWidths时，支持随语言习惯改变布局顺序。初始值: 0 |
-|borderColor|?[ResourceColor](../apis/BasicServicesKit/cj-apis-base.md#interface-resourcecolor)|否|None| **命名参数。** 设置弹窗背板的边框颜色。 如果使用borderColor属性，需要和borderWidth属性一起使用。**说明：** 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。初始值: Color.Black |
+|borderColor|?[BorderColor](class-borderColor)|否|None| **命名参数。** 设置弹窗背板的边框颜色。 如果使用borderColor属性，需要和borderWidth属性一起使用。**说明：** 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。初始值: BorderColor(color: Color.Black) |
 |borderStyle|?[EdgeStyles](./cj-common-types.md#class-edgestyles)|否|None| **命名参数。** 设置弹窗背板的边框样式。如果使用borderStyle属性，需要和borderWidth属性一起使用。初始值: EdgeStyles() |
 |shadow|?[ShadowOptions](./cj-text-input-text.md#class-shadowoptions)|否|None| **命名参数。** 设置弹窗背板的阴影。初始值: ShadowOptions(radius: 0.0) |
 |textStyle|?[WordBreak](./cj-common-types.md#enum-wordbreak)|否|None| **命名参数。** 设置弹窗message内容的文本样式。初始值: WordBreak.BreakAll |
@@ -778,7 +778,7 @@ public class AlertDialogParamWithButtons <: AlertDialogParam {
         width!: ?Length = None,
         height!: ?Length = None,
         borderWidth!: ?Length = None,
-        borderColor!: ?ResourceColor = None,
+        borderColor!: ?BorderColor = None,
         borderStyle!: ?EdgeStyles = None,
         shadow!: ?ShadowOptions = None,
         textStyle!: ?WordBreak = None,
@@ -853,7 +853,7 @@ public init(
     width!: ?Length = None,
     height!: ?Length = None,
     borderWidth!: ?Length = None,
-    borderColor!: ?ResourceColor = None,
+    borderColor!: ?BorderColor = None,
     borderStyle!: ?EdgeStyles = None,
     shadow!: ?ShadowOptions = None,
     textStyle!: ?WordBreak = None,
@@ -891,7 +891,7 @@ public init(
 |width|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 设置弹窗背板的宽度。**说明：** - 弹窗宽度默认最大值：None。 - 百分比参数方式：弹窗参考宽度为所在窗口的宽度，在此基础上调小或调大。 |
 |height|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 设置弹窗背板的高度。**说明：** - 弹窗高度默认最大值：None。 - 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。 |
 |borderWidth|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 可分别设置4个边框宽度。 百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。**说明：** 当borderWidth属性类型为LocalizedEdgeWidths时，支持随语言习惯改变布局顺序。初始值: 0 |
-|borderColor|?[ResourceColor](../apis/BasicServicesKit/cj-apis-base.md#interface-resourcecolor)|否|None| **命名参数。** 设置弹窗背板的边框颜色。 如果使用borderColor属性，需要和borderWidth属性一起使用。**说明：** 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。初始值: Color.Black |
+|borderColor|?[BorderColor](class-borderColor)|否|None| **命名参数。** 设置弹窗背板的边框颜色。 如果使用borderColor属性，需要和borderWidth属性一起使用。**说明：** 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。初始值: BorderColor(color: Color.Black) |
 |borderStyle|?[EdgeStyles](./cj-common-types.md#class-edgestyles)|否|None| **命名参数。** 设置弹窗背板的边框样式。如果使用borderStyle属性，需要和borderWidth属性一起使用。初始值: EdgeStyles() |
 |shadow|?[ShadowOptions](./cj-text-input-text.md#class-shadowoptions)|否|None| **命名参数。** 设置弹窗背板的阴影。初始值: ShadowOptions(radius: 0.0) |
 |textStyle|?[WordBreak](./cj-common-types.md#enum-wordbreak)|否|None| **命名参数。** 设置弹窗message内容的文本样式。初始值: WordBreak.BreakAll |
@@ -923,7 +923,7 @@ public class AlertDialogParamWithConfirm <: AlertDialogParam {
         width!: ?Length = None,
         height!: ?Length = None,
         borderWidth!: ?Length = None,
-        borderColor!: ?ResourceColor = None,
+        borderColor!: ?BorderColor = None,
         borderStyle!: ?EdgeStyles = None,
         shadow!: ?ShadowOptions = None,
         textStyle!: ?WordBreak = None,
@@ -981,7 +981,7 @@ public init(
     width!: ?Length = None,
     height!: ?Length = None,
     borderWidth!: ?Length = None,
-    borderColor!: ?ResourceColor = None,
+    borderColor!: ?BorderColor = None,
     borderStyle!: ?EdgeStyles = None,
     shadow!: ?ShadowOptions = None,
     textStyle!: ?WordBreak = None,
@@ -1018,7 +1018,7 @@ public init(
 |width|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 设置弹窗背板的宽度。**说明：** - 弹窗宽度默认最大值：None。 - 百分比参数方式：弹窗参考宽度为所在窗口的宽度，在此基础上调小或调大。 |
 |height|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 设置弹窗背板的高度。**说明：** - 弹窗高度默认最大值：None。 - 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。 |
 |borderWidth|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 可分别设置4个边框宽度。 百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。**说明：** 当borderWidth属性类型为LocalizedEdgeWidths时，支持随语言习惯改变布局顺序。初始值: 0 |
-|borderColor|?[ResourceColor](../apis/BasicServicesKit/cj-apis-base.md#interface-resourcecolor)|否|None| **命名参数。** 设置弹窗背板的边框颜色。 如果使用borderColor属性，需要和borderWidth属性一起使用。**说明：** 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。初始值: Color.Black |
+|borderColor|?[BorderColor](class-borderColor)|否|None| **命名参数。** 设置弹窗背板的边框颜色。 如果使用borderColor属性，需要和borderWidth属性一起使用。**说明：** 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。初始值: BorderColor(color: Color.Black) |
 |borderStyle|?[EdgeStyles](./cj-common-types.md#class-edgestyles)|否|None| **命名参数。** 设置弹窗背板的边框样式。如果使用borderStyle属性，需要和borderWidth属性一起使用。初始值: EdgeStyles() |
 |shadow|?[ShadowOptions](./cj-text-input-text.md#class-shadowoptions)|否|None| **命名参数。** 设置弹窗背板的阴影。初始值: ShadowOptions(radius: 0.0) |
 |textStyle|?[WordBreak](./cj-common-types.md#enum-wordbreak)|否|None| **命名参数。** 设置弹窗message内容的文本样式。初始值: WordBreak.BreakAll |
@@ -1050,7 +1050,7 @@ public class AlertDialogParamWithOptions <: AlertDialogParam {
         width!: ?Length = None,
         height!: ?Length = None,
         borderWidth!: ?Length = None,
-        borderColor!: ?ResourceColor = None,
+        borderColor!: ?BorderColor = None,
         borderStyle!: ?EdgeStyles = None,
         shadow!: ?ShadowOptions = None,
         textStyle!: ?WordBreak = None,
@@ -1125,7 +1125,7 @@ public init(
     width!: ?Length = None,
     height!: ?Length = None,
     borderWidth!: ?Length = None,
-    borderColor!: ?ResourceColor = None,
+    borderColor!: ?BorderColor = None,
     borderStyle!: ?EdgeStyles = None,
     shadow!: ?ShadowOptions = None,
     textStyle!: ?WordBreak = None,
@@ -1163,7 +1163,7 @@ public init(
 |width|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 设置弹窗背板的宽度。**说明：** - 弹窗宽度默认最大值：None。 - 百分比参数方式：弹窗参考宽度为所在窗口的宽度，在此基础上调小或调大。 |
 |height|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 设置弹窗背板的高度。**说明：** - 弹窗高度默认最大值：None。 - 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。 |
 |borderWidth|?[Length](../apis/BasicServicesKit/cj-apis-base.md#interface-length)|否|None| **命名参数。** 可分别设置4个边框宽度。 百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。**说明：** 当borderWidth属性类型为LocalizedEdgeWidths时，支持随语言习惯改变布局顺序。初始值: 0 |
-|borderColor|?[ResourceColor](../apis/BasicServicesKit/cj-apis-base.md#interface-resourcecolor)|否|None| **命名参数。** 设置弹窗背板的边框颜色。 如果使用borderColor属性，需要和borderWidth属性一起使用。**说明：** 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。初始值: Color.Black |
+|borderColor|?[BorderColor](class-borderColor)|否|None| **命名参数。** 设置弹窗背板的边框颜色。 如果使用borderColor属性，需要和borderWidth属性一起使用。**说明：** 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。初始值: BorderColor(color: Color.Black) |
 |borderStyle|?[EdgeStyles](./cj-common-types.md#class-edgestyles)|否|None| **命名参数。** 设置弹窗背板的边框样式。如果使用borderStyle属性，需要和borderWidth属性一起使用。初始值: EdgeStyles() |
 |shadow|?[ShadowOptions](./cj-text-input-text.md#class-shadowoptions)|否|None| **命名参数。** 设置弹窗背板的阴影。初始值: ShadowOptions(radius: 0.0) |
 |textStyle|?[WordBreak](./cj-common-types.md#enum-wordbreak)|否|None| **命名参数。** 设置弹窗message内容的文本样式。初始值: WordBreak.BreakAll |
