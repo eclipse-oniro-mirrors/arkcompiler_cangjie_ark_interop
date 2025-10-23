@@ -22,7 +22,7 @@
 
 2.初始化自定义组件的成员变量：通过本地默认值或者构造方法传递参数来初始化自定义组件的成员变量，初始化顺序为成员变量的定义顺序。
 
-3.如果开发者定义了aboutToAppear，则执行aboutToAppear方法。
+3.如果开发者定义了[aboutToAppear](../../../../reference/source_zh_cn/arkui-cj/cj-custom-component-lifecycle.md#func-abouttoappear)，则执行[aboutToAppear](../../../../reference/source_zh_cn/arkui-cj/cj-custom-component-lifecycle.md#func-abouttoappear)方法。
 
 4.在首次渲染的时候，执行build方法渲染系统组件，如果子组件为自定义组件，则创建自定义组件的实例。在首次渲染的过程中，框架会记录状态变量和组件的映射关系，当状态变量改变时，驱动其相关的组件刷新。
 
@@ -40,11 +40,11 @@
 
 如果if组件的分支改变，或者ForEach循环渲染中数组的个数改变，组件将被删除：
 
-1.在删除组件之前，将调用其aboutToDisappear生命周期函数，标记着该节点将要被销毁。ArkUI的节点删除机制是：后端节点直接从组件树上摘下，后端节点被销毁，对前端节点解引用，前端节点已经没有引用时，将被回收。
+1.在删除组件之前，将调用其[aboutToDisappear](../../../../reference/source_zh_cn/arkui-cj/cj-custom-component-lifecycle.md#func-abouttodisappear)生命周期函数，标记着该节点将要被销毁。ArkUI的节点删除机制是：后端节点直接从组件树上摘下，后端节点被销毁，对前端节点解引用，前端节点已经没有引用时，将被回收。
 
 2.自定义组件和它的变量将被删除，如果其有同步的变量，比如[@Link](../state_management/cj-macro-link.md)、[@Prop](../state_management/cj-macro-prop.md)、[@StorageLink](../state_management/cj-appstorage.md#storagelink)，将从[同步源](../state_management/cj-state-management-overview.md)上取消注册。
 
-不建议在生命周期aboutToDisappear内使用异步操作，如果在生命周期的aboutToDisappear使用异步操作（spawn或者回调方法），自定义组件将被保留在spawn的闭包中，直到回调方法被执行完，这个行为阻止了自定义组件的垃圾回收。
+不建议在生命周期[aboutToDisappear](../../../../reference/source_zh_cn/arkui-cj/cj-custom-component-lifecycle.md#func-abouttodisappear)内使用异步操作，如果在生命周期的[aboutToDisappear](../../../../reference/source_zh_cn/arkui-cj/cj-custom-component-lifecycle.md#func-abouttodisappear)使用异步操作（spawn或者回调方法），自定义组件将被保留在spawn的闭包中，直到回调方法被执行完，这个行为阻止了自定义组件的垃圾回收。
 
 以下示例展示了生命周期的调用时机：
 
