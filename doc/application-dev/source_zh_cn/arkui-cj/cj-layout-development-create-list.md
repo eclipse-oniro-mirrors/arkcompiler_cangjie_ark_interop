@@ -243,6 +243,8 @@ public class EntryView {
 }
 ```
 
+在List组件中，ForEach除了可以用来循环渲染ListItem，也可以用来循环渲染ListItemGroup。ListItemGroup的循环渲染详细使用请参见[ListItemGroup](../../../application-dev/source_zh_cn/arkui-cj/cj-layout-development-create-list.md#支持分组列表)
+
 ## 自定义列表样式
 
 ### 设置内容间距

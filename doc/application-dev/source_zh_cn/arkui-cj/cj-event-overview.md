@@ -5,7 +5,9 @@
 - [触屏事件](./cj-common-events-touch-screen-event.md)：手指或手写笔在触屏上的单指或单笔操作。
 
 - [键鼠事件](./cj-common-events-device-input-event.md)：包括外设鼠标或触控板的操作事件和外设键盘的按键事件。
+
     - 鼠标事件是指通过连接和使用外设鼠标/触控板操作时所响应的事件。
+
     - 按键事件是指通过连接和使用外设键盘操作时所响应的事件。
 
 - [焦点事件](./cj-common-events-focus-event.md)：通过以上方式控制组件焦点的能力和响应的事件。

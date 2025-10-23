@@ -12,7 +12,7 @@
 
 > **说明：**
 >
-> 当前模态弹窗通过设置指定属性变成非模态。
+> 当前模态弹窗通过设置指定属性变成非模态。例如AlertDialog，可以设置[isModal](../../../reference/source_zh_cn/arkui-cj/cj-dialog-customdialog.md#var-ismodal)为false变成非模态，其他弹窗详见API说明。
 
 ## 使用场景
 
