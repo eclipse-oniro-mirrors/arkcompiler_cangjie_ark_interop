@@ -1503,14 +1503,14 @@ public operator func ==(other: FoldStatus): Bool
 
 ```cangjie
 public enum ListenerType {
-    | ListnerTypeAdd
-    | ListnerTypeRemove
-    | ListnerTypeChange
-    | ListnerTypeFoldStatusChange
-    | ListnerTypeFoldAngleChange
-    | ListnerTypeCaptureStatusChange
-    | ListnerTypeFoldDisplayModeChange
-    | ListnerTypeAvailableAreaChange
+    | ListenerTypeAdd
+    | ListenerTypeRemove
+    | ListenerTypeChange
+    | ListenerTypeFoldStatusChange
+    | ListenerTypeFoldAngleChange
+    | ListenerTypeCaptureStatusChange
+    | ListenerTypeFoldDisplayModeChange
+    | ListenerTypeAvailableAreaChange
     | ...
 }
 ```
@@ -1525,10 +1525,10 @@ public enum ListenerType {
 
 - Equatable\<ListenerType>
 
-### ListnerTypeAdd
+### ListenerTypeAdd
 
 ```cangjie
-ListnerTypeAdd
+ListenerTypeAdd
 ```
 
 **Function:** Indicates a display device addition event.
@@ -1537,10 +1537,10 @@ ListnerTypeAdd
 
 **Since:** 21
 
-### ListnerTypeAvailableAreaChange
+### ListenerTypeAvailableAreaChange
 
 ```cangjie
-ListnerTypeAvailableAreaChange
+ListenerTypeAvailableAreaChange
 ```
 
 **Function:** Indicates a change in the foldable device's screen display mode.
@@ -1549,10 +1549,10 @@ ListnerTypeAvailableAreaChange
 
 **Since:** 21
 
-### ListnerTypeCaptureStatusChange
+### ListenerTypeCaptureStatusChange
 
 ```cangjie
-ListnerTypeCaptureStatusChange
+ListenerTypeCaptureStatusChange
 ```
 
 **Function:** Indicates a change in the device's screenshot, screencast, or screen recording status.
@@ -1561,10 +1561,10 @@ ListnerTypeCaptureStatusChange
 
 **Since:** 21
 
-### ListnerTypeChange
+### ListenerTypeChange
 
 ```cangjie
-ListnerTypeChange
+ListenerTypeChange
 ```
 
 **Function:** Indicates a display device modification event.
@@ -1573,10 +1573,10 @@ ListnerTypeChange
 
 **Since:** 21
 
-### ListnerTypeFoldAngleChange
+### ListenerTypeFoldAngleChange
 
 ```cangjie
-ListnerTypeFoldAngleChange
+ListenerTypeFoldAngleChange
 ```
 
 **Function:** Indicates a change in the foldable device's folding angle.
@@ -1585,10 +1585,10 @@ ListnerTypeFoldAngleChange
 
 **Since:** 21
 
-### ListnerTypeFoldDisplayModeChange
+### ListenerTypeFoldDisplayModeChange
 
 ```cangjie
-ListnerTypeFoldDisplayModeChange
+ListenerTypeFoldDisplayModeChange
 ```
 
 **Function:** Indicates a change in the foldable device's screen display mode.
@@ -1597,10 +1597,10 @@ ListnerTypeFoldDisplayModeChange
 
 **Since:** 21
 
-### ListnerTypeFoldStatusChange
+### ListenerTypeFoldStatusChange
 
 ```cangjie
-ListnerTypeFoldStatusChange
+ListenerTypeFoldStatusChange
 ```
 
 **Function:** Indicates a change in the foldable device's folding state.
@@ -1609,10 +1609,10 @@ ListnerTypeFoldStatusChange
 
 **Since:** 21
 
-### ListnerTypeRemove
+### ListenerTypeRemove
 
 ```cangjie
-ListnerTypeRemove
+ListenerTypeRemove
 ```
 
 **Function:** Indicates a display device removal event.

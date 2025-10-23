@@ -130,11 +130,11 @@ func getDefaultDisplaySyncExample() {
     }
     let testCallback = TestCallback()
     // 注册监听的callback参数要采用对象传递.
-    on(ListnerTypeFoldStatusChange, testCallback)
+    on(ListenerTypeFoldStatusChange, testCallback)
 
     // 如果通过on注册多个callback，同时关闭所有callback监听
-    off(ListnerTypeFoldStatusChange);
+    off(ListenerTypeFoldStatusChange);
 
     // 关闭单个callback监听
-    off(ListnerTypeFoldStatusChange, testCallback);
+    off(ListenerTypeFoldStatusChange, testCallback);
     ```
