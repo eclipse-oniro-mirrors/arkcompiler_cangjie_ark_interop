@@ -203,6 +203,8 @@
                 - [自定义弹窗（CustomDialog）](source_zh_cn/arkui-cj/cj-dialog-customdialog.md)
             - Web
                 - [Web](source_zh_cn/arkui-cj/cj-web-web.md)
+            - 自定义组件
+                - [自定义组件的生命周期](source_zh_cn/arkui-cj/cj-custom-component-lifecycle.md)
             - 状态管理与渲染控制
                 - [ForEach](source_zh_cn/arkui-cj/cj-state-rendering-foreach.md)
                 - [LazyForEach](source_zh_cn/arkui-cj/cj-state-rendering-lazyforeach.md)

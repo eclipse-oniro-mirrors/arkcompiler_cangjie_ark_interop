@@ -155,6 +155,8 @@
         - [自定义弹窗（CustomDialog）](cj-dialog-customdialog.md)
     - Web
         - [Web](cj-web-web.md)
+    - 自定义组件
+        - [自定义组件的生命周期](cj-custom-component-lifecycle.md)
     - 状态管理与渲染控制
         - [ForEach](cj-state-rendering-foreach.md)
         - [LazyForEach](cj-state-rendering-lazyforeach.md)
