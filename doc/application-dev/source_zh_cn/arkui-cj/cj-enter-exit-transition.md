@@ -13,9 +13,9 @@
 | rotate | 通过设置组件旋转创建转场效果。 | 出现时为rotate接口设置的值到默认值0，消失时为默认值0到rotate接口设置的值。 |
 | opacity | 通过设置透明度参数创建转场效果。 | 出现时为opacity设置的值到默认透明度1，消失时为默认透明度1到opacity设置的值。 |
 | move | 通过[TransitionEdge](../../../reference/source_zh_cn/arkui-cj/cj-animation-transition.md#enum-transitionedge)创建从窗口哪条边缘出来的效果。 | 出现时从TransitionEdge方向滑入，消失时滑出到TransitionEdge方向。 |
-| asymmetric | 通过此方法组合非对称的出现消失转场效果。<br/>- appear:出现转场的效果。<br/>- disappear：消失转场的效果。 | 出现时采用appear设置的TransitionEffect出现效果，消失时采用disappear设置的TransitionEffect消失效果。 |
-| combine | 组合其他TransitionEffect。 | 组合其他TransitionEffect，一起生效。 |
-| animation | 定义转场效果的动画参数：<br/>-&nbsp;如果不定义会跟随animateTo的动画参数。<br/>-&nbsp;不支持通过控件的animation接口配置动画参数。<br/>-&nbsp;TransitionEffect中animation的onFinish不生效。 | 调用顺序时从上往下，上面TransitionEffect的animation也会作用到下面TransitionEffect。 |
+| asymmetric | 通过此方法组合非对称的出现消失转场效果。<br/>- appear:出现转场的效果。<br/>- disappear：消失转场的效果。 | 出现时采用appear设置的[TransitionEffect](../../../reference/source_zh_cn/arkui-cj/cj-animation-transition.md#class-transitioneffect)出现效果，消失时采用disappear设置的[TransitionEffect](../../../reference/source_zh_cn/arkui-cj/cj-animation-transition.md#class-transitioneffect)消失效果。 |
+| combine | 组合其他[TransitionEffect](../../../reference/source_zh_cn/arkui-cj/cj-animation-transition.md#class-transitioneffect)。 | 组合其他TransitionEffect，一起生效。 |
+| animation | 定义转场效果的动画参数：<br/>-&nbsp;如果不定义会跟随[animateTo](../../../reference/source_zh_cn/arkui-cj/cj-apis-uicontext-uicontext.md#func-animateto)的动画参数。<br/>-&nbsp;不支持通过控件的[animation](../../../reference/source_zh_cn/arkui-cj/cj-animation-animation.md)接口配置动画参数。<br/>-&nbsp;[TransitionEffect](../../../reference/source_zh_cn/arkui-cj/cj-animation-transition.md#class-transitioneffect)中animation的onFinish不生效。 | 调用顺序时从上往下，上面TransitionEffect的animation也会作用到下面TransitionEffect。 |
 
 ## 示例
 
@@ -146,7 +146,7 @@ class EntryView {
 
 ![transition1](./figures/transition.gif)
 
-对多个组件添加转场效果时，可以通过在animation动画参数中配置不同的delay值，实现组件渐次出现消失的效果：
+对多个组件添加转场效果时，可以通过在[animation](../../../reference/source_zh_cn/arkui-cj/cj-animation-animation.md)动画参数中配置不同的delay值，实现组件渐次出现消失的效果：
 
  <!-- run -->
 

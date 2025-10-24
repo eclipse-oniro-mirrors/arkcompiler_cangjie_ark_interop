@@ -28,7 +28,7 @@
 
 - 组件区域（蓝区方块）：组件区域表示组件的大小，[width](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-size.md#func-widthoptionlength)、[height](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-size.md#func-heightoptionlength)属性用于设置组件区域的大小。
 - 组件内容区（黄色方块）：组件内容区大小为组件区域大小减去组件的[border](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-border.md)值，组件内容区大小会作为组件内容（或者子组件）进行大小测算时的布局测算限制。
-- 组件内容（绿色方块）：组件内容本身占用的大小，比如文本内容占用的大小。组件内容和组件内容区不一定匹配，比如设置了固定的width和height，此时组件内容的大小就是设置的width和height减去padding和border值，但文本内容则是通过文本布局引擎测算后得到的大小，可能出现文本真实大小小于设置的组件内容区大小。当组件内容和组件内容区大小不一致时，[align](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-location.md#func-alignalignment)属性生效，定义组件内容在组件内容区的对齐方式，如居中对齐。
+- 组件内容（绿色方块）：组件内容本身占用的大小，比如文本内容占用的大小。组件内容和组件内容区不一定匹配，比如设置了固定的width和height，此时组件内容的大小就是设置的width和height减去padding和border值，但文本内容则是通过文本布局引擎测算后得到的大小，可能出现文本真实大小小于设置的组件内容区大小。当组件内容和组件内容区大小不一致时，[align](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-layoutconstraints.md#func-align)属性生效，定义组件内容在组件内容区的对齐方式，如居中对齐。
 - 组件布局边界（虚线部分）：组件通过[margin](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-size.md#func-marginlength)属性设置外边距时，组件布局边界就是组件区域加上margin的大小。
 
 ## 如何选择布局
@@ -68,7 +68,7 @@ position、offset等属性影响了布局容器相对于自身或其他组件的
 
 - 缩放：子组件的宽高按照预设的比例，随容器组件发生变化，且变化过程中子组件的宽高比不变。
 
-  [aspectRatio](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-layoutconstraints.md#func-aspectratiofloat64)属性指定当前组件的宽高比来控制缩放，公式为：aspectRatio=width/height。
+  [aspectRatio](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-size.md#func-aspectratiofloat64)属性指定当前组件的宽高比来控制缩放，公式为：aspectRatio=width/height。
 
 - 占比：子组件的宽高按照预设的比例，随祖先容器组件发生变化。
 
@@ -86,4 +86,4 @@ position、offset等属性影响了布局容器相对于自身或其他组件的
     - [layoutWeight](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-size.md#func-layoutweightint32)属性，使得子元素自适应占满剩余空间。
 
 - 隐藏：隐藏能力是指容器组件内的子组件，按照其预设的显示优先级，随容器组件尺寸变化显示或隐藏，其中相同显示优先级的子组件同时显示或隐藏。
-  通过[displayPriority](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-layoutconstraints.md#func-displaypriorityint32)属性来控制组件的显示和隐藏。
+  通过[displayPriority](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-size.md#func-displaypriorityint32)属性来控制组件的显示和隐藏。

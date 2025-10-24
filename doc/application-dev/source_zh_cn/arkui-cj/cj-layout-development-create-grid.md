@@ -245,7 +245,7 @@ class EntryView {
 
 ## 性能优化
 
-与长列表的处理类似，[循环渲染](./rendering_control/cj-rendering-control-foreach.md)适用于数据量较小的布局场景，当构建具有大量网格项的可滚动网格布局时，推荐使用[数据懒加载](./rendering_control/cj-rendering-control-lazyforeach.md)方式实现按需迭代加载数据，从而提升列表性能。
+与[长列表的处理](./cj-layout-development-create-list.md#长列表的处理)类似，[循环渲染](./rendering_control/cj-rendering-control-foreach.md)适用于数据量较小的布局场景，当构建具有大量网格项的可滚动网格布局时，推荐使用[数据懒加载](./rendering_control/cj-rendering-control-lazyforeach.md)方式实现按需迭代加载数据，从而提升列表性能。
 
 关于按需加载优化的具体实现可参考[数据懒加载](./rendering_control/cj-rendering-control-lazyforeach.md)章节中的示例。
 

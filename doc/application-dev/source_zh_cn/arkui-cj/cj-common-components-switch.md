@@ -79,7 +79,7 @@ Toggle(toggleType: ToggleType, isOn!: Bool = false)
 
 ## 添加事件
 
-除支持[通用事件](../../../reference/source_zh_cn/arkui-cj/cj-universal-event-click.md)外，Toggle还用于选中和取消选中后触发某些操作，可以绑定onChange事件来响应操作后的自定义行为。
+除支持[通用事件](../../../reference/source_zh_cn/arkui-cj/cj-universal-events.md)外，Toggle还用于选中和取消选中后触发某些操作，可以绑定onChange事件来响应操作后的自定义行为。
 
 ```cangjie
 Toggle(ToggleType.Switch, isOn: false)

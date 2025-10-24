@@ -79,7 +79,7 @@ Button有四种可选类型，分别为胶囊类型（Capsule）、圆形按钮�
 
 - 普通按钮。
 
-  此类型的按钮默认圆角为0，支持通过borderRadius属性重新设置圆角。
+  此类型的按钮默认圆角为0，支持通过[borderRadius](../../../reference/source_zh_cn/arkui-cj/cj-common-types.md#class-borderradiuses)属性重新设置圆角。
 
   ```cangjie
   Button('Ok', ButtonOptions(shape: ButtonType.Normal, stateEffect: true))
@@ -95,7 +95,7 @@ Button有四种可选类型，分别为胶囊类型（Capsule）、圆形按钮�
 
 - 设置边框弧度。
 
-  使用通用属性来自定义按钮样式。例如通过borderRadius属性设置按钮的边框弧度。
+  使用通用属性来自定义按钮样式。例如通过[borderRadius](../../../reference/source_zh_cn/arkui-cj/cj-common-types.md#class-borderradiuses)属性设置按钮的边框弧度。
 
   ```cangjie
   Button('circle border', ButtonOptions(shape: ButtonType.Normal))
@@ -119,7 +119,7 @@ Button有四种可选类型，分别为胶囊类型（Capsule）、圆形按钮�
 
 - 设置背景颜色。
 
-  添加backgroundColor属性设置按钮的背景颜色。
+  添加[backgroundColor](../../../reference/source_zh_cn/arkui-cj/cj-universal-attribute-background.md#func-backgroundcolorresourcecolor)属性设置按钮的背景颜色。
 
   ```cangjie
   Button('background color').backgroundColor(0xF55A42)
@@ -147,7 +147,7 @@ Button有四种可选类型，分别为胶囊类型（Capsule）、圆形按钮�
 
 ## 添加事件
 
-Button组件通常用于触发某些操作，可以绑定onClick事件来响应点击操作后的自定义行为。
+Button组件通常用于触发某些操作，可以绑定[onClick](../../../reference/source_zh_cn/arkui-cj/cj-universal-event-click.md#func-onclickclickevent---unit)事件来响应点击操作后的自定义行为。
 
 ```cangjie
   Button('Ok', ButtonOptions(shape: ButtonType.Normal, stateEffect: true))
