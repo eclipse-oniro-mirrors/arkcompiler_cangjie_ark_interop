@@ -175,7 +175,7 @@ viewPort(x!: Length, y!: Length, width!: Length, height!: Length)
 
 绘制组件支持通过各种属性对组件样式进行更改。
 
-- 通过fill可以设置组件填充区域颜色。
+- 通过[fill](../../../reference/source_zh_cn/arkui-cj/cj-graphic-drawing-common.md#func-fillresourcecolor)可以设置组件填充区域颜色。
 
   ```cangjie
   Path()
@@ -188,7 +188,7 @@ viewPort(x!: Length, y!: Length, width!: Length, height!: Length)
 
   ![drawing3](figures/drawing3.jpg)
 
-- 通过stroke可以设置组件边框颜色。
+- 通过[stroke](../../../reference/source_zh_cn/arkui-cj/cj-graphic-drawing-common.md#func-strokeresourcecolor)可以设置组件边框颜色。
 
   ```cangjie
   Path()
@@ -201,7 +201,7 @@ viewPort(x!: Length, y!: Length, width!: Length, height!: Length)
 
   ![stroke](figures/stroke.png)
 
-- 通过strokeOpacity可以设置边框透明度。
+- 通过[strokeOpacity](../../../reference/source_zh_cn/arkui-cj/cj-graphic-drawing-common.md#func-strokeopacityappresource)可以设置边框透明度。
 
   ```cangjie
   Path()
@@ -216,7 +216,7 @@ viewPort(x!: Length, y!: Length, width!: Length, height!: Length)
 
   ![strokeopacity](figures/strokeopacity.jpg)
 
-- 通过antiAlias设置是否开启抗锯齿，默认值为true（开启抗锯齿）。
+- 通过[antiAlias](../../../reference/source_zh_cn/arkui-cj/cj-graphic-drawing-common.md#func-antialiasbool)设置是否开启抗锯齿，默认值为true（开启抗锯齿）。
 
   ```cangjie
   // 开启抗锯齿

@@ -29,7 +29,7 @@
 | md   | [520, 840) | 中等宽度类型设备。 |
 | lg   | [840, +∞)  | 大宽度类型设备。  |
 
-在GridRow栅格组件中，允许开发者使用breakpoints自定义修改断点的取值范围，最多支持6个断点，除了默认的四个断点外，还可以启用xl，xxl两个断点，支持六种不同尺寸（xs, sm, md, lg, xl, xxl）设备的布局设置。
+在GridRow栅格组件中，允许开发者使用[breakpoints](../../../reference/source_zh_cn/arkui-cj/cj-grid-layout-gridrow.md#class-breakpoints)自定义修改断点的取值范围，最多支持6个断点，除了默认的四个断点外，还可以启用xl，xxl两个断点，支持六种不同尺寸（xs, sm, md, lg, xl, xxl）设备的布局设置。
 
 | 断点名称 | 设备描述      |
 |:---- |:--------- |
@@ -40,7 +40,7 @@
 | xl   | 特大宽度类型设备。 |
 | xxl  | 超大宽度类型设备。 |
 
-- 针对断点位置，开发者根据实际使用场景，通过一个单调递增数组设置。由于breakpoints最多支持六个断点，单调递增数组长度最大为5。
+- 针对断点位置，开发者根据实际使用场景，通过一个单调递增数组设置。由于[breakpoints](../../../reference/source_zh_cn/arkui-cj/cj-grid-layout-gridrow.md#class-breakpoints)最多支持六个断点，单调递增数组长度最大为5。
 
     ```cangjie
     breakpoints: BreakPoints(value: [100.vp, 200.vp])
@@ -215,7 +215,7 @@ GridRow中通过columns设置栅格布局的总列数。
 
     ![Grid2](figures/Grid2.png)
 
-- 当columns类型为GridRowOptions时，支持下面六种不同尺寸（xs, sm, md, lg, xl, xxl）设备的总列数设置，各个尺寸下数值可不同。
+- 当columns类型为[GridRowOptions](../../../reference/source_zh_cn/arkui-cj/cj-grid-layout-gridrow.md#class-gridrowoptions)时，支持下面六种不同尺寸（xs, sm, md, lg, xl, xxl）设备的总列数设置，各个尺寸下数值可不同。
 
     <!-- run-->
 
@@ -364,7 +364,7 @@ GridCol组件作为GridRow组件的子组件，通过给GridCol传参或者设�
 
     ![Grid8](figures/Grid8.png)
 
-- 当类型为GridColOptions时，支持六种不同尺寸（xs, sm, md, lg, xl, xxl）设备中子组件所占列数设置，各个尺寸下数值可不同。
+- 当类型为[GridColOptions](../../../reference/source_zh_cn/arkui-cj/cj-grid-layout-gridcol.md#class-gridcoloptions)时，支持六种不同尺寸（xs, sm, md, lg, xl, xxl）设备中子组件所占列数设置，各个尺寸下数值可不同。
 
     <!-- run -->
 
@@ -442,7 +442,7 @@ GridCol组件作为GridRow组件的子组件，通过给GridCol传参或者设�
 
     栅格默认分成12列，每一个子组件默认占1列，偏移2列，每个子组件及间距共占3列，一行放四个子组件。
 
-- 当类型为GridColOptions时，支持六种不同尺寸（xs, sm, md, lg, xl, xxl）设备中子组件所占列数设置,各个尺寸下数值可不同。
+- 当类型为[GridColOptions](../../../reference/source_zh_cn/arkui-cj/cj-grid-layout-gridcol.md#class-gridcoloptions)时，支持六种不同尺寸（xs, sm, md, lg, xl, xxl）设备中子组件所占列数设置,各个尺寸下数值可不同。
 
     <!-- run -->
 
@@ -534,7 +534,7 @@ GridCol组件作为GridRow组件的子组件，通过给GridCol传参或者设�
 
     ![Grid12](figures/Grid12.png)
 
-- 当类型为GridColOptions时，支持六种不同尺寸（xs, sm, md, lg, xl, xxl）设备中子组件排序次序设置。在xs设备中，子组件排列顺序为1234：sm为2341，md为3412，lg为2431。
+- 当类型为[GridColOptions](../../../reference/source_zh_cn/arkui-cj/cj-grid-layout-gridcol.md#class-gridcoloptions)时，支持六种不同尺寸（xs, sm, md, lg, xl, xxl）设备中子组件排序次序设置。在xs设备中，子组件排列顺序为1234：sm为2341，md为3412，lg为2431。
 
     <!-- run -->
 

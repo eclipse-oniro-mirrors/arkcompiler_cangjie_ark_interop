@@ -55,7 +55,7 @@ class VideoPlayer {
 
 ### 加载网络视频
 
-加载网络视频时，需要申请权限ohos.permission.INTERNET。此时，Video的src属性为网络视频的链接。
+加载网络视频时，需要申请权限ohos.permission.INTERNET，具体申请方式请参考[声明权限](../security/AccessToken/cj-declare-permissions.md)。此时，Video的src属性为网络视频的链接。
 
 ```cangjie
 @Component
@@ -160,7 +160,7 @@ Video控制器主要用于控制视频的状态，包括播放、暂停、停止
 
 - 自定义控制器
 
-  使用自定义的控制器，先将默认控制器关闭掉，之后可以使用button以及slider等组件进行自定义的控制与显示，适合在自定义较强的场景下使用。
+  使用自定义的控制器，先将默认控制器关闭掉，之后可以使用[button](./cj-common-components-button.md)以及[slider](../../../reference/source_zh_cn/arkui-cj/cj-button-picker-slider.md)等组件进行自定义的控制与显示，适合在自定义较强的场景下使用。
 
      <!-- run -->
 

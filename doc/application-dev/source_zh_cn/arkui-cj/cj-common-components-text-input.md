@@ -65,7 +65,7 @@ init(placeholder!: ?ResourceStr = None, text!: ?ResourceStr = None,controller!: 
 
     ![Text12](figures/Text12.png)
 
-    更丰富的样式可以结合通用属性实现。
+    更丰富的样式可以结合[通用属性](../../../reference/source_zh_cn/arkui-cj/cj-universal-attributes.md#通用属性)实现。
 
 ## 选中菜单
 
