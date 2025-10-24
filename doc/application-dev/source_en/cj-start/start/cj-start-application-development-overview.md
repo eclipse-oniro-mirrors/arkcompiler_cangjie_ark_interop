@@ -25,7 +25,3 @@ We provide development guidance for key open capabilities to assist developers i
 ## API Reference
 
 The API Reference provides comprehensive documentation on the components and interfaces of each Kit's open capabilities in the OpenHarmony SDK. It helps developers quickly locate detailed descriptions and invocation methods for specific interfaces. For details, please refer to the API Reference.
-
-> **note：**
->
-> The Cangjie API is currently in Beta. For the latest support details, please refer to the API Reference. 
