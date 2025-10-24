@@ -21,11 +21,11 @@ API示例代码使用说明：
 
 ```cangjie
 public class AppResource <: Length & ResourceColor & ResourceStr {
-    public let bundleName: String
-    public let moduleName: String
-    public let id: UInt32
-    public let params:?Array<Any>
-    public let resType:?Int32
+    public var bundleName: String
+    public var moduleName: String
+    public var id: UInt32
+    public var params:?Array<Any>
+    public var resType:?Int32
     public init(
         bundleName: String,
         moduleName: String,
@@ -48,81 +48,71 @@ public class AppResource <: Length & ResourceColor & ResourceStr {
 - ResourceColor
 - ResourceStr
 
-### let bundleName
+### var bundleName
 
 ```cangjie
-public let bundleName: String
+public var bundleName: String
 ```
 
 **功能：** 应用的包名称。
 
 **类型：** String
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 22
 
-### let id
+### var id
 
 ```cangjie
-public let id: UInt32
+public var id: UInt32
 ```
 
 **功能：** 资源id。
 
 **类型：** UInt32
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 22
 
-### let moduleName
+### var moduleName
 
 ```cangjie
-public let moduleName: String
+public var moduleName: String
 ```
 
 **功能：** 应用的模块名称。
 
 **类型：** String
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 22
 
-### let params
+### var params
 
 ```cangjie
-public let params:?Array<Any>
+public var params:?Array<Any>
 ```
 
 **功能：** 其他资源参数（可选）。
 
 **类型：** ?Array\<Any>
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 22
 
-### let resType
+### var resType
 
 ```cangjie
-public let resType:?Int32
+public var resType:?Int32
 ```
 
 **功能：** 资源的类型（可选）。
 
 **类型：** ?Int32
-
-**读写能力：** 只读
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
