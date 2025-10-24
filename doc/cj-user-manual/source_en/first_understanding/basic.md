@@ -12,7 +12,3 @@ Cangjie Programming Language is a general-purpose programming language designed 
 - **Easy Domain Extensibility**: Cangjie offers lexically scoped macro-based metaprogramming capabilities, allowing code transformation at compile time. It also features trailing `lambda`, attributes, operator overloading, and optional keywords, enabling developers to deeply customize syntax and semantics. This facilitates the construction of Embedded Domain-Specific Languages (EDSLs).
 - **Enhanced UI Development**: UI development is a critical aspect of building end-side applications. Leveraging Cangjie's metaprogramming and trailing `lambda` features, users can create declarative UI frameworks to improve development efficiency and experience.
 - **Rich Built-in Libraries**: Cangjie provides a comprehensive set of built-in libraries covering data structures, common algorithms, mathematical computations, regular expression matching, system interaction, file operations, network communication, database access, logging, compression/decompression, encoding/decoding, encryption/decryption, and serialization.
-
-> **note：**
->
-> The Cangjie API is currently in Beta. For the latest support details, please refer to the API Reference. 

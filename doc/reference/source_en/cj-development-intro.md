@@ -2,10 +2,6 @@
 
 The API reference is primarily intended for developers to consult various API descriptions related to application development. To facilitate the use of API documentation, common fields in the documentation are explained below.
 
-> **note：**
->
-> The Cangjie API is currently in Beta. For the latest support details, please refer to the API Reference. 
-
 ## Version Information
 
 The version number from which a component or interface begins to be supported will be indicated in the corresponding description, e.g., **Initial Version:** 19.
