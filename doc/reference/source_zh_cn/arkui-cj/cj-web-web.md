@@ -779,7 +779,7 @@ public init(request: PermissionRequest)
 ```cangjie
 package ohos_app_cangjie_entry
 import kit.ArkUI.*
-import ohos.state_macro_manage.*
+import ohos.arkui.state_macro_manage.*
 import ohos.webview.*
 
 @Entry
@@ -788,7 +788,7 @@ class EntryView {
     let webController = WebviewController()
     @State var url: String = "www.example.com"
     func build() {
-        Column(10) {
+        Column(space: 10) {
             Button("refresh")
             .onClick {
                 evt =>

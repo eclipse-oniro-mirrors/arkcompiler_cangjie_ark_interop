@@ -72,10 +72,10 @@ public func bindPopup(show: ?Bool, popup: ?CustomPopupOptions): T
 
 package ohos_app_cangjie_entry
 
-import ohos.component.*
-import ohos.state_manage.*
-import ohos.state_macro_manage.*
-import ohos.base.{LengthProp, Length, AppLog, Color, nativeLog, BaseLog, LengthType}
+import kit.ArkUI.*
+import ohos.arkui.state_management.*
+import ohos.arkui.state_macro_manage.*
+import ohos.base.*
 
 @Builder
 func popupBuilder() {
@@ -94,27 +94,26 @@ class EntryView {
     @State var customPopup: Bool = false
 
     public func build() {
-        Flex(FlexOptions(direction: FlexDirection.Column)) {
+        Flex(direction: FlexDirection.Column) {
             Text(msg)
             Text(dismiss)
             Text(custom)
             Button('PopupOptions')
                 .margin(top: 200)
-                .onClick {
+                .onClick({ e =>
                     this.handlePopup = !this.handlePopup
-                }
+                })
                 .bindPopup(
-                    show: this.handlePopup,
-                    popup: PopupOptions(
+                    this.handlePopup,
+                    PopupOptions(
                         message: 'This is a popup with PopupOptions',
-                        placementOnTop: true,
-                        primaryButton: Action(
+                        primaryButton: PopupButton(
                             value: 'confirm',
                             action: {
                                 => this.handlePopup = !this.handlePopup
                             }
                         ),
-                        secondaryButton: Action(
+                        secondaryButton: PopupButton(
                             value: 'cancel',
                             action: {
                                 => this.handlePopup = !this.handlePopup
@@ -137,13 +136,13 @@ class EntryView {
                         radius: 25.0.vp,
                         autoCancel: true,
                         backgroundBlurStyle: BlurStyle.Thick,
-                        shadow: ShadowStyle.OUTER_FLOATING_SM,
-                        offset: Position(50.0, 50.0),
+                        shadow: ShadowStyle.OuterDefaultSM,
+                        offset: Position(x: 50.0, y: 50.0),
                         placement: Placement.Top,
-                        arrowPointPosition: ArrowPointPosition.CENTER,
+                        arrowPointPosition: ArrowPointPosition.Center,
                         mask: Color(0x33000000),
-                        popupColor: Color.GREEN,
-                        messageOptions: PopupMessageOptions(textColor: Color.BLUE, font: Fonts(size: 20.vp)),
+                        popupColor: Color.Green,
+                        messageOptions: PopupMessageOptions(textColor: Color.Blue, font: Font(size: 20.vp)),
                         transition: TransitionEffect.SLIDE_SWITCH,
                         onWillDismiss: {
                             dismissPopupAction: DismissPopupAction =>
@@ -158,24 +157,24 @@ class EntryView {
                     )
                 )
             Button("CustomPopupOptions")
-                .onClick({=> customPopup = !customPopup})
+                .onClick({e => customPopup = !customPopup})
                 .bindPopup(
-                    show: customPopup,
-                    popup: CustomPopupOptions(
+                    customPopup,
+                    CustomPopupOptions(
                         builder: bind(popupBuilder, this),
                         enableArrow: true,
                         placement: Placement.BottomLeft,
-                        popupColor: Color.RED,
+                        popupColor: Color.Red,
                         arrowHeight: 24.0.vp,
                         arrowWidth: 24.0.vp,
                         radius: 10.vp,
-                        offset: Position(5.0, 5.0),
+                        offset: Position(x: 5.0, y: 5.0),
                         width: 300.vp,
                         autoCancel: true,
                         targetSpace: 10.vp,
                         arrowOffset: 5.vp,
                         focusable: true,
-                        arrowPointPosition: ArrowPointPosition.CENTER,
+                        arrowPointPosition: ArrowPointPosition.Center,
                         transition: TransitionEffect.SLIDE_SWITCH,
                         onStateChange: {
                             evt =>

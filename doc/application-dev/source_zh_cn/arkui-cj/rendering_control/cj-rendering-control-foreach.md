@@ -45,8 +45,8 @@ class EntryView {
     func build() {
         Row() {
             Column() {
-                ForEach(this.simpleList,itemGenerator: {item: String,idx:Int64 =>
-            ChildItem(item: item)}, keyGenerator: {item: String, idx: Int64 => return item})
+                ForEach(this.simpleList,itemGeneratorFunc: {item: String,idx:Int64 =>
+            ChildItem(item: item)}, keyGeneratorFunc: {item: String, idx: Int64 => return item})
             }
             .justifyContent(FlexAlign.Center)
             .width(100.percent)
@@ -91,8 +91,8 @@ class EntryView {
     func build() {
         Row() {
             Column() {
-                ForEach(this.simpleList,itemGenerator: {item: String,idx:Int64 =>
-                    ChildItem(item: item)}, keyGenerator: {item: String, idx: Int64 => return item})
+                ForEach(this.simpleList,itemGeneratorFunc: {item: String,idx:Int64 =>
+                    ChildItem(item: item)}, keyGeneratorFunc: {item: String, idx: Int64 => return item})
             }
             .justifyContent(FlexAlign.Center)
             .width(100.percent)
@@ -143,8 +143,8 @@ class EntryView {
                 .onClick({evt=>
                 this.simpleList[2] = 'new three'
                 })
-                ForEach(this.simpleList,itemGenerator: {item: String,idx:Int64 =>
-                ChildItem(item: item)}, keyGenerator: {item: String, idx: Int64 => return item})
+                ForEach(this.simpleList,itemGeneratorFunc: {item: String,idx:Int64 =>
+                ChildItem(item: item)}, keyGeneratorFunc: {item: String, idx: Int64 => return item})
             }
             .justifyContent(FlexAlign.Center)
             .width(100.percent)
@@ -324,11 +324,11 @@ class EntryView {
     func build() {
         Column(space: 5) {
             List() {
-                ForEach(this.articleList, itemGenerator: {item: Article,idx:Int64  =>
+                ForEach(this.articleList, itemGeneratorFunc: {item: Article,idx:Int64  =>
                     ListItem() {
                         ArticleCard(article: item)
                     }
-                    }, keyGenerator: {item: Article, idx: Int64 => return item.id})
+                    }, keyGeneratorFunc: {item: Article, idx: Int64 => return item.id})
             }
             .onReachEnd( {=>
                 this.isListReachEnd = true
@@ -402,8 +402,8 @@ class EntryView {
             .onClick({ evt =>
                 this.simpleList.insert(1,'new item')
             })
-            ForEach(this.simpleList, itemGenerator: {item: String ,idx:Int64 =>ChildItem(item: item)
-            },keyGenerator: {item: String, index: Int64 => index.toString()}
+            ForEach(this.simpleList, itemGeneratorFunc: {item: String ,idx:Int64 =>ChildItem(item: item)
+            },keyGeneratorFunc: {item: String, index: Int64 => index.toString()}
             )
         }
     .justifyContent(FlexAlign.Center)

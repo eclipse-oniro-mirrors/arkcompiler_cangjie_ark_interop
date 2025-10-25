@@ -120,8 +120,8 @@ func alignRules(value: ?AlignRuleOptions): T
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 var children = ["1", "2", "3", "4", "5", "6"]
 
@@ -129,12 +129,12 @@ var children = ["1", "2", "3", "4", "5", "6"]
 @Component
 class EntryView {
     func build(): Unit {
-        Column(20) {
+        Column(space: 20) {
             Text("using container: row")
                 .fontSize(14)
                 .fontColor(0xCCCCCC)
                 .width(100.percent)
-            Row(10) {
+            Row(space: 10) {
                 ForEach(
                     children,
                     itemGeneratorFunc: {
@@ -198,8 +198,8 @@ class EntryView {
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 class ContainerInfo {
     var label: String
@@ -238,15 +238,15 @@ class EntryView {
     @State var currentIndex: Int64 = 0;
 
     func build(): Unit {
-        Column(10) {
+        Column(space: 10) {
             // 切换父级容器大小
             Button(this.container[this.currentIndex].label)
                 .backgroundColor(0x317aff)
-                .onClick({ =>
+                .onClick({e =>
                     this.currentIndex = (this.currentIndex + 1) % this.container.size
                 })
             // 通过变量设置Flex父容器宽度
-            Flex(FlexParams(justifyContent: FlexAlign.SpaceBetween)) {
+            Flex(justifyContent: FlexAlign.SpaceBetween) {
                 ForEach(
                     this.children, itemGeneratorFunc:
                     {

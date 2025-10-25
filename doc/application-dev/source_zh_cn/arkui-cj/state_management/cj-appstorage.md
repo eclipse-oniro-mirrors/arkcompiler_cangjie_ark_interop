@@ -239,7 +239,6 @@ package ohos_app_cangjie_entry
 import kit.ArkUI.*
 import ohos.arkui.state_macro_manage.*
 import ohos.resource_manager.AppResource
-import kit.BasicServicesKit.agent.State
 import kit.PerformanceAnalysisKit.Hilog
 
 class ViewData {

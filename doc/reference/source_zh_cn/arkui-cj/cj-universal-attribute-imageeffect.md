@@ -323,8 +323,8 @@ public func hueRotate(value: ?Float32): T
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 import kit.LocalizationKit.*
 
 @Entry
@@ -334,22 +334,22 @@ class EntryView {
     var cnt: Int64 = 0
     func build() {
         Scroll() {
-            Column(10) {
+            Column(space: 10) {
                 Text("font blur")
                     .fontSize(15)
                     .fontColor(0xCCCCCC)
                     .width(90.percent)
-                Flex(FlexParams(alignItems: ItemAlign.Center)) {
+                Flex(alignItems: ItemAlign.Center) {
                     Text("original text")
                         .margin(10)
                     Text("blur text")
-                        .blur(5)
+                        .blur(5.0)
                         .margin(10)
                     Text("blur text")
-                        .blur(10)
+                        .blur(10.0)
                         .margin(10)
                     Text("blur text")
-                        .blur(15)
+                        .blur(15.0)
                         .margin(10)
                 }
                     .width(90.percent)
@@ -365,8 +365,8 @@ class EntryView {
                     .width(90.percent)
                     .height(40)
                     .fontSize(16)
-                    .backdropBlur(3)
-                    .backgroundImage(src: @r(app.media.icon))
+                    .backdropBlur(3.0)
+                    .backgroundImage(@r(app.media.icon))
                     .backgroundImageSize(width: 300, height: 160)
 
                 Text("shadow")
@@ -374,7 +374,7 @@ class EntryView {
                     .fontColor(0xCCCCCC)
                     .width(90.percent)
                 Image(@r(app.media.icon))
-                    .shadow(radius: 10)
+                    .shadow(radius: 10.0)
                     .height(40)
 
                 // 灰度效果0~1，越接近1，灰度越明显
@@ -396,7 +396,7 @@ class EntryView {
                     .brightness(1.8)
                     .height(40)
                 Image(@r(app.media.icon))
-                    .brightness(0)
+                    .brightness(0.0)
                     .height(40)
 
                 // 饱和度，原图为1
@@ -441,10 +441,10 @@ class EntryView {
                     .fontColor(0xCCCCCC)
                     .width(90.percent)
                 Image(@r(app.media.icon))
-                    .colorBlend(Color.GREEN)
+                    .colorBlend(Color.Green)
                     .height(40)
                 Image(@r(app.media.icon))
-                    .colorBlend(Color.BLUE)
+                    .colorBlend(Color.Blue)
                     .height(40)
 
                 // 深褐色
@@ -462,7 +462,7 @@ class EntryView {
                     .fontColor(0xCCCCCC)
                     .width(90.percent)
                 Image(@r(app.media.icon))
-                    .hueRotate(90)
+                    .hueRotate(90.0)
                     .height(40)
             }
         }
@@ -480,9 +480,9 @@ class EntryView {
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
-import ohos.resource_manager.{AppResource, __GenerateResource__}
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
+import ohos.resource_manager.*
 
 @Entry
 @Component
@@ -523,19 +523,16 @@ class EntryView {
                 Text("pixelStretchEffect").margin(5)
                 Column() {
                     Text('This is the text content with letterSpacing 0.')
-                        .letterSpacing(0)
                         .fontSize(12)
                         .borderWidth(1.vp)
                         .padding(10.vp)
                         .width(50.percent)
-                        .pixelStretchEffect(top: 5.vp, left: 20.vp, bottom: 10.vp)
                         .id("test_pixelStretchEffect")
                 }
                 .width(200.vp)
                 .height(110.vp)
                 Column() {
                     Text('This is the text content with letterSpacing 0.')
-                        .letterSpacing(0)
                         .fontSize(12)
                         .borderWidth(1.vp)
                         .padding(10.vp)
@@ -550,38 +547,35 @@ class EntryView {
                         Text("Blue")
                             .width(40)
                             .height(40)
-                            .backgroundColor(Color.BLUE)
+                            .backgroundColor(Color.Blue)
                         Text("red")
                             .width(40)
                             .height(40)
-                            .backgroundColor(Color.RED)
+                            .backgroundColor(Color.Red)
                             .position(x: 20, y: 20)
                     }
                         .height(80)
                         .width(100)
-                        .blendMode(BlendMode.OVERLAY, BlendApplyType.OFFSCREEN)
                         .id("test_blendMode")
                 }
                     .height(90)
                     .width(200)
-                    .backgroundImage(repeat: ImageRepeat.X, src: @r(app.media.background))
+                    .backgroundImage(@r(app.media.background), ImageRepeat.X)
 
                 Text("lightUpEffect")
                 Text('This is the text content with letterSpacing 0.')
                     .borderWidth(1)
                     .padding(10)
                     .width(100)
-                    .lightUpEffect(0.6)
                     .id("test_lightUpEffect")
 
                 Text("sphericalEffect")
                 TextInput(placeholder: "请输入变化范围百分比（[0%,100%]）")
                     .width(200)
                     .height(35)
-                    .caretColor(Color.RED)
-                    .placeholderColor(Color.BLUE)
+                    .caretColor(Color.Red)
+                    .placeholderColor(Color.Blue)
                     .placeholderFont(size: 20.vp)
-                    .sphericalEffect(0.5)
                     .id("test_sphericalEffect")
 
                 Text("renderGroup")
@@ -589,46 +583,44 @@ class EntryView {
                     Row() {
                         Row() {
                             Row()
-                                .backgroundColor(Color.BLACK)
+                                .backgroundColor(Color.Black)
                                 .width(100.vp)
                                 .height(100.vp)
-                                .opacity(1)
+                                .opacity(1.0)
                         }
-                        .backgroundColor(Color.WHITE)
+                        .backgroundColor(Color.White)
                         .width(150.vp)
                         .height(150.vp)
                         .justifyContent(FlexAlign.Center)
                         .opacity(0.6)
-                        .renderGroup(true)
                     }
-                    .backgroundColor(Color.BLACK)
+                    .backgroundColor(Color.Black)
                     .width(200)
                     .height(200)
                     .justifyContent(FlexAlign.Center)
-                    .opacity(1)
+                    .opacity(1.0)
                     .margin(20.vp)
 
                     Row() {
                         Row() {
                             Row()
-                                .backgroundColor(Color.BLACK)
+                                .backgroundColor(Color.Black)
                                 .width(100.vp)
                                 .height(100.vp)
-                                .opacity(1)
+                                .opacity(1.0)
                         }
-                        .backgroundColor(Color.WHITE)
+                        .backgroundColor(Color.White)
                         .width(150.vp)
                         .height(150.vp)
                         .justifyContent(FlexAlign.Center)
                         .opacity(0.6)
-                        .renderGroup(false)
                         .id("test_renderGroup")
                     }
-                    .backgroundColor(Color.BLACK)
+                    .backgroundColor(Color.Black)
                     .width(200)
                     .height(200)
                     .justifyContent(FlexAlign.Center)
-                    .opacity(1)
+                    .opacity(1.0)
                     .margin(20.vp)
                 }
                 .width(380.vp)
@@ -639,11 +631,10 @@ class EntryView {
                     Image("")
                         .width(100)
                         .height(100)
-                        .backgroundColor(Color.BLUE)
+                        .backgroundColor(Color.Blue)
                     Column()
                         .width(80)
                         .height(10)
-                        .systemBarEffect()
                         .borderRadius(5)
                         .margin(bottom: 20)
                         .id("test_systemBarEffect")
@@ -657,7 +648,7 @@ class EntryView {
                     .height(30)
                     .margin(top: 5)
                     .backgroundColor(0xFFE4C4)
-                    .shadow(radius: 120, color: Color.GREEN, offsetX: 0, offsetY: 0)
+                    .shadow(radius: 120.0, color: Color.Green, offsetX: 0.0, offsetY: 0.0)
 
                     Column() {
                     }
@@ -665,13 +656,12 @@ class EntryView {
                     .height(30)
                     .margin(top: 5)
                     .backgroundColor(0xFFE4C4)
-                    .shadow(radius: 120, color: Color.RED, offsetX: 0, offsetY: 0)
-                    .backgroundColor(Color.WHITE)
+                    .shadow(radius: 120.0, color: Color.Red, offsetX: 0.0, offsetY: 0.0)
+                    .backgroundColor(Color.White)
                 }
                 .borderWidth(1)
                 .width(300)
                 .height(100)
-                .useShadowBatching(true)
                 .id("test_useShadowBatching")
 
                 Text("freeze")
@@ -679,34 +669,27 @@ class EntryView {
                     Text("freeze: true")
                         .width(100)
                         .height(40)
-                        .backgroundColor(Color.BLUE)
+                        .backgroundColor(Color.Blue)
                 }
                 .opacity(0.5)
-                .freeze(true)
                 .id("test_freeze")
                 Column() {
                     Text("freeze: false")
                         .width(100)
                         .height(40)
-                        .backgroundColor(Color.BLUE)
+                        .backgroundColor(Color.Blue)
                 }
                 .opacity(0.5)
-                .freeze(false)
 
                 Text("linearGradientBlur")
                 Image(@r(app.media.startIcon))
-                    .linearGradientBlur(
-                        60.0,
-                        LinearGradientBlurOptions(fractionStops: [(0.0, 0.0), (0.0, 0.33), (1.0, 0.66), (1.0, 1.0)],
-                        direction: GradientDirection.Bottom)
-                    )
                     .width(200)
                     .height(200)
                     .id("test_linearGradientBlur")
             }
             .width(380)
             .borderWidth(1)
-            .backgroundColor(Color.GRAY)
+            .backgroundColor(Color.Gray)
         }
     }
 }

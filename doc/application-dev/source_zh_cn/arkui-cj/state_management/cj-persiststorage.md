@@ -71,9 +71,9 @@ class EntryView {
         Row(){
             Column(){
                 Text("${this.aProp}")
-                    .onClick{
+                    .onClick({
                         etv=> this.aProp += 1
-                    }
+                    })
             }
         }
     }

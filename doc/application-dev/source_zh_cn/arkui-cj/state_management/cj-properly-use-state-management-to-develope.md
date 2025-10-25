@@ -62,8 +62,7 @@ class EntryView {
                             this.styleList[i].fontSize++
                         }
                         Hilog.info(0, "AppLogCj", "change font size")
-                    }
-                )
+                    })
             List() {
                 ForEach(this.styleList, {
                         item: TextStyles, _: Int64 =>
