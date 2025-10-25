@@ -106,7 +106,7 @@ func disposeJSContext(env: JSEnv): Unit {
  * Its main purpose is to create JSValues and safe references and manage the lifecycle of Cangjie objects 
  * referenced by ArkTS.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public class JSContext {
     static let allRuntimes_ = HashMap<JSEnv, JSContext>()
     static let runtimesMutex = Mutex()
@@ -185,7 +185,7 @@ public class JSContext {
     /**
      * Check whether the current thread can execute interop interface.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public func isInBindThread(): Bool {
         bindTid_ == unsafe { ARKTS_GetPosixThreadId() }
     }
@@ -209,8 +209,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public prop global: JSObject {
         get() {
@@ -233,8 +232,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public prop env: JSEnv {
         get() {
@@ -255,8 +253,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func getNapiEnv(): napi_env {
         unsafe {
@@ -279,8 +276,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func undefined(): JSUndefined {
         checkLifecycleAndThread()
@@ -294,8 +290,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func null(): JSNull {
         checkLifecycleAndThread()
@@ -309,8 +304,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func boolean(value: Bool): JSBoolean {
         checkLifecycleAndThread()
@@ -324,8 +318,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func number(value: Float64): JSNumber {
         checkLifecycleAndThread()
@@ -339,8 +332,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func number(value: Int32): JSNumber {
         checkLifecycleAndThread()
@@ -355,8 +347,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func string(value: String): JSString {
         JSString(this, value)
@@ -370,8 +361,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func string(value: Utf16String): JSString {
         JSString(this, value)
@@ -385,8 +375,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func object(): JSObject {
         JSObject(this)
@@ -400,8 +389,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func function(lambda: JSLambda): JSFunction {
         JSFunction(this, lambda)
@@ -415,8 +403,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func array(arr: Array<JSValue>): JSArray {
         JSArray(this, arr)
@@ -430,8 +417,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func clazz(ctor: JSLambda, superClass!: ?JSClass = None): JSClass {
         JSClass(this, ctor, superClass)
@@ -445,8 +431,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func external(data: SharedObject): JSExternal {
         JSExternal(this, data)
@@ -460,8 +445,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func promiseCapability(): JSPromiseCapability {
         JSPromiseCapability(this)
@@ -510,8 +494,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(length: Int32): JSArrayBuffer {
         if (length <= 0) {
@@ -528,8 +511,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<Byte>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -543,8 +525,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<Int8>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -558,8 +539,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<Int16>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -573,8 +553,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<UInt16>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -588,8 +567,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<UInt32>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -603,8 +581,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<Int32>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -618,8 +595,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<Float32>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -633,8 +609,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<Int64>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -648,8 +623,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<UInt64>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -663,8 +637,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func arrayBuffer(data: Array<Float64>): JSArrayBuffer {
         JSArrayBuffer(this, data)
@@ -679,8 +652,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public unsafe func arrayBuffer(rawData: CPointer<Byte>, length: Int32, finalizer: JSBufferFinalizer): JSArrayBuffer {
         if (length <= 0) {
@@ -697,8 +669,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func symbol(description!: String = ""): JSSymbol {
         JSSymbol(this, description)
@@ -712,8 +683,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func bigint(value: Int64): JSBigInt {
         JSBigInt(this, value)
@@ -727,8 +697,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func bigint(value: BigInt): JSBigInt {
         JSBigInt(this, value)
@@ -737,7 +706,7 @@ public class JSContext {
     /**
      * Create a task to be executed in ArkTS thread.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public func postJSTask(callback: () -> Unit): Unit {
         keepAlive {
             let id = asyncCallbacks_.append(callback)
@@ -753,8 +722,7 @@ public class JSContext {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func requireSystemNativeModule(moduleName: String, prefix!: ?String = None): JSValue {
         let env = this.env // do lifecycle check and thread check here.

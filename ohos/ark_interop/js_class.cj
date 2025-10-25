@@ -29,7 +29,7 @@ foreign func ARKTS_New(env: JSEnv, constructor: JSValue_, argCount: Int32, args:
  * The JSClass object is used to represent a safe reference to the ArkTS class (constructor).
  * Method and accessors can be added to this class, and instances of this class can be created.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public class JSClass <: JSHeapObject {
     static func createClass(context: JSContext, constructor: JSLambda, superClass: ?JSClass): JSValue_ {
         let lambdaId = context.sharedLambda_.append(constructor)
@@ -74,8 +74,7 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300002 - Outside error occurred.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public prop prototype: JSObject {
         get() {
@@ -93,8 +92,7 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func new(): JSValue {
         let env = context.env // do lifecycle check and thread check here.
@@ -110,8 +108,7 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func new(arg: JSValue): JSValue {
         let env = context.env // do lifecycle check and thread check here.
@@ -128,8 +125,7 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func new(args: Array<JSValue>): JSValue {
         let env = context.env // do lifecycle check and thread check here.
@@ -157,8 +153,7 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func addProperty(key: JSKeyable, value: JSValue): Unit {
         prototype.defineOwnProperty(key, value, isWritable: false, isEnumerable: false)
@@ -172,8 +167,7 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func addAccessor(key: JSKeyable, getter!: ?JSFunction = None, setter!: ?JSFunction = None): Unit {
         prototype.defineOwnAccessor(key, getter: getter, setter: setter, isEnumerable: false)
@@ -187,8 +181,7 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func addAccessor(key: JSKeyable, getter!: ?JSLambda = None, setter!: ?JSLambda = None): Unit {
         prototype.defineOwnAccessor(key, getter: getter, setter: setter, isEnumerable: false)
@@ -202,8 +195,7 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func addMethod(key: JSKeyable, method: JSFunction): Unit {
         prototype.defineOwnProperty(key, method.toJSValue(), isWritable: false, isEnumerable: false)
@@ -217,8 +209,7 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func addMethod(key: JSKeyable, method: JSLambda): Unit {
         prototype.defineOwnProperty(key, JSValue(context, JSFunction.createFunction(context, method)), isWritable: false,

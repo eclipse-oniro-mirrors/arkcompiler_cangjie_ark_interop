@@ -66,7 +66,7 @@ foreign {
 /**
  * String stored in UTF-16 encoding format which has better performance than String when converting to and from ArkTS string.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKeyable & JSInteropType<Utf16String> {
     private let handle_: Utf16StringHandle
     var header_ = Utf16StringHeader()
@@ -78,7 +78,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     /**
      * Empty String.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static let empty = Utf16String(unsafe { CJUtf16StringCreateEmpty()})
     static let nl = Utf16String("\n")
 
@@ -103,8 +103,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300002 - Outside error occurred.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public init(src: String) {
         handle_ = unsafe {
@@ -140,7 +139,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * Release the memory that stores the string content. Accessing the string content after the first dispose will
      * result in an exception.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public func dispose(): Unit {
         while (true) {
             let status = isAlive_.load()
@@ -159,7 +158,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * Check whether ths string content is accessible. The string content can be manually released using 
      * dispose method. Continuing to access it after release will throw an exception.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public prop accessible: Bool {
         get() {
             isAlive_.load() >= 0
@@ -186,8 +185,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toString(): String {
         acquire()
@@ -214,8 +212,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func compare(target: Utf16String): Ordering {
         acquire()
@@ -240,8 +237,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func == (target: Utf16String): Bool {
         match (compare(target)) {
@@ -256,8 +252,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func hashCode(): Int64 {
         acquire()
@@ -272,8 +267,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public prop size: Int64 {
         get() {
@@ -302,8 +296,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public prop totalChars: Int64 {
         get() {
@@ -323,8 +316,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isEmpty(): Bool {
         acquire()
@@ -337,8 +329,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * Check whether the content of string has been compressed.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isCompressed(): Bool {
         acquire()
@@ -353,8 +344,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func != (target: Utf16String): Bool {
         return ! (this == target)
@@ -366,8 +356,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func > (target: Utf16String): Bool {
         return match (compare(target)) {
@@ -382,8 +371,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func >= (target: Utf16String): Bool {
         return ! (this < target)
@@ -395,8 +383,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func < (target: Utf16String): Bool {
         return match (compare(target)) {
@@ -411,8 +398,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func <= (target: Utf16String): Bool {
         return ! (this > target)
@@ -425,8 +411,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func [](index: Int64): UInt16 {
         acquire()
@@ -455,8 +440,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func [](range: Range<Int64>): Utf16String {
         acquire()
@@ -486,8 +470,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func runes(): Iterator<Rune> {
         acquire()
@@ -507,8 +490,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func lines(): Iterator<Utf16String> {
         acquire()
@@ -523,8 +505,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func indexOf(target: Utf16String): ?Int64 {
         return indexOf(target, 0)
@@ -536,8 +517,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func indexOf(target: Utf16String, fromIndex: Int64): ?Int64 {
         acquire()
@@ -557,8 +537,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func lastIndexOf(target: Utf16String): ?Int64 {
         return lastIndexOf(target, size)
@@ -570,8 +549,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func lastIndexOf(target: Utf16String, fromIndex: Int64): ?Int64 {
         acquire()
@@ -591,8 +569,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func count(src: Utf16String): Int64 {
         acquire()
@@ -609,8 +586,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func split(separator: Utf16String, remoteEmpty!: Bool = false): Array<Utf16String> {
         return split(separator, 0, remoteEmpty: remoteEmpty)
@@ -623,8 +599,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func split(separator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Array<Utf16String> {
         acquire()
@@ -664,8 +639,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func lazySplit(separator: Utf16String, remoteEmpty!: Bool = false): Iterator<Utf16String> {
         return lazySplit(separator, Int64.Max, remoteEmpty: remoteEmpty)
@@ -677,8 +651,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func lazySplit(separator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Iterator<Utf16String> {
         acquire()
@@ -693,8 +666,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     @OverflowWrapping
     public func replace(old: Utf16String, new: Utf16String, count!: Int64 = Int64.Max): Utf16String {
@@ -716,8 +688,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func contains(target: Utf16String): Bool {
         return indexOf(target).isSome()
@@ -729,8 +700,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func startsWith(target: Utf16String): Bool {
         acquire()
@@ -749,8 +719,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func endsWith(target: Utf16String): Bool {
         acquire()
@@ -769,8 +738,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func + (right: Utf16String): Utf16String {
         acquire()
@@ -790,8 +758,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         acquire()
@@ -809,8 +776,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, value: JSValue): Utf16String {
         value.toUtf16String()
@@ -819,7 +785,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     /**
      * Get corresponding ArkTS type name of Utf16String.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "string"
     }

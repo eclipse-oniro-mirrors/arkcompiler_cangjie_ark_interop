@@ -42,16 +42,14 @@ protected func getUniversalErrorMsg(code: Int32): ?String {
  * Defines the exception interface.
  */
 @!APILevel[
-    21,
-    stagemodelonly: true
+    since: "22"
 ]
 public class BusinessException <: Exception {
     /**
      * Defines the basic error code.
      */
     @!APILevel[
-        21,
-        stagemodelonly: true
+        since: "22"
     ]
     public let code: Int32
 
@@ -63,8 +61,7 @@ public class BusinessException <: Exception {
      * @relation data?: T
      */
     @!APILevel[
-        21,
-        stagemodelonly: true
+        since: "22"
     ]
     public func getData<T>(): ?T {
         if (let Some(v) <- errData) {
@@ -88,8 +85,7 @@ public class BusinessException <: Exception {
      * Translate the exception to String.
      */
     @!APILevel[
-        21,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toString(): String {
         let className: String = getClassName()
