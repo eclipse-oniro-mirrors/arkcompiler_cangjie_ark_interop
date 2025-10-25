@@ -41,14 +41,14 @@ public func opacity(value: ?Float64): T
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 @Entry
 @Component
 class EntryView {
     func build() {
-        Column(5) {
+        Column(space: 5) {
             Text("opacity(1)")
                 .fontSize(9)
                 .width(90.percent)
@@ -56,7 +56,7 @@ class EntryView {
             Text("")
                 .width(90.percent)
                 .height(50)
-                .opacity(1)
+                .opacity(1.0)
                 .backgroundColor(0xAFEEEE)
             Text("opacity(0.7)")
                 .fontSize(9)
@@ -92,7 +92,7 @@ class EntryView {
             Text("")
                 .width(90.percent)
                 .height(50)
-                .opacity(0)
+                .opacity(0.0)
                 .backgroundColor(0xAFEEEE)
         }
         .width(100.percent)

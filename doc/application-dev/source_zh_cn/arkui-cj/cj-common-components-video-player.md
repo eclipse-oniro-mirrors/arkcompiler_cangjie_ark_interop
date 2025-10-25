@@ -191,10 +191,10 @@ Video控制器主要用于控制视频的状态，包括播放、暂停、停止
                       .controls(false)
                       .autoPlay(true)
                       .onPrepared({
-                              value => this.durationTime = value.duration
+                              value => this.durationTime = value.duration.getOrThrow()
                           })
                       .onUpdate({
-                              value => this.currentTime = value.time
+                              value => this.currentTime = value.time.getOrThrow()
                           })
                   Row() {
                       Text("${this.currentTime}s")

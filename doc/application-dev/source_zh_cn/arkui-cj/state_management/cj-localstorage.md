@@ -371,9 +371,12 @@ class EntryView {
 
 ```cangjie
 package ohos_app_cangjie_entry
-internal import ohos.hilog.*
-internal import ohos.app.ability.ability_stage.AbilityStage
-internal import ohos.app.ability.ability_constant.LaunchReason
+import ohos.hilog.*
+import ohos.app.ability.ability_stage.AbilityStage
+import ohos.app.ability.ability_constant.LaunchReason
+import ohos.app.ability.ui_ability.UIAbility
+import ohos.app.ability.want.Want
+import ohos.app.ability.ability_constant.LaunchParam
 import kit.ArkUI.*
 
 let storage =  LocalStorage()

@@ -222,7 +222,7 @@ class EntryView {
                 .radialGradient(
                     (50, 50), // 径向渐变中心点
                     100, // 径向渐变半径
-                    colors: [
+                    [
                         // 组件内以[50，50]为中心点，在半径为0到12.5的范围内从颜色断点1的颜色渐变到颜色断点2的颜色,
                         // 在半径为12.5到25的范围内从颜色断点2的颜色渐变到颜色断点3的颜色,
                         // 组件外其他半径范围内按照半径为0到25的渐变效果重复着色
@@ -245,7 +245,7 @@ class EntryView {
                 .radialGradient(
                     (0, 0), // 径向渐变中心点，当前为组件左上角坐标
                     100,
-                    colors: [
+                    [
                         (Color(0xf56c6c), 0.0),
                         (Color(0xffffff), 0.125),
                         (Color(0x409EFF), 0.25)
@@ -265,7 +265,7 @@ class EntryView {
                 .radialGradient(
                     (50, 50),
                     100,
-                    colors: [
+                    [
                         (Color(0xf56c6c), 0.0),
                         (Color(0xffffff), 0.125),
                         (Color(0x409EFF), 0.25)
@@ -285,7 +285,7 @@ class EntryView {
                 .radialGradient(
                     (50, 50),
                     100.0,
-                    colors: [
+                    [
                         (Color(0xf56c6c), 0.0),
                         (Color(0xffffff), 0.125),
                         (Color(0x409EFF), 0.25)

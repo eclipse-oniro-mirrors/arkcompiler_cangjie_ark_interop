@@ -293,7 +293,7 @@ public class EntryView {
             List() {
                 LazyForEach(
                     data,
-                    itemGenerator: {
+                    itemGeneratorFunc: {
                         item: Int64, idx: Int64 => ListItem() {
                             CardView(item: "${item}")
                         }

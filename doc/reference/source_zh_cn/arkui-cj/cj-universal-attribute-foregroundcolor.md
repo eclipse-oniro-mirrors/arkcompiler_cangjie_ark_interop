@@ -69,24 +69,24 @@ public func foregroundColor(value: ?ResourceColor): T
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 @Entry
 @Component
 class EntryView {
     func build() {
-        Column(100) {
+        Column(space: 100) {
             Button("GREEN")
                 .width(50.percent)
                 .height(80)
                 .fontSize(20)
-                .foregroundColor(Color.GREEN)
+                .foregroundColor(Color.Green)
             Button("RED")
                 .width(50.percent)
                 .height(80)
                 .fontSize(20)
-                .foregroundColor(Color.RED)
+                .foregroundColor(Color.Red)
             }
             .width(100.percent)
         }
@@ -103,25 +103,25 @@ class EntryView {
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 @Entry
 @Component
 class EntryView {
     func build() {
-        Column(100) {
+        Column(space: 100) {
             Button("NO INVERT")
                 .width(100.percent)
                 .height(80)
                 .fontSize(20)
-                .backgroundColor(Color.BLUE)
+                .backgroundColor(Color.Blue)
             Button("INVERT")
                 .width(100.percent)
                 .height(80)
                 .fontSize(20)
-                .backgroundColor(Color.BLUE)
-                .foregroundColor(INVERT)
+                .backgroundColor(Color.Blue)
+                .foregroundColor(ColoringStrategy.Invert)
             }
             .width(100.percent)
         }
@@ -138,25 +138,25 @@ class EntryView {
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 @Entry
 @Component
 class EntryView {
     func build() {
-        Column(100) {
+        Column(space: 100) {
             Button("设置前景色为蓝色")
                 .width(100.percent)
                 .height(80)
                 .fontSize(20)
-                .backgroundColor(Color.GRAY)
-                .foregroundColor(Color.BLUE)
+                .backgroundColor(Color.Gray)
+                .foregroundColor(Color.Blue)
 
             Button("未设置前景色继承自父组件")
                 .width(100.percent)
                 .height(80).fontSize(20)
-                .backgroundColor(Color.GRAY)
+                .backgroundColor(Color.Gray)
             }
             .width(100.percent)
         }

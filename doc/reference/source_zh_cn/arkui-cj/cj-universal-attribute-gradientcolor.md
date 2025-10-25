@@ -96,8 +96,8 @@ public func radialGradient(center: ?(Length, Length), radius: ?Length, colors: ?
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 @Entry
 @Component
@@ -144,8 +144,8 @@ class EntryView {
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 @Entry
 @Component
@@ -197,8 +197,8 @@ class EntryView {
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 @Entry
 @Component
@@ -215,7 +215,7 @@ class EntryView {
                 .radialGradient(
                     (100.0.px, 100.0.px),
                     120.0,
-                    colors: [(Color(0xff0000), 0.0), (Color(0x0000ff), 0.3), (Color(0xffff00), 1.0)]
+                    [(Color(0xff0000), 0.0), (Color(0x0000ff), 0.3), (Color(0xffff00), 1.0)]
                 )
 
             Text("radialGradient Repeat")
@@ -228,7 +228,7 @@ class EntryView {
                 .radialGradient(
                     (100.0.px, 100.0.px),
                     120.0,
-                    colors: [(Color(0xff0000), 0.0), (Color(0x0000ff), 0.3), (Color(0xffff00), 0.5)],
+                    [(Color(0xff0000), 0.0), (Color(0x0000ff), 0.3), (Color(0xffff00), 0.5)],
                     repeating: true
                 )
         }

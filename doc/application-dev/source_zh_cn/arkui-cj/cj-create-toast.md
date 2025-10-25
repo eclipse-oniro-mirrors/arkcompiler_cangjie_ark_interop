@@ -98,7 +98,7 @@ class EntryView{
             Button("Show toast").fontSize(20)
             .onClick({
                     evt=>
-                    getUIContext().getPromptAction().showToast(message: "Hello Word")
+                    getUIContext().getPromptAction().showToast(ShowToastOptions(message: "Hello Word",duration: 2000))
             })
         }.size(width: 100.percent,height: 100.percent).justifyContent(FlexAlign.Center)
     }

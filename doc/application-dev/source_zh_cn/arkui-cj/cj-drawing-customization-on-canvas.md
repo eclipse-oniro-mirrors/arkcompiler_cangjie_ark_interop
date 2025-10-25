@@ -235,12 +235,12 @@ OffscreenCanvasRenderingContext2D对象和CanvasRenderingContext2D对象提供�
                   .onReady({
                       =>
                       // 文本填充
-                      this.context.font = "FontStyle.Normal bolder 50.px sans-serif"
+                      this.context.font = "normal bolder 50px sans-serif"
                       this.context.fillText("Hello World!", 50.0, 100.0)
                       // 文本描边
                       this.context.strokeStyle = 0Xff0000
                       this.context.lineWidth = 0.7
-                      this.context.font = "FontStyle.Normal bolder 50.px sans-serif"
+                      this.context.font = "normal bolder 50px sans-serif"
                       this.context.strokeText("Hello World!", 50.0, 120.0)
                       }
                   )

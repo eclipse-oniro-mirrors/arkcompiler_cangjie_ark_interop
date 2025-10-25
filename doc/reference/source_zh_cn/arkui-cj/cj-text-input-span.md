@@ -303,8 +303,6 @@ class EntryView {
                 Span("I am LetterSpacing")
                 .fontSize(20)
                 .decoration(decorationType: TextDecorationType.None, color: Color.Red)
-                //设置文本字符间距为10.fp
-                .letterSpacing(10)
             }
             Text() {
                 Span("I am Span1").fontSize(30)
