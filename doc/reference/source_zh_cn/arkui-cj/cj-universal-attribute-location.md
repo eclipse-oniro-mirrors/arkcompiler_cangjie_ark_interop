@@ -94,15 +94,15 @@ func offset(x!: ?Length, y!: ?Length): T
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 @Entry
 @Component
 class EntryView {
     func build(): Unit {
         Column {
-            Column(10) {
+            Column(space: 10) {
                 // 设置子组件左上角相对于父组件左上角的偏移位置
                 // 元素内容<元素宽高，设置内容在与元素内的对齐方式
                 Text("align")
@@ -205,15 +205,15 @@ class EntryView {
 
 ```cangjie
 package ohos_app_cangjie_entry
-import kit.UIKit.*
-import ohos.state_macro_manage.*
+import kit.ArkUI.*
+import ohos.arkui.state_macro_manage.*
 
 @Entry
 @Component
 class EntryView {
     func build(): Unit {
         Scroll() {
-            Column(20) {
+            Column(space: 20) {
                 // 设置子组件左上角相对于父组件左上角的偏移位置
                 Text("position")
                     .fontSize(12)
@@ -254,21 +254,21 @@ class EntryView {
                     .fontSize(12)
                     .fontColor(0xCCCCCC)
                     .width(90.percent)
-                Stack(Alignment.TopStart) {
+                Stack(alignContent: Alignment.TopStart) {
                     Row()
                         .size(width: 100, height: 100)
                         .backgroundColor(0xdeb887)
                     Text("A")
                         .size(width: 25, height: 25)
-                        .backgroundColor(Color.GREEN)
+                        .backgroundColor(Color.Green)
                         .markAnchor(x: 25, y: 25)
                     Text("B")
                         .size(width: 25, height: 25)
-                        .backgroundColor(Color.GREEN)
+                        .backgroundColor(Color.Green)
                         .markAnchor(x: -100, y: -25)
                     Text("C")
                         .size(width: 25, height: 25)
-                        .backgroundColor(Color.GREEN)
+                        .backgroundColor(Color.Green)
                         .markAnchor(x: 25, y: -25)
                 }
                 .margin(top: 25)
