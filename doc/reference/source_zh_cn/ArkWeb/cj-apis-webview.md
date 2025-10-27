@@ -151,7 +151,7 @@ class webview_0 {
 
 ```cangjie
 public class HistoryItem {
-    public let icon: PixelMap
+    public var icon: PixelMap
     public var historyUrl: String
     public var historyRawUrl: String
     public var title: String
@@ -212,17 +212,15 @@ public var title: String
 
 **起始版本：** 22
 
-### let icon
+### var icon
 
 ```cangjie
-public let icon: ?PixelMap
+public var icon: ?PixelMap
 ```
 
 **功能：** 历史页面图标的PixelMap对象。
 
 **类型：** [PixelMap](../ImageKit/cj-apis-image.md#class-pixelmap)
-
-**读写能力：** 只读
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -151,7 +151,7 @@ class webview_0 {
 
 ```cangjie
 public class HistoryItem {
-    public let icon: PixelMap
+    public var icon: PixelMap
     public var historyUrl: String
     public var historyRawUrl: String
     public var title: String
@@ -212,17 +212,15 @@ public var title: String
 
 **Since:** 21
 
-### let icon
+### var icon
 
 ```cangjie
-public let icon: ?PixelMap
+public var icon: ?PixelMap
 ```
 
 **Description:** The PixelMap object of the history page icon.
 
 **Type:** [PixelMap](../ImageKit/cj-apis-image.md#class-pixelmap)
-
-**Read/Write Attribute:** Read-only
 
 **System Capability:** SystemCapability.Web.Webview.Core
 

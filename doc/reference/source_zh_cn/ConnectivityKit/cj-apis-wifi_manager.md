@@ -411,8 +411,8 @@ stopDiscoverDevices()
 
 ```cangjie
 public class WifiInfoElem {
-    public let eid: UInt32
-    public let content: Array<UInt8>
+    public var eid: UInt32
+    public var content: Array<UInt8>
 }
 ```
 
@@ -422,33 +422,29 @@ public class WifiInfoElem {
 
 **起始版本：** 22
 
-### let content
+### var content
 
 ```cangjie
-public let content: Array<UInt8>
+public var content: Array<UInt8>
 ```
 
 **功能：** 元素内容。
 
 **类型：** Array\<UInt8>
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let eid
+### var eid
 
 ```cangjie
-public let eid: UInt32
+public var eid: UInt32
 ```
 
 **功能：** 元素ID。
 
 **类型：** UInt32
-
-**读写能力：** 只读
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -458,12 +454,12 @@ public let eid: UInt32
 
 ```cangjie
 public class WifiP2PConfig {
-    public let deviceAddress: String
-    public let netId: Int32
-    public let passphrase: String
-    public let groupName: String
-    public let goBand: GroupOwnerBand
-    public let deviceAddressType: DeviceAddressType
+    public var deviceAddress: String
+    public var netId: Int32
+    public var passphrase: String
+    public var groupName: String
+    public var goBand: GroupOwnerBand
+    public var deviceAddressType: DeviceAddressType
     public init(
         deviceAddress: String,
         netId: Int32,
@@ -481,97 +477,85 @@ public class WifiP2PConfig {
 
 **起始版本：** 22
 
-### let deviceAddress
+### var deviceAddress
 
 ```cangjie
-public let deviceAddress: String
+public var deviceAddress: String
 ```
 
 **功能：** 设备地址。
 
 **类型：** String
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **起始版本：** 22
 
-### let deviceAddressType
+### var deviceAddressType
 
 ```cangjie
-public let deviceAddressType: DeviceAddressType
+public var deviceAddressType: DeviceAddressType
 ```
 
 **功能：** 设备地址类型。
 
 **类型：** [DeviceAddressType](#enum-deviceaddresstype)
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **起始版本：** 22
 
-### let goBand
+### var goBand
 
 ```cangjie
-public let goBand: GroupOwnerBand
+public var goBand: GroupOwnerBand
 ```
 
 **功能：** 群组带宽。
 
 **类型：** [GroupOwnerBand](#enum-groupownerband)
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **起始版本：** 22
 
-### let groupName
+### var groupName
 
 ```cangjie
-public let groupName: String
+public var groupName: String
 ```
 
 **功能：** 群组名称。
 
 **类型：** String
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **起始版本：** 22
 
-### let netId
+### var netId
 
 ```cangjie
-public let netId: Int32
+public var netId: Int32
 ```
 
 **功能：** 网络ID。创建群组时-1表示创建临时组，-2表示创建永久组。
 
 **类型：** Int32
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **起始版本：** 22
 
-### let passphrase
+### var passphrase
 
 ```cangjie
-public let passphrase: String
+public var passphrase: String
 ```
 
 **功能：** 群组密钥。
 
 **类型：** String
-
-**读写能力：** 只读
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -611,21 +595,21 @@ public init(
 
 ```cangjie
 public class WifiScanInfo {
-    public let ssid: String
-    public let bssid: String
-    public let bssidType: DeviceAddressType
-    public let capabilities: String
-    public let securityType: WifiSecurityType
-    public let rssi: Int32
-    public let band: Int32
-    public let frequency: Int32
-    public let channelWidth: Int32
-    public let centerFrequency0: Int32
-    public let centerFrequency1: Int32
-    public let infoElems: Array<WifiInfoElem>
-    public let timestamp: Int64
-    public let supportedWifiCategory: WifiCategory
-    public let isHiLinkNetwork: Bool
+    public var ssid: String
+    public var bssid: String
+    public var bssidType: DeviceAddressType
+    public var capabilities: String
+    public var securityType: WifiSecurityType
+    public var rssi: Int32
+    public var band: Int32
+    public var frequency: Int32
+    public var channelWidth: Int32
+    public var centerFrequency0: Int32
+    public var centerFrequency1: Int32
+    public var infoElems: Array<WifiInfoElem>
+    public var timestamp: Int64
+    public var supportedWifiCategory: WifiCategory
+    public var isHiLinkNetwork: Bool
 }
 ```
 
@@ -635,241 +619,211 @@ public class WifiScanInfo {
 
 **起始版本：** 22
 
-### let band
+### var band
 
 ```cangjie
-public let band: Int32
+public var band: Int32
 ```
 
 **功能：**  WLAN接入点的频段，1:2.4GHZ；2:5GHZ。
 
 **类型：** Int32
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let bssid
+### var bssid
 
 ```cangjie
-public let bssid: String
+public var bssid: String
 ```
 
 **功能：** 热点的BSSID，例如：00:11:22:33:44:55。
 
 **类型：** String
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let bssidType
+### var bssidType
 
 ```cangjie
-public let bssidType: DeviceAddressType
+public var bssidType: DeviceAddressType
 ```
 
 **功能：** 热点的BSSID类型。
 
 **类型：** [DeviceAddressType](#enum-deviceaddresstype)
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let capabilities
+### var capabilities
 
 ```cangjie
-public let capabilities: String
+public var capabilities: String
 ```
 
 **功能：** 热点能力。
 
 **类型：** String
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let centerFrequency0
+### var centerFrequency0
 
 ```cangjie
-public let centerFrequency0: Int32
+public var centerFrequency0: Int32
 ```
 
 **功能：** 热点的中心频率。
 
 **类型：** Int32
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let centerFrequency1
+### var centerFrequency1
 
 ```cangjie
-public let centerFrequency1: Int32
+public var centerFrequency1: Int32
 ```
 
 **功能：** 热点的中心频率。如果热点使用两个不重叠的WLAN信道，则返回两个中心频率，分别用centerFrequency0和centerFrequency1表示。
 
 **类型：** Int32
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let channelWidth
+### var channelWidth
 
 ```cangjie
-public let channelWidth: Int32
+public var channelWidth: Int32
 ```
 
 **功能：** WLAN接入点的带宽。
 
 **类型：** Int32
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let frequency
+### var frequency
 
 ```cangjie
-public let frequency: Int32
+public var frequency: Int32
 ```
 
 **功能：** WLAN接入点的频率。
 
 **类型：** Int32
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let infoElems
+### var infoElems
 
 ```cangjie
-public let infoElems: Array<WifiInfoElem>
+public var infoElems: Array<WifiInfoElem>
 ```
 
 **功能：** 信息元素。
 
 **类型：** Array\<[WifiInfoElem](#class-wifiinfoelem)>
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let isHiLinkNetwork
+### var isHiLinkNetwork
 
 ```cangjie
-public let isHiLinkNetwork: Bool
+public var isHiLinkNetwork: Bool
 ```
 
 **功能：** 热点是否支持hiLink，true:支持，&nbsp;false:不支持。
 
 **类型：** Bool
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let rssi
+### var rssi
 
 ```cangjie
-public let rssi: Int32
+public var rssi: Int32
 ```
 
 **功能：** 热点的信号强度(dBm)。
 
 **类型：** Int32
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let securityType
+### var securityType
 
 ```cangjie
-public let securityType: WifiSecurityType
+public var securityType: WifiSecurityType
 ```
 
 **功能：** WLAN加密类型。
 
 **类型：** [WifiSecurityType](#enum-wifisecuritytype)
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let ssid
+### var ssid
 
 ```cangjie
-public let ssid: String
+public var ssid: String
 ```
 
 **功能：** 热点的SSID，最大长度为32字节，编码格式为UTF-8。
 
 **类型：** String
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let supportedWifiCategory
+### var supportedWifiCategory
 
 ```cangjie
-public let supportedWifiCategory: WifiCategory
+public var supportedWifiCategory: WifiCategory
 ```
 
 **功能：** 热点支持的最高wifi级别。
 
 **类型：** [WifiCategory](#enum-wificategory)
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **起始版本：** 22
 
-### let timestamp
+### var timestamp
 
 ```cangjie
-public let timestamp: Int64
+public var timestamp: Int64
 ```
 
 **功能：** 时间戳。
 
 **类型：** Int64
-
-**读写能力：** 只读
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

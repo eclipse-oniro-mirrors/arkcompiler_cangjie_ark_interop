@@ -30,9 +30,9 @@ For the above sample projects and configuration templates, please refer to [Cang
 
 ```cangjie
 public class RawFileDescriptor {
-    public let fd: Int32
-    public let offset: Int64
-    public let length: Int64
+    public var fd: Int32
+    public var offset: Int64
+    public var length: Int64
 }
 ```
 
@@ -42,49 +42,43 @@ public class RawFileDescriptor {
 
 **Since:** 21
 
-### let fd
+### var fd
 
 ```cangjie
-public let fd: Int32
+public var fd: Int32
 ```
 
 **Description:** File descriptor of the HAP where the rawfile is located.
 
 **Type:** Int32
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Global.ResourceManager
 
 **Since:** 21
 
-### let length
+### var length
 
 ```cangjie
-public let length: Int64
+public var length: Int64
 ```
 
 **Description:** File length of the rawfile.
 
 **Type:** Int64
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Global.ResourceManager
 
 **Since:** 21
 
-### let offset
+### var offset
 
 ```cangjie
-public let offset: Int64
+public var offset: Int64
 ```
 
 **Description:** Starting offset of the rawfile.
 
 **Type:** Int64
-
-**Access:** Read-only
 
 **System Capability:** SystemCapability.Global.ResourceManager
 
