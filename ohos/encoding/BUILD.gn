@@ -15,12 +15,12 @@ import("//build/templates/cangjie/cjc.gni")
 
 ohos_cangjie_shared_library("ohos.encoding.json") {
   sources = [
-    "json/src/json_exception.cj",
-    "json/src/json_object.cj",
-    "json/src/json_value.cj",
-    "json/src/native.cj",
-    "json/src/parse_json.cj",
-    "json/src/write_buffer.cj",
+    "json/json_exception.cj",
+    "json/json_object.cj",
+    "json/json_value.cj",
+    "json/native.cj",
+    "json/parse_json.cj",
+    "json/write_buffer.cj",
   ]
 
   subsystem_name = "arkcompiler"
@@ -29,12 +29,12 @@ ohos_cangjie_shared_library("ohos.encoding.json") {
 
 ohos_cangjie_static_library("ohos.json.static") {
   sources = [
-    "json/src/json_exception.cj",
-    "json/src/json_object.cj",
-    "json/src/json_value.cj",
-    "json/src/parse_json.cj",
-    "json/src/native.cj",
-    "json/src/write_buffer.cj",
+    "json/json_exception.cj",
+    "json/json_object.cj",
+    "json/json_value.cj",
+    "json/parse_json.cj",
+    "json/native.cj",
+    "json/write_buffer.cj",
   ]
 
   subsystem_name = "arkcompiler"

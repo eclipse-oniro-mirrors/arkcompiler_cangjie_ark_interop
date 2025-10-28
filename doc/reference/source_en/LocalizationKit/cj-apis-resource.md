@@ -21,11 +21,11 @@ For the above sample projects and configuration templates, please refer to [Cang
 
 ```cangjie
 public class AppResource <: Length & ResourceColor & ResourceStr {
-    public let bundleName: String
-    public let moduleName: String
-    public let id: UInt32
-    public let params:?Array<Any>
-    public let resType:?Int32
+    public var bundleName: String
+    public var moduleName: String
+    public var id: UInt32
+    public var params:?Array<Any>
+    public var resType:?Int32
     public init(
         bundleName: String,
         moduleName: String,
@@ -48,81 +48,71 @@ public class AppResource <: Length & ResourceColor & ResourceStr {
 - ResourceColor
 - ResourceStr
 
-### let bundleName
+### var bundleName
 
 ```cangjie
-public let bundleName: String
+public var bundleName: String
 ```
 
 **Function:** The package name of the application.
 
 **Type:** String
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Global.ResourceManager
 
 **Since:** 21
 
-### let id
+### var id
 
 ```cangjie
-public let id: UInt32
+public var id: UInt32
 ```
 
 **Function:** Resource ID.
 
 **Type:** UInt32
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Global.ResourceManager
 
 **Since:** 21
 
-### let moduleName
+### var moduleName
 
 ```cangjie
-public let moduleName: String
+public var moduleName: String
 ```
 
 **Function:** The module name of the application.
 
 **Type:** String
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Global.ResourceManager
 
 **Since:** 21
 
-### let params
+### var params
 
 ```cangjie
-public let params:?Array<Any>
+public var params:?Array<Any>
 ```
 
 **Function:** Additional resource parameters (optional).
 
 **Type:** ?Array\<Any>
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Global.ResourceManager
 
 **Since:** 21
 
-### let resType
+### var resType
 
 ```cangjie
-public let resType:?Int32
+public var resType:?Int32
 ```
 
 **Function:** The type of resource (optional).
 
 **Type:** ?Int32
-
-**Read/Write Permission:** Read-only
 
 **System Capability:** SystemCapability.Global.ResourceManager
 

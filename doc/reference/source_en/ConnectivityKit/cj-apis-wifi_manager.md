@@ -252,8 +252,8 @@ public func stopDiscoverDevices(): Unit
 
 ```cangjie
 public class WifiInfoElem {
-    public let eid: UInt32
-    public let content: Array<UInt8>
+    public var eid: UInt32
+    public var content: Array<UInt8>
 }
 ```
 
@@ -263,33 +263,29 @@ public class WifiInfoElem {
 
 **Since:** 21
 
-### let content
+### var content
 
 ```cangjie
-public let content: Array<UInt8>
+public var content: Array<UInt8>
 ```
 
 **Description:** Element content.
 
 **Type:** Array\<UInt8>
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let eid
+### var eid
 
 ```cangjie
-public let eid: UInt32
+public var eid: UInt32
 ```
 
 **Description:** Element ID.
 
 **Type:** UInt32
-
-**Read/Write Permission:** Read-only
 
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
@@ -299,12 +295,12 @@ public let eid: UInt32
 
 ```cangjie
 public class WifiP2PConfig {
-    public let deviceAddress: String
-    public let netId: Int32
-    public let passphrase: String
-    public let groupName: String
-    public let goBand: GroupOwnerBand
-    public let deviceAddressType: DeviceAddressType
+    public var deviceAddress: String
+    public var netId: Int32
+    public var passphrase: String
+    public var groupName: String
+    public var goBand: GroupOwnerBand
+    public var deviceAddressType: DeviceAddressType
     public init(
         deviceAddress: String,
         netId: Int32,
@@ -322,97 +318,85 @@ public class WifiP2PConfig {
 
 **Since:** 21
 
-### let deviceAddress
+### var deviceAddress
 
 ```cangjie
-public let deviceAddress: String
+public var deviceAddress: String
 ```
 
 **Description:** Device address.
 
 **Type:** String
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.P2P
 
 **Since:** 21
 
-### let deviceAddressType
+### var deviceAddressType
 
 ```cangjie
-public let deviceAddressType: DeviceAddressType
+public var deviceAddressType: DeviceAddressType
 ```
 
 **Description:** Device address type.
 
 **Type:** [DeviceAddressType](#enum-deviceaddresstype)
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.P2P
 
 **Since:** 21
 
-### let goBand
+### var goBand
 
 ```cangjie
-public let goBand: GroupOwnerBand
+public var goBand: GroupOwnerBand
 ```
 
 **Description:** Group bandwidth.
 
 **Type:** [GroupOwnerBand](#enum-groupownerband)
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.P2P
 
 **Since:** 21
 
-### let groupName
+### var groupName
 
 ```cangjie
-public let groupName: String
+public var groupName: String
 ```
 
 **Description:** Group name.
 
 **Type:** String
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.P2P
 
 **Since:** 21
 
-### let netId
+### var netId
 
 ```cangjie
-public let netId: Int32
+public var netId: Int32
 ```
 
 **Description:** Network ID. When creating a group, -1 indicates creating a temporary group, and -2 indicates creating a persistent group.
 
 **Type:** Int32
 
-**Read/Write Permission:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.P2P
 
 **Since:** 21
 
-### let passphrase
+### var passphrase
 
 ```cangjie
-public let passphrase: String
+public var passphrase: String
 ```
 
 **Description:** Group passphrase.
 
 **Type:** String
-
-**Read/Write Permission:** Read-only
 
 **System Capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -450,21 +434,21 @@ public init(
 
 ```cangjie
 public class WifiScanInfo {
-    public let ssid: String
-    public let bssid: String
-    public let bssidType: DeviceAddressType
-    public let capabilities: String
-    public let securityType: WifiSecurityType
-    public let rssi: Int32
-    public let band: Int32
-    public let frequency: Int32
-    public let channelWidth: Int32
-    public let centerFrequency0: Int32
-    public let centerFrequency1: Int32
-    public let infoElems: Array<WifiInfoElem>
-    public let timestamp: Int64
-    public let supportedWifiCategory: WifiCategory
-    public let isHiLinkNetwork: Bool
+    public var ssid: String
+    public var bssid: String
+    public var bssidType: DeviceAddressType
+    public var capabilities: String
+    public var securityType: WifiSecurityType
+    public var rssi: Int32
+    public var band: Int32
+    public var frequency: Int32
+    public var channelWidth: Int32
+    public var centerFrequency0: Int32
+    public var centerFrequency1: Int32
+    public var infoElems: Array<WifiInfoElem>
+    public var timestamp: Int64
+    public var supportedWifiCategory: WifiCategory
+    public var isHiLinkNetwork: Bool
 }
 ```
 
@@ -474,241 +458,211 @@ public class WifiScanInfo {
 
 **Since:** 21
 
-### let band
+### var band
 
 ```cangjie
-public let band: Int32
+public var band: Int32
 ```
 
 **Description:** Frequency band of the WLAN access point, where 1: 2.4GHz; 2: 5GHz.
 
 **Type:** Int32
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let bssid
+### var bssid
 
 ```cangjie
-public let bssid: String
+public var bssid: String
 ```
 
 **Description:** BSSID of the hotspot, e.g., 00:11:22:33:44:55.
 
 **Type:** String
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let bssidType
+### var bssidType
 
 ```cangjie
-public let bssidType: DeviceAddressType
+public var bssidType: DeviceAddressType
 ```
 
 **Description:** BSSID type of the hotspot.
 
 **Type:** [DeviceAddressType](#enum-deviceaddresstype)
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let capabilities
+### var capabilities
 
 ```cangjie
-public let capabilities: String
+public var capabilities: String
 ```
 
 **Description:** Hotspot capabilities.
 
 **Type:** String
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let centerFrequency0
+### var centerFrequency0
 
 ```cangjie
-public let centerFrequency0: Int32
+public var centerFrequency0: Int32
 ```
 
 **Description:** Center frequency of the hotspot.
 
 **Type:** Int32
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let centerFrequency1
+### var centerFrequency1
 
 ```cangjie
-public let centerFrequency1: Int32
+public var centerFrequency1: Int32
 ```
 
 **Description:** Center frequency of the hotspot. If the hotspot uses two non-overlapping WLAN channels, two center frequencies are returned, represented by centerFrequency0 and centerFrequency1 respectively.
 
 **Type:** Int32
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let channelWidth
+### var channelWidth
 
 ```cangjie
-public let channelWidth: Int32
+public var channelWidth: Int32
 ```
 
 **Description:** Bandwidth of the WLAN access point.
 
 **Type:** Int32
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let frequency
+### var frequency
 
 ```cangjie
-public let frequency: Int32
+public var frequency: Int32
 ```
 
 **Description:** Frequency of the WLAN access point.
 
 **Type:** Int32
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let infoElems
+### var infoElems
 
 ```cangjie
-public let infoElems: Array<WifiInfoElem>
+public var infoElems: Array<WifiInfoElem>
 ```
 
 **Description:** Information elements.
 
 **Type:** Array\<[WifiInfoElem](#class-wifiinfoelem)>
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let isHiLinkNetwork
+### var isHiLinkNetwork
 
 ```cangjie
-public let isHiLinkNetwork: Bool
+public var isHiLinkNetwork: Bool
 ```
 
 **Description:** Whether the hotspot supports HiLink, where true: supported, &nbsp;false: not supported.
 
 **Type:** Bool
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let rssi
+### var rssi
 
 ```cangjie
-public let rssi: Int32
+public var rssi: Int32
 ```
 
 **Description:** Signal strength of the hotspot (dBm).
 
 **Type:** Int32
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let securityType
+### var securityType
 
 ```cangjie
-public let securityType: WifiSecurityType
+public var securityType: WifiSecurityType
 ```
 
 **Description:** WLAN encryption type.
 
 **Type:** [WifiSecurityType](#enum-wifisecuritytype)
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let ssid
+### var ssid
 
 ```cangjie
-public let ssid: String
+public var ssid: String
 ```
 
 **Description:** SSID of the hotspot, with a maximum length of 32 bytes, encoded in UTF-8.
 
 **Type:** String
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let supportedWifiCategory
+### var supportedWifiCategory
 
 ```cangjie
-public let supportedWifiCategory: WifiCategory
+public var supportedWifiCategory: WifiCategory
 ```
 
 **Description:** Highest WiFi category supported by the hotspot.
 
 **Type:** [WifiCategory](#enum-wificategory)
 
-**Access:** Read-only
-
 **System Capability:** SystemCapability.Communication.WiFi.STA
 
 **Since:** 21
 
-### let timestamp
+### var timestamp
 
 ```cangjie
-public let timestamp: Int64
+public var timestamp: Int64
 ```
 
 **Description:** Timestamp.
 
 **Type:** Int64
-
-**Access:** Read-only
 
 **System Capability:** SystemCapability.Communication.WiFi.STA
 

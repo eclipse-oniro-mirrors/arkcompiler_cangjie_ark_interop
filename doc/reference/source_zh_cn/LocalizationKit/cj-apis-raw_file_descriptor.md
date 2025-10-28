@@ -30,9 +30,9 @@ API示例代码使用说明：
 
 ```cangjie
 public class RawFileDescriptor {
-    public let fd: Int32
-    public let offset: Int64
-    public let length: Int64
+    public var fd: Int32
+    public var offset: Int64
+    public var length: Int64
 }
 ```
 
@@ -42,49 +42,43 @@ public class RawFileDescriptor {
 
 **起始版本：** 22
 
-### let fd
+### var fd
 
 ```cangjie
-public let fd: Int32
+public var fd: Int32
 ```
 
 **功能：** rawfile所在hap的文件描述符。
 
 **类型：** Int32
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 22
 
-### let length
+### var length
 
 ```cangjie
-public let length: Int64
+public var length: Int64
 ```
 
 **功能：** rawfile的文件长度。
 
 **类型：** Int64
 
-**读写能力：** 只读
-
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 22
 
-### let offset
+### var offset
 
 ```cangjie
-public let offset: Int64
+public var offset: Int64
 ```
 
 **功能：** rawfile的起始偏移量。
 
 **类型：** Int64
-
-**读写能力：** 只读
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
