@@ -17,8 +17,6 @@
 
 protected package ohos.ffi
 
-import std.collection.*
-
 /**
  * FFIAtCPackage holds basic ffi @C functions.
  */

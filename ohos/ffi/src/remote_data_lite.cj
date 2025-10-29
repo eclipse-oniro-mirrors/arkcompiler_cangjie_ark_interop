@@ -17,7 +17,7 @@
 
 protected package ohos.ffi
 
-import std.sync.*
+import std.sync.Mutex
 import std.collection.HashMap
 
 foreign func FfiOHOSFFIFFIDataExist(id: Int64): Bool

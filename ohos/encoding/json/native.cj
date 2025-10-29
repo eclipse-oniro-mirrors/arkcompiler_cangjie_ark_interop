@@ -17,8 +17,8 @@
 
 protected package ohos.encoding.json
 
-import std.collection.*
-import std.convert.*
+import std.collection.{ArrayList, HashMap}
+import std.convert.Parsable
 
 @FastNative
 foreign func CJ_CORE_Float64ToCPointer(num: Float64): CPointer<UInt8>
