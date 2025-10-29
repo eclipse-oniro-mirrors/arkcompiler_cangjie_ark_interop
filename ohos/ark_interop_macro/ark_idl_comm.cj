@@ -161,7 +161,7 @@ class IDLUtil {
         match (paramType) {
             case p: FuncType =>
                 let argCallbackName = genRandomVarName("argCallback")
-                return quote(let $argCallbackName = $srcVarName.asFunction($context)
+                return quote(let $argCallbackName = $srcVarName.asFunction()
                             $(desSen)$(genFuncTypeLambda(p, argCallbackName, context)))
             case p: TypeNode => return quote($(desSen)$p.fromJSValue($context, $srcVarName))
         }

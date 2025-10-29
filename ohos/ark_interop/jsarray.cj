@@ -47,6 +47,9 @@ public class JSArray <: JSHeapObject {
     }
 
     static func createWithInit(context: JSContext, arr: Array<JSValue>): JSValue_ {
+        if (arr.size > Int64(UInt32.Max)) {
+            throw jsArrayRangeMisMatch(0, Int64(UInt32.Max), arr.size)
+        }
         if (arr.size > 0) {
             let jsArr = Array<JSValue_>(arr.size) {
                 index => arr[index].value
@@ -96,8 +99,8 @@ public class JSArray <: JSHeapObject {
     ]
     public operator func [](index: Int64): JSValue {
         let env = context.env // do lifecycle check and thread check here.
-        if (index < 0 || index >= size) {
-            throw jsArrayRangeMisMatch(0, size, index)
+        if (index < 0 || index >= Int64(UInt32.Max)) {
+            throw jsArrayRangeMisMatch(0, Int64(UInt32.Max), index)
         }
         let result = unsafe { ARKTS_GetElement(env, innerValue, UInt32(index)) }
         JSValue(context, result)
@@ -116,8 +119,8 @@ public class JSArray <: JSHeapObject {
     ]
     public operator func [](index: Int64, value!: JSValue): Unit {
         let env = context.env // do lifecycle check and thread check here.
-        if (index < 0) {
-            throw jsArrayRangeMisMatch(0, size, index)
+        if (index < 0 || index > Int64(UInt32.Max)) {
+            throw jsArrayRangeMisMatch(0, Int64(UInt32.Max), index)
         }
         unsafe { ARKTS_SetElement(env, innerValue, UInt32(index), value.value) }
     }

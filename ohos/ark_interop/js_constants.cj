@@ -175,13 +175,11 @@ class JSTypedArrayFuncs {
 
 class JSConstants {
     let builtinText: JSBuiltinText
-    let errorFuncs: JSErrorFuncs
     let mapFuncs: JSMapFuncs
     let typedArray: JSTypedArrayFuncs
 
     init(context: JSContext) {
         builtinText = JSBuiltinText(context)
-        errorFuncs = JSErrorFuncs(context, builtinText)
         mapFuncs = JSMapFuncs(context)
         typedArray = JSTypedArrayFuncs(context)
     }

@@ -378,9 +378,12 @@ extend UInt32 <: JSInteropType<UInt32> {
         22,
         stagemodelonly: true
     ]
-    @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
-        return context.number(Int32(this)).toJSValue()
+        if (Int64(this) <= Int32.Max) {
+            return context.number(Int32(this)).toJSValue()
+        } else {
+            return context.number(Float64(this)).toJSValue()
+        }
     }
 
     /**

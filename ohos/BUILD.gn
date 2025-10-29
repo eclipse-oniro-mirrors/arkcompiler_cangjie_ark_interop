@@ -51,7 +51,6 @@ ohos_cangjie_shared_library("ohos.ark_interop") {
     "ark_interop/js_bigint.cj",
     "ark_interop/js_class.cj",
     "ark_interop/js_constants.cj",
-    "ark_interop/js_error.cj",
     "ark_interop/js_exception.cj",
     "ark_interop/js_external.cj",
     "ark_interop/js_func.cj",
