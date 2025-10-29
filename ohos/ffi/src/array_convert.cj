@@ -17,8 +17,6 @@
 
 protected package ohos.ffi
 
-import std.collection.*
-
 protected let FUNCTION_S2CS: (String) -> CString = {p: String => unsafe { LibC.mallocCString(p) }}
 protected let FUNCTION_CS_FREE: (CString) -> Unit = {p: CString => unsafe { LibC.free(p) }}
 
