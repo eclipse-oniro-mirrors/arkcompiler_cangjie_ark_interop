@@ -36,7 +36,7 @@ foreign func ARKTS_Call(env: JSEnv, fun: JSValue_, thisArg: JSValue_, numArgs: I
 
 @C
 struct JSCallInfoPrivate {
-    JSCallInfoPrivate(private let addr: UInt64) {}
+    JSCallInfoPrivate(private let addr: UIntNative) {}
 
     func env(): JSEnv {
         unsafe { ARKTS_GetCallEnv(this) }

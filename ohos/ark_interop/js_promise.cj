@@ -34,7 +34,7 @@ foreign func ARKTS_PromiseCapabilityReject(env: JSEnv, promise: JSPromiseCap, me
 
 foreign func ARKTS_PromiseThen(env: JSEnv, prom: JSValue_, onFulfilled: JSValue_, onRejected: JSValue_): JSValue_
 
-foreign func ARKTS_PromiseCatch(env: JSEnv, prom: JSValue_, callback: JSValue_): Unit
+foreign func ARKTS_PromiseCatch(env: JSEnv, prom: JSValue_, callback: JSValue_): JSValue_
 
 /**
  * A callback encapsulation object. JSPromise aims to provide consistent encapsulation for callbacks, significantly
