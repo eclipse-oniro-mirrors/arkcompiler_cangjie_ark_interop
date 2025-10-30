@@ -15,7 +15,7 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSArrayRangeMisMatch, JSObject}
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSObject}
 import std.math.MathExtension
 
 let _ = JSModule.registerModule {

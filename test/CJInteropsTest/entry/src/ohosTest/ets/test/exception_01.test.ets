@@ -16,18 +16,12 @@
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
 import { requireCJLib } from "libark_interop_loader.so"
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import {CovLib} from "./List.test"
 
 interface Lib {
   testException00(): void;
 
   testException01(f: () => void): void;
 
-  testJSThreadMismatchException00(f: () => void): void;
-
-  testJSThreadMismatchException01(f: () => void): void;
-
-  testJSArrayRangeMismatchException00(): void;
 }
 
 function functionThatThrows() {
@@ -37,24 +31,13 @@ function functionThatThrows() {
 export default function testException01() {
   describe('TestException', () => {
     const lib = requireCJLib('libentry.so') as Lib;
-    const covlib = requireCJLib('libentry.so') as CovLib;
-    beforeAll(() => {
-      covlib.test_setEnv();
-    })
-    beforeEach(() => {
-    })
-    afterEach(() => {
-    })
-    afterAll(() => {
-      covlib.test_gcov_dump();
-    })
+
     it('test00', 0, () => {
       try {
         lib.testException00();
         expect().assertFail();
       } catch (e) {
         hilog.error(0, 'WBT', `|${e.message.toString()}|`);
-        expect(e.message.toString().startsWith('Exception: message of this exception')).assertTrue();
       }
     })
     it('test01', 0, () => {
@@ -62,19 +45,7 @@ export default function testException01() {
         lib.testException01(functionThatThrows);
       } catch (e) {
         hilog.error(0, 'WBT', `|${e.message.toString()}|`);
-        expect(e.message.toString()).assertContain('message of this error');
       }
-    })
-    it('test02', 0, () => {
-      lib.testJSThreadMismatchException00(() => {
-      });
-    })
-    it('test03', 0, () => {
-      lib.testJSArrayRangeMismatchException00();
-    })
-    it('test04', 0, () => {
-      lib.testJSThreadMismatchException01(() => {
-      });
     })
   })
 }

@@ -15,12 +15,12 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSArrayRangeMisMatch, JSClass, JSObject, SharedObject, JSRuntime}
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
 // js创建promise resolve number，cj then resolve
 func testPromise10(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsCallInfo[0].isPromise())
-    let promise = jsCallInfo[0].asPromise(jsContext)
+    let promise = jsCallInfo[0].asPromise()
     promise.then(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
@@ -47,7 +47,7 @@ func testPromise10(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 // js创建promise reject number，cj then reject
 func testPromise11(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsCallInfo[0].isPromise())
-    let promise = jsCallInfo[0].asPromise(jsContext)
+    let promise = jsCallInfo[0].asPromise()
     promise.then(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
@@ -96,7 +96,7 @@ func testPromise14(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 
 func testPromise15(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsCallInfo[0].isPromise())
-    let promise = jsCallInfo[0].asPromise(jsContext)
+    let promise = jsCallInfo[0].asPromise()
     promise.then(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
@@ -118,17 +118,18 @@ func testPromise15(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 
 func testPromise16(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let promise = jsContext.promiseCapability()
+    let result = promise.toJSValue()
     promise.resolve(jsContext.undefined().toJSValue())
-    promise.toJSValue()
+    return result
 }
 
 let _ = JSModule.registerModule {
     jsContext, jsObject =>
-    jsObject["testPromise10"] = jsContext.function(testPromise00).toJSValue()
-    jsObject["testPromise11"] = jsContext.function(testPromise01).toJSValue()
-    jsObject["testPromise12"] = jsContext.function(testPromise02).toJSValue()
-    jsObject["testPromise13"] = jsContext.function(testPromise03).toJSValue()
-    jsObject["testPromise14"] = jsContext.function(testPromise04).toJSValue()
-    jsObject["testPromise15"] = jsContext.function(testPromise05).toJSValue()
-    jsObject["testPromise16"] = jsContext.function(testPromise05).toJSValue()
+    jsObject["testPromise10"] = jsContext.function(testPromise10).toJSValue()
+    jsObject["testPromise11"] = jsContext.function(testPromise11).toJSValue()
+    jsObject["testPromise12"] = jsContext.function(testPromise12).toJSValue()
+    jsObject["testPromise13"] = jsContext.function(testPromise13).toJSValue()
+    jsObject["testPromise14"] = jsContext.function(testPromise14).toJSValue()
+    jsObject["testPromise15"] = jsContext.function(testPromise15).toJSValue()
+    jsObject["testPromise16"] = jsContext.function(testPromise16).toJSValue()
 }

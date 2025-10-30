@@ -17,7 +17,6 @@ import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect, Expec
 import { requireCJLib } from "libark_interop_loader.so"
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { JSON } from '@kit.ArkTS';
-import {CovLib} from "./List.test"
 
 interface Lib {
   testRegisterOverride00(): () => number;
@@ -28,17 +27,7 @@ interface Lib {
 export default function testJSModule03() {
   describe('TestRegisterOverride', () => {
     const lib = requireCJLib('libentry.so') as Lib;
-    const covlib = requireCJLib('libentry.so') as CovLib;
-    beforeAll(() => {
-      covlib.test_setEnv();
-    })
-    beforeEach(() => {
-    })
-    afterEach(() => {
-    })
-    afterAll(() => {
-      covlib.test_gcov_dump();
-    })
+
     it('test00', 0, () => {
       expect(lib.testRegisterOverride00()).assertEqual(3);
     })

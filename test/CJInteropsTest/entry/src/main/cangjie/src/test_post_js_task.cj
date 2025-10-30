@@ -15,7 +15,7 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSArrayRangeMisMatch, JSClass, JSObject, SharedObject, JSRuntime}
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
 func testPostJSTask00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsContext.isInBindThread())
@@ -28,8 +28,9 @@ func testPostJSTask00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 func testPostJSTask01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let a = jsCallInfo[0].toNumber()
     let b = jsCallInfo[1].toNumber()
-    let f = jsCallInfo[2].asFunction(jsContext)
+    let f = jsCallInfo[2].asFunction()
     let promise = jsContext.promiseCapability()
+    let result = promise.toJSValue()
     promise.resolve(jsContext.undefined().toJSValue())
     //    spawn {
     //        jsContext.postJSTask {
@@ -44,7 +45,7 @@ func testPostJSTask01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     //        }
     //    }
     logger.error("hello")
-    promise.toJSValue()
+    result
 }
 
 let _ = JSModule.registerModule {

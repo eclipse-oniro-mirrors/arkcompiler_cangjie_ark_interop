@@ -1,0 +1,279 @@
+/*
+ * Copyright (c) 2025 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package entry.pure
+
+import std.unittest.*
+import std.unittest.testmacro.*
+import ohos.ark_interop.JSRuntime
+import ohos.business_exception.BusinessException
+import ohos.ark_interop.JSType
+
+@Test
+class TestJSValue {
+    @TestCase
+    func testJSValueNull() {
+        let jsContext = getJSContext()
+        let null = await(jsContext) {jsContext.null()}
+        let value = await(jsContext) {null.toJSValue()}
+        @Expect(await(jsContext){value.isNull()}, true)
+        @Expect(await(jsContext){value.isBoolean()}, false)
+        @Expect(await(jsContext){value.isUndefined()}, false)
+        @Expect(await(jsContext){value.isArray()}, false)
+        @Expect(await(jsContext){value.isClass()}, false)
+        @Expect(await(jsContext){value.isNumber()}, false)
+        @Expect(await(jsContext){value.isString()}, false)
+        @Expect(await(jsContext){value.isBigInt()}, false)
+        @Expect(await(jsContext){value.isObject()}, false)
+        @Expect(await(jsContext){value.isSymbol()}, false)
+        @Expect(await(jsContext){value.isPromise()}, false)
+        @Expect(await(jsContext){value.isFunction()}, false)
+        let isMismatch = try {
+            await(jsContext) {value.toString()}
+            false
+        } catch (exe: BusinessException) {
+            true
+        }
+        @Expect(isMismatch)
+        let valueType = await(jsContext) {value.typeof()}
+        @Expect(valueType == JSType.NULL)
+        @Expect(valueType != JSType.NULL, false)
+    }
+
+    @TestCase
+    func testJSValueUndefined() {
+        let jsContext = getJSContext()
+        let undefined = jsContext.undefined()
+        let value = undefined.toJSValue()
+        @Expect(await(jsContext){value.isUndefined()}, true)
+        @Expect(await(jsContext){value.isBoolean()}, false)
+        @Expect(await(jsContext){value.isArray()}, false)
+        @Expect(await(jsContext){value.isNull()}, false)
+        @Expect(await(jsContext){value.isClass()}, false)
+        @Expect(await(jsContext){value.isNumber()}, false)
+        @Expect(await(jsContext){value.isString()}, false)
+        @Expect(await(jsContext){value.isBigInt()}, false)
+        @Expect(await(jsContext){value.isObject()}, false)
+        @Expect(await(jsContext){value.isSymbol()}, false)
+        @Expect(await(jsContext){value.isPromise()}, false)
+        @Expect(await(jsContext){value.isFunction()}, false)
+        let valueType = await(jsContext) {value.typeof()}
+        @Expect(valueType == JSType.UNDEFINED)
+    }
+
+    @TestCase
+    func testJSValueBooleanTrue() {
+        let jsContext = getJSContext()
+        let value = await(jsContext) {
+            jsContext
+                .boolean(true)
+                .toJSValue()
+        }
+        @Expect(await(jsContext){value.isBoolean()}, true)
+        @Expect(await(jsContext){value.isUndefined()}, false)
+        @Expect(await(jsContext){value.isArray()}, false)
+        @Expect(await(jsContext){value.isNull()}, false)
+        @Expect(await(jsContext){value.isClass()}, false)
+        @Expect(await(jsContext){value.isNumber()}, false)
+        @Expect(await(jsContext){value.isString()}, false)
+        @Expect(await(jsContext){value.isBigInt()}, false)
+        @Expect(await(jsContext){value.isObject()}, false)
+        @Expect(await(jsContext){value.isSymbol()}, false)
+        @Expect(await(jsContext){value.isPromise()}, false)
+        @Expect(await(jsContext){value.isFunction()}, false)
+        let valueType = await(jsContext) {value.typeof()}
+        @Expect(valueType == JSType.BOOLEAN)
+        let cjValue = await(jsContext) {value.toBoolean()}
+        @Expect(cjValue)
+    }
+
+    @TestCase
+    func testJSValueBooleanFalse() {
+        let jsContext = getJSContext()
+        let value = await(jsContext) {
+            jsContext
+                .boolean(false)
+                .toJSValue()
+        }
+        @Expect(await(jsContext){value.isBoolean()}, true)
+        @Expect(await(jsContext){value.isUndefined()}, false)
+        @Expect(await(jsContext){value.isArray()}, false)
+        @Expect(await(jsContext){value.isNull()}, false)
+        @Expect(await(jsContext){value.isClass()}, false)
+        @Expect(await(jsContext){value.isNumber()}, false)
+        @Expect(await(jsContext){value.isString()}, false)
+        @Expect(await(jsContext){value.isBigInt()}, false)
+        @Expect(await(jsContext){value.isObject()}, false)
+        @Expect(await(jsContext){value.isSymbol()}, false)
+        @Expect(await(jsContext){value.isPromise()}, false)
+        @Expect(await(jsContext){value.isFunction()}, false)
+        let valueType = await(jsContext) {value.typeof()}
+        @Expect(valueType == JSType.BOOLEAN)
+        let cjValue = await(jsContext) {value.toBoolean()}
+        @Expect(value.toBoolean(), false)
+        @Expect(value.asBoolean().toBool(), false)
+    }
+
+    @TestCase
+    func testJSValueNumber() {
+        let jsContext = getJSContext()
+        let i32 = await(jsContext) {
+            jsContext
+                .number(Int32(12))
+                .toJSValue()
+        }
+        let f64 = await(jsContext) {
+            jsContext
+                .number(2.0)
+                .toJSValue()
+        }
+        @Expect(await(jsContext){i32.isNumber()})
+        @Expect(await(jsContext){i32.typeof()} == JSType.NUMBER)
+        @Expect(await(jsContext){f64.isNumber()})
+        @Expect(await(jsContext){f64.typeof()} == JSType.NUMBER)
+        @Expect(await(jsContext){i32.toNumber()}, 12.0)
+        @Expect(await(jsContext){f64.toNumber()}, 2.0)
+        let i32Num = await(jsContext) {i32.asNumber()}
+        let f64Num = await(jsContext) {f64.asNumber()}
+        @Expect(await(jsContext){i32Num.toFloat64()}, 12.0)
+        @Expect(await(jsContext){f64Num.toFloat64()}, 2.0)
+    }
+
+    @TestCase
+    func testJSValueString() {
+        let jsContext = getJSContext()
+        let text = await(jsContext) {jsContext.string("abc")}
+        let value = await(jsContext) {text.toJSValue()}
+        let value1 = await(jsContext) {text.toJSValue()}
+        @Expect(await(jsContext){value.strictEqual(value1)})
+        @Expect(await(jsContext){value.typeof()} == JSType.STRING)
+        @Expect(await(jsContext){value.isString()})
+        @Expect(await(jsContext){value1.isString()})
+        let text1 = await(jsContext) {value.asString()}
+        let text2 = await(jsContext) {value.asString()}
+        @Expect(await(jsContext){text1.toString()},await(jsContext){ text2.toString()})
+    }
+
+    @TestCase
+    func testJSValueObject() {
+        let jsContext = getJSContext()
+        let source = await(jsContext) {jsContext.object()}
+        let value = await(jsContext) {source.toJSValue()}
+        @Expect(await(jsContext){value.isObject()})
+        @Expect(await(jsContext){value.typeof()} == JSType.OBJECT)
+
+        await(jsContext) {value.asObject()}
+
+        await(jsContext) {
+            value.setProperty("a", jsContext
+                .number(1.0)
+                .toJSValue())
+        }
+        await(jsContext) {
+            value.setProperty("b", jsContext
+                .number(2.0)
+                .toJSValue())
+        }
+        let receivedValue = await(jsContext) {value.getProperty("a")}
+        @Expect(await(jsContext){receivedValue.isNumber()})
+        @Expect(await(jsContext){receivedValue.toNumber()}, 1.0)
+        let receivedValue1 = await(jsContext) {value.getProperty("b")}
+        @Expect(await(jsContext){receivedValue1.isNumber()})
+        @Expect(await(jsContext){receivedValue1.toNumber()}, 2.0)
+
+        let myData = MyObject()
+        await(jsContext) {value.bindObject(myData)}
+        await(jsContext) {
+            value.bindObject(jsContext
+                .external(myData)
+                .toJSValue())
+        }
+        await(jsContext) {value.bindObject(myData)}
+        await(jsContext) {
+            value.bindObject(jsContext
+                .external(myData)
+                .toJSValue())
+        }
+        let a = await(jsContext) {value.getBindingObject()}
+        let b = await(jsContext) {value.getBindingObject()}
+        @Expect(a.isSome())
+        @Expect(b.isSome())
+        let objA = a.getOrThrow() as MyObject
+        @Expect(objA.isSome())
+    }
+
+    @TestCase
+    func testJSValueArray() {
+        let jsContext = getJSContext()
+        let array = await(jsContext) {jsContext.array()}
+        let value = await(jsContext) {array.toJSValue()}
+        @Expect(await(jsContext){value.isArray()})
+        await(jsContext) {value.asArray()}
+        await(jsContext) {
+            value.setElement(0, jsContext
+                .number(0.0)
+                .toJSValue())
+        }
+        await(jsContext) {
+            value.setElement(1, jsContext
+                .number(1.0)
+                .toJSValue())
+        }
+        @Expect(await(jsContext){array.size}, 2)
+        let ele0 = await(jsContext) {value.getElement(0)}
+        let ele1 = await(jsContext) {value.getElement(1)}
+        @Expect(await(jsContext){ele0.isNumber()})
+        @Expect(await(jsContext){ele0.toNumber()}, 0.0)
+        @Expect(await(jsContext){ele1.isNumber()})
+        @Expect(await(jsContext){ele1.toNumber()}, 1.0)
+    }
+
+    @TestCase
+    func testJSValueBigint() {
+        let jsContext = getJSContext()
+        let bigint = await(jsContext) {jsContext.bigint(123)}
+        let value = await(jsContext) {bigint.toJSValue()}
+        @Expect(await(jsContext){value.isBigInt()})
+        @Expect(await(jsContext){value.typeof()} == JSType.BIGINT)
+        let received = await(jsContext) {value.asBigInt()}
+        let receivedBigint = await(jsContext) {received.toBigInt()}
+        let receivedI64 = await(jsContext) {receivedBigint.toInt64()}
+        @Expect(receivedI64, 123)
+    }
+
+    @TestCase
+    func testJSValueSymbol() {
+        let jsContext = getJSContext()
+        let symbol = await(jsContext) {jsContext.symbol()}
+        let value = await(jsContext) {symbol.toJSValue()}
+        let value1 = symbol.toJSValue()
+        @Expect(await(jsContext){value.strictEqual(value1)})
+        @Expect(await(jsContext){value.isSymbol()})
+        @Expect(await(jsContext){value.typeof()} == JSType.SYMBOL)
+        await(jsContext) {value.asSymbol()}
+        @Expect(await(jsContext){symbol.description}, "")
+    }
+
+    @TestCase
+    func testJSValueExternal() {
+        let jsContext = getJSContext()
+        let mydata = MyObject()
+        let external = await(jsContext) {jsContext.external(mydata)}
+        let value = await(jsContext) {external.toJSValue()}
+        @Expect(await(jsContext){value.isExternal()})
+        @Expect(await(jsContext){value.typeof()} == JSType.EXTERNAL)
+        await(jsContext) {value.asExternal()}
+    }
+}

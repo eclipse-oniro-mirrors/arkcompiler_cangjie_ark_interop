@@ -17,7 +17,6 @@ import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from
 import { requireCJLib } from "libark_interop_loader.so"
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { JSON } from '@kit.ArkTS';
-import {CovLib} from "./List.test"
 
 interface Lib {
   testRegisterAfterStaticInit00(): void;
@@ -28,17 +27,7 @@ interface Lib {
 export default function testJSModule04() {
   describe('TestRegisterAfterStaticInit', () => {
     let lib = requireCJLib('libentry.so') as Lib;
-    const covlib = requireCJLib('libentry.so') as CovLib;
-    beforeAll(() => {
-      covlib.test_setEnv();
-    })
-    beforeEach(() => {
-    })
-    afterEach(() => {
-    })
-    afterAll(() => {
-      covlib.test_gcov_dump();
-    })
+
     it('test00', 0, () => {
       let i = Object.keys(lib).indexOf('testRegisterAfterStaticInit00_00');
       expect(i).assertEqual(-1);

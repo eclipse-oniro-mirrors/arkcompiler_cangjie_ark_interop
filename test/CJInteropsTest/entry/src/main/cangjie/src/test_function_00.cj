@@ -15,12 +15,12 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSArrayRangeMisMatch, JSClass, JSObject, SharedObject, JSRuntime}
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
 func testFunction00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.equals(jsCallInfo.count, 1)
     Assert.isTrue(jsCallInfo[0].isFunction())
-    let f = jsCallInfo[0].asFunction(jsContext)
+    let f = jsCallInfo[0].asFunction()
     let result = f.call(jsContext.number(114.514).toJSValue())
     Assert.isTrue(result.isNumber())
     Assert.equals(result.toNumber(), 115.514)
@@ -31,7 +31,7 @@ func testFunction01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
-        let f = jsCallInfo[0].asFunction(jsContext)
+        let f = jsCallInfo[0].asFunction()
         let result = f.call(jsContext.number(114.514).toJSValue())
         Assert.isTrue(result.isNumber())
         Assert.equals(result.toNumber(), 115.514)
@@ -46,7 +46,7 @@ func testFunction02(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
-        let f = jsCallInfo[0].asFunction(jsContext)
+        let f = jsCallInfo[0].asFunction()
         let result = f.call(jsContext.number(114.514).toJSValue())
         Assert.isTrue(result.isNumber())
         Assert.equals(result.toNumber(), 115.514)
@@ -60,7 +60,7 @@ func testFunction03(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
-        let f = jsCallInfo[0].asFunction(jsContext)
+        let f = jsCallInfo[0].asFunction()
         let result = f.call(jsContext.number(114.514).toJSValue())
         Assert.isTrue(result.isNumber())
         Assert.equals(result.toNumber(), 115.514)
@@ -74,7 +74,7 @@ func testFunction04(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
-        let f = jsCallInfo[0].asFunction(jsContext)
+        let f = jsCallInfo[0].asFunction()
         let result = f.call(jsContext.number(114.514).toJSValue())
         Assert.isTrue(result.isNumber())
         Assert.equals(result.toNumber(), 116.514)
@@ -88,7 +88,7 @@ func testFunction05(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
-        let f = jsCallInfo[0].asFunction(jsContext)
+        let f = jsCallInfo[0].asFunction()
         let result = f.call(jsContext.number(114.514).toJSValue())
         Assert.isTrue(result.isNumber())
         Assert.equals(result.toNumber(), 117.514)

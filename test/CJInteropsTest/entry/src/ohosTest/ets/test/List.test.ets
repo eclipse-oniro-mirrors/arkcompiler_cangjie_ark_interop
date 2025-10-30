@@ -47,8 +47,3 @@ export default function testsuite() {
   testJSModule04();
   TestExternal();
 }
-
-export interface CovLib {
-  test_setEnv(): void;
-  test_gcov_dump(): void;
-}

@@ -16,7 +16,6 @@
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
 import { requireCJLib } from "libark_interop_loader.so"
-import {CovLib} from "./List.test"
 
 interface Lib {
   testString00(s: string): void;
@@ -30,23 +29,12 @@ interface Lib {
 
   testPromise04(): Promise<string>;
 
-  testPromise05(): Promise<number>;
+  testPromise05(src: Promise<void>): Promise<number>;
 }
 
 export default function promiseTest() {
+  const lib = requireCJLib('libentry.so') as Lib;
   describe('TestString00', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-    const covlib = requireCJLib('libentry.so') as CovLib;
-    beforeAll(() => {
-      covlib.test_setEnv();
-    })
-    beforeEach(() => {
-    })
-    afterEach(() => {
-    })
-    afterAll(() => {
-      covlib.test_gcov_dump();
-    })
     it('test00', 0, () => {
       const result = 114514;
       // js创建promise，传给cj，由cj处理promise结果。
@@ -97,7 +85,7 @@ export default function promiseTest() {
     })
     it('test05', 0, async () => {
       try {
-        let result = await lib.testPromise05();
+        let result = await lib.testPromise05(Promise.reject("xxx"));
       } catch (error) {
       }
     })
