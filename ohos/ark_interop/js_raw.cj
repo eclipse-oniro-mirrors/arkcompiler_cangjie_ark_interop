@@ -70,7 +70,7 @@ protected struct JSValue_ {
 /**
  * ArkTs null.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public struct JSNull {
     let value: JSValue
 
@@ -85,8 +85,7 @@ public struct JSNull {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(): JSValue {
         value.context.checkLifecycleAndThread()
@@ -97,7 +96,7 @@ public struct JSNull {
 /**
  * ArkTs undefined.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public struct JSUndefined {
     let value: JSValue
 
@@ -112,8 +111,7 @@ public struct JSUndefined {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(): JSValue {
         value.context.checkLifecycleAndThread()
@@ -124,7 +122,7 @@ public struct JSUndefined {
 /**
  * ArkTs boolean.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public struct JSBoolean {
     let value: JSValue
 
@@ -139,8 +137,7 @@ public struct JSBoolean {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(): JSValue {
         value.context.checkLifecycleAndThread()
@@ -154,8 +151,7 @@ public struct JSBoolean {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toBool(): Bool {
         value.toBoolean()
@@ -165,7 +161,7 @@ public struct JSBoolean {
 /**
  * ArkTs number.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public struct JSNumber {
     let value: JSValue
 
@@ -180,8 +176,7 @@ public struct JSNumber {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(): JSValue {
         value.context.checkLifecycleAndThread()
@@ -195,8 +190,7 @@ public struct JSNumber {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toFloat64(): Float64 {
         value.toNumber()
@@ -206,7 +200,7 @@ public struct JSNumber {
 /**
  * JSValue is unified type in the ArkTS runtime and alse the data type that directly interacts with the ArkTS runtime.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public struct JSValue {
     protected JSValue(
         let context: JSContext,
@@ -220,8 +214,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func typeof(): JSType {
         let env = context.env // do lifecycle check and thread check here.
@@ -235,8 +228,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func strictEqual(target: JSValue): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -250,8 +242,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isNull(): Bool {
         context.checkLifecycleAndThread()
@@ -265,8 +256,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isUndefined(): Bool {
         context.checkLifecycleAndThread()
@@ -280,8 +270,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isBoolean(): Bool {
         context.checkLifecycleAndThread()
@@ -294,8 +283,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isNumber(): Bool {
         context.checkLifecycleAndThread()
@@ -309,8 +297,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isString(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -324,8 +311,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isFunction(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -339,8 +325,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isObject(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -354,8 +339,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isArray(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -369,8 +353,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isPromise(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -384,8 +367,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isClass(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -399,8 +381,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isExternal(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -414,8 +395,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isSymbol(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -429,8 +409,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isArrayBuffer(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -459,8 +438,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asNull(): JSNull {
         if (!isNull()) {
@@ -477,8 +455,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asUndefined(): JSUndefined {
         if (!isUndefined()) {
@@ -495,8 +472,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asBoolean(): JSBoolean {
         if (!isBoolean()) {
@@ -513,8 +489,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asNumber(): JSNumber {
         if (!isNumber()) {
@@ -531,8 +506,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toBoolean(): Bool {
         if (!isBoolean()) {
@@ -549,8 +523,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toNumber(): Float64 {
         if (!isNumber()) {
@@ -568,8 +541,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toString(): String {
         if (!isString()) {
@@ -586,8 +558,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toUtf16String(): Utf16String {
         if (!isString()) {
@@ -604,8 +575,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asString(): JSString {
         if (!isString()) {
@@ -622,8 +592,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asObject(): JSObject {
         if (!isObject()) {
@@ -640,8 +609,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asFunction(): JSFunction {
         if (!isFunction()) {
@@ -658,8 +626,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asArray(): JSArray {
         if (!isArray()) {
@@ -676,8 +643,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asClass(): JSClass {
         if (!isClass()) {
@@ -694,8 +660,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asExternal(): JSExternal {
         if (!isExternal()) {
@@ -712,8 +677,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asPromise(): JSPromise {
         if (!isPromise()) {
@@ -730,8 +694,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asSymbol(): JSSymbol {
         if (!isSymbol()) {
@@ -748,8 +711,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asArrayBuffer(): JSArrayBuffer {
         if (!isArrayBuffer()) {
@@ -765,8 +727,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func isBigInt(): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -781,8 +742,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func asBigInt(): JSBigInt {
         if (!isBigInt()) {
@@ -799,8 +759,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toBigInt(): BigInt {
         if (!isBigInt()) {
@@ -819,8 +778,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func getElement(index: Int64): JSValue {
         if (!isArray()) {
@@ -843,8 +801,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func setElement(index: Int64, value: JSValue): Unit {
         if (!isArray()) {
@@ -865,8 +822,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func getProperty(key: JSKeyable): JSValue {
         if (!isObject()) {
@@ -886,8 +842,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func setProperty(key: JSKeyable, setValue: JSValue): Unit {
         if (!isObject()) {
@@ -905,8 +860,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func bindObject(external: JSValue): Unit {
         if (!isObject()) {
@@ -926,8 +880,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func bindObject(data: SharedObject): Unit {
         let value = JSValue(context, JSExternal.createExternal(context, data))
@@ -943,8 +896,7 @@ public struct JSValue {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func getBindingObject(): ?SharedObject {
         let external = getProperty(context.constants.builtinText.__cj_object__)

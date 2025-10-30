@@ -17,43 +17,43 @@
 
 package ohos.ark_interop
 
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 sealed interface JSInteropByte {}
 
 /**
  * Byte extended JSInteropByte interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Byte <: JSInteropByte {}
 
 /**
  * The interface is used to implement extension methods for types that can be utilized in declarative interop macros.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public interface JSInteropType<T> {
     /**
      * Init from JSValue.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     static func fromJSValue(context: JSContext, input: JSValue): T
 
     /**
      * Convert to JSValue.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     func toJSValue(context: JSContext): JSValue
 
     /**
      * Get ArkTS type name corresponding to the Cangjie type.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     static func toArktsType(): String
 }
 
 /**
  * Int8 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Int8 <: JSInteropType<Int8> {
     /**
      * Convert JSValue to Int8.
@@ -64,8 +64,7 @@ extend Int8 <: JSInteropType<Int8> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int8 {
         let value = input.toNumber()
@@ -82,8 +81,7 @@ extend Int8 <: JSInteropType<Int8> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
@@ -92,7 +90,7 @@ extend Int8 <: JSInteropType<Int8> {
     /**
      * Get corresponding ArkTS type name of Int8.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -101,7 +99,7 @@ extend Int8 <: JSInteropType<Int8> {
 /**
  * Int16 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Int16 <: JSInteropType<Int16> {
     /**
      * Convert JSValue to Int16.
@@ -112,8 +110,7 @@ extend Int16 <: JSInteropType<Int16> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int16 {
         let value = input.toNumber()
@@ -130,8 +127,7 @@ extend Int16 <: JSInteropType<Int16> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
@@ -140,7 +136,7 @@ extend Int16 <: JSInteropType<Int16> {
     /**
      * Get corresponding ArkTS type name of Int16.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -149,7 +145,7 @@ extend Int16 <: JSInteropType<Int16> {
 /**
  * Int32 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Int32 <: JSInteropType<Int32> {
     /**
      * Convert JSValue to Int32.
@@ -160,8 +156,7 @@ extend Int32 <: JSInteropType<Int32> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int32 {
         let value = input.toNumber()
@@ -178,8 +173,7 @@ extend Int32 <: JSInteropType<Int32> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         context.number(this).toJSValue()
@@ -188,7 +182,7 @@ extend Int32 <: JSInteropType<Int32> {
     /**
      * Get corresponding ArkTS type name of Int32.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -197,7 +191,7 @@ extend Int32 <: JSInteropType<Int32> {
 /**
  * Int64 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Int64 <: JSInteropType<Int64> {
     /**
      * Convert JSValue to Int64.
@@ -208,8 +202,7 @@ extend Int64 <: JSInteropType<Int64> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int64 {
         let value = input.toNumber()
@@ -227,8 +220,7 @@ extend Int64 <: JSInteropType<Int64> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         if (Int64(Float64(this)) != this) {
@@ -240,7 +232,7 @@ extend Int64 <: JSInteropType<Int64> {
     /**
      * Get corresponding ArkTS type name of Int64.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -249,7 +241,7 @@ extend Int64 <: JSInteropType<Int64> {
 /**
  * UInt8 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend UInt8 <: JSInteropType<UInt8> {
     /**
      * Convert JSValue to UInt8.
@@ -260,8 +252,7 @@ extend UInt8 <: JSInteropType<UInt8> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): UInt8 {
         let value = Int64(input.toNumber())
@@ -278,8 +269,7 @@ extend UInt8 <: JSInteropType<UInt8> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
@@ -288,7 +278,7 @@ extend UInt8 <: JSInteropType<UInt8> {
     /**
      * Get corresponding ArkTS type name of UInt8.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -297,7 +287,7 @@ extend UInt8 <: JSInteropType<UInt8> {
 /**
  * UInt16 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend UInt16 <: JSInteropType<UInt16> {
     /**
      * Convert JSValue to UInt16.
@@ -308,8 +298,7 @@ extend UInt16 <: JSInteropType<UInt16> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): UInt16 {
         let value = input.toNumber()
@@ -326,8 +315,7 @@ extend UInt16 <: JSInteropType<UInt16> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
@@ -336,7 +324,7 @@ extend UInt16 <: JSInteropType<UInt16> {
     /**
      * Get corresponding ArkTS type name of UInt16.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -345,7 +333,7 @@ extend UInt16 <: JSInteropType<UInt16> {
 /**
  * UInt32 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend UInt32 <: JSInteropType<UInt32> {
     /**
      * Convert JSValue to UInt32.
@@ -356,8 +344,7 @@ extend UInt32 <: JSInteropType<UInt32> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): UInt32 {
@@ -375,8 +362,7 @@ extend UInt32 <: JSInteropType<UInt32> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
@@ -386,7 +372,7 @@ extend UInt32 <: JSInteropType<UInt32> {
     /**
      * Get corresponding ArkTS type name of UInt32.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -395,7 +381,7 @@ extend UInt32 <: JSInteropType<UInt32> {
 /**
  * UInt64 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend UInt64 <: JSInteropType<UInt64> {
     /**
      * Convert JSValue to UInt64.
@@ -406,8 +392,7 @@ extend UInt64 <: JSInteropType<UInt64> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): UInt64 {
         let value = input.toNumber()
@@ -425,8 +410,7 @@ extend UInt64 <: JSInteropType<UInt64> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         if (UInt64(Float64(this)) != this) {
@@ -438,7 +422,7 @@ extend UInt64 <: JSInteropType<UInt64> {
     /**
      * Get corresponding ArkTS type name of UInt64.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -447,7 +431,7 @@ extend UInt64 <: JSInteropType<UInt64> {
 /**
  * Float16 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Float16 <: JSInteropType<Float16> {
     /**
      * Convert JSValue to Float16.
@@ -457,8 +441,7 @@ extend Float16 <: JSInteropType<Float16> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Float16 {
         return Float16(input.toNumber())
@@ -471,8 +454,7 @@ extend Float16 <: JSInteropType<Float16> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Float64(this)).toJSValue()
@@ -481,7 +463,7 @@ extend Float16 <: JSInteropType<Float16> {
     /**
      * Get corresponding ArkTS type name of Float16.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -490,7 +472,7 @@ extend Float16 <: JSInteropType<Float16> {
 /**
  * Float32 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Float32 <: JSInteropType<Float32> {
     /**
      * Convert JSValue to Float32.
@@ -500,8 +482,7 @@ extend Float32 <: JSInteropType<Float32> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Float32 {
         return Float32(input.toNumber())
@@ -514,8 +495,7 @@ extend Float32 <: JSInteropType<Float32> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Float64(this)).toJSValue()
@@ -524,7 +504,7 @@ extend Float32 <: JSInteropType<Float32> {
     /**
      * Get corresponding ArkTS type name of Float32.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -533,7 +513,7 @@ extend Float32 <: JSInteropType<Float32> {
 /**
  * Float64 extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Float64 <: JSInteropType<Float64> & JSKeyable {
     /**
      * Convert JSValue to Float64.
@@ -543,8 +523,7 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Float64 {
         return input.toNumber()
@@ -557,8 +536,7 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(this).toJSValue()
@@ -567,7 +545,7 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
     /**
      * Get corresponding ArkTS type name of Float64.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "number"
     }
@@ -576,7 +554,7 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
 /**
  * Bool extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Bool <: JSInteropType<Bool> {
     /**
      * Convert JSValue to Bool.
@@ -586,8 +564,7 @@ extend Bool <: JSInteropType<Bool> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Bool {
         return input.toBoolean()
@@ -600,8 +577,7 @@ extend Bool <: JSInteropType<Bool> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.boolean(this).toJSValue()
@@ -610,7 +586,7 @@ extend Bool <: JSInteropType<Bool> {
     /**
      * Get corresponding ArkTS type name of Bool.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "boolean"
     }
@@ -619,7 +595,7 @@ extend Bool <: JSInteropType<Bool> {
 /**
  * String extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend String <: JSInteropType<String> {
     /**
      * Convert JSValue to String.
@@ -629,8 +605,7 @@ extend String <: JSInteropType<String> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): String {
         return input.toString()
@@ -639,7 +614,7 @@ extend String <: JSInteropType<String> {
     /**
      * Get corresponding ArkTS type name of String.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "string"
     }
@@ -648,7 +623,7 @@ extend String <: JSInteropType<String> {
 /**
  * JSString extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend JSString <: JSInteropType<JSString> {
     /**
      * Convert JSValue to JSString.
@@ -658,8 +633,7 @@ extend JSString <: JSInteropType<JSString> {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): JSString {
         return input.asString()
@@ -668,7 +642,7 @@ extend JSString <: JSInteropType<JSString> {
     /**
      * Get corresponding ArkTS type name of JSString.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "string"
     }
@@ -677,12 +651,12 @@ extend JSString <: JSInteropType<JSString> {
 /**
  * Unit extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend Unit <: JSInteropType<Unit> {
     /**
      * Convert JSValue to Unit.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func fromJSValue(_: JSContext, _: JSValue): Unit {}
 
     /**
@@ -692,8 +666,7 @@ extend Unit <: JSInteropType<Unit> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.undefined().toJSValue()
@@ -702,7 +675,7 @@ extend Unit <: JSInteropType<Unit> {
     /**
      * Get corresponding ArkTS type name of Unit.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "undefined"
     }
@@ -711,7 +684,7 @@ extend Unit <: JSInteropType<Unit> {
 /**
  * Option<T> extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     /**
      * Convert JSValue to Option<T>.
@@ -720,8 +693,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(context: JSContext, input: JSValue): Option<T> {
         if (input.isUndefined()) {
@@ -738,8 +710,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         match (this) {
@@ -751,7 +722,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     /**
      * Get corresponding ArkTS type name of Option<T>.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "union"
     }
@@ -760,7 +731,7 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
 /**
  * Array<T> extended JSInteropType interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
      /**
      * Init Int8 from JSValue.
@@ -771,8 +742,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Array<T> {
         return (input.asArrayBuffer().readBytes() as Array<T>) ?? throw outsideError("JSValue to buffer error.")
@@ -786,8 +756,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.arrayBuffer((this as Array<Byte>) ?? throw outsideError("Buffer to jsvalue error.")
@@ -796,7 +765,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
     /**
      * Get corresponding ArkTS type name of Array.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public static func toArktsType(): String {
         "ArrayBuffer"
     }

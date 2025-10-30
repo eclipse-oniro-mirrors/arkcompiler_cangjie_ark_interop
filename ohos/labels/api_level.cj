@@ -61,29 +61,20 @@ extend String <: PermissionValue {
     }
 }
 
-public interface LevelValue {}
-
-extend Int64 <: LevelValue {}
-
-extend String <: LevelValue {}
-
 @Annotation
 public class APILevel {
-    // since
-    public let since: LevelValue
+    public let since: String
     public let atomicservice: Bool
     public let crossplatform: Bool
-    // deprecated: 0 means the Api is not deprecated
-    public let deprecated: LevelValue
+    public let deprecated: ?String
     public let form: Bool
     public let permission: ?PermissionValue
-    public let stagemodelonly: Bool
     public let syscap: String
     public let throwexception: Bool
     public let workerthread: Bool
     public let systemapi: Bool
-    public const init(since: LevelValue, atomicservice!: Bool = false, crossplatform!: Bool = false,
-        deprecated!: LevelValue = 0, form!: Bool = false, permission!: ?PermissionValue = None, stagemodelonly!: Bool = true,
+    public const init(since!: String, atomicservice!: Bool = false, crossplatform!: Bool = false,
+        deprecated!: ?String = None, form!: Bool = false, permission!: ?PermissionValue = None,
         syscap!: String = "", throwexception!: Bool = false, workerthread!: Bool = false, systemapi!: Bool = false) {
         this.since = since
         this.atomicservice = atomicservice
@@ -91,7 +82,6 @@ public class APILevel {
         this.deprecated = deprecated
         this.form = form
         this.permission = permission
-        this.stagemodelonly = stagemodelonly
         this.syscap = syscap
         this.throwexception = throwexception
         this.workerthread = workerthread

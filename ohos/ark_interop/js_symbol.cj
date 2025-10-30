@@ -29,7 +29,7 @@ foreign func ARKTS_GetSymbolDesc(env: JSEnv, symbol: JSValue_): CString
 /**
  * The JSSymbol object is used to represent a safe reference to the ArkTS symbol type.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public class JSSymbol <: JSHeapObject & JSKeyable {
     private var desc_: ?String = None
 
@@ -66,8 +66,7 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(_: JSContext): JSValue {
         context.checkLifecycleAndThread()
@@ -81,8 +80,7 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public prop description: String {
         get() {
@@ -109,8 +107,7 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toString(): String {
         let desc = description

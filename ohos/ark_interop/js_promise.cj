@@ -41,7 +41,7 @@ foreign func ARKTS_PromiseCatch(env: JSEnv, prom: JSValue_, callback: JSValue_):
  * enhancing its usability by combining the syntactic sugar of async and await. The lifecycle of JSPromise exceeds the 
  * referenced ArkTS object.
  */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
 public class JSPromise <: JSHeapObject {
     init(context: JSContext, value: JSValue_) {
         super(context, value)
@@ -58,8 +58,7 @@ public class JSPromise <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func then(onFulfilled: JSFunction, onRejected!: ?JSFunction = None): Unit {
         let onFulfilledValue = onFulfilled.innerValue
@@ -80,8 +79,7 @@ public class JSPromise <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func catchError(callback: JSFunction): Unit {
         unsafe {
@@ -94,7 +92,7 @@ public class JSPromise <: JSHeapObject {
  * JSPromiseCapability is not a JSValue but a JSVM internal type,
  * the main purpose is to enhance performance.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public class JSPromiseCapability {
     static func create(context: JSContext): JSPromiseCap {
         unsafe { ARKTS_CreatePromiseCapability(context.env) }
@@ -117,8 +115,7 @@ public class JSPromiseCapability {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func resolve(value: JSValue): Unit {
         if (isComplete) {
@@ -139,8 +136,7 @@ public class JSPromiseCapability {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func reject(value: JSValue): Unit {
         if (isComplete) {
@@ -161,8 +157,7 @@ public class JSPromiseCapability {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(): JSValue {
         if (isComplete) {

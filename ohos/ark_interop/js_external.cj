@@ -38,7 +38,7 @@ func cjExternalDestructor(id: Int64, env: JSEnv): Unit {
  * Base class of objects shared with arkts. It has an unique id. When shared to arkts, the object would be kept to
  *  a global table. The id used to index the object.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public open class SharedObject {
     var nativeId_: Int64 = -1
     var shareCnt_: Int64 = 0
@@ -46,13 +46,13 @@ public open class SharedObject {
     /**
      * Init SharedObject.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public init() {}
 
     /**
      * Id of the SharedObject in global table.
      */
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     public prop nativeId: Int64 {
         get() {
             nativeId_
@@ -63,7 +63,7 @@ public open class SharedObject {
 /**
  * The js presentation of a cj object. It holds the id of cj object, and affects the lifecycle of the cj object.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public class JSExternal <: JSHeapObject {
     static func createExternal(context: JSContext, data: SharedObject): JSValue_ {
         let id = if (data.nativeId_ < 0) {
@@ -108,8 +108,7 @@ public class JSExternal <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func getData(): SharedObject {
         let id = this.id
@@ -126,8 +125,7 @@ public class JSExternal <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func cast<T>(): Option<T> where T <: SharedObject {
         getData() as T

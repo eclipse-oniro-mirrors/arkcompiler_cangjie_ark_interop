@@ -48,7 +48,7 @@ struct JSCallInfoPrivate {
  * arguments, and get argument by index. Each ArkTS function call saves the argument list and other related
  * information on the ArkTS stack. JSCallInfo is a pointer to this information.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public struct JSCallInfo {
     JSCallInfo(
         let context: JSContext,
@@ -62,8 +62,7 @@ public struct JSCallInfo {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public prop count: Int64 {
         get() {
@@ -79,8 +78,7 @@ public struct JSCallInfo {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public prop thisArg: JSValue {
         get() {
@@ -98,8 +96,7 @@ public struct JSCallInfo {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public operator func [](index: Int64): JSValue {
         context.checkLifecycleAndThread()
@@ -146,7 +143,7 @@ func cjLambdaDestructor(env: JSEnv, lambdaId: Int64): Unit {
 /**
  * A safe reference to the ArkTS function.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public class JSFunction <: JSHeapObject {
     static func createFunction(context: JSContext, lambda: JSLambda): JSValue_ {
         let lambdaId = context.sharedLambda_.append(lambda)
@@ -232,8 +229,7 @@ public class JSFunction <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func call(thisArg!: JSValue = context.undefined().toJSValue()): JSValue {
         let env = context.env // do lifecycle check and thread check here.
@@ -251,8 +247,7 @@ public class JSFunction <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func call(arg: JSValue, thisArg!: JSValue = context.undefined().toJSValue()): JSValue {
         let env = context.env // do lifecycle check and thread check here.
@@ -271,8 +266,7 @@ public class JSFunction <: JSHeapObject {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func call(args: Array<JSValue>, thisArg!: JSValue = context.undefined().toJSValue()): JSValue {
         let env = context.env // do lifecycle check and thread check here.

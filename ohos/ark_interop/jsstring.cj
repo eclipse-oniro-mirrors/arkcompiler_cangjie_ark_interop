@@ -48,22 +48,22 @@ foreign func ARKTS_CreateString(env: JSEnv, isCompressed: Bool, length: UInt32, 
 /**
  * An interface that implements extension method to convert value to JSValue.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public interface ToJSValue {
-    @!APILevel[22, stagemodelonly: true]
+    @!APILevel[since: "22"]
     func toJSValue(context: JSContext): JSValue
 }
 
 /**
  * An interface that can be used as a JSObejct key. It implements extension methods for String type.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 sealed interface JSKeyable <: ToString & ToJSValue {}
 
 /**
  * String class that extends the JSKeyable interface.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 extend String <: JSKeyable {
     /**
      * Convert String to JSValue.
@@ -73,8 +73,7 @@ extend String <: JSKeyable {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(context: JSContext): JSValue {
         JSValue(context, JSString.createString(context, this))
@@ -85,7 +84,7 @@ extend String <: JSKeyable {
  * The JSString object is used to represent a secure reference to the ArkTS string.
  * It can be converted to Cangjie String and Utf16String.
  */
-@!APILevel[22, stagemodelonly: true]
+@!APILevel[since: "22"]
 public class JSString <: JSHeapObject & ToString & JSKeyable {
     static func createString(context: JSContext, source: String): JSValue_ {
         unsafe {
@@ -158,8 +157,7 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toJSValue(_: JSContext): JSValue {
         context.checkLifecycleAndThread()
@@ -173,8 +171,7 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toString(): String {
         context.checkLifecycleAndThread()
@@ -191,8 +188,7 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        22,
-        stagemodelonly: true
+        since: "22"
     ]
     public func toUtf16String(): Utf16String {
         context.checkLifecycleAndThread()
