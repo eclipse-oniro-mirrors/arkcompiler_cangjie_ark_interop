@@ -18,8 +18,7 @@
 protected package ohos.ffi
 
 import std.collection.HashMap
-import std.math.*
-import std.sync.*
+import std.sync.Mutex
 
 /**
  * base class of objects that would be visited by native, on place should keep any reference of a FFIData,

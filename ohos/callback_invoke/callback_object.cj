@@ -17,7 +17,7 @@
 
 package ohos.callback_invoke
 
-import ohos.business_exception.*
+import ohos.business_exception.BusinessException
 import ohos.labels.APILevel
 
 /**

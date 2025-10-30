@@ -17,9 +17,6 @@
 
 protected package ohos.encoding.json
 
-import std.collection.*
-import std.convert.*
-
 /**
  * This enum used for identify the JSON type.
  */

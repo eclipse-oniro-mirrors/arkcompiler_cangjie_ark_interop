@@ -17,7 +17,7 @@
 
 protected package ohos.encoding.json
 
-import std.collection.*
+import std.collection.{ArrayList, HashMap}
 
 /**
  * JsonNull class used for encapsulate JSON data: null.

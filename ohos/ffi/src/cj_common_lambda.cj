@@ -17,7 +17,7 @@
 
 protected package ohos.ffi
 
-import ohos.hilog.*
+import ohos.hilog.HilogChannel
 
 let FFI_BIND_LOG = HilogChannel(0, 0xD001E00, "CJ-FFIBind")
 

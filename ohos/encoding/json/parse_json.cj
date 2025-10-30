@@ -17,8 +17,7 @@
 
 protected package ohos.encoding.json
 
-import std.collection.*
-import std.math.*
+import std.collection.HashMap
 
 const VALUE_TYPE_BOOLEAN: String = "1"
 const VALUE_TYPE_INT: String = "5"
