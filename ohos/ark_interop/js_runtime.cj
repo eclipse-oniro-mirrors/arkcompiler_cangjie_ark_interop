@@ -17,7 +17,7 @@
 
 package ohos.ark_interop
 
-import ohos.business_exception.*
+import ohos.business_exception.BusinessException
 
 @C
 struct JSEnginePrivate {}

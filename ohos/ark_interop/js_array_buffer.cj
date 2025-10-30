@@ -17,7 +17,7 @@
  
 package ohos.ark_interop
 
-internal import ohos.labels.*
+internal import ohos.labels.APILevel
 
 @FastNative
 foreign func ARKTS_CreateArrayBuffer(env: JSEnv, len: Int32): JSValue_

@@ -17,8 +17,8 @@
 
 package ohos.ark_interop
 
-import std.sync.*
-import std.collection.*
+import std.sync.{Mutex, AtomicInt8, AtomicInt64}
+import std.collection.{HashMap, ArrayList}
 
 @C
 struct JSHClassPrivate {}
@@ -94,8 +94,8 @@ func asyncCallbackExecutor(env: JSEnv, id: Int64): Unit {
 
 @C
 func disposeJSContext(env: JSEnv): Unit {
-    synchronized(JSContext.runtimesMutex) {
-        if (let Some(context) <- JSContext.allRuntimes_.remove(env)) {
+    synchronized(JSContext.RUNTIMES_MUTEX) {
+        if (let Some(context) <- JSContext.ALL_RUNTIMES_.remove(env)) {
             context.dispose()
         }
     }
@@ -108,16 +108,16 @@ func disposeJSContext(env: JSEnv): Unit {
  */
 @!APILevel[since: "22"]
 public class JSContext {
-    static let allRuntimes_ = HashMap<JSEnv, JSContext>()
-    static let runtimesMutex = Mutex()
+    static let ALL_RUNTIMES_ = HashMap<JSEnv, JSContext>()
+    static let RUNTIMES_MUTEX = Mutex()
 
     static func getOrCreate(env: JSEnv, tidGetter!: () -> UInt64 = {=> unsafe { ARKTS_GetPosixThreadId() }}): JSContext {
-        synchronized(runtimesMutex) {
-            match (allRuntimes_.get(env)) {
+        synchronized(RUNTIMES_MUTEX) {
+            match (ALL_RUNTIMES_.get(env)) {
                 case Some(context) => context
                 case None =>
                     let context = JSContext(env, tidGetter())
-                    allRuntimes_.add(env, context)
+                    ALL_RUNTIMES_.add(env, context)
                     context
             }
         }

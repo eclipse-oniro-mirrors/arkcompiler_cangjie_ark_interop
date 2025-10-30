@@ -17,9 +17,8 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.*
-import std.core.*
-import std.collection.*
+import std.ast.{Decl, FuncDecl, PrimaryCtorDecl, VarDecl, PropDecl, Token, Tokens, ClassDecl, TypeNode, FuncParam, TokenKind, setItem, getChildMessages, ToTokens}
+import std.collection.ArrayList
 
 class IDLClassMemberInvisible {
     private var keyWord: String
