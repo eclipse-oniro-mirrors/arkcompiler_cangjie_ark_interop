@@ -17,8 +17,8 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.*
-import std.collection.*
+import std.ast.{FuncDecl, Token, Tokens, FuncParam, TypeNode, TokenKind, ToTokens}
+import std.collection.ArrayList
 
 class IDLFunction {
     let decl_: FuncDecl

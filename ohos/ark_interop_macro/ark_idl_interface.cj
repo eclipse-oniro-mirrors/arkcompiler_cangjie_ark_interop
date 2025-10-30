@@ -17,9 +17,8 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.*
-import std.collection.*
-import std.time.*
+import std.ast.{Token, Tokens, FuncDecl, PropDecl, InterfaceDecl, ToTokens}
+import std.collection.ArrayList
 
 class IDLInterface {
     private let identifier_: Token

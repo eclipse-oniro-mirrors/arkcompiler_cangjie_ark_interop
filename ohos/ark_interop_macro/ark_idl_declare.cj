@@ -17,20 +17,19 @@
 
 macro package ohos.ark_interop_macro
 
-import std.fs.*
-import std.io.*
-import std.sync.*
-import std.ast.*
-import std.collection.*
-import std.process.*
+import std.fs.{Path, FSException, exists, Directory, File, OpenMode}
+import std.io.{SeekPosition, readToEnd}
+import std.sync.Mutex
+import std.ast.{PropDecl, InterfaceDecl, FuncDecl, ClassDecl, TypeNode, Body, VarDecl, PrimaryCtorDecl, FuncParam, FuncType, RefType, Tokens}
+import std.collection.{ArrayList, HashMap}
 
-let typeTabale_g = HashMap<String, String>(
+let TYPE_TABLE_G = HashMap<String, String>(
     [("Int8", "number"), ("Int16", "number"), ("Int32", "number"), ("Int64", "number"), ("UInt8", "number"),
         ("UInt16", "number"), ("UInt32", "number"), ("UInt64", "number"), ("Float16", "number"), ("Float32", "number"),
         ("Float64", "number"), ("String", "string"), ("Bool", "boolean"), ("JSStringEx", "string"), ("Unit", "undefined"),
         ("RetUnit", "void")])
-let mtx = Mutex()
-let tabStr = "    "
+let MTX = Mutex()
+let TAB_STR = "    "
 
 func genFuncDeclareFile(funcDecl: FuncDecl, isAsync: Bool) {
     let file = genFile()
@@ -148,8 +147,8 @@ func genInterfaceBodyDeclare(body: Body) {
 
     for (decl in decls) {
         match (decl) {
-            case funcDecl: FuncDecl => retBody += (tabStr + genFuncDeclareForInterface(funcDecl))
-            case propDecl: PropDecl => retBody += (tabStr + genPropDeclare(propDecl))
+            case funcDecl: FuncDecl => retBody += (TAB_STR + genFuncDeclareForInterface(funcDecl))
+            case propDecl: PropDecl => retBody += (TAB_STR + genPropDeclare(propDecl))
             case _ => IDLUtil.diagReportTE(Tokens(decl.identifier),
                 "Unsupported interface member." +
                     "Interface members support only functions and properties within the `Interop` macro scope.")
@@ -178,10 +177,10 @@ func genClassBodyDeclare(classDecl: ClassDecl, withConstructor!: Bool) {
         match (decl) {
             case funcDecl: FuncDecl =>
                 if (funcDecl.identifier.value != "init") {
-                    retBody += (tabStr + genFuncDeclare(funcDecl, false))
+                    retBody += (TAB_STR + genFuncDeclare(funcDecl, false))
                 }
-            case propDecl: PropDecl => retBody += (tabStr + genPropDeclare(propDecl))
-            case varDecl: VarDecl => retBody += (tabStr + genVarDeclare(varDecl))
+            case propDecl: PropDecl => retBody += (TAB_STR + genPropDeclare(propDecl))
+            case varDecl: VarDecl => retBody += (TAB_STR + genVarDeclare(varDecl))
             case primaryCtorDecl: PrimaryCtorDecl => ()
             case other => IDLUtil.diagReportTE(
                 Tokens(other.identifier),
@@ -193,7 +192,7 @@ func genClassBodyDeclare(classDecl: ClassDecl, withConstructor!: Bool) {
 
     if (withConstructor) {
         let classInitDeclare = genClassInitDeclare(classDecl, insideClassDecl: true)
-        retBody += (tabStr + classInitDeclare)
+        retBody += (TAB_STR + classInitDeclare)
     }
     return " {\n" + retBody + "}"
 }
@@ -252,7 +251,7 @@ func genFile(currentPkg!: String = "") {
     let libidlPath: Path = Path("${relativePath}/${dirName}")
     let filePath: Path = libidlPath.join("${fileName}")
     let jsonPath: Path = libidlPath.join("oh-package.json5")
-    synchronized(mtx) {
+    synchronized(MTX) {
         if (!exists(libidlPath)) {
             Directory.create(libidlPath, recursive: true)
         }
@@ -271,7 +270,7 @@ func genFile(currentPkg!: String = "") {
 }
 
 func funcDeclareWriteIntoFile(funcDeclare: String, filePath: String) {
-    synchronized(mtx) {
+    synchronized(MTX) {
         let file = try {
             File(filePath, OpenMode.ReadWrite)
         } catch (e: FSException | IllegalArgumentException) {
@@ -285,11 +284,11 @@ func funcDeclareWriteIntoFile(funcDeclare: String, filePath: String) {
 
         if (context.contains("interface CustomLib")) {
             file.seek(SeekPosition.End(-1))
-            file.write((tabStr + funcDeclare).toArray())
+            file.write((TAB_STR + funcDeclare).toArray())
             file.write("}".toArray())
         } else {
             file.write("export declare interface CustomLib {\n".toArray())
-            file.write((tabStr + funcDeclare).toArray())
+            file.write((TAB_STR + funcDeclare).toArray())
             file.write("}".toArray())
         }
         file.flush()
@@ -298,7 +297,7 @@ func funcDeclareWriteIntoFile(funcDeclare: String, filePath: String) {
 }
 
 func declareWriteIntoFileTail(functionDecl: String, filePath: String) {
-    synchronized(mtx) {
+    synchronized(MTX) {
         let file = try {
             File(filePath, OpenMode.ReadWrite)
         } catch (e: FSException | IllegalArgumentException) {
@@ -318,7 +317,7 @@ func declareWriteIntoFileTail(functionDecl: String, filePath: String) {
 }
 
 func declareWriteIntoFileHead(InterfaceDeclare: String, filePath: String) {
-    synchronized(mtx) {
+    synchronized(MTX) {
         let file = try {
             File(filePath, OpenMode.ReadWrite)
         } catch (e: FSException | IllegalArgumentException) {
@@ -364,7 +363,7 @@ func genFuncParamDeclare(funcParams: ArrayList<FuncParam>): String {
  */
 func cjType2ArktsType(typeNode: TypeNode, nameBase: String): String {
     try {
-        typeTabale_g[typeNode.toTokens().toString()]
+        TYPE_TABLE_G[typeNode.toTokens().toString()]
     } catch (_: Exception) {
         match (typeNode) {
             case p: FuncType => funcType2Arkts(p, nameBase)

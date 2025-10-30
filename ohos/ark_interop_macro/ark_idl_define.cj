@@ -17,8 +17,8 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.*
-import std.collection.*
+import std.ast.{Tokens, ClassDecl, InterfaceDecl, FuncDecl, Decl, parseDecl, assertParentContext}
+import std.collection.ArrayList
 
 public macro Interop(attrTokens: Tokens, input: Tokens): Tokens {
     //create whitelist

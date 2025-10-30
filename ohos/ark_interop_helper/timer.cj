@@ -17,8 +17,8 @@
 
 package ohos.ark_interop_helper
 
-import std.sync.*
-import std.collection.*
+import std.sync.{Mutex, AtomicInt64}
+import std.collection.HashSet
 import std.time.DateTime
 
 class Timer {

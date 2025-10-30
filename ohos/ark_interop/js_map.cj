@@ -17,7 +17,7 @@
 
 package ohos.ark_interop
 
-import std.collection.*
+import std.collection.HashMap
 
 class JSMap <: JSObjectBase {
     static func fromHashMap<K, V>(context: JSContext, src: HashMap<K, V>): JSMap
