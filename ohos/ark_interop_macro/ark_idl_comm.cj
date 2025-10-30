@@ -17,8 +17,8 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.*
-import std.time.*
+import std.ast.{Expr, Tokens, Token, FuncType, TypeNode, TokenKind, parseExprFragment, parseExpr, FuncParam, Decl, diagReport, DiagReportLevel, ToTokens}
+import std.time.DateTime
 
 enum InteropKind {
     InteropArkTS | InteropAsyncFunc | InteropInvisible | InteropOther

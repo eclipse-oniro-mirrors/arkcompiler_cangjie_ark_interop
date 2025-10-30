@@ -20,15 +20,14 @@ package ohos.ark_interop_helper
 import std.sync.{SyncCounter, AtomicBool}
 import std.collection.concurrent.ConcurrentHashMap
 import ohos.business_exception.BusinessException
-import ohos.ark_interop.*
 
-protected let noArg = {=> Array<JSValue>()}
-private let moduleMap = ConcurrentHashMap<String, JSObject>()
-private let globalModuleRegistered = AtomicBool(false)
+protected let NO_ARG = {=> Array<JSValue>()}
+private let MODULE_MAP = ConcurrentHashMap<String, JSObject>()
+private let GLOBAL_MODULE_REGISTERED = AtomicBool(false)
 
 // for globalRuntime.context only, other context must not use this 
 private func registerGlobalModule(ctx: JSContext) {
-    if (globalModuleRegistered.compareAndSwap(false, true)) {
+    if (GLOBAL_MODULE_REGISTERED.compareAndSwap(false, true)) {
         Console.create(ctx)
         Timer.create(ctx)
     }
@@ -97,12 +96,12 @@ protected func arktsObjApiCallAsync<T>(obj: JSObject, funcName: String, args: ()
 
 // not support ohos and hms have same module name
 protected func getJSModule(name: String, prefix: ?String): JSObject {
-    match (moduleMap.get(name)) {
+    match (MODULE_MAP.get(name)) {
         case Some(v) => v
         case None =>
             let ctx = getGlobalContext()
             let module = ctx.requireSystemNativeModule(name, prefix: prefix).asObject()
-            moduleMap.add(name, module)
+            MODULE_MAP.add(name, module)
             module
     }
 }

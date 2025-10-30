@@ -21,7 +21,7 @@ import ohos.hilog.HilogChannel
 import std.collection.HashMap
 
 class Console <: SharedObject {
-    static let logger = HilogChannel(0, 0xD001E00, "console")
+    static let LOGGER = HilogChannel(0, 0xD001E00, "console")
     let counter = HashMap<String, Int64>()
 
     static func create(context: JSContext): Unit {
@@ -195,7 +195,7 @@ class Console <: SharedObject {
     }
 
     func info(message: String): Unit {
-        logger.info(message)
+        LOGGER.info(message)
     }
 
     func clear(): Unit {
@@ -209,7 +209,7 @@ class Console <: SharedObject {
             1
         }
         counter[label] = count
-        logger.info("${label}: ${count}")
+        LOGGER.info("${label}: ${count}")
     }
 
     func countReset(label: String): Unit {
@@ -217,11 +217,11 @@ class Console <: SharedObject {
     }
 
     func debug(message: String): Unit {
-        logger.debug(message)
+        LOGGER.debug(message)
     }
 
     func error(message: String): Unit {
-        logger.error(message)
+        LOGGER.error(message)
     }
 
     func dir(): Unit {
@@ -261,11 +261,11 @@ class Console <: SharedObject {
     }
 
     func trace(message: String): Unit {
-        logger.info(message)
+        LOGGER.info(message)
     }
 
     func warn(message: String): Unit {
-        logger.warn(message)
+        LOGGER.warn(message)
     }
 
     func profile(): Unit {

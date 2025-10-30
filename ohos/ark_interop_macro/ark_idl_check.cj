@@ -17,16 +17,15 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.*
-import std.collection.*
-import std.fs.*
-import std.sync.*
-import std.process.*
-import std.io.*
-import std.regex.*
-import std.env.*
+import std.ast.{Visitor, Decl, FuncDecl, RefType, PrimaryCtorDecl, InterfaceDecl, ClassDecl, PropDecl, Token, Tokens, MacroExpandDecl, PackageHeader, VarDecl, parseProgram, cangjieLex}
+import std.collection.{ArrayList, HashSet, HashMap, forEach}
+import std.fs.{FileInfo, Path, FSException, File, Directory, OpenMode}
+import std.sync.Mutex
+import std.io.readToEnd
+import std.regex.{Regex, RegexFlag}
+import std.env.{getVariable, getHomeDirectory}
 
-let contextType_g: Array<String> = ["JSStringEx", "JSArrayEx", "JSHashMapEx"]
+let CONTEXT_TYPE_G: Array<String> = ["JSStringEx", "JSArrayEx", "JSHashMapEx"]
 
 // only public
 func checkModifierBePublic(decl: Decl) {
@@ -97,7 +96,7 @@ func checkTypesNoContext(funcDecl: FuncDecl) {
     for (param in funcDecl.funcParams) {
         match (param.paramType) {
             case p: RefType =>
-                if (contextType_g.contains(p.identifier.value)) {
+                if (CONTEXT_TYPE_G.contains(p.identifier.value)) {
                     IDLUtil.diagReportTE(
                         Tokens(param.identifier),
                         "Asynchronous functions do not support JSStringEx, JSArrayEx and JSHashMapEx types within the `Interop Async` macro scope."
@@ -109,7 +108,7 @@ func checkTypesNoContext(funcDecl: FuncDecl) {
 
     match (funcDecl.declType) {
         case p: RefType =>
-            if (contextType_g.contains(p.identifier.value)) {
+            if (CONTEXT_TYPE_G.contains(p.identifier.value)) {
                 IDLUtil.diagReportTE(
                     Tokens(funcDecl.identifier),
                     "Asynchronous functions do not support JSStringEx, JSArrayEx and JSHashMapEx types within the `Interop Async` macro scope."
@@ -364,7 +363,7 @@ func getOutputPkg(pkgName: String): String {
 class PackageNameCollector <: Visitor {
     var outputPkg: String = ""
     var packageNameMap = HashMap<String, String>()
-    public override func visit(packageHeader: PackageHeader) {
+    public override func visit(packageHeader: PackageHeader): String {
         var currentPkg: String = ""
         for (i in packageHeader.prefixPaths) {
             currentPkg += i.value
@@ -373,7 +372,7 @@ class PackageNameCollector <: Visitor {
         currentPkg += packageHeader.packageIdentifier.value
         outputPkg = getOutputPkg(currentPkg)
     }
-    public override func visit(macroExpandDecl: MacroExpandDecl) {
+    public override func visit(macroExpandDecl: MacroExpandDecl): Unit {
         if (macroExpandDecl.fullIdentifier.value != "Interop") {
             return
         }
@@ -392,7 +391,7 @@ class PackageNameCollector <: Visitor {
 
 //user-defined type whitelist
 class IDLCustomTypeWL {
-    private static let mtx = Mutex()
+    private static let MTX = Mutex()
     private static var whitelistSet = HashSet<String>()
     private static var packageNameMap = HashMap<String, String>()
     private static var packagesSet = HashSet<String>()
@@ -424,7 +423,7 @@ class IDLCustomTypeWL {
 
     static func createWL(): Unit {
         isSoCombined()
-        synchronized(mtx) {
+        synchronized(MTX) {
             if (isCreated) {
                 return
             }
@@ -480,7 +479,7 @@ class IDLCustomTypeWL {
     // Read cjpm.toml to check if root package is combined.
     // If true, save root package name to `combinedPkgName`.
     static func isSoCombined(): Unit {
-        synchronized(mtx) {
+        synchronized(MTX) {
             if (isRead) {
                 return
             }

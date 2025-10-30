@@ -17,9 +17,9 @@
 
 package ohos.ark_interop_helper
 
-internal import ohos.ark_interop.*
-internal import ohos.labels.*
-import std.collection.*
+internal import ohos.ark_interop.{SharedObject, JSValue, JSObject, JSContext, JSCallInfo, napi_env, napi_value, JSInteropType, JSValue_, getGlobalContext, JSType}
+internal import ohos.labels.APILevel
+import std.collection.HashMap
 
 foreign func ArkTsValuetoNapiValue(env: napi_env, ark_value: JSValue_): napi_value
 

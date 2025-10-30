@@ -17,8 +17,8 @@
 
 package ohos.ark_interop
 
-import std.collection.*
-import std.convert.*
+import std.collection.{HashMap, ArrayList}
+import std.convert.Parsable
 
 @C
 struct CJModuleCallbacks {
@@ -74,7 +74,7 @@ func loadArkInteropModule(env: JSEnv, cname: CString, exports: JSValue_): JSValu
 @C
 func hasArkInteropModule(cname: CString): Bool {
     let name = cname.toString()
-    JSModule.loadedModules_.contains(name)
+    JSModule.LOADED_MODULES_.contains(name)
 }
 
 @C
@@ -139,7 +139,7 @@ func throwNativeErrorToCJ(message: CString): Unit {
 @!APILevel[22, stagemodelonly: true]
 public class JSModule {
     private static var lastModule_ = JSModule()
-    static let loadedModules_ = HashMap<String, JSModule>()
+    static let LOADED_MODULES_ = HashMap<String, JSModule>()
 
     static init() {
         var moduleCallbacks = CJModuleCallbacks(
@@ -190,13 +190,13 @@ public class JSModule {
     }
 
     static func getCachedModule(name: String): ?JSModule {
-        loadedModules_.get(name)
+        LOADED_MODULES_.get(name)
     }
 
     static func finishLoad(name: String): JSModule {
         let result = lastModule_
         lastModule_ = JSModule()
-        loadedModules_.add(name, result)
+        LOADED_MODULES_.add(name, result)
         result
     }
 

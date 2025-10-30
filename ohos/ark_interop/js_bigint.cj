@@ -17,7 +17,7 @@
 
 package ohos.ark_interop
 
-internal import std.math.numeric.*
+internal import std.math.numeric.BigInt
 
 @FastNative
 foreign func ARKTS_CreateBigInt(env: JSEnv, value: Int64): JSValue_

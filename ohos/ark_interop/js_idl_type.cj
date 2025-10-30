@@ -17,7 +17,7 @@
 
 package ohos.ark_interop
 
-import std.collection.*
+import std.collection.{HashMap, EquatableCollection}
 
 enum JSSource<T, J> {
     | JS(JSContext, J)

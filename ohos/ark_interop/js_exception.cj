@@ -17,7 +17,7 @@
 
 package ohos.ark_interop
 
-import ohos.business_exception.*
+import ohos.business_exception.BusinessException
 
 internal func jsArrayRangeMisMatch(min: Int64, max: Int64, given: Int64, message!: String = "The accessing index is out of range"): BusinessException {
     return BusinessException(34300001, "${message}, allowed: [${min}, ${max}), given: ${given}")

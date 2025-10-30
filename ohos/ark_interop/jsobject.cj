@@ -32,17 +32,17 @@ struct PropertyFlags {
     }
 
     init(writable: Bool, enumerable: Bool, configurable: Bool) {
-        var value: UInt32 = 0
+        var value_: UInt32 = 0
         if (writable) {
-            value = value | WRITABLE.value
+            value_ = value_ | WRITABLE.value
         }
         if (enumerable) {
-            value = value | ENUMERABLE.value
+            value_ = value_ | ENUMERABLE.value
         }
         if (configurable) {
-            value = value | CONFIGURABLE.value
+            value_ = value_ | CONFIGURABLE.value
         }
-        this.value = value
+        this.value = value_
     }
 
     operator func |(target: PropertyFlags): PropertyFlags {

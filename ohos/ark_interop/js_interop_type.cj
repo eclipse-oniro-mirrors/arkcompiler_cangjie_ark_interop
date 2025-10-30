@@ -765,6 +765,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
      /**
      * Init Int8 from JSValue.
      *
+     * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
@@ -774,12 +775,13 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
         stagemodelonly: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Array<T> {
-        return (input.asArrayBuffer().readBytes() as Array<T>) ?? throw Exception("JSValue to buffer error.")
+        return (input.asArrayBuffer().readBytes() as Array<T>) ?? throw outsideError("JSValue to buffer error.")
     }
 
     /**
      * Convert Array to JSValue.
      *
+     * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
@@ -788,7 +790,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
         stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue {
-        return context.arrayBuffer((this as Array<Byte>) ?? throw Exception("Buffer to jsvalue error.")).toJSValue()
+        return context.arrayBuffer((this as Array<Byte>) ?? throw outsideError("Buffer to jsvalue error.")
     }
 
     /**

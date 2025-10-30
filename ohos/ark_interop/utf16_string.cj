@@ -17,8 +17,8 @@
 
 package ohos.ark_interop
 
-import std.collection.*
-import std.sync.*
+import std.collection.ArrayList
+import std.sync.AtomicInt64
 
 @C struct Utf16StringPrivate {}
 type Utf16StringHandle = CPointer<Utf16StringPrivate>
@@ -79,8 +79,8 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * Empty String.
      */
     @!APILevel[22, stagemodelonly: true]
-    public static let empty = Utf16String(unsafe { CJUtf16StringCreateEmpty()})
-    static let nl = Utf16String("\n")
+    public static let EMPTY: Utf16String = Utf16String(unsafe { CJUtf16StringCreateEmpty()})
+    static let NL = Utf16String("\n")
 
     static unsafe func create(isLatin1: Bool, length: Int64, writer: (CPointer<Unit>)->Unit): Utf16String {
         let handle = CJUtf16StringCreateWithoutData(isLatin1, UInt32(length))
@@ -512,7 +512,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     ]
     public func lines(): Iterator<Utf16String> {
         acquire()
-        let result = SplitIterator(this, nl, Int64.Max, false)
+        let result = SplitIterator(this, NL, Int64.Max, false)
         release()
         return result
     }
@@ -944,7 +944,7 @@ class SplitIterator <: Iterator<Utf16String> {
         if (!closed) {
             closed = true
             if (!removeEmpty) {
-                return Utf16String.empty
+                return Utf16String.EMPTY
             }
         }
         return None
