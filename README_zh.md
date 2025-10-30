@@ -51,12 +51,8 @@ arkcompiler/cangjie_ark_interop
 |   ├── ffi                # 仓颉公共能力，提供C语言互操作库
 |   ├── labels             # 仓颉公共能力，提供api level标签
 |   ├── utf16string        # 仓颉互操作库提供的utf16字符串处理类
-├── doc                    # 仓颉文档，包括API参考、应用开发指南、仓颉编程语言用户手册
-|   ├── reference      # 仓颉API参考
-|   ├── application-dev          # 仓颉开发指南
-|   ├── cj-user-manual        # 仓颉用户手册
 ├── figures                # 本README需要使用的图片
-├── test                   # 仓颉互操作测试用例
+└── test                   # 仓颉互操作测试用例
 ```
 
 ## 使用场景

@@ -1,5 +1,0 @@
-# Language Testing
-
-Language testing refers to the process where, after internationalization and localization are completed, local user experts conduct inspections on the application before its official release and launch to verify whether the interface display and other aspects comply with local usage habits.
-
-In a multilingual environment, the quality of APP localization is crucial for product acceptance. The professionalism of interface content, consistency of translations, terminology style, and interface display all impact the user experience. Any minor error may pose a risk of user attrition. Therefore, before the global release of an APP, identifying and resolving potential issues through language testing can effectively enhance the user experience for global end-users. Additionally, attention must be paid to sensitive and taboo words. Any geopolitically related sensitive terms, prohibited words, or words requiring caution could have significant business implications for the company. Having a comprehensive sensitive word solution ensures the safety of product globalization.

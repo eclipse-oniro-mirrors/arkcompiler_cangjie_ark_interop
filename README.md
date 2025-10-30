@@ -1,4 +1,5 @@
 # Cangjie - ArkTS Interoperability(Beta Feature)
+
 ## Introduction
 
 Cangjie-ArkTS interoperability is used to provide cross-language interoperability capabilities between Cangjie and ArkTS, including Cangjie interoperability library interfaces and interoperability macro interfaces. It aims to provide developers with cross-language interoperability solutions that balance development efficiency and runtime efficiency, offer a concise interoperability development paradigm, and reduce cross-language communication overhead. At the same time, this repository also provides public capability interfaces, including JSON serialization and deserialization interfaces, C language interoperability utility class interfaces, general exception interfaces, cross-language callback interfaces, and also provides public documentation, including Cangjie API reference, application development guide, and Cangjie programming language user manual. Currently, the interfaces open in this repository only support standard devices.
@@ -50,12 +51,8 @@ arkcompiler/cangjie_ark_interop
 |   ├── ffi                # Cangjie public capabilities, providing C language interoperability library
 |   ├── labels             # Cangjie public capabilities, providing api level labels
 |   ├── utf16string        # UTF16 string processing class provided by Cangjie interoperability library
-├── doc                    # Cangjie documentation, including API reference, application development guide, Cangjie programming language user manual
-|   ├── reference      # Cangjie API reference
-|   ├── application-dev          # Cangjie development guide
-|   ├── cj-user-manual        # Cangjie user manual
 ├── figures                # Images required for this README
-├── test                   # Cangjie interoperability test cases
+└── test                   # Cangjie interoperability test cases
 ```
 
 ## Usage Scenarios
