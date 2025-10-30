@@ -127,6 +127,11 @@ private:
 public:
     static bool IsLatin1(const T* src, uint32_t length)
     {
+        // disable simd on 32bit platform due to pointer alignment is not 8,
+        // pointer starting position may trigger SIGBUS.
+        if constexpr (sizeof(void*) != 8) {
+            return IsRestsLatin1(src, length);
+        }
         constexpr auto shift = CharHelper<T>::GetShiftBase();
         constexpr auto mask = CharHelper<T>::GetShiftMask();
         const auto fullWords = length >> shift;
@@ -144,6 +149,11 @@ public:
 struct Utf16 {
     static int32_t Compare(const char16_t* a, const char16_t* b, uint32_t length)
     {
+        // disable simd on 32bit platform due to pointer alignment is not 8,
+        // pointer starting position may trigger SIGBUS.
+        if constexpr (sizeof(void*) != 8) {
+            return Diff(a, b, length);
+        }
         auto fullWords = length >> 2;
         auto restChars = length & 0x3;
         {
