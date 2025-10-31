@@ -363,7 +363,7 @@ func getOutputPkg(pkgName: String): String {
 class PackageNameCollector <: Visitor {
     var outputPkg: String = ""
     var packageNameMap = HashMap<String, String>()
-    public override func visit(packageHeader: PackageHeader): String {
+    public override func visit(packageHeader: PackageHeader): Unit {
         var currentPkg: String = ""
         for (i in packageHeader.prefixPaths) {
             currentPkg += i.value

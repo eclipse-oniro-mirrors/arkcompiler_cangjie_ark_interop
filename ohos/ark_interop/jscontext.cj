@@ -17,8 +17,8 @@
 
 package ohos.ark_interop
 
-import std.sync.{Mutex, AtomicInt8, AtomicInt64}
-import std.collection.{HashMap, ArrayList}
+import std.sync.{Mutex, AtomicInt8}
+import std.collection.HashMap
 
 @C
 struct JSHClassPrivate {}
