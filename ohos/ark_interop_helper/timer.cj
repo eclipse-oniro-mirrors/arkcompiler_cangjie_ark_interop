@@ -32,64 +32,6 @@ class Timer {
         }
     }
 
-    func attach(): Unit {
-        wrap("setTimeout") {
-            callInfo =>
-            let callback = callInfo[0].asFunction()
-            let timeout = if (callInfo.count > 1 && callInfo[1].isNumber()) {
-                Int64(callInfo[1].toNumber())
-            } else {
-                0
-            }
-            let result = setTimeout(timeout) {
-                callback.call()
-            }
-            context.number(Float64(result)).toJSValue()
-        }
-        wrap0("clearTimeout") {
-            callInfo =>
-            let id = Int64(callInfo[0].toNumber())
-            clearTimeout(id)
-        }
-        wrap("setInterval") {
-            callInfo =>
-            let callback = callInfo[0].asFunction()
-            let timeout = if (callInfo.count > 1 && callInfo[1].isNumber()) {
-                Int64(callInfo[1].toNumber())
-            } else {
-                0
-            }
-            let result = setIntervel(timeout) {
-                callback.call()
-            }
-            context.number(Float64(result)).toJSValue()
-        }
-        wrap0("clearInterval") {
-            callInfo =>
-            let id = Int64(callInfo[0].toNumber())
-            clearTimeout(id)
-        }
-        wrap("setImmediate") {
-            callInfo =>
-            let callback = callInfo[0].asFunction()
-            let result = setTimeout(0) {
-                callback.call()
-            }
-            context.number(Float64(result)).toJSValue()
-        }
-        wrap0("clearImmediate") {
-            callInfo =>
-            let id = Int64(callInfo[0].toNumber())
-            clearTimeout(id)
-        }
-        wrap0("queueMicrotask") {
-            callInfo =>
-            let callback = callInfo[0].asFunction()
-            setTimeout(0) {
-                callback.call()
-            }
-        }
-    }
 
     let mutex = Mutex()
     var nextId = AtomicInt64(1)
@@ -153,5 +95,71 @@ class Timer {
             } while (running)
         }
         id
+    }
+
+    private func setTimeout_(callInfo: JSCallInfo): JSValue {
+        let callback = callInfo[0].asFunction()
+        let timeout = if (callInfo.count > 1 && callInfo[1].isNumber()) {
+            Int64(callInfo[1].toNumber())
+        } else {
+            0
+        }
+        let result = setTimeout(timeout) {
+            callback.call()
+        }
+        context.number(Float64(result)).toJSValue()
+    }
+
+    private func clearTimeout_(callInfo: JSCallInfo): Unit {
+        let id = Int64(callInfo[0].toNumber())
+        clearTimeout(id)
+    }
+
+    private func setInterval_(callInfo: JSCallInfo): JSValue {
+        let callback = callInfo[0].asFunction()
+        let timeout = if (callInfo.count > 1 && callInfo[1].isNumber()) {
+            Int64(callInfo[1].toNumber())
+        } else {
+            0
+        }
+        let result = setIntervel(timeout) {
+            callback.call()
+        }
+        context.number(Float64(result)).toJSValue()
+    }
+
+    private func clearInterval(callInfo: JSCallInfo): Unit {
+        let id = Int64(callInfo[0].toNumber())
+        clearTimeout(id)
+    }
+
+    private func setImmediate(callInfo: JSCallInfo): JSValue {
+        let callback = callInfo[0].asFunction()
+        let result = setTimeout(0) {
+            callback.call()
+        }
+        context.number(Float64(result)).toJSValue()
+    }
+
+    private func clearImmediate(callInfo: JSCallInfo): Unit {
+        let id = Int64(callInfo[0].toNumber())
+        clearTimeout(id)
+    }
+
+    private func queueMicrotask(callInfo: JSCallInfo): Unit {
+        let callback = callInfo[0].asFunction()
+        setTimeout(0) {
+            callback.call()
+        }
+    }
+
+    func attach(): Unit {
+        wrap("setTimeout", setTimeout_)
+        wrap0("clearTimeout", clearTimeout_) 
+        wrap("setInterval", setInterval_)
+        wrap0("clearInterval", clearInterval)
+        wrap("setImmediate", setImmediate) 
+        wrap0("clearImmediate", clearImmediate)
+        wrap0("queueMicrotask", queueMicrotask) 
     }
 }

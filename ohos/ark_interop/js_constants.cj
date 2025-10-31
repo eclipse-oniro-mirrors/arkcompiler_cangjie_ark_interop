@@ -106,6 +106,9 @@ class JSMapFuncs {
     }
 }
 
+/**
+ * @throws { BusinessException } 34300002 - Outside error occurred.
+ */
 func loadGlobalClass(context: JSContext, name: String): JSClass {
     context.env // do lifecycle check and thread check here.
     let value = context.global[name]

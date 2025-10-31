@@ -134,6 +134,9 @@ public class JSContext {
     var constants_: ?JSConstants = None
     private let void_: JSValue_
 
+    /**
+     * @throws { Exception } - Create JSContext failed, env is null.
+     */
     private init(env: JSEnv, tid: UInt64) {
         if (env == 0) {
             throw Exception("create JSContext failed, env is null")
@@ -190,12 +193,18 @@ public class JSContext {
         bindTid_ == unsafe { ARKTS_GetPosixThreadId() }
     }
 
+    /**
+     * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     */
     func checkAlive(): Unit {
         if (disposed_.load() < 0) {
             throw jsObjUseAfterFree("JSContext")
         }
     }
 
+    /**
+     * @throws { BusinessException } 34300004 - Thread mismatch.
+     */
     func checkThread(): Unit {
         if (!isInBindThread()) {
             throw jsThreadMismatch(bindTid_, unsafe { ARKTS_GetPosixThreadId() })
@@ -742,6 +751,9 @@ public class JSContext {
         }
     }
 
+    /**
+     * @throws { Exception } - ArkTS error.
+     */
     func checkJSException(): Unit {
         let error = unsafe {
             let value_ = ARKTS_GetExceptionAndClear(env_)

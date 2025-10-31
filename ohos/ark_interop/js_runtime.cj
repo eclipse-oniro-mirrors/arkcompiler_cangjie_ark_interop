@@ -86,7 +86,11 @@ public class JSRuntime {
         threadId_ = unsafe { ARKTS_GetPosixThreadId() }
     }
 
-    // only for unittest framework
+    /**
+     * only for unittest framework
+     *
+     * @throws { Exception } - Failed to create JSRuntime.
+     */
     protected init(inCJThread: Bool) {
         let engine = unsafe {
             if (inCJThread) {
@@ -102,6 +106,9 @@ public class JSRuntime {
         threadId_ = unsafe { ARKTS_GetPosixThreadId() }
     }
 
+    /**
+     * @throws { Exception } - Failed to create JSRuntime.
+     */
     init(engine: JSEngine) {
         if (engine.isNull()) {
             throw Exception("failed to create JSRuntime")
