@@ -1,3 +1,0 @@
-# Cangjie Programming Language Library API
-
-The Cangjie programming language library includes the std module (standard library module) and several commonly used extension modules. Each module contains multiple packages that provide functionality related to that module. For this category of APIs, please refer to [《Cangjie Programming Language Library API》](https://developer.huawei.com/consumer/cn/doc/cangjie-guides-V5/libs_overview_ohos-V5).

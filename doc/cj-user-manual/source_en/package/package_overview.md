@@ -1,7 +1,0 @@
-# Package Overview
-
-As project scale expands, managing source code in a single oversized file becomes increasingly difficult. In such cases, source code can be grouped by functionality, with different features managed separately. Each independently managed group generates an output file. During usage, corresponding features can be accessed by importing the relevant output files, or more complex functionalities can be achieved through interaction and combination of different features, thereby enhancing project management efficiency.
-
-In the Cangjie programming language, a package is the **smallest compilation unit**. Each package can independently output artifacts such as AST files, static library files, and dynamic library files. Each package has its own namespace, and within the same package, duplicate top-level definitions or declarations are not allowed (except for function overloading). A package may contain multiple source files.
-
-A module is a collection of packages and represents the **smallest distribution unit** for third-party developers. A module's program entry point must reside in its root directory, and it can have at most one `main` function as the program entry at the top level. This `main` function either takes no parameters or has a parameter of type `Array<String>`, with a return type of either an integer type or `Unit`.
