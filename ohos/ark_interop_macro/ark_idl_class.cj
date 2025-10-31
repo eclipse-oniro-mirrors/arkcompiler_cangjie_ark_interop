@@ -76,7 +76,7 @@ class IDLClassMemberInvisible {
     }
 
     func isMemberInvisible(): Bool {
-        if (hasPublic == false) {
+        if (!hasPublic) {
             return true
         }
 

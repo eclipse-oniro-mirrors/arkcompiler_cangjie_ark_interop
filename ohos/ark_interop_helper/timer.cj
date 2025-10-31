@@ -32,7 +32,6 @@ class Timer {
         }
     }
 
-
     let mutex = Mutex()
     var nextId = AtomicInt64(1)
     let tasks = HashSet<Int64>()
@@ -97,7 +96,7 @@ class Timer {
         id
     }
 
-    private func setTimeout_(callInfo: JSCallInfo): JSValue {
+    private func setTimeoutCallback(callInfo: JSCallInfo): JSValue {
         let callback = callInfo[0].asFunction()
         let timeout = if (callInfo.count > 1 && callInfo[1].isNumber()) {
             Int64(callInfo[1].toNumber())
@@ -110,12 +109,12 @@ class Timer {
         context.number(Float64(result)).toJSValue()
     }
 
-    private func clearTimeout_(callInfo: JSCallInfo): Unit {
+    private func clearTimeoutCallback(callInfo: JSCallInfo): Unit {
         let id = Int64(callInfo[0].toNumber())
         clearTimeout(id)
     }
 
-    private func setInterval_(callInfo: JSCallInfo): JSValue {
+    private func setIntervalCallback(callInfo: JSCallInfo): JSValue {
         let callback = callInfo[0].asFunction()
         let timeout = if (callInfo.count > 1 && callInfo[1].isNumber()) {
             Int64(callInfo[1].toNumber())
@@ -128,12 +127,12 @@ class Timer {
         context.number(Float64(result)).toJSValue()
     }
 
-    private func clearInterval(callInfo: JSCallInfo): Unit {
+    private func clearIntervalCallback(callInfo: JSCallInfo): Unit {
         let id = Int64(callInfo[0].toNumber())
         clearTimeout(id)
     }
 
-    private func setImmediate(callInfo: JSCallInfo): JSValue {
+    private func setImmediateCallback(callInfo: JSCallInfo): JSValue {
         let callback = callInfo[0].asFunction()
         let result = setTimeout(0) {
             callback.call()
@@ -141,12 +140,12 @@ class Timer {
         context.number(Float64(result)).toJSValue()
     }
 
-    private func clearImmediate(callInfo: JSCallInfo): Unit {
+    private func clearImmediateCallback(callInfo: JSCallInfo): Unit {
         let id = Int64(callInfo[0].toNumber())
         clearTimeout(id)
     }
 
-    private func queueMicrotask(callInfo: JSCallInfo): Unit {
+    private func queueMicrotaskCallback(callInfo: JSCallInfo): Unit {
         let callback = callInfo[0].asFunction()
         setTimeout(0) {
             callback.call()
@@ -154,12 +153,12 @@ class Timer {
     }
 
     func attach(): Unit {
-        wrap("setTimeout", setTimeout_)
-        wrap0("clearTimeout", clearTimeout_) 
-        wrap("setInterval", setInterval_)
-        wrap0("clearInterval", clearInterval)
-        wrap("setImmediate", setImmediate) 
-        wrap0("clearImmediate", clearImmediate)
-        wrap0("queueMicrotask", queueMicrotask) 
+        wrap("setTimeout", setTimeoutCallback)
+        wrap0("clearTimeout", clearTimeoutCallback) 
+        wrap("setInterval", setIntervalCallback)
+        wrap0("clearInterval", clearIntervalCallback)
+        wrap("setImmediate", setImmediateCallback) 
+        wrap0("clearImmediate", clearImmediateCallback)
+        wrap0("queueMicrotask", queueMicrotaskCallback) 
     }
 }
