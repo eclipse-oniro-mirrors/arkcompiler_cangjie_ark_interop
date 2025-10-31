@@ -790,7 +790,7 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
         stagemodelonly: true
     ]
     public func toJSValue(context: JSContext): JSValue {
-        return context.arrayBuffer((this as Array<Byte>) ?? throw outsideError("Buffer to jsvalue error.")
+        return context.arrayBuffer((this as Array<Byte>) ?? throw outsideError("Buffer to jsvalue error.")).toJSValue()
     }
 
     /**
