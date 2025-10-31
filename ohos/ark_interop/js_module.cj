@@ -77,6 +77,10 @@ func hasArkInteropModule(cname: CString): Bool {
     JSModule.LOADED_MODULES_.contains(name)
 }
 
+/**
+ * @throws { BusinessException } 34300002 - Outside error occurred.
+ * @throws { Exception } - Unknown js error.
+ */
 @C
 func throwJSErrorToCJ(env: JSEnv, rawError: JSValue_): Unit {
     let context = JSContext.getOrCreate(env)
@@ -127,6 +131,9 @@ func throwJSErrorToCJ(env: JSEnv, rawError: JSValue_): Unit {
     throw jsCodeError(errCode, "${errName}\n${errMsg}", errStack)
 }
 
+/**
+ * @throws { JSInteropNativeError } - JSInteropNativeError.
+ */
 @C
 func throwNativeErrorToCJ(message: CString): Unit {
     let msg = unsafe { message.toString() }

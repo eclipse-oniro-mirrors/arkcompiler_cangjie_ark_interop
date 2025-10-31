@@ -187,21 +187,37 @@ protected func ohosGlobalApiCall<T>(moduleName: String, funcName: String, args: 
     ohosGlobalApiCall<T>(moduleName, funcName, args) {ctx, info => T.fromJSValue(ctx, info)}
 }
 
-protected func jsGlobalApiCallPromise<T>(moduleName: String, modulePrefix: ?String, funcName: String,
-    callback: (?BusinessException, ?T) -> Unit, args: (JSContext) -> Array<JSValue>, onResolve: (JSContext, JSValue) -> T): Unit {
+protected struct JsGlobalApiCallInfo<T> {
+    var moduleName: String
+    var modulePrefix: ?String
+    var funcName: String
+    var callback: (?BusinessException, ?T) -> Unit
+    var args: (JSContext) -> Array<JSValue>
+    init(moduleName: String, modulePrefix: ?String, funcName: String,
+         callback: (?BusinessException, ?T) -> Unit, args: (JSContext) -> Array<JSValue>) {
+        this.moduleName = moduleName
+        this.modulePrefix = modulePrefix
+        this.funcName = funcName
+        this.callback = callback
+        this.args = args
+    }
+}
+
+protected func jsGlobalApiCallPromise<T>(jsGlobalApiCallInfo: JsGlobalApiCallInfo<T>, onResolve: (JSContext, JSValue) -> T): Unit {
     func call(context: JSContext): Unit {
-        let jsRet = getJSModule(context, moduleName, modulePrefix).callMethod(funcName, args(context))
+        let jsRet = getJSModule(context, jsGlobalApiCallInfo.moduleName, jsGlobalApiCallInfo.modulePrefix).callMethod(
+            jsGlobalApiCallInfo.funcName, jsGlobalApiCallInfo.args(context))
         let promise = jsRet.asPromise()
         let onResolved = context.function(
             {
                 ctx: JSContext, callInfo: JSCallInfo =>
                 try {
                     let result = onResolve(ctx, callInfo[0])
-                    callback(None, result)
+                    jsGlobalApiCallInfo.callback(None, result)
                 } catch (e: BusinessException) {
-                    callback(e, None)
+                    jsGlobalApiCallInfo.callback(e, None)
                 } catch (e: Exception) {
-                    callback(BusinessException(JS_INTERNAL_ERROR, e.message), None)
+                    jsGlobalApiCallInfo.callback(BusinessException(JS_INTERNAL_ERROR, e.message), None)
                 }
                 ctx.null().toJSValue()
             }
@@ -209,7 +225,7 @@ protected func jsGlobalApiCallPromise<T>(moduleName: String, modulePrefix: ?Stri
         let onRejected = context.function(
             {
                 ctx: JSContext, callInfo: JSCallInfo =>
-                callback(handleError(ctx, callInfo[0]), None)
+                jsGlobalApiCallInfo.callback(handleError(ctx, callInfo[0]), None)
                 ctx.null().toJSValue()
             }
         )
@@ -220,19 +236,19 @@ protected func jsGlobalApiCallPromise<T>(moduleName: String, modulePrefix: ?Stri
 
 protected func jsGlobalApiCallPromise<T>(moduleName: String, modulePrefix: ?String, funcName: String,
     callback: (?BusinessException, ?T) -> Unit, args: (JSContext) -> Array<JSValue>): Unit where T <: JSInteropType<T> {
-    jsGlobalApiCallPromise<T>(moduleName, modulePrefix, funcName, callback, args) {
+    jsGlobalApiCallPromise<T>(JsGlobalApiCallInfo<T>(moduleName, modulePrefix, funcName, callback, args)) {
         ctx, value => T.fromJSValue(ctx, value)
     }
 }
 
 protected func hmsGlobalApiCallPromise<T>(moduleName: String, funcName: String,
     callback: (?BusinessException, ?T) -> Unit, args: (JSContext) -> Array<JSValue>, onResolve: (JSContext, JSValue) -> T): Unit {
-    jsGlobalApiCallPromise<T>(moduleName, "hms", funcName, callback, args, onResolve)
+    jsGlobalApiCallPromise<T>(JsGlobalApiCallInfo<T>(moduleName, "hms", funcName, callback, args), onResolve)
 }
 
 protected func ohosGlobalApiCallPromise<T>(moduleName: String, funcName: String,
     callback: (?BusinessException, ?T) -> Unit, args: (JSContext) -> Array<JSValue>, onResolve: (JSContext, JSValue) -> T): Unit {
-    jsGlobalApiCallPromise<T>(moduleName, None, funcName, callback, args, onResolve)
+    jsGlobalApiCallPromise<T>(JsGlobalApiCallInfo<T>(moduleName, None, funcName, callback, args), onResolve)
 }
 
 protected func hmsGlobalApiCallPromise<T>(moduleName: String, funcName: String,

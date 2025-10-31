@@ -444,6 +444,9 @@ public struct JSValue {
         JSObject.instanceOfByValue(context.env, value, context.constants.mapFuncs.clazz.innerValue)
     }
 
+    /**
+     * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     */
     func asMap(): JSMap {
         if (!isMap()) {
             throw jsTypeMisMatch("Map", typeof())

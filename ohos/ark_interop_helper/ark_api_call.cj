@@ -33,6 +33,9 @@ private func registerGlobalModule(ctx: JSContext) {
     }
 }
 
+/**
+ * @throws { Exception } - Should not reach here.
+ */
 protected func basicJsSkeleton<T>(callFunc: (Box<?T>, Box<?Exception>, SyncCounter) -> Unit): T {
     let ret: Box<?T> = Box<?T>(Option<T>.None)
     let exception: Box<?Exception> = Box<?Exception>(Option<Exception>.None)

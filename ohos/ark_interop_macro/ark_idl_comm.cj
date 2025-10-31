@@ -201,6 +201,9 @@ class IDLUtil {
         ret
     }
 
+    /**
+     * @throws { Exception }.
+     */
     static func diagReportTE(tokens: Tokens, message: String) {
         diagReport(DiagReportLevel.ERROR, tokens, message, "")
         throw Exception(message)
