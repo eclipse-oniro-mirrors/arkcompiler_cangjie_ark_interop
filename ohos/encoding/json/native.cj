@@ -124,6 +124,9 @@ func skipWhiteSpace(parser: JsonParser): Unit {
     }
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseString(str: String): JsonValue {
     if (str.size == 0) {
         throw JsonException("Json String is empty!")
@@ -143,6 +146,9 @@ func parseString(str: String): JsonValue {
     return res
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseJson(parser: JsonParser): JsonValue {
     try {
         skipWhiteSpace(parser)
@@ -174,6 +180,9 @@ func parseJson(parser: JsonParser): JsonValue {
     }
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseJsonObject(parser: JsonParser): JsonObject {
     parser.offset++
     skipWhiteSpace(parser)
@@ -212,6 +221,9 @@ func parseJsonObject(parser: JsonParser): JsonObject {
     return JsonObject(map)
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseJsonArray(parser: JsonParser): JsonArray {
     parser.offset++
     skipWhiteSpace(parser)
@@ -241,6 +253,9 @@ func parseJsonArray(parser: JsonParser): JsonArray {
     return JsonArray(arr)
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseJsonNull(parser: JsonParser): JsonNull {
     if (parser.data[parser.offset] != UInt8(UInt32(r'n'))) {
         throw JsonException()
@@ -261,6 +276,9 @@ func parseJsonNull(parser: JsonParser): JsonNull {
     return JsonNull()
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseJsonTrue(parser: JsonParser): JsonBool {
     if (parser.data[parser.offset] != UInt8(UInt32(r't'))) {
         throw JsonException()
@@ -281,6 +299,9 @@ func parseJsonTrue(parser: JsonParser): JsonBool {
     return JsonBool(true)
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseJsonFalse(parser: JsonParser): JsonBool {
     if (parser.data[parser.offset] != UInt8(UInt32(r'f'))) {
         throw JsonException()
@@ -368,6 +389,9 @@ func checkNumberSystem(numSystem: NumberSystem): (Byte) -> Bool {
     }
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseInteger(parser: JsonParser, isNumber: (Byte) -> Bool): Unit {
     var nextByte = parser.data[parser.offset]
     var hasNumber = false
@@ -388,6 +412,9 @@ func parseInteger(parser: JsonParser, isNumber: (Byte) -> Bool): Unit {
     }
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseDecimal(parser: JsonParser, numSystem: NumberSystem): Bool {
     if (parser.offset >= parser.size) {
         return false
@@ -403,6 +430,9 @@ func parseDecimal(parser: JsonParser, numSystem: NumberSystem): Bool {
     return parseDigit(parser)
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseExponent(parser: JsonParser, numSystem: NumberSystem): Bool {
     if (parser.offset >= parser.size) {
         return false
@@ -423,6 +453,9 @@ func parseExponent(parser: JsonParser, numSystem: NumberSystem): Bool {
     return parseDigit(parser)
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func parseDigit(parser: JsonParser): Bool {
     var nextByte = parser.data[parser.offset]
     var hasNumber = false
@@ -448,6 +481,9 @@ func isHexNum(char: UInt8): Bool {
     return true
 }
 
+/**
+ * @throws JsonException - Fail to parseJsonString.
+ */
 func parseJsonString(parser: JsonParser): JsonString {
     if (parser.data[parser.offset] != UInt8(UInt32(r'\"'))) {
         throw JsonException("Fail to parseJsonString")
@@ -481,6 +517,9 @@ func parseJsonString(parser: JsonParser): JsonString {
     }
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func getNextHexNum(parser: JsonParser): Byte {
     parser.offset++
     let byte = parser.data[parser.offset]
@@ -490,6 +529,9 @@ func getNextHexNum(parser: JsonParser): Byte {
     return byte
 }
 
+/**
+ * @throws JsonException - the json data is Non-standard.
+ */
 func handleEscape(parser: JsonParser): Unit {
     match (parser.data[parser.offset]) {
         case '\"' => parser.strCache.add(UInt8(UInt32(r'\"')))
