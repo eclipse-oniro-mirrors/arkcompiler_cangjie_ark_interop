@@ -187,6 +187,10 @@ protected class JsonArray <: JsonValue {
         return toJsonString(0)
     }
 
+    /**
+     * @throws { IllegalArgumentException } - Depth cannot be negative. /
+     * Indent must be an empty string or any combination of spaces and tabs.
+     */
     @OverflowWrapping
     protected func toJsonString(depth: Int64, bracketInNewLine!: Bool = false, indent!: String = "  "): String {
         if (depth < 0) {
@@ -219,6 +223,9 @@ protected class JsonArray <: JsonValue {
         return items.get(index)
     }
 
+    /**
+     * @throws { JsonException } - The index of JsonArray does not exist.
+     */
     protected operator func [](index: Int64): JsonValue {
         return match (items.get(index)) {
             case Some(v) => v
@@ -258,6 +265,10 @@ protected class JsonObject <: JsonValue {
         return toJsonString(0)
     }
 
+    /**
+     * @throws { IllegalArgumentException } - Depth cannot be negative. /
+     * Indent must be an empty string or any combination of spaces and tabs.
+     */
     protected func toJsonString(depth: Int64, bracketInNewLine!: Bool = false, indent!: String = "  "): String {
         if (depth < 0) {
             throw IllegalArgumentException("Depth cannot be negative.")
@@ -292,6 +303,9 @@ protected class JsonObject <: JsonValue {
         return fields.get(key)
     }
 
+    /**
+     * @throws { JsonException } - The Value of JsonObject does not exist.
+     */
     protected operator func [](key: String): JsonValue {
         return match (fields.get(key)) {
             case Some(v) => v

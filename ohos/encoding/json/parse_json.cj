@@ -238,6 +238,9 @@ protected func jsonStringUnWrapper(jsString: String): JsonObject {
     return JsonObject(newMap)
 }
 
+/**
+ * @throws IllegalArgumentException - invalid json string.
+ */
 protected func jsStringToJsObject(str: String): JsonObject {
     if (str == "") {
         return JsonObject()

@@ -20,10 +20,6 @@ protected package ohos.encoding.json
 @FastNative
 foreign func memcpy_s(dest: CPointer<UInt8>, destMax: UIntNative, src: CPointer<UInt8>, count: UIntNative): Int32
 
-let BOOL_TRUE_STRING = "true".toArray()
-let BOOL_FALSE_STRING = "false".toArray()
-let NULL_STRING = "null".toArray()
-const MIN_CAPACITY = 16
 const BLANK: Byte = ' '
 /*
  * This is a stringbuilder customized for json serialization.
@@ -45,6 +41,7 @@ class WriteBuffer {
      * buff must be filled with blank
      */
     init(capacity: Int64) {
+        const MIN_CAPACITY = 16
         let cap = if (capacity > MIN_CAPACITY) {
             capacity
         } else {
@@ -139,6 +136,8 @@ class WriteBuffer {
     }
 
     func append(b: Bool): WriteBuffer {
+        let BOOL_TRUE_STRING = "true".toArray()
+        let BOOL_FALSE_STRING = "false".toArray()
         if (b) {
             append(BOOL_TRUE_STRING)
         } else {
@@ -215,7 +214,9 @@ func jsonWriteWithoutFormat(json: JsonValue, buff: WriteBuffer): Unit {
         case jb: JsonBool => buff.append(jb.getValue())
         case ji: JsonInt => buff.append(ji.getValue())
         case jf: JsonFloat => buff.append(jf.getValue())
-        case _ => buff.append(NULL_STRING)
+        case _ => 
+            let NULL_STRING = "null".toArray()
+            buff.append(NULL_STRING)
     }
 }
 

@@ -38,6 +38,9 @@ abstract sealed class JsonValue {
 
     protected func kind(): JsonKind
 
+    /**
+    * @throws JsonException - Fail to convert to JsonNull.
+    */
     protected func asNull(): JsonNull {
         match (this) {
             case jsonNull: JsonNull => jsonNull
@@ -45,6 +48,9 @@ abstract sealed class JsonValue {
         }
     }
 
+    /**
+    * @throws JsonException - Fail to convert to JsonBool.
+    */
     protected func asBool(): JsonBool {
         match (this) {
             case jsonBool: JsonBool => jsonBool
@@ -52,6 +58,9 @@ abstract sealed class JsonValue {
         }
     }
 
+    /**
+    * @throws JsonException - Fail to convert to JsonInt.
+    */
     protected func asInt(): JsonInt {
         match (this) {
             case jsonInt: JsonInt => jsonInt
@@ -59,6 +68,9 @@ abstract sealed class JsonValue {
         }
     }
 
+    /**
+    * @throws JsonException - Fail to convert to JsonFloat.
+    */
     protected func asFloat(): JsonFloat {
         match (this) {
             case jsonFloat: JsonFloat => jsonFloat
@@ -67,6 +79,9 @@ abstract sealed class JsonValue {
         }
     }
 
+    /**
+    * @throws JsonException - Fail to convert to JsonString.
+    */
     protected func asString(): JsonString {
         match (this) {
             case jsonString: JsonString => jsonString
@@ -74,6 +89,9 @@ abstract sealed class JsonValue {
         }
     }
 
+    /**
+    * @throws JsonException - Fail to convert to JsonArray.
+    */
     protected func asArray(): JsonArray {
         match (this) {
             case jsonArray: JsonArray => jsonArray
@@ -81,6 +99,9 @@ abstract sealed class JsonValue {
         }
     }
 
+    /**
+    * @throws JsonException - Fail to convert to JsonObject.
+    */
     protected func asObject(): JsonObject {
         match (this) {
             case jsonObject: JsonObject => jsonObject
