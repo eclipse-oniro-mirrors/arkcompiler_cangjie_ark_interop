@@ -16,7 +16,6 @@
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
 import { requireCJLib } from "libark_interop_loader.so"
-import { CovLib } from "./List.test"
 
 interface Lib {
   test_types_00(a: number): void;
@@ -42,17 +41,7 @@ export default function TestTypeValue() {
   describe('TestTypeValue', () => {
     let tmp = requireCJLib('libentry.so')
     const lib = tmp as Lib ;
-    const covlib = tmp as CovLib;
-    beforeAll(() => {
-      covlib.test_setEnv();
-    })
-    beforeEach(() => {
-    })
-    afterEach(() => {
-    })
-    afterAll(() => {
-      covlib.test_gcov_dump();
-    })
+
     it('test_types_00', 0, () => {
       lib.test_types_00(32);
     })

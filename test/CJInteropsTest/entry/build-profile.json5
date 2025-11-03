@@ -16,14 +16,11 @@
 {
   apiType: "stageMode",
   buildOption: {
-    cangjieOptions: {
-      path: "./src/main/cangjie/cjpm.toml",
-    },
-    externalNativeOptions: {
-      path: "./src/main/cpp/CMakeLists.txt",
-      arguments: "",
-      cppFlags: "",
-    },
+    sourceOption: {
+      workers: [
+        "./src/ohosTest/ets/test/PureWorker.ets"
+      ]
+    }
   },
   buildOptionSet: [
     {

@@ -15,7 +15,7 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSArrayRangeMisMatch, JSObject}
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSObject}
 import std.math.numeric.BigInt
 
 let _ = JSModule.registerModule {
@@ -86,7 +86,7 @@ func testBigInt02(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt03(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     jsCallInfo[0].toBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, 114514)
@@ -95,7 +95,7 @@ func testBigInt03(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt04(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.isTrue(bigInt == BigInt(3))
     Assert.equals(bigInt.sign, 1)
@@ -104,7 +104,7 @@ func testBigInt04(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt05(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, 123)
 //    Assert.isFalse(isLossless)
@@ -140,7 +140,7 @@ func testBigInt12(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt13(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, Int64.Min)
 //    Assert.isTrue(isLossless)
@@ -148,7 +148,7 @@ func testBigInt13(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt14(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, Int64.Min)
 //    Assert.isTrue(isLossless)
@@ -156,7 +156,7 @@ func testBigInt14(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt15(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, Int64.Min + 1)
 //    Assert.isTrue(isLossless)
@@ -164,7 +164,7 @@ func testBigInt15(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt16(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, -114514)
 //    Assert.isTrue(isLossless)
@@ -172,7 +172,7 @@ func testBigInt16(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt17(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, -1)
 //    Assert.isTrue(isLossless)
@@ -180,7 +180,7 @@ func testBigInt17(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt18(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, 0)
 //    Assert.isTrue(isLossless)
@@ -188,7 +188,7 @@ func testBigInt18(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt19(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, 1)
 //    Assert.isTrue(isLossless)
@@ -196,7 +196,7 @@ func testBigInt19(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt20(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, 114514)
 //    Assert.isTrue(isLossless)
@@ -204,7 +204,7 @@ func testBigInt20(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt21(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, Int64.Max - 1)
 //    Assert.isTrue(isLossless)
@@ -212,7 +212,7 @@ func testBigInt21(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt22(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, Int64.Max)
 //    Assert.isTrue(isLossless)
@@ -220,7 +220,7 @@ func testBigInt22(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt23(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
 //    let (int64Value, isLossless) = jsBigInt.toInt64()
 //    Assert.equals(int64Value, Int64.Max)
 //    Assert.isTrue(isLossless)
@@ -228,7 +228,7 @@ func testBigInt23(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt24(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
     Assert.equals(bigInt.toString(), "-9223372036854775809")
@@ -236,7 +236,7 @@ func testBigInt24(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt25(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
     Assert.equals(bigInt.toString(), "-9223372036854775808")
@@ -244,7 +244,7 @@ func testBigInt25(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt26(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
     Assert.equals(bigInt.toString(), "-9223372036854775807")
@@ -252,7 +252,7 @@ func testBigInt26(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt27(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
     Assert.equals(bigInt.toString(), "-114514")
@@ -260,7 +260,7 @@ func testBigInt27(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt28(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
     Assert.equals(bigInt.toString(), "-1")
@@ -268,7 +268,7 @@ func testBigInt28(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt29(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 0)
     Assert.equals(bigInt.toString(), "0")
@@ -276,7 +276,7 @@ func testBigInt29(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt30(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
     Assert.equals(bigInt.toString(), "1")
@@ -284,7 +284,7 @@ func testBigInt30(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt31(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
     Assert.equals(bigInt.toString(), "114514")
@@ -292,7 +292,7 @@ func testBigInt31(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt32(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
     Assert.equals(bigInt.toString(), "9223372036854775806")
@@ -300,7 +300,7 @@ func testBigInt32(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt33(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
     Assert.equals(bigInt.toString(), "9223372036854775807")
@@ -308,7 +308,7 @@ func testBigInt33(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt34(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
     Assert.equals(bigInt.toString(), "9223372036854775808")
@@ -316,7 +316,7 @@ func testBigInt34(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt35(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 0)
     Assert.equals(bigInt.toString(), "xxx")
@@ -324,7 +324,7 @@ func testBigInt35(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt36(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 0)
     Assert.equals(bigInt.toString(), "xxx")
@@ -332,7 +332,7 @@ func testBigInt36(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt37(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 0)
     Assert.equals(bigInt.toString(), "xxx")
@@ -340,7 +340,7 @@ func testBigInt37(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt38(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 0)
     Assert.equals(bigInt.toString(), "xxx")
@@ -348,7 +348,7 @@ func testBigInt38(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 }
 
 func testBigInt39(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt(jsContext)
+    let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 0)
     Assert.equals(bigInt.toString(), "xxx")

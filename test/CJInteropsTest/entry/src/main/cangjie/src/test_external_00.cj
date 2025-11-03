@@ -15,12 +15,20 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSArrayRangeMisMatch, JSClass, JSObject, SharedObject, JSRuntime}
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
-let _ = JSModule.registerModule {
-    jsContext: JSContext, jsObject: JSObject => jsObject["testExternal00"] = jsContext.function(test_external_00).
-        toJSValue()
+let _ = JSModule.registerModule { jsContext: JSContext, jsObject: JSObject => 
+    jsObject["testExternal00"] = jsContext.function(test_external_00).toJSValue()
+    jsObject["testRuntime"] = jsContext.function(testRuntime).toJSValue()
 }
+
+func testRuntime(c: JSContext, _: JSCallInfo): JSValue {
+    let r = JSRuntime()
+    let context = r.mainContext
+    let env = r.getNapiEnv()
+    c.undefined().toJSValue()
+}
+
 //
 class MyObject_test_external_00 <: SharedObject {
     var name: String
@@ -40,18 +48,18 @@ class MyObject_test_external_00 <: SharedObject {
         JSModule.registerClass("MyObject_test_external_00", jsClassRegister)
     }
     static func constructor1(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-        let name = jsCallInfo[0].toString(jsContext)
+        let name = jsCallInfo[0].toString()
         let age = Int64(jsCallInfo[1].toNumber())
         let grade = Int64(jsCallInfo[2].toNumber())
         let student = MyObject_test_external_00(name, age, grade)
         // js侧创建好的对象作为this传入
-        let jsObject = jsCallInfo.thisArg.asObject(jsContext)
+        let jsObject = jsCallInfo.thisArg.asObject()
         jsObject.attachCJObject(jsContext.external(student))
         jsObject.toJSValue()
     }
     static func constructor0(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-        let jsObject = jsCallInfo.thisArg.asObject(jsContext)
-        jsObject.attachCJObject(jsCallInfo[0].asExternal(jsContext))
+        let jsObject = jsCallInfo.thisArg.asObject()
+        jsObject.attachCJObject(jsCallInfo[0].asExternal())
         jsObject.toJSValue()
     }
     static func jsClassRegister(jsContext: JSContext): JSClass {
@@ -60,15 +68,15 @@ class MyObject_test_external_00 <: SharedObject {
             "name",
             getter: {
                 jsContext: JSContext, jsCallInfo: JSCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject(jsContext)
+                let jsObject = jsCallInfo.thisArg.asObject()
                 let student = MyObject_test_external_00.of(jsObject)
                 jsContext.string(student.name).toJSValue()
             },
             setter: {
                 jsContext: JSContext, jsCallInfo: JSCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject(jsContext)
+                let jsObject = jsCallInfo.thisArg.asObject()
                 let student = MyObject_test_external_00.of(jsObject)
-                let newName = jsCallInfo[0].toString(jsContext)
+                let newName = jsCallInfo[0].toString()
                 student.name = newName
                 jsContext.undefined().toJSValue()
             }
@@ -81,7 +89,7 @@ class MyObject_test_external_00 <: SharedObject {
 func test_external_00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.equals(jsCallInfo.count, 1)
     Assert.isTrue(jsCallInfo[0].isObject())
-    let jsObject = jsCallInfo[0].asObject(jsContext)
+    let jsObject = jsCallInfo[0].asObject()
     //    Assert.isTrue(jsObject.instanceOf(MyObject_test_external_00.c.getOrThrow()))
     jsContext.undefined().toJSValue()
 }

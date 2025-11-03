@@ -15,10 +15,45 @@
 
 package entry
 
-import ohos.hilog.HilogChannel
+import ohos.hilog.*
 import std.collection.{forEach}
 import std.math.{MathExtension, abs}
 import std.convert.*
+import std.process.*
+
+class HilogChannel {
+    HilogChannel(
+        let domain: UInt32,
+        let kind: Int32,
+        let tag: String
+    ) {}
+
+    func debug(message: String): Unit {
+        Hilog.debug(domain, tag, message)
+    }
+
+    func info(message: String): Unit {
+        Hilog.info(domain, tag, message)
+    }
+
+    func warn(message: String): Unit {
+        Hilog.warn(domain, tag, message)
+    }
+
+    func error(message: String): Unit {
+        Hilog.error(domain, tag, message)
+    }
+}
+
+foreign func __gcov_dump(): Unit
+let _ = { =>
+    Process.current.setEnv("GCOV_PREFIX", "/data/storage/el1/base/cov")
+}()
+
+func gcov_dump(): Unit {
+    unsafe { __gcov_dump() }
+    Hilog.error(0, "test", "call gcov_dump")
+}
 
 let logger = HilogChannel(0, 0, "WBT")
 

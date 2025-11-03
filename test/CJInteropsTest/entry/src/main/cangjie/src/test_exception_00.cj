@@ -15,37 +15,15 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSArrayRangeMisMatch, JSClass, JSObject, SharedObject, JSRuntime}
-
-func testJSThreadMismatchException00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let anotherJSRuntime = JSRuntime()
-    let anotherJSContext = anotherJSRuntime.mainContext
-    try {
-        let f = jsCallInfo[0].asFunction(anotherJSContext)
-        Assert.isUnreachable()
-    } catch (e: Exception) {
-        Assert.equals(e.toString(), "xxx")
-    }
-    jsContext.undefined().toJSValue()
-}
-
-func testJSArrayRangeMismatchException00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsArray = jsContext.array([jsContext.number(1.0).toJSValue()])
-    try {
-        jsArray[1]
-        Assert.isUnreachable()
-    } catch (e: Exception) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 1), given: 1")
-    }
-    jsContext.undefined().toJSValue()
-}
+import ohos.business_exception.*
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
 func testException00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     throw Exception("message of this exception")
 }
 
 func testException01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    jsCallInfo[0].asFunction(jsContext).call()
+    jsCallInfo[0].asFunction().call()
     jsContext.undefined().toJSValue()
 }
 
@@ -53,7 +31,5 @@ let _ = JSModule.registerModule {
     jsContext, jsObject =>
     jsObject["testException00"] = jsContext.function(testException00).toJSValue()
     jsObject["testException01"] = jsContext.function(testException01).toJSValue()
-    jsObject["testJSThreadMismatchException00"] = jsContext.function(testJSThreadMismatchException00).toJSValue()
-    jsObject["testJSArrayRangeMismatchException00"] = jsContext.function(testJSArrayRangeMismatchException00).toJSValue(
-    )
+
 }

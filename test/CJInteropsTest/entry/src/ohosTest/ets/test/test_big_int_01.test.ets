@@ -17,7 +17,6 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
 import { requireCJLib } from "libark_interop_loader.so"
 import { print } from './utility';
-import {CovLib} from "./List.test"
 
 interface Lib {
   testBigInt13(bigInt: bigint): void;
@@ -78,7 +77,6 @@ interface Lib {
 export default function testBigInt01() {
   describe('TestBigIntPrecision', () => {
     const lib = requireCJLib('libentry.so') as Lib;
-    const covlib = requireCJLib('libentry.so') as CovLib;
     const int64MinValue = -9_223_372_036_854_775_808n;
     // print(int64MinValue.toString());
     const int64MaxValue = 9_223_372_036_854_775_807n;
@@ -109,16 +107,6 @@ export default function testBigInt01() {
     print(`${999999999999999999}`);
     print(`${999999999999999}`);
 
-    beforeAll(() => {
-      covlib.test_setEnv();
-    })
-    beforeEach(() => {
-    })
-    afterEach(() => {
-    })
-    afterAll(() => {
-      covlib.test_gcov_dump();
-    })
     it('test13', 0, () => {
       lib.testBigInt13(int64MinValue - 1n);
     })
@@ -184,16 +172,6 @@ export default function testBigInt01() {
     })
     it('test34', 0, () => {
       lib.testBigInt34(int64MaxValue + 1n);
-    })
-    it('test35', 0, () => {
-    })
-    it('test36', 0, () => {
-    })
-    it('test37', 0, () => {
-    })
-    it('test38', 0, () => {
-    })
-    it('test39', 0, () => {
     })
   })
 }

@@ -15,45 +15,61 @@
 
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
 import { requireCJLib } from "libark_interop_loader.so"
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import {CovLib} from "./List.test"
+import worker from "@ohos.worker";
 
 interface Lib {
   testExternal00(o: MyObject_test_external_00): void;
+  MyObject_test_external_00: (name: string, age: number, grade: number) => void
+  gcov_dump(): void
+  testRuntime(): void
+}
 
-  MyObject_test_external_00: () => MyObject_test_external_00
+function runPureTestsAsync() {
+    interface Req {
+        data: string;
+    }
+    return new Promise<void>(resolve => {
+        let w = new worker.ThreadWorker("./PureWorker.ets");
+        let req: Req = {
+            data: "start"
+        };
+        w.onmessage = evt => {
+            let data = evt.data as Req;
+            if (data.data === "end") {
+                resolve();
+                w.terminate();
+            }
+        };
+
+        w.postMessage(req);
+    });
 }
 
 declare class MyObject_test_external_00 {
   name: string;
   age: number;
   grade: number;
-
-  constructor(name: string, age: number, grade: number);
 }
 
 export default function TestExternal() {
+  const lib = requireCJLib('libentry.so') as Lib;
   describe('TestExternal', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-    const covlib = requireCJLib('libentry.so') as CovLib;
-    beforeAll(() => {
-      covlib.test_setEnv();
-    })
-    beforeEach(() => {
-    })
-    afterEach(() => {
-    })
-    afterAll(() => {
-      covlib.test_gcov_dump();
-    })
     it('test00', 0, () => {
-      // let student = new lib.MyObject_test_external_00('tom', 19, 99);
-      lib.MyObject_test_external_00 = () => {
-        return new MyObject_test_external_00('tom', 19, 99)
-      }
-      let student = lib.MyObject_test_external_00()
+      let student = new
+      lib.MyObject_test_external_00("tom", 19, 99) as MyObject_test_external_00
       expect(student.name).assertEqual('tom');
       lib.testExternal00(student);
     })
+
+    it("test01", 0, (): Promise<void> => {
+        return runPureTestsAsync()
+    })
+
+    it("test02", 0, () => {
+        lib.testRuntime()
+    })
+  })
+  afterAll(()=> {
+    lib.gcov_dump()
   })
 }

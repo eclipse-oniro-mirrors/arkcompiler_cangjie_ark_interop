@@ -16,7 +16,6 @@
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
 import { requireCJLib } from "libark_interop_loader.so"
-import {CovLib} from "./List.test"
 
 interface Lib {
   testPostJSTask00(): void;
@@ -27,17 +26,7 @@ interface Lib {
 export default function postJSTask() {
   describe('TestPostJSTask', () => {
     const lib = requireCJLib('libentry.so') as Lib;
-    const covlib = requireCJLib('libentry.so') as CovLib;
-    beforeAll(() => {
-      covlib.test_setEnv();
-    })
-    beforeEach(() => {
-    })
-    afterEach(() => {
-    })
-    afterAll(() => {
-      covlib.test_gcov_dump();
-    })
+
     it('test00', 0, () => {
       lib.testPostJSTask00();
     })

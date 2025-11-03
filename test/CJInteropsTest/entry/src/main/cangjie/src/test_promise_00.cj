@@ -15,12 +15,12 @@
 
 package entry
 
-import ohos.file_fs.FileFs
-import ohos.ark_interop.{JSValue, JSArrayRangeMisMatch, JSRuntime, JSContext, JSCallInfo, JSModule, JSObject, JSTypeMisMatch}
+import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule, JSObject}
+
 
 func testString00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     logger.info("1%%23%Efdasdf\u{0041}\\\$")
-    let s = jsCallInfo[0].toString(jsContext)
+    let s = jsCallInfo[0].toString()
     Assert.equals(s, "123%Efdasdf")
     jsContext.undefined().toJSValue()
 }
@@ -28,7 +28,7 @@ func testString00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 // js创建promise resolve number，cj then resolve
 func testPromise00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsCallInfo[0].isPromise())
-    let promise = jsCallInfo[0].asPromise(jsContext)
+    let promise = jsCallInfo[0].asPromise()
     promise.then(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
@@ -55,7 +55,7 @@ func testPromise00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 // js创建promise reject number，cj then reject
 func testPromise01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsCallInfo[0].isPromise())
-    let promise = jsCallInfo[0].asPromise(jsContext)
+    let promise = jsCallInfo[0].asPromise()
     promise.then(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
@@ -104,7 +104,7 @@ func testPromise04(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 
 func testPromise05(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsCallInfo[0].isPromise())
-    let promise = jsCallInfo[0].asPromise(jsContext)
+    let promise = jsCallInfo[0].asPromise()
     promise.then(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>

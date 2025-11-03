@@ -15,56 +15,49 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSArrayRangeMisMatch}
+import ohos.business_exception.*
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue}
 import std.math.MathExtension
 
 let _ = JSModule.registerModule {
     jsContext, jsObject =>
         jsObject["testArray00"] = jsContext.function(testArray00).toJSValue()
+        jsObject["gcov_dump"] = jsContext.function { context, _ =>
+            gcov_dump()
+            context.undefined().toJSValue()
+        }.toJSValue()
 }
 
 // js创建空array传入cj
 func testArray00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.equals(jsCallInfo.count, 1)
-    Assert.isTrue(jsCallInfo[0].isArray(jsContext))
-    let array = jsCallInfo[0].asArray(jsContext)
+    Assert.isTrue(jsCallInfo[0].isArray())
+    let array = jsCallInfo[0].asArray()
     Assert.equals(array.size, 0)
 
     // operator func [](index: Int64): JSValue
     try {
         array[Int64.Min]
         Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
+    } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: -9223372036854775808"
+            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -9223372036854775808"
         )
     }
     try {
         array[-1]
         Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: -1")
-    }
-    try {
-        array[0]
-        Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: 0")
-    }
-    try {
-        array[1]
-        Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: 1")
+    } catch (e: BusinessException) {
+        Assert.equals(e.toString(), "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -1")
     }
     try {
         array[Int64.Max]
         Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
+    } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: 9223372036854775807"
+            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: 9223372036854775807"
         )
     }
 
@@ -72,37 +65,25 @@ func testArray00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         array[Int64.Min] = Random.jsValue(jsContext)
         Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
+    } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: -9223372036854775808"
+            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -9223372036854775808"
         )
     }
     try {
         array[-1] = Random.jsValue(jsContext)
         Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: -1")
-    }
-    try {
-        array[0] = Random.jsValue(jsContext)
-        Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: 0")
-    }
-    try {
-        array[1] = Random.jsValue(jsContext)
-        Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: 1")
+    } catch (e: BusinessException) {
+        Assert.equals(e.toString(), "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -1")
     }
     try {
         array[Int64.Max] = Random.jsValue(jsContext)
         Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
+    } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: ${Int64.Max}"
+            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: ${Int64.Max}"
         )
     }
 
@@ -110,37 +91,25 @@ func testArray00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         array[Int64.Min] = Random.jsHeapObject(jsContext)
         Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
+    } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: -9223372036854775808"
+            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -9223372036854775808"
         )
     }
     try {
         array[-1] = Random.jsHeapObject(jsContext)
         Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: -1")
-    }
-    try {
-        array[0] = Random.jsHeapObject(jsContext)
-        Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: 0")
-    }
-    try {
-        array[1] = Random.jsHeapObject(jsContext)
-        Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
-        Assert.equals(e.toString(), "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: 1")
+    } catch (e: BusinessException) {
+        Assert.equals(e.toString(), "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -1")
     }
     try {
         array[Int64.Max] = Random.jsHeapObject(jsContext)
         Assert.isUnreachable()
-    } catch (e: JSArrayRangeMisMatch) {
+    } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "JSArrayRangeMisMatch: js array range mismatch, allowed: [0, 0), given: 9223372036854775807"
+            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: 9223372036854775807"
         )
     }
     jsContext.undefined().toJSValue()

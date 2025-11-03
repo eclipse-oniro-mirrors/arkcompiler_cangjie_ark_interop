@@ -15,7 +15,6 @@
 
 package entry
 
-import ohos.file_fs.FileFs
-import ohos.ark_interop.{JSValue, JSArrayRangeMisMatch, JSRuntime, JSContext, JSCallInfo, JSModule}
+import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule}
 
 let _ = JSModule.registerClass("testRegisterClass00", Person.getJSClass)

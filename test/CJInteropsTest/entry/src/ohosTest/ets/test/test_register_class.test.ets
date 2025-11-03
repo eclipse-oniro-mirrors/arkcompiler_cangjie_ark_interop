@@ -17,7 +17,6 @@ import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from
 import { requireCJLib } from "libark_interop_loader.so"
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { JSON } from '@kit.ArkTS';
-import {CovLib} from "./List.test"
 
 interface Lib {
   testRegisterClass00: () => IPerson;
@@ -31,17 +30,7 @@ interface IPerson {
 export default function testJSModule00() {
   describe('TestRegisterClass', () => {
     const lib = requireCJLib('libentry.so') as Lib;
-    const covlib = requireCJLib('libentry.so') as CovLib;
-    beforeAll(() => {
-      covlib.test_setEnv();
-    })
-    beforeEach(() => {
-    })
-    afterEach(() => {
-    })
-    afterAll(() => {
-      covlib.test_gcov_dump();
-    })
+
     it('test00', 0, () => {
       lib.testRegisterClass00 = () => {
         class Person implements IPerson {
