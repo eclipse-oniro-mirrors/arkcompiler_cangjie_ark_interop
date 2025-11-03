@@ -229,7 +229,7 @@ class IDLClass {
                 $(argx)
                 let clazz = $(identifier_)($callArgs)
                 let thisArg = callInfo.thisArg
-                let thisObject = thisArg.asObject(context)
+                let thisObject = thisArg.asObject()
                 let jsExternal = context.external(clazz)
                 thisObject.attachCJObject(jsExternal)
                 return thisObject.toJSValue()
@@ -240,7 +240,7 @@ class IDLClass {
     private func genClazzTokens(retName: Tokens) {
         return quote(
             let thisArg = callInfo.thisArg
-            let thisObject = thisArg.asObject(context)
+            let thisObject = thisArg.asObject()
             let jsExternal = thisObject.getAttachInfo() ?? throw Exception("class: get external failed.")
             let $(retName) = jsExternal.cast<$(identifier_)>() ?? throw Exception("class: get clazz failed.")
         )
@@ -405,7 +405,7 @@ class IDLClass {
     private func genIDLFromJSValue(): Tokens {
         return quote(
             public static func fromJSValue(context: JSContext, input: JSValue) {
-                let jsObj = input.asObject(context)
+                let jsObj = input.asObject()
                 let jsExt = jsObj.getAttachInfo() ?? throw Exception("class: get external failed.")
                 let obj = jsExt.cast<$(identifier_)>() ?? throw Exception("class: get clazz failed.")
                 return obj

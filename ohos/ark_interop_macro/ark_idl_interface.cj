@@ -112,7 +112,7 @@ class IDLInterface {
                 $(hostObjVar_).toJSValue()
             }
             public static func fromJSValue(context: JSContext, input: JSValue): $(newProxyIdentifier) {
-                return $(newProxyIdentifier)(context, input.asObject(context))
+                return $(newProxyIdentifier)(context, input.asObject())
             }
             public static func toArktsType(): String {
                 "interface"
@@ -181,7 +181,7 @@ class IDLInterface {
         let returnValue = IDLUtil.jsvalue2Cangjie(funcDecl.declType, Tokens(), quote(RET), contextVar_)
         return quote(
             public func $(funcDecl.identifier)($(params)): $(funcDecl.declType) {
-                let fn = this.$(hostObjVar_)[$(funcDecl.identifier.value)].asFunction($(contextVar_))
+                let fn = this.$(hostObjVar_)[$(funcDecl.identifier.value)].asFunction()
                 $(argx)
                 let RET = fn.call([$(jsParams)])
                 $(returnValue)
