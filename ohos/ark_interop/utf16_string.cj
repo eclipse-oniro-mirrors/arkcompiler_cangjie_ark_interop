@@ -930,8 +930,8 @@ class SplitIterator <: Iterator<Utf16String> {
                 let start = Int64(current - 1)
                 return src[start..start + 1]
             }
-            let data = CPointer<UInt16>(header.data)
-            let nextChar = UInt32(unsafe {data.read(Int64(current))})
+            let headerData = CPointer<UInt16>(header.data)
+            let nextChar = UInt32(unsafe {headerData.read(Int64(current))})
             current++
             if (nextChar < 0xD800 || nextChar >= 0xE000) {
                 let start = Int64(current - 1)

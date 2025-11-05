@@ -791,8 +791,8 @@ public struct JSValue {
         if (index < 0 || index >= safeSize) {
             throw jsArrayRangeMisMatch(0, safeSize, index)
         }
-        let value = unsafe { ARKTS_GetElement(context.env, value, UInt32(index)) }
-        JSValue(context, value)
+        let value_ = unsafe { ARKTS_GetElement(context.env, value, UInt32(index)) }
+        JSValue(context, value_)
     }
 
     /**
@@ -886,8 +886,8 @@ public struct JSValue {
         since: "22"
     ]
     public func bindObject(data: SharedObject): Unit {
-        let value = JSValue(context, JSExternal.createExternal(context, data))
-        bindObject(value)
+        let value_ = JSValue(context, JSExternal.createExternal(context, data))
+        bindObject(value_)
     }
 
     /**
