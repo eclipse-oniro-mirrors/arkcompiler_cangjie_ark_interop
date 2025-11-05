@@ -29,7 +29,9 @@ foreign func ARKTS_New(env: JSEnv, constructor: JSValue_, argCount: Int32, args:
  * The JSClass object is used to represent a safe reference to the ArkTS class (constructor).
  * Method and accessors can be added to this class, and instances of this class can be created.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class JSClass <: JSHeapObject {
     static func createClass(context: JSContext, constructor: JSLambda, superClass: ?JSClass): JSValue_ {
         let lambdaId = context.sharedLambda_.append(constructor)
@@ -74,7 +76,8 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300002 - Outside error occurred.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public prop prototype: JSObject {
         get() {
@@ -90,9 +93,11 @@ public class JSClass <: JSHeapObject {
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } Newly instantiated object.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func new(): JSValue {
         let env = context.env // do lifecycle check and thread check here.
@@ -103,12 +108,15 @@ public class JSClass <: JSHeapObject {
     /**
      * Instantiate a new object through the ArkTS class.
      *
+     * @param { JSValue } arg - Constructor argument.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } Newly instantiated object.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func new(arg: JSValue): JSValue {
         let env = context.env // do lifecycle check and thread check here.
@@ -120,12 +128,15 @@ public class JSClass <: JSHeapObject {
     /**
      * Instantiate a new object through the ArkTS class.
      *
+     * @param { Array<JSValue> } args - Constructor argument list.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } Newly instantiated object.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func new(args: Array<JSValue>): JSValue {
         let env = context.env // do lifecycle check and thread check here.
@@ -148,12 +159,15 @@ public class JSClass <: JSHeapObject {
     /**
      * Add a data member to the ArkTS class, typically used to define immutable property.
      *
+     * @param { JSKeyable } key - Property key.
+     * @param { JSValue } value - Property value.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func addProperty(key: JSKeyable, value: JSValue): Unit {
         prototype.defineOwnProperty(key, value, isWritable: false, isEnumerable: false)
@@ -162,12 +176,16 @@ public class JSClass <: JSHeapObject {
     /**
      * Define a pair of getter and setter for the ArkTS class.
      *
+     * @param { JSKeyable } key - Property key.
+     * @param { ?JSFunction } [ getter ] - Getter implementation. The default value is None.
+     * @param { ?JSFunction } [ setter ] - Setter implementation. The default value is None.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func addAccessor(key: JSKeyable, getter!: ?JSFunction = None, setter!: ?JSFunction = None): Unit {
         prototype.defineOwnAccessor(key, getter: getter, setter: setter, isEnumerable: false)
@@ -176,12 +194,16 @@ public class JSClass <: JSHeapObject {
     /**
      * Define a pair of getter and setter for the ArkTS class.
      *
+     * @param { JSKeyable } key - Property key.
+     * @param { ?JSLambda } [ getter ] - Getter implementation. The default value is None.
+     * @param { ?JSLambda } [ setter ] - Setter implementation. The default value is None.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func addAccessor(key: JSKeyable, getter!: ?JSLambda = None, setter!: ?JSLambda = None): Unit {
         prototype.defineOwnAccessor(key, getter: getter, setter: setter, isEnumerable: false)
@@ -190,12 +212,15 @@ public class JSClass <: JSHeapObject {
     /**
      * Define a method for the ArkTS class.
      *
+     * @param { JSKeyable } key - Property key.
+     * @param { JSFunction } method - Method implementation.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func addMethod(key: JSKeyable, method: JSFunction): Unit {
         prototype.defineOwnProperty(key, method.toJSValue(), isWritable: false, isEnumerable: false)
@@ -204,12 +229,15 @@ public class JSClass <: JSHeapObject {
     /**
      * Define a method for the ArkTS class.
      *
+     * @param { JSKeyable } key - Property key.
+     * @param { JSLambda } method - Method implementation.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func addMethod(key: JSKeyable, method: JSLambda): Unit {
         prototype.defineOwnProperty(key, JSValue(context, JSFunction.createFunction(context, method)), isWritable: false,

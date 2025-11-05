@@ -143,7 +143,9 @@ func throwNativeErrorToCJ(message: CString): Unit {
 /**
  * A static class that provides interface for exporting symbol registration.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class JSModule {
     private static var lastModule_ = JSModule()
     static let LOADED_MODULES_ = HashMap<String, JSModule>()
@@ -166,32 +168,54 @@ public class JSModule {
 
     /**
      * Register the interface to be exported to ArkTS.
+     *
+     * @param { ModuleRegister } register - A function that can return an ArkTS class (constructor).
+     * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @throws { BusinessException } 34300004 - Thread mismatch.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22",
+        throwexception: true
+    ]
     public static func registerModule(register: ModuleRegister): Unit {
         lastModule_.addExporter(register)
     }
 
     /**
      * Register a class to be exported to ArkTS.
+     *
+     * @param { String } name - Export name.
+     * @param { ClassRegister } register - A function that returns an ArkTS class.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func registerClass(name: String, register: ClassRegister): Unit {
         lastModule_.addClass(name, register)
     }
 
     /**
      * Register a function to be exported to ArkTS.
+     *
+     * @param { String } name - Exported function name.
+     * @param { FuncRegister } register - A function that returns JSFunction.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func registerFunc(name: String, register: FuncRegister): Unit {
         lastModule_.addFunc(name, register)
     }
 
     /**
      * Register a function to be exported to ArkTS.
+     *
+     * @param { String } name - Exported function name.
+     * @param { JSLambda } lambda - The function to export.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func registerFunc(name: String, lambda: JSLambda): Unit {
         lastModule_.addRawFunc(name, lambda)
     }

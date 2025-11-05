@@ -60,9 +60,11 @@ protected func getGlobalContext(): JSContext {
 }
 
 /**
- * The ArkTS runtime created by Cangjie. 
+ * The ArkTS runtime created by Cangjie.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class JSRuntime {
     static var globalRuntime_: ?JSRuntime = None
 
@@ -72,10 +74,11 @@ public class JSRuntime {
     /**
      * Init JSRuntime.
      *
-     * @throws { BusinessException } 34300014 - Create ArkTS engine fail.
+     * @throws { BusinessException } 34300002 - Outside error occurred.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public init() {
         let engine = unsafe { CJ_MRT_ARKTS_CreateEngineStub() }
@@ -124,7 +127,9 @@ public class JSRuntime {
     /**
      * ArkTS interop context.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop mainContext: JSContext {
         get() {
             let env = unsafe { ARKTS_GetContext(engine_) }
@@ -134,8 +139,11 @@ public class JSRuntime {
 
     /**
      * Get napi environment pointer.
+     * @returns { CPointer<Unit> } Pointer to the global environment.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public func getNapiEnv(): CPointer<Unit> {
         unsafe { ARKTS_GetNAPIEnv(engine_) }
     }

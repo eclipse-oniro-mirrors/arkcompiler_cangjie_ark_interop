@@ -83,20 +83,25 @@ foreign func ARKTS_DefineAccessorsV2(env: JSEnv, object: JSValue_, key: JSValue_
 /**
  * Base class of a safe reference to ArkTS object.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 abstract sealed class JSObjectBase <: JSHeapObject {
     init(context: JSContext, value: JSValue_) {
         super(context, value)
     }
 
     /**
-     * Check whether the current object is an instance of the target ArkTS class. 
+     * Check whether the current object is an instance of the target ArkTS class.
      *
+     * @param { JSClass } clazz - Target ArkTS class.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { Bool } True indicates the object is an instance of the target ArkTS class.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func instanceOf(clazz: JSClass): Bool {
         let env = context.env // do lifecycle check and thread check here.
@@ -108,13 +113,16 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     }
 
     /**
-     * Check whether the current object has the target property. 
+     * Check whether the current object has the target property.
      *
+     * @param { JSKeyable } key - Target key.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { Bool } True indicates the current object has the target property.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func hasProperty(key: JSKeyable): Bool {
         let keyValue = key.toJSValue(context)
@@ -122,14 +130,17 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     }
 
     /**
-     * Get the property value of the current object. 
+     * Get the property value of the current object.
      *
+     * @param { JSKeyable } key - The property key, which can be a String, JSString, or JSSymbol.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } The retrieved value.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func getProperty(key: JSKeyable): JSValue {
         let keyValue = key.toJSValue(context)
@@ -138,14 +149,17 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     }
 
     /**
-     * Get the property value of the current object. 
+     * Get the property value of the current object.
      *
+     * @param { JSKeyable } key - Target key.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } Retrieved value.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public operator func [](key: JSKeyable): JSValue {
         getProperty(key)
@@ -154,12 +168,16 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     /**
      * Call method corressponding to the key of the JSObject.
 	 *
+     * @param { JSKeyable } key - Target method name.
+     * @param { Array<JSValue> } args - Argument list for the call.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } Method call return value.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func callMethod(key: JSKeyable, args: Array<JSValue>): JSValue {
         let fun = getProperty(key)
@@ -188,12 +206,15 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     /**
      * Set property to the current object.
      *
+     * @param { JSKeyable } key - Target key.
+     * @param { JSValue } setValue - Target value.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func setProperty(key: JSKeyable, setValue: JSValue): Unit {
         let keyValue = key.toJSValue(context)
@@ -201,28 +222,38 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     }
 
     /**
-     * Set property to the current object. 
+     * Set property to the current object.
      *
+     * @param { JSKeyable } key - Target key.
+     * @param { JSValue } value - Target value.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public operator func [](key: JSKeyable, value!: JSValue): Unit {
         setProperty(key, value)
     }
 
     /**
-     * Define property on the current object. 
+     * Define property on the current object.
      *
+     * @param { JSKeyable } key - Target key.
+     * @param { JSValue } setValue - Target value.
+     * @param { Bool } [ isWritable ] - Named parameter. Whether writable. The default value is True.
+     * @param { Bool } [ isEnumerable ] - Named parameter. Whether enumerable. The default value is True.
+     * @param { Bool } [ isConfigurable ] - Named parameter. Whether redefinable. The default value is True.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { Bool } Whether successful.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func defineOwnProperty(key: JSKeyable, setValue: JSValue, isWritable!: Bool = true,
         isEnumerable!: Bool = true, isConfigurable!: Bool = true): Bool {
@@ -232,14 +263,21 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     }
 
     /**
-     * Define accessor on the current object. 
+     * Define accessor on the current object.
      *
+     * @param { JSKeyable } key - Target key.
+     * @param { ?JSFunction } [ getter ] - Named parameter. Getter implementation.  The default value is None.
+     * @param { ?JSFunction } [ setter ] - Named parameter. Setter implementation. The default value is None.
+     * @param { Bool } [ isEnumerable ] - Named parameter. Whether enumerable. The default value is False.
+     * @param { Bool } [ isConfigurable ] - Named parameter. Whether redefinable. The default value is False.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { Bool } Whether successful.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func defineOwnAccessor(key: JSKeyable, getter!: ?JSFunction = None, setter!: ?JSFunction = None,
         isEnumerable!: Bool = false, isConfigurable!: Bool = false): Bool {
@@ -259,14 +297,21 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     }
 
     /**
-     * Define accessor on the current object. 
+     * Define accessor on the current object.
      *
+     * @param { JSKeyable } key - Target key.
+     * @param { ?JSLambda } [ getter ] - Named parameter. Getter implementation. The default value is None.
+     * @param { ?JSLambda } [ setter ] - Named parameter. Setter implementation. The default value is None.
+     * @param { Bool } [ isEnumerable ] - Named parameter. Whether enumerable. The default value is False.
+     * @param { Bool } [ isConfigurable ] - Named parameter. Whether redefinable. The default value is False.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { Bool } Whether successful.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func defineOwnAccessor(key: JSKeyable, getter!: ?JSLambda = None, setter!: ?JSLambda = None,
         isEnumerable!: Bool = false, isConfigurable!: Bool = false): Bool {
@@ -287,13 +332,15 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     }
 
     /**
-     * Get all property names of the current object. 
+     * Get all property names of the current object.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { Array<String> } List of keys.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func keys(): Array<String> {
         let keyJArr = JSValue(context, unsafe { ARKTS_EnumOwnProperties(context.env, innerValue) })
@@ -326,26 +373,30 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     }
 
     /**
-     * Attach target JSExternal to the current object. 
+     * Attach target JSExternal to the current object.
      *
+     * @param { JSExternal } target - ArkTS reference to the Cangjie object.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func attachCJObject(target: JSExternal): Unit {
         setAttachInfo(target.toJSValue())
     }
 
     /**
-     * Get the target JSExternal attached to the current object. 
+     * Get the target JSExternal attached to the current object.
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { ?JSExternal } ArkTS reference to the Cangjie object or None.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func getAttachInfo(): ?JSExternal {
         let jValue = this[context.constants.builtinText.__cj_object__]
@@ -359,7 +410,9 @@ abstract sealed class JSObjectBase <: JSHeapObject {
 /**
  * A secure reference to ArkTS object.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class JSObject <: JSObjectBase {
     init(context: JSContext, value: JSValue_) {
         super(context, value)

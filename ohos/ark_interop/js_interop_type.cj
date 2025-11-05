@@ -17,54 +17,81 @@
 
 package ohos.ark_interop
 
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 sealed interface JSInteropByte {}
 
 /**
  * Byte extended JSInteropByte interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Byte <: JSInteropByte {}
 
 /**
  * The interface is used to implement extension methods for types that can be utilized in declarative interop macros.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public interface JSInteropType<T> {
     /**
      * Init from JSValue.
+     *
+     * @param { JSContext } context - ArkTS interoperability context.
+     * @param { JSValue } input - ArkTS unified type.
+     * @returns { T } Cangjie type.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     static func fromJSValue(context: JSContext, input: JSValue): T
 
     /**
      * Convert to JSValue.
+     *
+     * @param { JSContext } context - ArkTS interoperability context.
+     * @returns { JSValue } ArkTS unified type.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     func toJSValue(context: JSContext): JSValue
 
     /**
      * Get ArkTS type name corresponding to the Cangjie type.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     static func toArktsType(): String
 }
 
 /**
  * Int8 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Int8 <: JSInteropType<Int8> {
     /**
      * Convert JSValue to Int8.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { Int8 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int8 {
         let value = input.toNumber()
@@ -77,20 +104,27 @@ extend Int8 <: JSInteropType<Int8> {
     /**
      * Convert Int8 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of Int8.
+     * Get ArkTS type name of Int8.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -99,18 +133,24 @@ extend Int8 <: JSInteropType<Int8> {
 /**
  * Int16 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Int16 <: JSInteropType<Int16> {
     /**
      * Convert JSValue to Int16.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { Int16 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int16 {
         let value = input.toNumber()
@@ -123,20 +163,27 @@ extend Int16 <: JSInteropType<Int16> {
     /**
      * Convert Int16 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of Int16.
+     * Get ArkTS type name of Int16.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -145,18 +192,24 @@ extend Int16 <: JSInteropType<Int16> {
 /**
  * Int32 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Int32 <: JSInteropType<Int32> {
     /**
      * Convert JSValue to Int32.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { Int32 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int32 {
         let value = input.toNumber()
@@ -169,20 +222,27 @@ extend Int32 <: JSInteropType<Int32> {
     /**
      * Convert Int32 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         context.number(this).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of Int32.
+     * Get ArkTS type name of Int32.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -191,18 +251,24 @@ extend Int32 <: JSInteropType<Int32> {
 /**
  * Int64 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Int64 <: JSInteropType<Int64> {
     /**
      * Convert JSValue to Int64.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { Int64 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Int64 {
         let value = input.toNumber()
@@ -215,12 +281,15 @@ extend Int64 <: JSInteropType<Int64> {
     /**
      * Convert Int64 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         if (Int64(Float64(this)) != this) {
@@ -230,9 +299,13 @@ extend Int64 <: JSInteropType<Int64> {
     }
 
     /**
-     * Get corresponding ArkTS type name of Int64.
+     * Get ArkTS type name of Int64.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -241,18 +314,24 @@ extend Int64 <: JSInteropType<Int64> {
 /**
  * UInt8 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend UInt8 <: JSInteropType<UInt8> {
     /**
      * Convert JSValue to UInt8.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { UInt8 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): UInt8 {
         let value = Int64(input.toNumber())
@@ -265,20 +344,27 @@ extend UInt8 <: JSInteropType<UInt8> {
     /**
      * Convert UInt8 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of UInt8.
+     * Get ArkTS type name of UInt8.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -287,18 +373,24 @@ extend UInt8 <: JSInteropType<UInt8> {
 /**
  * UInt16 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend UInt16 <: JSInteropType<UInt16> {
     /**
      * Convert JSValue to UInt16.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { UInt16 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): UInt16 {
         let value = input.toNumber()
@@ -311,20 +403,27 @@ extend UInt16 <: JSInteropType<UInt16> {
     /**
      * Convert UInt16 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of UInt16.
+     * Get ArkTS type name of UInt16.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -333,18 +432,24 @@ extend UInt16 <: JSInteropType<UInt16> {
 /**
  * UInt32 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend UInt32 <: JSInteropType<UInt32> {
     /**
      * Convert JSValue to UInt32.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { UInt32 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): UInt32 {
@@ -358,11 +463,14 @@ extend UInt32 <: JSInteropType<UInt32> {
     /**
      * Convert UInt32 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         if (Int64(this) <= Int64(Int32.Max)) {
@@ -373,9 +481,13 @@ extend UInt32 <: JSInteropType<UInt32> {
     }
 
     /**
-     * Get corresponding ArkTS type name of UInt32.
+     * Get ArkTS type name of UInt32.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -384,18 +496,24 @@ extend UInt32 <: JSInteropType<UInt32> {
 /**
  * UInt64 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend UInt64 <: JSInteropType<UInt64> {
     /**
      * Convert JSValue to UInt64.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { UInt64 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): UInt64 {
         let value = input.toNumber()
@@ -408,12 +526,15 @@ extend UInt64 <: JSInteropType<UInt64> {
     /**
      * Convert UInt64 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         if (UInt64(Float64(this)) != this) {
@@ -423,9 +544,13 @@ extend UInt64 <: JSInteropType<UInt64> {
     }
 
     /**
-     * Get corresponding ArkTS type name of UInt64.
+     * Get ArkTS type name of UInt64.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -434,17 +559,23 @@ extend UInt64 <: JSInteropType<UInt64> {
 /**
  * Float16 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Float16 <: JSInteropType<Float16> {
     /**
      * Convert JSValue to Float16.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { Float16 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Float16 {
         return Float16(input.toNumber())
@@ -453,20 +584,27 @@ extend Float16 <: JSInteropType<Float16> {
     /**
      * Convert Float16 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Float64(this)).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of Float16.
+     * Get ArkTS type name of Float16.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -475,17 +613,23 @@ extend Float16 <: JSInteropType<Float16> {
 /**
  * Float32 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Float32 <: JSInteropType<Float32> {
     /**
      * Convert JSValue to Float32.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { Float32 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Float32 {
         return Float32(input.toNumber())
@@ -494,20 +638,27 @@ extend Float32 <: JSInteropType<Float32> {
     /**
      * Convert Float32 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Float64(this)).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of Float32.
+     * Get ArkTS type name of Float32.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -516,17 +667,23 @@ extend Float32 <: JSInteropType<Float32> {
 /**
  * Float64 extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Float64 <: JSInteropType<Float64> & JSKeyable {
     /**
      * Convert JSValue to Float64.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { Float64 } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Float64 {
         return input.toNumber()
@@ -535,20 +692,27 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
     /**
      * Convert Float64 to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.number(this).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of Float64.
+     * Get ArkTS type name of Float64.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "number"
     }
@@ -557,17 +721,23 @@ extend Float64 <: JSInteropType<Float64> & JSKeyable {
 /**
  * Bool extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Bool <: JSInteropType<Bool> {
     /**
      * Convert JSValue to Bool.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { Bool } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Bool {
         return input.toBoolean()
@@ -576,20 +746,27 @@ extend Bool <: JSInteropType<Bool> {
     /**
      * Convert Bool to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.boolean(this).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of Bool.
+     * Get ArkTS type name of Bool.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "boolean"
     }
@@ -598,26 +775,36 @@ extend Bool <: JSInteropType<Bool> {
 /**
  * String extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend String <: JSInteropType<String> {
     /**
      * Convert JSValue to String.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { String } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): String {
         return input.toString()
     }
 
     /**
-     * Get corresponding ArkTS type name of String.
+     * Get ArkTS type name of String.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "string"
     }
@@ -626,26 +813,36 @@ extend String <: JSInteropType<String> {
 /**
  * JSString extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend JSString <: JSInteropType<JSString> {
     /**
      * Convert JSValue to JSString.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { JSString } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): JSString {
         return input.asString()
     }
 
     /**
-     * Get corresponding ArkTS type name of JSString.
+     * Get ArkTS type name of JSString.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "string"
     }
@@ -654,31 +851,46 @@ extend JSString <: JSInteropType<JSString> {
 /**
  * Unit extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend Unit <: JSInteropType<Unit> {
     /**
      * Convert JSValue to Unit.
+     *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } _ - The ArkTS unified type.
+     * @returns { Unit } Cangjie type.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func fromJSValue(_: JSContext, _: JSValue): Unit {}
 
     /**
      * Convert Unit to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.undefined().toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of Unit.
+     * Get ArkTS type name of Unit.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "undefined"
     }
@@ -687,16 +899,22 @@ extend Unit <: JSInteropType<Unit> {
 /**
  * Option<T> extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     /**
      * Convert JSValue to Option<T>.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { Option<T> } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(context: JSContext, input: JSValue): Option<T> {
         if (input.isUndefined()) {
@@ -709,11 +927,14 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     /**
      * Convert Option<T> to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         match (this) {
@@ -723,9 +944,13 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
     }
 
     /**
-     * Get corresponding ArkTS type name of Option<T>.
+     * Get ArkTS type name of Option<T>.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "union"
     }
@@ -734,18 +959,24 @@ extend<T> Option<T> <: JSInteropType<Option<T>> where T <: JSInteropType<T> {
 /**
  * Array<T> extended JSInteropType interface.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
-     /**
-     * Init Int8 from JSValue.
+    /**
+     * Convert JSValue to Array<T>.
      *
+     * @param { JSContext } _ - ArkTS interoperability context.
+     * @param { JSValue } input - The ArkTS unified type.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      * @throws { BusinessException } 34300005 - The ArkTS data types do not match.
+     * @returns { Array<T> } Cangjie type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public static func fromJSValue(_: JSContext, input: JSValue): Array<T> {
         return (input.asArrayBuffer().readBytes() as Array<T>) ?? throw outsideError("JSValue to buffer error.")
@@ -754,21 +985,28 @@ extend<T> Array<T> <: JSInteropType<Array<T>> where T <: JSInteropByte {
     /**
      * Convert Array to JSValue.
      *
+     * @param { JSContext } context - ArkTS interoperability context.
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(context: JSContext): JSValue {
         return context.arrayBuffer((this as Array<Byte>) ?? throw outsideError("Buffer to jsvalue error.")).toJSValue()
     }
 
     /**
-     * Get corresponding ArkTS type name of Array.
+     * Get ArkTS type name of Array.
+     *
+     * @returns { String } Converted ArkTS type name.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public static func toArktsType(): String {
         "ArrayBuffer"
     }

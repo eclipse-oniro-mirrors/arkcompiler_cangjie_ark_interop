@@ -56,9 +56,9 @@ public class BusinessException <: Exception {
     private var errData: ?Any
 
     /**
-     * Defines the additional information for business
+     * Defines the additional information for business.
      *
-     * @relation data?: T
+     * @returns { ?T } Return the business value.
      */
     @!APILevel[
         since: "22"
@@ -83,6 +83,8 @@ public class BusinessException <: Exception {
 
     /**
      * Translate the exception to String.
+     *
+     * @returns { String } String representation of the exception.
      */
     @!APILevel[
         since: "22"
@@ -100,4 +102,7 @@ public class BusinessException <: Exception {
 /**
  * Defines the basic async callback.
  */
+@!APILevel[
+    since: "22"
+]
 public type AsyncCallback<T> = (Option<BusinessException>, Option<T>) -> Unit
