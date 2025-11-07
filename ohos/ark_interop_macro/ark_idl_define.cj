@@ -17,7 +17,7 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.{Tokens, ClassDecl, InterfaceDecl, FuncDecl, Decl, parseDecl, assertParentContext}
+import std.ast.{Tokens, ClassDecl, InterfaceDecl, FuncDecl, EnumDecl, Decl, parseDecl, assertParentContext}
 import std.collection.ArrayList
 
 public macro Interop(attrTokens: Tokens, input: Tokens): Tokens {
@@ -39,10 +39,11 @@ func handleArkTS(input: Tokens): Tokens {
         case classDecl: ClassDecl => handleClass(classDecl)
         case interfaceDecl: InterfaceDecl => handleInterface(interfaceDecl)
         case funcDecl: FuncDecl => handleFunc(funcDecl, false)
+        case enumDecl: EnumDecl => handleEnum(enumDecl)
         case _ =>
             IDLUtil.diagReportTE(
                 input,
-                "Only user-defined `class` and `interface` types and function declarations are allowed to be applied with `Interop` macro."
+                "Only user-defined `class`, `interface`, `enum` types and function declarations are allowed to be applied with `Interop` macro."
             )
             input
     }
@@ -64,6 +65,17 @@ func handleClass(classDecl: ClassDecl): Tokens {
     checkClass(classDecl)
     genClassDeclareFile(classDecl)
     IDLClass(classDecl).genIDLClass()
+}
+
+/*
+  1. Check enum legality.
+  2. Generate enum declare file.
+  3. Generate enum IDL code.
+*/
+func handleEnum(enumDecl: EnumDecl): Tokens {
+    checkEnum(enumDecl)
+    genEnumDeclareFile(enumDecl)
+    IDLEnum(enumDecl).genIDLEnum()
 }
 
 func handleInvisible(input: Tokens): Tokens {

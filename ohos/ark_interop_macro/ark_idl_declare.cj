@@ -20,7 +20,7 @@ macro package ohos.ark_interop_macro
 import std.fs.{Path, FSException, exists, Directory, File, OpenMode}
 import std.io.{SeekPosition, readToEnd}
 import std.sync.Mutex
-import std.ast.{PropDecl, InterfaceDecl, FuncDecl, ClassDecl, TypeNode, Body, VarDecl, PrimaryCtorDecl, FuncParam, FuncType, RefType, Tokens}
+import std.ast.{PropDecl, InterfaceDecl, FuncDecl, ClassDecl, EnumDecl, TypeNode, Body, VarDecl, PrimaryCtorDecl, FuncParam, FuncType, RefType, Tokens}
 import std.collection.{ArrayList, HashMap}
 import std.regex.Regex
 
@@ -51,7 +51,7 @@ func genInterfaceDeclareFile(interfaceDecl: InterfaceDecl) {
 
     let pkgName = IDLCustomTypeWL.getPkgName(interfaceDecl.identifier.value)
     let newFile = genFile(currentPkg: pkgName)
-    ciDeclareWriteIntoIndexFile(interfaceDeclare, newFile)
+    cieDeclareWriteIntoIndexFile(interfaceDeclare, newFile)
 }
 
 func getVisibleClassMembers(classDecl: ClassDecl) {
@@ -81,7 +81,15 @@ func genClassDeclareFile(classDecl: ClassDecl) {
     let pkgName = IDLCustomTypeWL.getPkgName(classDecl.identifier.value)
     let newFile = genFile(currentPkg: pkgName)
     let newClassDeclare = genClassDeclare(visibleClassDecl, withConstructor: true)
-    ciDeclareWriteIntoIndexFile(newClassDeclare, newFile)
+    cieDeclareWriteIntoIndexFile(newClassDeclare, newFile)
+}
+
+func genEnumDeclareFile(enumDecl: EnumDecl) {
+    // No need to write into files under ark_interop_api.
+    let pkgName = IDLCustomTypeWL.getPkgName(enumDecl.identifier.value)
+    let file = genFile(currentPkg: pkgName)
+    let enumDeclare = genEnumDeclare(enumDecl)
+    cieDeclareWriteIntoIndexFile(enumDeclare, file)
 }
 
 func getFuncRetType(retType: TypeNode) {
@@ -238,6 +246,40 @@ func genClassInitDeclare(pubClassDecl: ClassDecl, insideClassDecl!: Bool = false
     return retInit
 }
 
+/*
+  Generate like:
+  {
+      ENUM_A = 0,
+      ENUM_B = 1,
+      ENUM_C = 2
+  }
+*/
+func genEnumBodyDeclare(enumDecl: EnumDecl) {
+    let ctors = enumDecl.constructors
+    var retBody = ""
+
+    for (i in 0..ctors.size) {
+        let ctor = ctors[i]
+        let identifierDeclare = ctor.identifier.value
+        if (i == 0) {
+            retBody += (TAB_STR + identifierDeclare + " = 0")
+        } else {
+            retBody += (",\n" + TAB_STR + identifierDeclare + " = " + i.toString())
+        }
+    }
+
+    return " {\n" + retBody + "\n}"
+}
+
+func genEnumDeclare(enumDecl: EnumDecl) {
+    let identifier = enumDecl.identifier
+
+    let identifierDeclare = identifier.value
+    let bodyDeclare = genEnumBodyDeclare(enumDecl)
+
+    return "export declare const enum " + identifierDeclare + bodyDeclare + "\n"
+}
+
 func genFile(currentPkg!: String = "") {
     let relativePath: String = getCangjieSrcPath()
     if (relativePath.isEmpty()) {
@@ -344,7 +386,8 @@ func ciDeclareWriteIntoApiFile(ciDeclare: String, filePath: String) {
     }
 }
 
-func ciDeclareWriteIntoIndexFile(ciDeclare: String, filePath: String) {
+// Used for class/interface/enum declare.
+func cieDeclareWriteIntoIndexFile(cieDeclare: String, filePath: String) {
     synchronized(MTX) {
         let file = try {
             File(filePath, OpenMode.ReadWrite)
@@ -353,17 +396,17 @@ func ciDeclareWriteIntoIndexFile(ciDeclare: String, filePath: String) {
         }
         var content = String.fromUtf8(readToEnd(file))
 
-        if (content.contains(ciDeclare)) {
+        if (content.contains(cieDeclare)) {
             return
         }
 
-        // Get the first line of ciDeclare, e.g. "export declare interface XXX {".
-        let firstLine = ciDeclare.split("\n")[0]
+        // Get the first line of cieDeclare, e.g. "export declare interface XXX {".
+        let firstLine = cieDeclare.split("\n")[0]
         let re = Regex(firstLine + "[\\s\\S]*?\\n}\\n")
         if (re.matches(content)) {
-            content = re.replaceAll(content, ciDeclare)
+            content = re.replaceAll(content, cieDeclare)
         } else {
-            content = "\n" + ciDeclare + content
+            content = "\n" + cieDeclare + content
         }
 
         file.setLength(0)
@@ -465,7 +508,7 @@ func refType2Arkts(refType: RefType): String {
                     "The T of the Array type only support Byte type within the `Interop` macro scope.")
                 ""
             }
-        // class/interface
+        // class/interface/enum
         case _ =>
             if (!IDLCustomTypeWL.isWhitelisted(refType.identifier.value)) {
                 IDLUtil.diagReportTE(
