@@ -37,46 +37,25 @@ class TestAbilityWantConstant {
     @TestCase
     @Tag[APILevel12, TestLevel0]
     func test_wantConstant_Params() {
-        var str1 = Params
-            .AbilityBackToOtherMissionStack
-            .getValue()
-            .toString()
+        var str1 = Params.ABILITY_BACK_TO_OTHER_MISSION_STACK
         @Expect(str1, "ability.params.backToOtherMissionStack")
 
-        var str2 = Params
-            .AbilityRecoveryRestart
-            .getValue()
-            .toString()
+        var str2 = Params.ABILITY_RECOVERY_RESTART
         @Expect(str2, "ohos.ability.params.abilityRecoveryRestart")
 
-        var str3 = Params
-        .ContentTitleKey
-            .getValue()
-            .toString()
+        var str3 = Params.CONTENT_TITLE_KEY
         @Expect(str3, "ohos.extra.param.key.contentTitle")
 
-        var str4 = Params
-        .ShareAbstractKey
-            .getValue()
-            .toString()
+        var str4 = Params.SHARE_ABSTRACT_KEY
         @Expect(str4, "ohos.extra.param.key.shareAbstract")
 
-        var str5 = Params
-        .ShareUrlKey
-            .getValue()
-            .toString()
+        var str5 = Params.SHARE_URL_KEY
         @Expect(str5, "ohos.extra.param.key.shareUrl")
 
-        var str6 = Params
-        .SupportContinuePageStackKey
-            .getValue()
-            .toString()
+        var str6 = Params.SUPPORT_CONTINUE_PAGE_STACK_KEY
         @Expect(str6, "ohos.extra.param.key.supportContinuePageStack")
 
-        var str7 = Params
-        .SupportContinueSourceExitKey
-            .getValue()
-            .toString()
+        var str7 = Params.SUPPORT_CONTINUE_SOURCE_EXIT_KEY
         @Expect(str7, "ohos.extra.param.key.supportContinueSourceExit")
     }
 
@@ -91,29 +70,19 @@ class TestAbilityWantConstant {
     @TestCase
     @Tag[APILevel12, TestLevel0]
     func test_wantConstant_Flags() {
-        var str1 = Flags
-        .FlagAuthReadUriPermission
-            .getValue()
+        var str1 = Flags.FLAG_AUTH_READ_URI_PERMISSION
         @Expect(str1, 0x00000001)
 
-        var str2 = Flags
-        .FlagAuthWriteUriPermission
-            .getValue()
+        var str2 = Flags.FLAG_AUTH_WRITE_URI_PERMISSION
         @Expect(str2, 0x00000002)
 
-        var str3 = Flags
-            .FlagAuthPersistableUriPermission
-            .getValue()
+        var str3 = Flags.FLAG_AUTH_PERSISTABLE_URI_PERMISSION
         @Expect(str3, 0x00000040)
 
-        var str4 = Flags
-        .FlagInstallOnDemand
-            .getValue()
+        var str4 = Flags.FLAG_INSTALL_ON_DEMAND
         @Expect(str4, 0x00000800)
 
-        var str5 = Flags
-        .FlagStartWithoutTips
-            .getValue()
+        var str5 = Flags.FLAG_START_WITHOUT_TIPS
         @Expect(str5, 0x40000000)
     }
 }
