@@ -97,8 +97,8 @@ public class JSArray <: JSHeapObject {
     ]
     public operator func [](index: Int64): JSValue {
         let env = context.env // do lifecycle check and thread check here.
-        if (index < 0 || index >= Int64(UInt32.Max)) {
-            throw jsArrayRangeMisMatch(0, Int64(UInt32.Max), index)
+        if (index < 0 || index >= size) {
+            throw jsArrayRangeMisMatch(0, size, index)
         }
         let result = unsafe { ARKTS_GetElement(env, innerValue, UInt32(index)) }
         JSValue(context, result)
