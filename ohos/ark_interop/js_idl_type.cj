@@ -413,9 +413,7 @@ public class JSArrayEx<T> <: JSInteropType<JSArrayEx<T>> where T <: JSInteropTyp
     since: "22"
 ]
 public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JSKeyable & Hashable & Equatable<K> &
-    JSInteropType<K>, V <: JSInteropType<V>
-public class JSHashMapEx<K, V> <: JSInteropType<JSHashMapEx<K, V>> where K <: JSKeyable & Hashable & Equatable<K> & JSInteropType<K>,
-    V <: JSInteropType<V> {
+    JSInteropType<K>, V <: JSInteropType<V> {
 
     private var source_: JSSource<HashMap<K, V>, JSMap>
 

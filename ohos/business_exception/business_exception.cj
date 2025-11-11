@@ -102,7 +102,4 @@ public class BusinessException <: Exception {
 /**
  * Defines the basic async callback.
  */
-@!APILevel[
-    since: "22"
-]
 public type AsyncCallback<T> = (Option<BusinessException>, Option<T>) -> Unit
