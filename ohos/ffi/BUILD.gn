@@ -15,15 +15,15 @@ import("//build/templates/cangjie/cjc.gni")
 
 ohos_cangjie_shared_library("ohos.ffi") {
   sources = [
-    "src/array_convert.cj",
-    "src/cj_common_lambda.cj",
-    "src/ffi_callback.cj",
-    "src/ffi_data.cj",
-    "src/ffiat_cpackage.cj",
-    "src/malloc_free.cj",
-    "src/remote_data_lite.cj",
-    "src/ret_data.cj",
-    "src/utility.cj",
+    "array_convert.cj",
+    "cj_common_lambda.cj",
+    "ffi_callback.cj",
+    "ffi_data.cj",
+    "ffiat_cpackage.cj",
+    "malloc_free.cj",
+    "remote_data_lite.cj",
+    "ret_data.cj",
+    "utility.cj",
   ]
 
   cj_external_deps = [ "hiviewdfx_cangjie_wrapper:ohos.hilog" ]
