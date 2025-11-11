@@ -209,8 +209,8 @@ protected struct RetDataCArrString {
                 {
                     i =>
                     let cString = unsafe { ptr.read(i) }
-                    let data = cString.toString()
-                    data
+                    let dataStr = cString.toString()
+                    dataStr
                 }
             )
         } finally {
