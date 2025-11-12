@@ -41,7 +41,9 @@ foreign func ARKTS_PromiseCatch(env: JSEnv, prom: JSValue_, callback: JSValue_):
  * enhancing its usability by combining the syntactic sugar of async and await. The lifecycle of JSPromise exceeds the 
  * referenced ArkTS object.
  */
-    @!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class JSPromise <: JSHeapObject {
     init(context: JSContext, value: JSValue_) {
         super(context, value)
@@ -54,11 +56,14 @@ public class JSPromise <: JSHeapObject {
     /**
      * Register result processing callback function.
      *
+     * @param { JSFunction } onFulfilled - Result handling callback.
+     * @param { ?JSFunction } [ onRejected ] - Exception handling callback. The default value is None.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func then(onFulfilled: JSFunction, onRejected!: ?JSFunction = None): Unit {
         let onFulfilledValue = onFulfilled.innerValue
@@ -75,11 +80,13 @@ public class JSPromise <: JSHeapObject {
     /**
      * Register exception processing callback function.
      *
+     * @param { JSFunction } callback - Exception handling callback.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func catchError(callback: JSFunction): Unit {
         unsafe {
@@ -92,7 +99,9 @@ public class JSPromise <: JSHeapObject {
  * JSPromiseCapability is not a JSValue but a JSVM internal type,
  * the main purpose is to enhance performance.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class JSPromiseCapability {
     static func create(context: JSContext): JSPromiseCap {
         unsafe { ARKTS_CreatePromiseCapability(context.env) }
@@ -111,11 +120,13 @@ public class JSPromiseCapability {
     /**
      * Notify promise of normal completion and commits the return value.
      *
+     * @param { JSValue } value - Processing result.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func resolve(value: JSValue): Unit {
         if (isComplete) {
@@ -132,11 +143,13 @@ public class JSPromiseCapability {
     /**
      * Submit an exception to promise.
      *
+     * @param { JSValue } value - Exception data, typically an Error object or string.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func reject(value: JSValue): Unit {
         if (isComplete) {
@@ -155,9 +168,11 @@ public class JSPromiseCapability {
      * 
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(): JSValue {
         if (isComplete) {

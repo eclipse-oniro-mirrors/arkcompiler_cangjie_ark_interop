@@ -29,7 +29,9 @@ foreign func ARKTS_GetSymbolDesc(env: JSEnv, symbol: JSValue_): CString
 /**
  * The JSSymbol object is used to represent a safe reference to the ArkTS symbol type.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class JSSymbol <: JSHeapObject & JSKeyable {
     private var desc_: ?String = None
 
@@ -62,11 +64,14 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
     /**
      * Convert JSSymbol to JSValue.
      *
+     * @param { JSContext } _ - ArkTS interoperation context.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS Val.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(_: JSContext): JSValue {
         context.checkLifecycleAndThread()
@@ -80,7 +85,8 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
      * @throws { BusinessException } 34300004 - Thread mismatch.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public prop description: String {
         get() {
@@ -105,9 +111,11 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { String } Cangjie string.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toString(): String {
         let desc = description

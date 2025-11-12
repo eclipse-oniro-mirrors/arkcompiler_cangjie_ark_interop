@@ -33,7 +33,9 @@ foreign func ARKTS_GetGlobalValue(ref: JSGlobal): JSValue_
  *  JSHeapObject keeps the JSObject alive by create global handle, and dispose global handle after cj object are
  *  destructed(Note: the finalizer is called in final derived class [cj spec rule]).
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 abstract sealed class JSHeapObject {
     let context: JSContext
 
@@ -57,9 +59,11 @@ abstract sealed class JSHeapObject {
      *
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { JSValue } ArkTS unified type.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func toJSValue(): JSValue {
         context.checkLifecycleAndThread()

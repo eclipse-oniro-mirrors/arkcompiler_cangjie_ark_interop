@@ -38,7 +38,9 @@ func cjExternalDestructor(id: Int64, env: JSEnv): Unit {
  * Base class of objects shared with arkts. It has an unique id. When shared to arkts, the object would be kept to
  *  a global table. The id used to index the object.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public open class SharedObject {
     var nativeId_: Int64 = -1
     var shareCnt_: Int64 = 0
@@ -46,13 +48,17 @@ public open class SharedObject {
     /**
      * Init SharedObject.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public init() {}
 
     /**
      * Id of the SharedObject in global table.
      */
-    @!APILevel[since: "22"]
+    @!APILevel[
+        since: "22"
+    ]
     public prop nativeId: Int64 {
         get() {
             nativeId_
@@ -63,7 +69,9 @@ public open class SharedObject {
 /**
  * The js presentation of a cj object. It holds the id of cj object, and affects the lifecycle of the cj object.
  */
-@!APILevel[since: "22"]
+@!APILevel[
+    since: "22"
+]
 public class JSExternal <: JSHeapObject {
     static func createExternal(context: JSContext, data: SharedObject): JSValue_ {
         let id = if (data.nativeId_ < 0) {
@@ -106,9 +114,11 @@ public class JSExternal <: JSHeapObject {
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { SharedObject } The bound Cangjie object.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func getData(): SharedObject {
         let id = this.id
@@ -123,9 +133,11 @@ public class JSExternal <: JSHeapObject {
      * @throws { BusinessException } 34300002 - Outside error occurred.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @returns { Option<T> } The bound Cangjie object.
      */
     @!APILevel[
-        since: "22"
+        since: "22",
+        throwexception: true
     ]
     public func cast<T>(): Option<T> where T <: SharedObject {
         getData() as T
