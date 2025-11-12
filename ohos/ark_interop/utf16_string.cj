@@ -651,7 +651,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * Split the string.
      *
      * @param { Utf16String } separator - Separator. When the separator is an empty string, each character is treated as a separate element.
-     * @param { Bool } [ remoteEmpty ] - Whether to remove empty elements. The default value is false.
+     * @param { Bool } [ removeEmpty ] - Whether to remove empty elements. The default value is false.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Array<Utf16String> } Array of split elements.
      */
@@ -659,16 +659,16 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func split(separator: Utf16String, remoteEmpty!: Bool = false): Array<Utf16String> {
-        return split(separator, 0, remoteEmpty: remoteEmpty)
+    public func split(separator: Utf16String, removeEmpty!: Bool = false): Array<Utf16String> {
+        return split(separator, Int64.Max, removeEmpty: removeEmpty)
     }
 
     /**
      * Split the string.
      *
      * @param { Utf16String } separator - Separator. When the separator is an empty string, each character is treated as a separate element.
-     * @param { Int64 } maxSplit - Maximum number of splits. 0 means no limit.
-     * @param { Bool } [remoteEmpty] - Whether to remove empty elements. The default value is false.
+     * @param { Int64 } maxSplit - Maximum number of splits.
+     * @param { Bool } [removeEmpty] - Whether to remove empty elements. The default value is false.
      * @throws { BusinessException } 34300001 - The accessing index is out of range.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Array<Utf16String> } Array of split elements.
@@ -677,7 +677,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func split(separator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Array<Utf16String> {
+    public func split(separator: Utf16String, maxSplit: Int64, removeEmpty!: Bool = false): Array<Utf16String> {
         acquire()
         separator.acquire()
         if (maxSplit < 0) {
@@ -699,7 +699,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         for (i in 0..jArr.length) {
             let c = unsafe { jArr.values.read(Int64(i)) }
             let str = Utf16String(c)
-            if (!remoteEmpty || !str.isEmpty()) {
+            if (!removeEmpty || !str.isEmpty()) {
                 list.add(str)
             } else {
                 str.dispose()
@@ -713,7 +713,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
      * Lazy split the string.
      *
      * @param { Utf16String } separator - The separator. If the separator is an empty string, each character is treated as a separate element.
-     * @param { Bool } [ remoteEmpty ] - Whether to remove empty elements. The default value is false.
+     * @param { Bool } [ removeEmpty ] - Whether to remove empty elements. The default value is false.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Iterator<Utf16String> } An iterator of the split elements.
      */
@@ -721,16 +721,16 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func lazySplit(separator: Utf16String, remoteEmpty!: Bool = false): Iterator<Utf16String> {
-        return lazySplit(separator, Int64.Max, remoteEmpty: remoteEmpty)
+    public func lazySplit(separator: Utf16String, removeEmpty!: Bool = false): Iterator<Utf16String> {
+        return lazySplit(separator, Int64.Max, removeEmpty: removeEmpty)
     }
 
     /**
      * Lazy split the string.
      *
      * @param { Utf16String } separator - The separator. If the separator is an empty string, each character is treated as a separate element.
-     * @param { Int64 } maxSplit - The maximum number of splits. 0 means no limit.
-     * @param { Bool } [ remoteEmpty ] - Whether to remove empty elements. The default value is false.
+     * @param { Int64 } maxSplit - The maximum number of splits.
+     * @param { Bool } [ removeEmpty ] - Whether to remove empty elements. The default value is false.
      * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
      * @returns { Iterator<Utf16String> } An iterator of the split elements.
      */
@@ -738,9 +738,9 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
-    public func lazySplit(separator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Iterator<Utf16String> {
+    public func lazySplit(separator: Utf16String, maxSplit: Int64, removeEmpty!: Bool = false): Iterator<Utf16String> {
         acquire()
-        let result = SplitIterator(this, separator, maxSplit, remoteEmpty)
+        let result = SplitIterator(this, separator, maxSplit, removeEmpty)
         release()
         return result
     }
