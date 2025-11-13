@@ -31,7 +31,28 @@ let CONTEXT_TYPE_G: Array<String> = ["JSStringEx", "JSArrayEx", "JSHashMapEx"]
 func checkModifierBePublic(decl: Decl) {
     let modifiers = decl.modifiers
     if (modifiers.size == 0 || modifiers.size > 1 || modifiers.get(0).getOrThrow().keyword.kind != PUBLIC) {
-        IDLUtil.diagReportTE(Tokens(decl.keyword), "Modifier only supports public within the `Interop` macro scope.")
+        IDLUtil.diagReportTE(Tokens(decl.keyword),
+            "Modifier only supports `public` modifier within the `Interop` macro scope.")
+    }
+}
+
+// public [static]
+func checkModifierBePublicCanStatic(decl: Decl) {
+    let modifiers = decl.modifiers
+    var hasPublic = false
+    for (mod in modifiers) {
+        if (mod.keyword.kind == PUBLIC) {
+            hasPublic = true
+            continue
+        }
+        if (mod.keyword.kind != STATIC) {
+            IDLUtil.diagReportTE(Tokens(mod.keyword),
+                "Class members only support the `static` modifier within the `Interop` macro scope.")
+        }
+    }
+    if (!hasPublic) {
+        IDLUtil.diagReportTE(Tokens(decl.keyword),
+            "Class members must have `public` modifier within the `Interop` macro scope.")
     }
 }
 
@@ -245,7 +266,7 @@ func checkClassInitFunc(funcDecl: FuncDecl) {
 // check parameter, operator func and member func
 func checkClassFunc(funcDecl: FuncDecl) {
     checkOperator(funcDecl)
-    checkModifierBePublic(funcDecl)
+    checkModifierBePublicCanStatic(funcDecl)
     checkParamDefault(funcDecl)
     checkRetType(funcDecl)
 }
@@ -337,10 +358,10 @@ func checkInterface(interfaceDecl: InterfaceDecl) {
 
 /*
     modifiers          | type paramenters | inherited from other class            | inherited from other interface            |
-    only can be public | not supported    | supported, but not expand super class | supported, but not expand super interface |
+    can only be public | not supported    | supported, but not expand super class | supported, but not expand super interface |
 
-    modifiers of member | static constructor | constructor      | member variables         | operator function | member attibutes |
-    only can be public  | not supported      | support one most | supported except generic | not supported     | supported        |
+    modifiers of member                 | static constructor | constructor      | member variables         | operator function | member attibutes |
+    can only be public or public static | not supported      | support one most | supported except generic | not supported     | supported        |
  */
 func checkClass(classDecl: ClassDecl) {
     checkModifierBePublic(classDecl)

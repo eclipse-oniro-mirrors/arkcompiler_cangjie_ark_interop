@@ -181,12 +181,20 @@ class IDLClass {
 
         let funcsMethod = Tokens()
         for (funcMem in funcs_) {
-            funcsMethod.append(
-                quote(
-                clazz.addMethod($(funcMem.identifier.value),
-                    $(contextName).function($(IDLUtil.genNewInteropIdentifier(funcMem.identifier))))
-            )
-            )
+            if (IDLUtil.hasStaticModifier(funcMem)) {
+                funcsMethod.append(
+                    quote(
+                        clazz.toJSValue().asObject()[$(funcMem.identifier.value)] = context.function($(IDLUtil.genNewInteropIdentifier(funcMem.identifier))).toJSValue()
+                    )
+                )
+            } else {
+                funcsMethod.append(
+                    quote(
+                    clazz.addMethod($(funcMem.identifier.value),
+                        $(contextName).function($(IDLUtil.genNewInteropIdentifier(funcMem.identifier))))
+                    )
+                )
+            }
         }
         return quote(
             static init() {
@@ -303,14 +311,24 @@ class IDLClass {
             callArgs.append(IDLUtil.genInputArg(funcParam, newArgName, i != params.size - 1))
         }
 
-        return quote(
-            public static func $(newFuncIdentifier)(context: JSContext, callInfo: JSCallInfo): JSValue {
-                $(genClazzTokens(quote(clazz)))
-                $(argx)
-                let RET = clazz.$(identifier)($callArgs)
-                $(IDLUtil.cangjie2JSValue(funcDecl.declType, Tokens(), quote(RET), quote(context)))
-            }
-        )
+        if (IDLUtil.hasStaticModifier(funcDecl)) {
+            return quote(
+                public static func $(newFuncIdentifier)(context: JSContext, callInfo: JSCallInfo): JSValue {
+                    $(argx)
+                    let RET = $(identifier)($callArgs)
+                    return $(IDLUtil.cangjie2JSValue(funcDecl.declType, Tokens(), quote(RET), quote(context)))
+                }
+            )
+        } else {
+            return quote(
+                public static func $(newFuncIdentifier)(context: JSContext, callInfo: JSCallInfo): JSValue {
+                    $(genClazzTokens(quote(clazz)))
+                    $(argx)
+                    let RET = clazz.$(identifier)($callArgs)
+                    return $(IDLUtil.cangjie2JSValue(funcDecl.declType, Tokens(), quote(RET), quote(context)))
+                }
+            )
+        }
     }
 
     private func genIDLFuncs(): Tokens {

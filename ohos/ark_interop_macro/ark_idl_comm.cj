@@ -190,15 +190,23 @@ class IDLUtil {
     }
 
     static func hasMutModifier(decl: Decl) {
-        var ret = false
         let modifiers = decl.modifiers
         for (mod in modifiers) {
             if (mod.keyword.kind == MUT) {
-                ret = true
-                break
+                return true
             }
         }
-        ret
+        return false
+    }
+
+    static func hasStaticModifier(decl: Decl) {
+        let modifiers = decl.modifiers
+        for (mod in modifiers) {
+            if (mod.keyword.kind == STATIC) {
+                return true
+            }
+        }
+        return false
     }
 
     /**
