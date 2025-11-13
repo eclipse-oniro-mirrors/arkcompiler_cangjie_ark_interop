@@ -68,6 +68,9 @@
                 },
                 {
                     "name": "//arkcompiler/cangjie_ark_interop/ohos:ohos.ark_interop_macro_cjo"
+                },
+                {
+                    "name": "//arkcompiler/cangjie_ark_interop:copy_cangjie_ark_interop_libs"
                 }
             ],
             "test": []
