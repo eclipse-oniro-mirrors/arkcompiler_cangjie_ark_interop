@@ -41,51 +41,47 @@ func doJSArrExTest(both: JSArrayEx<String>) {
 
 func doJSHashMapTest(map: JSHashMapEx<String, String>) {
     let jsContext = getJSContext()
-    @Expect(await(jsContext){map.isEmpty()})
-    @Expect(await(jsContext){map.get("a").isNone()})
-    await(jsContext) {map.set("a", "b")}
-    let clonedMap = await(jsContext) {map.clone() }
-    @Expect(await(jsContext){map.get("a").isSome()})
-    @Expect(await(jsContext){map.size}, 1)
-    @Expect(await(jsContext){map.has("a")})
-    @Expect(await(jsContext){map.containsAll(["a"])})
-    @Expect(await(jsContext){clonedMap.get("a").isSome()})
-    @Expect(await(jsContext){clonedMap.size}, 1)
-    @Expect(await(jsContext){clonedMap.has("a")})
-    let curKeys = await(jsContext) {map.keys()}
-    let values = await(jsContext) {map.values()}
-    @Expect(await(jsContext){values.size}, 1)
-    await(jsContext) {map["b"] = "c"}
-    let bv = await(jsContext) {map["b"]}
+    @Expect(map.isEmpty())
+    @Expect(map.get("a").isNone())
+    map.set("a", "b")
+    let clonedMap = map.clone()
+    @Expect(map.get("a").isSome())
+    @Expect(map.size, 1)
+    @Expect(map.has("a"))
+    @Expect(map.containsAll(["a"]))
+    @Expect(clonedMap.get("a").isSome())
+    @Expect(clonedMap.size, 1)
+    @Expect(clonedMap.has("a"))
+    let curKeys = map.keys()
+    let values = map.values()
+    @Expect(values.size, 1)
+    map["b"] = "c"
+    let bv = map["b"]
     @Expect(bv, "c")
-    await(jsContext) {map.delete("a")}
-    @Expect(await(jsContext){map.size}, 1)
-    await(jsContext) {map.setIfAbsent("a", "a")}
-    await(jsContext) {map.setIfAbsent("a", "b")}
-    @Expect(await(jsContext){map["a"]}, "a")
-    await(jsContext) {map.setAll([("a", "b")])}
-    @Expect(await(jsContext){map["a"]}, "b")
-    await(jsContext) {map.deleteAll(["a"])}
-    @Expect(await(jsContext){map.size}, 1)
-    await(jsContext) {map["a"] = "c"}
-    await(jsContext) {
-        map.deleteIf {
-            k, v => k == "d"
-        }
+    map.delete("a")
+    @Expect(map.size, 1)
+    map.setIfAbsent("a", "a")
+    map.setIfAbsent("a", "b")
+    @Expect(map["a"], "a")
+    map.setAll([("a", "b")])
+    @Expect(map["a"], "b")
+    map.deleteAll(["a"])
+    @Expect(map.size, 1)
+    map["a"] = "c"
+    map.deleteIf {
+        k, v => k == "d"
     }
-    @Expect(await(jsContext){map.size}, 2)
-    await(jsContext) {
-        map.deleteIf {
-            k, v => v == "c"
-        }
+    @Expect(map.size, 2)
+    map.deleteIf {
+        k, v => v == "c"
     }
-    @Expect(await(jsContext){map.isEmpty()})
-    let hh = await(jsContext) {map.toHashMap()}
-    await(jsContext) {map["d"] = "a"}
-    await(jsContext) {map.clear()}
-    @Expect(await(jsContext){map.size}, 0)
+    @Expect(map.isEmpty())
+    let hh = map.toHashMap()
+    map["d"] = "a"
+    map.clear()
+    @Expect(map.size, 0)
     @Expect(withException<Exception> {
-        let res = await(jsContext){map["a"]}
+        let res = map["a"]
     })
 }
 

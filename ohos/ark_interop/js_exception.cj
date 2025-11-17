@@ -77,6 +77,17 @@ internal func indexInvalid(key: String): BusinessException {
     return outsideError("Dict key not found.")
 }
 
+internal func moduleNotExist(src: String): BusinessException {
+    BusinessException(34300006, "Fail to load module '${src}' which doesn't exist.")
+}
+
+internal func noRequireWhenExport(): BusinessException {
+    BusinessException(34300007, "Cannot requireArkModule during initializing cangjie module.")
+}
+
+internal func withoutArkFrame(): BusinessException {
+    BusinessException(34300008, "Cannot requireArkModule without ArkTS frame.")
+}
 
 class JSInteropNativeError <: Exception {
     public init(message: String) {

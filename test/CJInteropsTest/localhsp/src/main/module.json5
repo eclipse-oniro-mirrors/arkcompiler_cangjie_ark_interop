@@ -1,0 +1,10 @@
+{
+    "module": {
+        "name": "localhsp",
+        "type": "shared",
+        "deviceTypes": [
+            "phone"
+        ],
+        "deliveryWithInstall": true
+    }
+}

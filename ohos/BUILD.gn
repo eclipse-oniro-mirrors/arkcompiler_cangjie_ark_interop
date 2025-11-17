@@ -70,6 +70,7 @@ ohos_cangjie_shared_library("ohos.ark_interop") {
     "ark_interop/slab.cj",
     "ark_interop/utf16_string.cj",
     "ark_interop/js_map.cj",
+    "ark_interop/js_module_helper.cj",
   ]
 
   external_deps = [ "napi:ark_interop" ]
@@ -78,7 +79,15 @@ ohos_cangjie_shared_library("ohos.ark_interop") {
     "./business_exception:ohos.business_exception",
   ]
 
-  deps = [ ":utf16string" ]
+  deps = [
+    ":utf16string",
+    "../tools/config_gen:ark_interop_config",
+  ]
+
+  sources += [
+    "${root_out_dir}/gen/arkcompiler/cangjie_ark_interop/tools/config_gen/apiConfig.cj",
+    "${root_out_dir}/gen/arkcompiler/cangjie_ark_interop/tools/config_gen/kitConfig.cj",
+  ]
 
   part_name = "cangjie_ark_interop"
   subsystem_name = "arkcompiler"

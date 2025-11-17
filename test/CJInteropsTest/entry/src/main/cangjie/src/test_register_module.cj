@@ -64,6 +64,9 @@ let _ = JSModule.registerModule {
     jsObject["testRegisterModule10"] = jsContext.bigint(BigInt("12345678901234567890")).toJSValue()
     jsObject["testRegisterModule11"] = jsContext.arrayBuffer(114514).toJSValue()
     jsObject["testRegisterModule12"] = jsContext.external(Person("tom", 23)).toJSValue()
+    jsObject["requireArkModule"] = jsContext.function {context, callInfo =>
+        context.requireArkModule(callInfo[0].toString())
+    }.toJSValue()
 }
 
 class Person <: SharedObject {

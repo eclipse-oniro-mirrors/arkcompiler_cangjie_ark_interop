@@ -23,5 +23,9 @@
   "dependencies": {
     "libentry.so": "file:./src/main/cangjie/types/libentry",
     "libentry.pure.so": "file:./src/main/cangjie/types/libentry.pure"
+    "libentry_c.so": "file:./src/main/cpp/types/libentry",
+    "localhar": "file:../localhar",
+    "localhsp": "file:../localhsp",
+    "@ohos/lottie": "^2.0.0"
   }
 }

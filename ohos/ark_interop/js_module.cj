@@ -19,6 +19,7 @@ package ohos.ark_interop
 
 import std.collection.{HashMap, ArrayList}
 import std.convert.Parsable
+import ohos.business_exception.*
 
 @C
 struct CJModuleCallbacks {
@@ -56,6 +57,7 @@ public type FuncRegister = (JSContext) -> JSFunction
 @C
 func loadArkInteropModule(env: JSEnv, cname: CString, exports: JSValue_): JSValue_ {
     let context = JSContext.getOrCreate(env)
+    context.isOnLoadingCJ = true
     try {
         let name = cname.toString()
         let module = match (JSModule.getCachedModule(name)) {
@@ -64,8 +66,10 @@ func loadArkInteropModule(env: JSEnv, cname: CString, exports: JSValue_): JSValu
         }
         let exportObj = JSValue(context, exports).asObject()
         module.fillInto(context, exportObj)
+        context.isOnLoadingCJ = false
         exports
     } catch (err: Exception) {
+        context.isOnLoadingCJ = false
         context.throwJSError(err)
         context.undefined().toJSValue().value
     }
@@ -128,7 +132,27 @@ func throwJSErrorToCJ(env: JSEnv, rawError: JSValue_): Unit {
     } else {
         0
     }
+    if (let Some(missingModule) <- searchNotExist(errMsg)) {
+        throw moduleNotExist(missingModule)
+    }
+    // requireArkModule without ArkTS frame may fail, reorganize the error message to help user fix the failure.
+    if (errMsg.startsWith("ReferenceError Unable to get recordName and fileName due to failure")) {
+        throw withoutArkFrame()
+    }
     throw jsCodeError(errCode, "${errName}\n${errMsg}", errStack)
+}
+
+// case1: cannot find record '&somemodule/somedir/somefile&1.0.0'
+// case2: Cannot find module 'libxxx.so'
+func searchNotExist(src: String): ?String {
+    let begins = ["cannot find record '", "Cannot find module '"]
+    for (target in begins) {
+        let endingChar: UInt8 = "'"
+        if (let Some(ending) <- src.indexOf(endingChar, target.size)) {
+            return src[target.size..ending]
+        }
+    }
+    return None
 }
 
 /**

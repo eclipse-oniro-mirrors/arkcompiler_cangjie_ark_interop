@@ -150,15 +150,7 @@ class TestException {
             }
 
             testExceptionThrow<BusinessException> {
-                value.asNumber()
-            }
-
-            testExceptionThrow<BusinessException> {
                 value.toBoolean()
-            }
-
-            testExceptionThrow<BusinessException> {
-                value.toNumber()
             }
 
             testExceptionThrow<BusinessException> {

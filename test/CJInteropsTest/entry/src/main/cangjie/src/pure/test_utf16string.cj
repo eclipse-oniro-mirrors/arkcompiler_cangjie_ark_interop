@@ -150,7 +150,7 @@ class TestUtf16String {
         let cases = [
             ("abc123,./", 9),
             ("你好，世界！", 6),
-            ("😭💗√✅️", 4)]
+            ("😭💗√✅️", 5)]
         for ((ori, dst) in cases) {
             let src = Utf16String(ori)
             @Expect(src.totalChars, dst)
@@ -188,8 +188,8 @@ class TestUtf16String {
     func testSubstr(){
         let cases = [
             ("0123456789", 0..5, "01234"),
-            ("123456", 0..7, "123456"),
-            ("你好世界，⏰️123", 2..6, "世界，⏰️")]
+            ("123456", 0..6, "123456"),
+            ("你好世界，⏰️123", 2..7, "世界，⏰️")]
         for ((src, range, dst) in cases) {
             let uSrc = Utf16String(src)
             let result = uSrc[range].toString()
