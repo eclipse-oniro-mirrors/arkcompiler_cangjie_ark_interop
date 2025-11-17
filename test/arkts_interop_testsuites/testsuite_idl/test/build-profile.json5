@@ -19,9 +19,9 @@
       {
         name: "default",
         signingConfig: "default",
-        targetSdkVersion: "21",
-        compatibleSdkVersion: "21",
-        runtimeOS: "OpenHarmony",
+        targetSdkVersion: "6.0.0(20)",
+        compatibleSdkVersion: "6.0.0(20)",
+        runtimeOS: "HarmonyOS",
         buildOption: {
           strictMode: {
             caseSensitiveCheck: true,
@@ -32,11 +32,11 @@
     ],
     buildModeSet: [
       {
-        name: "debug",
+        name: "debug"
       },
       {
-        name: "release",
-      },
+        name: "release"
+      }
     ],
   },
   modules: [

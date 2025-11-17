@@ -17,11 +17,11 @@ export declare interface CanFly {
     flies: () => void
 }
 
-export declare interface StringAnalyzer {
-    inputString: string
-    frequencyMap: Map<string, number>
-    analyzeString: () => Map<string, number>
-    printAnalysis: () => void
+export declare const enum Season {
+    Spring = 0,
+    Summer = 1,
+    Autumn = 2,
+    Winter = 3
 }
 
 export declare interface NormalInterface {
@@ -59,6 +59,18 @@ export declare class AbnormalClass {
 export declare class CJNativeClass {
 }
 
+export declare class TicketMachine {
+    static reset(nextId: number): void
+    static nextId(): number
+}
+
+export declare class Person {
+    name: string
+    age: number
+    static build(): Person
+    static buildFromSeason(season: Season): Person
+}
+
 export declare class Node {
     name: string
     childCount: number
@@ -73,19 +85,30 @@ export declare class Node {
     hasRightChild: boolean
 }
 
+export declare class ClassWithMultiCtors {
+    name: string
+}
+
 export declare interface CustomLib {
-    Node: {new (nodeName: string, leftChild: Node | undefined, rightChild: Node | undefined): Node}
+    Node: { new (nodeName: string, leftChild: Node | undefined, rightChild: Node | undefined): Node }
     overloadedFunction_00(): number
     createJSArrayExOfInt64(): Array<number>
     createJSArrayExOfNormalClass(): Array<NormalClass>
     checkJSArrayExOfNormalInterface(a: Array<NormalInterface>): void
     createJSArrayExOfNormalInterface(): Array<NormalInterface>
-    CJNativeClass: {new (): CJNativeClass}
-    AbnormalClass: {new (): AbnormalClass}
-    NormalClass: {new (mutableVariableThatHasNoInitialization: number): NormalClass}
-    ClassThatInheritsAnotherClass: {new (): ClassThatInheritsAnotherClass}
-    ClassThatImplementsInterfaces: {new (): ClassThatImplementsInterfaces}
-    ClassThatBothInheritsAnotherClassAndImplementsInterfaces: {new (): ClassThatBothInheritsAnotherClassAndImplementsInterfaces}
+    CJNativeClass: { new (): CJNativeClass }
+    TicketMachine: typeof TicketMachine
+    Person: typeof Person
+    AbnormalClass: { new (): AbnormalClass }
+    NormalClass: { new (mutableVariableThatHasNoInitialization: number): NormalClass }
+    ClassThatInheritsAnotherClass: { new (): ClassThatInheritsAnotherClass }
+    ClassThatImplementsInterfaces: { new (): ClassThatImplementsInterfaces }
+    ClassThatBothInheritsAnotherClassAndImplementsInterfaces: { new (): ClassThatBothInheritsAnotherClassAndImplementsInterfaces }
+    ClassWithMultiCtors: {
+        new (): ClassWithMultiCtors;
+        new (a: number): ClassWithMultiCtors;
+        new (a: number, b: number): ClassWithMultiCtors;
+    }
     f(p: Array<string>, p1: Array<string>, p2: Map<string, string>): void
     test(p0: Map<string, number>): void
     checkObjectThatImplementsNormalInterface(obj: NormalInterface): void
@@ -139,4 +162,8 @@ export declare interface CustomLib {
     returnTypeBeingFunctionType_00(): () => void
     returnTypeBeingFunctionType_01(): (funcArg0: (funcArgfuncArg0: (funcArgfuncArgfuncArg0: (funcArgfuncArgfuncArgfuncArg0: (funcArgfuncArgfuncArgfuncArgfuncArg0: undefined) => boolean) => number) => number) => number | undefined) => ArrayBuffer
     cookBird(bird: CanFly): string
+    getDefaultSeason(): Season
+    rotateSeason(current: Season): Season
+    isHotSeason(current: Season): boolean
+    seasonFromOrdinal(index: number): Season | undefined
 }
