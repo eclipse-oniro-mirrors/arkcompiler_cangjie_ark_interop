@@ -16,6 +16,9 @@
 {
   apiType: "stageMode",
   buildOption: {
+    cangjieOptions: {
+      path: "./src/main/cangjie/cjpm.toml",
+    },
     sourceOption: {
       workers: [
         "./src/ohosTest/ets/test/PureWorker.ets"

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { hapTasks } from '@ohos/hvigor-ohos-plugin';
+import { hapTasks } from '@ohos/cangjie-build-support';
 
 export default {
     system: hapTasks,  /* Built-in plugin of Hvigor. It cannot be modified. */
