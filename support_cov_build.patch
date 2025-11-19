@@ -1,0 +1,94 @@
+Subject: [PATCH] Revert "support cangjie build"
+---
+Index: test/CJInteropsTest/build-profile.json5
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/CJInteropsTest/build-profile.json5 b/test/CJInteropsTest/build-profile.json5
+--- a/test/CJInteropsTest/build-profile.json5	(revision ceb93257f27a6a488a2bcf176dc24ad43563cbd6)
++++ b/test/CJInteropsTest/build-profile.json5	(revision 3ac6900d306449fee4ee3d51c0497000e24c05e5)
+@@ -19,9 +19,9 @@
+       {
+         name: "default",
+         signingConfig: "default",
+-        targetSdkVersion: "21",
+-        compatibleSdkVersion: "21",
+-        runtimeOS: "OpenHarmony",
++        targetSdkVersion: "6.0.0(20)",
++        compatibleSdkVersion: "6.0.0(20)",
++        runtimeOS: "HarmonyOS",
+         buildOption: {
+           strictMode: {
+             caseSensitiveCheck: true,
+Index: test/CJInteropsTest/entry/build-profile.json5
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/CJInteropsTest/entry/build-profile.json5 b/test/CJInteropsTest/entry/build-profile.json5
+--- a/test/CJInteropsTest/entry/build-profile.json5	(revision ceb93257f27a6a488a2bcf176dc24ad43563cbd6)
++++ b/test/CJInteropsTest/entry/build-profile.json5	(revision 3ac6900d306449fee4ee3d51c0497000e24c05e5)
+@@ -16,9 +16,6 @@
+ {
+   apiType: "stageMode",
+   buildOption: {
+-    cangjieOptions: {
+-      path: "./src/main/cangjie/cjpm.toml",
+-    },
+     sourceOption: {
+       workers: [
+         "./src/ohosTest/ets/test/PureWorker.ets"
+Index: test/CJInteropsTest/entry/hvigorfile.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/CJInteropsTest/entry/hvigorfile.ts b/test/CJInteropsTest/entry/hvigorfile.ts
+--- a/test/CJInteropsTest/entry/hvigorfile.ts	(revision ceb93257f27a6a488a2bcf176dc24ad43563cbd6)
++++ b/test/CJInteropsTest/entry/hvigorfile.ts	(revision 3ac6900d306449fee4ee3d51c0497000e24c05e5)
+@@ -13,7 +13,7 @@
+  * limitations under the License.
+  */
+ 
+-import { hapTasks } from '@ohos/cangjie-build-support';
++import { hapTasks } from '@ohos/hvigor-ohos-plugin';
+ 
+ export default {
+     system: hapTasks,  /* Built-in plugin of Hvigor. It cannot be modified. */
+Index: test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml b/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml
+--- a/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml	(revision ceb93257f27a6a488a2bcf176dc24ad43563cbd6)
++++ b/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml	(revision 3ac6900d306449fee4ee3d51c0497000e24c05e5)
+@@ -13,9 +13,9 @@
+ 
+ [target]
+   [target.aarch64-linux-ohos]
+-    compile-option = "-B \"${DEVECO_CANGJIE_HOME}/compiler/third_party/llvm/bin\" -B \"${DEVECO_SDK_HOME}/default/openharmony/native/sysroot/usr/lib/aarch64-linux-ohos\" -L \"${DEVECO_SDK_HOME}/default/openharmony/native/sysroot/usr/lib/aarch64-linux-ohos\" -L \"${DEVECO_CANGJIE_HOME}/build/linux_ohos_aarch64_llvm/openssl\" --sysroot \"${DEVECO_SDK_HOME}/default/openharmony/native/sysroot\""
++    compile-option = "-B \"${DEVECO_CANGJIE_HOME}/build-tools/third_party/llvm/bin\" -B \"${DEVECO_OH_NATIVE_HOME}/usr/lib/aarch64-linux-ohos\" -L \"${DEVECO_OH_NATIVE_HOME}/usr/lib/aarch64-linux-ohos\" -L \"${DEVECO_CANGJIE_HOME}/build/linux_ohos_aarch64_llvm/openssl\" --sysroot \"${DEVECO_OH_NATIVE_HOME}\""
+     [target.aarch64-linux-ohos.bin-dependencies]
+-      path-option = [ "${AARCH64_LIBS}", "${AARCH64_MACRO_LIBS}" ]
++      path-option = [ "${AARCH64_LIBS}", "${AARCH64_MACRO_LIBS}", "${AARCH64_KIT_LIBS}" ]
+       [target.aarch64-linux-ohos.bin-dependencies.package-option]
+   [target.x86_64-unknown-windows-gnu]
+     [target.x86_64-unknown-windows-gnu.bin-dependencies]
+Index: test/CJInteropsTest/hvigor/hvigor-config.json5
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/CJInteropsTest/hvigor/hvigor-config.json5 b/test/CJInteropsTest/hvigor/hvigor-config.json5
+--- a/test/CJInteropsTest/hvigor/hvigor-config.json5	(revision ceb93257f27a6a488a2bcf176dc24ad43563cbd6)
++++ b/test/CJInteropsTest/hvigor/hvigor-config.json5	(revision 3ac6900d306449fee4ee3d51c0497000e24c05e5)
+@@ -16,7 +16,6 @@
+ {
+   "modelVersion": "6.0.0",
+   "dependencies": {
+-    "@ohos/cangjie-build-support": "file:cangjie-build-support-6.0.820.tgz"
+   },
+   "execution": {
+     // "analyze": "normal",                     /* Define the build analyze mode. Value: [ "normal" | "advanced" | "ultrafine" | false ]. Default: "normal" */
