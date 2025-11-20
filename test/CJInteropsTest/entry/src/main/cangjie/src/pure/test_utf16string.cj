@@ -359,7 +359,7 @@ class TestUtf16String {
             let result1 = uSrc.split(uTar).map { v => v.toString() }
             // @Expect(result1, dst1)
             // let dst2 = src.split(tar, removeEmpty: true)
-            let result2 = uSrc.split(uTar, remoteEmpty: true).map { v => v.toString() }
+            let result2 = uSrc.split(uTar, removeEmpty: true).map { v => v.toString() }
             // @Expect(result2, dst2)
         }
     }
