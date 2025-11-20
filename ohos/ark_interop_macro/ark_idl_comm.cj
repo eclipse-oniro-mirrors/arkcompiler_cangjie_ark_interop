@@ -216,4 +216,8 @@ class IDLUtil {
         diagReport(DiagReportLevel.ERROR, tokens, message, "")
         throw Exception(message)
     }
+
+    static func diagReportTW(tokens: Tokens, message: String) {
+        diagReport(DiagReportLevel.WARNING, tokens, message, "")
+    }
 }

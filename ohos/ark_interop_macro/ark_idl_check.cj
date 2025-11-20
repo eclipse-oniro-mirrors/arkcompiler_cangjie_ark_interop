@@ -194,10 +194,8 @@ func checkStaticInit(classDecl: ClassDecl) {
     }
 }
 
-// one init
+// at least one init
 func checkClassInitFuncNum(classDecl: ClassDecl) {
-    var cnt: Int8 = 0
-
     let decls = classDecl.body.decls
     for (decl in decls) {
         if (IDLClassMemberInvisible(decl).isMemberInvisible()) {
@@ -206,24 +204,16 @@ func checkClassInitFuncNum(classDecl: ClassDecl) {
         match (decl) {
             case funcDecl: FuncDecl =>
                 if (funcDecl.identifier.value == "init") {
-                    cnt++
-                    if (cnt > 1) {
-                        break
-                    }
+                    return
                 }
             case primary: PrimaryCtorDecl =>
-                cnt++
-                if (cnt > 1) {
-                    break
-                }
+                return
             case _ => ()
         }
     }
 
-    if (cnt != 1) {
-        IDLUtil.diagReportTE(Tokens(classDecl.identifier),
-            "Only one constructor is supported in a class within the `Interop` macro scope.")
-    }
+    IDLUtil.diagReportTE(Tokens(classDecl.identifier),
+        "At least one constructor is required in a class within the `Interop` macro scope.")
 }
 
 // no duplicate func name
@@ -360,8 +350,8 @@ func checkInterface(interfaceDecl: InterfaceDecl) {
     modifiers          | type paramenters | inherited from other class            | inherited from other interface            |
     can only be public | not supported    | supported, but not expand super class | supported, but not expand super interface |
 
-    modifiers of member                 | static constructor | constructor      | member variables         | operator function | member attibutes |
-    can only be public or public static | not supported      | support one most | supported except generic | not supported     | supported        |
+    modifiers of member                 | static constructor | constructors | member variables         | operator function | member attibutes |
+    can only be public or public static | not supported      | supported    | supported except generic | not supported     | supported        |
  */
 func checkClass(classDecl: ClassDecl) {
     checkModifierBePublic(classDecl)
