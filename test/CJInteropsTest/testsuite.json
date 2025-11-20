@@ -1,0 +1,65 @@
+{
+  "name": "testsuite_cj_interop_test",
+  "test_list": [
+    {
+      "name": "TestArray",
+      "timeout": 100
+    },
+    {
+      "name": "TestException",
+      "timeout": 100
+    },
+    {
+      "name": "TestFunction",
+      "timeout": 100
+    },
+    {
+      "name": "TestPostJSTask",
+      "timeout": 100
+    },
+    {
+      "name": "TestString00",
+      "timeout": 100
+    },
+    {
+      "name": "TestPromise",
+      "timeout": 100
+    },
+    {
+      "name": "TestBigInt01",
+      "timeout": 100
+    },
+    {
+      "name": "TestBigIntPrecision",
+      "timeout": 100
+    },
+    {
+      "name": "TestExternal",
+      "timeout": 10000
+    },
+    {
+      "name": "TestRegisterAfterStaticInit",
+      "timeout": 100
+    },
+    {
+      "name": "TestRegisterClass",
+      "timeout": 100
+    },
+    {
+      "name": "TestRegisterFunc",
+      "timeout": 100
+    },
+    {
+      "name": "TestRegisterModule",
+      "timeout": 100
+    },
+    {
+      "name": "TestRegisterOverride",
+      "timeout": 100
+    },
+    {
+      "name": "TestTypeValue",
+      "timeout": 100
+    }
+  ]
+}

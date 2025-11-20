@@ -314,17 +314,17 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable {
         return Int64(result)
     }
 
-    public func split(seperator: Utf16String, remoteEmpty!: Bool = false): Array<Utf16String> {
-        return split(seperator, 0, remoteEmpty: remoteEmpty)
+    public func split(seperator: Utf16String, removeEmpty!: Bool = false): Array<Utf16String> {
+        return split(seperator, 0, removeEmpty: removeEmpty)
     }
 
-    public func split(seperator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Array<Utf16String> {
+    public func split(seperator: Utf16String, maxSplit: Int64, removeEmpty!: Bool = false): Array<Utf16String> {
         let list = ArrayList<Utf16String>()
         unsafe {
             let jArr = CJUtf16StringSplit(safeHandle, seperator.safeHandle, UInt32(maxSplit))
             for (i in 0..jArr.length) {
                 let str = Utf16String(jArr.values.read(Int64(i)))
-                if (!remoteEmpty || !str.isEmpty()) {
+                if (!removeEmpty || !str.isEmpty()) {
                     list.add(str)
                 } else {
                     str.dispose()
@@ -335,12 +335,12 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable {
         list.toArray()
     }
 
-    public func lazySplit(separator: Utf16String, remoteEmpty!: Bool = false): Iterator<Utf16String> {
-        return lazySplit(separator, 0, remoteEmpty: remoteEmpty)
+    public func lazySplit(separator: Utf16String, removeEmpty!: Bool = false): Iterator<Utf16String> {
+        return lazySplit(separator, 0, removeEmpty: removeEmpty)
     }
 
-    public func lazySplit(separator: Utf16String, maxSplit: Int64, remoteEmpty!: Bool = false): Iterator<Utf16String> {
-        SplitIterator(this, separator, maxSplit, remoteEmpty)
+    public func lazySplit(separator: Utf16String, maxSplit: Int64, removeEmpty!: Bool = false): Iterator<Utf16String> {
+        SplitIterator(this, separator, maxSplit, removeEmpty)
     }
 
     public func replace(old: Utf16String, new: Utf16String, count!: Int64 = 1): Utf16String {
