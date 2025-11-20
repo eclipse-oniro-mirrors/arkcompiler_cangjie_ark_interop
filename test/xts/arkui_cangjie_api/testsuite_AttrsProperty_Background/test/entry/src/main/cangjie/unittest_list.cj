@@ -95,7 +95,7 @@ let BackgroundImageSize_Prop_List: Array<(String, Any, String)> = [
     ("Float64", (100.0, 80.0), "\"{\\\"width\\\":\\\"${finalSizeVpLpxIntxpx}px\\\",\\\"height\\\":\\\"${finalSizeVpLpxIntypx}px\\\"}\""),
     ("Int64", (100, 80), "\"{\\\"width\\\":\\\"${finalSizeVpLpxIntxpx}px\\\",\\\"height\\\":\\\"${finalSizeVpLpxIntypx}px\\\"}\""),
     ("AppResource", (@r(app.float.float_size_100), @r(app.float.float_size_80)),
-        "\"{\\\"width\\\":\\\"325.00px\\\",\\\"height\\\":\\\"260.00px\\\"}\""),
+        "\"{\\\"width\\\":\\\"350.00px\\\",\\\"height\\\":\\\"280.00px\\\"}\""),
     ("ImageSizeCover", ImageSize.Cover, "\"ImageSize.Cover\""),
     ("ImageSizeContain", ImageSize.Contain, "\"ImageSize.Contain\""),
     ("ImageSizeAuto", ImageSize.Auto, "\"ImageSize.Auto\"")
@@ -120,8 +120,8 @@ let VpLpxInty = 20.0*display.getDefaultDisplaySync().densityPixels
 let lengthIntx = VpLpxIntx.toString().size
 let lengthInty = VpLpxInty.toString().size
 
-let finalVpLpxIntxpx:String = VpLpxIntx.toString()[0..lengthIntx-4]
-let finalVpLpxIntypx:String = VpLpxInty.toString()[0..lengthInty-4]
+let finalVpLpxIntxpx:String = VpLpxIntx.toString()[0..lengthIntx-7]
+let finalVpLpxIntypx:String = VpLpxInty.toString()[0..lengthInty-7]
 
 //BackgroundImagePosition_Prop_List 格式为  (单位， setValue, expectValue)
 let BackgroundImagePosition_Prop_List: Array<(String, Any, String)> = [
@@ -135,7 +135,7 @@ let BackgroundImagePosition_Prop_List: Array<(String, Any, String)> = [
     ("PxInt", (30.px, 20.px), "\"{\\\"x\\\":30,\\\"y\\\":20}\""),
     ("Float64", (30.0, 20.0), "\"{\\\"x\\\":${finalVpLpxIntxpx},\\\"y\\\":${finalVpLpxIntypx}}\""),
     ("Int64", (30, 20), "\"{\\\"x\\\":${finalVpLpxIntxpx},\\\"y\\\":${finalVpLpxIntypx}}\""),
-    ("AppResource", (@r(app.float.float_size_30), @r(app.float.float_size_20)), "\"{\\\"x\\\":97.5,\\\"y\\\":65}\""),
+    ("AppResource", (@r(app.float.float_size_30), @r(app.float.float_size_20)), "\"{\\\"x\\\":${finalVpLpxIntxpx},\\\"y\\\":${finalVpLpxIntypx}}\""),
     ("Start", Alignment.Start, "\"Alignment.Start\""),
     ("Center", Alignment.Center, "\"Alignment.Center\""),
     ("End", Alignment.End, "\"Alignment.End\""),

@@ -23,7 +23,6 @@ import ohos.data.relational_store.*
 import ohos.callback_invoke.Callback1Argument
 import ohos.callback_invoke.{CallbackObject, Callback0Argument}
 
-
 class TestCallback0 <: Callback0Argument {
     public init() {
     }

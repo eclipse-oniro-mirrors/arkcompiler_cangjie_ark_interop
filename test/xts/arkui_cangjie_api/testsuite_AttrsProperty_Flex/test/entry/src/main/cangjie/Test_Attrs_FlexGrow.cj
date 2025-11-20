@@ -38,7 +38,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_AlphabetIndexer_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin AlphabetIndexer")
@@ -67,7 +67,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Button_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Button")
@@ -95,7 +95,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Checkbox_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Checkbox")
@@ -123,7 +123,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_CheckboxGroup_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin CheckboxGroup")
@@ -153,7 +153,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_DataPanel_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin DataPanel")
@@ -181,7 +181,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_DatePicker_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin DatePicker")
@@ -209,7 +209,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Divider_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Divider")
@@ -237,7 +237,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Gauge_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Gauge")
@@ -265,7 +265,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Image_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Image")
@@ -293,7 +293,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_LoadingProgress_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_LoadingProgress_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin LoadingProgress")
@@ -321,7 +321,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Menu_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Menu_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Menu")
@@ -349,7 +349,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Progress_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Progress_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Progress")
@@ -377,7 +377,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_QRCode_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_QRCode_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin QRCode")
@@ -405,7 +405,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Radio_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Radio_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Radio")
@@ -433,7 +433,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Rating_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Rating_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Rating")
@@ -461,7 +461,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Refresh_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Refresh_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Refresh")
@@ -489,7 +489,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_RichEditor_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_RichEditor_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin RichEditor")
@@ -517,7 +517,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_RichText_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_RichText_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin RichText")
@@ -545,7 +545,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_RowSplit_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_RowSplit_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin RowSplit")
@@ -573,7 +573,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_ScrollBar_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_ScrollBar_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin ScrollBar")
@@ -601,7 +601,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Search_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Search_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Search")
@@ -629,7 +629,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Slider_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Slider_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Slider")
@@ -657,7 +657,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Stepper_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Stepper_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Stepper")
@@ -685,7 +685,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Text_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Text_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Text")
@@ -713,7 +713,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_TextArea_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_TextArea_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin TextArea")
@@ -741,7 +741,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_TextClock_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_TextClock_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin TextClock")
@@ -769,7 +769,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_TextInput_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_TextInput_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin TextInput")
@@ -797,7 +797,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_TextPicker_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_TextPicker_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin TextPicker")
@@ -825,7 +825,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_TextTimer_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_TextTimer_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin TextTimer")
@@ -853,7 +853,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Toggle_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Toggle_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Toggle")
@@ -881,7 +881,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Web_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Web_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Web")
@@ -909,7 +909,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Select_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Select_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Select")
@@ -937,7 +937,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Badge_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Badge_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Badge")
@@ -965,7 +965,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Column_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Column_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Column")
@@ -993,7 +993,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Grid_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Grid_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Grid")
@@ -1021,7 +1021,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_GridRow_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_GridRow_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin GridRow")
@@ -1049,7 +1049,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Flex_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Flex_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Flex")
@@ -1077,7 +1077,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_List_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_List_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin List")
@@ -1106,7 +1106,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_RelativeContainer_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_RelativeContainer_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin RelativeContainer")
@@ -1134,7 +1134,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Row_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Row_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Row")
@@ -1162,7 +1162,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Scroll_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Scroll_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Scroll")
@@ -1190,7 +1190,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Stack_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Stack_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Stack")
@@ -1218,7 +1218,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Swiper_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Swiper_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Swiper")
@@ -1246,7 +1246,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Tabs_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Tabs_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Tabs")
@@ -1274,7 +1274,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Circle_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Circle_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Circle")
@@ -1302,7 +1302,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Line_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Line_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Line")
@@ -1330,7 +1330,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Rect_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Rect_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Rect")
@@ -1358,7 +1358,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Shape_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Shape_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Shape")
@@ -1388,7 +1388,7 @@ class Test_EmptyAttrs_FlexGrow {
      * @tc.desic：Empty_Path_FlexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexGrow_Path_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexGrow: FindBegin Path")

@@ -20,7 +20,7 @@ import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
 import std.convert.*
-import ohos.base.{LengthProp, Length, Color,  LengthType}
+import ohos.base.{LengthProp, Length, Color}
 internal import ohos.base.ReuseParams
 import kit.LocalizationKit.{AppResource}
 
@@ -39,30 +39,30 @@ class Child_Link_Number {
 
     func build() {
         Column(space:20) {
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Int64 = [10]
-            }.id("state1")
+            }).id("state1")
 
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Boolean = [true]
-            }.id("state2")
+            }).id("state2")
 
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Length = [1.vp]
-            }.id("state3")
+            }).id("state3")
 
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Object = [AA(1)]
-            }.id("state4")
+            }).id("state4")
 
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Resource = [@r(app.string.EntryAbility_desc)]
-            }.id("state5")
+            }).id("state5")
         }.width(100.percent).margin(top: 10)
     }
 }

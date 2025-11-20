@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) 2025 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -66,20 +65,8 @@ import stdx.encoding.json.stream.JsonWriter
 import std.collection.filterMap
 import kit.PerformanceAnalysisKit.Hilog
 
-foreign func __gcov_dump(): Unit
-
-public func gcov_dump(coveragePath: String): Unit {
-    Hilog.info(0, "CangjieTest", "execute test with coverage")
-    Process
-        .current
-        .setEnv("GCOV_PREFIX", coveragePath)
-    unsafe { __gcov_dump() }
-}
-
 public func registerTestSuite(_: String, testClassInstanceGenerator: () -> TestClass): Unit {
-    OpenHarmonyTestRunner
-        .testClassInstanceGenerators
-        .add(testClassInstanceGenerator)
+    OpenHarmonyTestRunner.testClassInstanceGenerators.add(testClassInstanceGenerator)
 }
 
 public class OpenHarmonyTestRunner <: TestRunner {
@@ -89,9 +76,7 @@ public class OpenHarmonyTestRunner <: TestRunner {
         get() {
             match (OpenHarmonyTestRunner._driver) {
                 case None =>
-                    let newDriver = ui_test
-                        .Driver
-                        .create()
+                    let newDriver = ui_test.Driver.create()
                     OpenHarmonyTestRunner._driver = newDriver
                     newDriver
                 case Some(driver) => driver
@@ -110,39 +95,30 @@ public class OpenHarmonyTestRunner <: TestRunner {
     }
 
     private func testClassNotFound(testClassName: String): Unit {
-        let listOfAvailableTestClasses = String.join(OpenHarmonyTestRunner
-            .testSuiteMap
-            .keys()
-            .toArray(), delimiter: ", ")
+        let listOfAvailableTestClasses = String.join(OpenHarmonyTestRunner.testSuiteMap.keys().toArray(),
+            delimiter: ", ")
         Hilog.error(0, "CangjieTest",
-            "TestClass with name \"${testClassName}\" not found. Available TestClasses are: ${listOfAvailableTestClasses}")
+            "TestClass with name \"${testClassName}\" not found. Available TestClasses are: ${listOfAvailableTestClasses}"
+        )
     }
     private func executeTestClass(testClassName: String): Unit {
         let abilityDelegator = AbilityDelegatorRegistry.getAbilityDelegator()
         Hilog.info(0, "CangjieTest", "EXECUTE_CLASS_START: \"${testClassName}\"")
-        let testSuite = match (OpenHarmonyTestRunner
-            .testSuiteMap
-            .get(testClassName)) {
+        let testSuite = match (OpenHarmonyTestRunner.testSuiteMap.get(testClassName)) {
             case None =>
                 testClassNotFound(testClassName)
                 return
             case Some(testClassInstanceGenerator) => testClassInstanceGenerator
         }
-        testSuite
-            .runTests(this.configuration)
-            .reportTo(XmlReporter(fs.Path("/data/storage/el1/base")))
+        testSuite.runTests(this.configuration).reportTo(XmlReporter(fs.Path("/data/storage/el1/base")))
 
         let testReportXmlFileName = "test-default.${testClassName}.xml"
-        match (fs
-            .Directory
-            .readFrom("/data/storage/el1/base/tests") |> filter {fileInfo => fileInfo.name == testReportXmlFileName} |>
-            first) {
+        match (fs.Directory.readFrom("/data/storage/el1/base/tests") |>
+            filter {fileInfo => fileInfo.name == testReportXmlFileName} |> first) {
             case None => Hilog.error(0, "CangjieTest", "${testReportXmlFileName} not found.")
             case Some(testReportXmlFileInfo) =>
                 let testReportXmlFilePath = testReportXmlFileInfo.path
-                let testReportXmlFileContent = fs
-                    .File
-                    .readFrom(testReportXmlFilePath)
+                let testReportXmlFileContent = fs.File.readFrom(testReportXmlFilePath)
                 let xmlReport = String.fromUtf8(testReportXmlFileContent)
                 Hilog.info(0, "CangjieTest", "XML_REPORT_CONTENT_LENGTH: ${xmlReport.size}")
                 xmlReport.split("\n", removeEmpty: true) |> forEach {
@@ -152,41 +128,29 @@ public class OpenHarmonyTestRunner <: TestRunner {
         }
     }
     private func executeAllTestClasses(): Unit {
-        for (testClassName in OpenHarmonyTestRunner
-                .testSuiteMap
-                .keys()) {
+        for (testClassName in OpenHarmonyTestRunner.testSuiteMap.keys()) {
             executeTestClass(testClassName)
         }
     }
     private func executeTestCase(testClassName: String, testCaseName: String): Unit {
         let abilityDelegator = AbilityDelegatorRegistry.getAbilityDelegator()
         Hilog.info(0, "CangjieTest", "EXECUTE_METHOD_START: \"${testClassName}#${testCaseName}\"")
-        let testSuite = match (OpenHarmonyTestRunner
-            .testSuiteMap
-            .get(testClassName)) {
+        let testSuite = match (OpenHarmonyTestRunner.testSuiteMap.get(testClassName)) {
             case None =>
                 testClassNotFound(testClassName)
                 return
             case Some(testClassInstanceGenerator) => testClassInstanceGenerator
         }
-        this
-            .configuration
-            .setByName("filter", "${testClassName}.${testCaseName}")
-        testSuite
-            .runTests(this.configuration)
-            .reportTo(XmlReporter(fs.Path("/data/storage/el1/base")))
+        this.configuration.setByName("filter", "${testClassName}.${testCaseName}")
+        testSuite.runTests(this.configuration).reportTo(XmlReporter(fs.Path("/data/storage/el1/base")))
 
         let testReportXmlFileName = "test-default.${testClassName}.xml"
-        match (fs
-            .Directory
-            .readFrom("/data/storage/el1/base/tests") |> filter {fileInfo => fileInfo.name == testReportXmlFileName} |>
-            first) {
+        match (fs.Directory.readFrom("/data/storage/el1/base/tests") |>
+            filter {fileInfo => fileInfo.name == testReportXmlFileName} |> first) {
             case None => Hilog.error(0, "CangjieTest", "${testReportXmlFileName} not found.")
             case Some(testReportXmlFileInfo) =>
                 let testReportXmlFilePath = testReportXmlFileInfo.path
-                let testReportXmlFileContent = fs
-                    .File
-                    .readFrom(testReportXmlFilePath)
+                let testReportXmlFileContent = fs.File.readFrom(testReportXmlFilePath)
                 let xmlReport = String.fromUtf8(testReportXmlFileContent)
                 Hilog.info(0, "CangjieTest", "XML_REPORT_CONTENT_LENGTH: ${xmlReport.size}")
                 xmlReport.split("\n", removeEmpty: true) |> forEach {
@@ -201,15 +165,14 @@ public class OpenHarmonyTestRunner <: TestRunner {
             let testClassInstance = try {
                 testClassInstanceGenerator()
             } catch (e: Exception) {
-                Hilog.error(0, "CangjieTest", "exception occurred during testsuite generation:\n${getDetailedInfoOf(e)}")
+                Hilog.error(0, "CangjieTest", "exception occurred during testsuite generation:\n${getDetailedInfoOf(e)}"
+                )
                 continue
             }
             let testSuite = testClassInstance.asTestSuite()
             let testSuiteName = testSuite.name
             Hilog.info(0, "CangjieTest", "Registering TestSuite ${testSuiteName}")
-            OpenHarmonyTestRunner
-                .testSuiteMap
-                .add(testSuiteName, testSuite)
+            OpenHarmonyTestRunner.testSuiteMap.add(testSuiteName, testSuite)
         }
     }
     public override func onRun(): Unit {
@@ -223,52 +186,38 @@ public class OpenHarmonyTestRunner <: TestRunner {
             sleepFor(1.second)
             setUp()
             if (FileIo.access(dryRunFilePath)) {
-                let dryRun = String.fromUtf8(fs
-                    .File
-                    .readFrom(dryRunFilePath))
+                let dryRun = String.fromUtf8(fs.File.readFrom(dryRunFilePath))
                 FileIo.unlink(dryRunFilePath)
-                this
-                    .configuration
-                    .setByName(
-                        "dryRun",
-                        if (dryRun == "true") {
-                            true
-                        } else {
-                            false
-                        }
-                    )
+                this.configuration.setByName(
+                    "dryRun",
+                    if (dryRun == "true") {
+                        true
+                    } else {
+                        false
+                    }
+                )
                 Hilog.error(0, "CangjieTest", "dryRun includeTags = ${dryRun}")
-            } else if (let Some(dryRun) <- AbilityDelegatorRegistry
-                .getArguments()
-                .parameters
-                .get("-s dryRun")) {
-                this
-                    .configuration
-                    .setByName(
-                        "dryRun",
-                        if (dryRun == "true") {
-                            true
-                        } else {
-                            false
-                        }
-                    )
+            } else if (let Some(dryRun) <- AbilityDelegatorRegistry.getArguments().parameters.get("-s dryRun")) {
+                this.configuration.setByName(
+                    "dryRun",
+                    if (dryRun == "true") {
+                        true
+                    } else {
+                        false
+                    }
+                )
             }
 
             let bundleName = "com.example.myapplication"
             let allTags = HashSet<String>()
             if (FileIo.access(testTypeFilePath)) {
-                let testType = String.fromUtf8(fs
-                    .File
-                    .readFrom(testTypeFilePath))
+                let testType = String.fromUtf8(fs.File.readFrom(testTypeFilePath))
                 FileIo.unlink(testTypeFilePath)
                 let tags = testType.split(",", removeEmpty: true) |> filterMap {
                     levelNumber: String => levelNumber
                 } |> collectArray
                 allTags.add(all: tags)
-            } else if (let Some(testType) <- AbilityDelegatorRegistry
-                .getArguments()
-                .parameters
-                .get("-s testType")) {
+            } else if (let Some(testType) <- AbilityDelegatorRegistry.getArguments().parameters.get("-s testType")) {
                 let tags = testType.split(",", removeEmpty: true) |> filterMap {
                     levelNumber: String => levelNumber
                 } |> collectArray
@@ -276,9 +225,7 @@ public class OpenHarmonyTestRunner <: TestRunner {
             }
 
             if (FileIo.access(levelFilePath)) {
-                let levels = String.fromUtf8(fs
-                    .File
-                    .readFrom(levelFilePath))
+                let levels = String.fromUtf8(fs.File.readFrom(levelFilePath))
                 FileIo.unlink(levelFilePath)
                 let tags = levels.split(",", removeEmpty: true) |>
                     filterMap {
@@ -293,10 +240,7 @@ public class OpenHarmonyTestRunner <: TestRunner {
                     }
                 } |> collectArray
                 allTags.add(all: tags)
-            } else if (let Some(levels) <- AbilityDelegatorRegistry
-                .getArguments()
-                .parameters
-                .get("-s level")) {
+            } else if (let Some(levels) <- AbilityDelegatorRegistry.getArguments().parameters.get("-s level")) {
                 let tags = levels.split(",", removeEmpty: true) |>
                     filterMap {
                     levelNumber: String => if (levelNumber == "0") {
@@ -312,10 +256,9 @@ public class OpenHarmonyTestRunner <: TestRunner {
                 allTags.add(all: tags)
             }
             let includeTags = String.join(allTags |> collectArray, delimiter: ",")
-            Hilog.error(0, "CangjieTest", "After argument preprocessing, those tags would be included: ${includeTags} .")
-            this
-                .configuration
-                .setByName("includeTags", includeTags)
+            Hilog.error(0, "CangjieTest", "After argument preprocessing, those tags would be included: ${includeTags} ."
+            )
+            this.configuration.setByName("includeTags", includeTags)
 
             let moduleName = "entry"
             let abilityName = "EntryAbility"
@@ -323,12 +266,9 @@ public class OpenHarmonyTestRunner <: TestRunner {
 
             spawn {
                 try {
-                    abilityDelegator
-                        .startAbility(want)
+                    abilityDelegator.startAbility(want)
                     if (FileIo.access(classFilePath)) {
-                        let text = String.fromUtf8(fs
-                            .File
-                            .readFrom(classFilePath))
+                        let text = String.fromUtf8(fs.File.readFrom(classFilePath))
                         FileIo.unlink(classFilePath)
                         Hilog.error(0, "CangjieTest", "text includeTags = ${text}")
                         text.split(",", removeEmpty: true) |>
@@ -344,10 +284,7 @@ public class OpenHarmonyTestRunner <: TestRunner {
                                 case Some(testCaseName) => executeTestCase(testClassName, testCaseName)
                             }
                         }
-                    } else if (let Some(text) <- AbilityDelegatorRegistry
-                        .getArguments()
-                        .parameters
-                        .get("-s class")) {
+                    } else if (let Some(text) <- AbilityDelegatorRegistry.getArguments().parameters.get("-s class")) {
                         text.split(",", removeEmpty: true) |>
                             forEach {
                             t: String =>
@@ -367,7 +304,6 @@ public class OpenHarmonyTestRunner <: TestRunner {
                 } catch (e: Exception) {
                     Hilog.error(0, "CangjieTest", "an exception occurred:\n${getDetailedInfoOf(e)}")
                 }
-                gcov_dump("/data/storage/el1/base/cov")
                 abilityDelegator.finishTest("Test finished.", 0)
             }
         } catch (e: Exception) {
@@ -447,17 +383,13 @@ public func clickAllThoseButtons(): Unit {
         } else if (let Some(button) <- Screen.findTheOnlyUiComponentWhoseIdEqualsTo(
             "permission_dialog_vertical_button_0")) {
             click(at: button.centerPoint)
-        } else if (Screen
-            .findTheOnlyUiComponentWhoseTextEqualsTo("仅充电")
-            .isSome()) {
+        } else if (Screen.findTheOnlyUiComponentWhoseTextEqualsTo("仅充电").isSome()) {
             click(at: Point(618, 1680))
         } else if (let Some(button) <- Screen.findTheOnlyUiComponentWhoseIdEqualsTo("advanced_dialog_button_0")) {
             click(at: button.centerPoint)
         } else if (let Some(button) <- Screen.findTheOnlyUiComponentWhoseTextEqualsTo("稍后")) {
             click(at: button.centerPoint)
-        } else if (Screen
-            .findTheOnlyUiComponentWhoseIdEqualsTo("paf_permission_privacy_text_0")
-            .isSome()) {
+        } else if (Screen.findTheOnlyUiComponentWhoseIdEqualsTo("paf_permission_privacy_text_0").isSome()) {
             click(at: Point(930, 2500))
         } else if (let Some(button) <- Screen.findTheOnlyUiComponentWhoseTextEqualsTo("下一步")) {
             click(at: button.centerPoint)
@@ -528,9 +460,7 @@ public class Screen {
         let driver = OpenHarmonyTestRunner.driver
         let uiComponents = ArrayList<UiComponent>()
         try {
-            let result = driver.findComponents(ui_test
-                .On()
-                .id(id)).getOrThrow()
+            let result = driver.findComponents(ui_test.On().id(id)).getOrThrow()
             result |> forEach<ui_test.Component> {c => uiComponents.add(HybridUiComponent(c))}
         } catch (e: Exception) {
         }
@@ -554,9 +484,7 @@ public class Screen {
         let driver = OpenHarmonyTestRunner.driver
         let uiComponents = ArrayList<UiComponent>()
         try {
-            let result = driver.findComponents(ui_test
-                .On()
-                .text(someText)).getOrThrow()
+            let result = driver.findComponents(ui_test.On().text(someText)).getOrThrow()
             result |> forEach<ui_test.Component> {c => uiComponents.add(HybridUiComponent(c))}
         } catch (e: Exception) {
         }
@@ -600,9 +528,7 @@ public class UiComponentTree {
 }
 
 public func enterPage(pageName: String): Unit {
-    click(at: Screen
-        .getTheOnlyUiComponentWhoseIdEqualsTo(pageName)
-        .centerPoint)
+    click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo(pageName).centerPoint)
 }
 
 public func enterPage(scrollerId!: String, buttonId!: String): Unit {
@@ -616,12 +542,8 @@ public func enterPage(scrollerId!: String, buttonId!: String): Unit {
         swipe(
             from: scroller.centerPoint,
             to: Point(
-                scroller
-                    .centerPoint
-                    .x,
-                scroller
-                    .centerPoint
-                    .y - 80
+                scroller.centerPoint.x,
+                scroller.centerPoint.y - 80
             )
         )
     }
@@ -679,43 +601,26 @@ public interface UiComponent <: Hashable & Equatable<UiComponent> {
         }
     }
     func getAttribute(attributePath: String): String {
-        let inspectorInfoJsonString = getInspectorByKey(this
-            .id
-            .toString())
+        let inspectorInfoJsonString = getInspectorByKey(this.id.toString())
         if (inspectorInfoJsonString.isEmpty()) {
             throw Exception("UI组件树上未找到任何组件ID为\"${this.id}\"的UI组件")
         }
-        let inspectorInfo = JsonValue
-            .fromStr(inspectorInfoJsonString)
-            .asObject()
+        let inspectorInfo = JsonValue.fromStr(inspectorInfoJsonString).asObject()
         let result = getAttribute(
             attributePath,
-            inspectorInfo
-                .get("$attrs")
-                .getOrThrow()
-                .asObject()
+            inspectorInfo.get("$attrs").getOrThrow().asObject()
         )
         match (result.kind()) {
-            case JsonKind.JsString => result
-                .asString()
-                .toString()
+            case JsonKind.JsString => result.asString().toString()
             case _ => result.toString()
         }
     }
     func dump(): Unit {
         let info = StringBuilder()
-        let inspectorInfoJsonString = getInspectorByKey(this
-            .id
-            .toString())
-        let inspectorInfo = JsonValue
-            .fromStr(inspectorInfoJsonString)
-            .asObject()
+        let inspectorInfoJsonString = getInspectorByKey(this.id.toString())
+        let inspectorInfo = JsonValue.fromStr(inspectorInfoJsonString).asObject()
         info.append("start====${this.id}====\n")
-        inspectorInfo
-            .get("$attrs")
-            .getOrThrow()
-            .asObject()
-            .getFields() |>
+        inspectorInfo.get("$attrs").getOrThrow().asObject().getFields() |>
             forEach {
             attribute =>
             let attributeName = attribute[0]
@@ -731,9 +636,7 @@ public interface UiComponent <: Hashable & Equatable<UiComponent> {
     prop text: String
     prop id: String
     func hashCode(): Int64 {
-        this
-            .id
-            .hashCode()
+        this.id.hashCode()
     }
     operator func ==(anotherUiComponent: UiComponent): Bool {
         this.hashCode() == anotherUiComponent.hashCode()
@@ -756,10 +659,7 @@ public func click(): MyAction {
 
 public func clearText(): MyAction {
     MyAction {
-        uiComponent: UiComponent => (uiComponent as HybridUiComponent)
-            .getOrThrow()
-            ._uiComponent
-            .clearText()
+        uiComponent: UiComponent => (uiComponent as HybridUiComponent).getOrThrow()._uiComponent.clearText()
     }
 }
 
@@ -786,24 +686,18 @@ public open class HybridUiComponent <: UiComponent {
     public HybridUiComponent(public let _uiComponent: ui_test.Component) {}
     public prop centerPoint: Point {
         get() {
-            let a = this
-                ._uiComponent
-                .getBoundsCenter()
+            let a = this._uiComponent.getBoundsCenter()
             Point(Int32(a.x), Int32(a.y))
         }
     }
     public prop text: String {
         get() {
-            this
-                ._uiComponent
-                .getText()
+            this._uiComponent.getText()
         }
     }
     public prop id: String {
         get() {
-            this
-                ._uiComponent
-                .getId()
+            this._uiComponent.getId()
         }
     }
 }
@@ -838,19 +732,13 @@ public class LogManager {
     private let mutex = Mutex()
     public func appendEvent(event: Event): Unit {
         synchronized(this.mutex) {
-            this
-                .eventSequence
-                .add(event)
-            this
-                .eventMap
-                .add(event.name, event)
+            this.eventSequence.add(event)
+            this.eventMap.add(event.name, event)
         }
     }
     public func findEventWithName(eventName: String): Option<Event> {
         synchronized(this.mutex) {
-            match (this
-                .eventMap
-                .get(eventName)) {
+            match (this.eventMap.get(eventName)) {
                 case None => None
                 case Some(event) => event
             }
@@ -901,9 +789,7 @@ public func getAbilityContext(): UIAbilityContext {
                 break
         }
     }
-    result
-        .value
-        .getOrThrow()
+    result.value.getOrThrow()
 }
 
 public func getAbilityStageContext(): AbilityStageContext {
@@ -914,11 +800,10 @@ public func getAbilityStageContext(): AbilityStageContext {
 }
 
 func getFullBundleInfo(): BundleInfo {
-    let bundleFlags = BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION | BundleFlag.GET_BUNDLE_INFO_WITH_HAP_MODULE |
-        BundleFlag.GET_BUNDLE_INFO_WITH_ABILITY | BundleFlag.GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY |
-        BundleFlag.GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION |
-        BundleFlag.GET_BUNDLE_INFO_WITH_METADATA | BundleFlag.GET_BUNDLE_INFO_WITH_DISABLE |
-        BundleFlag.GET_BUNDLE_INFO_WITH_MENU
+    let bundleFlags = BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION | BundleFlag.GET_BUNDLE_INFO_WITH_HAP_MODULE | BundleFlag
+        .GET_BUNDLE_INFO_WITH_ABILITY | BundleFlag.GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY | BundleFlag
+        .GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION | BundleFlag.GET_BUNDLE_INFO_WITH_METADATA | BundleFlag
+        .GET_BUNDLE_INFO_WITH_DISABLE | BundleFlag.GET_BUNDLE_INFO_WITH_MENU
     BundleManager.getBundleInfoForSelf(bundleFlags)
 }
 
@@ -956,7 +841,7 @@ public func getRequiredPermissions(requiredPermissions: Array<Permissions>): Uni
                         case _ => Hilog.error(0, "CangjieTest", "unreachable")
                     }
                 }
-                case None =>  Hilog.error(0, "CangjieTest", "???")
+                case None => Hilog.error(0, "CangjieTest", "???")
             }
         }
     }
@@ -1008,16 +893,8 @@ public class getInspector {
     public func attributeWithName(componentId: String, attributeName: String): String {
         try {
             let inspectorInfoJsonString = getInspectorByKey(componentId)
-            let inspectorInfo = JsonValue
-                .fromStr(inspectorInfoJsonString)
-                .asObject()
-            inspectorInfo
-                .get("$attrs")
-                .getOrThrow()
-                .asObject()
-                .get(attributeName)
-                .getOrThrow()
-                .toString()
+            let inspectorInfo = JsonValue.fromStr(inspectorInfoJsonString).asObject()
+            inspectorInfo.get("$attrs").getOrThrow().asObject().get(attributeName).getOrThrow().toString()
         } catch (e: Exception) {
             return "Not find UIComponent or Json parser failed!"
         }
@@ -1040,27 +917,18 @@ public class EventBuilder {
         let byteBuffer = ByteBuffer()
         let jsonWriter = JsonWriter(byteBuffer)
         jsonWriter.startObject()
-        jsonWriter
-            .writeName("bundleName")
-            .writeValue(want.bundleName)
-        jsonWriter
-            .writeName("moduleName")
-            .writeValue(want.moduleName)
-        jsonWriter
-            .writeName("abilityName")
-            .writeValue(want.abilityName)
+        jsonWriter.writeName("bundleName").writeValue(want.bundleName)
+        jsonWriter.writeName("moduleName").writeValue(want.moduleName)
+        jsonWriter.writeName("abilityName").writeValue(want.abilityName)
         jsonWriter.endObject()
         jsonWriter.flush()
         this.add(propertyName, String.fromUtf8(byteBuffer.bytes()))
     }
     public func add(propertyName: String, propertyValue: JsonValue): EventBuilder {
-        this
-            .properties
-            .add(propertyName, propertyValue)
+        this.properties.add(propertyName, propertyValue)
         this
     }
     public func yield(): Unit {
         logEvent(eventName, JsonObject(this.properties).toJsonString())
     }
 }
-

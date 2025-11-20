@@ -14,42 +14,62 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testApplicationInfo_appDistributionType_1", { =>testApplicationInfo_appDistributionType_1()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_2", { =>testApplicationInfo_appDistributionType_2()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_3", { =>testApplicationInfo_appDistributionType_3()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_4", { =>testApplicationInfo_appDistributionType_4()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_5", { =>testApplicationInfo_appDistributionType_5()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_6", { =>testApplicationInfo_appDistributionType_6()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_7", { =>testApplicationInfo_appDistributionType_7()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_8", { =>testApplicationInfo_appDistributionType_8()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_9", { =>testApplicationInfo_appDistributionType_9()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_10", { =>testApplicationInfo_appDistributionType_10()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_11", { =>testApplicationInfo_appDistributionType_11()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_12", { =>testApplicationInfo_appDistributionType_12()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_13", { =>testApplicationInfo_appDistributionType_13()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_14", { =>testApplicationInfo_appDistributionType_14()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_15", { =>testApplicationInfo_appDistributionType_15()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_16", { =>testApplicationInfo_appDistributionType_16()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_17", { =>testApplicationInfo_appDistributionType_17()
-})
-registerTestSuite("testApplicationInfo_appDistributionType_18", { =>testApplicationInfo_appDistributionType_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testApplicationInfo_appDistributionType_1", {
+        => testApplicationInfo_appDistributionType_1()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_2", {
+        => testApplicationInfo_appDistributionType_2()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_3", {
+        => testApplicationInfo_appDistributionType_3()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_4", {
+        => testApplicationInfo_appDistributionType_4()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_5", {
+        => testApplicationInfo_appDistributionType_5()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_6", {
+        => testApplicationInfo_appDistributionType_6()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_7", {
+        => testApplicationInfo_appDistributionType_7()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_8", {
+        => testApplicationInfo_appDistributionType_8()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_9", {
+        => testApplicationInfo_appDistributionType_9()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_10", {
+        => testApplicationInfo_appDistributionType_10()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_11", {
+        => testApplicationInfo_appDistributionType_11()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_12", {
+        => testApplicationInfo_appDistributionType_12()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_13", {
+        => testApplicationInfo_appDistributionType_13()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_14", {
+        => testApplicationInfo_appDistributionType_14()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_15", {
+        => testApplicationInfo_appDistributionType_15()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_16", {
+        => testApplicationInfo_appDistributionType_16()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_17", {
+        => testApplicationInfo_appDistributionType_17()
+    })
+    registerTestSuite("testApplicationInfo_appDistributionType_18", {
+        => testApplicationInfo_appDistributionType_18()
+    })
 }

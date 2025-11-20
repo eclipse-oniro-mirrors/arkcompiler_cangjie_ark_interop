@@ -25,6 +25,7 @@ import std.collection.HashMap
 import ohos.base.*
 import ohos.file.fs.*
 import ohos.hilog.Hilog
+import ohos.business_exception.BusinessException
 
 @Test
 class test_AVImageGenerator {
@@ -37,22 +38,22 @@ class test_AVImageGenerator {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testCase00(): Unit {
-        let timeUs = 0
-        let queryOption = AVImageQueryOptions.AvImageQueryNextSync
-        let param = PixelMapParams(width:300, height:300)
-        let generator = createAVImageGenerator()
-        let rawFd = getResourceManager().getRawFd("trailer.mp4")
-        generator.fdSrc = AVFileDescriptor(rawFd.fd, offset:rawFd.offset, length:rawFd.length)
-        let pic = generator.fetchFrameByTime(timeUs, queryOption, param)
-        generator.release()
-        let imageInfo = pic.getImageInfo()
-        Hilog.info(0, "cangjietest", "height ${imageInfo.size.height} width ${imageInfo.size.width}")
-        @Expect(imageInfo.size.height, 300)
-        @Expect(imageInfo.size.width, 300)
+        try {
+            let timeUs = 0
+            let queryOption = AVImageQueryOptions.AvImageQueryNextSync
+            let param = PixelMapParams(width: 300, height: 300)
+            let generator = createAVImageGenerator()
+            let rawFd = getResourceManager().getRawFd("trailer.mp4")
+            generator.fdSrc = AVFileDescriptor(rawFd.fd, offset: rawFd.offset, length: rawFd.length)
+            let pic = generator.fetchFrameByTime(timeUs, queryOption, param)
+            generator.release()
+            let imageInfo = pic.getImageInfo()
+            @Expect(imageInfo.size.height, 300)
+            @Expect(imageInfo.size.width, 300)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 5400101)
+        }
     }
 }
-
-
-

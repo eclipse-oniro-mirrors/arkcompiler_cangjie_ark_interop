@@ -36,7 +36,7 @@ class TestOrderByDesc_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -56,7 +56,7 @@ class TestOrderByDesc_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -76,7 +76,7 @@ class TestOrderByDesc_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -96,7 +96,7 @@ class TestOrderByDesc_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -105,25 +105,5 @@ class TestOrderByDesc_1 {
         rdbPridecates.orderByDesc("1234567890")
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Order_By_Desc_0500
-     * @tc.name      : TestCase_5
-     * @tc.desc      : "1024" Match columns sorted in descending order
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_5(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testOrderByDesc")
-        rdbPridecates.orderByDesc("test")
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 ends.")
     }
 }

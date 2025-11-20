@@ -36,7 +36,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_AlphabetIndexer_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin AlphabetIndexer")
@@ -61,7 +61,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Blank_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Blank")
@@ -86,7 +86,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Button_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Button")
@@ -111,7 +111,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Checkbox_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Checkbox")
@@ -136,7 +136,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_CheckboxGroup_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin CheckboxGroup")
@@ -162,7 +162,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_DataPanel_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin DataPanel")
@@ -187,7 +187,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_DatePicker_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin DatePicker")
@@ -212,7 +212,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Divider_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Divider")
@@ -237,7 +237,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Gauge_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Gauge")
@@ -262,7 +262,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Image_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Image")
@@ -287,7 +287,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_ImageSpan_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin ImageSpan")
@@ -312,7 +312,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_LoadingProgress_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin LoadingProgress")
@@ -337,7 +337,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Menu_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Menu")
@@ -362,7 +362,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_MenuItem_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin MenuItem")
@@ -387,7 +387,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_MenuItemGroup_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin MenuItemGroup")
@@ -412,7 +412,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Progress_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Progress")
@@ -437,7 +437,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_QRCode_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin QRCode")
@@ -462,7 +462,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Radio_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Radio")
@@ -487,7 +487,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Rating_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Rating")
@@ -512,7 +512,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Refresh_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Refresh")
@@ -537,7 +537,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_RichEditor_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin RichEditor")
@@ -562,7 +562,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_RowSplit_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_RowSplit_2300() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin RowSplit")
@@ -587,7 +587,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_ScrollBar_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_ScrollBar_2400() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin ScrollBar")
@@ -612,7 +612,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Search_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Search_2500() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Search")
@@ -637,7 +637,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Slider_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Slider_2600() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Slider")
@@ -662,7 +662,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Stepper_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Stepper_2700() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Stepper")
@@ -687,7 +687,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_StepperItem_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_StepperItem_2800() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin StepperItem")
@@ -712,7 +712,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Text_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Text_2900() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Text")
@@ -737,7 +737,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_TextArea_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_TextArea_3000() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin TextArea")
@@ -762,7 +762,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_TextClock_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_TextClock_3100() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin TextClock")
@@ -787,7 +787,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_TextInput_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_TextInput_3200() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin TextInput")
@@ -812,7 +812,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_TextPicker_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_TextPicker_3300() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin TextPicker")
@@ -837,7 +837,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_TextTimer_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_TextTimer_3400() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin TextTimer")
@@ -862,7 +862,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Toggle_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Toggle_3500() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Toggle")
@@ -887,7 +887,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Web_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Web_3600() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Web")
@@ -912,7 +912,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Select_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Select_3700() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Select")
@@ -937,7 +937,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Badge_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Badge_3800() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Badge")
@@ -962,7 +962,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Column_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Column_3900() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Column")
@@ -987,7 +987,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Grid_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Grid_4000() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Grid")
@@ -1012,7 +1012,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_GridItem_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_GridItem_4100() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin GridItem")
@@ -1037,7 +1037,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_GridRow_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_GridRow_4200() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin GridRow")
@@ -1062,7 +1062,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_GridCol_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_GridCol_4300() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin GridCol")
@@ -1087,7 +1087,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Flex_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Flex_4400() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Flex")
@@ -1112,7 +1112,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_List_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_List_4500() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin List")
@@ -1137,7 +1137,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_ListItem_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_ListItem_4600() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin ListItem")
@@ -1162,7 +1162,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_ListItemGroup_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_ListItemGroup_4700() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin ListItemGroup")
@@ -1189,7 +1189,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Row_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Row_5000() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Row")
@@ -1214,7 +1214,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Scroll_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Scroll_5100() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Scroll")
@@ -1239,7 +1239,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Stack_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Stack_5200() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Stack")
@@ -1264,7 +1264,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Swiper_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Swiper_5300() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Swiper")
@@ -1289,7 +1289,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Tabs_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Tabs_5400() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Tabs")
@@ -1314,7 +1314,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_TabContent_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_TabContent_5500() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin TabContent")
@@ -1339,7 +1339,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Circle_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Circle_5600() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Circle")
@@ -1364,7 +1364,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Line_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Line_5700() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Line")
@@ -1389,7 +1389,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Rect_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Rect_5800() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Rect")
@@ -1414,7 +1414,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Shape_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Shape_5900() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Shape")
@@ -1439,7 +1439,7 @@ class Test_EmptyAttrs_Visibility {
      * @tc.desic：Empty_Path_Visibility
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Visibility_Path_6100() {
         sleepFor(1.second)
         Hilog.info(0,"", "cangjietest", "CheckCheckVisibility: FindBegin Path")

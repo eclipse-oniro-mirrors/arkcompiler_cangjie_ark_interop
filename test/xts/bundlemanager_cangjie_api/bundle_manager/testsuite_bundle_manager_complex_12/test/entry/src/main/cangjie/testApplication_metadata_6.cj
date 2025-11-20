@@ -14,6 +14,7 @@
  */
 
 package ohos_app_cangjie_entry
+
 import std.unittest.*
 import std.unittest.common.*
 import std.unittest.testmacro.*
@@ -26,34 +27,6 @@ import ohos.bundle.bundle_manager
 import ohos.arkui.state_macro_manage.r
 import kit.LocalizationKit.AppResource
 import ohos.bundle.bundle_manager.{HapModuleInfo, AbilityInfo, LaunchType, SupportWindowMode}
+
 @Test
-class testApplication_metadata_6 {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+class testApplication_metadata_6 {}

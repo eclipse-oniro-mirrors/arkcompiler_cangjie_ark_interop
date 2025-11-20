@@ -79,7 +79,7 @@ class View_EmptyAttrs_RenderFit {
                         RenderFit_Prop: (String, RenderFit, String), idx: Int64 => if (this.renderFlag) {}
                         else if (this.targetView == "AlphabetIndexer") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -89,7 +89,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("AlphabetIndexer : ${RenderFit_Prop[0]}")
@@ -105,7 +105,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Blank") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -115,7 +115,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Blank : ${RenderFit_Prop[0]}")
@@ -131,7 +131,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Button") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -141,7 +141,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Button : ${RenderFit_Prop[0]}")
@@ -158,7 +158,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Checkbox") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -168,7 +168,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Checkbox : ${RenderFit_Prop[0]}")
@@ -184,7 +184,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "CheckboxGroup") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -194,7 +194,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("CheckboxGroup : ${RenderFit_Prop[0]}")
@@ -210,7 +210,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         }else if (this.targetView == "DataPanel") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -220,7 +220,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("DataPanel : ${RenderFit_Prop[0]}")
@@ -236,7 +236,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "DatePicker") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -246,7 +246,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("DatePicker : ${RenderFit_Prop[0]}")
@@ -262,7 +262,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Divider") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -272,7 +272,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Divider : ${RenderFit_Prop[0]}")
@@ -288,7 +288,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Gauge") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -298,7 +298,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Gauge : ${RenderFit_Prop[0]}")
@@ -316,7 +316,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Image") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -326,7 +326,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Image : ${RenderFit_Prop[0]}")
@@ -343,7 +343,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "ImageSpan") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -353,7 +353,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("ImageSpan : ${RenderFit_Prop[0]}")
@@ -371,7 +371,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "LoadingProgress") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -381,7 +381,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("LoadingProgress : ${RenderFit_Prop[0]}")
@@ -397,7 +397,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Menu") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -407,7 +407,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Menu : ${RenderFit_Prop[0]}")
@@ -430,7 +430,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "MenuItem") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -440,7 +440,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("MenuItem : ${RenderFit_Prop[0]}")
@@ -460,7 +460,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "MenuItemGroup") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -470,7 +470,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("MenuItemGroup : ${RenderFit_Prop[0]}")
@@ -493,7 +493,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Progress") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -503,7 +503,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Progress : ${RenderFit_Prop[0]}")
@@ -519,7 +519,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "QRCode") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -529,7 +529,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("QRCode : ${RenderFit_Prop[0]}")
@@ -545,7 +545,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Radio") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -555,7 +555,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Radio : ${RenderFit_Prop[0]}")
@@ -571,7 +571,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Rating") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -581,7 +581,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Rating : ${RenderFit_Prop[0]}")
@@ -597,7 +597,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Refresh") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -607,7 +607,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Refresh : ${RenderFit_Prop[0]}")
@@ -625,7 +625,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "RichEditor") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -635,7 +635,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("RichEditor : ${RenderFit_Prop[0]}")
@@ -651,7 +651,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "RowSplit") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -661,7 +661,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("RowSplit : ${RenderFit_Prop[0]}")
@@ -688,7 +688,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "ScrollBar") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -698,7 +698,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("ScrollBar : ${RenderFit_Prop[0]}")
@@ -733,7 +733,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Search") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -743,7 +743,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Search : ${RenderFit_Prop[0]}")
@@ -759,7 +759,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Slider") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -769,7 +769,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Slider : ${RenderFit_Prop[0]}")
@@ -785,7 +785,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Stepper") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -795,7 +795,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Stepper : ${RenderFit_Prop[0]}")
@@ -818,7 +818,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "StepperItem") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -828,7 +828,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("StepperItem : ${RenderFit_Prop[0]}")
@@ -851,7 +851,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Text") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -861,7 +861,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Text : ${RenderFit_Prop[0]}")
@@ -877,7 +877,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "TextArea") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -887,7 +887,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("TextArea : ${RenderFit_Prop[0]}")
@@ -903,7 +903,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "TextClock") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -913,7 +913,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("TextClock : ${RenderFit_Prop[0]}")
@@ -929,7 +929,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "TextInput") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -939,7 +939,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("TextInput : ${RenderFit_Prop[0]}")
@@ -955,7 +955,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "TextPicker") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -965,7 +965,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("TextPicker : ${RenderFit_Prop[0]}")
@@ -981,7 +981,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "TextTimer") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -991,7 +991,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("TextTimer : ${RenderFit_Prop[0]}")
@@ -1007,7 +1007,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Toggle") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1017,7 +1017,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Toggle : ${RenderFit_Prop[0]}")
@@ -1033,7 +1033,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Web") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1043,7 +1043,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Web : ${RenderFit_Prop[0]}")
@@ -1061,7 +1061,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Select") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1071,7 +1071,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Select : ${RenderFit_Prop[0]}")
@@ -1090,7 +1090,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Badge") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1100,7 +1100,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Badge : ${RenderFit_Prop[0]}")
@@ -1121,7 +1121,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Column") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1131,7 +1131,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Column : ${RenderFit_Prop[0]}")
@@ -1149,7 +1149,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Grid") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1159,7 +1159,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Grid : ${RenderFit_Prop[0]}")
@@ -1182,7 +1182,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "GridItem") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1192,7 +1192,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("GridItem : ${RenderFit_Prop[0]}")
@@ -1215,7 +1215,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "GridRow") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1225,7 +1225,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("GridRow : ${RenderFit_Prop[0]}")
@@ -1248,7 +1248,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "GridCol") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1258,7 +1258,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("GridCol : ${RenderFit_Prop[0]}")
@@ -1281,7 +1281,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Flex") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1291,7 +1291,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Flex : ${RenderFit_Prop[0]}")
@@ -1309,7 +1309,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "List") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1319,7 +1319,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("List : ${RenderFit_Prop[0]}")
@@ -1344,7 +1344,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "ListItem") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1354,7 +1354,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("ListItem : ${RenderFit_Prop[0]}")
@@ -1379,7 +1379,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "ListItemGroup") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1389,7 +1389,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("ListItemGroup : ${RenderFit_Prop[0]}")
@@ -1414,7 +1414,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         }  else if (this.targetView == "RelativeContainer") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1424,7 +1424,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("RelativeContainer : ${RenderFit_Prop[0]}")
@@ -1442,7 +1442,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Row") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1452,7 +1452,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Row : ${RenderFit_Prop[0]}")
@@ -1470,7 +1470,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Scroll") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1480,7 +1480,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Scroll : ${RenderFit_Prop[0]}")
@@ -1498,7 +1498,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Stack") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1508,7 +1508,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Stack : ${RenderFit_Prop[0]}")
@@ -1526,7 +1526,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Swiper") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1536,7 +1536,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Swiper : ${RenderFit_Prop[0]}")
@@ -1554,7 +1554,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Tabs") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1564,7 +1564,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Tabs : ${RenderFit_Prop[0]}")
@@ -1587,7 +1587,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "TabContent") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1597,7 +1597,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("TabContent : ${RenderFit_Prop[0]}")
@@ -1621,7 +1621,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Circle") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1631,7 +1631,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Circle : ${RenderFit_Prop[0]}")
@@ -1647,7 +1647,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Line") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1657,7 +1657,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Line : ${RenderFit_Prop[0]}")
@@ -1676,7 +1676,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Rect") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1686,7 +1686,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Rect : ${RenderFit_Prop[0]}")
@@ -1702,7 +1702,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         } else if (this.targetView == "Shape") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1712,7 +1712,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Shape : ${RenderFit_Prop[0]}")
@@ -1728,7 +1728,7 @@ class View_EmptyAttrs_RenderFit {
                             }.width(300).height(120).backgroundColor(Color.Gray)
                         }else if (this.targetView == "Path") {
                             Button("change size")
-                                .onClick {
+                                .onClick({
                                     event =>
                                     if (this.RenderFitFlag) {
                                         this.RenderFitWidth = this.RenderFitWidth1
@@ -1738,7 +1738,7 @@ class View_EmptyAttrs_RenderFit {
                                         this.RenderFitHeight = this.RenderFitHeight2
                                     }
                                     this.RenderFitFlag = !this.RenderFitFlag
-                                }
+                                })
                                 .width(100)
                                 .height(50)
                             Text("Path : ${RenderFit_Prop[0]}")

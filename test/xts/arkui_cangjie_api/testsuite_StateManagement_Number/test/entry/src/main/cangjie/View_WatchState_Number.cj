@@ -23,7 +23,7 @@ import ohos.arkui.state_macro_manage.*
 import std.collection.*
 import stdx.encoding.json.*
 import std.convert.*
-import ohos.base.{LengthProp, Length,Color,LengthType}
+import ohos.base.{LengthProp, Length,Color}
 import std.time.{DateTime}
 import std.sync.{Timer}
 import ohos.arkui.state_management.ObservedProperty
@@ -74,23 +74,23 @@ class View_WatchState_Number {
         Column(space:20) {
             Text("WatchStatus: ${CheckString}").key("WatchState")
 
-            Button("Trigger onWatchNumber").onClick {ClickEvent =>
+            Button("Trigger onWatchNumber").onClick({ClickEvent =>
                 this.baseNumber = 10
-            }.key("state1")
-            Button("Trigger onWatchObject").onClick {ClickEvent =>
+            }).key("state1")
+            Button("Trigger onWatchObject").onClick({ClickEvent =>
                 this.baseObject = Num1(20)
-            }.key("state2")
-            Button("Trigger onWatchString").onClick {ClickEvent =>
+            }).key("state2")
+            Button("Trigger onWatchString").onClick({ClickEvent =>
                 this.baseString = "30"
-            }.key("state3")
+            }).key("state3")
             Button("Trigger onWatchDateTime")
-                .onClick {ClickEvent =>
+                .onClick({ClickEvent =>
                     this.baseDate = DateTime.parse("2023-04-10T08:00:00+08:00")
-                }
+                })
                 .key("state4")
-            Button("Trigger onWatchBoolean").onClick {ClickEvent =>
+            Button("Trigger onWatchBoolean").onClick({ClickEvent =>
                 this.baseBoolean = true
-            }.key("state5")
+            }).key("state5")
         }.width(100.percent).margin(top: 10)
     }
 }

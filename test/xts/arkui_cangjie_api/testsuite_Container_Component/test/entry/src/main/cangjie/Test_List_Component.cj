@@ -50,7 +50,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_001 start")
         let List = getInspectorByKey("Test_List")
@@ -67,7 +67,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_001 start")
         let List = getInspectorByKey("Test_List")
@@ -87,7 +87,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_003 start")
         let List = getInspectorByKey("Test_List")
@@ -149,7 +149,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_004 start")
         let List = getInspectorByKey("Test_List")
@@ -169,7 +169,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_005() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_005 start")
         let List = getInspectorByKey("Test_List")
@@ -189,7 +189,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_007() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_007 start")
         let List = getInspectorByKey("Test_List")
@@ -215,7 +215,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_008() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_008 start")
         let List = getInspectorByKey("Test_List")
@@ -241,7 +241,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_009() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_009 start")
         let List = getInspectorByKey("Test_List")
@@ -261,7 +261,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_010() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_010 start")
         let List = getInspectorByKey("Test_List")
@@ -281,7 +281,7 @@ class Test_List_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_List_Component_011() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_011 start")
         let List = getInspectorByKey("Test_List")

@@ -54,7 +54,7 @@ class Test_runner {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_runner_registerCreator() {
         Hilog.info(0, "cangjietest","test runner registerCreator beigins")
         try {
@@ -76,7 +76,7 @@ class Test_runner {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_runner_onRun() {
         Hilog.info(0, "cangjietest","test runner onrun beigins")
         try {
@@ -99,7 +99,7 @@ class Test_runner {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_runner_onPrepare() {
         Hilog.info(0, "cangjietest","test runner onPrepare beigins")
         try {

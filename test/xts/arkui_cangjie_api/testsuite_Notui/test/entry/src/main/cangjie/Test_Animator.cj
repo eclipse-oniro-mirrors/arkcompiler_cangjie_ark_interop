@@ -44,7 +44,7 @@ class Test_Animator {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Animator_02() {
         Hilog.info(0, "cangjietest", "test", "Test_Animator_02 start")
         sleepFor(1.second)
@@ -65,7 +65,7 @@ class Test_Animator {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Animator_04() {
         Hilog.info(0, "cangjietest", "test", "Test_Animator_04 start")
         sleepFor(1.second)
@@ -85,7 +85,7 @@ class Test_Animator {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Animator_05() {
         Hilog.info(0, "cangjietest", "test", "Test_Animator_05 start")
         sleepFor(1.second)
@@ -105,7 +105,7 @@ class Test_Animator {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Animator_06() {
         Hilog.info(0, "cangjietest", "test", "Test_Animator_06 start")
         sleepFor(1.second)
@@ -125,7 +125,7 @@ class Test_Animator {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Animator_07() {
         Hilog.info(0, "cangjietest", "test", "Test_Animator_07 start")
         sleepFor(1.second)
@@ -145,7 +145,7 @@ class Test_Animator {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Animator_08() {
         Hilog.info(0, "cangjietest", "test", "Test_Animator_06 start")
         sleepFor(1.second)

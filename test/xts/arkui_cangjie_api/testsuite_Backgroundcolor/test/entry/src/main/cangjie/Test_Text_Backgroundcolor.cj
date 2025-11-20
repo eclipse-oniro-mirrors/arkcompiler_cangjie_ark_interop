@@ -40,7 +40,7 @@ class Test_Text_Backgroundcolor {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Text_Backgroundcolor_0100() {
         Hilog.info(0, "cangjietest", "Test_Text_Backgroundcolor_01 start")
         sleepFor(1.second)

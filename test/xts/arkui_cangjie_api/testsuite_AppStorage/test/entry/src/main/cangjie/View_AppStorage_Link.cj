@@ -50,7 +50,7 @@ class View_AppStorage_Link {
         Column(space:10) {
             Button("Get Prop In ParentComp")
                 .id("change1")
-                .onClick {ClickEvent =>
+                .onClick({ClickEvent =>
                     this.ValueInt = AppStorage.link<Int64>("PropInt").getOrThrow().get()
                     this.ValueFloat = AppStorage.link<Float64>("PropFloat").getOrThrow().get()
                     this.ValueRune = AppStorage.link<Rune>("PropRune").getOrThrow().get()
@@ -60,11 +60,11 @@ class View_AppStorage_Link {
                     this.ValueStruct = AppStorage.link<BB>("PropStruct").getOrThrow().get().bb
                     this.ValueEnum = EE.getEnumNumber(AppStorage.link<EE>("PropEnum").getOrThrow().get())
                     this.ValueInt1 = AppStorage.link<Int64>("PropInt1").isNone()
-                }
+                })
 
             Button("Set Prop In ParentComp")
                 .id("change2")
-                .onClick {ClickEvent =>
+                .onClick({ClickEvent =>
                     AppStorage.set("PropInt", 50)
                     AppStorage.set("PropFloat", 50.0)
                     AppStorage.set("PropRune", r'C')
@@ -81,7 +81,7 @@ class View_AppStorage_Link {
                     this.ValueClass = AppStorage.get<AA>("PropClass").getOrThrow().aa
                     this.ValueStruct = AppStorage.get<BB>("PropStruct").getOrThrow().bb
                     this.ValueEnum = EE.getEnumNumber(AppStorage.get<EE>("PropEnum").getOrThrow())
-                }
+                })
 
             Text("ValueInt In ParentComp: " + this.ValueInt.toString()).id("PropInt")
             Text("ValueFloat In ParentComp: " + this.ValueFloat.toString()).id("PropFloat")

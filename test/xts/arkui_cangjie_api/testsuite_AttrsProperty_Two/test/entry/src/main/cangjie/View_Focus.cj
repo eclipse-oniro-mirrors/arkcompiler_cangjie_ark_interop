@@ -42,9 +42,9 @@ class View_Focus {
         Column(space: 20) {
             Row() {
                 Button("Hello Cangjie A")
-                    .onClick {
+                    .onClick({
                         evt => Hilog.info(0, "cangjietest", "Hello Cangjie A")
-                    }
+                    })
                     .backgroundColor(oneButtonColor)
                     .width(400.px)
                     .height(150.px)
@@ -63,9 +63,9 @@ class View_Focus {
                     .key(this.idList[0])
 
                 Button("Hello Cangjie B")
-                    .onClick {
+                    .onClick({
                         evt => Hilog.info(0, "cangjietest", "Hello Cangjie B")
-                    }
+                    })
                     .backgroundColor(twoButtonColor)
                     .width(400.px)
                     .height(150.px)
@@ -84,9 +84,9 @@ class View_Focus {
             }
             Row() {
                 Button("Hello Cangjie C")
-                    .onClick {
+                    .onClick({
                         evt => Hilog.info(0, "cangjietest", "Hello Cangjie C")
-                    }
+                    })
                     .backgroundColor(threeButtonColor)
                     .width(400.px)
                     .height(150.px)
@@ -104,9 +104,9 @@ class View_Focus {
                     .key(this.idList[2])
 
                 Button("Hello Cangjie D")
-                    .onClick {
+                    .onClick({
                         evt => Hilog.info(0, "cangjietest", "Hello Cangjie D")
-                    }
+                    })
                     .backgroundColor(fourButtonColor)
                     .width(400.px)
                     .height(150.px)
@@ -127,9 +127,9 @@ class View_Focus {
 
             Button() {
                 Button("Hello Cangjie E")
-                    .onClick {
+                    .onClick({
                         evt => Hilog.info(0, "cangjietest", "Hello Cangjie E")
-                    }
+                    })
                     .backgroundColor(fiveButtonColor)
                     .width(400.px)
                     .height(150.px)
@@ -165,7 +165,7 @@ class View_Focus {
                     .fontColor(Color.Black)
                     .focusable(true)
                     .id(this.idList[5])
-                    .onClick {
+                    .onClick({
                         ClickEvent =>
                         let selectId = this.idList[3]
                         let result = FocusControl.requestFocus(selectId)
@@ -174,7 +174,7 @@ class View_Focus {
                         } else {
                             Hilog.info(0, "cangjietest", "Request failed")
                         }
-                    }
+                    })
             }
         }.width(100.percent).margin(top: 20)
     }

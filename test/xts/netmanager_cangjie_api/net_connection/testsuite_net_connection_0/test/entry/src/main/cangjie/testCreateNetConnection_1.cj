@@ -38,7 +38,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_0(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_0 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -59,7 +59,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -80,7 +80,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -101,7 +101,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -122,7 +122,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -143,7 +143,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -164,7 +164,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -185,7 +185,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -206,7 +206,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -227,7 +227,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -248,7 +248,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_10 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -269,7 +269,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_11 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -290,7 +290,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_12 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -311,7 +311,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_13 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -332,7 +332,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_14 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -353,7 +353,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_15 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -374,7 +374,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_16 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -395,7 +395,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_17 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -416,7 +416,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_18 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -437,7 +437,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_19 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -458,7 +458,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_20 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -479,7 +479,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_21 begins.")
         Hilog.info(0, "cangjietest","create connection")
@@ -500,7 +500,7 @@ class testCreateNetConnection_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_22 begins.")
         Hilog.info(0, "cangjietest","create connection")

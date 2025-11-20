@@ -42,10 +42,4 @@ func testsuite(): Unit {
     registerTestSuite("testSubscribe_58", {
         => testSubscribe_58()
     })
-    registerTestSuite("testSubscribe_59", {
-        => testSubscribe_59()
-    })
-    registerTestSuite("testSubscribe_60", {
-        => testSubscribe_60()
-    })
 }

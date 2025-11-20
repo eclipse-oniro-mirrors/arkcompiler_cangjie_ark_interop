@@ -49,7 +49,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_001() {
         let Inspector = getInspectorByKey("Swiper_component")
         let aar = Inspector.split("useShadowBatching")
@@ -71,7 +71,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_002() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -89,7 +89,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_003() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -107,7 +107,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_004() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -125,7 +125,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_005() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -143,7 +143,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_006() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -161,7 +161,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_007() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -179,7 +179,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_008() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -197,7 +197,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_009() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -215,7 +215,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_010() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -233,7 +233,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_011() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -251,7 +251,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_012() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -270,7 +270,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_014() {
         let Inspector = getInspectorByKey("Swiper_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -288,7 +288,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_015() {
         let textButton = driver.findComponent(On().id("myText"))
         let text1 = textButton.getOrThrow().getText()
@@ -310,7 +310,7 @@ class Test_Swiper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Swiper_Component_016() {
         let textButton = driver.findComponent(On().id("myText"))
         let text1 = textButton.getOrThrow().getText()

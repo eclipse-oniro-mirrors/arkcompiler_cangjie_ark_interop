@@ -14,42 +14,53 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testModuleInfo_installationFree_entry_1", { =>testModuleInfo_installationFree_entry_1()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_2", { =>testModuleInfo_installationFree_entry_2()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_3", { =>testModuleInfo_installationFree_entry_3()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_4", { =>testModuleInfo_installationFree_entry_4()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_5", { =>testModuleInfo_installationFree_entry_5()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_6", { =>testModuleInfo_installationFree_entry_6()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_7", { =>testModuleInfo_installationFree_entry_7()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_8", { =>testModuleInfo_installationFree_entry_8()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_9", { =>testModuleInfo_installationFree_entry_9()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_10", { =>testModuleInfo_installationFree_entry_10()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_11", { =>testModuleInfo_installationFree_entry_11()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_12", { =>testModuleInfo_installationFree_entry_12()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_13", { =>testModuleInfo_installationFree_entry_13()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_14", { =>testModuleInfo_installationFree_entry_14()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_15", { =>testModuleInfo_installationFree_entry_15()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_16", { =>testModuleInfo_installationFree_entry_16()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_17", { =>testModuleInfo_installationFree_entry_17()
-})
-registerTestSuite("testModuleInfo_installationFree_entry_18", { =>testModuleInfo_installationFree_entry_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testModuleInfo_installationFree_entry_1", {
+        => testModuleInfo_installationFree_entry_1()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_2", {
+        => testModuleInfo_installationFree_entry_2()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_3", {
+        => testModuleInfo_installationFree_entry_3()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_4", {
+        => testModuleInfo_installationFree_entry_4()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_5", {
+        => testModuleInfo_installationFree_entry_5()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_9", {
+        => testModuleInfo_installationFree_entry_9()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_10", {
+        => testModuleInfo_installationFree_entry_10()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_11", {
+        => testModuleInfo_installationFree_entry_11()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_12", {
+        => testModuleInfo_installationFree_entry_12()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_13", {
+        => testModuleInfo_installationFree_entry_13()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_14", {
+        => testModuleInfo_installationFree_entry_14()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_15", {
+        => testModuleInfo_installationFree_entry_15()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_16", {
+        => testModuleInfo_installationFree_entry_16()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_17", {
+        => testModuleInfo_installationFree_entry_17()
+    })
+    registerTestSuite("testModuleInfo_installationFree_entry_18", {
+        => testModuleInfo_installationFree_entry_18()
+    })
 }

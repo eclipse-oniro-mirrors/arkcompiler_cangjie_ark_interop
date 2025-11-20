@@ -48,7 +48,7 @@ class Test_Flex_Component {
      * @tc.desic：flexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Flex_0100_Component() {
         let Inspector = getInspectorByKey("Test_Text00")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -62,7 +62,7 @@ class Test_Flex_Component {
      * @tc.desic：FlexCangjieTest
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Flex_0200_Component() {
         let Inspector = getInspectorByKey("Test_Text00")
         let obj = JsonValue.fromStr(Inspector).asObject()

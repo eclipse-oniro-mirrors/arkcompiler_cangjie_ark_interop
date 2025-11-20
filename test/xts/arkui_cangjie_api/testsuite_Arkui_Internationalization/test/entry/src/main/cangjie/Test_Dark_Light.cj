@@ -47,7 +47,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func Test_Dark_Light_0100() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_01 start")
@@ -66,7 +66,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func Test_Dark_Light_0200() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_02 start")
@@ -85,7 +85,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Dark_Light_0300() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_03 start")
         sleepFor(2.second)
@@ -104,7 +104,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Dark_Light_0400() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_04 start")
         sleepFor(2.second)
@@ -122,7 +122,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Dark_Light_0500() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_05 start")
         sleepFor(2.second)
@@ -140,7 +140,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Dark_Light_0600() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_06 start")
         sleepFor(2.second)
@@ -159,7 +159,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Dark_Light_0700() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_07 start")
         sleepFor(2.second)
@@ -178,7 +178,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Dark_Light_0800() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_08 start")
         sleepFor(2.second)
@@ -197,7 +197,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Dark_Light_0900() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_09 start")
         sleepFor(2.second)
@@ -216,7 +216,7 @@ class Test_Dark_Light {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Dark_Light_1000() {
         Hilog.info(0, "cangjietest", "Test_Dark_Light_10 start")
         sleepFor(2.second)

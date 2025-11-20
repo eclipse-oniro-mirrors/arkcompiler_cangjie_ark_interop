@@ -48,7 +48,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_151(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_151 begins.")
         @Expect(Support.COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED, "usual.event.data.VISIBLE_ACCOUNTS_UPDATED")
@@ -64,7 +64,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_152(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_152 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_POWER_STATE, "usual.event.wifi.POWER_STATE")
@@ -80,7 +80,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_153(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_153 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_SCAN_FINISHED, "usual.event.wifi.SCAN_FINISHED")
@@ -96,7 +96,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_154(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_154 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_RSSI_VALUE, "usual.event.wifi.RSSI_VALUE")
@@ -112,7 +112,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_155(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_155 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_CONN_STATE, "usual.event.wifi.CONN_STATE")
@@ -128,7 +128,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_156(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_156 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_HOTSPOT_STATE, "usual.event.wifi.HOTSPOT_STATE")
@@ -144,7 +144,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_157(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_157 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_AP_STA_JOIN, "usual.event.wifi.WIFI_HS_STA_JOIN")
@@ -160,7 +160,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_158(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_158 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_AP_STA_LEAVE, "usual.event.wifi.WIFI_HS_STA_LEAVE")
@@ -176,7 +176,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_159(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_159 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE, "usual.event.wifi.mplink.STATE_CHANGE")
@@ -192,7 +192,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_160(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_160 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_P2P_CONN_STATE, "usual.event.wifi.p2p.CONN_STATE_CHANGE")
@@ -208,7 +208,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_161(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_161 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_P2P_STATE_CHANGED, "usual.event.wifi.p2p.STATE_CHANGE")
@@ -224,7 +224,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_162(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_162 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED, "usual.event.wifi.p2p.DEVICES_CHANGE")
@@ -240,7 +240,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_163(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_163 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED, "usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE")
@@ -256,7 +256,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_164(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_164 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED, "usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE")
@@ -272,7 +272,7 @@ class test_Support_6 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_165(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_165 begins.")
         @Expect(Support.COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED, "usual.event.wifi.p2p.GROUP_STATE_CHANGED")

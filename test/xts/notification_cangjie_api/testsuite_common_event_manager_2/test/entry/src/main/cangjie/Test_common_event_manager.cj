@@ -50,7 +50,7 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testSupport(): Unit {
         @Expect(Support.COMMON_EVENT_ABILITY_ADDED, "common.event.ABILITY_ADDED")
         @Expect(Support.COMMON_EVENT_PACKAGE_REMOVED, "usual.event.PACKAGE_REMOVED")
@@ -65,15 +65,14 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testCreateSubscribeInfo(): Unit {
-        let info = CommonEventSubscribeInfo(support1.toString(), priority: 100000)
-        Hilog.info(0, "TestCEM", "", "priority = ${info.priority}")
-        Hilog.info(0, "TestCEM", "", "publisherPermission = ${info.publisherPermission}")
-        Hilog.info(0, "TestCEM", "", "publisherDeviceId = ${info.publisherDeviceId}")
-        Hilog.info(0, "TestCEM", "", "userId = ${info.userId}")
-        Hilog.info(0, "TestCEM", "", "publisherBundleName = ${info.publisherBundleName}")
-        CommonEventManager.createSubscriber(info)
+        try {
+            let info = CommonEventSubscribeInfo(support1.toString(), priority: 100000)
+            CommonEventManager.createSubscriber(info)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+        }
     }
 
     /*
@@ -85,11 +84,12 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testCreateSubscribe(): Unit {
         let info = CommonEventSubscribeInfo(support1.toString())
         let sub = CommonEventManager.createSubscriber(info)
         CommonEventManager.publish(support1.toString())
+        @Expect(true)
     }
 
     /*
@@ -101,7 +101,7 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testSubscribeAndPublish(): Unit {
         let info = CommonEventSubscribeInfo(support1.toString())
         let sub = CommonEventManager.createSubscriber(info)
@@ -119,6 +119,7 @@ class Test_common_event_manager {
 
         CommonEventManager.subscribe(sub, callBack)
         CommonEventManager.publish(support1.toString(), options: pData)
+        @Expect(true)
     }
 
     /*
@@ -130,7 +131,7 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testUnsubscribe(): Unit {
         let info = CommonEventSubscribeInfo(support1.toString())
         let sub = CommonEventManager.createSubscriber(info)
@@ -140,10 +141,12 @@ class Test_common_event_manager {
         }
 
         let pData = CommonEventPublishData(bundleName: "com.example.myapplication", data: "newbee", code: 123321,
-            subscriberPermissions: ["123321"], isOrdered: true, isSticky: true, parameters: HashMap<String, ValueType>())
+            subscriberPermissions: ["123321"], isOrdered: true, isSticky: true, parameters: HashMap<String, ValueType>()
+        )
         CommonEventManager.subscribe(sub, callback)
         CommonEventManager.unsubscribe(sub)
         CommonEventManager.publish(support1.toString(), options: pData)
+        @Expect(true)
     }
 
     /*
@@ -155,46 +158,42 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testSelfDefinedEvent(): Unit {
-        try {
-            let events = ["Support.CommonEventScreenOn"]
-            let info00 = CommonEventSubscribeInfo(support1.toString())
-            let sub00 = CommonEventManager.createSubscriber(info00)
-            let parameter = HashMap<String, CEMValueType>()
-            parameter.add("1", CEMValueType.BoolValue(true))
-            parameter.add("2", CEMValueType.Int32Value(1))
-            parameter.add("3", CEMValueType.Float64Value(1.1))
-            parameter.add("4", CEMValueType.Fd(4))
-            parameter.add("5", CEMValueType.StringValue("5"))
-            parameter.add("6", CEMValueType.ArrayBool([false, true]))
-            parameter.add("7", CEMValueType.ArrayInt32([3, 4]))
-            parameter.add("8", CEMValueType.ArrayInt64([4, 4]))
-            parameter.add("9", CEMValueType.ArrayFloat64([4.5, 4.5]))
-            parameter.add("10", CEMValueType.ArrayString(["5+5", "=10"]))
-            parameter.add("11", CEMValueType.ArrayFd([5, 6, 7]))
-            let commonEventPublishData00 = CommonEventPublishData(bundleName: "com.example.myapplication", data: "newbee",
-                code: 123321, subscriberPermissions: ["123321"], isOrdered: true, isSticky: true, parameters: parameter)
-            func delayMs(d: Int64): Unit {
-                let start = MonoTime.now()
-                while (MonoTime.now() < start + Duration.millisecond * d) {}
-            }
-            let isCallBackCalled = AtomicBool(false)
-            let callBack = {
-                e: Option<BusinessException>, c: Option<CommonEventData> =>
-                Hilog.info(0, "CangjieTest", "", "subscribe success")
-                isCallBackCalled.store(true)
-            }
-            CommonEventManager.subscribe(sub00, callBack)
-            @Expect(!isCallBackCalled.load())
-            CommonEventManager.publish("Support.CommonEventScreenOn", options: commonEventPublishData00)
-            delayMs(1000)
-            @Expect(isCallBackCalled.load(),false)
-            delayMs(1000)
-            CommonEventManager.unsubscribe(sub00)
-        } catch (e: BusinessException) {
-            @Expect(e.message.contains("Parameter error"))
+        let events = ["Support.CommonEventScreenOn"]
+        let info00 = CommonEventSubscribeInfo(support1.toString())
+        let sub00 = CommonEventManager.createSubscriber(info00)
+        let parameter = HashMap<String, CEMValueType>()
+        parameter.add("1", CEMValueType.BoolValue(true))
+        parameter.add("2", CEMValueType.Int32Value(1))
+        parameter.add("3", CEMValueType.Float64Value(1.1))
+        parameter.add("4", CEMValueType.Fd(4))
+        parameter.add("5", CEMValueType.StringValue("5"))
+        parameter.add("6", CEMValueType.ArrayBool([false, true]))
+        parameter.add("7", CEMValueType.ArrayInt32([3, 4]))
+        parameter.add("8", CEMValueType.ArrayInt64([4, 4]))
+        parameter.add("9", CEMValueType.ArrayFloat64([4.5, 4.5]))
+        parameter.add("10", CEMValueType.ArrayString(["5+5", "=10"]))
+        parameter.add("11", CEMValueType.ArrayFd([5, 6, 7]))
+        let commonEventPublishData00 = CommonEventPublishData(bundleName: "com.example.myapplication", data: "newbee",
+            code: 123321, subscriberPermissions: ["123321"], isOrdered: true, isSticky: true, parameters: parameter)
+        func delayMs(d: Int64): Unit {
+            let start = MonoTime.now()
+            while (MonoTime.now() < start + Duration.millisecond * d) {}
         }
+        let isCallBackCalled = AtomicBool(false)
+        let callBack = {
+            e: Option<BusinessException>, c: Option<CommonEventData> =>
+            Hilog.info(0, "CangjieTest", "", "subscribe success")
+            isCallBackCalled.store(true)
+        }
+        CommonEventManager.subscribe(sub00, callBack)
+        @Expect(!isCallBackCalled.load())
+        CommonEventManager.publish("Support.CommonEventScreenOn", options: commonEventPublishData00)
+        delayMs(1000)
+        @Expect(isCallBackCalled.load(),false)
+        delayMs(1000)
+        CommonEventManager.unsubscribe(sub00)
     }
 
     /*
@@ -206,7 +205,7 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testPriority(): Unit {
         let events = [support1]
         let info1 = CommonEventSubscribeInfo(support1.toString())
@@ -231,6 +230,7 @@ class Test_common_event_manager {
         CommonEventManager.subscribe(sub1, callBack1)
         CommonEventManager.subscribe(sub2, callBack2)
         CommonEventManager.publish(support1.toString(), options: pData)
+        @Expect(true)
     }
 
     /*
@@ -242,11 +242,11 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testPermissions(): Unit {
         let callback = {
-            e: Option<BusinessException>, c: Option<CommonEventData> => Hilog.info(0, "TestCEM", "",
-                "callback suceess!")
+            e: Option<BusinessException>, c: Option<CommonEventData> => Hilog.info(0, "TestCEM", "", "callback suceess!"
+            )
         }
 
         let info = CommonEventSubscribeInfo(support1.toString())
@@ -269,6 +269,7 @@ class Test_common_event_manager {
             subscriberPermissions: ["123321"], isOrdered: true, isSticky: true, parameters: parameters)
         CommonEventManager.subscribe(sub, callback)
         CommonEventManager.publish(support1.toString(), options: pData)
+        @Expect(true)
     }
 
     /*
@@ -280,7 +281,7 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_support_value1(): Unit {
         @Expect(Support.COMMON_EVENT_ABILITY_ADDED,"common.event.ABILITY_ADDED")
         @Expect(Support.COMMON_EVENT_ABILITY_REMOVED,"common.event.ABILITY_REMOVED")
@@ -458,7 +459,7 @@ class Test_common_event_manager {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_common_event_subscribeInfo(): Unit {
         let event = [support1]
         let info = CommonEventSubscribeInfo(

@@ -20,7 +20,7 @@ import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
 import std.convert.*
-import ohos.base.{LengthProp, Length, Color,  LengthType}
+import ohos.base.{LengthProp, Length, Color}
 
 class AA {
     var aa = 0
@@ -46,34 +46,34 @@ class View_State_Array {
     func build() {
         Column(space:20) {
             Text("切换变量Array<Int64>: ${array_Int64}").id("StateInt64")
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Int64 = [10]
-            }.id("state1")
+            }).id("state1")
 
             Text("切换变量Array<boolean>: ${array_Boolean}").id("StateBoolean")
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Boolean = [true]
-            }.id("state2")
+            }).id("state2")
 
             Text("切换变量Array<Length>: ${array_Length[0].value}").id("StateLength")
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Length = [1.vp]
-            }.id("state3")
+            }).id("state3")
 
             Text("切换变量Array<AA>: ${array_Object[0].aa}").id("StateObject")
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Object = [AA(1)]
-            }.id("state4")
+            }).id("state4")
 
             Text("切换变量Array<AppResource>: ${array_Resource[0].id}").id("StateResource")
-            Button("change").onClick {
+            Button("change").onClick({
                 ClickEvent =>
                 this.array_Resource = [@r(app.string.EntryAbility_desc)]
-            }.id("state5")
+            }).id("state5")
         }.width(100.percent).margin(top: 10)
     }
 }

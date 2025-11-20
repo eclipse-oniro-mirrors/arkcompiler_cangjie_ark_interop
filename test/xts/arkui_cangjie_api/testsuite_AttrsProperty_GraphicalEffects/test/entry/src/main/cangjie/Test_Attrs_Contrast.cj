@@ -38,7 +38,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_AlphabetIndexer_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Blank_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Button_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Checkbox_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_CheckboxGroup_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin CheckboxGroup")
@@ -164,7 +164,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_DataPanel_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin DataPanel")
@@ -189,7 +189,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_DatePicker_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin DatePicker")
@@ -214,7 +214,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Divider_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Divider")
@@ -239,7 +239,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Gauge_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Gauge")
@@ -264,7 +264,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Image_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Image")
@@ -289,7 +289,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_ImageSpan_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin ImageSpan")
@@ -314,7 +314,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_LoadingProgress_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin LoadingProgress")
@@ -339,7 +339,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Menu_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Menu")
@@ -364,7 +364,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_MenuItem_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin MenuItem")
@@ -389,7 +389,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_MenuItemGroup_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin MenuItemGroup")
@@ -414,7 +414,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Progress_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Progress")
@@ -439,7 +439,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_QRCode_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin QRCode")
@@ -464,7 +464,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Radio_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Radio")
@@ -489,7 +489,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Rating_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Rating")
@@ -514,7 +514,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Refresh_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Refresh")
@@ -539,7 +539,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_RichEditor_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin RichEditor")
@@ -564,7 +564,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_RichText_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin RichText")
@@ -589,7 +589,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_RowSplit_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin RowSplit")
@@ -614,7 +614,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_ScrollBar_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin ScrollBar")
@@ -639,7 +639,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Search_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Search")
@@ -664,7 +664,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Slider_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Slider")
@@ -689,7 +689,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Stepper_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Stepper")
@@ -714,7 +714,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_StepperItem_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin StepperItem")
@@ -739,7 +739,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Text_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Text")
@@ -764,7 +764,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_TextArea_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin TextArea")
@@ -789,7 +789,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_TextClock_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin TextClock")
@@ -814,7 +814,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_TextInput_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin TextInput")
@@ -839,7 +839,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_TextPicker_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin TextPicker")
@@ -864,7 +864,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_TextTimer_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin TextTimer")
@@ -889,7 +889,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Toggle_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Toggle")
@@ -914,7 +914,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Web_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Web")
@@ -939,7 +939,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Select_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Select")
@@ -964,7 +964,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Badge_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Badge")
@@ -989,7 +989,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Column_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Column")
@@ -1014,7 +1014,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Grid_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Grid")
@@ -1039,7 +1039,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_GridItem_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin GridItem")
@@ -1064,7 +1064,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_GridRow_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin GridRow")
@@ -1089,7 +1089,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_GridCol_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin GridCol")
@@ -1114,7 +1114,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Flex_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Flex")
@@ -1139,7 +1139,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_List_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin List")
@@ -1164,7 +1164,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_ListItem_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin ListItem")
@@ -1189,7 +1189,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_ListItemGroup_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin ListItemGroup")
@@ -1215,7 +1215,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_RelativeContainer_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin RelativeContainer")
@@ -1240,7 +1240,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Row_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Row")
@@ -1265,7 +1265,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Scroll_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Scroll")
@@ -1290,7 +1290,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Stack_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Stack")
@@ -1315,7 +1315,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Swiper_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Swiper")
@@ -1340,7 +1340,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Tabs_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Tabs")
@@ -1365,7 +1365,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_TabContent_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin TabContent")
@@ -1390,7 +1390,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Circle_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Circle")
@@ -1415,7 +1415,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Line_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Line")
@@ -1440,7 +1440,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Rect_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Rect")
@@ -1465,7 +1465,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Shape_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Shape")
@@ -1490,7 +1490,7 @@ class Test_EmptyAttrs_Contrast {
      * @tc.desic：Empty_Path_Contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Contrast_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckContrast: FindBegin Path")

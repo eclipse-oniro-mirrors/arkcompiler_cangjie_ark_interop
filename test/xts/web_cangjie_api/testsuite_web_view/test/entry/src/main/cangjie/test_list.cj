@@ -18,6 +18,5 @@ package ohos_app_cangjie_entry
 let _ = testsuite()
 
 func testsuite(): Unit {
-    // registerTestSuite("TestLoadWebPage", {=> TestLoadWebPage()})
     registerTestSuite("Test_cookie", {=> Test_cookie()})
 }

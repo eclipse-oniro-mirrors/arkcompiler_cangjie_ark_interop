@@ -36,7 +36,7 @@ class TestDistinct_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable store")
@@ -60,90 +60,19 @@ class TestDistinct_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable store")
         let store = Option<RdbPredicates>.None
         Hilog.info(0u32, "cangjietest", "", "define local variable pridecates")
-        let pridecates = RdbPredicates("EMPLOYEE")
+        let pridecates = RdbPredicates("REASON")
         Hilog.info(0u32, "cangjietest", "", "define local variable exceptionPredicates")
-        let exceptionPredicates = RdbPredicates("EMPLOYEE")
+        let exceptionPredicates = RdbPredicates("REASON")
         Hilog.info(0u32, "cangjietest", "", "testDistinct")
         exceptionPredicates.distinct()
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 ends.")
     }
 
-    /*
-     * @tc.number    : Test_Distinct_0300
-     * @tc.name      : TestCase_3
-     * @tc.desc      : "3" Filter out duplicate records
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable store")
-        let store = Option<RdbPredicates>.None
-        Hilog.info(0u32, "cangjietest", "", "define local variable pridecates")
-        let pridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "define local variable exceptionPredicates")
-        let exceptionPredicates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testDistinct")
-        exceptionPredicates.distinct()
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Distinct_0400
-     * @tc.name      : TestCase_4
-     * @tc.desc      : "4" Filter out duplicate records
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_4(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable store")
-        let store = Option<RdbPredicates>.None
-        Hilog.info(0u32, "cangjietest", "", "define local variable pridecates")
-        let pridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "define local variable exceptionPredicates")
-        let exceptionPredicates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testDistinct")
-        exceptionPredicates.distinct()
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Distinct_0500
-     * @tc.name      : TestCase_5
-     * @tc.desc      : "1024" Filter out duplicate records
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_5(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable store")
-        let store = Option<RdbPredicates>.None
-        Hilog.info(0u32, "cangjietest", "", "define local variable pridecates")
-        let pridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "define local variable exceptionPredicates")
-        let exceptionPredicates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testDistinct")
-        exceptionPredicates.distinct()
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 ends.")
-    }
 }

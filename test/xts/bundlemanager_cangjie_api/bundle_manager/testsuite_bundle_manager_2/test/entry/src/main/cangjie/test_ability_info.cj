@@ -18,7 +18,6 @@ package ohos_app_cangjie_entry
 import std.unittest.testmacro.{Test, TestCase, Expect}
 import ohos.bundle.bundle_manager.{HapModuleInfo, AbilityInfo, LaunchType, SupportWindowMode}
 import ohos.arkui.state_macro_manage.r
-//import ohos.base.CJResource
 import ohos.resource_manager.AppResource
 import std.unittest.testmacro.*
 import std.unittest.*
@@ -28,20 +27,21 @@ import kit.AbilityKit.*
 import std.collection.forEach
 import std.collection.collectString
 import std.collection.map
+internal import ohos.resource.__GenerateResource__
 
 @Test
 class TestAbilityInfo {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_BundleManager_TestAbilityInfo_0100
-    * @tc.name      : test_abilityInfo_01
-    * @tc.desc      : test BundleManager test_abilityInfo_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_BundleManager_TestAbilityInfo_0100
+     * @tc.name      : test_abilityInfo_01
+     * @tc.desc      : test BundleManager test_abilityInfo_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_abilityInfo_01(): Unit {
         let bundleInfo = getFullBundleInfo()
         let hapModuleInfos = bundleInfo.hapModulesInfo
@@ -52,7 +52,6 @@ class TestAbilityInfo {
         @Expect(entryAbilityInfo.moduleName, "entry")
         @Expect(entryAbilityInfo.name, "EntryAbility")
         @Expect(entryAbilityInfo.label, "$string:EntryAbility_label")
-//        @Expect(entryAbilityInfo.labelId, @r(app.string.EntryAbility_label).id)
         @Expect(entryAbilityInfo.description, "$string:EntryAbility_desc")
         @Expect(UInt32(entryAbilityInfo.descriptionId), @r(app.string.EntryAbility_desc).id)
         @Expect(entryAbilityInfo.icon, "$media:layered_image")
@@ -72,5 +71,4 @@ class TestAbilityInfo {
         @Expect(windowSize.maxWindowHeight, 0)
         @Expect(windowSize.minWindowHeight, 0)
     }
-    
 }

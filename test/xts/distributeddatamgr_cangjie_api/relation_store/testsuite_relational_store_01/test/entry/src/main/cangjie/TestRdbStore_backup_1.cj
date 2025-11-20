@@ -36,7 +36,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -44,7 +44,7 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -64,7 +64,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -72,7 +72,7 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: false,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -92,7 +92,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -100,7 +100,7 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -120,7 +120,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         try {
             Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
@@ -128,13 +128,11 @@ class TestRdbStore_backup_1 {
             let predicates1 = RdbPredicates("valid name")
             Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable resultSet1")
-            //        let resultSet1 = rdbStore.query(predicates1, columns:"1234567890")
-            //        @Expect(resultSet1.rowCount, -1i32)
             Hilog.info(0u32, "cangjietest", "", "backup")
             rdbStore.backup("valid name")
             @Expect(true)
@@ -154,7 +152,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -162,8 +160,8 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             @Expect("assertion#17: not throw", "testisColumnNull the result set failed")
@@ -182,7 +180,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_6 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -190,8 +188,8 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             @Expect("assertion#18: not throw", "testisColumnNull the result set failed")
@@ -210,7 +208,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_7 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -218,9 +216,9 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             @Expect("assertion#19: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
@@ -238,7 +236,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_8 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -246,9 +244,9 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             @Expect("assertion#20: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
@@ -266,7 +264,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_9 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -274,10 +272,10 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
             @Expect("assertion#21: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
@@ -294,7 +292,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_10 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -302,10 +300,10 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
             @Expect("assertion#22: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
@@ -322,7 +320,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_11 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -330,8 +328,8 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             @Expect("assertion#23: not throw", "testisColumnNull the result set failed")
@@ -350,7 +348,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_12 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -358,9 +356,9 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             @Expect("assertion#24: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
@@ -378,7 +376,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_13 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -386,10 +384,10 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
             @Expect("assertion#25: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
@@ -406,7 +404,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -414,10 +412,10 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             @Expect("assertion#26: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
@@ -434,7 +432,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_15 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -442,10 +440,10 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             @Expect("assertion#27: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
@@ -462,7 +460,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_16 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -470,9 +468,9 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: true,
+                    isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             @Expect("assertion#28: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
@@ -490,7 +488,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_17 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -498,9 +496,9 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             @Expect("assertion#29: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
@@ -518,7 +516,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_18 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -526,10 +524,10 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             @Expect("assertion#30: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
@@ -546,7 +544,7 @@ class TestRdbStore_backup_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_19 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable predicates1")
@@ -554,10 +552,10 @@ class TestRdbStore_backup_1 {
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: true,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             @Expect("assertion#31: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)

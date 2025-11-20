@@ -169,16 +169,16 @@ class View_EmptyAttrs_onTouch {
     }
 
     func getTouchevent_target(evt: TouchEvent) {
-        this.touchevent.target.area.width = evt.target.area.width.value.toString()
-        this.touchevent.target.area.height = evt.target.area.height.value.toString()
-        this.touchevent.target.area.position.x = evt.target.area.position.x.value.toString()
-        this.touchevent.target.area.position.y = evt.target.area.position.y.value.toString()
-        this.touchevent.target.area.globalPosition.x = evt.target.area.globalPosition.x.value.toString()
-        this.touchevent.target.area.globalPosition.y = evt.target.area.globalPosition.y.value.toString()
+        this.touchevent.target.area.width = evt.target.getOrThrow().area.width.value.toString()
+        this.touchevent.target.area.height = evt.target.getOrThrow().area.height.value.toString()
+        this.touchevent.target.area.position.x = evt.target.getOrThrow().area.position.x.getOrThrow().value.toString()
+        this.touchevent.target.area.position.y = evt.target.getOrThrow().area.position.y.getOrThrow().value.toString()
+        this.touchevent.target.area.globalPosition.x = evt.target.getOrThrow().area.globalPosition.x.getOrThrow().value.toString()
+        this.touchevent.target.area.globalPosition.y = evt.target.getOrThrow().area.globalPosition.y.getOrThrow().value.toString()
     }
 
     func getTouchevent_source(evt: TouchEvent) {
-        this.touchEvent_source = toString(evt.source)
+        this.touchEvent_source = toString(evt.source.getOrThrow())
     }
 
     protected override func aboutToAppear() {
@@ -196,7 +196,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Blank") {
                     Text("Blank: Attrs_Event_onTouch")
                     Blank(min: 10)
@@ -204,7 +204,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Button") {
                     Text("Button: Attrs_Event_onTouch")
                     Button {Text("Button").width(90.percent).height(90.percent).backgroundColor(Color.Gray)}
@@ -213,7 +213,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Checkbox") {
                     Text("Checkbox: Attrs_Event_onTouch")
                     Checkbox()
@@ -221,7 +221,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "CheckboxGroup") {
                     Text("CheckboxGroup: Attrs_Event_onTouch")
                     CheckboxGroup()
@@ -229,7 +229,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "DataPanel") {
                     Text("DataPanel: Attrs_Event_onTouch")
                     DataPanel(values: [30.0])
@@ -237,7 +237,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "DatePicker") {
                     Text("DatePicker: Attrs_Event_onTouch")
                     DatePicker()
@@ -245,7 +245,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Divider") {
                     Text("Divider: Attrs_Event_onTouch")
                     Divider()
@@ -253,7 +253,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Gauge") {
                     Text("Gauge: Attrs_Event_onTouch")
                     Gauge(value: 50.0, min: 0.0, max: 100.0) {
@@ -263,7 +263,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Image") {
                     Text("Image: Attrs_Event_onTouch")
                     Image(@r(app.media.startIcon))
@@ -272,7 +272,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "ImageSpan") {
                     Text("ImageSpan: Attrs_Event_onTouch")
                     Text() {
@@ -282,7 +282,7 @@ class View_EmptyAttrs_onTouch {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onTouch {evt => this.callbackonTouch(evt)}
+                            .onTouch ({evt => this.callbackonTouch(evt)})
                     }
                 } else if (this.targetView == "LoadingProgress") {
                     Text("LoadingProgress: Attrs_Event_onTouch")
@@ -291,7 +291,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Menu") {
                     Text("Menu: Attrs_Event_onTouch")
 
@@ -307,7 +307,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "MenuItem") {
                     Text("MenuItem: Attrs_Event_onTouch")
                     Menu() {
@@ -317,7 +317,7 @@ class View_EmptyAttrs_onTouch {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onTouch {evt => this.callbackonTouch(evt)}
+                                .onTouch ({evt => this.callbackonTouch(evt)})
                         }.width(80.percent).height(80.percent)
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "MenuItemGroup") {
@@ -332,7 +332,7 @@ class View_EmptyAttrs_onTouch {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onTouch {evt => this.callbackonTouch(evt)}
+                            .onTouch ({evt => this.callbackonTouch(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Progress") {
                     Text("Progress: Attrs_Event_onTouch")
@@ -341,7 +341,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "QRCode") {
                     Text("QRCode: Attrs_Event_onTouch")
                     QRCode(targetView)
@@ -349,7 +349,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Radio") {
                     Text("Radio: Attrs_Event_onTouch")
                     Radio(group: "1", value: "A")
@@ -357,7 +357,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Rating") {
                     Text("Rating: Attrs_Event_onTouch")
                     Rating(rating: 3.5, indicator: false)
@@ -365,7 +365,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Refresh") {
                     Text("Refresh: Attrs_Event_onTouch")
                     Refresh(RefreshOptions(refreshing: @Binder(this.isRefreshing))) {
@@ -375,7 +375,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "RichEditor") {
                     Text("RichEditor: Attrs_Event_onTouch")
                     RichEditor(richEditorController)
@@ -383,7 +383,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "RichText") {
                     Text("RichText: Attrs_Event_onTouch")
                     RichText("""
@@ -392,7 +392,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "RowSplit") {
                     Text("RowSplit: Attrs_Event_onTouch")
                     RowSplit() {
@@ -411,7 +411,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "ScrollBar") {
                     Text("ScrollBar: Attrs_Event_onTouch")
 
@@ -439,7 +439,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Search") {
                     Text("Search: Attrs_Event_onTouch")
                     Search(value: "", placeholder: "Type to search")
@@ -447,7 +447,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Slider") {
                     Text("Slider: Attrs_Event_onTouch")
                     Slider()
@@ -455,7 +455,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 }  else if (this.targetView == "Stepper") {
                     Text("Stepper: Attrs_Event_onTouch")
                     Stepper(index:0) {
@@ -467,7 +467,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "StepperItem") {
                     Text("StepperItem: Attrs_Event_onTouch")
                     Stepper(index:0) {
@@ -478,7 +478,7 @@ class View_EmptyAttrs_onTouch {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onTouch {evt => this.callbackonTouch(evt)}
+                            .onTouch ({evt => this.callbackonTouch(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Text") {
                     Text("Text: Attrs_Event_onTouch")
@@ -487,7 +487,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "TextArea") {
                     Text("TextArea: Attrs_Event_onTouch")
                     TextArea(text: targetView)
@@ -495,7 +495,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "TextClock") {
                     Text("TextClock: Attrs_Event_onTouch")
                     TextClock()
@@ -503,7 +503,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "TextInput") {
                     Text("TextInput: Attrs_Event_onTouch")
                     TextInput(placeholder: "TextInput")
@@ -511,7 +511,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "TextPicker") {
                     Text("TextPicker: Attrs_Event_onTouch")
                     TextPicker(range:["apple", "banana", "orange", "peach"])
@@ -519,7 +519,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "TextTimer") {
                     Text("TextTimer: Attrs_Event_onTouch")
                     TextTimer(isCountDown: true, count: 30000, controller: TextTimerController())
@@ -527,7 +527,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Toggle") {
                     Text("Toggle: Attrs_Event_onTouch")
                     Toggle(ToggleType.Switch, isOn: false)
@@ -535,7 +535,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Web") {
                     Text("Web: Attrs_Event_onTouch")
                     Web(src: "www.baidu.com", controller: webController)
@@ -545,7 +545,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Select") {
                     Text("Select: Attrs_Event_onTouch")
                     Select(
@@ -556,7 +556,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Badge") {
                     Text("Badge: Attrs_Event_onTouch")
                     Badge(count: 1, style: BadgeStyle(color: this.Colors[2])) {
@@ -566,7 +566,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Column") {
                     Text("Column: Attrs_Event_onTouch")
 
@@ -577,7 +577,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Grid") {
                     Text("Grid: Attrs_Event_onTouch")
                     Grid (child:{=>
@@ -589,7 +589,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "GridItem") {
                     Text("GridItem: Attrs_Event_onTouch")
                     Grid (child:{=>
@@ -600,7 +600,7 @@ class View_EmptyAttrs_onTouch {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onTouch {evt => this.callbackonTouch(evt)}
+                            .onTouch ({evt => this.callbackonTouch(evt)})
                     }).width(80.percent).height(10.percent)
                 } else if (this.targetView == "GridRow") {
                     Text("GridRow: Attrs_Event_onTouch")
@@ -613,7 +613,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "GridCol") {
                     Text("GridCol: Attrs_Event_onTouch")
                     GridRow() {
@@ -624,7 +624,7 @@ class View_EmptyAttrs_onTouch {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onTouch {evt => this.callbackonTouch(evt)}
+                            .onTouch ({evt => this.callbackonTouch(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Flex") {
                     Text("Flex: Attrs_Event_onTouch")
@@ -635,7 +635,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "List") {
                     Text("List: Attrs_Event_onTouch")
                     List() {
@@ -649,7 +649,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "ListItem") {
                     Text("ListItem: Attrs_Event_onTouch")
                     List() {
@@ -661,7 +661,7 @@ class View_EmptyAttrs_onTouch {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onTouch {evt => this.callbackonTouch(evt)}
+                                .onTouch ({evt => this.callbackonTouch(evt)})
                         }.width(80.percent).height(80.percent)
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "ListItemGroup") {
@@ -676,7 +676,7 @@ class View_EmptyAttrs_onTouch {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onTouch {evt => this.callbackonTouch(evt)}
+                            .onTouch ({evt => this.callbackonTouch(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "RelativeContainer") {
                     Text("RelativeContainer: Attrs_Event_onTouch")
@@ -688,7 +688,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Row") {
                     Text("Row: Attrs_Event_onTouch")
 
@@ -699,7 +699,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Scroll") {
                     Text("Scroll: Attrs_Event_onTouch")
 
@@ -710,7 +710,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Stack") {
                     Text("Stack: Attrs_Event_onTouch")
 
@@ -721,7 +721,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Swiper") {
                     Text("Swiper: Attrs_Event_onTouch")
 
@@ -732,7 +732,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Tabs") {
                     Text("Tabs: Attrs_Event_onTouch")
                     Tabs() {
@@ -744,7 +744,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "TabContent") {
                     Text("TabContent: Attrs_Event_onTouch")
                     Tabs() {
@@ -756,7 +756,7 @@ class View_EmptyAttrs_onTouch {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onTouch {evt => this.callbackonTouch(evt)}
+                            .onTouch ({evt => this.callbackonTouch(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Circle") {
                     Text("Circle: Attrs_Event_onTouch")
@@ -765,7 +765,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Line") {
                     Text("Line: Attrs_Event_onTouch")
                     Line()
@@ -776,7 +776,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Rect") {
                     Text("Rect: Attrs_Event_onTouch")
                     Rect()
@@ -784,7 +784,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Shape") {
                     Text("Shape: Attrs_Event_onTouch")
                     Shape() {Rect().width(80.percent).height(80.percent).backgroundColor(this.Colors[1])}
@@ -792,7 +792,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Path") {
                     Text("Path: Attrs_Event_onTouch")
                     Path()
@@ -801,7 +801,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Canvas") {
                     Text("Canvas: Attrs_Event_onTouch")
                     Canvas(CanvasRenderingContext2D(RenderingContextSettings(antialias: true)))
@@ -809,7 +809,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Video") {
                     Text("Video: Attrs_Event_onTouch")
                     Video()
@@ -817,7 +817,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Counter") {
                     Text("Counter: Attrs_Event_onTouch")
                     Counter() {}
@@ -825,7 +825,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "PatternLock") {
                     Text("PatternLock: Attrs_Event_onTouch")
                     PatternLock()
@@ -833,7 +833,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 } else if (this.targetView == "Ellipse") {
                     Text("Ellipse: Attrs_Event_onTouch")
                     Ellipse()
@@ -841,7 +841,7 @@ class View_EmptyAttrs_onTouch {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onTouch {evt => this.callbackonTouch(evt)}
+                        .onTouch ({evt => this.callbackonTouch(evt)})
                 }
                 Text("touchevent.eventType: " + this.touchevent.eventType).id("touchevent.eventType").fontSize(12)
 

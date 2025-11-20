@@ -52,7 +52,7 @@ class Test_Toggle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Toggle_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_Toggle_Component_001 start")
         let Inspector = getInspectorByKey("toggleSwitch")
@@ -74,7 +74,7 @@ class Test_Toggle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Toggle_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_Toggle_Component_002 start")
         driver.delayMs(1000)
@@ -99,7 +99,7 @@ class Test_Toggle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Toggle_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_Toggle_Component_003 start")
         driver.delayMs(1000)
@@ -121,7 +121,7 @@ class Test_Toggle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Toggle_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_Toggle_Component_004 start")
         driver.delayMs(1000)
@@ -149,7 +149,7 @@ class Test_Toggle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Toggle_Component_005() {
         Hilog.info(0, "","cangjietest", "Test_Toggle_Component_005 start")
         driver.delayMs(1000)
@@ -177,7 +177,7 @@ class Test_Toggle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Toggle_Component_006() {
         Hilog.info(0, "","cangjietest", "Test_Toggle_Component_006 start")
         driver.findComponent(On().id("toggleSwitch")).getOrThrow().click()

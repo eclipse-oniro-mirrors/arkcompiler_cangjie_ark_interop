@@ -23,17 +23,17 @@ import ohos.ui_test.*
 
 @Test
 class TestSignatureInfo {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_BundleManager_TestSignatureInfo_0100
-    * @tc.name      : test00
-    * @tc.desc      : test BundleManager test00
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_BundleManager_TestSignatureInfo_0100
+     * @tc.name      : test00
+     * @tc.desc      : test BundleManager test00
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test00(): Unit {
         let bundleInfo = getFullBundleInfo()
         let signatureInfo = bundleInfo.signatureInfo

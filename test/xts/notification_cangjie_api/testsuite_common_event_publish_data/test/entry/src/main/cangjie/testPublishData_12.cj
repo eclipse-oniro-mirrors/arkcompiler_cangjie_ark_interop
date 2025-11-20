@@ -50,7 +50,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_331(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_331 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -74,7 +74,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_332(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_332 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -98,7 +98,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_333(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_333 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -122,7 +122,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_334(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_334 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -146,7 +146,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_335(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_335 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -170,7 +170,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_336(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_336 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -194,7 +194,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_337(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_337 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -218,7 +218,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_338(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_338 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -242,7 +242,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_339(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_339 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -266,7 +266,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_340(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_340 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -290,7 +290,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_341(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_341 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -314,7 +314,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_342(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_342 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -338,7 +338,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_343(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_343 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -362,7 +362,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_344(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_344 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -386,7 +386,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_345(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_345 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -410,7 +410,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_346(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_346 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -434,7 +434,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_347(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_347 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -458,7 +458,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_348(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_348 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -482,7 +482,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_349(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_349 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -506,7 +506,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_350(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_350 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -530,7 +530,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_351(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_351 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -554,7 +554,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_352(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_352 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -578,7 +578,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_353(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_353 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -602,7 +602,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_354(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_354 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -626,7 +626,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_355(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_355 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -650,7 +650,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_356(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_356 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -674,7 +674,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_357(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_357 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -698,7 +698,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_358(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_358 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -722,7 +722,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_359(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_359 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -746,7 +746,7 @@ class testPublishData_12 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_360(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_360 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")

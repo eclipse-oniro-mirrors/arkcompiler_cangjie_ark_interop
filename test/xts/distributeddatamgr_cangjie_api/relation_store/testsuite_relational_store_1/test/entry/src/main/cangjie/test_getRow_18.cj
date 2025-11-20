@@ -20,8 +20,8 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
 
@@ -35,10 +35,11 @@ class Test_getRow_18 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId:  "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -130,21 +131,20 @@ class Test_getRow_18 {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_getRow_18_0100
-    * @tc.name      : test_getrow_01
-    * @tc.desc      : test RelationStore test_getrow_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_getRow_18_0100
+     * @tc.name      : test_getrow_01
+     * @tc.desc      : test RelationStore test_getrow_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getrow_01(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("NAME", RelationalStoreValueType.StringValue("Lisa"))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         match (resultSet.getRow().get("ID").getOrThrow()) {
             case Integer(v) => @Expect(v, 300)
@@ -181,20 +181,19 @@ class Test_getRow_18 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_getRow_18_0200
-    * @tc.name      : test_getrow_02
-    * @tc.desc      : test RelationStore test_getrow_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_getRow_18_0200
+     * @tc.name      : test_getrow_02
+     * @tc.desc      : test RelationStore test_getrow_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getrow_02(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         match (resultSet.getRow().get("ID").getOrThrow()) {
             case Integer(v) => @Expect(v, 1)

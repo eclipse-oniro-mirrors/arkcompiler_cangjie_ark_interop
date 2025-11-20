@@ -47,7 +47,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchConsumeNumber_001() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchConsumeNumber_001 Start")
         let button = driver.waitForComponent(On().id("state1"), 5000).getOrThrow()
@@ -70,7 +70,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchConsumeNumber_002() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchConsumeNumber_002 Start")
         let button = driver.waitForComponent(On().id("state2"), 5000).getOrThrow()
@@ -93,7 +93,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchConsumeNumber_003() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchConsumeNumber_003 Start")
         let button = driver.waitForComponent(On().id("state3"), 5000).getOrThrow()
@@ -116,7 +116,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchConsumeNumber_004() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchConsumeNumber_004 Start")
         let button = driver.waitForComponent(On().id("state4"), 5000).getOrThrow()
@@ -139,7 +139,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchConsumeNumber_005() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchConsumeNumber_005 Start")
         let button = driver.waitForComponent(On().id("state5"), 5000).getOrThrow()
@@ -162,7 +162,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchProvideNumber_001() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchProvideNumber_001 Start")
         let button = driver.waitForComponent(On().id("state1"), 5000).getOrThrow()
@@ -185,7 +185,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchProvideNumber_002() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchProvideNumber_002 Start")
         let button = driver.waitForComponent(On().id("state2"), 5000).getOrThrow()
@@ -208,7 +208,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchProvideNumber_003() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchConsumeNumber_003 Start")
         let button = driver.waitForComponent(On().id("state3"), 5000).getOrThrow()
@@ -231,7 +231,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchProvideNumber_004() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchProvideNumber_004 Start")
         let button = driver.waitForComponent(On().id("state4"), 5000).getOrThrow()
@@ -254,7 +254,7 @@ class Test_WatchProvideAndConsume_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchProvideNumber_005() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchProvideNumber_005 Start")
         let button = driver.waitForComponent(On().id("state5"), 5000).getOrThrow()

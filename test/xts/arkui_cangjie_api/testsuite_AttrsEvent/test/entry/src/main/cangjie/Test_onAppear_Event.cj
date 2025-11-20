@@ -50,7 +50,7 @@ class Test_onAppear_Event {
      * @tc.desic：onAppear_Event
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_onAppear_Event_001() {
         let text1 = driver.findComponent(On().id("text1"))
         let text2 = driver.findComponent(On().id("text2"))

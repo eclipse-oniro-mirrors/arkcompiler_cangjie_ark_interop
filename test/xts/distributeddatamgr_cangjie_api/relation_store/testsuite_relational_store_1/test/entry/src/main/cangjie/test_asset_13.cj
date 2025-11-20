@@ -20,8 +20,8 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
 
@@ -35,10 +35,11 @@ class Test_asset_13 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -74,17 +75,16 @@ class Test_asset_13 {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_asset_13_0100
-    * @tc.name      : test_asset_01
-    * @tc.desc      : test RelationStore test_asset_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_asset_13_0100
+     * @tc.name      : test_asset_01
+     * @tc.desc      : test RelationStore test_asset_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_asset_01(): Unit {
         var values = HashMap<String, RelationalStoreValueType>()
         values.add("ID", RelationalStoreValueType.Integer(1))
@@ -111,7 +111,7 @@ class Test_asset_13 {
         rdbStore.insert("EMPLOYEE", values2)
 
         let predicates = RdbPredicates("EMPLOYEE")
-        let resultSet = rdbStore.query(predicates,columns: ["ID", "NAME", "ARR", "ASS", "ASSS"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "ARR", "ASS", "ASSS"])
         @Expect(resultSet.rowCount, 3)
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
@@ -123,34 +123,30 @@ class Test_asset_13 {
         @Expect(resultSet.getAsset(3).createTime, "createTime1")
         @Expect(resultSet.getAsset(3).modifyTime, "modifyTime1")
         @Expect(resultSet.getAsset(3).size, "size1")
-//        @Expect(resultSet.getAsset(3).status, 2)
         @Expect(resultSet.getAssets(4)[0].name, "name1")
         @Expect(resultSet.getAssets(4)[0].uri, "uri1")
         @Expect(resultSet.getAssets(4)[0].path, "path1")
         @Expect(resultSet.getAssets(4)[0].createTime, "createTime1")
         @Expect(resultSet.getAssets(4)[0].modifyTime, "modifyTime1")
         @Expect(resultSet.getAssets(4)[0].size, "size1")
-        //@Expect(resultSet.getAssets(4)[0].status, 2), 2)
         @Expect(resultSet.getAssets(4)[1].name, "name2")
         @Expect(resultSet.getAssets(4)[1].uri, "uri2")
         @Expect(resultSet.getAssets(4)[1].path, "path2")
         @Expect(resultSet.getAssets(4)[1].createTime, "createTime2")
         @Expect(resultSet.getAssets(4)[1].modifyTime, "modifyTime2")
         @Expect(resultSet.getAssets(4)[1].size, "size2")
-        //@Expect(resultSet.getAssets(4)[1].status, 2)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_asset_13_0200
-    * @tc.name      : test_asset_02
-    * @tc.desc      : test RelationStore test_asset_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_asset_13_0200
+     * @tc.name      : test_asset_02
+     * @tc.desc      : test RelationStore test_asset_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_asset_02(): Unit {
         var values = HashMap<String, RelationalStoreValueType>()
         values.add("ID", RelationalStoreValueType.Integer(1))
@@ -189,40 +185,36 @@ class Test_asset_13 {
         @Expect(resultSet.getAsset(3).createTime, "createTime2")
         @Expect(resultSet.getAsset(3).modifyTime, "modifyTime2")
         @Expect(resultSet.getAsset(3).size, "size2")
-//        @Expect(resultSet.getAsset(3).status, 2)
         @Expect(resultSet.getAssets(4)[0].name, "name2")
         @Expect(resultSet.getAssets(4)[0].uri, "uri2")
         @Expect(resultSet.getAssets(4)[0].path, "path2")
         @Expect(resultSet.getAssets(4)[0].createTime, "createTime2")
         @Expect(resultSet.getAssets(4)[0].modifyTime, "modifyTime2")
         @Expect(resultSet.getAssets(4)[0].size, "size2")
-        //@Expect(resultSet.getAssets(4)[0].status, 2), 2)
         @Expect(resultSet.getAssets(4)[1].name, "name3")
         @Expect(resultSet.getAssets(4)[1].uri, "uri3")
         @Expect(resultSet.getAssets(4)[1].path, "path3")
         @Expect(resultSet.getAssets(4)[1].createTime, "createTime3")
         @Expect(resultSet.getAssets(4)[1].modifyTime, "modifyTime3")
         @Expect(resultSet.getAssets(4)[1].size, "size3")
-        //@Expect(resultSet.getAssets(4)[1].status, 2)
         @Expect(resultSet.getAssets(4)[2].name, "name4")
         @Expect(resultSet.getAssets(4)[2].uri, "uri4")
         @Expect(resultSet.getAssets(4)[2].path, "path4")
         @Expect(resultSet.getAssets(4)[2].createTime, "createTime4")
         @Expect(resultSet.getAssets(4)[2].modifyTime, "modifyTime4")
         @Expect(resultSet.getAssets(4)[2].size, "size4")
-//        //@Expect(resultSet.getAssets(4)[2].status, 2)
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_asset_13_0300
-    * @tc.name      : test_asset_03
-    * @tc.desc      : test RelationStore test_asset_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_asset_13_0300
+     * @tc.name      : test_asset_03
+     * @tc.desc      : test RelationStore test_asset_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_asset_03(): Unit {
         var values = HashMap<String, RelationalStoreValueType>()
         values.add("ID", RelationalStoreValueType.Integer(1))
@@ -260,41 +252,35 @@ class Test_asset_13 {
         @Expect(resultSet.getAsset(3).createTime, "createTime3")
         @Expect(resultSet.getAsset(3).modifyTime, "modifyTime3")
         @Expect(resultSet.getAsset(3).size, "size3")
-//        @Expect(resultSet.getAsset(3).status, 2)
         @Expect(resultSet.getAssets(4)[0].name, "name3")
         @Expect(resultSet.getAssets(4)[0].uri, "uri3")
         @Expect(resultSet.getAssets(4)[0].path, "path3")
         @Expect(resultSet.getAssets(4)[0].createTime, "createTime3")
         @Expect(resultSet.getAssets(4)[0].modifyTime, "modifyTime3")
         @Expect(resultSet.getAssets(4)[0].size, "size3")
-        //@Expect(resultSet.getAssets(4)[0].status, 2), 2)
         @Expect(resultSet.getAssets(4)[1].name, "name4")
         @Expect(resultSet.getAssets(4)[1].uri, "uri4")
         @Expect(resultSet.getAssets(4)[1].path, "path4")
         @Expect(resultSet.getAssets(4)[1].createTime, "createTime4")
         @Expect(resultSet.getAssets(4)[1].modifyTime, "modifyTime4")
         @Expect(resultSet.getAssets(4)[1].size, "size4")
-        //@Expect(resultSet.getAssets(4)[1].status, 2)
         @Expect(resultSet.getAssets(4)[2].name, "name5")
         @Expect(resultSet.getAssets(4)[2].uri, "uri5")
         @Expect(resultSet.getAssets(4)[2].path, "path5")
         @Expect(resultSet.getAssets(4)[2].createTime, "createTime5")
         @Expect(resultSet.getAssets(4)[2].modifyTime, "modifyTime5")
         @Expect(resultSet.getAssets(4)[2].size, "size5")
-        //@Expect(resultSet.getAssets(4)[2].status, 2)
         @Expect(resultSet.getAssets(4)[3].name, "name6")
         @Expect(resultSet.getAssets(4)[3].uri, "uri6")
         @Expect(resultSet.getAssets(4)[3].path, "path6")
         @Expect(resultSet.getAssets(4)[3].createTime, "createTime6")
         @Expect(resultSet.getAssets(4)[3].modifyTime, "modifyTime6")
         @Expect(resultSet.getAssets(4)[3].size, "size6")
-//        @Expect(resultSet.getAssets(4)[3].status, 2)
         @Expect(resultSet.getAssets(4)[4].name, "name7")
         @Expect(resultSet.getAssets(4)[4].uri, "uri7")
         @Expect(resultSet.getAssets(4)[4].path, "path7")
         @Expect(resultSet.getAssets(4)[4].createTime, "createTime7")
         @Expect(resultSet.getAssets(4)[4].modifyTime, "modifyTime7")
         @Expect(resultSet.getAssets(4)[4].size, "size7")
-//        @Expect(resultSet.getAssets(4)[4].status, 2)
     }
 }

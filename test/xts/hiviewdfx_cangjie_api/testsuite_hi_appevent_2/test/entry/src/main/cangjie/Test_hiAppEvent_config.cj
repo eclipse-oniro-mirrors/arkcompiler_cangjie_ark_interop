@@ -27,23 +27,23 @@ import ohos.base.*
 
 @Test
 public class Test_hiAppEvent_config {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_config_0100
-    * @tc.name      : Test_hiappevent_config_01
-    * @tc.desc      : test Hiappevent Test_hiappevent_config_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_config_0100
+     * @tc.name      : Test_hiappevent_config_01
+     * @tc.desc      : test Hiappevent Test_hiappevent_config_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func Test_hiappevent_config_01(): Unit {
         Hilog.info(0, "Test_hiappevent_config_01", "Test_hiappevent_config_01_start")
         try {
-            var config: ConfigOption = ConfigOption(maxStorage:"2K", disable: false)
+            var config: ConfigOption = ConfigOption(maxStorage: "2K", disable: false)
             HiAppEvent.configure(config)
-            @Expect(true)
+
             let str = "kjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHJKLjSKCKnSCLKLKSJN;KXJC;LjsDPIAKNC,MsnXKlzHCIPADFIENKLASJDC;SKJDLKjxCLKHIalsFCHLJKASJCDLKsDCLKkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHJKLjSKCKnSCLKLKSJN;KXJC;LjsDPIAKNC,MsnXKlzHCIPADFIENKLASJDC;SKJDLKjxCLKHIalsFCHLJKASJCDLKsDCLKkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:lsJDCLKSAHDkjhJfhfld;vhbjck;czpicjijd;plKSODOIiUSJBCABiouaiocfnjhcfgblZKLc'zcbjuqg2wuiu	iuiAUSRHVSCKJZXHCLKKSCDVlodgkhasgdksjdisuidyuevfdkdjchxikcuskdcLZKBHcf;ASkdcAsyudcioaqnejkahbsk;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSAD"
             var params = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -57,7 +57,7 @@ public class Test_hiAppEvent_config {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "$cangjie_1", EventType.Statistic, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "Test_hiappevent_config_01", "Test_hiappevent_config_01_pass")
         } catch (e: Exception) {
             @Expect(false)
@@ -66,23 +66,23 @@ public class Test_hiAppEvent_config {
             Hilog.info(0, "Test_hiappevent_config_01", "Test_hiappevent_config_01_end")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_config_0200
-    * @tc.name      : Test_hiappevent_config_02
-    * @tc.desc      : test Hiappevent Test_hiappevent_config_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_config_0200
+     * @tc.name      : Test_hiappevent_config_02
+     * @tc.desc      : test Hiappevent Test_hiappevent_config_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func Test_hiappevent_config_02(): Unit {
         Hilog.info(0, "Test_hiappevent_config_02", "Test_hiappevent_config_02_start")
         try {
-            var config: ConfigOption = ConfigOption(maxStorage:"2K", disable: true)
+            var config: ConfigOption = ConfigOption(maxStorage: "2K", disable: true)
             HiAppEvent.configure(config)
-            @Expect(true)
+
             let str = "kjhJfhfld;vhbjck"
             var params = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -106,26 +106,26 @@ public class Test_hiAppEvent_config {
             Hilog.info(0, "Test_hiappevent_config_02", "Test_hiappevent_config_02_end")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_config_0300
-    * @tc.name      : Test_hiappevent_config_03
-    * @tc.desc      : test Hiappevent Test_hiappevent_config_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_config_0300
+     * @tc.name      : Test_hiappevent_config_03
+     * @tc.desc      : test Hiappevent Test_hiappevent_config_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func Test_hiappevent_config_03(): Unit {
         Hilog.info(0, "Test_hiappevent_config_03", "Test_hiappevent_config_03_start")
         let arr = ["2B", "2b", "2K", "2k", "2KB", "2kb", "2M", "2m", "2MB", "2mb", "2G", "2g", "2GB", "2gb", "2T", "2t",
             "2TB", "2tb"]
         for (size in arr) {
             try {
-                var config: ConfigOption = ConfigOption(maxStorage:size, disable: false)
+                var config: ConfigOption = ConfigOption(maxStorage: size, disable: false)
                 HiAppEvent.configure(config)
-                @Expect(true)
+
                 let str = "kjhJfhfld;vhbjck;czpicjijd;;;xc j:Xuc[odivopsjkdvfHSWGDOIlsjdqx;'ADXshCJZCJHAZJHDSADASOJDCashjdclkSA:;vhbj"
             var params = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -139,7 +139,7 @@ public class Test_hiAppEvent_config {
             ])
                 var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "$cangjie_1", EventType.Statistic, params)
                 HiAppEvent.write(appInfo)
-                @Expect(true)
+
                 Hilog.info(0, "Test_hiappevent_config_03", "Test_hiappevent_config_03_pass_${size}")
             } catch (e: Exception) {
                 @Expect(false)
@@ -150,24 +150,24 @@ public class Test_hiAppEvent_config {
         }
         Hilog.info(0, "Test_hiappevent_config_03", "Test_hiappevent_config_03_end")
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_config_0400
-    * @tc.name      : Test_hiappevent_config_04
-    * @tc.desc      : test Hiappevent Test_hiappevent_config_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_config_0400
+     * @tc.name      : Test_hiappevent_config_04
+     * @tc.desc      : test Hiappevent Test_hiappevent_config_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func Test_hiappevent_config_04(): Unit {
         Hilog.info(0, "Test_hiappevent_config_04", "Test_hiappevent_config_04_start")
         try {
-            var config: ConfigOption = ConfigOption(maxStorage:"B", disable: false)
+            var config: ConfigOption = ConfigOption(maxStorage: "B", disable: false)
 
             HiAppEvent.configure(config)
-            @Expect(true)
+
             let str = "kjhJfhfld;vhbjck;czpicjijd;plKSOD"
             var params = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),

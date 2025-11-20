@@ -34,7 +34,7 @@ class Test_generateSymKey_convertKey_03 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_generatesymkey_01(): Unit {
         let skg = createSymKeyGenerator("AES256")
         let sk = skg.generateSymKey()
@@ -52,7 +52,7 @@ class Test_generateSymKey_convertKey_03 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_generatesymkey_02(): Unit {
         let skg = createSymKeyGenerator("3DES192")
         let sk = skg.generateSymKey()
@@ -70,7 +70,7 @@ class Test_generateSymKey_convertKey_03 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_generatesymkey_03(): Unit {
         let skg = createSymKeyGenerator("AES256")
         let sk = skg.generateSymKey()
@@ -89,7 +89,7 @@ class Test_generateSymKey_convertKey_03 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_generatesymkey_04(): Unit {
         let skg = createSymKeyGenerator("3DES192")
         let sk = skg.generateSymKey()
@@ -107,7 +107,7 @@ class Test_generateSymKey_convertKey_03 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_convertkey_05(): Unit {
         let skg = createSymKeyGenerator("3DES192")
         let blob = DataBlob("this is test!zzzzzzzzzzz".toArray())
@@ -128,7 +128,7 @@ class Test_generateSymKey_convertKey_03 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_convertkey_06(): Unit {
         let skg = createSymKeyGenerator("3DES192")
         let arr: Array<UInt8> = [0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56, 0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39,

@@ -22,7 +22,7 @@ import ohos.arkui.state_macro_manage.*
 import std.collection.*
 import stdx.encoding.json.*
 import std.convert.*
-import ohos.base.{LengthProp, Length, Color,LengthType}
+import ohos.base.{LengthProp, Length, Color}
 
 @Builder
 public func Builder_GenericsFunc_TopLevel<T>(textcontent: T, fontcolor: Color, fontsize!: Int64 = 20): Unit where T <: ToString {

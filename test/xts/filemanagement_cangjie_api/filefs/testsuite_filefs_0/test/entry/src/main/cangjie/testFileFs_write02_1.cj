@@ -34,9 +34,9 @@ class testFileIo_write02_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
-        let filePath = "/data/storage/el2/base/haps/entry/files/test.txt"
+        let filePath = "/data/storage/el2/base/files/test.txt"
         let res = FileIo.access(filePath)
         if (res) {
             FileIo.unlink(filePath)

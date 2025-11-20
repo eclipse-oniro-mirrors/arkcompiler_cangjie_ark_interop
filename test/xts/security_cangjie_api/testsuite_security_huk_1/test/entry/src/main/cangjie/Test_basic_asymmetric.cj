@@ -28,15 +28,15 @@ import ohos.business_exception.BusinessException
 @Test
 class Test_SecurityHuks_BasicAsymmetric {
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_BasicAsymmetric_0100
-    * @tc.name      : test_rsa
-    * @tc.desc      : test UniversalKeystoreKit abortSession
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_BasicAsymmetric_0100
+     * @tc.name      : test_rsa
+     * @tc.desc      : test UniversalKeystoreKit abortSession
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rsa() {
         //ref: https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/UniversalKeystoreKit/huks-signing-signature-verification-ndk.md
         let keyAlias = "test_rsa"
@@ -44,11 +44,10 @@ class Test_SecurityHuks_BasicAsymmetric {
         let inData = "Hks_RSA_Sign_Verify_Test_0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000_string"
         clean(keyAlias)
         try {
-            
             generateKeyItem(
                 keyAlias,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(
@@ -60,11 +59,11 @@ class Test_SecurityHuks_BasicAsymmetric {
                     ]
                 )
             )
-            
+
             let signHandle = initSession(
                 keyAlias,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.BooleanValue(false)),
@@ -76,22 +75,23 @@ class Test_SecurityHuks_BasicAsymmetric {
 
             updateSession(
                 signHandle,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.BooleanValue(false)),
                         HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Int32Value(1i32)),
                         HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.BytesValue([3u8]))
                     ],
-                   inData: inData.toArray()
-                ),token:[]
+                    inData: inData.toArray()
+                ),
+                token: []
             )
 
             let sign = finishSession(
                 signHandle,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.BooleanValue(false)),
@@ -99,16 +99,15 @@ class Test_SecurityHuks_BasicAsymmetric {
                         HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.BytesValue([3u8]))
                     ]
                 ),
-                token:[]
+                token: []
             ).getOrThrow()
 
-            abortSession(signHandle, HuksOptions(properties:[]))
+            abortSession(signHandle, HuksOptions(properties: []))
 
-            
             let verifyHandle = initSession(
                 keyAlias,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(
@@ -123,53 +122,53 @@ class Test_SecurityHuks_BasicAsymmetric {
 
             updateSession(
                 verifyHandle,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
                         HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Int32Value(1i32)),
                         HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.BytesValue([3u8]))
                     ],
-                   inData: inData.toArray()
-                ),token:[]
+                    inData: inData.toArray()
+                ),
+                token: []
             )
 
             let verify = finishSession(
                 verifyHandle,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
                         HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Int32Value(1i32)),
                         HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.BytesValue([3u8]))
-
                     ],
                     inData: sign
-                ),token:[]
+                ),
+                token: []
             ).getOrThrow()
 
             @Expect(!verify.isEmpty())
-            abortSession(verifyHandle, HuksOptions(properties:[]))
+            abortSession(verifyHandle, HuksOptions(properties: []))
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-        finally {
+        } finally {
             clean(keyAlias)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_BasicAsymmetric_0200
-    * @tc.name      : test_ecc
-    * @tc.desc      : test UniversalKeystoreKit abortSession
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_BasicAsymmetric_0200
+     * @tc.name      : test_ecc
+     * @tc.desc      : test UniversalKeystoreKit abortSession
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ecc() {
         //ref: https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/UniversalKeystoreKit/huks-signing-signature-verification-arkts.md
         let keyAlias = "test_ecc"
@@ -177,11 +176,10 @@ class Test_SecurityHuks_BasicAsymmetric {
         let inData = "123456"
         clean(keyAlias)
         try {
-            
             generateKeyItem(
                 keyAlias,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(
@@ -192,11 +190,11 @@ class Test_SecurityHuks_BasicAsymmetric {
                     ]
                 )
             )
-            
+
             let signHandle = initSession(
                 keyAlias,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.BooleanValue(false)),
@@ -207,37 +205,37 @@ class Test_SecurityHuks_BasicAsymmetric {
 
             updateSession(
                 signHandle,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.BooleanValue(false)),
                         HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32))
                     ],
-                   inData: inData.toArray()
-                ),token:[]
+                    inData: inData.toArray()
+                ),
+                token: []
             )
 
             let sign = finishSession(
                 signHandle,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.BooleanValue(false)),
                         HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32))
                     ]
                 ),
-                token:[]
+                token: []
             ).getOrThrow()
 
-            abortSession(signHandle, HuksOptions(properties:[]))
+            abortSession(signHandle, HuksOptions(properties: []))
 
-            
             let verifyHandle = initSession(
                 keyAlias,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
@@ -248,60 +246,59 @@ class Test_SecurityHuks_BasicAsymmetric {
 
             updateSession(
                 verifyHandle,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
                         HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32))
                     ],
-                   inData: inData.toArray()
-                ),token:[]
+                    inData: inData.toArray()
+                ),
+                token: []
             )
 
             let verify = finishSession(
                 verifyHandle,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
                         HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32))
-
                     ],
                     inData: sign
-                ),token:[]
+                ),
+                token: []
             ).getOrThrow()
 
-            abortSession(verifyHandle, HuksOptions(properties:[]))
+            abortSession(verifyHandle, HuksOptions(properties: []))
             @Expect(!verify.isEmpty())
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-        finally {
+        } finally {
             clean(keyAlias)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_BasicAsymmetric_0300
-    * @tc.name      : test_export_key
-    * @tc.desc      : test UniversalKeystoreKit exportKeyItem
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_BasicAsymmetric_0300
+     * @tc.name      : test_export_key
+     * @tc.desc      : test UniversalKeystoreKit exportKeyItem
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_export_key() {
         let keyAlias = "test_export_key"
         clean(keyAlias)
         try {
-            
             generateKeyItem(
                 keyAlias,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(
@@ -312,13 +309,12 @@ class Test_SecurityHuks_BasicAsymmetric {
                     ]
                 )
             )
-            
+
             let data = exportKeyItem(keyAlias, genKeyOptionsTest1)
             @Expect(!data.isEmpty())
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-         finally {
+        } finally {
             clean(keyAlias)
         }
     }

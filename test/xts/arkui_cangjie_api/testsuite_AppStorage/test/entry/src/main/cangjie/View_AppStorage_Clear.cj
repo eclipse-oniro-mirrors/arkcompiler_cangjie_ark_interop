@@ -30,12 +30,12 @@ class View_AppStorage_Clear {
     var res = false
     func build() {
         Column(space: 10) {
-            Button("size").id("Test_Button01").onClick {
+            Button("size").id("Test_Button01").onClick({
                 ClickEvent => this.size = AppStorage.size()
-            }
-            Button("clear").id("Test_Button02").onClick {
+            })
+            Button("clear").id("Test_Button02").onClick({
                 ClickEvent => this.res = AppStorage.clear()
-            }
+            })
             Text("${this.size}").id("Test_Text00")
             Text("${this.res}").id("Test_Text01")
         }

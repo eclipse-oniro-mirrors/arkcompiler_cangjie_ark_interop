@@ -51,7 +51,7 @@ class Test_MenuItemGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_MenuItemGroup_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_MenuItem_component_001 start")
         driver.findComponent(On().id("showmenu")).getOrThrow().click()
@@ -71,7 +71,7 @@ class Test_MenuItemGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_MenuItemGroup_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_MenuItemGroup_Component_002 start")
         let text = driver.findComponent(On().text("Test"))

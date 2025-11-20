@@ -13,14 +13,12 @@
  * limitations under the License.
  */
 
-
 package ohos_app_cangjie_entry
 
 import std.unittest.*
 import std.unittest.common.*
 import std.unittest.testmacro.*
 import ohos.arkui.state_macro_manage.r
-//import ohos.base.CJResource
 import ohos.bundle.bundle_manager.{ModuleMetadata, Metadata, BundleType, HapModuleInfo, ExtensionAbilityInfo}
 import ohos.bundle.bundle_manager.RouterItem
 import kit.CoreFileKit.*
@@ -33,21 +31,20 @@ import stdx.encoding.json.*
 
 @Test
 class TestBundleInfo02 {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_BundleManager01_TestBundleInfo02_0100
-    * @tc.name      : test00
-    * @tc.desc      : test BundleManager01 test00
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_BundleManager01_TestBundleInfo02_0100
+     * @tc.name      : test00
+     * @tc.desc      : test BundleManager01 test00
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test00(): Unit {
         let bundleInfo = getFullBundleInfo()
         let appIndex = bundleInfo.appIndex
         @Expect(appIndex, 0)
     }
-    
 }

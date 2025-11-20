@@ -14,6 +14,7 @@
  */
 
 package ohos_app_cangjie_entry
+
 import std.unittest.*
 import std.unittest.common.*
 import std.unittest.testmacro.*
@@ -26,25 +27,24 @@ import ohos.bundle.bundle_manager
 import ohos.arkui.state_macro_manage.r
 import kit.LocalizationKit.AppResource
 import ohos.bundle.bundle_manager.{HapModuleInfo, AbilityInfo, LaunchType, SupportWindowMode}
+
 @Test
 class testBundleInfo_name_18 {
-/*
-* @tc.number    : Sub_Cangjie_bundleManager_BundleInfo_102200
-* @tc.name      : TestCase_511
-* @tc.desc      : check BundleInfo with bundle flags: GetBundleInfoWithMenu
-* @tc.size      : MediumTest
-* @tc.type      : Function
-* @tc.level     : Level 0
-*/
-
-@TestCase
-@Tag[APILevel12, TestLevel0]
-func TestCase_511(): Unit  {
-Hilog.info(0u32, "CangjieTest", "testcase TestCase_511 begins.")
-Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
-let bundleInfo = BundleManager.getBundleInfoForSelf(BundleFlag.GET_BUNDLE_INFO_WITH_MENU)
-@Expect(bundleInfo.name, "com.example.myapplication")
-Hilog.info(0u32, "CangjieTest", "testcase TestCase_511 ends.")
-}
-
+    /*
+     * @tc.number    : Sub_Cangjie_bundleManager_BundleInfo_102200
+     * @tc.name      : TestCase_511
+     * @tc.desc      : check BundleInfo with bundle flags: GetBundleInfoWithMenu
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func TestCase_511(): Unit {
+        Hilog.info(0u32, "CangjieTest", "testcase TestCase_511 begins.")
+        Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
+        let bundleInfo = BundleManager.getBundleInfoForSelf(BundleFlag.GET_BUNDLE_INFO_WITH_MENU)
+        @Expect(bundleInfo.name, "com.example.myapplication")
+        Hilog.info(0u32, "CangjieTest", "testcase TestCase_511 ends.")
+    }
 }

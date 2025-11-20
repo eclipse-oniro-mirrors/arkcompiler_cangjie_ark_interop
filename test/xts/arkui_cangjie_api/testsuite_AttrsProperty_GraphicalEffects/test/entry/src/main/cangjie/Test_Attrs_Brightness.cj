@@ -38,7 +38,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_AlphabetIndexer_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Blank_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Button_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Checkbox_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_CheckboxGroup_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin CheckboxGroup")
@@ -164,7 +164,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_DataPanel_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin DataPanel")
@@ -189,7 +189,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_DatePicker_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin DatePicker")
@@ -214,7 +214,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Divider_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Divider")
@@ -239,7 +239,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Gauge_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Gauge")
@@ -264,7 +264,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Image_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Image")
@@ -289,7 +289,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_ImageSpan_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin ImageSpan")
@@ -314,7 +314,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_LoadingProgress_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin LoadingProgress")
@@ -339,7 +339,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Menu_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Menu")
@@ -364,7 +364,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_MenuItem_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin MenuItem")
@@ -389,7 +389,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_MenuItemGroup_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin MenuItemGroup")
@@ -414,7 +414,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Progress_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Progress")
@@ -439,7 +439,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_QRCode_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin QRCode")
@@ -464,7 +464,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Radio_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Radio")
@@ -489,7 +489,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Rating_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Rating")
@@ -514,7 +514,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Refresh_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Refresh")
@@ -539,7 +539,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_RichEditor_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin RichEditor")
@@ -564,7 +564,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_RichText_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin RichText")
@@ -589,7 +589,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_RowSplit_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin RowSplit")
@@ -614,7 +614,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_ScrollBar_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin ScrollBar")
@@ -639,7 +639,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Search_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Search")
@@ -664,7 +664,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Slider_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Slider")
@@ -689,7 +689,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Stepper_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Stepper")
@@ -714,7 +714,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_StepperItem_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin StepperItem")
@@ -739,7 +739,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Text_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Text")
@@ -764,7 +764,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_TextArea_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin TextArea")
@@ -789,7 +789,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_TextClock_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin TextClock")
@@ -814,7 +814,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_TextInput_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin TextInput")
@@ -839,7 +839,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_TextPicker_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin TextPicker")
@@ -864,7 +864,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_TextTimer_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin TextTimer")
@@ -889,7 +889,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Toggle_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Toggle")
@@ -914,7 +914,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Web_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Web")
@@ -939,7 +939,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Select_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Select")
@@ -964,7 +964,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Badge_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Badge")
@@ -989,7 +989,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Column_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Column")
@@ -1014,7 +1014,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Grid_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Grid")
@@ -1039,7 +1039,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_GridItem_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin GridItem")
@@ -1064,7 +1064,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_GridRow_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin GridRow")
@@ -1089,7 +1089,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_GridCol_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin GridCol")
@@ -1114,7 +1114,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Flex_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Flex")
@@ -1139,7 +1139,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_List_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin List")
@@ -1164,7 +1164,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_ListItem_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin ListItem")
@@ -1189,7 +1189,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_ListItemGroup_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin ListItemGroup")
@@ -1215,7 +1215,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_RelativeContainer_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin RelativeContainer")
@@ -1240,7 +1240,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Row_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Row")
@@ -1265,7 +1265,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Scroll_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Scroll")
@@ -1290,7 +1290,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Stack_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Stack")
@@ -1315,7 +1315,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Swiper_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Swiper")
@@ -1340,7 +1340,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Tabs_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Tabs")
@@ -1365,7 +1365,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_TabContent_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin TabContent")
@@ -1390,7 +1390,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Circle_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Circle")
@@ -1415,7 +1415,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Line_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Line")
@@ -1440,7 +1440,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Rect_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Rect")
@@ -1465,7 +1465,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Shape_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Shape")
@@ -1490,7 +1490,7 @@ class Test_EmptyAttrs_Brightness {
      * @tc.desic：Empty_Path_Brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Brightness_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBrightness: FindBegin Path")

@@ -36,9 +36,7 @@ class TestPhotoAccessHelper {
             getRequiredPermissions([permissionName])
             sleepFor(5.second)
             try {
-                click(at: Screen
-                    .getTheOnlyUiComponentWhoseTextEqualsTo("允许")
-                    .centerPoint)
+                click(at: Screen.getTheOnlyUiComponentWhoseTextEqualsTo("允许").centerPoint)
                 sleepFor(5.second)
             } catch (e: Exception) {}
         }
@@ -53,7 +51,7 @@ class TestPhotoAccessHelper {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testGetAssets() {
         let predicates = DataSharePredicates()
         let fetchOptions: FetchOptions = FetchOptions([], predicates)
@@ -68,7 +66,7 @@ class TestPhotoAccessHelper {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testGetBurstAssets() {
         let predicates = DataSharePredicates()
         let fetchOptions: FetchOptions = FetchOptions([], predicates)
@@ -84,7 +82,7 @@ class TestPhotoAccessHelper {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testGetObjectByPosition() {
         let predicates = DataSharePredicates()
         let fetchOptions: FetchOptions = FetchOptions([], predicates)
@@ -99,7 +97,7 @@ class TestPhotoAccessHelper {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testCreateImageAssetRequest() {
         let fileUriEmpty = ""
         try {
@@ -108,6 +106,4 @@ class TestPhotoAccessHelper {
             @Expect(e.toString(),"BusinessException: errorcode: 401, message: Parameter error. Parameter verification failed.")
         }
     }
-
-
 }

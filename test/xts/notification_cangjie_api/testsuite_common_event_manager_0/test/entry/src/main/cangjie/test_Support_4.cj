@@ -48,7 +48,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_91(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_91 begins.")
         @Expect(Support.COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED, "usual.event.nfc.action.ADAPTER_STATE_CHANGED")
@@ -64,7 +64,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_92(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_92 begins.")
         @Expect(Support.COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED, "usual.event.nfc.action.RF_FIELD_ON_DETECTED")
@@ -80,7 +80,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_93(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_93 begins.")
         @Expect(Support.COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED, "usual.event.nfc.action.RF_FIELD_OFF_DETECTED")
@@ -96,7 +96,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_94(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_94 begins.")
         @Expect(Support.COMMON_EVENT_NETWORK_STATE_CHANGED, "usual.event.NETWORK_STATE_CHANGED")
@@ -112,7 +112,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_95(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_95 begins.")
         @Expect(Support.COMMON_EVENT_OFFICE_MODE, "common.event.OFFICE_MODE")
@@ -128,7 +128,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_96(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_96 begins.")
         @Expect(Support.COMMON_EVENT_POWER_CONNECTED, "usual.event.POWER_CONNECTED")
@@ -144,7 +144,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_97(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_97 begins.")
         @Expect(Support.COMMON_EVENT_POWER_DISCONNECTED, "usual.event.POWER_DISCONNECTED")
@@ -160,7 +160,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_98(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_98 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_ADDED, "usual.event.PACKAGE_ADDED")
@@ -176,7 +176,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_99(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_99 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_REPLACED, "usual.event.PACKAGE_REPLACED")
@@ -192,7 +192,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_100(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_100 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_REMOVED, "usual.event.PACKAGE_REMOVED")
@@ -208,7 +208,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_101(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_101 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_FULLY_REMOVED, "usual.event.PACKAGE_FULLY_REMOVED")
@@ -224,7 +224,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_102(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_102 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_CHANGED, "usual.event.PACKAGE_CHANGED")
@@ -240,7 +240,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_103(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_103 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_RESTARTED, "usual.event.PACKAGE_RESTARTED")
@@ -256,7 +256,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_104(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_104 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_DATA_CLEARED, "usual.event.PACKAGE_DATA_CLEARED")
@@ -272,7 +272,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_105(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_105 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_CACHE_CLEARED, "usual.event.PACKAGE_CACHE_CLEARED")
@@ -288,7 +288,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_106(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_106 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGES_SUSPENDED, "usual.event.PACKAGES_SUSPENDED")
@@ -304,7 +304,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_107(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_107 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGES_UNSUSPENDED, "usual.event.PACKAGES_UNSUSPENDED")
@@ -320,7 +320,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_108(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_108 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_FIRST_LAUNCH, "usual.event.PACKAGE_FIRST_LAUNCH")
@@ -336,7 +336,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_109(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_109 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION, "usual.event.PACKAGE_NEEDS_VERIFICATION")
@@ -352,7 +352,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_110(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_110 begins.")
         @Expect(Support.COMMON_EVENT_PACKAGE_VERIFIED, "usual.event.PACKAGE_VERIFIED")
@@ -368,7 +368,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_111(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_111 begins.")
         @Expect(Support.COMMON_EVENT_POWER_SAVE_MODE_CHANGED, "usual.event.POWER_SAVE_MODE_CHANGED")
@@ -384,7 +384,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_112(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_112 begins.")
         @Expect(Support.COMMON_EVENT_QUICK_FIX_APPLY_RESULT, "usual.event.QUICK_FIX_APPLY_RESULT")
@@ -400,7 +400,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_113(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_113 begins.")
         @Expect(Support.COMMON_EVENT_QUICK_FIX_REVOKE_RESULT, "usual.event.QUICK_FIX_REVOKE_RESULT")
@@ -416,7 +416,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_114(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_114 begins.")
         @Expect(Support.COMMON_EVENT_SHUTDOWN, "usual.event.SHUTDOWN")
@@ -432,7 +432,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_115(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_115 begins.")
         @Expect(Support.COMMON_EVENT_SCREEN_OFF, "usual.event.SCREEN_OFF")
@@ -448,7 +448,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_116(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_116 begins.")
         @Expect(Support.COMMON_EVENT_SCREEN_ON, "usual.event.SCREEN_ON")
@@ -464,7 +464,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_117(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_117 begins.")
         @Expect(Support.COMMON_EVENT_SPLIT_SCREEN, "common.event.SPLIT_SCREEN")
@@ -480,7 +480,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_118(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_118 begins.")
         @Expect(Support.COMMON_EVENT_SLOT_CHANGE, "usual.event.SLOT_CHANGE")
@@ -496,7 +496,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_119(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_119 begins.")
         @Expect(Support.COMMON_EVENT_SPN_INFO_CHANGED, "usual.event.SPN_INFO_CHANGED")
@@ -512,7 +512,7 @@ class test_Support_4 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_120(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_120 begins.")
         @Expect(Support.COMMON_EVENT_SIGNAL_INFO_CHANGED, "usual.event.SIGNAL_INFO_CHANGED")

@@ -23,6 +23,7 @@ import ohos.base.*
 import stdx.encoding.json.*
 import kit.PerformanceAnalysisKit.*
 import kit.PerformanceAnalysisKit.Hilog
+
 @Test
 class testAppEventPackageHolderSetSize_1 {
     /*
@@ -34,19 +35,18 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher1")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -1i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-1i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
-
     }
 
     /*
@@ -58,16 +58,16 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher1")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -10i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-10i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -81,16 +81,16 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher1")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -100i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-100i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -104,16 +104,17 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher1")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -1000i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-1000i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
+            @Expect(false)
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -127,16 +128,17 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher1")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -10000i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-10000i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
+            @Expect(false)
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -150,16 +152,17 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher1")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -100000i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-100000i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
+            @Expect(false)
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -173,14 +176,18 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher1")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 0i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
+            let eventPackageHolder = AppEventPackageHolder("watcher1")
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(0i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
+        } catch (e: BusinessException) {
+            @Expect(false)
+        }
     }
 
     /*
@@ -192,109 +199,18 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher1")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 1i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_8 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_0900
-     * @tc.name      : TestCase_9
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher1".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_9(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher1")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 10i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_9 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_1000
-     * @tc.name      : TestCase_10
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher1".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_10(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_10 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher1")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 100i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_10 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_1100
-     * @tc.name      : TestCase_11
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher1".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_11(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_11 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher1")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 1000i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_11 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_1200
-     * @tc.name      : TestCase_12
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher1".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_12(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_12 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher1")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 10000i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_12 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_1300
-     * @tc.name      : TestCase_13
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher1".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_13(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_13 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher1")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 100000i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_13 ends.")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
+            let eventPackageHolder = AppEventPackageHolder("watcher1")
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(1i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_8 ends.")
+        } catch (e: BusinessException) {
+            @Expect(false)
+        }
     }
 
     /*
@@ -306,16 +222,16 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_14 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_14 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher2")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -1i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_14 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-1i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_14 ends.")
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -329,16 +245,16 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_15 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_15 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher2")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -10i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_15 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-10i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_15 ends.")
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -352,16 +268,16 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_16 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_16 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher2")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -100i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_16 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-100i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_16 ends.")
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -375,16 +291,16 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_17 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_17 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher2")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -1000i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_17 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-1000i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_17 ends.")
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -398,16 +314,16 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_18 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_18 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher2")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -10000i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_18 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-10000i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_18 ends.")
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -421,16 +337,16 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
-        try{
-            Hilog.info(0, "cangjietest","testcase TestCase_19 begins.")
-            Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_19 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
             let eventPackageHolder = AppEventPackageHolder("watcher2")
-            Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-            eventPackageHolder.setSize( -100000i32)
-            Hilog.info(0, "cangjietest","testcase TestCase_19 ends.")
-        }catch(e:BusinessException){
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(-100000i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_19 ends.")
+        } catch (e: BusinessException) {
             @Expect(e.message, "Invalid size value.")
         }
     }
@@ -444,14 +360,18 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_20 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher2")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 0i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_20 ends.")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_20 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
+            let eventPackageHolder = AppEventPackageHolder("watcher2")
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(0i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_20 ends.")
+        } catch (e: BusinessException) {
+            @Expect(e.message, "Invalid size value.")
+        }
     }
 
     /*
@@ -463,108 +383,17 @@ class testAppEventPackageHolderSetSize_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_21 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher2")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 1i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_21 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_2200
-     * @tc.name      : TestCase_22
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher2".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_22(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_22 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher2")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 10i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_22 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_2300
-     * @tc.name      : TestCase_23
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher2".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_23(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_23 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher2")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 100i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_23 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_2400
-     * @tc.name      : TestCase_24
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher2".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_24(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_24 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher2")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 1000i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_24 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_2500
-     * @tc.name      : TestCase_25
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher2".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_25(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_25 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher2")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 10000i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_25 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_SetSize_2600
-     * @tc.name      : TestCase_26
-     * @tc.desc      : AppEventPackageHolder setSize, watcherName: "watcher2".
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_26(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_26 begins.")
-        Hilog.info(0, "cangjietest","define local variable eventPackageHolder")
-        let eventPackageHolder = AppEventPackageHolder("watcher2")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder setSize")
-        eventPackageHolder.setSize( 100000i32)
-        Hilog.info(0, "cangjietest","testcase TestCase_26 ends.")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_21 begins.")
+            Hilog.info(0, "cangjietest", "define local variable eventPackageHolder")
+            let eventPackageHolder = AppEventPackageHolder("watcher2")
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder setSize")
+            eventPackageHolder.setSize(1i32)
+            Hilog.info(0, "cangjietest", "testcase TestCase_21 ends.")
+        } catch (e: BusinessException) {
+            @Expect(e.message, "Invalid size value.")
+        }
     }
 }

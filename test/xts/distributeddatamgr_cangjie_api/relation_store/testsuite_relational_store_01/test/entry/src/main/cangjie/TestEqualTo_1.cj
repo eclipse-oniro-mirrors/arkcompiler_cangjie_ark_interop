@@ -22,7 +22,7 @@ import std.collection.*
 import ohos.base.*
 import stdx.encoding.json.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.ValueType as RelaValueType
+//import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import ohos.business_exception.{BusinessException}
 import kit.PerformanceAnalysisKit.Hilog
 
@@ -37,16 +37,16 @@ class TestEqualTo_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("EMPLOYEE")
         Hilog.info(0u32, "cangjietest", "", "testEqualTo")
         rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
+            .equalTo("Lisa", RelationalStoreValueType.StringValue("Lisa"))
             .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
+            .equalTo("AGD", RelationalStoreValueType.Boolean(true))
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 ends.")
     }
@@ -60,7 +60,7 @@ class TestEqualTo_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -68,9 +68,9 @@ class TestEqualTo_1 {
         Hilog.info(0u32, "cangjietest", "", "Match data table")
         try {
             rdbPridecates
-                .equalTo("", RelaValueType.StringValue(""))
+                .equalTo("", RelationalStoreValueType.StringValue(""))
                 .and()
-                .equalTo("DEWR%$%$*67", RelaValueType.Boolean(false))
+                .equalTo("DEWR%$%$*67", RelationalStoreValueType.Boolean(false))
             @Expect("assertion#4: not throw", "Match data table")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -87,16 +87,16 @@ class TestEqualTo_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("EMPLOYEE")
         Hilog.info(0u32, "cangjietest", "", "testEqualTo")
         rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
+            .equalTo("Lisa", RelationalStoreValueType.StringValue("Lisa"))
             .and()
-            .equalTo("#!$@$23", RelaValueType.Boolean(true))
+            .equalTo("#!$@$23", RelationalStoreValueType.Boolean(true))
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 ends.")
     }
@@ -110,16 +110,16 @@ class TestEqualTo_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("EMPLOYEE")
         Hilog.info(0u32, "cangjietest", "", "testEqualTo")
         rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
+            .equalTo("Lisa", RelationalStoreValueType.StringValue("Lisa"))
             .and()
-            .equalTo("reason", RelaValueType.Boolean(true))
+            .equalTo("reason", RelationalStoreValueType.Boolean(true))
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 ends.")
     }
@@ -133,339 +133,17 @@ class TestEqualTo_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("EMPLOYEE")
         Hilog.info(0u32, "cangjietest", "", "testEqualTo")
         rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
+            .equalTo("Lisa", RelationalStoreValueType.StringValue("Lisa"))
             .and()
-            .equalTo("1234567890", RelaValueType.Boolean(true))
+            .equalTo("1234567890", RelationalStoreValueType.Boolean(true))
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_0600
-     * @tc.name      : TestCase_6
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_6(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_6 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_6 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_0700
-     * @tc.name      : TestCase_7
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_7(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_7 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_7 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_0800
-     * @tc.name      : TestCase_8
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_8(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_8 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_8 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_0900
-     * @tc.name      : TestCase_9
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_9(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_9 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_9 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1000
-     * @tc.name      : TestCase_10
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_10(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_10 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_10 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1100
-     * @tc.name      : TestCase_11
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_11(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_11 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_11 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1200
-     * @tc.name      : TestCase_12
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_12(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_12 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_12 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1300
-     * @tc.name      : TestCase_13
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_13(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_13 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_13 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1400
-     * @tc.name      : TestCase_14
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_14(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1500
-     * @tc.name      : TestCase_15
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_15(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_15 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_15 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1600
-     * @tc.name      : TestCase_16
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_16(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_16 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_16 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1700
-     * @tc.name      : TestCase_17
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_17(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_17 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_17 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1800
-     * @tc.name      : TestCase_18
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_18(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_18 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_18 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Equal_To_1900
-     * @tc.name      : TestCase_19
-     * @tc.desc      : "1" Match data table.
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_19(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_19 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testEqualTo")
-        rdbPridecates
-            .equalTo("Lisa", RelaValueType.StringValue("Lisa"))
-            .and()
-            .equalTo("AGD", RelaValueType.Boolean(true))
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_19 ends.")
     }
 }

@@ -26,18 +26,22 @@ import ohos.base.*
 @Test
 class Test_hitracemeter {
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hitracemeter_0100
-    * @tc.name      : Test_HiTraceMeter
-    * @tc.desc      : test PerformanceAnalysisKit HiTraceMeter
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hitracemeter_0100
+     * @tc.name      : Test_HiTraceMeter
+     * @tc.desc      : test PerformanceAnalysisKit HiTraceMeter
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_HiTraceMeter() {
-        let hiTraceMeter = HiTraceMeter() // for coverage
-        HiTraceMeter.startTrace("myTestFunc", 1)
-        HiTraceMeter.finishTrace("myTestFunc", 1)
+        try {
+            let hiTraceMeter = HiTraceMeter() // for coverage
+            HiTraceMeter.startTrace("myTestFunc", 1)
+            HiTraceMeter.finishTrace("myTestFunc", 1)
+        } catch (e: Exception) {
+            @Expect(false)
+        }
     }
 }

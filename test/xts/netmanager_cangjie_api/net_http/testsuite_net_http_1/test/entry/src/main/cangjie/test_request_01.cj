@@ -34,7 +34,7 @@ class Test_request_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_request_01(): Unit {
         let httpRequest = createHttp()
         httpRequest.request(
@@ -66,7 +66,7 @@ class Test_request_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_request_02(): Unit {
         let httpRequest = createHttp()
         httpRequest.request(
@@ -117,7 +117,7 @@ class Test_request_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_destroy_03(): Unit {
         let httpRequest = createHttp()
         httpRequest.request(

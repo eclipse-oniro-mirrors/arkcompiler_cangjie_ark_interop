@@ -14,42 +14,64 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_1", { =>testAbilityInfo_enabled_entry_EntryAbility_1()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_2", { =>testAbilityInfo_enabled_entry_EntryAbility_2()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_3", { =>testAbilityInfo_enabled_entry_EntryAbility_3()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_4", { =>testAbilityInfo_enabled_entry_EntryAbility_4()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_5", { =>testAbilityInfo_enabled_entry_EntryAbility_5()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_6", { =>testAbilityInfo_enabled_entry_EntryAbility_6()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_7", { =>testAbilityInfo_enabled_entry_EntryAbility_7()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_8", { =>testAbilityInfo_enabled_entry_EntryAbility_8()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_9", { =>testAbilityInfo_enabled_entry_EntryAbility_9()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_10", { =>testAbilityInfo_enabled_entry_EntryAbility_10()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_11", { =>testAbilityInfo_enabled_entry_EntryAbility_11()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_12", { =>testAbilityInfo_enabled_entry_EntryAbility_12()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_13", { =>testAbilityInfo_enabled_entry_EntryAbility_13()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_14", { =>testAbilityInfo_enabled_entry_EntryAbility_14()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_15", { =>testAbilityInfo_enabled_entry_EntryAbility_15()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_16", { =>testAbilityInfo_enabled_entry_EntryAbility_16()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_17", { =>testAbilityInfo_enabled_entry_EntryAbility_17()
-})
-registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_18", { =>testAbilityInfo_enabled_entry_EntryAbility_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_1",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_1()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_2",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_2()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_3",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_3()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_4",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_4()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_5",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_5()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_10",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_10()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_11",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_11()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_12",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_12()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_13",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_13()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_14",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_14()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_15",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_15()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_16",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_16()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_17",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_17()
+        })
+    registerTestSuite("testAbilityInfo_enabled_entry_EntryAbility_18",
+        {
+            => testAbilityInfo_enabled_entry_EntryAbility_18()
+        })
 }

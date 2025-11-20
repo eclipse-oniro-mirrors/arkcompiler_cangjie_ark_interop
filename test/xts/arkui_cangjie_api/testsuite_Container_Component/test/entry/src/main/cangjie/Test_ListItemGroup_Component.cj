@@ -48,7 +48,7 @@ class Test_ListItemGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ListItemGroup_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_ListItemGroup_Component_001 start")
         let ListItemGroup = getInspectorByKey("Test_ListItemGroup")
@@ -68,7 +68,7 @@ class Test_ListItemGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ListItemGroup_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_ListItemGroup_Component_002 start")
         let ListItemGroup = getInspectorByKey("Test_ListItemGroup")
@@ -130,7 +130,7 @@ class Test_ListItemGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ListItemGroup_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_ListItemGroup_Component_003 start")
         let text = driver.findComponent(On().text("Header1"))

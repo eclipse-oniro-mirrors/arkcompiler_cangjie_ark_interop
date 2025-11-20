@@ -20,10 +20,11 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
+import ohos.business_exception.BusinessException
 
 @Test
 class Test_equalTo_notEqualTo_03 {
@@ -35,10 +36,11 @@ class Test_equalTo_notEqualTo_03 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -81,21 +83,21 @@ class Test_equalTo_notEqualTo_03 {
     public override func afterEach(): Unit {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0100
-    * @tc.name      : test_equalto_01
-    * @tc.desc      : test RelationStore test_equalto_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0100
+     * @tc.name      : test_equalto_01
+     * @tc.desc      : test RelationStore test_equalto_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_equalto_01(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("NAME", RelationalStoreValueType.StringValue("Lisa"))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
         @Expect(resultSet.getString(1), "Lisa")
@@ -108,24 +110,27 @@ class Test_equalTo_notEqualTo_03 {
         @Expect(resultSet.getString(2), "19")
         @Expect(resultSet.getString(3), "1000.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0200
-    * @tc.name      : test_equalto_02
-    * @tc.desc      : test RelationStore test_equalto_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0200
+     * @tc.name      : test_equalto_02
+     * @tc.desc      : test RelationStore test_equalto_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_equalto_02(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("CODES", RelationalStoreValueType.Boolean(true))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
         @Expect(resultSet.getString(1), "Lisa")
@@ -138,20 +143,23 @@ class Test_equalTo_notEqualTo_03 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getString(3), "10000.5")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0300
-    * @tc.name      : test_equalto_03
-    * @tc.desc      : test RelationStore test_equalto_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0300
+     * @tc.name      : test_equalto_03
+     * @tc.desc      : test RelationStore test_equalto_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_equalto_03(): Unit {
         var values = HashMap<String, RelationalStoreValueType>()
         values.add("ID", RelationalStoreValueType.Integer(5))
@@ -163,7 +171,7 @@ class Test_equalTo_notEqualTo_03 {
         rdbStore.insert("EMPLOYEE", values)
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("AGE", RelationalStoreValueType.Integer(19))
-        let resultSet = rdbStore.query(predicates,columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "2")
         @Expect(resultSet.getString(1), "Lisa")
@@ -176,44 +184,50 @@ class Test_equalTo_notEqualTo_03 {
         @Expect(resultSet.getString(2), "19")
         @Expect(resultSet.getString(3), "100000.5")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0400
-    * @tc.name      : test_equalto_04
-    * @tc.desc      : test RelationStore test_equalto_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0400
+     * @tc.name      : test_equalto_04
+     * @tc.desc      : test RelationStore test_equalto_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_equalto_04(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("ID", RelationalStoreValueType.Integer(3))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "3")
         @Expect(resultSet.getString(1), "Bob")
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getString(3), "10000.5")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0500
-    * @tc.name      : test_equalto_05
-    * @tc.desc      : test RelationStore test_equalto_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0500
+     * @tc.name      : test_equalto_05
+     * @tc.desc      : test RelationStore test_equalto_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_equalto_05(): Unit {
         var values = HashMap<String, RelationalStoreValueType>()
         values.add("ID", RelationalStoreValueType.Integer(Int64.Max))
@@ -225,27 +239,30 @@ class Test_equalTo_notEqualTo_03 {
         rdbStore.insert("EMPLOYEE", values)
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("ID", RelationalStoreValueType.Integer(Int64.Max))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "9223372036854775807")
         @Expect(resultSet.getString(1), "Bob")
         @Expect(resultSet.getString(2), "-9223372036854775808")
         @Expect(resultSet.getString(3), "100000.5")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0600
-    * @tc.name      : test_equalto_06
-    * @tc.desc      : test RelationStore test_equalto_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0600
+     * @tc.name      : test_equalto_06
+     * @tc.desc      : test RelationStore test_equalto_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_equalto_06(): Unit {
         var values = HashMap<String, RelationalStoreValueType>()
         values.add("ID", RelationalStoreValueType.Integer(Int64.Min))
@@ -257,30 +274,34 @@ class Test_equalTo_notEqualTo_03 {
         rdbStore.insert("EMPLOYEE", values)
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("ID", RelationalStoreValueType.Integer(Int64.Min))
-        let resultSet = rdbStore.query(predicates,columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "-9223372036854775808")
         @Expect(resultSet.getString(1), "Bob")
         @Expect(resultSet.getString(2), "9223372036854775807")
         @Expect(resultSet.getString(3), "100000.5")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0700
-    * @tc.name      : test_notequalto_07
-    * @tc.desc      : test RelationStore test_notequalto_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0700
+     * @tc.name      : test_notequalto_07
+     * @tc.desc      : test RelationStore test_notequalto_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notequalto_07(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notEqualTo("NAME", RelationalStoreValueType.StringValue("Bob"))
-        let resultSet = rdbStore.query(predicates,columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
         @Expect(resultSet.getString(1), "Lisa")
@@ -293,24 +314,27 @@ class Test_equalTo_notEqualTo_03 {
         @Expect(resultSet.getString(2), "19")
         @Expect(resultSet.getString(3), "1000.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0800
-    * @tc.name      : test_notequalto_08
-    * @tc.desc      : test RelationStore test_notequalto_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0800
+     * @tc.name      : test_notequalto_08
+     * @tc.desc      : test RelationStore test_notequalto_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notequalto_08(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notEqualTo("CODES", RelationalStoreValueType.Boolean(false))
-        let resultSet = rdbStore.query(predicates,columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
         @Expect(resultSet.getString(1), "Lisa")
@@ -323,20 +347,23 @@ class Test_equalTo_notEqualTo_03 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getString(3), "10000.5")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0900
-    * @tc.name      : test_notequalto_09
-    * @tc.desc      : test RelationStore test_notequalto_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_0900
+     * @tc.name      : test_notequalto_09
+     * @tc.desc      : test RelationStore test_notequalto_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notequalto_09(): Unit {
         var values = HashMap<String, RelationalStoreValueType>()
         values.add("ID", RelationalStoreValueType.Integer(5))
@@ -348,7 +375,7 @@ class Test_equalTo_notEqualTo_03 {
         rdbStore.insert("EMPLOYEE", values)
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notEqualTo("AGE", RelationalStoreValueType.Integer(19))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 1)
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
@@ -356,24 +383,27 @@ class Test_equalTo_notEqualTo_03 {
         @Expect(resultSet.getString(2), "18")
         @Expect(resultSet.getString(3), "100.5")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_1000
-    * @tc.name      : test_notequalto_10
-    * @tc.desc      : test RelationStore test_notequalto_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_1000
+     * @tc.name      : test_notequalto_10
+     * @tc.desc      : test RelationStore test_notequalto_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notequalto_10(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notEqualTo("ID", RelationalStoreValueType.Integer(3))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
         @Expect(resultSet.getString(1), "Lisa")
@@ -386,20 +416,23 @@ class Test_equalTo_notEqualTo_03 {
         @Expect(resultSet.getString(2), "19")
         @Expect(resultSet.getString(3), "1000.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_1100
-    * @tc.name      : test_notequalto_11
-    * @tc.desc      : test RelationStore test_notequalto_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_1100
+     * @tc.name      : test_notequalto_11
+     * @tc.desc      : test RelationStore test_notequalto_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notequalto_11(): Unit {
         var values = HashMap<String, RelationalStoreValueType>()
         values.add("ID", RelationalStoreValueType.Integer(Int64.Max))
@@ -411,7 +444,7 @@ class Test_equalTo_notEqualTo_03 {
         rdbStore.insert("EMPLOYEE", values)
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notEqualTo("ID", RelationalStoreValueType.Integer(Int64.Max))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
         @Expect(resultSet.getString(1), "Lisa")
@@ -430,20 +463,23 @@ class Test_equalTo_notEqualTo_03 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getString(3), "10000.5")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_1200
-    * @tc.name      : test_notequalto_12
-    * @tc.desc      : test RelationStore test_notequalto_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_equalTo_notEqualTo_03_1200
+     * @tc.name      : test_notequalto_12
+     * @tc.desc      : test RelationStore test_notequalto_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notequalto_12(): Unit {
         var values = HashMap<String, RelationalStoreValueType>()
         values.add("ID", RelationalStoreValueType.Integer(Int64.Min))
@@ -455,7 +491,7 @@ class Test_equalTo_notEqualTo_03 {
         rdbStore.insert("EMPLOYEE", values)
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("ID", RelationalStoreValueType.Integer(Int64.Min))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 1)
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "-9223372036854775808")
@@ -463,6 +499,10 @@ class Test_equalTo_notEqualTo_03 {
         @Expect(resultSet.getString(2), "9223372036854775807")
         @Expect(resultSet.getString(3), "100000.5")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 }

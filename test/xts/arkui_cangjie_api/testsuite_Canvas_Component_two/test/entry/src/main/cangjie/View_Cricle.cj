@@ -21,7 +21,7 @@ import ohos.ui_test.*
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
-import ohos.prompt_action.*
+import ohos.arkui.ui_context.*
 import ohos.base.{LengthProp,  Color, Length}
 
 import kit.LocalizationKit.{AppResource}

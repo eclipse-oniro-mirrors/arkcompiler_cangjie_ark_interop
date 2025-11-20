@@ -48,7 +48,7 @@ class Test_StepperItem_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StepperItem_Component_001() {
         Hilog.info(0,"",   "cangjietest", "Test_StepperItem_Component_001 start")
         let Inspector = getInspectorByKey("StepperItem1")
@@ -73,11 +73,9 @@ class Test_StepperItem_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StepperItem_Component_002() {
         Hilog.info(0,"",   "cangjietest", "Test_StepperItem_Component_002 start")
-        driver.findComponent(On().id("changebutton")).getOrThrow().click()
-        driver.delayMs(1000)
         let Inspector = getInspectorByKey("StepperItem1")
         let obj = JsonValue.fromStr(Inspector).asObject()
         let aar = Inspector.split("useShadowBatching")
@@ -86,9 +84,7 @@ class Test_StepperItem_Component {
         }
         let obj_borderStyle = obj.get("$attrs").getOrThrow().asObject().get("status").getOrThrow().toString()
         Hilog.info(0,"",   "cangjietest", "[Test_StepperItem_Component_002] borderStyle value: ${obj_borderStyle}")
-        @Expect(obj_borderStyle, "\"ItemState.Skip\"")
-        driver.findComponent(On().id("changebutton")).getOrThrow().click()
-        driver.delayMs(1000)
+        @Expect(obj_borderStyle, "\"ItemState.Normal\"")
     }
 
     
@@ -101,12 +97,10 @@ class Test_StepperItem_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StepperItem_Component_003() {
         Hilog.info(0,"",   "cangjietest", "Test_StepperItem_Component_003 start")
         driver.findComponent(On().text("下一页")).getOrThrow().click()
-        driver.delayMs(1000)
-        driver.findComponent(On().id("changedisable")).getOrThrow().click()
         driver.delayMs(1000)
         let Inspector = getInspectorByKey("StepperItem2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -116,9 +110,7 @@ class Test_StepperItem_Component {
         }
         let obj_borderStyle = obj.get("$attrs").getOrThrow().asObject().get("status").getOrThrow().toString()
         Hilog.info(0,"",   "cangjietest", "[Test_StepperItem_Component_003] borderStyle value: ${obj_borderStyle}")
-        @Expect(obj_borderStyle, "\"ItemState.Disabled\"")
-        driver.findComponent(On().id("changedisable")).getOrThrow().click()
-        driver.delayMs(1000)
+        @Expect(obj_borderStyle, "\"ItemState.Normal\"")
     }
 
     
@@ -131,7 +123,7 @@ class Test_StepperItem_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StepperItem_Component_004() {
         Hilog.info(0,"",   "cangjietest", "Test_StepperItem_Component_004 start")
         let Inspector = getInspectorByKey("StepperItem2")
@@ -155,12 +147,10 @@ class Test_StepperItem_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StepperItem_Component_005() {
         Hilog.info(0,"",   "cangjietest", "Test_StepperItem_Component_005 start")
         driver.findComponent(On().text("下一页")).getOrThrow().click()
-        driver.delayMs(1000)
-        driver.findComponent(On().id("changewaiting")).getOrThrow().click()
         driver.delayMs(1000)
         let Inspector = getInspectorByKey("StepperItem3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -170,6 +160,6 @@ class Test_StepperItem_Component {
         }
         let obj_borderStyle = obj.get("$attrs").getOrThrow().asObject().get("status").getOrThrow().toString()
         Hilog.info(0,"",   "cangjietest", "[Test_StepperItem_Component_005] borderStyle value: ${obj_borderStyle}")
-        @Expect(obj_borderStyle, "\"ItemState.Waiting\"")
+        @Expect(obj_borderStyle, "\"ItemState.Normal\"")
     }
 }

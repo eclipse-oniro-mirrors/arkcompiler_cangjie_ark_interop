@@ -22,7 +22,7 @@ import std.collection.*
 import ohos.base.*
 import stdx.encoding.json.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.ValueType as RelaValueType
+//import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import ohos.business_exception.{BusinessException}
 import kit.PerformanceAnalysisKit.Hilog
 import std.core.*
@@ -40,13 +40,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1601(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1601 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -66,13 +66,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1602(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1602 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -92,13 +92,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1603(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1603 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -118,23 +118,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1604(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1604 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -154,13 +154,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1605(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1605 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -180,13 +180,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1606(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1606 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -206,13 +206,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1607(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1607 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -232,23 +232,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1608(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1608 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -268,13 +268,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1609(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1609 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -294,13 +294,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1610(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1610 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -320,13 +320,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1611(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1611 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -346,23 +346,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1612(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1612 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -382,13 +382,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1613(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1613 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -408,13 +408,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1614(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1614 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -434,13 +434,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1615(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1615 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -460,23 +460,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1616(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1616 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -496,13 +496,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1617(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1617 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -522,13 +522,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1618(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1618 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -548,13 +548,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1619(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1619 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -574,23 +574,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1620(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1620 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -610,13 +610,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1621(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1621 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -636,13 +636,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1622(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1622 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -662,13 +662,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1623(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1623 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -688,23 +688,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1624(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1624 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -724,13 +724,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1625(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1625 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -750,13 +750,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1626(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1626 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -776,13 +776,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1627(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1627 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -802,23 +802,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1628(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1628 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -838,13 +838,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1629(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1629 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -864,13 +864,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1630(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1630 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -890,13 +890,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1631(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1631 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -916,23 +916,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1632(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1632 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -952,13 +952,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1633(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1633 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -978,13 +978,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1634(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1634 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -1004,13 +1004,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1635(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1635 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -1030,23 +1030,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1636(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1636 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -1066,13 +1066,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1637(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1637 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -1092,13 +1092,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1638(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1638 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -1118,13 +1118,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1639(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1639 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -1144,23 +1144,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1640(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1640 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -1180,13 +1180,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1641(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1641 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -1206,13 +1206,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1642(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1642 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -1232,13 +1232,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1643(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1643 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -1258,23 +1258,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1644(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1644 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -1294,13 +1294,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1645(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1645 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -1320,13 +1320,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1646(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1646 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -1346,13 +1346,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1647(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1647 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -1372,23 +1372,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1648(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1648 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -1408,13 +1408,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1649(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1649 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -1434,13 +1434,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1650(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1650 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -1460,13 +1460,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1651(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1651 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -1486,23 +1486,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1652(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1652 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -1522,13 +1522,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1653(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1653 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -1548,13 +1548,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1654(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1654 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -1574,13 +1574,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1655(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1655 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -1600,23 +1600,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1656(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1656 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -1636,13 +1636,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1657(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1657 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -1662,13 +1662,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1658(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1658 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -1688,13 +1688,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1659(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1659 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -1714,23 +1714,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1660(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1660 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -1750,13 +1750,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1661(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1661 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -1776,13 +1776,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1662(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1662 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -1802,13 +1802,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1663(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1663 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -1828,23 +1828,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1664(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1664 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -1864,13 +1864,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1665(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1665 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -1890,13 +1890,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1666(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1666 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -1916,13 +1916,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1667(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1667 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -1942,23 +1942,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1668(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1668 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -1978,13 +1978,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1669(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1669 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -2004,13 +2004,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1670(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1670 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -2030,13 +2030,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1671(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1671 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -2056,23 +2056,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1672(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1672 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -2092,13 +2092,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1673(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1673 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -2118,13 +2118,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1674(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1674 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -2144,13 +2144,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1675(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1675 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -2170,23 +2170,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1676(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1676 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -2206,13 +2206,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1677(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1677 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -2232,13 +2232,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1678(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1678 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -2258,13 +2258,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1679(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1679 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -2284,23 +2284,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1680(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1680 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -2320,13 +2320,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1681(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1681 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -2346,13 +2346,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1682(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1682 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -2372,13 +2372,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1683(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1683 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -2398,23 +2398,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1684(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1684 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -2434,13 +2434,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1685(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1685 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -2460,13 +2460,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1686(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1686 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -2486,13 +2486,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1687(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1687 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
@@ -2512,23 +2512,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1688(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1688 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -2548,13 +2548,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1689(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1689 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -2574,13 +2574,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1690(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1690 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -2600,13 +2600,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1691(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1691 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
@@ -2626,23 +2626,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1692(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1692 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -2662,13 +2662,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1693(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1693 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -2688,13 +2688,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1694(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1694 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -2714,13 +2714,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1695(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1695 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -2740,23 +2740,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1696(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1696 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()
@@ -2776,13 +2776,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1697(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1697 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -2802,13 +2802,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1698(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1698 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -2828,13 +2828,13 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1699(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1699 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -2854,23 +2854,23 @@ class TestRdbStore_beginTransaction_17 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1700(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1700 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: true, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "commit failed")
             rdbStore.beginTransaction()
-            values.add("ID", RelaValueType.Integer(-1i64))
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("ID", RelationalStoreValueType.Integer(-1i64))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             rdbStore.insert("THING", values)
             rdbStore.insert("THING", values)
             rdbStore.commit()

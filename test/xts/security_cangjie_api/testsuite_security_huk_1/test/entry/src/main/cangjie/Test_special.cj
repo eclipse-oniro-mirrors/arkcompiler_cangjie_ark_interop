@@ -27,27 +27,27 @@ import ohos.business_exception.BusinessException
 
 @Test
 class Test_SecurityHuks_Special {
-    let genKeyOptionsTest1 = HuksOptions( properties:
-    [
-        HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
-        HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
-        HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
-        HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32)),
-        HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Int32Value(1i32)),
-        HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(false)),
-        HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
-    ]
-)  
+    let genKeyOptionsTest1 = HuksOptions(
+        properties: [
+            HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
+            HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
+            HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
+            HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32)),
+            HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Int32Value(1i32)),
+            HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(false)),
+            HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
+        ]
+    )
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_Special_0100
-    * @tc.name      : test_hks_param_set_none_param
-    * @tc.desc      : test UniversalKeystoreKit isKeyItemExist
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_Special_0100
+     * @tc.name      : test_hks_param_set_none_param
+     * @tc.desc      : test UniversalKeystoreKit isKeyItemExist
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hks_param_set_none_param() {
         let keyAlias = "123";
         clean(keyAlias)
@@ -55,8 +55,7 @@ class Test_SecurityHuks_Special {
             let res = isKeyItemExist(keyAlias, genKeyOptionsTest1)
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-        finally {
+        } finally {
             clean(keyAlias)
         }
     }

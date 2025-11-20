@@ -48,7 +48,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_31(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_31 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE, "usual.event.bluetooth.handsfreeunit.CONNECT_STATE_UPDATE")
@@ -64,7 +64,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_32(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_32 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE, "usual.event.bluetooth.handsfreeunit.AUDIO_STATE_UPDATE")
@@ -80,7 +80,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_33(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_33 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT, "usual.event.bluetooth.handsfreeunit.AG_COMMON_EVENT")
@@ -96,7 +96,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_34(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_34 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE, "usual.event.bluetooth.handsfreeunit.AG_CALL_STATE_UPDATE")
@@ -112,7 +112,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_35(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_35 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE, "usual.event.bluetooth.host.STATE_UPDATE")
@@ -128,7 +128,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_36 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE, "usual.event.bluetooth.host.REQ_DISCOVERABLE")
@@ -144,7 +144,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_37 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE, "usual.event.bluetooth.host.REQ_ENABLE")
@@ -160,7 +160,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_38 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE, "usual.event.bluetooth.host.REQ_DISABLE")
@@ -176,7 +176,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_39 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE, "usual.event.bluetooth.host.SCAN_MODE_UPDATE")
@@ -192,7 +192,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_40 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED, "usual.event.bluetooth.host.DISCOVERY_STARTED")
@@ -208,7 +208,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_41 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED, "usual.event.bluetooth.host.DISCOVERY_FINISHED")
@@ -224,7 +224,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_42 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE, "usual.event.bluetooth.host.NAME_UPDATE")
@@ -240,7 +240,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_43 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE, "usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE")
@@ -256,7 +256,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_44 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE, "usual.event.bluetooth.a2dpsink.PLAYING_STATE_UPDATE")
@@ -272,7 +272,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_45 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE, "usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE")
@@ -288,7 +288,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_46 begins.")
         @Expect(Support.COMMON_EVENT_BUNDLE_REMOVED, "usual.event.BUNDLE_REMOVED")
@@ -304,7 +304,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_47(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_47 begins.")
         @Expect(Support.COMMON_EVENT_BOOT_COMPLETED, "usual.event.BOOT_COMPLETED")
@@ -320,7 +320,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_48(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_48 begins.")
         @Expect(Support.COMMON_EVENT_CONNECTIVITY_CHANGE, "usual.event.CONNECTIVITY_CHANGE")
@@ -336,7 +336,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_49(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_49 begins.")
         @Expect(Support.COMMON_EVENT_CALL_STATE_CHANGED, "usual.event.CALL_STATE_CHANGED")
@@ -352,7 +352,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_50(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_50 begins.")
         @Expect(Support.COMMON_EVENT_CHARGE_IDLE_MODE_CHANGED, "usual.event.CHARGE_IDLE_MODE_CHANGED")
@@ -368,7 +368,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_51(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_51 begins.")
         @Expect(Support.COMMON_EVENT_CHARGING, "usual.event.CHARGING")
@@ -384,7 +384,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_52(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_52 begins.")
         @Expect(Support.COMMON_EVENT_CONFIGURATION_CHANGED, "usual.event.CONFIGURATION_CHANGED")
@@ -400,7 +400,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_53(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_53 begins.")
         @Expect(Support.COMMON_EVENT_CLOSE_SYSTEM_DIALOGS, "usual.event.CLOSE_SYSTEM_DIALOGS")
@@ -416,7 +416,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_54(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_54 begins.")
         @Expect(Support.COMMON_EVENT_DISK_EJECT, "usual.event.data.DISK_EJECT")
@@ -432,7 +432,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_55(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_55 begins.")
         @Expect(Support.COMMON_EVENT_DISK_UNMOUNTABLE, "usual.event.data.DISK_UNMOUNTABLE")
@@ -448,7 +448,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_56(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_56 begins.")
         @Expect(Support.COMMON_EVENT_DISK_BAD_REMOVAL, "usual.event.data.DISK_BAD_REMOVAL")
@@ -464,7 +464,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_57(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_57 begins.")
         @Expect(Support.COMMON_EVENT_DISK_MOUNTED, "usual.event.data.DISK_MOUNTED")
@@ -480,7 +480,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_58(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_58 begins.")
         @Expect(Support.COMMON_EVENT_DISK_UNMOUNTED, "usual.event.data.DISK_UNMOUNTED")
@@ -496,7 +496,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_59(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_59 begins.")
         @Expect(Support.COMMON_EVENT_DISK_REMOVED, "usual.event.data.DISK_REMOVED")
@@ -512,7 +512,7 @@ class test_Support_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_60(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_60 begins.")
         @Expect(Support.COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED, "usual.event.DEVICE_IDLE_MODE_CHANGED")

@@ -29,7 +29,7 @@ import kit.PerformanceAnalysisKit.*
 @Test
 class Test_settings {
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func setAndGetBrightness(): Unit {
         const defaultValue = "-1"
         let brightnessValueRegex = Regex("^(25[0-5]|2[0-4][0-9]|1?[0-9][0-9]?)$")
@@ -39,14 +39,14 @@ class Test_settings {
     }
 
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func domainName_1(): Unit {
         @Expect(DomainName.DeviceShared.toString(),"global")
         @Expect(DomainName.UserProperty.toString(),"system")
     }
 
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func date_1(): Unit {
         @Expect(Date.DateFormat.toString(),"settings.date.date_format")
         @Expect(Date.TimeFormat.toString(),"settings.date.time_format")
@@ -56,7 +56,7 @@ class Test_settings {
 
 
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func disPlay_1(): Unit {
         @Expect(Display.FontScale.toString(),"settings.display.font_scale")
         @Expect(Display.ScreenBrightnessStatus.toString(),"settings.display.screen_brightness_status")
@@ -65,7 +65,7 @@ class Test_settings {
     }
 
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func disPlay_2(): Unit {
         @Expect(Display.ScreenOffTimeout.toString(),"settings.display.screen_off_timeout")
         @Expect(Display.DefaultScreenRotation.toString(),"settings.display.default_screen_rotation")
@@ -74,7 +74,7 @@ class Test_settings {
     }
 
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func disPlay_3(): Unit {
         @Expect(Display.TransitionAnimationScale.toString(),"settings.display.transition_animation_scale")
         @Expect(Display.DisplayInversionStatus.toString(),"settings.display.display_inversion_status")

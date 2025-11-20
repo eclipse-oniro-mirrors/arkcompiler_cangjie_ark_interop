@@ -35,7 +35,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4401(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4401 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -53,7 +53,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4402(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4402 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -71,7 +71,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4403(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4403 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -89,7 +89,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4404(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4404 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -107,7 +107,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4405(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4405 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -125,7 +125,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4406(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4406 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -143,7 +143,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4407(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4407 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -161,7 +161,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4408(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4408 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -179,7 +179,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4409(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4409 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -197,7 +197,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4410(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4410 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -215,7 +215,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4411(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4411 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -233,7 +233,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4412(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4412 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -251,7 +251,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4413(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4413 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -269,7 +269,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4414(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4414 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -287,7 +287,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4415(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4415 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -305,7 +305,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4416(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4416 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -323,7 +323,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4417(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4417 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -341,7 +341,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4418(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4418 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -359,7 +359,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4419(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4419 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -377,7 +377,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4420(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4420 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -395,7 +395,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4421(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4421 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -413,7 +413,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4422(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4422 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -431,7 +431,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4423(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4423 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -449,7 +449,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4424(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4424 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -467,7 +467,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4425(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4425 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -485,7 +485,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4426(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4426 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -503,7 +503,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4427(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4427 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -521,7 +521,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4428(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4428 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -539,7 +539,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4429(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4429 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -557,7 +557,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4430(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4430 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -575,7 +575,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4431(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4431 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -593,7 +593,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4432(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4432 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -611,7 +611,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4433(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4433 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -629,7 +629,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4434(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4434 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -647,7 +647,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4435(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4435 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -665,7 +665,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4436(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4436 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -683,7 +683,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4437(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4437 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -701,7 +701,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4438(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4438 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -719,7 +719,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4439(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4439 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -737,7 +737,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4440(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4440 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -755,7 +755,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4441(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4441 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -773,7 +773,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4442(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4442 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -791,7 +791,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4443(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4443 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -809,7 +809,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4444(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4444 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -827,7 +827,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4445(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4445 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -845,7 +845,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4446(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4446 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -863,7 +863,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4447(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4447 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -881,7 +881,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4448(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4448 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -899,7 +899,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4449(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4449 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -917,7 +917,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4450(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4450 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -935,7 +935,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4451(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4451 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -953,7 +953,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4452(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4452 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -971,7 +971,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4453(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4453 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -989,7 +989,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4454(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4454 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1007,7 +1007,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4455(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4455 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1025,7 +1025,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4456(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4456 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1043,7 +1043,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4457(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4457 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1061,7 +1061,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4458(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4458 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1079,7 +1079,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4459(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4459 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1097,7 +1097,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4460(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4460 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1115,7 +1115,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4461(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4461 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1133,7 +1133,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4462(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4462 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1151,7 +1151,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4463(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4463 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1169,7 +1169,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4464(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4464 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1187,7 +1187,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4465(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4465 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1205,7 +1205,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4466(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4466 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1223,7 +1223,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4467(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4467 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1241,7 +1241,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4468(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4468 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1259,7 +1259,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4469(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4469 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1277,7 +1277,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4470(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4470 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1295,7 +1295,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4471(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4471 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1313,7 +1313,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4472(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4472 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1331,7 +1331,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4473(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4473 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1349,7 +1349,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4474(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4474 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1367,7 +1367,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4475(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4475 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1385,7 +1385,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4476(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4476 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1403,7 +1403,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4477(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4477 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1421,7 +1421,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4478(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4478 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1439,7 +1439,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4479(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4479 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1457,7 +1457,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4480(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4480 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1475,7 +1475,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4481(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4481 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1493,7 +1493,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4482(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4482 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1511,7 +1511,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4483(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4483 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1529,7 +1529,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4484(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4484 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1547,7 +1547,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4485(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4485 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1565,7 +1565,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4486(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4486 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1583,7 +1583,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4487(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4487 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1601,7 +1601,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4488(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4488 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1619,7 +1619,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4489(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4489 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1637,7 +1637,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4490(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4490 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1655,7 +1655,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4491(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4491 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1673,7 +1673,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4492(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4492 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1691,7 +1691,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4493(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4493 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1709,7 +1709,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4494(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4494 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1727,7 +1727,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4495(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4495 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1745,7 +1745,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4496(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4496 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1763,7 +1763,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4497(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4497 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1781,7 +1781,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4498(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4498 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1799,7 +1799,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4499(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4499 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")
@@ -1817,7 +1817,7 @@ class testFinishTrace_45 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4500(): Unit {
         Hilog.info(0u32, "cangjietest", "testcase TestCase_4500 begins.")
         Hilog.info(0u32, "cangjietest", "finishTrace")

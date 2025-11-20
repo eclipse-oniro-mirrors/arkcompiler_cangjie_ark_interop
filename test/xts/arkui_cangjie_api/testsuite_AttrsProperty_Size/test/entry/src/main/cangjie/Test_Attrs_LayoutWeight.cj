@@ -36,7 +36,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_AlphabetIndexer_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin AlphabetIndexer")
@@ -62,7 +62,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Blank_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Button_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Button")
@@ -114,7 +114,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Checkbox_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Checkbox")
@@ -140,7 +140,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_CheckboxGroup_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin CheckboxGroup")
@@ -166,7 +166,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_DataPanel_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin DataPanel")
@@ -192,7 +192,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_DatePicker_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin DatePicker")
@@ -218,7 +218,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Divider_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Divider")
@@ -244,7 +244,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Gauge_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Gauge")
@@ -270,7 +270,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Image_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Image")
@@ -296,7 +296,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_LoadingProgress_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_LoadingProgress_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin LoadingProgress")
@@ -322,7 +322,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Menu_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Menu_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Menu")
@@ -348,7 +348,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Progress_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Progress_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Progress")
@@ -374,7 +374,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_QRCode_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_QRCode_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin QRCode")
@@ -400,7 +400,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Radio_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Radio_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Radio")
@@ -426,7 +426,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Rating_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Rating_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Rating")
@@ -452,7 +452,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Refresh_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Refresh_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Refresh")
@@ -478,7 +478,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_RichEditor_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_RichEditor_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin RichEditor")
@@ -504,7 +504,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_RichText_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_RichText_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin RichText")
@@ -530,7 +530,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_RowSplit_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_RowSplit_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin RowSplit")
@@ -556,7 +556,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_ScrollBar_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_ScrollBar_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin ScrollBar")
@@ -582,7 +582,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Search_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Search_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Search")
@@ -608,7 +608,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Slider_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Slider_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Slider")
@@ -634,7 +634,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Stepper_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Stepper_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Stepper")
@@ -660,7 +660,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Text_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Text_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Text")
@@ -686,7 +686,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_TextArea_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_TextArea_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin TextArea")
@@ -712,7 +712,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_TextClock_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_TextClock_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin TextClock")
@@ -738,7 +738,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_TextInput_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_TextInput_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin TextInput")
@@ -764,7 +764,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_TextPicker_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_TextPicker_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin TextPicker")
@@ -790,7 +790,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_TextTimer_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_TextTimer_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin TextTimer")
@@ -816,7 +816,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Toggle_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Toggle_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Toggle")
@@ -842,7 +842,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Web_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Web_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Web")
@@ -868,7 +868,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Select_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Select_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Select")
@@ -894,7 +894,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Badge_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Badge_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Badge")
@@ -920,7 +920,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Column_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Column_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Column")
@@ -946,7 +946,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Grid_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Grid_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Grid")
@@ -972,7 +972,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_GridRow_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_GridRow_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin GridRow")
@@ -998,7 +998,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Flex_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Flex_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Flex")
@@ -1024,7 +1024,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_List_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_List_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin List")
@@ -1053,7 +1053,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_RelativeContainer_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_RelativeContainer_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin RelativeContainer")
@@ -1079,7 +1079,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Row_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Row_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Row")
@@ -1105,7 +1105,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Scroll_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Scroll_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Scroll")
@@ -1131,7 +1131,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Stack_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Stack_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Stack")
@@ -1157,7 +1157,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Swiper_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Swiper_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Swiper")
@@ -1183,7 +1183,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Tabs_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Tabs_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Tabs")
@@ -1209,7 +1209,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Circle_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Circle_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Circle")
@@ -1235,7 +1235,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Line_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Line_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Line")
@@ -1261,7 +1261,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Rect_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Rect_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Rect")
@@ -1287,7 +1287,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Shape_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Shape_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Shape")
@@ -1313,7 +1313,7 @@ class Test_EmptyAttrs_LayoutWeight {
      * @tc.desic：Empty_Path_LayoutWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LayoutWeight_Path_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckLayoutWeight: FindBegin Path")

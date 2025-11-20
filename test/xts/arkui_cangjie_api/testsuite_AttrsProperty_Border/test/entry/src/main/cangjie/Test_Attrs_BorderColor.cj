@@ -38,7 +38,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_AlphabetIndexer_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Blank_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Button_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Checkbox_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_CheckboxGroup_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin CheckboxGroup")
@@ -163,7 +163,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_DataPanel_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin DataPanel")
@@ -188,7 +188,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_DatePicker_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin DatePicker")
@@ -213,7 +213,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Divider_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Divider")
@@ -238,7 +238,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Gauge_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Gauge")
@@ -263,7 +263,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Image_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Image")
@@ -288,7 +288,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_ImageSpan_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin ImageSpan")
@@ -313,7 +313,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_LoadingProgress_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin LoadingProgress")
@@ -338,7 +338,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Menu_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Menu")
@@ -363,7 +363,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_MenuItem_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin MenuItem")
@@ -388,7 +388,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_MenuItemGroup_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin MenuItemGroup")
@@ -413,7 +413,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Progress_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Progress")
@@ -438,7 +438,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_QRCode_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin QRCode")
@@ -463,7 +463,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Radio_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Radio")
@@ -488,7 +488,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Rating_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Rating")
@@ -513,7 +513,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Refresh_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Refresh")
@@ -538,7 +538,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_RichEditor_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin RichEditor")
@@ -563,7 +563,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_RichText_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin RichText")
@@ -588,7 +588,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_RowSplit_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin RowSplit")
@@ -613,7 +613,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_ScrollBar_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin ScrollBar")
@@ -638,7 +638,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Search_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Search")
@@ -663,7 +663,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Slider_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Slider")
@@ -688,7 +688,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Stepper_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Stepper")
@@ -713,7 +713,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_StepperItem_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin StepperItem")
@@ -738,7 +738,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Text_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Text")
@@ -763,7 +763,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_TextArea_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin TextArea")
@@ -788,7 +788,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_TextClock_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin TextClock")
@@ -813,7 +813,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_TextInput_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin TextInput")
@@ -838,7 +838,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_TextPicker_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin TextPicker")
@@ -863,7 +863,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_TextTimer_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin TextTimer")
@@ -888,7 +888,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Toggle_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Toggle")
@@ -913,7 +913,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Web_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Web")
@@ -938,7 +938,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Select_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Select")
@@ -963,7 +963,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Badge_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Badge")
@@ -988,7 +988,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Column_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Column")
@@ -1013,7 +1013,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Grid_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Grid")
@@ -1038,7 +1038,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_GridItem_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin GridItem")
@@ -1063,7 +1063,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_GridRow_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin GridRow")
@@ -1088,7 +1088,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_GridCol_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin GridCol")
@@ -1113,7 +1113,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Flex_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Flex")
@@ -1138,7 +1138,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_List_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin List")
@@ -1163,7 +1163,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_ListItem_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin ListItem")
@@ -1188,7 +1188,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_ListItemGroup_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin ListItemGroup")
@@ -1215,7 +1215,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_RelativeContainer_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin RelativeContainer")
@@ -1240,7 +1240,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Row_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Row")
@@ -1265,7 +1265,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Scroll_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Scroll")
@@ -1290,7 +1290,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Stack_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Stack")
@@ -1315,7 +1315,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Swiper_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Swiper")
@@ -1340,7 +1340,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Tabs_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Tabs")
@@ -1365,7 +1365,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_TabContent_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin TabContent")
@@ -1390,7 +1390,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Circle_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Circle")
@@ -1415,7 +1415,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Line_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Line")
@@ -1440,7 +1440,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Rect_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Rect")
@@ -1465,7 +1465,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Shape_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Shape")
@@ -1490,7 +1490,7 @@ class Test_EmptyAttrs_BorderColor {
      * @tc.desic：Empty_Path_BorderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderColor_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderColor: FindBegin Path")

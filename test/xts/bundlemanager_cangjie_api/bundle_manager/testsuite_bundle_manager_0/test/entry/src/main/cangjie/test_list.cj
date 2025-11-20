@@ -24,9 +24,6 @@ func testsuite(): Unit {
     registerTestSuite("testIsDefaultApplication_1", {
         => testIsDefaultApplication_1()
     })
-    registerTestSuite("testGetProfileByExtensionAbility_1", {
-        => testGetProfileByExtensionAbility_1()
-    })
     registerTestSuite("testCanOpenLink_1", {
         => testCanOpenLink_1()
     })

@@ -19,7 +19,6 @@ import ohos.arkui.state_management.AppStorage
 
 class MyAbilityStage <: AbilityStage {
     public override func onCreate(): Unit {
-//        logger.info("MyAbilityStage onCreated.")
         AppStorage.setOrCreate<AbilityStageContext>("abilityStageContext", this.context)
     }
 }

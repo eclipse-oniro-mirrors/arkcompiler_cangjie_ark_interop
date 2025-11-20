@@ -49,7 +49,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1621(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1621 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -57,10 +57,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1468: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -77,7 +78,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1622(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1622 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -85,10 +86,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1469: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -105,7 +107,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1623(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1623 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -113,10 +115,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1470: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -133,7 +136,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1624(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1624 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -141,10 +144,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1471: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -161,7 +165,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1625(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1625 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -169,10 +173,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1472: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -189,7 +194,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1626(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1626 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -197,10 +202,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1473: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -217,7 +223,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1627(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1627 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -225,10 +231,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1474: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -245,7 +252,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1628(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1628 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -253,10 +260,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1475: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -273,7 +281,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1629(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1629 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -281,10 +289,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1476: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -301,7 +310,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1630(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1630 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -309,10 +318,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1477: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -329,7 +339,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1631(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1631 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -337,10 +347,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1478: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -357,7 +368,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1632(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1632 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -365,10 +376,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1479: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -385,7 +397,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1633(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1633 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -393,10 +405,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1480: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -413,7 +426,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1634(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1634 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -421,10 +434,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1481: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -441,7 +455,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1635(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1635 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -449,10 +463,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1482: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -469,7 +484,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1636(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1636 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -477,10 +492,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1483: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -497,7 +513,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1637(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1637 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -505,10 +521,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1484: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -525,7 +542,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1638(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1638 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -533,10 +550,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1485: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -553,7 +571,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1639(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1639 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -561,10 +579,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1486: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -581,7 +600,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1640(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1640 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -589,10 +608,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1487: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -609,7 +629,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1641(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1641 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -617,10 +637,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1488: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -637,7 +658,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1642(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1642 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -645,10 +666,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1489: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -665,7 +687,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1643(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1643 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -673,10 +695,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1490: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -693,7 +716,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1644(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1644 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -701,10 +724,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1491: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -721,7 +745,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1645(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1645 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -729,10 +753,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1492: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -749,7 +774,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1646(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1646 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -757,10 +782,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1493: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -777,7 +803,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1647(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1647 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -785,10 +811,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1494: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -805,7 +832,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1648(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1648 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -813,10 +840,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1495: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -833,7 +861,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1649(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1649 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -841,10 +869,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1496: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
@@ -861,7 +890,7 @@ class testSubscribe_55 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1650(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1650 begins.")
         Hilog.info(0u32, "cangjietest", "", "requestSuspendDelay failed")
@@ -869,10 +898,11 @@ class testSubscribe_55 {
             let sub = CommonEventManager.createSubscriber(
                 CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
                     userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-            CommonEventManager.subscribe(sub, {
-                e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
-                    "onframe")
-            })
+            CommonEventManager.subscribe(sub,
+                {
+                    e: Option<BusinessException>, a: Option<CommonEventData> => Hilog.info(0u32, "cangjietest", "",
+                        "onframe")
+                })
             @Expect("assertion#1497: not throw", "requestSuspendDelay failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)

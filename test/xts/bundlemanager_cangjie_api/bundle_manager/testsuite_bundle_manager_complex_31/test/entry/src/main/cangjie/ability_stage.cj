@@ -14,12 +14,13 @@
  */
 
 package ohos_app_cangjie_entry
+
 import ohos.hilog.Hilog
 import kit.AbilityKit.Ability
 import kit.AbilityKit.AbilityStage
-class MyAbilityStage <:AbilityStage {
-public func onCreate(): Unit  {
-Hilog.info(0u32, "CangjieTest", "MyAbilityStage onCreated.")
-}
 
+class MyAbilityStage <: AbilityStage {
+    public func onCreate(): Unit {
+        Hilog.info(0u32, "CangjieTest", "MyAbilityStage onCreated.")
+    }
 }

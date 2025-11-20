@@ -36,7 +36,7 @@ class testFileIo_unlink_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_unlink_01() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_unlink_01";
 
@@ -59,7 +59,7 @@ class testFileIo_unlink_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_unlink_02() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_unlink_02";
         let file = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -86,7 +86,7 @@ class testFileIo_unlink_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_unlink_03() {
         let dpath = "/data/storage/el2/base/haps/entry/files/test_unlink_03";
         FileIo.mkdir(dpath)

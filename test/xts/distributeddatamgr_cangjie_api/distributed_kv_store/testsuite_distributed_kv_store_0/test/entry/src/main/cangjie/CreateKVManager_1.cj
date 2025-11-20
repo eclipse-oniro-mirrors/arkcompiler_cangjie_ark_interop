@@ -36,7 +36,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -54,7 +54,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -72,7 +72,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -90,7 +90,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -108,7 +108,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -126,7 +126,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -144,7 +144,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -162,7 +162,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -181,7 +181,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -199,7 +199,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_10 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")
@@ -217,7 +217,7 @@ class CreateKVManager_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_11 begins.")
         Hilog.info(0, "cangjietest", "define local variable kvManager")

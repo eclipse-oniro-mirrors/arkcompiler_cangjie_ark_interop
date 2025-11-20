@@ -40,7 +40,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1901(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1901 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -65,7 +65,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1902(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1902 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -90,7 +90,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1903(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1903 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -115,7 +115,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1904(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1904 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -140,7 +140,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1905(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1905 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -165,7 +165,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1906(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1906 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -190,7 +190,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1907(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1907 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -215,7 +215,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1908(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1908 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -240,7 +240,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1909(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1909 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -265,7 +265,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1910(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1910 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -290,7 +290,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1911(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1911 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -315,7 +315,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1912(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1912 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -340,7 +340,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1913(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1913 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -365,7 +365,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1914(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1914 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -390,7 +390,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1915(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1915 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -415,7 +415,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1916(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1916 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -440,7 +440,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1917(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1917 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -465,7 +465,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1918(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1918 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -490,7 +490,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1919(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1919 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -515,7 +515,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1920(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1920 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -540,7 +540,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1921(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1921 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -565,7 +565,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1922(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1922 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -590,7 +590,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1923(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1923 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -615,7 +615,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1924(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1924 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -640,7 +640,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1925(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1925 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -665,7 +665,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1926(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1926 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -690,7 +690,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1927(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1927 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -715,7 +715,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1928(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1928 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -740,7 +740,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1929(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1929 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -765,7 +765,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1930(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1930 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -790,7 +790,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1931(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1931 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -815,7 +815,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1932(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1932 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -840,7 +840,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1933(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1933 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -865,7 +865,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1934(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1934 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -890,7 +890,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1935(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1935 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -915,7 +915,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1936(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1936 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -935,7 +935,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1937(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1937 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -955,7 +955,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1938(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1938 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -975,7 +975,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1939(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1939 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -995,7 +995,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1940(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1940 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -1015,7 +1015,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1941(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1941 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1040,7 +1040,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1942(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1942 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1065,7 +1065,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1943(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1943 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1090,7 +1090,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1944(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1944 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1115,7 +1115,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1945(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1945 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1140,7 +1140,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1946(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1946 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -1160,7 +1160,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1947(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1947 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -1180,7 +1180,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1948(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1948 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -1200,7 +1200,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1949(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1949 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -1220,7 +1220,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1950(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1950 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable mediaContentBase64")
@@ -1240,7 +1240,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1951(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1951 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1265,7 +1265,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1952(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1952 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1290,7 +1290,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1953(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1953 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1315,7 +1315,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1954(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1954 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1340,7 +1340,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1955(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1955 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1365,7 +1365,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1956(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1956 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1390,7 +1390,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1957(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1957 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1415,7 +1415,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1958(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1958 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1440,7 +1440,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1959(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1959 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1465,7 +1465,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1960(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1960 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1490,7 +1490,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1961(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1961 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1515,7 +1515,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1962(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1962 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1540,7 +1540,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1963(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1963 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1565,7 +1565,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1964(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1964 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1590,7 +1590,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1965(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1965 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1615,7 +1615,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1966(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1966 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1640,7 +1640,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1967(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1967 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1665,7 +1665,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1968(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1968 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1690,7 +1690,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1969(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1969 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1715,7 +1715,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1970(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1970 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1740,7 +1740,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1971(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1971 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1765,7 +1765,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1972(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1972 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1790,7 +1790,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1973(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1973 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1815,7 +1815,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1974(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1974 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1840,7 +1840,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1975(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1975 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1865,7 +1865,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1976(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1976 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1890,7 +1890,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1977(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1977 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1915,7 +1915,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1978(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1978 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1940,7 +1940,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1979(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1979 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1965,7 +1965,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1980(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1980 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -1990,7 +1990,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1981(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1981 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2015,7 +2015,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1982(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1982 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2040,7 +2040,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1983(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1983 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2065,7 +2065,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1984(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1984 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2090,7 +2090,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1985(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1985 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2115,7 +2115,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1986(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1986 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2140,7 +2140,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1987(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1987 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2165,7 +2165,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1988(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1988 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2190,7 +2190,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1989(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1989 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2215,7 +2215,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1990(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1990 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2240,7 +2240,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1991(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1991 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2265,7 +2265,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1992(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1992 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2290,7 +2290,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1993(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1993 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2315,7 +2315,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1994(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1994 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2340,7 +2340,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1995(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1995 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2365,7 +2365,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1996(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1996 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2390,7 +2390,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1997(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1997 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2415,7 +2415,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1998(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1998 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2440,7 +2440,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1999(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1999 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")
@@ -2465,7 +2465,7 @@ class TestGetMediaContentBase64ByAppResource_20 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2000(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_2000 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get MediaContentBase64.")

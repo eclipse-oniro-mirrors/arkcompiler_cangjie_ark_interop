@@ -49,7 +49,7 @@ class Test_LocalStorageLink_SetAndGet_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LocalStorageLink_SetAndGet_Component_0100() {
         driver.findComponent(On().id("change2")).getOrThrow().click()
         let text00 = driver.findComponent(On().id("LinkInt2")).getOrThrow().getText()
@@ -80,7 +80,7 @@ class Test_LocalStorageLink_SetAndGet_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LocalStorageLink_SetAndGet_Component_0200() {
         driver.findComponent(On().id("change1")).getOrThrow().click()
         let text00 = driver.findComponent(On().id("Int1")).getOrThrow().getText()
@@ -113,7 +113,7 @@ class Test_LocalStorageLink_SetAndGet_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LocalStorageLink_SetAndGet_Component_0300() {
         driver.findComponent(On().id("change2")).getOrThrow().click()
         let text00 = driver.findComponent(On().id("LinkInt2")).getOrThrow().getText()
@@ -146,7 +146,7 @@ class Test_LocalStorageLink_SetAndGet_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LocalStorageLink_SetAndGet_Component_0400() {
         driver.findComponent(On().id("change3")).getOrThrow().click()
         let text00 = driver.findComponent(On().id("Int1")).getOrThrow().getText()

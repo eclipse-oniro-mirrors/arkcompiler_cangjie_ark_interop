@@ -12,7 +12,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package ohos_app_cangjie_entry
 
 internal import ohos.base.LengthProp
@@ -31,7 +30,6 @@ import ohos.arkui.state_macro_manage.Component
 import ohos.arkui.state_macro_manage.State
 import ohos.arkui.state_macro_manage.r
 
-
 @Entry
 @Component
 class EntryView {
@@ -44,9 +42,9 @@ class EntryView {
                 Text(this.message)
                     .fontSize(50)
                     .fontWeight(FontWeight.Bold)
-                    .onClick {
+                    .onClick({
                         evt => this.message = "Hello Cangjie"
-                    }
+                    })
             }.width(100.percent)
         }.height(100.percent)
     }

@@ -49,16 +49,21 @@ class testUnsubscribe_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable sub")
-        let sub = CommonEventManager.createSubscriber(
-            CommonEventSubscribeInfo([], publisherPermission: "", publisherDeviceId: "", userId: -1i32, priority: -1i32,
-                publisherBundleName: ""))
-        Hilog.info(0u32, "cangjietest", "", "unsubscribe")
-        CommonEventManager.unsubscribe(sub)
-        @Expect(true)
+        try {
+            let sub = CommonEventManager.createSubscriber(
+                CommonEventSubscribeInfo([], publisherPermission: "", publisherDeviceId: "", userId: -1i32,
+                    priority: -1i32, publisherBundleName: ""))
+            Hilog.info(0u32, "cangjietest", "", "unsubscribe")
+            CommonEventManager.unsubscribe(sub)
+            @Expect(true)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+            @Expect(e.message, "CommonEventManager: createSubscriber failed: Common Event Service does not complete initialization.")
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 ends.")
     }
 
@@ -71,17 +76,22 @@ class testUnsubscribe_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable sub")
-        let sub = CommonEventManager.createSubscriber(
-            CommonEventSubscribeInfo(["common.event.ABILITY_ADDED", "usual.event.DATE_CHANGED"],
-                publisherPermission: "aaaa", publisherDeviceId: "aaaa", userId: 0i32, priority: 0i32,
-                publisherBundleName: "aaaa"))
-        Hilog.info(0u32, "cangjietest", "", "unsubscribe")
-        CommonEventManager.unsubscribe(sub)
-        @Expect(true)
+        try {
+            let sub = CommonEventManager.createSubscriber(
+                CommonEventSubscribeInfo(["common.event.ABILITY_ADDED", "usual.event.DATE_CHANGED"],
+                    publisherPermission: "aaaa", publisherDeviceId: "aaaa", userId: 0i32, priority: 0i32,
+                    publisherBundleName: "aaaa"))
+            Hilog.info(0u32, "cangjietest", "", "unsubscribe")
+            CommonEventManager.unsubscribe(sub)
+            @Expect(true)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+            @Expect(e.message, "CommonEventManager: createSubscriber failed: Common Event Service does not complete initialization.")
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 ends.")
     }
 
@@ -94,16 +104,21 @@ class testUnsubscribe_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable sub")
-        let sub = CommonEventManager.createSubscriber(
-            CommonEventSubscribeInfo([], publisherPermission: "3213", publisherDeviceId: "3213", userId: 1i32,
-                priority: 1i32, publisherBundleName: "3213"))
-        Hilog.info(0u32, "cangjietest", "", "unsubscribe")
-        CommonEventManager.unsubscribe(sub)
-        @Expect(true)
+        try {
+            let sub = CommonEventManager.createSubscriber(
+                CommonEventSubscribeInfo([], publisherPermission: "3213", publisherDeviceId: "3213", userId: 1i32,
+                    priority: 1i32, publisherBundleName: "3213"))
+            Hilog.info(0u32, "cangjietest", "", "unsubscribe")
+            CommonEventManager.unsubscribe(sub)
+            @Expect(true)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+            @Expect(e.message, "CommonEventManager: createSubscriber failed: Common Event Service does not complete initialization.")
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 ends.")
     }
 
@@ -116,16 +131,21 @@ class testUnsubscribe_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable sub")
-        let sub = CommonEventManager.createSubscriber(
-            CommonEventSubscribeInfo([], publisherPermission: "#@#$%*d./", publisherDeviceId: "#@#$%*d./", userId: 10i32,
-                priority: 10i32, publisherBundleName: "#@#$%*d./"))
-        Hilog.info(0u32, "cangjietest", "", "unsubscribe")
-        CommonEventManager.unsubscribe(sub)
-        @Expect(true)
+        try {
+            let sub = CommonEventManager.createSubscriber(
+                CommonEventSubscribeInfo([], publisherPermission: "#@#$%*d./", publisherDeviceId: "#@#$%*d./",
+                    userId: 10i32, priority: 10i32, publisherBundleName: "#@#$%*d./"))
+            Hilog.info(0u32, "cangjietest", "", "unsubscribe")
+            CommonEventManager.unsubscribe(sub)
+            @Expect(true)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+            @Expect(e.message, "CommonEventManager: createSubscriber failed: Common Event Service does not complete initialization.")
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 ends.")
     }
 
@@ -138,16 +158,21 @@ class testUnsubscribe_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable sub")
-        let sub = CommonEventManager.createSubscriber(
-            CommonEventSubscribeInfo([], publisherPermission: "@POD3e3", publisherDeviceId: "@POD3e3", userId: 10000i32,
-                priority: 10000i32, publisherBundleName: "@POD3e3"))
-        Hilog.info(0u32, "cangjietest", "", "unsubscribe")
-        CommonEventManager.unsubscribe(sub)
-        @Expect(true)
+        try {
+            let sub = CommonEventManager.createSubscriber(
+                CommonEventSubscribeInfo([], publisherPermission: "@POD3e3", publisherDeviceId: "@POD3e3",
+                    userId: 10000i32, priority: 10000i32, publisherBundleName: "@POD3e3"))
+            Hilog.info(0u32, "cangjietest", "", "unsubscribe")
+            CommonEventManager.unsubscribe(sub)
+            @Expect(true)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+            @Expect(e.message, "CommonEventManager: createSubscriber failed: Common Event Service does not complete initialization.")
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 ends.")
     }
 
@@ -160,16 +185,21 @@ class testUnsubscribe_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_6 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable sub")
-        let sub = CommonEventManager.createSubscriber(
-            CommonEventSubscribeInfo([], publisherPermission: "#!$@$23", publisherDeviceId: "#!$@$23", userId: 1024i32,
-                priority: 1024i32, publisherBundleName: "#!$@$23"))
-        Hilog.info(0u32, "cangjietest", "", "unsubscribe")
-        CommonEventManager.unsubscribe(sub)
-        @Expect(true)
+        try {
+            let sub = CommonEventManager.createSubscriber(
+                CommonEventSubscribeInfo([], publisherPermission: "#!$@$23", publisherDeviceId: "#!$@$23",
+                    userId: 1024i32, priority: 1024i32, publisherBundleName: "#!$@$23"))
+            Hilog.info(0u32, "cangjietest", "", "unsubscribe")
+            CommonEventManager.unsubscribe(sub)
+            @Expect(true)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+            @Expect(e.message, "CommonEventManager: createSubscriber failed: Common Event Service does not complete initialization.")
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_6 ends.")
     }
 
@@ -182,16 +212,21 @@ class testUnsubscribe_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_7 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable sub")
-        let sub = CommonEventManager.createSubscriber(
-            CommonEventSubscribeInfo([], publisherPermission: "reason", publisherDeviceId: "reason", userId: -1i32,
-                priority: -1i32, publisherBundleName: "reason"))
-        Hilog.info(0u32, "cangjietest", "", "unsubscribe")
-        CommonEventManager.unsubscribe(sub)
-        @Expect(true)
+        try {
+            let sub = CommonEventManager.createSubscriber(
+                CommonEventSubscribeInfo([], publisherPermission: "reason", publisherDeviceId: "reason", userId: -1i32,
+                    priority: -1i32, publisherBundleName: "reason"))
+            Hilog.info(0u32, "cangjietest", "", "unsubscribe")
+            CommonEventManager.unsubscribe(sub)
+            @Expect(true)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+            @Expect(e.message, "CommonEventManager: createSubscriber failed: Common Event Service does not complete initialization.")
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_7 ends.")
     }
 
@@ -204,16 +239,21 @@ class testUnsubscribe_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_8 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable sub")
-        let sub = CommonEventManager.createSubscriber(
-            CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
-                userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
-        Hilog.info(0u32, "cangjietest", "", "unsubscribe")
-        CommonEventManager.unsubscribe(sub)
-        @Expect(true)
+        try {
+            let sub = CommonEventManager.createSubscriber(
+                CommonEventSubscribeInfo([], publisherPermission: "1234567890", publisherDeviceId: "1234567890",
+                    userId: -1i32, priority: -1i32, publisherBundleName: "1234567890"))
+            Hilog.info(0u32, "cangjietest", "", "unsubscribe")
+            CommonEventManager.unsubscribe(sub)
+            @Expect(true)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+            @Expect(e.message, "CommonEventManager: createSubscriber failed: Common Event Service does not complete initialization.")
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_8 ends.")
     }
 
@@ -226,16 +266,21 @@ class testUnsubscribe_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_9 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable sub")
-        let sub = CommonEventManager.createSubscriber(
-            CommonEventSubscribeInfo([], publisherPermission: "!#$@%^&*", publisherDeviceId: "!#$@%^&*", userId: -1i32,
-                priority: -1i32, publisherBundleName: "!#$@%^&*"))
-        Hilog.info(0u32, "cangjietest", "", "unsubscribe")
-        CommonEventManager.unsubscribe(sub)
-        @Expect(true)
+        try {
+            let sub = CommonEventManager.createSubscriber(
+                CommonEventSubscribeInfo([], publisherPermission: "!#$@%^&*", publisherDeviceId: "!#$@%^&*",
+                    userId: -1i32, priority: -1i32, publisherBundleName: "!#$@%^&*"))
+            Hilog.info(0u32, "cangjietest", "", "unsubscribe")
+            CommonEventManager.unsubscribe(sub)
+            @Expect(true)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 1500008i32)
+            @Expect(e.message, "CommonEventManager: createSubscriber failed: Common Event Service does not complete initialization.")
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_9 ends.")
     }
 }

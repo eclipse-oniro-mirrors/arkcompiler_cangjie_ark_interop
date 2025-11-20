@@ -48,7 +48,7 @@ class Test_Size_Component {
      * @tc.desic：width and height,padding,margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Size_0100_Component() {
         let Inspector = getInspectorByKey("Test_Text00")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -68,7 +68,7 @@ class Test_Size_Component {
      * @tc.desic：width and height,padding,margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Size_0200_Component() {
         let Inspector = getInspectorByKey("Test_Text01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -88,7 +88,7 @@ class Test_Size_Component {
      * @tc.desic：width and height,padding,margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Size_0300_Component() {
         let Inspector = getInspectorByKey("Test_Text02")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -108,7 +108,7 @@ class Test_Size_Component {
      * @tc.desic：size
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Size_0400_Component() {
         let Inspector = getInspectorByKey("Test_Text03")
         let obj = JsonValue.fromStr(Inspector).asObject()

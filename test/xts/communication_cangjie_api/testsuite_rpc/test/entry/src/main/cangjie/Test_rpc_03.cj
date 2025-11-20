@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-
 package ohos_app_cangjie_entry
 
 import std.unittest.testmacro.*
@@ -48,15 +47,15 @@ class MyParcelable <: Parcelable {
 @Test
 class Test_rpc_03 {
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0100
-    * @tc.name      : test_ashmem_create
-    * @tc.desc      : Check whether the ashmem and create interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0100
+     * @tc.name      : test_ashmem_create
+     * @tc.desc      : Check whether the ashmem and create interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ashmem_create(): Unit {
         @Expect(Ashmem.PROT_EXEC, 4)
         @Expect(Ashmem.PROT_NONE, 0)
@@ -70,22 +69,22 @@ class Test_rpc_03 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0300
-    * @tc.name      : test_writeInterfaceToken_Exception
-    * @tc.desc      : Check whether the writeInterfaceToken interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0300
+     * @tc.name      : test_writeInterfaceToken_Exception
+     * @tc.desc      : Check whether the writeInterfaceToken interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_writeInterfaceToken_Exception(): Unit {
         let data = MessageSequence.create()
         let token = "a" * 40960
         try {
             data.writeInterfaceToken(token)
             @Assert(false)
-        } catch (e: IllegalArgumentException) {
+        } catch (e: BusinessException) {
             @Expect(e.message.contains("Parameter error"))
         } finally {
             data.reclaim()
@@ -93,20 +92,20 @@ class Test_rpc_03 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0500
-    * @tc.name      : test_parcelable
-    * @tc.desc      : Check whether the parcelable interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0500
+     * @tc.name      : test_parcelable
+     * @tc.desc      : Check whether the parcelable interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_parcelable(): Unit {
         let parcelable = MyParcelable(1, "aaa")
         let data = MessageSequence.create()
         data.writeParcelable(parcelable)
-        let ret = MyParcelable(1,"bbb")
+        let ret = MyParcelable(1, "bbb")
         data.readParcelable(ret)
         @Expect(ret.num, 1)
         @Expect(ret.str, "aaa")
@@ -114,15 +113,15 @@ class Test_rpc_03 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0600
-    * @tc.name      : test_parcelable_array
-    * @tc.desc      : Check whether the parcelable interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0600
+     * @tc.name      : test_parcelable_array
+     * @tc.desc      : Check whether the parcelable interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_parcelable_array(): Unit {
         let parcelable = MyParcelable(1, "aaa")
         let parcelable2 = MyParcelable(2, "bbb")
@@ -141,15 +140,15 @@ class Test_rpc_03 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0700
-    * @tc.name      : test_ByteArray_dataIn
-    * @tc.desc      : Check whether the ByteArray and dataIn interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0700
+     * @tc.name      : test_ByteArray_dataIn
+     * @tc.desc      : Check whether the ByteArray and dataIn interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ByteArray_dataIn(): Unit {
         let data = MessageSequence.create()
         let arr: Array<Int8> = []
@@ -161,15 +160,15 @@ class Test_rpc_03 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0800
-    * @tc.name      : test_write_read_RawDataBuffer
-    * @tc.desc      : Check whether the RawDataBuffer interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0800
+     * @tc.name      : test_write_read_RawDataBuffer
+     * @tc.desc      : Check whether the RawDataBuffer interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_read_RawDataBuffer(): Unit {
         let size = 64 * 1024
         let buffer = Array<Byte>(size, repeat: 1)
@@ -180,15 +179,15 @@ class Test_rpc_03 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0900
-    * @tc.name      : test_write_read_DataFromAshmem
-    * @tc.desc      : Check whether the writeDataToAshmem interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_03_0900
+     * @tc.name      : test_write_read_DataFromAshmem
+     * @tc.desc      : Check whether the writeDataToAshmem interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_read_DataFromAshmem(): Unit {
         let buffer = Array<Byte>(50, {i => UInt8(i * 2 + 1)})
         let ashmem = Ashmem.create("ashmem", 1024 * 1024)

@@ -36,25 +36,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 1i32,  1i32), 0i32, 0i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(1i32, 1i32), 0i32, 0i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Expect(true)
             @Expect("assertion#0: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -66,25 +64,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.jpg")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 1u32, editable: false,
-                    desiredSize: Size( 2i32,  1i32),
-                    desiredRegion: Region(Size( 2i32,  1i32), 5i32, 0i32),
-                    desiredPixelFormat: PixelMapFormat.Rgb565, index: 1u32, fitDensity: 1i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 1u32, editable: false, desiredSize: Size(2i32, 1i32),
+                    desiredRegion: Region(Size(2i32, 1i32), 5i32, 0i32), desiredPixelFormat: PixelMapFormat.Rgb565,
+                    index: 1u32, fitDensity: 1i32,))
             @Expect(true)
             @Expect("assertion#1: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -96,25 +92,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.bmp")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 3i32,  1i32),
-                    desiredRegion: Region(Size( 3i32,  1i32), 10i32, 0i32),
-                    desiredPixelFormat: PixelMapFormat.Rgba8888, index: 2u32, fitDensity: 2i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(3i32, 1i32),
+                    desiredRegion: Region(Size(3i32, 1i32), 10i32, 0i32), desiredPixelFormat: PixelMapFormat.Rgba8888,
+                    index: 2u32, fitDensity: 2i32,))
             @Assert(true)
             @Expect("assertion#2: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -126,25 +120,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.gif")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  2i32),
-                    desiredRegion: Region(Size( 2i32,  1i32), 0i32, 2i32),
-                    desiredPixelFormat: PixelMapFormat.Bgra8888, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 2i32),
+                    desiredRegion: Region(Size(2i32, 1i32), 0i32, 2i32), desiredPixelFormat: PixelMapFormat.Bgra8888,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#3: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -156,25 +148,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.123")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 2i32,  2i32),
-                    desiredRegion: Region(Size( 1i32,  1i32), 5i32, 2i32),
-                    desiredPixelFormat: PixelMapFormat.Rgb888, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(2i32, 2i32),
+                    desiredRegion: Region(Size(1i32, 1i32), 5i32, 2i32), desiredPixelFormat: PixelMapFormat.Rgb888,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#4: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 
     /*
@@ -186,25 +176,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 3i32,  2i32),
-                    desiredRegion: Region(Size( 1i32,  2i32), 10i32, 2i32),
-                    desiredPixelFormat: PixelMapFormat.Alpha8, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(3i32, 2i32),
+                    desiredRegion: Region(Size(1i32, 2i32), 10i32, 2i32), desiredPixelFormat: PixelMapFormat.Alpha8,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#5: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
 
     /*
@@ -216,25 +204,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  3i32),
-                    desiredRegion: Region(Size( 3i32,  1i32), 0i32, 4i32),
-                    desiredPixelFormat: PixelMapFormat.RgbaF16, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 3i32),
+                    desiredRegion: Region(Size(3i32, 1i32), 0i32, 4i32), desiredPixelFormat: PixelMapFormat.RgbaF16,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#6: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
     }
 
     /*
@@ -246,25 +232,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 2i32,  3i32),
-                    desiredRegion: Region(Size( 1i32,  2i32), 5i32, 4i32),
-                    desiredPixelFormat: PixelMapFormat.Nv21, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(2i32, 3i32),
+                    desiredRegion: Region(Size(1i32, 2i32), 5i32, 4i32), desiredPixelFormat: PixelMapFormat.Nv21,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#7: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_8 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 ends.")
     }
 
     /*
@@ -276,25 +260,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 3i32,  3i32),
-                    desiredRegion: Region(Size( 1i32,  1i32), 10i32, 4i32),
-                    desiredPixelFormat: PixelMapFormat.Nv12, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(3i32, 3i32),
+                    desiredRegion: Region(Size(1i32, 1i32), 10i32, 4i32), desiredPixelFormat: PixelMapFormat.Nv12,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#8: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_9 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 ends.")
     }
 
     /*
@@ -306,25 +288,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_10 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 1i32,  2i32), 0i32, 0i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(1i32, 2i32), 0i32, 0i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#9: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_10 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 ends.")
     }
 
     /*
@@ -336,25 +316,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_11 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 2i32,  2i32), 0i32, 0i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(2i32, 2i32), 0i32, 0i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#10: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_11 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 ends.")
     }
 
     /*
@@ -366,25 +344,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_12 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 3i32,  2i32), 0i32, 0i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(3i32, 2i32), 0i32, 0i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#11: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_12 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 ends.")
     }
 
     /*
@@ -396,25 +372,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_13 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_13 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 1i32,  3i32), 0i32, 0i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(1i32, 3i32), 0i32, 0i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#12: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_13 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_13 ends.")
     }
 
     /*
@@ -426,25 +400,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_14 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_14 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 2i32,  3i32), 0i32, 0i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(2i32, 3i32), 0i32, 0i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#13: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_14 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_14 ends.")
     }
 
     /*
@@ -456,25 +428,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_15 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_15 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 3i32,  3i32), 0i32, 0i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(3i32, 3i32), 0i32, 0i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#14: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_15 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_15 ends.")
     }
 
     /*
@@ -486,25 +456,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_16 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 3i32,  1i32), 5i32, 2i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(3i32, 1i32), 5i32, 2i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#15: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_16 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 ends.")
     }
 
     /*
@@ -516,25 +484,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_17 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 2i32,  2i32), 5i32, 2i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(2i32, 2i32), 5i32, 2i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#16: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_17 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 ends.")
     }
 
     /*
@@ -546,25 +512,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_18 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 3i32,  2i32), 5i32, 2i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(3i32, 2i32), 5i32, 2i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#17: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_18 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 ends.")
     }
 
     /*
@@ -576,25 +540,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_19 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_19 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 1i32,  3i32), 5i32, 2i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(1i32, 3i32), 5i32, 2i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#18: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_19 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_19 ends.")
     }
 
     /*
@@ -606,25 +568,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_20 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_20 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 2i32,  3i32), 5i32, 2i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(2i32, 3i32), 5i32, 2i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#19: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_20 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_20 ends.")
     }
 
     /*
@@ -636,25 +596,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_21 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_21 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 3i32,  3i32), 5i32, 2i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(3i32, 3i32), 5i32, 2i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#20: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_21 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_21 ends.")
     }
 
     /*
@@ -666,25 +624,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_22 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 2i32,  1i32), 10i32, 4i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(2i32, 1i32), 10i32, 4i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#21: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_22 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 ends.")
     }
 
     /*
@@ -696,25 +652,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_23 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 2i32,  2i32), 10i32, 4i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(2i32, 2i32), 10i32, 4i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#22: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_23 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 ends.")
     }
 
     /*
@@ -726,25 +680,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_24 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 3i32,  2i32), 10i32, 4i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(3i32, 2i32), 10i32, 4i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#23: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_24 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 ends.")
     }
 
     /*
@@ -756,25 +708,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_25 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_25 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 1i32,  3i32), 10i32, 4i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(1i32, 3i32), 10i32, 4i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#24: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_25 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_25 ends.")
     }
 
     /*
@@ -786,25 +736,23 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_26 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 2i32,  3i32), 10i32, 4i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(2i32, 3i32), 10i32, 4i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#25: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_26 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 ends.")
     }
 
     /*
@@ -816,24 +764,22 @@ class testImageSource_createPixelMap_DecodingOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_27 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap(
-                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true,
-                    desiredSize: Size( 1i32,  1i32),
-                    desiredRegion: Region(Size( 3i32,  3i32), 10i32, 4i32),
-                    desiredPixelFormat: PixelMapFormat.Unknown, index: 0u32, fitDensity: 0i32,
-                    ))
+                options: DecodingOptions(sampleSize: 1u32, rotate: 0u32, editable: true, desiredSize: Size(1i32, 1i32),
+                    desiredRegion: Region(Size(3i32, 3i32), 10i32, 4i32), desiredPixelFormat: PixelMapFormat.Unknown,
+                    index: 0u32, fitDensity: 0i32,))
             @Assert(true)
             @Expect("assertion#26: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_27 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 ends.")
     }
 }

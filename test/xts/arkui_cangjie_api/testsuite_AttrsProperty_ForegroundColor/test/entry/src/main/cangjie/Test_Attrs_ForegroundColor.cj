@@ -38,7 +38,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_AlphabetIndexer_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Button_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Button_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Button")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Checkbox_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Checkbox_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Checkbox")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_CheckboxGroup_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_CheckboxGroup_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin CheckboxGroup")
@@ -140,7 +140,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_DataPanel_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_DataPanel_0600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin DataPanel")
@@ -165,7 +165,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_DatePicker_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_DatePicker_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin DatePicker")
@@ -190,7 +190,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Divider_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Divider_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Divider")
@@ -215,7 +215,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Gauge_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Gauge_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Gauge")
@@ -242,7 +242,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Menu_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Menu_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Menu")
@@ -267,7 +267,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_MenuItem_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_MenuItem_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin MenuItem")
@@ -292,7 +292,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_MenuItemGroup_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_MenuItemGroup_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin MenuItemGroup")
@@ -317,7 +317,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Progress_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Progress_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Progress")
@@ -342,7 +342,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_QRCode_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_QRCode_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin QRCode")
@@ -367,7 +367,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Radio_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Radio_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Radio")
@@ -392,7 +392,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Rating_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Rating_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Rating")
@@ -417,7 +417,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Refresh_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Refresh_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Refresh")
@@ -442,7 +442,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_RichEditor_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_RichEditor_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin RichEditor")
@@ -467,7 +467,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_RowSplit_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_RowSplit_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin RowSplit")
@@ -492,7 +492,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_ScrollBar_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_ScrollBar_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin ScrollBar")
@@ -517,7 +517,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Search_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Search_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Search")
@@ -542,7 +542,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Slider_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Slider_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Slider")
@@ -567,7 +567,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Stepper_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Stepper_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Stepper")
@@ -592,7 +592,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_StepperItem_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_StepperItem_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin StepperItem")
@@ -617,7 +617,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Text_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Text_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Text")
@@ -642,7 +642,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_TextArea_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_TextArea_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin TextArea")
@@ -667,7 +667,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_TextClock_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_TextClock_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin TextClock")
@@ -692,7 +692,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_TextInput_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_TextInput_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin TextInput")
@@ -717,7 +717,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_TextPicker_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_TextPicker_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin TextPicker")
@@ -742,7 +742,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_TextTimer_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_TextTimer_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin TextTimer")
@@ -767,7 +767,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Toggle_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Toggle_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Toggle")
@@ -792,7 +792,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Select_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Select_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Select")
@@ -817,7 +817,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Badge_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Badge_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Badge")
@@ -842,7 +842,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Column_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Column_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Column")
@@ -867,7 +867,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Grid_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Grid_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Grid")
@@ -892,7 +892,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_GridItem_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_GridItem_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin GridItem")
@@ -917,7 +917,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_GridRow_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_GridRow_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin GridRow")
@@ -942,7 +942,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_GridCol_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_GridCol_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin GridCol")
@@ -967,7 +967,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Flex_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Flex_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Flex")
@@ -992,7 +992,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_List_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_List_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin List")
@@ -1017,7 +1017,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_ListItem_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_ListItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin ListItem")
@@ -1042,7 +1042,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_ListItemGroup_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_ListItemGroup_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin ListItemGroup")
@@ -1068,7 +1068,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_RelativeContainer_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_RelativeContainer_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin RelativeContainer")
@@ -1093,7 +1093,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Row_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Row_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Row")
@@ -1118,7 +1118,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Scroll_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Scroll_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Scroll")
@@ -1143,7 +1143,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Stack_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Stack_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Stack")
@@ -1168,7 +1168,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Swiper_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Swiper_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Swiper")
@@ -1193,7 +1193,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Tabs_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Tabs_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Tabs")
@@ -1218,7 +1218,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_TabContent_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_TabContent_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin TabContent")
@@ -1243,7 +1243,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Circle_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Circle_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Circle")
@@ -1268,7 +1268,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Line_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Line_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Line")
@@ -1293,7 +1293,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Rect_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Rect_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Rect")
@@ -1318,7 +1318,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Shape_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Shape_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Shape")
@@ -1345,7 +1345,7 @@ class Test_EmptyAttrs_ForegroundColor {
      * @tc.desic：Empty_Path_ForegroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ForegroundColor_Path_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckForegroundColor: FindBegin Path")

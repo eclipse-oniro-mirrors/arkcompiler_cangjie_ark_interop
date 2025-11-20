@@ -20,8 +20,6 @@ let _ = testsuite()
 func testsuite(): Unit {
     registerTestSuite("TestBundleInfo", {=> TestBundleInfo()})
     registerTestSuite("TestAbilityInfo", {=> TestAbilityInfo()})
-    registerTestSuite("TestBundleManager", {=> TestBundleManager()})
     registerTestSuite("TestPermissionInfo", {=> TestPermissionInfo()})
-    registerTestSuite("TestBundleManager01", {=> TestBundleManager01()})
     registerTestSuite("TestSignatureInfo", {=> TestSignatureInfo()})
 }

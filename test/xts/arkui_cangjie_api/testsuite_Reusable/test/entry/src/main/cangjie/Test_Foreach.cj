@@ -43,7 +43,7 @@ class Test_Foreach_Reuse {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Foreach_Reuse_0100() {
         Hilog.info(0, "cangjietest", "Test_Foreach_Reuse_0100 start")
         sleepFor(1.second)
@@ -64,7 +64,7 @@ class Test_Foreach_Reuse {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Foreach_Reuse_0200() {
         Hilog.info(0, "cangjietest", "Test_Foreach_Reuse_0200 start")
         sleepFor(1.second)
@@ -86,7 +86,7 @@ class Test_Foreach_Reuse {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Foreach_Reuse_0300() {
         Hilog.info(0, "cangjietest", "Test_Foreach_Reuse_0300 start")
         sleepFor(1.second)
@@ -107,7 +107,7 @@ class Test_Foreach_Reuse {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Foreach_Reuse_0400() {
         Hilog.info(0, "cangjietest", "Test_Foreach_Reuse_0400 start")
         sleepFor(1.second)
@@ -129,7 +129,7 @@ class Test_Foreach_Reuse {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Foreach_Reuse_0500() {
         Hilog.info(0, "cangjietest", "Test_Foreach_Reuse_0500 start")
         sleepFor(1.second)
@@ -150,7 +150,7 @@ class Test_Foreach_Reuse {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Foreach_Reuse_0600() {
         Hilog.info(0, "cangjietest", "Test_Foreach_Reuse_0600 start")
         sleepFor(1.second)
@@ -172,7 +172,7 @@ class Test_Foreach_Reuse {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Foreach_Reuse_0700() {
         Hilog.info(0, "cangjietest", "Test_Foreach_Reuse_0700 start")
         sleepFor(1.second)
@@ -193,7 +193,7 @@ class Test_Foreach_Reuse {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Foreach_Reuse_0800() {
         Hilog.info(0, "cangjietest", "Test_Foreach_Reuse_0800 start")
         sleepFor(1.second)

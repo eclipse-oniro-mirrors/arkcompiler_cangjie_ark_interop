@@ -24,7 +24,6 @@ import stdx.encoding.json.*
 import ohos.data.preferences.*
 import kit.ArkData.*
 import kit.PerformanceAnalysisKit.Hilog
-import ohos.data.preferences.ValueType as PreferencesValueType
 
 @Test
 class TestDelete_1 {
@@ -37,7 +36,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -61,7 +60,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -85,7 +84,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -109,7 +108,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -133,7 +132,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -157,7 +156,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -181,7 +180,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -205,7 +204,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -229,7 +228,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -253,7 +252,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_10 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -277,7 +276,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_11 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -301,7 +300,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_12 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -325,7 +324,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_13 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -349,7 +348,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_14 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -373,7 +372,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_15 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -397,7 +396,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_16 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -421,7 +420,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_17 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -445,7 +444,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_18 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -469,7 +468,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_19 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -493,7 +492,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_20 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -517,7 +516,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_21 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -541,7 +540,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_22 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -565,7 +564,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_23 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -589,7 +588,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_24 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -613,7 +612,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_25 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -637,7 +636,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_26 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -661,7 +660,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_27 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -685,7 +684,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_28 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -709,7 +708,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_29 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -733,7 +732,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_30 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -757,7 +756,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_31(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_31 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -781,7 +780,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_32(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_32 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -805,7 +804,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_33(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_33 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -829,7 +828,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_34(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_34 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -853,7 +852,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_35(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_35 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -877,7 +876,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_36 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -901,7 +900,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_37 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -923,7 +922,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_38 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -945,7 +944,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_39 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -967,7 +966,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_40 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -989,7 +988,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_41 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1011,7 +1010,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_42 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1033,7 +1032,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_43 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1055,7 +1054,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_44 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1077,7 +1076,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_45 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1099,7 +1098,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_46 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1121,7 +1120,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_47(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_47 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1143,7 +1142,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_48(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_48 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1165,7 +1164,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_49(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_49 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1187,7 +1186,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_50(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_50 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1209,7 +1208,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_51(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_51 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1231,7 +1230,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_52(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_52 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1253,7 +1252,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_53(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_53 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1275,7 +1274,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_54(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_54 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1297,7 +1296,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_55(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_55 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1319,7 +1318,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_56(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_56 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1341,7 +1340,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_57(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_57 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1363,7 +1362,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_58(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_58 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1385,7 +1384,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_59(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_59 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1407,7 +1406,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_60(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_60 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1429,7 +1428,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_61(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_61 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1451,7 +1450,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_62(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_62 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1473,7 +1472,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_63(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_63 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1495,7 +1494,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_64(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_64 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1517,7 +1516,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_65(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_65 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1539,7 +1538,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_66(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_66 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1561,7 +1560,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_67(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_67 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1583,7 +1582,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_68(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_68 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1605,7 +1604,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_69(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_69 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1627,7 +1626,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_70(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_70 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1649,7 +1648,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_71(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_71 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")
@@ -1671,7 +1670,7 @@ class TestDelete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_72(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_72 begins.")
         Hilog.info(0, "cangjietest","define local variable preferences")

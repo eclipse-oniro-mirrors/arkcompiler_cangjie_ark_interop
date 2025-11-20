@@ -14,42 +14,62 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testApplicationInfo_icon_1", { =>testApplicationInfo_icon_1()
-})
-registerTestSuite("testApplicationInfo_icon_2", { =>testApplicationInfo_icon_2()
-})
-registerTestSuite("testApplicationInfo_icon_3", { =>testApplicationInfo_icon_3()
-})
-registerTestSuite("testApplicationInfo_icon_4", { =>testApplicationInfo_icon_4()
-})
-registerTestSuite("testApplicationInfo_icon_5", { =>testApplicationInfo_icon_5()
-})
-registerTestSuite("testApplicationInfo_icon_6", { =>testApplicationInfo_icon_6()
-})
-registerTestSuite("testApplicationInfo_icon_7", { =>testApplicationInfo_icon_7()
-})
-registerTestSuite("testApplicationInfo_icon_8", { =>testApplicationInfo_icon_8()
-})
-registerTestSuite("testApplicationInfo_icon_9", { =>testApplicationInfo_icon_9()
-})
-registerTestSuite("testApplicationInfo_icon_10", { =>testApplicationInfo_icon_10()
-})
-registerTestSuite("testApplicationInfo_icon_11", { =>testApplicationInfo_icon_11()
-})
-registerTestSuite("testApplicationInfo_icon_12", { =>testApplicationInfo_icon_12()
-})
-registerTestSuite("testApplicationInfo_icon_13", { =>testApplicationInfo_icon_13()
-})
-registerTestSuite("testApplicationInfo_icon_14", { =>testApplicationInfo_icon_14()
-})
-registerTestSuite("testApplicationInfo_icon_15", { =>testApplicationInfo_icon_15()
-})
-registerTestSuite("testApplicationInfo_icon_16", { =>testApplicationInfo_icon_16()
-})
-registerTestSuite("testApplicationInfo_icon_17", { =>testApplicationInfo_icon_17()
-})
-registerTestSuite("testApplicationInfo_icon_18", { =>testApplicationInfo_icon_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testApplicationInfo_icon_1", {
+        => testApplicationInfo_icon_1()
+    })
+    registerTestSuite("testApplicationInfo_icon_2", {
+        => testApplicationInfo_icon_2()
+    })
+    registerTestSuite("testApplicationInfo_icon_3", {
+        => testApplicationInfo_icon_3()
+    })
+    registerTestSuite("testApplicationInfo_icon_4", {
+        => testApplicationInfo_icon_4()
+    })
+    registerTestSuite("testApplicationInfo_icon_5", {
+        => testApplicationInfo_icon_5()
+    })
+    registerTestSuite("testApplicationInfo_icon_6", {
+        => testApplicationInfo_icon_6()
+    })
+    registerTestSuite("testApplicationInfo_icon_7", {
+        => testApplicationInfo_icon_7()
+    })
+    registerTestSuite("testApplicationInfo_icon_8", {
+        => testApplicationInfo_icon_8()
+    })
+    registerTestSuite("testApplicationInfo_icon_9", {
+        => testApplicationInfo_icon_9()
+    })
+    registerTestSuite("testApplicationInfo_icon_10", {
+        => testApplicationInfo_icon_10()
+    })
+    registerTestSuite("testApplicationInfo_icon_11", {
+        => testApplicationInfo_icon_11()
+    })
+    registerTestSuite("testApplicationInfo_icon_12", {
+        => testApplicationInfo_icon_12()
+    })
+    registerTestSuite("testApplicationInfo_icon_13", {
+        => testApplicationInfo_icon_13()
+    })
+    registerTestSuite("testApplicationInfo_icon_14", {
+        => testApplicationInfo_icon_14()
+    })
+    registerTestSuite("testApplicationInfo_icon_15", {
+        => testApplicationInfo_icon_15()
+    })
+    registerTestSuite("testApplicationInfo_icon_16", {
+        => testApplicationInfo_icon_16()
+    })
+    registerTestSuite("testApplicationInfo_icon_17", {
+        => testApplicationInfo_icon_17()
+    })
+    registerTestSuite("testApplicationInfo_icon_18", {
+        => testApplicationInfo_icon_18()
+    })
 }

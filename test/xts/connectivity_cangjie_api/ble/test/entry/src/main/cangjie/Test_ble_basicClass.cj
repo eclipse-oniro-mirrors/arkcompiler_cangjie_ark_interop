@@ -35,16 +35,16 @@ class Test_ble_basicClass {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_ScanFilter(): Unit {
         try {
             var scanFilter = ScanFilter()
             scanFilter.deviceId = "00:11:22:33:44:55"
             scanFilter.name = "testStartScan"
-            scanFilter.serviceUuid = "00001888-0000-1000-8000-00805f9b34fb"
-            scanFilter.serviceUuidMask = "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF"
-            scanFilter.serviceSolicitationUuid = "00001888-0000-1000-8000-00805F9B34FB"
-            scanFilter.serviceSolicitationUuidMask = "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF"
+            scanFilter.serviceUUID = "00001888-0000-1000-8000-00805f9b34fb"
+            scanFilter.serviceUUIDMask = "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF"
+            scanFilter.serviceSolicitationUUID = "00001888-0000-1000-8000-00805F9B34FB"
+            scanFilter.serviceSolicitationUUIDMask = "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF"
             scanFilter.serviceData = [5, 6, 7, 8]
             scanFilter.serviceDataMask = [5, 6, 7, 8]
             scanFilter.manufactureId = 4567
@@ -52,10 +52,10 @@ class Test_ble_basicClass {
             scanFilter.manufactureDataMask = [1, 2, 3, 4]
             @Expect(scanFilter.deviceId, "00:11:22:33:44:55")
             @Expect(scanFilter.name, "testStartScan")
-            @Expect(scanFilter.serviceUuid, "00001888-0000-1000-8000-00805f9b34fb")
-            @Expect(scanFilter.serviceUuidMask,"FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF")
-            @Expect(scanFilter.serviceSolicitationUuid,"00001888-0000-1000-8000-00805F9B34FB")
-            @Expect(scanFilter.serviceSolicitationUuidMask, "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF")
+            @Expect(scanFilter.serviceUUID, "00001888-0000-1000-8000-00805f9b34fb")
+            @Expect(scanFilter.serviceUUIDMask,"FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF")
+            @Expect(scanFilter.serviceSolicitationUUID,"00001888-0000-1000-8000-00805F9B34FB")
+            @Expect(scanFilter.serviceSolicitationUUIDMask, "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF")
             Hilog.info(0, "cangjietest", "scanFilter.serviceData.toString() is ${scanFilter.serviceData.toString()}")
             @Expect(scanFilter.manufactureId, 4567)
 
@@ -76,7 +76,7 @@ class Test_ble_basicClass {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_ScanOptions(): Unit {
         try {
             let scanOptions = ScanOptions(
@@ -92,10 +92,10 @@ class Test_ble_basicClass {
             @Expect(scanOptions.phyType, PhyLe1M)
             @Expect(scanOptions.interval, 0)
             startBLEScan([scanFilter], options: scanOptions)
-        } catch (e: IllegalArgumentException) {
+        } catch (e: BusinessException) {
             Hilog.info(0, "Bluetooth", "cangjieTest", "errCode: ${e.toString()}, errMessage: ${e.message}")
             Hilog.info(0, "Bluetooth1111", "cangjieTest", "errCode: ${e.toString()}, errMessage: ${e.toString()}")
-            @Expect(e.toString(), "IllegalArgumentException: Invalid parameter.")
+            @Expect(e.message, "Operation failed.")
         }
     }
     /*
@@ -107,7 +107,7 @@ class Test_ble_basicClass {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_AdvertiseSetting(): Unit {
         try {
             var advertiseSetting = AdvertiseSetting(interval: 1600, txPower: -7, connectable: true)
@@ -128,7 +128,7 @@ class Test_ble_basicClass {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_AdvertiseData(): Unit {
         try {
             let manufactureDataUnit = ManufactureData(
@@ -145,10 +145,10 @@ class Test_ble_basicClass {
                 [serviceDataUnit],
                 includeDeviceName: true
             )
-            @Expect(advertiseData.serviceUuids, ["00001888-0000-1000-8000-00805f9b34fb"])
+            @Expect(advertiseData.serviceUUIDs, ["00001888-0000-1000-8000-00805f9b34fb"])
             @Expect(advertiseData.manufactureData[0].manufactureId, 4567u16)
             @Expect(advertiseData.manufactureData[0].manufactureValue.toString(), "[1, 2, 3, 4]")
-            @Expect(advertiseData.serviceData[0].serviceUuid, "00001888-0000-1000-8000-00805f9b34fb")
+            @Expect(advertiseData.serviceData[0].serviceUUID, "00001888-0000-1000-8000-00805f9b34fb")
             @Expect(advertiseData.serviceData[0].serviceValue.toString(), "[5, 6, 7, 8]")
             @Expect(advertiseData.includeDeviceName, true)
         } catch (e: BusinessException) {
@@ -165,7 +165,7 @@ class Test_ble_basicClass {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_ManufactureData(): Unit {
         try {
             let manufactrueData = ManufactureData(
@@ -188,7 +188,7 @@ class Test_ble_basicClass {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_AdvertisingParams(): Unit {
         let advertisingSettings = AdvertiseSetting(interval: 32, txPower: 0, connectable: true)
         let manufactureDataUnit = ManufactureData(
@@ -221,10 +221,10 @@ class Test_ble_basicClass {
             @Expect(advertisingParams.advertisingSettings.txPower, 0)
             @Expect(advertisingParams.advertisingSettings.interval, 32)
             @Expect(advertisingParams.advertisingSettings.connectable, true)
-            @Expect(advertisingParams.advertisingData.serviceUuids, ["00001888-0000-1000-8000-00805f9b34fb"])
+            @Expect(advertisingParams.advertisingData.serviceUUIDs, ["00001888-0000-1000-8000-00805f9b34fb"])
             @Expect(advertisingParams.advertisingData.manufactureData[0].manufactureId, 4567u16)
             @Expect(advertisingParams.advertisingData.manufactureData[0].manufactureValue.toString(), "[1, 2, 3, 4]" )
-            @Expect(advertisingParams.advertisingResponse.serviceUuids, ["00001888-0000-1000-8000-00805f9b34fb"])
+            @Expect(advertisingParams.advertisingResponse.serviceUUIDs, ["00001888-0000-1000-8000-00805f9b34fb"])
             @Expect(advertisingParams.advertisingResponse.manufactureData[0].manufactureId, 4567u16)
             @Expect(advertisingParams.advertisingResponse.manufactureData[0].manufactureValue.toString(), "[1, 2, 3, 4]")
         } catch (e: BusinessException) {
@@ -241,7 +241,7 @@ class Test_ble_basicClass {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_AdvertisingEnableParams(): Unit {
         let advertisingSettings = AdvertiseSetting(interval: 32, txPower: 0, connectable: true)
         let manufactureDataUnit = ManufactureData(
@@ -269,10 +269,10 @@ class Test_ble_basicClass {
             @Expect(advertisingEnableParam.advertisingSettings.txPower, 0)
             @Expect(advertisingEnableParam.advertisingSettings.interval, 32)
             @Expect(advertisingEnableParam.advertisingSettings.connectable, true)
-            @Expect(advertisingEnableParam.advertisingData.serviceUuids, ["00001888-0000-1000-8000-00805f9b34fb"])
+            @Expect(advertisingEnableParam.advertisingData.serviceUUIDs, ["00001888-0000-1000-8000-00805f9b34fb"])
             @Expect(advertisingEnableParam.advertisingData.manufactureData[0].manufactureId, 4567u16)
             @Expect(advertisingEnableParam.advertisingData.manufactureData[0].manufactureValue.toString(), "[1, 2, 3, 4]" )
-            @Expect(advertisingEnableParam.advertisingResponse.serviceUuids, ["00001888-0000-1000-8000-00805f9b34fb"])
+            @Expect(advertisingEnableParam.advertisingResponse.serviceUUIDs, ["00001888-0000-1000-8000-00805f9b34fb"])
             @Expect(advertisingEnableParam.advertisingResponse.manufactureData[0].manufactureId, 4567u16)
             @Expect(advertisingEnableParam.advertisingResponse.manufactureData[0].manufactureValue.toString(), "[1, 2, 3, 4]")
             @Expect(advertisingEnableParam.duration, 300)
@@ -290,7 +290,7 @@ class Test_ble_basicClass {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_AdvertisingDisableParams(): Unit {
         try {
             let advertisingSettings = AdvertiseSetting(interval: 32, txPower: 0, connectable: true)

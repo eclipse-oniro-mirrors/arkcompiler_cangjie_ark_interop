@@ -18,10 +18,10 @@
     products: [
       {
         name: "default",
-        signingConfig: "com.example.myapplication",
-        targetSdkVersion: "19",
-        compatibleSdkVersion: "19",
-        compileSdkVersion: "20",
+        signingConfig: "default",
+        targetSdkVersion: "22",
+        compatibleSdkVersion: "22",
+        compileSdkVersion: "22",
         runtimeOS: "OpenHarmony",
         buildOption: {
           strictMode: {

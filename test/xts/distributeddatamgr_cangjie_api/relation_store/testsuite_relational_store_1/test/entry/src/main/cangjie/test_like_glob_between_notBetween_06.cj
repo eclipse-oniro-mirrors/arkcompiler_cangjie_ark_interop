@@ -20,8 +20,8 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
 
@@ -35,10 +35,11 @@ class Test_like_glob_between_notBetween_06 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId:  "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -126,384 +127,365 @@ class Test_like_glob_between_notBetween_06 {
     public override func afterEach(): Unit {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0100
-    * @tc.name      : test_like_01
-    * @tc.desc      : test RelationStore test_like_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0100
+     * @tc.name      : test_like_01
+     * @tc.desc      : test RelationStore test_like_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_like_01(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.like("NAME", "%123")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 200)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0200
-    * @tc.name      : test_like_02
-    * @tc.desc      : test RelationStore test_like_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0200
+     * @tc.name      : test_like_02
+     * @tc.desc      : test RelationStore test_like_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_like_02(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.like("NAME", "123%")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0300
-    * @tc.name      : test_like_03
-    * @tc.desc      : test RelationStore test_like_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0300
+     * @tc.name      : test_like_03
+     * @tc.desc      : test RelationStore test_like_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_like_03(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.like("NAME", "%123%")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 300)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0400
-    * @tc.name      : test_like_04
-    * @tc.desc      : test RelationStore test_like_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0400
+     * @tc.name      : test_like_04
+     * @tc.desc      : test RelationStore test_like_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_like_04(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.like("ID", "4%")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 111)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0500
-    * @tc.name      : test_like_05
-    * @tc.desc      : test RelationStore test_like_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0500
+     * @tc.name      : test_like_05
+     * @tc.desc      : test RelationStore test_like_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_like_05(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.like("NAME", "a#%")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0600
-    * @tc.name      : test_like_06
-    * @tc.desc      : test RelationStore test_like_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0600
+     * @tc.name      : test_like_06
+     * @tc.desc      : test RelationStore test_like_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_like_06(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.like("ID", "%")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0700
-    * @tc.name      : test_glob_07
-    * @tc.desc      : test RelationStore test_glob_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0700
+     * @tc.name      : test_glob_07
+     * @tc.desc      : test RelationStore test_glob_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_glob_07(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.glob("ID", "4*")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 111)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0800
-    * @tc.name      : test_glob_08
-    * @tc.desc      : test RelationStore test_glob_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0800
+     * @tc.name      : test_glob_08
+     * @tc.desc      : test RelationStore test_glob_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_glob_08(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.glob("NAME", "*b?d?fg*")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 200)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0900
-    * @tc.name      : test_glob_09
-    * @tc.desc      : test RelationStore test_glob_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_0900
+     * @tc.name      : test_glob_09
+     * @tc.desc      : test RelationStore test_glob_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_glob_09(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.glob("NAME", "*b?d?gf*")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1000
-    * @tc.name      : test_glob_10
-    * @tc.desc      : test RelationStore test_glob_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1000
+     * @tc.name      : test_glob_10
+     * @tc.desc      : test RelationStore test_glob_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_glob_10(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.glob("NAME", "*?")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 500)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1100
-    * @tc.name      : test_glob_11
-    * @tc.desc      : test RelationStore test_glob_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1100
+     * @tc.name      : test_glob_11
+     * @tc.desc      : test RelationStore test_glob_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_glob_11(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.glob("NAME", "????")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1200
-    * @tc.name      : test_between_12
-    * @tc.desc      : test RelationStore test_between_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1200
+     * @tc.name      : test_between_12
+     * @tc.desc      : test RelationStore test_between_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_between_12(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.between("AGE", RelationalStoreValueType.Integer(101), RelationalStoreValueType.Integer(200))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1300
-    * @tc.name      : test_between_13
-    * @tc.desc      : test RelationStore test_between_13
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1300
+     * @tc.name      : test_between_13
+     * @tc.desc      : test RelationStore test_between_13
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_between_13(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.between("SALARY", RelationalStoreValueType.Double(-1.0), RelationalStoreValueType.Double(-100.0))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1400
-    * @tc.name      : test_between_14
-    * @tc.desc      : test RelationStore test_between_14
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1400
+     * @tc.name      : test_between_14
+     * @tc.desc      : test RelationStore test_between_14
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_between_14(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.between("SALARY", RelationalStoreValueType.Double(-100.0), RelationalStoreValueType.Double(-1.0))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1500
-    * @tc.name      : test_between_15
-    * @tc.desc      : test RelationStore test_between_15
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1500
+     * @tc.name      : test_between_15
+     * @tc.desc      : test RelationStore test_between_15
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_between_15(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.between("CODES", RelationalStoreValueType.Boolean(false), RelationalStoreValueType.Boolean(true))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1600
-    * @tc.name      : test_between_16
-    * @tc.desc      : test RelationStore test_between_16
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1600
+     * @tc.name      : test_between_16
+     * @tc.desc      : test RelationStore test_between_16
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_between_16(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.between("CODES", RelationalStoreValueType.Boolean(true), RelationalStoreValueType.Boolean(false))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1700
-    * @tc.name      : test_notbetween_17
-    * @tc.desc      : test RelationStore test_notbetween_17
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1700
+     * @tc.name      : test_notbetween_17
+     * @tc.desc      : test RelationStore test_notbetween_17
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notbetween_17(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notBetween("CODES", RelationalStoreValueType.Boolean(true), RelationalStoreValueType.Boolean(false))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1800
-    * @tc.name      : test_notbetween_18
-    * @tc.desc      : test RelationStore test_notbetween_18
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1800
+     * @tc.name      : test_notbetween_18
+     * @tc.desc      : test RelationStore test_notbetween_18
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notbetween_18(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notBetween("ID", RelationalStoreValueType.Integer(Int64.Max),
             RelationalStoreValueType.Integer(Int64.Max - 100))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1900
-    * @tc.name      : test_notbetween_19
-    * @tc.desc      : test RelationStore test_notbetween_19
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_1900
+     * @tc.name      : test_notbetween_19
+     * @tc.desc      : test RelationStore test_notbetween_19
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notbetween_19(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notBetween("ID", RelationalStoreValueType.Integer(Int64.Max),
             RelationalStoreValueType.Integer(Int64.Max - 100))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_2000
-    * @tc.name      : test_notbetween_20
-    * @tc.desc      : test RelationStore test_notbetween_20
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_2000
+     * @tc.name      : test_notbetween_20
+     * @tc.desc      : test RelationStore test_notbetween_20
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notbetween_20(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notBetween("ID", RelationalStoreValueType.Integer(Int64.Min),
             RelationalStoreValueType.Integer(Int64.Min + 100))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 600)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_2100
-    * @tc.name      : test_notbetween_21
-    * @tc.desc      : test RelationStore test_notbetween_21
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_like_glob_between_notBetween_06_2100
+     * @tc.name      : test_notbetween_21
+     * @tc.desc      : test RelationStore test_notbetween_21
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notbetween_21(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
-        predicates.notBetween("NAME", RelationalStoreValueType.StringValue("Lisa"), RelationalStoreValueType.StringValue("Lisa"))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        predicates.notBetween("NAME", RelationalStoreValueType.StringValue("Lisa"),
+            RelationalStoreValueType.StringValue("Lisa"))
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 600)
     }
 }

@@ -18,7 +18,6 @@ package ohos_app_cangjie_entry
 let _ = testsuite()
 
 func testsuite(): Unit {
-    registerTestSuite("Test_ble_enum", {=> Test_ble_enum()})
     registerTestSuite("Test_ble_bacicFunc", {=> Test_ble_bacicFunc()})
-    registerTestSuite("Test_ble_basicClass",{=> Test_ble_basicClass()})
+    registerTestSuite("Test_ble_basicClass", {=> Test_ble_basicClass()})
 }

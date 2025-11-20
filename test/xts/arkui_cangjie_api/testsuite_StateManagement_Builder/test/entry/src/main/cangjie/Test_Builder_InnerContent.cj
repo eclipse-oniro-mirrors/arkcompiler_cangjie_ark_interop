@@ -48,7 +48,7 @@ class Test_Builder_InnerContent {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Builder_InnerContent_0100() {
         Hilog.info(0,"", "cangjietest", "Test_Builder_InnerContent_0100 Start")
         let Inspector = getInspectorByKey("InnerView")
@@ -70,7 +70,7 @@ class Test_Builder_InnerContent {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Builder_InnerContent_0200() {
         Hilog.info(0,"", "cangjietest", "Test_Builder_InnerContent_0200 Start")
         let Inspector = getInspectorByKey("CustomerView")
@@ -92,7 +92,7 @@ class Test_Builder_InnerContent {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Builder_InnerContent_0300() {
         Hilog.info(0,"", "cangjietest", "Test_Builder_InnerContent_0400 Start")
         let Inspector = getInspectorByKey("BuilderView")
@@ -114,7 +114,7 @@ class Test_Builder_InnerContent {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Builder_InnerContent_0400() {
         Hilog.info(0,"", "cangjietest", "Test_Builder_InnerContent_0400 Start")
         let Inspector = getInspectorByKey("NestingCustomerView")

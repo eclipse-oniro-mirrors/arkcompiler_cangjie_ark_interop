@@ -38,7 +38,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_AlphabetIndexer_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin AlphabetIndexer")
@@ -64,7 +64,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Button_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Button")
@@ -89,7 +89,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Checkbox_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Checkbox")
@@ -114,7 +114,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_CheckboxGroup_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin CheckboxGroup")
@@ -140,7 +140,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_DataPanel_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin DataPanel")
@@ -165,7 +165,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_DatePicker_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin DatePicker")
@@ -190,7 +190,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Divider_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Divider")
@@ -215,7 +215,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Gauge_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Gauge")
@@ -240,7 +240,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Image_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Image")
@@ -265,7 +265,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_LoadingProgress_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_LoadingProgress_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin LoadingProgress")
@@ -290,7 +290,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Menu_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Menu_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Menu")
@@ -315,7 +315,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Progress_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Progress_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Progress")
@@ -340,7 +340,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_QRCode_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_QRCode_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin QRCode")
@@ -365,7 +365,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Radio_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Radio_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Radio")
@@ -390,7 +390,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Rating_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Rating_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Rating")
@@ -415,7 +415,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Refresh_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Refresh_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Refresh")
@@ -440,7 +440,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_RichEditor_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_RichEditor_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin RichEditor")
@@ -465,7 +465,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_RichText_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_RichText_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin RichText")
@@ -490,7 +490,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_RowSplit_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_RowSplit_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin RowSplit")
@@ -515,7 +515,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_ScrollBar_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_ScrollBar_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin ScrollBar")
@@ -540,7 +540,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Search_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Search_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Search")
@@ -565,7 +565,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Slider_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Slider_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Slider")
@@ -590,7 +590,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Stepper_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Stepper_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Stepper")
@@ -615,7 +615,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Text_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Text_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Text")
@@ -640,7 +640,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_TextArea_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_TextArea_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin TextArea")
@@ -665,7 +665,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_TextClock_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_TextClock_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin TextClock")
@@ -690,7 +690,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_TextInput_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_TextInput_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin TextInput")
@@ -715,7 +715,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_TextPicker_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_TextPicker_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin TextPicker")
@@ -740,7 +740,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_TextTimer_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_TextTimer_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin TextTimer")
@@ -765,7 +765,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Toggle_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Toggle_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Toggle")
@@ -790,7 +790,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Web_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Web_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Web")
@@ -815,7 +815,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Select_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Select_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Select")
@@ -840,7 +840,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Badge_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Badge_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Badge")
@@ -865,7 +865,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Column_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Column_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Column")
@@ -890,7 +890,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Grid_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Grid_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Grid")
@@ -915,7 +915,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_GridRow_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_GridRow_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin GridRow")
@@ -940,7 +940,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Flex_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Flex_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Flex")
@@ -965,7 +965,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_List_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_List_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin List")
@@ -990,7 +990,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_RelativeContainer_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_RelativeContainer_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin RelativeContainer")
@@ -1015,7 +1015,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Row_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Row_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Row")
@@ -1040,7 +1040,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Scroll_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Scroll_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Scroll")
@@ -1065,7 +1065,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Stack_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Stack_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Stack")
@@ -1090,7 +1090,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Swiper_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Swiper_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Swiper")
@@ -1115,7 +1115,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Tabs_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Tabs_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Tabs")
@@ -1140,7 +1140,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Circle_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Circle_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Circle")
@@ -1165,7 +1165,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Line_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Line_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Line")
@@ -1190,7 +1190,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Rect_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Rect_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Rect")
@@ -1215,7 +1215,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Shape_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Shape_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Shape")
@@ -1240,7 +1240,7 @@ class Test_EmptyAttrs_AlignSelf {
      * @tc.desic：Empty_Path_AlignSelf
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AlignSelf_Path_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAlignSelf: FindBegin Path")

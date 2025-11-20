@@ -23,7 +23,7 @@ import ohos.arkui.state_macro_manage.*
 import std.collection.*
 import stdx.encoding.json.*
 import std.convert.*
-import ohos.base.{LengthProp, Length, Color, LengthType}
+import ohos.base.{LengthProp, Length, Color}
 import std.time.{DateTime}
 import std.sync.{Timer}
 
@@ -92,21 +92,21 @@ class View_WatchLink_Number {
         Column(space:20) {
             Child_WatchLink_Number(count_number: count_number, count_Object: count_Object, count_String: count_String,
                 count_date: count_date, count_Boolean: count_Boolean)
-            Button("change").onClick {ClickEvent =>
+            Button("change").onClick({ClickEvent =>
                 this.count_number = 10
-            }.key("state1")
-            Button("change").onClick {ClickEvent =>
+            }).key("state1")
+            Button("change").onClick({ClickEvent =>
                 this.count_Object = Num3(20)
-            }.key("state2")
-            Button("change").onClick {ClickEvent =>
+            }).key("state2")
+            Button("change").onClick({ClickEvent =>
                 this.count_String = "30"
-            }.key("state3")
-            Button("change").onClick {ClickEvent =>
+            }).key("state3")
+            Button("change").onClick({ClickEvent =>
                 this.count_date = DateTime.parse("2023-04-10T08:00:00+08:00")
-            }.key("state4")
-            Button("change").onClick {ClickEvent =>
+            }).key("state4")
+            Button("change").onClick({ClickEvent =>
                 this.count_Boolean = true
-            }.key("state5")
+            }).key("state5")
         }.width(100.percent).margin(top: 10)
     }
 }

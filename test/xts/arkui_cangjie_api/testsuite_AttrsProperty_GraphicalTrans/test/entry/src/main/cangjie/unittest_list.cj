@@ -56,15 +56,15 @@ let Scale_Prop_List: Array<(String, Any, String)> = [
 
 //  Rotate_Prop_List 格式为  (单位， setValue, expectValue),setValue有四种：(Float32)、(Int32)、(x:Float32, y:Float32, z:Float32, angle:Float32, centerX:Length, centerY:Length)、(x:Float32, y:Float32, z:Float32, angle:Float32, centerX:AppResource, centerY:AppResource)
 let Rotate_Prop_List: Array<(String, Any, String)> = [
-    ("Float32Percent", (1.2f32, 0.5f32, 1.0f32, 150.0f32, 20.percent, 50.percent),
+    ("Float32Percent", (1.2f64, 0.5f64, 1.0f64, 150.0f64, 20.percent, 50.percent),
         "{\"x\":\"1.200000\",\"y\":\"0.500000\",\"z\":\"1.000000\",\"angle\":\"150.000000\",\"perspective\":\"0.000000\",\"centerX\":\"20.00%\",\"centerY\":\"50.00%\"}"),
-    ("Float32Px", (1.2f32, 0.5f32, 1.0f32, -150.0f32, 100.px, 30.px),
+    ("Float32Px", (1.2f64, 0.5f64, 1.0f64, -150.0f64, 100.px, 30.px),
         "{\"x\":\"1.200000\",\"y\":\"0.500000\",\"z\":\"1.000000\",\"angle\":\"-150.000000\",\"perspective\":\"0.000000\",\"centerX\":\"100.00px\",\"centerY\":\"30.00px\"}"),
-    ("Float32Vp", (1.2f32, 0.5f32, 1.0f32, 150.0f32, 20.vp, 30.vp),
+    ("Float32Vp", (1.2f64, 0.5f64, 1.0f64, 150.0f64, 20.vp, 30.vp),
         "{\"x\":\"1.200000\",\"y\":\"0.500000\",\"z\":\"1.000000\",\"angle\":\"150.000000\",\"perspective\":\"0.000000\",\"centerX\":\"20.00vp\",\"centerY\":\"30.00vp\"}"),
-    ("Float32Lpx", (1.2f32, 0.5f32, 1.0f32, -150.0f32, 80.lpx, 30.lpx),
+    ("Float32Lpx", (1.2f64, 0.5f64, 1.0f64, -150.0f64, 80.lpx, 30.lpx),
         "{\"x\":\"1.200000\",\"y\":\"0.500000\",\"z\":\"1.000000\",\"angle\":\"-150.000000\",\"perspective\":\"0.000000\",\"centerX\":\"80.00lpx\",\"centerY\":\"30.00lpx\"}"),
-    ("Float32AppResource", (1.2f32, 0.5f32, 1.0f32, 150.0f32, @r(app.float.float_size_20), @r(app.float.float_size_30)),
+    ("Float32AppResource", (1.2f64, 0.5f64, 1.0f64, 150.0f64, @r(app.float.float_size_20), @r(app.float.float_size_30)),
         "{\"x\":\"1.200000\",\"y\":\"0.500000\",\"z\":\"1.000000\",\"angle\":\"150.000000\",\"perspective\":\"0.000000\",\"centerX\":\"20.00vp\",\"centerY\":\"30.00vp\"}")
 ]
 

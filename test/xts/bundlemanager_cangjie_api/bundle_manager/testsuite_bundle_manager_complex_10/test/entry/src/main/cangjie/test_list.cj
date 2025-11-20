@@ -14,42 +14,62 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testApplicationInfo_permissions_1", { =>testApplicationInfo_permissions_1()
-})
-registerTestSuite("testApplicationInfo_permissions_2", { =>testApplicationInfo_permissions_2()
-})
-registerTestSuite("testApplicationInfo_permissions_3", { =>testApplicationInfo_permissions_3()
-})
-registerTestSuite("testApplicationInfo_permissions_4", { =>testApplicationInfo_permissions_4()
-})
-registerTestSuite("testApplicationInfo_permissions_5", { =>testApplicationInfo_permissions_5()
-})
-registerTestSuite("testApplicationInfo_permissions_6", { =>testApplicationInfo_permissions_6()
-})
-registerTestSuite("testApplicationInfo_permissions_7", { =>testApplicationInfo_permissions_7()
-})
-registerTestSuite("testApplicationInfo_permissions_8", { =>testApplicationInfo_permissions_8()
-})
-registerTestSuite("testApplicationInfo_permissions_9", { =>testApplicationInfo_permissions_9()
-})
-registerTestSuite("testApplicationInfo_permissions_10", { =>testApplicationInfo_permissions_10()
-})
-registerTestSuite("testApplicationInfo_permissions_11", { =>testApplicationInfo_permissions_11()
-})
-registerTestSuite("testApplicationInfo_permissions_12", { =>testApplicationInfo_permissions_12()
-})
-registerTestSuite("testApplicationInfo_permissions_13", { =>testApplicationInfo_permissions_13()
-})
-registerTestSuite("testApplicationInfo_permissions_14", { =>testApplicationInfo_permissions_14()
-})
-registerTestSuite("testApplicationInfo_permissions_15", { =>testApplicationInfo_permissions_15()
-})
-registerTestSuite("testApplicationInfo_permissions_16", { =>testApplicationInfo_permissions_16()
-})
-registerTestSuite("testApplicationInfo_permissions_17", { =>testApplicationInfo_permissions_17()
-})
-registerTestSuite("testApplicationInfo_permissions_18", { =>testApplicationInfo_permissions_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testApplicationInfo_permissions_1", {
+        => testApplicationInfo_permissions_1()
+    })
+    registerTestSuite("testApplicationInfo_permissions_2", {
+        => testApplicationInfo_permissions_2()
+    })
+    registerTestSuite("testApplicationInfo_permissions_3", {
+        => testApplicationInfo_permissions_3()
+    })
+    registerTestSuite("testApplicationInfo_permissions_4", {
+        => testApplicationInfo_permissions_4()
+    })
+    registerTestSuite("testApplicationInfo_permissions_5", {
+        => testApplicationInfo_permissions_5()
+    })
+    registerTestSuite("testApplicationInfo_permissions_6", {
+        => testApplicationInfo_permissions_6()
+    })
+    registerTestSuite("testApplicationInfo_permissions_7", {
+        => testApplicationInfo_permissions_7()
+    })
+    registerTestSuite("testApplicationInfo_permissions_8", {
+        => testApplicationInfo_permissions_8()
+    })
+    registerTestSuite("testApplicationInfo_permissions_9", {
+        => testApplicationInfo_permissions_9()
+    })
+    registerTestSuite("testApplicationInfo_permissions_10", {
+        => testApplicationInfo_permissions_10()
+    })
+    registerTestSuite("testApplicationInfo_permissions_11", {
+        => testApplicationInfo_permissions_11()
+    })
+    registerTestSuite("testApplicationInfo_permissions_12", {
+        => testApplicationInfo_permissions_12()
+    })
+    registerTestSuite("testApplicationInfo_permissions_13", {
+        => testApplicationInfo_permissions_13()
+    })
+    registerTestSuite("testApplicationInfo_permissions_14", {
+        => testApplicationInfo_permissions_14()
+    })
+    registerTestSuite("testApplicationInfo_permissions_15", {
+        => testApplicationInfo_permissions_15()
+    })
+    registerTestSuite("testApplicationInfo_permissions_16", {
+        => testApplicationInfo_permissions_16()
+    })
+    registerTestSuite("testApplicationInfo_permissions_17", {
+        => testApplicationInfo_permissions_17()
+    })
+    registerTestSuite("testApplicationInfo_permissions_18", {
+        => testApplicationInfo_permissions_18()
+    })
 }

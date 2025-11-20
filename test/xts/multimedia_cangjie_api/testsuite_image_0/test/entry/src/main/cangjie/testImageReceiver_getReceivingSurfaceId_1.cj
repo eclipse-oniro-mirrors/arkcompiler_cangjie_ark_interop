@@ -28,11 +28,6 @@ import std.convert.*
 @Test
 class testImageReceiver_getReceivingSurfaceId_1 {
 
-
-
-
-
-
     /*
      * @tc.number    : Sub_Cangjie_testImageReceiver_getReceivingSurfaceId_0400
      * @tc.name      : TestCase_4
@@ -42,15 +37,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(1i32, 1i32), ImageFormat.Jpeg, 1i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -62,15 +57,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(1i32, 1i32), ImageFormat.Jpeg, 2i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 
     /*
@@ -82,18 +77,16 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(1i32, 1i32), ImageFormat.Jpeg, 3i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_testImageReceiver_getReceivingSurfaceId_1000
@@ -104,15 +97,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_10 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(1i32, 2i32), ImageFormat.Jpeg, 1i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_10 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 ends.")
     }
 
     /*
@@ -124,15 +117,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_11 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(1i32, 2i32), ImageFormat.Jpeg, 2i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_11 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 ends.")
     }
 
     /*
@@ -144,21 +137,16 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_12 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(1i32, 2i32), ImageFormat.Jpeg, 3i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_12 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 ends.")
     }
-
-
-
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_testImageReceiver_getReceivingSurfaceId_1600
@@ -169,15 +157,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_16 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(1i32, 3i32), ImageFormat.Jpeg, 1i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_16 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 ends.")
     }
 
     /*
@@ -189,15 +177,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_17 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(1i32, 3i32), ImageFormat.Jpeg, 2i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_17 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 ends.")
     }
 
     /*
@@ -209,19 +197,16 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_18 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(1i32, 3i32), ImageFormat.Jpeg, 3i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_18 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 ends.")
     }
-
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_testImageReceiver_getReceivingSurfaceId_2200
@@ -232,15 +217,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_22 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(2i32, 1i32), ImageFormat.Jpeg, 1i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_22 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 ends.")
     }
 
     /*
@@ -252,15 +237,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_23 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(2i32, 1i32), ImageFormat.Jpeg, 2i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_23 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 ends.")
     }
 
     /*
@@ -272,17 +257,16 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_24 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(2i32, 1i32), ImageFormat.Jpeg, 3i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_24 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 ends.")
     }
-
 
     /*
      * @tc.number    : Sub_Cangjie_testImageReceiver_getReceivingSurfaceId_2800
@@ -293,15 +277,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_28 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(2i32, 2i32), ImageFormat.Jpeg, 1i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_28 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 ends.")
     }
 
     /*
@@ -313,15 +297,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_29 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(2i32, 2i32), ImageFormat.Jpeg, 2i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_29 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 ends.")
     }
 
     /*
@@ -333,20 +317,16 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_30 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(2i32, 2i32), ImageFormat.Jpeg, 3i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_30 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 ends.")
     }
-
-
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_testImageReceiver_getReceivingSurfaceId_3400
@@ -357,15 +337,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_34(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_34 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(2i32, 2i32), ImageFormat.Jpeg, 1i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_34 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 ends.")
     }
 
     /*
@@ -377,15 +357,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_35(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_35 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(2i32, 2i32), ImageFormat.Jpeg, 2i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_35 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 ends.")
     }
 
     /*
@@ -397,21 +377,16 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_36 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(2i32, 2i32), ImageFormat.Jpeg, 3i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_36 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 ends.")
     }
-
-
-
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_testImageReceiver_getReceivingSurfaceId_4000
@@ -422,15 +397,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_40 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(3i32, 1i32), ImageFormat.Jpeg, 1i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_40 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 ends.")
     }
 
     /*
@@ -442,15 +417,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_41 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(3i32, 1i32), ImageFormat.Jpeg, 2i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Expect(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_41 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 ends.")
     }
 
     /*
@@ -462,18 +437,16 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_42 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(3i32, 1i32), ImageFormat.Jpeg, 3i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Assert(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_42 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 ends.")
     }
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_testImageReceiver_getReceivingSurfaceId_4600
@@ -484,15 +457,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_46 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(3i32, 2i32), ImageFormat.Jpeg, 1i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Assert(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_46 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 ends.")
     }
 
     /*
@@ -504,15 +477,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_47(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_47 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(3i32, 2i32), ImageFormat.Jpeg, 2i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Assert(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_47 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 ends.")
     }
 
     /*
@@ -524,20 +497,16 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_48(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_48 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(3i32, 2i32), ImageFormat.Jpeg, 3i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Assert(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_48 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 ends.")
     }
-
-
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_testImageReceiver_getReceivingSurfaceId_5200
@@ -548,15 +517,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_52(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_52 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_52 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(3i32, 3i32), ImageFormat.Jpeg, 1i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Assert(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_52 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_52 ends.")
     }
 
     /*
@@ -568,15 +537,15 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_53(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_53 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_53 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(3i32, 3i32), ImageFormat.Jpeg, 2i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Assert(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_53 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_53 ends.")
     }
 
     /*
@@ -588,14 +557,14 @@ class testImageReceiver_getReceivingSurfaceId_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_54(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_54 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageReceiver")
+        Hilog.info(0, "cangjietest", "testcase TestCase_54 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageReceiver")
         let imageReceiver = createImageReceiver(Size(3i32, 3i32), ImageFormat.Jpeg, 3i32)
-        Hilog.info(0, "cangjietest","define local variable id")
+        Hilog.info(0, "cangjietest", "define local variable id")
         let id = imageReceiver.getReceivingSurfaceId()
         @Assert(true, Int64.tryParse(id).isSome())
-        Hilog.info(0, "cangjietest","testcase TestCase_54 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_54 ends.")
     }
 }

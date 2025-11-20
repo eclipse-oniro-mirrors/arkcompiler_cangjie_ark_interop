@@ -14,42 +14,62 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_1", { =>testBundleInfo_minCompatibleVersionCode_1()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_2", { =>testBundleInfo_minCompatibleVersionCode_2()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_3", { =>testBundleInfo_minCompatibleVersionCode_3()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_4", { =>testBundleInfo_minCompatibleVersionCode_4()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_5", { =>testBundleInfo_minCompatibleVersionCode_5()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_6", { =>testBundleInfo_minCompatibleVersionCode_6()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_7", { =>testBundleInfo_minCompatibleVersionCode_7()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_8", { =>testBundleInfo_minCompatibleVersionCode_8()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_9", { =>testBundleInfo_minCompatibleVersionCode_9()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_10", { =>testBundleInfo_minCompatibleVersionCode_10()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_11", { =>testBundleInfo_minCompatibleVersionCode_11()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_12", { =>testBundleInfo_minCompatibleVersionCode_12()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_13", { =>testBundleInfo_minCompatibleVersionCode_13()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_14", { =>testBundleInfo_minCompatibleVersionCode_14()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_15", { =>testBundleInfo_minCompatibleVersionCode_15()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_16", { =>testBundleInfo_minCompatibleVersionCode_16()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_17", { =>testBundleInfo_minCompatibleVersionCode_17()
-})
-registerTestSuite("testBundleInfo_minCompatibleVersionCode_18", { =>testBundleInfo_minCompatibleVersionCode_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_1", {
+        => testBundleInfo_minCompatibleVersionCode_1()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_2", {
+        => testBundleInfo_minCompatibleVersionCode_2()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_3", {
+        => testBundleInfo_minCompatibleVersionCode_3()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_4", {
+        => testBundleInfo_minCompatibleVersionCode_4()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_5", {
+        => testBundleInfo_minCompatibleVersionCode_5()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_6", {
+        => testBundleInfo_minCompatibleVersionCode_6()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_7", {
+        => testBundleInfo_minCompatibleVersionCode_7()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_8", {
+        => testBundleInfo_minCompatibleVersionCode_8()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_9", {
+        => testBundleInfo_minCompatibleVersionCode_9()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_10", {
+        => testBundleInfo_minCompatibleVersionCode_10()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_11", {
+        => testBundleInfo_minCompatibleVersionCode_11()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_12", {
+        => testBundleInfo_minCompatibleVersionCode_12()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_13", {
+        => testBundleInfo_minCompatibleVersionCode_13()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_14", {
+        => testBundleInfo_minCompatibleVersionCode_14()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_15", {
+        => testBundleInfo_minCompatibleVersionCode_15()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_16", {
+        => testBundleInfo_minCompatibleVersionCode_16()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_17", {
+        => testBundleInfo_minCompatibleVersionCode_17()
+    })
+    registerTestSuite("testBundleInfo_minCompatibleVersionCode_18", {
+        => testBundleInfo_minCompatibleVersionCode_18()
+    })
 }

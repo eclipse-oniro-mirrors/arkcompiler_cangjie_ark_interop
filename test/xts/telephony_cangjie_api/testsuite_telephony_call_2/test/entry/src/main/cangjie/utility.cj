@@ -18,9 +18,7 @@ import ohos.ark_interop.*
 import ohos.callback_invoke.*
 import ohos.business_exception.*
 
-
 var hasCallBackRun = false
-
 
 class CallBack <: Callback1Argument<String> {
     public func invoke(err: ?BusinessException, arg: String): Unit {

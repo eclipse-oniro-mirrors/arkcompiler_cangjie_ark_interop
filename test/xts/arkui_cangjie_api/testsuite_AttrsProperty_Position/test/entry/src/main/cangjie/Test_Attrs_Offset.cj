@@ -36,7 +36,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_AlphabetIndexer_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin AlphabetIndexer")
@@ -65,7 +65,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Blank_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Blank")
@@ -94,7 +94,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Button_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Button")
@@ -123,7 +123,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Checkbox_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Checkbox")
@@ -152,7 +152,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_CheckboxGroup_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin CheckboxGroup")
@@ -183,7 +183,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_DataPanel_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin DataPanel")
@@ -212,7 +212,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_DatePicker_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin DatePicker")
@@ -241,7 +241,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Divider_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Divider")
@@ -270,7 +270,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Gauge_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Gauge")
@@ -299,7 +299,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Image_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Image")
@@ -328,7 +328,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_ImageSpan_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin ImageSpan")
@@ -357,7 +357,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_LoadingProgress_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin LoadingProgress")
@@ -386,7 +386,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_MenuItem_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin MenuItem")
@@ -415,7 +415,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_MenuItemGroup_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin MenuItemGroup")
@@ -444,7 +444,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Progress_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Progress")
@@ -473,7 +473,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_QRCode_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin QRCode")
@@ -502,7 +502,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Radio_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Radio")
@@ -531,7 +531,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Rating_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Rating")
@@ -560,7 +560,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_RichEditor_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_RichEditor_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin RichEditor")
@@ -589,7 +589,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_RichText_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_RichText_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin RichText")
@@ -618,7 +618,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_RowSplit_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_RowSplit_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin RowSplit")
@@ -647,7 +647,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_ScrollBar_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_ScrollBar_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin ScrollBar")
@@ -676,7 +676,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Search_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Search_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Search")
@@ -705,7 +705,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Slider_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Slider_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Slider")
@@ -734,7 +734,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Stepper_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Stepper_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Stepper")
@@ -763,7 +763,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_StepperItem_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_StepperItem_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin StepperItem")
@@ -792,7 +792,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Text_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Text_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Text")
@@ -821,7 +821,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_TextArea_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_TextArea_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin TextArea")
@@ -850,7 +850,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_TextClock_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_TextClock_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin TextClock")
@@ -879,7 +879,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_TextInput_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_TextInput_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin TextInput")
@@ -908,7 +908,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_TextPicker_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_TextPicker_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin TextPicker")
@@ -937,7 +937,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_TextTimer_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_TextTimer_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin TextTimer")
@@ -966,7 +966,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Toggle_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Toggle_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Toggle")
@@ -995,7 +995,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Web_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Web_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Web")
@@ -1024,7 +1024,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Select_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Select_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Select")
@@ -1053,7 +1053,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Badge_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Badge_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Badge")
@@ -1082,7 +1082,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Column_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Column_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Column")
@@ -1111,7 +1111,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Grid_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Grid_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Grid")
@@ -1140,7 +1140,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_GridItem_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_GridItem_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin GridItem")
@@ -1169,7 +1169,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_GridRow_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_GridRow_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin GridRow")
@@ -1200,7 +1200,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Flex_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Flex_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Flex")
@@ -1229,7 +1229,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_List_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_List_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin List")
@@ -1258,7 +1258,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_ListItem_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_ListItem_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin ListItem")
@@ -1287,7 +1287,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_ListItemGroup_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_ListItemGroup_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin ListItemGroup")
@@ -1318,7 +1318,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_RelativeContainer_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_RelativeContainer_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin RelativeContainer")
@@ -1347,7 +1347,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Row_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Row_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Row")
@@ -1376,7 +1376,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Scroll_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Scroll_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Scroll")
@@ -1405,7 +1405,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Stack_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Stack_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Stack")
@@ -1434,7 +1434,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Swiper_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Swiper_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Swiper")
@@ -1463,7 +1463,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Tabs_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Tabs_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Tabs")
@@ -1492,7 +1492,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_TabContent_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_TabContent_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin TabContent")
@@ -1521,7 +1521,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Circle_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Circle_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Circle")
@@ -1550,7 +1550,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Line_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Line_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Line")
@@ -1579,7 +1579,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Rect_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Rect_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Rect")
@@ -1608,7 +1608,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Shape_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Shape_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Shape")
@@ -1637,7 +1637,7 @@ class Test_EmptyAttrs_Offset {
      * @tc.desic：Empty_Path_Offset
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Offset_Path_6100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckOffset: FindBegin Path")

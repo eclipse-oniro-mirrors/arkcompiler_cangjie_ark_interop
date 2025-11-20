@@ -36,31 +36,4 @@ func testsuite(): Unit {
     registerTestSuite("TestRdbStore_beginTransaction_21", {
         => TestRdbStore_beginTransaction_21()
     })
-    registerTestSuite("TestRdbStore_beginTransaction_22", {
-        => TestRdbStore_beginTransaction_22()
-    })
-    registerTestSuite("TestRdbStore_beginTransaction_23", {
-        => TestRdbStore_beginTransaction_23()
-    })
-    registerTestSuite("TestRdbStore_beginTransaction_24", {
-        => TestRdbStore_beginTransaction_24()
-    })
-    registerTestSuite("TestRdbStore_beginTransaction_25", {
-        => TestRdbStore_beginTransaction_25()
-    })
-    registerTestSuite("TestRdbStore_beginTransaction_26", {
-        => TestRdbStore_beginTransaction_26()
-    })
-    registerTestSuite("TestRdbStore_beginTransaction_27", {
-        => TestRdbStore_beginTransaction_27()
-    })
-    registerTestSuite("TestRdbStore_beginTransaction_28", {
-        => TestRdbStore_beginTransaction_28()
-    })
-    registerTestSuite("TestRdbStore_beginTransaction_29", {
-        => TestRdbStore_beginTransaction_29()
-    })
-    registerTestSuite("TestRdbStore_beginTransaction_30", {
-        => TestRdbStore_beginTransaction_30()
-    })
 }

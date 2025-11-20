@@ -45,9 +45,9 @@ class View_BindContentCover {
         Column() {
             Text("onAppear:${onAppear00}").id("Test_text04")
             Text("onDisappear:${onDisappear00}").id("Test_text05")
-            Button("close modal 2").margin(10).fontSize(20).onClick {ClickEvent =>
+            Button("close modal 2").margin(10).fontSize(20).onClick({ClickEvent =>
                 this.isShow2 = false
-            }
+            })
         }.width(100.percent).height(100.percent).justifyContent(FlexAlign.Center)
     }
 

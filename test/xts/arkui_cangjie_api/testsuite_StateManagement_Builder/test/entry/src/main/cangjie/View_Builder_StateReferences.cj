@@ -20,7 +20,7 @@ import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
 import std.convert.*
-import ohos.base.{LengthProp, Length, Color,LengthType}
+import ohos.base.{LengthProp, Length, Color}
 
 @Observed
 class SubButton_Count {
@@ -43,12 +43,12 @@ func Builder_StateReferences_Button(cnt: Button_Count) {
     Column(space:20) {
         Button("Click To Change Value")
             .id("change")
-            .onClick {
+            .onClick({
                 evt =>
                 cnt.count += 10
                 cnt.content = "Hello Cangjie"
                 cnt.subButton.count = 'Z'
-            }
+            })
         Text("Builder_StateReferences_Value: ${cnt.count} ${cnt.content} ${cnt.subButton.count}").id("StateBuilder")
     }.width(100.percent)
 }

@@ -49,7 +49,7 @@ class Test_CheckboxGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CheckboxGroup_Component_001() {
         Hilog.info(0, "","cangjietest", "[Test_CheckboxGroup_Component_001] start")
         // 1、获取页面中id为checkboxGroupBasis的组件信息
@@ -77,7 +77,7 @@ class Test_CheckboxGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CheckboxGroup_Component_002() {
         Hilog.info(0, "","cangjietest", "[Test_CheckboxGroup_Component_002] start")
         // 1、获取页面中id为checkboxGroupBasis的组件信息
@@ -100,7 +100,7 @@ class Test_CheckboxGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CheckboxGroup_Component_003() {
         Hilog.info(0, "","cangjietest", "[Test_CheckboxGroup_Component_003] start")
         // 1、获取页面中id为checkboxGroupBasis的组件信息
@@ -123,7 +123,7 @@ class Test_CheckboxGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CheckboxGroup_Component_004() {
         Hilog.info(0, "","cangjietest", "[Test_CheckboxGroup_Component_004] start")
         // 1、获取页面中id为checkboxGroupBasis的组件信息
@@ -150,7 +150,7 @@ class Test_CheckboxGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CheckboxGroup_Component_005() {
         // 1、点击触发onChange事件
         driver.findComponent(On().id("checkboxGroupBasis")).getOrThrow().click()
@@ -175,7 +175,7 @@ class Test_CheckboxGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CheckboxGroup_Component_006() {
         Hilog.info(0, "","cangjietest", "[Test_CheckboxGroup_Component_003] start")
         // 1、获取页面中id为checkboxGroupBasis的组件信息
@@ -198,7 +198,7 @@ class Test_CheckboxGroup_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CheckboxGroup_Component_007() {
         Hilog.info(0, "","cangjietest", "[Test_CheckboxGroup_Component_003] start")
         // 1、获取页面中id为checkboxGroupBasis的组件信息

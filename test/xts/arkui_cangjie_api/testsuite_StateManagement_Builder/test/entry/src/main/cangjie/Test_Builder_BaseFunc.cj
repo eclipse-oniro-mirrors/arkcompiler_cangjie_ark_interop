@@ -49,7 +49,7 @@ class Test_Builder_BaseFunc {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Builder_BaseFunc_0100() {
         Hilog.info(0,"", "cangjietest", "Test_Builder_BaseFunc_0100 Start")
         let Inspector = getInspectorByKey("TopLevelBuilder")
@@ -71,7 +71,7 @@ class Test_Builder_BaseFunc {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Builder_BaseFunc_0200() {
         Hilog.info(0,"", "cangjietest", "Test_Builder_BaseFunc_0200 Start")
         let Inspector = getInspectorByKey("ClassLevelBuilder")

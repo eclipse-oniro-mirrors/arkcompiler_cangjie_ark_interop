@@ -20,11 +20,11 @@ import kit.ArkUI.*
 import ohos.arkui.state_macro_manage.*
 
 func Position_resolve(evt: Position) {
-    return evt.x.value.toString() + evt.y.value.toString()
+    return evt.x.getOrThrow().value.toString() + evt.y.getOrThrow().value.toString()
 }
 
 func Position_f64_resolve(evt: Position) {
-    return evt.x.value + evt.y.value
+    return evt.x.getOrThrow().value + evt.y.getOrThrow().value
 }
 
 func EventTarget_resolve(evt: EventTarget) {
@@ -32,7 +32,7 @@ func EventTarget_resolve(evt: EventTarget) {
 }
 
 func ClickEvent_resolve(evt: ClickEvent) {
-    return "${evt.displayX}${evt.displayY}${evt.x}${evt.y}${evt.timestamp}${EventTarget_resolve(evt.target)}"
+    return "${evt.displayX}${evt.displayY}${evt.x}${evt.y}${evt.timestamp}${EventTarget_resolve(evt.target.getOrThrow())}"
 }
 
  public func toString(sourceType:SourceType): String {
@@ -72,7 +72,7 @@ class View_onClickEvent {
             Button("Click")
                 .backgroundColor(0x2788D9)
                 .onClick({
-                    event: ClickEvent => this.text2 = ClickEvent_resolve(event) + toString(event.source)
+                    event: ClickEvent => this.text2 = ClickEvent_resolve(event) + toString(event.source.getOrThrow())
                 })
                 .width(200.px)
                 .id("onClickEvent2")

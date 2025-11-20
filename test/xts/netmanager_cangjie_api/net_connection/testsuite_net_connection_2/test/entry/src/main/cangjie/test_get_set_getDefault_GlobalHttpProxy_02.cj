@@ -34,7 +34,7 @@ class Test_get_set_getDefault_GlobalHttpProxy_02 {
     * @tc.level     : Level 0
     */
     @TestCase
-     @Tag[APILevel12, TestLevel0]
+     @Tag[APILevel22, TestLevel0]
     func test_getdefaultglobalhttpproxy_07(): Unit {
         let getDefaultHttp = getDefaultHttpProxy()
         @Expect(getDefaultHttp.host, "")

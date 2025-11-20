@@ -36,7 +36,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_AlphabetIndexer_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin AlphabetIndexer")
@@ -61,7 +61,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Blank_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Blank")
@@ -86,7 +86,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Button_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Button")
@@ -111,7 +111,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Checkbox_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Checkbox")
@@ -136,7 +136,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_CheckboxGroup_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin CheckboxGroup")
@@ -161,7 +161,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_DataPanel_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin DataPanel")
@@ -186,7 +186,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_DatePicker_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin DatePicker")
@@ -211,7 +211,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Divider_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Divider")
@@ -236,7 +236,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Gauge_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Gauge")
@@ -261,7 +261,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Image_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Image")
@@ -286,7 +286,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_ImageSpan_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin ImageSpan")
@@ -311,7 +311,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_LoadingProgress_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin LoadingProgress")
@@ -336,7 +336,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Menu_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Menu")
@@ -361,7 +361,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_MenuItem_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin MenuItem")
@@ -386,7 +386,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_MenuItemGroup_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin MenuItemGroup")
@@ -411,7 +411,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Progress_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Progress")
@@ -436,7 +436,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_QRCode_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin QRCode")
@@ -461,7 +461,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Radio_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Radio")
@@ -486,7 +486,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Rating_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Rating")
@@ -511,7 +511,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Refresh_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Refresh")
@@ -536,7 +536,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_RichEditor_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin RichEditor")
@@ -561,7 +561,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_RichText_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin RichText")
@@ -586,7 +586,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_RowSplit_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin RowSplit")
@@ -611,7 +611,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_ScrollBar_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin ScrollBar")
@@ -636,7 +636,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Search_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Search")
@@ -661,7 +661,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Slider_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Slider")
@@ -686,7 +686,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Stepper_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Stepper")
@@ -711,7 +711,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_StepperItem_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin StepperItem")
@@ -736,7 +736,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Text_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Text")
@@ -761,7 +761,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_TextArea_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin TextArea")
@@ -786,7 +786,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_TextClock_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin TextClock")
@@ -811,7 +811,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_TextInput_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin TextInput")
@@ -836,7 +836,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_TextPicker_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin TextPicker")
@@ -861,7 +861,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_TextTimer_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin TextTimer")
@@ -886,7 +886,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Toggle_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Toggle")
@@ -911,7 +911,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Web_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Web")
@@ -936,7 +936,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Select_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Select")
@@ -961,7 +961,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Badge_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Badge")
@@ -986,7 +986,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Column_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Column")
@@ -1011,7 +1011,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Grid_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Grid")
@@ -1036,7 +1036,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_GridItem_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin GridItem")
@@ -1061,7 +1061,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_GridRow_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin GridRow")
@@ -1086,7 +1086,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_GridCol_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin GridCol")
@@ -1111,7 +1111,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Flex_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Flex")
@@ -1136,7 +1136,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_List_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin List")
@@ -1161,7 +1161,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_ListItem_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin ListItem")
@@ -1186,7 +1186,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_ListItemGroup_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin ListItemGroup")
@@ -1212,7 +1212,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_RelativeContainer_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin RelativeContainer")
@@ -1237,7 +1237,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Row_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Row")
@@ -1262,7 +1262,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Scroll_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Scroll")
@@ -1287,7 +1287,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Stack_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Stack")
@@ -1312,7 +1312,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Swiper_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Swiper")
@@ -1337,7 +1337,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Tabs_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Tabs")
@@ -1362,7 +1362,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_TabContent_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin TabContent")
@@ -1387,7 +1387,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Circle_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Circle")
@@ -1412,7 +1412,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Line_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Line")
@@ -1437,7 +1437,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Rect_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Rect")
@@ -1462,7 +1462,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Shape_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Shape")
@@ -1487,7 +1487,7 @@ class Test_EmptyAttrs_Padding {
      * @tc.desic：Empty_Path_Padding
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Padding_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckPadding: FindBegin Path")

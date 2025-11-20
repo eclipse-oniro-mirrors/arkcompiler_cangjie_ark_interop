@@ -15,10 +15,8 @@
 
 package ohos_app_cangjie_entry
 
-
 import std.sync.{Monitor}
 internal import ohos.ark_interop.{JSModule}
-
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.*
 import ohos.resource_manager.{ResourceManager}

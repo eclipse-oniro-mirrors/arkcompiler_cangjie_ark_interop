@@ -49,7 +49,7 @@ class View_AppStorageProp_setOrCreatAndHas {
         Column(space:10) {
             Button("Set Value In ParentComp")
                 .id("Test_Bottum")
-                .onClick {ClickEvent =>
+                .onClick({ClickEvent =>
                     AppStorage.setOrCreate("PropInt", 20)
                     AppStorage.setOrCreate("PropFloat", 20.00)
                     AppStorage.setOrCreate("PropRune", r"B")
@@ -58,15 +58,15 @@ class View_AppStorageProp_setOrCreatAndHas {
                     AppStorage.setOrCreate("PropClass", AA("HelloCangjie"))
                     AppStorage.setOrCreate("PropStruct", BB("HelloCangjie"))
                     AppStorage.setOrCreate("PropEnum", EE.ee(100))
-                }
+                })
 
             Button("change")
                 .id("Test_Bottum_01")
-                .onClick {
+                .onClick({
                     evt =>
                     this.res00 = AppStorage.has("PropInt")
                     this.res01 = AppStorage.has("PropInt1")
-                }
+                })
 
             Divider()
             Text("ValueInt AppStorage:" + this.ValueInt.toString()).id("Int1")

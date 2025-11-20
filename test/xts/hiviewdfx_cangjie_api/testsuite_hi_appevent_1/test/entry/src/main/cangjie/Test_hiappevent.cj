@@ -31,19 +31,19 @@ import kit.PerformanceAnalysisKit.Event as hiappEventDep
 @Test
 class Test_hiappevent {
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0100
-    * @tc.name      : test_hiAppEvent_addWatcher_01
-    * @tc.desc      : test PerformanceAnalysisKit addWatcher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0100
+     * @tc.name      : test_hiAppEvent_addWatcher_01
+     * @tc.desc      : test PerformanceAnalysisKit addWatcher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_01() {
         try {
             var condition = TriggerCondition(row: 1, size: 120, timeOut: 0)
-            var appEventFilter =[AppEventFilter("cangjie_watcher", eventTypes: [EventType.Fault], names: ["test_event"]
+            var appEventFilter = [AppEventFilter("cangjie_watcher", eventTypes: [EventType.Fault], names: ["test_event"]
             )]
             var watcher = Watcher(
                 "watcher1",
@@ -82,22 +82,21 @@ class Test_hiappevent {
             Hilog.info(0, "test_hiAppEvent_addWatcher_01", "Test_hiappevent_write_pass")
             sleepFor(1.second)
             HiAppEvent.removeWatcher(watcher)
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0200
-    * @tc.name      : test_hiAppEvent_addWatcher_02
-    * @tc.desc      : test PerformanceAnalysisKit addWatcher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0200
+     * @tc.name      : test_hiAppEvent_addWatcher_02
+     * @tc.desc      : test PerformanceAnalysisKit addWatcher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_02() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -114,9 +113,9 @@ class Test_hiappevent {
                         for (j in 0..appInfosize) {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_02",
                                 "appEventInfo name=${AppEventGroups[i].appEventInfos[j].name}")
-                            Hilog.info(0, "test_hiAppEvent_addWatcher_02","appEventInfo domain=${AppEventGroups[i].appEventInfos[j].domain}")
+                            Hilog.info(0, "test_hiAppEvent_addWatcher_02",
+                                "appEventInfo domain=${AppEventGroups[i].appEventInfos[j].domain}")
                             let paSize = AppEventGroups[i].appEventInfos[j].params.size
-
                         }
                     }
                 }
@@ -134,155 +133,47 @@ class Test_hiappevent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event_01", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            var params_01:  HashMap<String, EventValueType> =HashMap<String, EventValueType>([("str_data", EventValueType.StringValue("strValue1111"))])
+            var params_01: HashMap<String, EventValueType> = HashMap<String, EventValueType>(
+                [("str_data", EventValueType.StringValue("strValue1111"))])
             var appInfo_01: AppEventInfo = AppEventInfo("cangjie_2", "test_event_02", EventType.Fault, params_01)
             HiAppEvent.write(appInfo_01)
             HiAppEvent.removeWatcher(watcher)
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
-    // /*
-    // * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0300
-    // * @tc.name      : test_hiAppEvent_addProcessor_01
-    // * @tc.desc      : test PerformanceAnalysisKit addProcessor
-    // * @tc.size      : MediumTest
-    // * @tc.type      : Function
-    // * @tc.level     : Level 0
-    // */
-    // @TestCase
-    // @Tag[APILevel12, TestLevel0]
-    // func test_hiAppEvent_addProcessor_01() {
-    //     try {
-    //         var processor: Processor = Processor("test_processor")
-    //         let processorId = HiAppEvent.addProcessor(processor)
-    //         @Expect(true)
-    //     } catch (e: Exception) {
-    //         @Expect(false)
-    //     }
-    // }
-
-    // /*
-    // * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0400
-    // * @tc.name      : test_hiAppEvent_addProcessor_02
-    // * @tc.desc      : test PerformanceAnalysisKit addProcessor
-    // * @tc.size      : MediumTest
-    // * @tc.type      : Function
-    // * @tc.level     : Level 0
-    // */
-    // @TestCase
-    // @Tag[APILevel12, TestLevel0]
-    // func test_hiAppEvent_addProcessor_02() {
-    //     try {
-    //         var processor: Processor = Processor("test_processor")
-    //         let processorId = HiAppEvent.addProcessor(processor)
-    //         HiAppEvent.removeProcessor(processorId)
-    //         @Expect(true)
-    //     } catch (e: Exception) {
-    //         @Expect(false)
-    //     }
-    // }
-
-    // /*
-    // * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0500
-    // * @tc.name      : test_hiAppEvent_addProcessor_error
-    // * @tc.desc      : test PerformanceAnalysisKit addProcessor
-    // * @tc.size      : MediumTest
-    // * @tc.type      : Function
-    // * @tc.level     : Level 0
-    // */
-    // @TestCase
-    // @Tag[APILevel12, TestLevel0]
-    // func test_hiAppEvent_addProcessor_error() {
-    //     try {
-    //         var processor: Processor = Processor("")
-    //         let processorId = HiAppEvent.addProcessor(processor)
-    //         @Expect(true)
-    //     } catch (e: Exception) {
-    //         Hilog.info(0, "test_hiAppEvent_addProcessor_error", "${e.message.toString()}")
-    //         @Expect(e.message.toString(), "Parameter error. Parameter verification failed.")
-    //     }
-    // }
-
-    // /*
-    // * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0600
-    // * @tc.name      : test_hiAppEvent_addProcessor_with_AppEventReportConfig
-    // * @tc.desc      : test PerformanceAnalysisKit addProcessor
-    // * @tc.size      : MediumTest
-    // * @tc.type      : Function
-    // * @tc.level     : Level 0
-    // */
-    // @TestCase
-    // @Tag[APILevel12, TestLevel0]
-    // func test_hiAppEvent_addProcessor_with_AppEventReportConfig() {
-    //     try {
-    //         let aerc = AppEventReportConfig()
-    //         var processor: Processor = Processor("", eventConfigs: [aerc])
-    //         let processorId = HiAppEvent.addProcessor(processor)
-    //         @Expect(true)
-    //     } catch (e: Exception) {
-    //         Hilog.info(0, "test_hiAppEvent_addProcessor_with_AppEventReportConfig", "${e.message.toString()}")
-    //         @Expect(e.message.toString(), "Parameter error. Parameter verification failed.")
-    //     }
-    // }
-
-    // /*
-    // * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0700
-    // * @tc.name      : test_hiAppEvent_removeProcessor_error
-    // * @tc.desc      : test PerformanceAnalysisKit removeProcessor
-    // * @tc.size      : MediumTest
-    // * @tc.type      : Function
-    // * @tc.level     : Level 0
-    // */
-    // @TestCase
-    // @Tag[APILevel12, TestLevel0]
-    // func test_hiAppEvent_removeProcessor_error() {
-    //     try {
-    //         var processor: Processor = Processor("test_processor")
-    //         let processorId = HiAppEvent.addProcessor(processor)
-    //         HiAppEvent.removeProcessor(processorId)
-    //         HiAppEvent.removeProcessor(processorId)
-    //         HiAppEvent.removeProcessor(processorId)
-    //         @Expect(true)
-    //     } catch (e: Exception) {
-    //         @Expect(false)
-    //     }
-    // }
-
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0800
-    * @tc.name      : test_hiAppEvent_write_01
-    * @tc.desc      : test PerformanceAnalysisKit write
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0800
+     * @tc.name      : test_hiAppEvent_write_01
+     * @tc.desc      : test PerformanceAnalysisKit write
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_write_01() {
         try {
-            var params: HashMap<String, EventValueType> =HashMap<String, EventValueType>([("int_data", IntValue(100)),
-                ("str_data", EventValueType.StringValue("strValue"))])
+            var params: HashMap<String, EventValueType> = HashMap<String, EventValueType>(
+                [("int_data", IntValue(100)), ("str_data", EventValueType.StringValue("strValue"))])
             var appInfo: AppEventInfo = AppEventInfo("test_domain", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0900
-    * @tc.name      : test_hiAppEvent_write_02
-    * @tc.desc      : test PerformanceAnalysisKit write
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_0900
+     * @tc.name      : test_hiAppEvent_write_02
+     * @tc.desc      : test PerformanceAnalysisKit write
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_write_02() {
         try {
             var params: HashMap<String, EventValueType> =HashMap<String, EventValueType>([
@@ -297,72 +188,70 @@ class Test_hiappevent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("test_domain", "test_event", EventType.Statistic, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1000
-    * @tc.name      : test_hiAppEvent_write_03
-    * @tc.desc      : test PerformanceAnalysisKit write
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1000
+     * @tc.name      : test_hiAppEvent_write_03
+     * @tc.desc      : test PerformanceAnalysisKit write
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_write_03() {
         try {
-            var params: HashMap<String, EventValueType> =HashMap<String, EventValueType>([("int_data", IntValue(100)),
-                ("str_data", EventValueType.StringValue("strValue"))])
+            var params: HashMap<String, EventValueType> = HashMap<String, EventValueType>(
+                [("int_data", IntValue(100)), ("str_data", EventValueType.StringValue("strValue"))])
             var appInfo: AppEventInfo = AppEventInfo("test_domain", "test_event", EventType.Security, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1100
-    * @tc.name      : test_hiAppEvent_write_04
-    * @tc.desc      : test PerformanceAnalysisKit write
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1100
+     * @tc.name      : test_hiAppEvent_write_04
+     * @tc.desc      : test PerformanceAnalysisKit write
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_write_04() {
         try {
-            var params: HashMap<String, EventValueType> =HashMap<String, EventValueType>([("int_data", IntValue(100)),
-                ("str_data", EventValueType.StringValue("strValue"))])
+            var params: HashMap<String, EventValueType> = HashMap<String, EventValueType>(
+                [("int_data", IntValue(100)), ("str_data", EventValueType.StringValue("strValue"))])
             var appInfo: AppEventInfo = AppEventInfo("test_domain", "test_event", EventType.Behavior, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1200
-    * @tc.name      : test_hiAppEvent_write_error
-    * @tc.desc      : test PerformanceAnalysisKit write
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1200
+     * @tc.name      : test_hiAppEvent_write_error
+     * @tc.desc      : test PerformanceAnalysisKit write
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_write_error() {
         try {
-            var params: HashMap<String, EventValueType> =HashMap<String, EventValueType>([("", EventValueType.StringValue(""))])
+            var params: HashMap<String, EventValueType> = HashMap<String, EventValueType>(
+                [("", EventValueType.StringValue(""))])
             var appInfo: AppEventInfo = AppEventInfo("", "", EventType.Behavior, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+            @Expect(false)
         } catch (e: Exception) {
             @Expect(e.message.toString(), "Invalid event domain.")
             Hilog.info(0, "test_hiAppEvent_write_error", "${e.message.toString()}")
@@ -370,60 +259,58 @@ class Test_hiappevent {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1300
-    * @tc.name      : test_hiAppEvent_configure_01
-    * @tc.desc      : test PerformanceAnalysisKit configure
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1300
+     * @tc.name      : test_hiAppEvent_configure_01
+     * @tc.desc      : test PerformanceAnalysisKit configure
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_configure_01() {
         try {
-            var config: ConfigOption = ConfigOption(maxStorage:"100M", disable: false)
+            var config: ConfigOption = ConfigOption(maxStorage: "100M", disable: false)
             HiAppEvent.configure(config)
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1400
-    * @tc.name      : test_hiAppEvent_configure_02
-    * @tc.desc      : test PerformanceAnalysisKit configure
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1400
+     * @tc.name      : test_hiAppEvent_configure_02
+     * @tc.desc      : test PerformanceAnalysisKit configure
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_configure_02() {
         try {
-            var config: ConfigOption = ConfigOption(maxStorage:"100M", disable: true)
+            var config: ConfigOption = ConfigOption(maxStorage: "100M", disable: true)
             HiAppEvent.configure(config)
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1500
-    * @tc.name      : test_hiAppEvent_configure_error
-    * @tc.desc      : test PerformanceAnalysisKit configure
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1500
+     * @tc.name      : test_hiAppEvent_configure_error
+     * @tc.desc      : test PerformanceAnalysisKit configure
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_configure_error() {
         try {
-            var config: ConfigOption = ConfigOption(maxStorage:"", disable: true)
+            var config: ConfigOption = ConfigOption(maxStorage: "", disable: true)
             HiAppEvent.configure(config)
-            @Expect(true)
+            @Expect(false)
         } catch (e: Exception) {
             @Expect(e.message.toString(), "Invalid max storage quota value.")
             Hilog.info(0, "test_hiAppEvent_configure_error", "${e.message.toString()}")
@@ -431,135 +318,132 @@ class Test_hiappevent {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1600
-    * @tc.name      : test_hiAppEvent_clearData
-    * @tc.desc      : test PerformanceAnalysisKit clearData
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1600
+     * @tc.name      : test_hiAppEvent_clearData
+     * @tc.desc      : test PerformanceAnalysisKit clearData
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_clearData() {
         try {
             HiAppEvent.clearData()
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1700
-    * @tc.name      : test_hiAppEvent_setUserId
-    * @tc.desc      : test PerformanceAnalysisKit setUserId
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1700
+     * @tc.name      : test_hiAppEvent_setUserId
+     * @tc.desc      : test PerformanceAnalysisKit setUserId
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserId() {
         try {
             HiAppEvent.setUserId("test_userID_name", "test_userID_value")
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1800
-    * @tc.name      : test_hiAppEvent_setUserId_error
-    * @tc.desc      : test PerformanceAnalysisKit setUserId
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1800
+     * @tc.name      : test_hiAppEvent_setUserId_error
+     * @tc.desc      : test PerformanceAnalysisKit setUserId
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserId_error() {
         try {
             HiAppEvent.setUserId("", "")
-            @Expect(true)
+            @Expect(false)
         } catch (e: Exception) {
             @Expect(e.message.toString(), "Parameter error. Parameter verification failed.")
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1900
-    * @tc.name      : test_hiAppEvent_getUserId
-    * @tc.desc      : test PerformanceAnalysisKit getUserId
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_1900
+     * @tc.name      : test_hiAppEvent_getUserId
+     * @tc.desc      : test PerformanceAnalysisKit getUserId
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_getUserId() {
         try {
             HiAppEvent.setUserId("test_getUserId_name", "test_getUserId_value")
             let userIdName = HiAppEvent.getUserId("test_getUserId_name")
             Hilog.info(0, "HiAppEvent", "HiAppEvent::test_getUserId is ${userIdName}")
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2000
-    * @tc.name      : test_hiAppEvent_getUserId_error
-    * @tc.desc      : test PerformanceAnalysisKit getUserId
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2000
+     * @tc.name      : test_hiAppEvent_getUserId_error
+     * @tc.desc      : test PerformanceAnalysisKit getUserId
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_getUserId_error() {
         try {
             let userIdName = HiAppEvent.getUserId("")
             Hilog.info(0, "HiAppEvent", "HiAppEvent::test_getUserId is ${userIdName}")
-            @Expect(true)
+            @Expect(false)
         } catch (e: Exception) {
             @Expect(e.message.toString(), "Parameter error. Parameter verification failed.")
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2100
-    * @tc.name      : test_hiAppEvent_setUserProperty_error
-    * @tc.desc      : test PerformanceAnalysisKit setUserProperty
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2100
+     * @tc.name      : test_hiAppEvent_setUserProperty_error
+     * @tc.desc      : test PerformanceAnalysisKit setUserProperty
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserProperty_error() {
         try {
             let test_userID_name = ""
             let test_userID_value: String = ""
             HiAppEvent.setUserProperty(test_userID_name, test_userID_value)
             HiAppEvent.setUserProperty(test_userID_name, test_userID_value)
-            @Expect(true)
+            @Expect(false)
         } catch (e: Exception) {
             @Expect(e.message.toString(), "Parameter error. Parameter verification failed.")
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2200
-    * @tc.name      : test_hiAppEvent_getUserProperty
-    * @tc.desc      : test PerformanceAnalysisKit setUserProperty
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2200
+     * @tc.name      : test_hiAppEvent_getUserProperty
+     * @tc.desc      : test PerformanceAnalysisKit setUserProperty
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_getUserProperty() {
         try {
             let test_userID_name = "test_setUserProperty_01"
@@ -573,67 +457,72 @@ class Test_hiappevent {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2300
-    * @tc.name      : test_hiAppEvent_getUserProperty_error
-    * @tc.desc      : test PerformanceAnalysisKit setUserProperty
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2300
+     * @tc.name      : test_hiAppEvent_getUserProperty_error
+     * @tc.desc      : test PerformanceAnalysisKit setUserProperty
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_getUserProperty_error() {
         try {
             let userIdName = HiAppEvent.getUserProperty("")
-            @Expect(true)
+            @Expect(false)
         } catch (e: Exception) {
             @Expect(e.message.toString(), "Parameter error. Parameter verification failed.")
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2400
-    * @tc.name      : test_hiAppEvent_AppEventReportConfig
-    * @tc.desc      : test PerformanceAnalysisKit AppEventReportConfig
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2400
+     * @tc.name      : test_hiAppEvent_AppEventReportConfig
+     * @tc.desc      : test PerformanceAnalysisKit AppEventReportConfig
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_AppEventReportConfig() {
-        let appEventReportConfig: AppEventReportConfig = AppEventReportConfig()
-        @Expect(true)
+        try {
+            let appEventReportConfig: AppEventReportConfig = AppEventReportConfig()
+        } catch (e: Exception) {
+            @Expect(false)
+        }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2600
-    * @tc.name      : test_hiAppEvent_AppEventGroup
-    * @tc.desc      : test PerformanceAnalysisKit AppEventGroup
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2600
+     * @tc.name      : test_hiAppEvent_AppEventGroup
+     * @tc.desc      : test PerformanceAnalysisKit AppEventGroup
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_AppEventGroup() {
-        var params: HashMap<String, EventValueType> =HashMap<String, EventValueType>([("int_data", IntValue(100)),
-            ("str_data", EventValueType.StringValue("strValue"))])
-        var appInfo: AppEventInfo = AppEventInfo("test_domain", "test_event", EventType.Statistic, params)
-        @Expect(true)
+        try {
+            var params: HashMap<String, EventValueType> = HashMap<String, EventValueType>(
+                [("int_data", IntValue(100)), ("str_data", EventValueType.StringValue("strValue"))])
+            var appInfo: AppEventInfo = AppEventInfo("test_domain", "test_event", EventType.Statistic, params)
+        } catch (e: Exception) {
+            @Expect(false)
+        }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2700
-    * @tc.name      : test_hiAppEvent_ValueType
-    * @tc.desc      : test PerformanceAnalysisKit ValueType
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2700
+     * @tc.name      : test_hiAppEvent_ValueType
+     * @tc.desc      : test PerformanceAnalysisKit ValueType
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_ValueType() {
         let value_int = EventValueType.IntValue(123)
         let value_float = EventValueType.FloatValue(123.45)
@@ -647,19 +536,19 @@ class Test_hiappevent {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2800
-    * @tc.name      : test_hiAppEvent_AppEventPackageHolder
-    * @tc.desc      : test PerformanceAnalysisKit Watcher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2800
+     * @tc.name      : test_hiAppEvent_AppEventPackageHolder
+     * @tc.desc      : test PerformanceAnalysisKit Watcher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_AppEventPackageHolder() {
         try {
             var condition = TriggerCondition(row: 1, size: 120, timeOut: 0)
-            var appEventFilter =[AppEventFilter("cangjie_watcher")]
+            var appEventFilter = [AppEventFilter("cangjie_watcher")]
             var watcher = Watcher(
                 "watcher1",
                 triggerCondition: condition,
@@ -685,36 +574,35 @@ class Test_hiappevent {
                 holder.setSize(2)
                 holder.takeNext()
             }
-            @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2900
-    * @tc.name      : test_hiAppEvent_Domain
-    * @tc.desc      : test PerformanceAnalysisKit Domain
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_2900
+     * @tc.name      : test_hiAppEvent_Domain
+     * @tc.desc      : test PerformanceAnalysisKit Domain
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_Domain() {
         @Expect(Domain.OS, "OS")
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_3000
-    * @tc.name      : test_hiAppEvent_Param
-    * @tc.desc      : test PerformanceAnalysisKit Param
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_3000
+     * @tc.name      : test_hiAppEvent_Param
+     * @tc.desc      : test PerformanceAnalysisKit Param
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_Param() {
         @Expect(Param.USER_ID, "user_id")
         @Expect(Param.DISTRIBUTED_SERVICE_NAME, "ds_name")
@@ -722,35 +610,35 @@ class Test_hiappevent {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_3100
-    * @tc.name      : test_hiAppEvent_constructor
-    * @tc.desc      : test PerformanceAnalysisKit constructor
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_3100
+     * @tc.name      : test_hiAppEvent_constructor
+     * @tc.desc      : test PerformanceAnalysisKit constructor
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_constructor() {
-        let holder = AppEventPackageHolder("watcher")
-        HiAppEvent()
-        @Expect(true)
+        try {
+            let holder = AppEventPackageHolder("watcher")
+            HiAppEvent()
+        } catch (e: Exception) {
+            @Expect(false)
+        }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_3200
-    * @tc.name      : Test_hiAppEvent_Event
-    * @tc.desc      : test PerformanceAnalysisKit HEvent
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_PerformanceAnalysisKit_Test_hiappevent_3200
+     * @tc.name      : Test_hiAppEvent_Event
+     * @tc.desc      : test PerformanceAnalysisKit HEvent
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiAppEvent_Event() {
         @Expect(hiappEventDep.APP_FREEZE, "APP_FREEZE")
     }
-
-
-
 }

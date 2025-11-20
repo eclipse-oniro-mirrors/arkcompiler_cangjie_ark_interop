@@ -33,7 +33,7 @@ import ohos.business_exception.*
 public class Test_connection {
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testConenction() {
         let netConn = createNetConnection()
 
@@ -73,7 +73,7 @@ public class Test_connection {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testMeter() {
         Hilog.info(0, "CangjieTest", "isDefaultNetMetered")
         let dnm = isDefaultNetMetered()
@@ -81,7 +81,7 @@ public class Test_connection {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testHandle() {
         Hilog.info(0, "CangjieTest", "getDefaultNet")
         let handle = getDefaultNet()
@@ -121,7 +121,7 @@ public class Test_connection {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testProp() {
         let handle = getDefaultNet()
         Hilog.info(0, "CangjieTest", "getNetCapabilities")
@@ -148,7 +148,7 @@ public class Test_connection {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testReport() {
         let handle = getDefaultNet()
         Hilog.info(0, "CangjieTest", "reportNetConnected")
@@ -169,21 +169,21 @@ public class Test_connection {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func GetDefaultHttpProxy_Success() {
         let httpProxy = getDefaultHttpProxy()
         Hilog.info(0, "CangjieTest", "host is ${httpProxy.host}")
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func GetAllNets_Success() {
         let nethandles = getAllNets()
         Hilog.info(0, "CangjieTest", "size is ${nethandles.size}")
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func NetConnection_Unregister_ThrowBusinessException() {
         expectBusinessException(2101007) {
             createNetConnection().unregister()
@@ -191,7 +191,7 @@ public class Test_connection {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Classes_Init() {
         let nc = NetCapabilities(Array<NetBearType>(), linkDownBandwidthKbps: 0, linkUpBandwidthKbps: 0,
             networkCap: Array<NetCap>())
@@ -201,7 +201,7 @@ public class Test_connection {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func createNetConnectionWithNetCapabilities(): Unit {
         let netCaps: Array<NetCap> = [
             NetCapabilityMms,
@@ -218,7 +218,7 @@ public class Test_connection {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func createNetConnectionWithNetCapabilities1(): Unit {
         let a: Array<NetBearType> = [
             BearerCellular,
@@ -233,7 +233,7 @@ public class Test_connection {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func getAddressByName(): Unit {
         let handle = getAppNet()
         handle.getAddressByName("localhost")

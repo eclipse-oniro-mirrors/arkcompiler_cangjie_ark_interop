@@ -25,7 +25,7 @@ import std.unittest.testmacro.*
 import ohos.arkui.state_macro_manage.*
 
 @Test
-class Test_EmptyEvent_onClick {
+class Test_EmptyEvent_onClick{
     protected func getTextById(id: String) {
         return Int64.tryParse(getInspector()[id, "content"].split(" ")[1].split(".")[0]) ?? -1
     }
@@ -73,7 +73,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_AlphabetIndexer_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin AlphabetIndexer")
@@ -95,7 +95,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Blank_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Blank")
@@ -117,7 +117,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Button_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Button")
@@ -139,7 +139,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Checkbox_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Checkbox")
@@ -161,7 +161,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_CheckboxGroup_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin CheckboxGroup")
@@ -184,7 +184,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_DataPanel_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin DataPanel")
@@ -206,7 +206,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_DatePicker_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin DatePicker")
@@ -228,7 +228,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Divider_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Divider")
@@ -250,7 +250,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Gauge_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Gauge")
@@ -272,7 +272,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Image_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Image")
@@ -294,7 +294,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_ImageSpan_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin ImageSpan")
@@ -315,7 +315,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_LoadingProgress_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin LoadingProgress")
@@ -337,7 +337,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Menu_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Menu")
@@ -359,7 +359,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_MenuItem_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin MenuItem")
@@ -381,7 +381,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_MenuItemGroup_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin MenuItemGroup")
@@ -403,7 +403,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Progress_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Progress")
@@ -425,7 +425,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_QRCode_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin QRCode")
@@ -447,7 +447,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Radio_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Radio")
@@ -469,7 +469,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Rating_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Rating")
@@ -491,7 +491,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Refresh_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Refresh")
@@ -513,7 +513,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_RichEditor_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin RichEditor")
@@ -537,7 +537,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_RichText_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_RichText_2300() {
         sleepFor(2.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin RichText")
@@ -559,7 +559,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_RowSplit_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin RowSplit")
@@ -581,7 +581,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_ScrollBar_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin ScrollBar")
@@ -603,7 +603,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Search_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Search")
@@ -627,7 +627,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Slider_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Slider")
@@ -651,7 +651,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Stepper_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Stepper_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Stepper")
@@ -673,7 +673,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_StepperItem_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_StepperItem_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin StepperItem")
@@ -695,7 +695,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Text_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Text_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Text")
@@ -717,7 +717,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_TextArea_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_TextArea_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin TextArea")
@@ -741,7 +741,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_TextClock_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_TextClock_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin TextClock")
@@ -763,7 +763,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_TextInput_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_TextInput_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin TextInput")
@@ -787,7 +787,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_TextPicker_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_TextPicker_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin TextPicker")
@@ -809,7 +809,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_TextTimer_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_TextTimer_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin TextTimer")
@@ -831,7 +831,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Toggle_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Toggle_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Toggle")
@@ -853,7 +853,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Web_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Web_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Web")
@@ -875,7 +875,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Select_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Select_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Select")
@@ -899,7 +899,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Badge_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Badge_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Badge")
@@ -921,7 +921,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Column_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Column_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Column")
@@ -943,7 +943,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Grid_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Grid_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Grid")
@@ -965,7 +965,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_GridItem_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_GridItem_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin GridItem")
@@ -987,7 +987,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_GridRow_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_GridRow_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin GridRow")
@@ -1009,7 +1009,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_GridCol_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_GridCol_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin GridCol")
@@ -1031,7 +1031,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Flex_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Flex_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Flex")
@@ -1053,7 +1053,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_List_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_List_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin List")
@@ -1075,7 +1075,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_ListItem_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_ListItem_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin ListItem")
@@ -1097,7 +1097,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_ListItemGroup_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_ListItemGroup_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin ListItemGroup")
@@ -1121,7 +1121,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_RelativeContainer_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_RelativeContainer_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin RelativeContainer")
@@ -1143,7 +1143,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Row_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Row_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Row")
@@ -1165,7 +1165,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Scroll_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Scroll_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Scroll")
@@ -1187,7 +1187,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Stack_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Stack_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Stack")
@@ -1209,7 +1209,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Swiper_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Swiper_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Swiper")
@@ -1231,7 +1231,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Tabs_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Tabs_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Tabs")
@@ -1253,7 +1253,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_TabContent_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_TabContent_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin TabContent")
@@ -1275,7 +1275,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Circle_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Circle_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Circle")
@@ -1297,7 +1297,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Line_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Line_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Line")
@@ -1319,7 +1319,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Rect_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Rect_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Rect")
@@ -1341,7 +1341,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Shape_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Shape_6100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Shape")
@@ -1365,7 +1365,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Path_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Path_6300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Path")
@@ -1387,7 +1387,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Canvas_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Canvas_6400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Canvas")
@@ -1409,7 +1409,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Video_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Video_6500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Video")
@@ -1431,7 +1431,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Counter_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Counter_7000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Counter")
@@ -1453,7 +1453,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_PatternLock_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_PatternLock_7100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin PatternLock")
@@ -1475,7 +1475,7 @@ class Test_EmptyEvent_onClick {
      * @tc.desic：Empty_Ellipse_onClick
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onClick_Ellipse_7200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onClick: FindBegin Ellipse")

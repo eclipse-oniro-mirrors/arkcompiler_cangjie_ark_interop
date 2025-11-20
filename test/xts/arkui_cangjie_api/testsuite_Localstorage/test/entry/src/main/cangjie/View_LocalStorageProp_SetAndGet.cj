@@ -73,7 +73,7 @@ class View_LocalStorageProp_SetAndGet {
         Column(space:10) {
             Button("Set Value In ParentComp")
                 .id("change1")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.res1 = storage3.set("PropInt", 20)
                     this.res2 = storage3.set("PropFloat", 20.00)
@@ -84,7 +84,7 @@ class View_LocalStorageProp_SetAndGet {
                     this.res7 = storage3.set("PropStruct", BB("HelloCangjie"))
                     this.res8 = storage3.set("PropEnum", EE.ee(100))
                     this.res9 = storage3.set("PropInt1", 20)
-                }
+                })
 
             Divider()
             Text("ValueInt storage3:${this.res1} " + this.ValueInt.toString()).id("Int1")
@@ -128,7 +128,7 @@ class View_ChildProp_SetAndGet {
         Column(space:10) {
             Button("Get LinkValue In ChildComp")
                 .id("change2")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.ValueInt = storage3.get<Int64>("PropInt").getOrThrow()
                     this.ValueFloat = storage3.get<Float64>("PropFloat").getOrThrow()
@@ -139,7 +139,7 @@ class View_ChildProp_SetAndGet {
                     this.ValueStruct = storage3.get<BB>("PropStruct").getOrThrow()
                     this.ValueEnum = storage3.get<EE>("PropEnum").getOrThrow()
                     this.ValueInt_01 = storage3.get<Int64>("ValueInt_01").isNone() //None
-                }
+                })
 
             Text("ValueInt In ChildComp: " + this.ValueInt.toString()).id("LinkInt2")
             Text("ValueFloat In ChildComp: " + this.ValueFloat.toString()).id("LinkFloat2")

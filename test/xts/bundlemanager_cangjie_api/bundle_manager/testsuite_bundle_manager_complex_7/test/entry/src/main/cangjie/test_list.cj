@@ -14,42 +14,62 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testApplicationInfo_name_1", { =>testApplicationInfo_name_1()
-})
-registerTestSuite("testApplicationInfo_name_2", { =>testApplicationInfo_name_2()
-})
-registerTestSuite("testApplicationInfo_name_3", { =>testApplicationInfo_name_3()
-})
-registerTestSuite("testApplicationInfo_name_4", { =>testApplicationInfo_name_4()
-})
-registerTestSuite("testApplicationInfo_name_5", { =>testApplicationInfo_name_5()
-})
-registerTestSuite("testApplicationInfo_name_6", { =>testApplicationInfo_name_6()
-})
-registerTestSuite("testApplicationInfo_name_7", { =>testApplicationInfo_name_7()
-})
-registerTestSuite("testApplicationInfo_name_8", { =>testApplicationInfo_name_8()
-})
-registerTestSuite("testApplicationInfo_name_9", { =>testApplicationInfo_name_9()
-})
-registerTestSuite("testApplicationInfo_name_10", { =>testApplicationInfo_name_10()
-})
-registerTestSuite("testApplicationInfo_name_11", { =>testApplicationInfo_name_11()
-})
-registerTestSuite("testApplicationInfo_name_12", { =>testApplicationInfo_name_12()
-})
-registerTestSuite("testApplicationInfo_name_13", { =>testApplicationInfo_name_13()
-})
-registerTestSuite("testApplicationInfo_name_14", { =>testApplicationInfo_name_14()
-})
-registerTestSuite("testApplicationInfo_name_15", { =>testApplicationInfo_name_15()
-})
-registerTestSuite("testApplicationInfo_name_16", { =>testApplicationInfo_name_16()
-})
-registerTestSuite("testApplicationInfo_name_17", { =>testApplicationInfo_name_17()
-})
-registerTestSuite("testApplicationInfo_name_18", { =>testApplicationInfo_name_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testApplicationInfo_name_1", {
+        => testApplicationInfo_name_1()
+    })
+    registerTestSuite("testApplicationInfo_name_2", {
+        => testApplicationInfo_name_2()
+    })
+    registerTestSuite("testApplicationInfo_name_3", {
+        => testApplicationInfo_name_3()
+    })
+    registerTestSuite("testApplicationInfo_name_4", {
+        => testApplicationInfo_name_4()
+    })
+    registerTestSuite("testApplicationInfo_name_5", {
+        => testApplicationInfo_name_5()
+    })
+    registerTestSuite("testApplicationInfo_name_6", {
+        => testApplicationInfo_name_6()
+    })
+    registerTestSuite("testApplicationInfo_name_7", {
+        => testApplicationInfo_name_7()
+    })
+    registerTestSuite("testApplicationInfo_name_8", {
+        => testApplicationInfo_name_8()
+    })
+    registerTestSuite("testApplicationInfo_name_9", {
+        => testApplicationInfo_name_9()
+    })
+    registerTestSuite("testApplicationInfo_name_10", {
+        => testApplicationInfo_name_10()
+    })
+    registerTestSuite("testApplicationInfo_name_11", {
+        => testApplicationInfo_name_11()
+    })
+    registerTestSuite("testApplicationInfo_name_12", {
+        => testApplicationInfo_name_12()
+    })
+    registerTestSuite("testApplicationInfo_name_13", {
+        => testApplicationInfo_name_13()
+    })
+    registerTestSuite("testApplicationInfo_name_14", {
+        => testApplicationInfo_name_14()
+    })
+    registerTestSuite("testApplicationInfo_name_15", {
+        => testApplicationInfo_name_15()
+    })
+    registerTestSuite("testApplicationInfo_name_16", {
+        => testApplicationInfo_name_16()
+    })
+    registerTestSuite("testApplicationInfo_name_17", {
+        => testApplicationInfo_name_17()
+    })
+    registerTestSuite("testApplicationInfo_name_18", {
+        => testApplicationInfo_name_18()
+    })
 }

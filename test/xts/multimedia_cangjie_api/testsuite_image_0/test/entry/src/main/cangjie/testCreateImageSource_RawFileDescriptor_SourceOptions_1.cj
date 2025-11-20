@@ -36,23 +36,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Unknown,
-                    sourceSize: Size( 1i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Unknown, sourceSize: Size(1i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#0: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -64,23 +63,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.png")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.Rgb565,
-                    sourceSize: Size( 1i32,  1i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.Rgb565, sourceSize: Size(1i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#1: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -92,23 +90,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpeg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.Rgba8888,
-                    sourceSize: Size( 1i32,  1i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.Rgba8888, sourceSize: Size(1i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#2: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -120,23 +117,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.Unknown,
-                    sourceSize: Size( 2i32,  1i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.Unknown, sourceSize: Size(2i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#3: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -148,23 +144,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb565,
-                    sourceSize: Size( 2i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb565, sourceSize: Size(2i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#4: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 
     /*
@@ -176,23 +171,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.Bgra8888,
-                    sourceSize: Size( 2i32,  1i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.Bgra8888, sourceSize: Size(2i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#5: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
 
     /*
@@ -204,23 +198,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.Unknown,
-                    sourceSize: Size( 3i32,  1i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.Unknown, sourceSize: Size(3i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#6: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
     }
 
     /*
@@ -232,23 +225,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgba8888,
-                    sourceSize: Size( 3i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgba8888, sourceSize: Size(3i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#7: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_8 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 ends.")
     }
 
     /*
@@ -260,23 +252,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.Bgra8888,
-                    sourceSize: Size( 3i32,  1i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.Bgra8888, sourceSize: Size(3i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#8: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_9 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 ends.")
     }
 
     /*
@@ -288,23 +279,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_10 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.Rgb565,
-                    sourceSize: Size( 1i32,  2i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.Rgb565, sourceSize: Size(1i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#9: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_10 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 ends.")
     }
 
     /*
@@ -316,23 +306,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_11 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.Rgba8888,
-                    sourceSize: Size( 1i32,  2i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.Rgba8888, sourceSize: Size(1i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#10: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_11 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 ends.")
     }
 
     /*
@@ -344,23 +333,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_12 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Bgra8888,
-                    sourceSize: Size( 1i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Bgra8888, sourceSize: Size(1i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#11: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_12 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 ends.")
     }
 
     /*
@@ -372,23 +360,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_13 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_13 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb888,
-                    sourceSize: Size( 2i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb888, sourceSize: Size(2i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#12: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_13 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_13 ends.")
     }
 
     /*
@@ -400,23 +387,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_14 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_14 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.Alpha8,
-                    sourceSize: Size( 2i32,  2i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.Alpha8, sourceSize: Size(2i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#13: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_14 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_14 ends.")
     }
 
     /*
@@ -428,23 +414,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_15 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_15 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.RgbaF16,
-                    sourceSize: Size( 2i32,  2i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.RgbaF16, sourceSize: Size(2i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#14: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_15 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_15 ends.")
     }
 
     /*
@@ -456,23 +441,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_16 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.Rgb888,
-                    sourceSize: Size( 3i32,  2i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.Rgb888, sourceSize: Size(3i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#15: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_16 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 ends.")
     }
 
     /*
@@ -484,23 +468,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_17 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Alpha8,
-                    sourceSize: Size( 3i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Alpha8, sourceSize: Size(3i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#16: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_17 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 ends.")
     }
 
     /*
@@ -512,23 +495,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_18 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.Nv21,
-                    sourceSize: Size( 3i32,  2i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.Nv21, sourceSize: Size(3i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#17: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_18 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 ends.")
     }
 
     /*
@@ -540,23 +522,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_19 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_19 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.Rgb888,
-                    sourceSize: Size( 1i32,  3i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.Rgb888, sourceSize: Size(1i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#18: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_19 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_19 ends.")
     }
 
     /*
@@ -568,23 +549,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_20 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_20 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.RgbaF16,
-                    sourceSize: Size( 1i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.RgbaF16, sourceSize: Size(1i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#19: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_20 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_20 ends.")
     }
 
     /*
@@ -596,23 +576,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_21 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_21 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.Nv21,
-                    sourceSize: Size( 1i32,  3i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.Nv21, sourceSize: Size(1i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#20: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_21 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_21 ends.")
     }
 
     /*
@@ -624,23 +603,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_22 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.Alpha8,
-                    sourceSize: Size( 2i32,  3i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.Alpha8, sourceSize: Size(2i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#21: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_22 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 ends.")
     }
 
     /*
@@ -652,23 +630,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_23 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.RgbaF16,
-                    sourceSize: Size( 2i32,  3i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.RgbaF16, sourceSize: Size(2i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#22: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_23 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 ends.")
     }
 
     /*
@@ -680,23 +657,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_24 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv21,
-                    sourceSize: Size( 2i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv21, sourceSize: Size(2i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#23: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_24 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 ends.")
     }
 
     /*
@@ -708,23 +684,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_25 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_25 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv12,
-                    sourceSize: Size( 3i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv12, sourceSize: Size(3i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#24: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_25 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_25 ends.")
     }
 
     /*
@@ -736,23 +711,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_26 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.Nv12,
-                    sourceSize: Size( 1i32,  1i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.Nv12, sourceSize: Size(1i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#25: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_26 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 ends.")
     }
 
     /*
@@ -764,23 +738,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_27 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.Nv12,
-                    sourceSize: Size( 2i32,  1i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.Nv12, sourceSize: Size(2i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#26: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_27 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 ends.")
     }
 
     /*
@@ -792,23 +765,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_28 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 1i32, sourcePixelFormat: PixelMapFormat.Unknown,
-                    sourceSize: Size( 3i32,  3i32)))
+                options: SourceOptions(1i32, sourcePixelFormat: PixelMapFormat.Unknown, sourceSize: Size(3i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#27: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_28 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 ends.")
     }
 
     /*
@@ -820,23 +792,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_29 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 2i32, sourcePixelFormat: PixelMapFormat.Rgb565,
-                    sourceSize: Size( 3i32,  3i32)))
+                options: SourceOptions(2i32, sourcePixelFormat: PixelMapFormat.Rgb565, sourceSize: Size(3i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#28: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_29 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 ends.")
     }
 
     /*
@@ -848,23 +819,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_30 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Bgra8888,
-                    sourceSize: Size( 1i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Bgra8888, sourceSize: Size(1i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#29: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_30 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 ends.")
     }
 
     /*
@@ -876,23 +846,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_31(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_31 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_31 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb888,
-                    sourceSize: Size( 1i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb888, sourceSize: Size(1i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#30: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_31 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_31 ends.")
     }
 
     /*
@@ -904,23 +873,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_32(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_32 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_32 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Alpha8,
-                    sourceSize: Size( 1i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Alpha8, sourceSize: Size(1i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#31: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_32 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_32 ends.")
     }
 
     /*
@@ -932,23 +900,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_33(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_33 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_33 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.RgbaF16,
-                    sourceSize: Size( 1i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.RgbaF16, sourceSize: Size(1i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#32: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_33 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_33 ends.")
     }
 
     /*
@@ -960,23 +927,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_34(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_34 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv21,
-                    sourceSize: Size( 1i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv21, sourceSize: Size(1i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#33: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_34 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 ends.")
     }
 
     /*
@@ -988,23 +954,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_35(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_35 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgba8888,
-                    sourceSize: Size( 2i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgba8888, sourceSize: Size(2i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#34: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_35 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 ends.")
     }
 
     /*
@@ -1016,23 +981,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_36 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb888,
-                    sourceSize: Size( 2i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb888, sourceSize: Size(2i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#35: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_36 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 ends.")
     }
 
     /*
@@ -1044,23 +1008,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_37 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_37 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Alpha8,
-                    sourceSize: Size( 2i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Alpha8, sourceSize: Size(2i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#36: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_37 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_37 ends.")
     }
 
     /*
@@ -1072,23 +1035,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_38 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_38 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.RgbaF16,
-                    sourceSize: Size( 2i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.RgbaF16, sourceSize: Size(2i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#37: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_38 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_38 ends.")
     }
 
     /*
@@ -1100,23 +1062,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_39 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_39 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv21,
-                    sourceSize: Size( 2i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv21, sourceSize: Size(2i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#38: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_39 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_39 ends.")
     }
 
     /*
@@ -1128,23 +1089,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_40 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb565,
-                    sourceSize: Size( 3i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb565, sourceSize: Size(3i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#39: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_40 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 ends.")
     }
 
     /*
@@ -1156,23 +1116,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_41 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb888,
-                    sourceSize: Size( 3i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb888, sourceSize: Size(3i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#40: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_41 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 ends.")
     }
 
     /*
@@ -1184,23 +1143,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_42 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Alpha8,
-                    sourceSize: Size( 3i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Alpha8, sourceSize: Size(3i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#41: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_42 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 ends.")
     }
 
     /*
@@ -1212,23 +1170,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_43 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_43 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.RgbaF16,
-                    sourceSize: Size( 3i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.RgbaF16, sourceSize: Size(3i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#42: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_43 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_43 ends.")
     }
 
     /*
@@ -1240,23 +1197,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_44 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_44 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv21,
-                    sourceSize: Size( 3i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv21, sourceSize: Size(3i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#43: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_44 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_44 ends.")
     }
 
     /*
@@ -1268,23 +1224,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_45 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_45 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv12,
-                    sourceSize: Size( 3i32,  1i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv12, sourceSize: Size(3i32, 1i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#44: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_45 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_45 ends.")
     }
 
     /*
@@ -1296,23 +1251,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_46 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Unknown,
-                    sourceSize: Size( 1i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Unknown, sourceSize: Size(1i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#45: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_46 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 ends.")
     }
 
     /*
@@ -1324,23 +1278,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_47(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_47 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb888,
-                    sourceSize: Size( 1i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb888, sourceSize: Size(1i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#46: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_47 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 ends.")
     }
 
     /*
@@ -1352,23 +1305,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_48(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_48 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Alpha8,
-                    sourceSize: Size( 1i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Alpha8, sourceSize: Size(1i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#47: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_48 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 ends.")
     }
 
     /*
@@ -1380,23 +1332,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_49(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_49 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_49 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.RgbaF16,
-                    sourceSize: Size( 1i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.RgbaF16, sourceSize: Size(1i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#48: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_49 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_49 ends.")
     }
 
     /*
@@ -1408,23 +1359,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_50(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_50 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_50 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv21,
-                    sourceSize: Size( 1i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv21, sourceSize: Size(1i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#49: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_50 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_50 ends.")
     }
 
     /*
@@ -1436,23 +1386,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_51(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_51 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_51 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv12,
-                    sourceSize: Size( 1i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv12, sourceSize: Size(1i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#50: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_51 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_51 ends.")
     }
 
     /*
@@ -1464,23 +1413,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_52(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_52 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_52 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Unknown,
-                    sourceSize: Size( 2i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Unknown, sourceSize: Size(2i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#51: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_52 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_52 ends.")
     }
 
     /*
@@ -1492,23 +1440,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_53(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_53 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_53 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb565,
-                    sourceSize: Size( 2i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb565, sourceSize: Size(2i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#52: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_53 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_53 ends.")
     }
 
     /*
@@ -1520,23 +1467,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_54(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_54 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_54 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgba8888,
-                    sourceSize: Size( 2i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgba8888, sourceSize: Size(2i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#53: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_54 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_54 ends.")
     }
 
     /*
@@ -1548,23 +1494,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_55(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_55 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_55 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Bgra8888,
-                    sourceSize: Size( 2i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Bgra8888, sourceSize: Size(2i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#54: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_55 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_55 ends.")
     }
 
     /*
@@ -1576,23 +1521,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_56(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_56 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_56 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv21,
-                    sourceSize: Size( 2i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv21, sourceSize: Size(2i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#55: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_56 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_56 ends.")
     }
 
     /*
@@ -1604,23 +1548,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_57(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_57 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_57 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv12,
-                    sourceSize: Size( 2i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv12, sourceSize: Size(2i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#56: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_57 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_57 ends.")
     }
 
     /*
@@ -1632,23 +1575,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_58(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_58 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_58 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Unknown,
-                    sourceSize: Size( 3i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Unknown, sourceSize: Size(3i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#57: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_58 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_58 ends.")
     }
 
     /*
@@ -1660,23 +1602,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_59(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_59 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_59 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb565,
-                    sourceSize: Size( 3i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb565, sourceSize: Size(3i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#58: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_59 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_59 ends.")
     }
 
     /*
@@ -1688,23 +1629,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_60(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_60 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_60 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgba8888,
-                    sourceSize: Size( 3i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgba8888, sourceSize: Size(3i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#59: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_60 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_60 ends.")
     }
 
     /*
@@ -1716,23 +1656,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_61(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_61 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_61 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Bgra8888,
-                    sourceSize: Size( 3i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Bgra8888, sourceSize: Size(3i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#60: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_61 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_61 ends.")
     }
 
     /*
@@ -1744,23 +1683,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_62(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_62 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_62 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.RgbaF16,
-                    sourceSize: Size( 3i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.RgbaF16, sourceSize: Size(3i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#61: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_62 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_62 ends.")
     }
 
     /*
@@ -1772,23 +1710,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_63(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_63 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_63 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv12,
-                    sourceSize: Size( 3i32,  2i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv12, sourceSize: Size(3i32, 2i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#62: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_63 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_63 ends.")
     }
 
     /*
@@ -1800,23 +1737,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_64(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_64 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_64 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Unknown,
-                    sourceSize: Size( 1i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Unknown, sourceSize: Size(1i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#63: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_64 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_64 ends.")
     }
 
     /*
@@ -1828,23 +1764,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_65(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_65 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_65 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb565,
-                    sourceSize: Size( 1i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb565, sourceSize: Size(1i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#64: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_65 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_65 ends.")
     }
 
     /*
@@ -1856,23 +1791,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_66(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_66 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_66 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgba8888,
-                    sourceSize: Size( 1i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgba8888, sourceSize: Size(1i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#65: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_66 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_66 ends.")
     }
 
     /*
@@ -1884,23 +1818,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_67(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_67 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_67 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Bgra8888,
-                    sourceSize: Size( 1i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Bgra8888, sourceSize: Size(1i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#66: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_67 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_67 ends.")
     }
 
     /*
@@ -1912,23 +1845,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_68(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_68 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_68 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Alpha8,
-                    sourceSize: Size( 1i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Alpha8, sourceSize: Size(1i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#67: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_68 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_68 ends.")
     }
 
     /*
@@ -1940,23 +1872,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_69(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_69 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_69 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv12,
-                    sourceSize: Size( 1i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv12, sourceSize: Size(1i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#68: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_69 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_69 ends.")
     }
 
     /*
@@ -1968,23 +1899,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_70(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_70 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_70 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Unknown,
-                    sourceSize: Size( 2i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Unknown, sourceSize: Size(2i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#69: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_70 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_70 ends.")
     }
 
     /*
@@ -1996,23 +1926,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_71(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_71 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_71 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb565,
-                    sourceSize: Size( 2i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb565, sourceSize: Size(2i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#70: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_71 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_71 ends.")
     }
 
     /*
@@ -2024,23 +1953,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_72(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_72 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_72 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgba8888,
-                    sourceSize: Size( 2i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgba8888, sourceSize: Size(2i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#71: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_72 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_72 ends.")
     }
 
     /*
@@ -2052,23 +1980,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_73(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_73 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_73 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Bgra8888,
-                    sourceSize: Size( 2i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Bgra8888, sourceSize: Size(2i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#72: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_73 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_73 ends.")
     }
 
     /*
@@ -2080,23 +2007,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_74(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_74 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_74 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb888,
-                    sourceSize: Size( 2i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb888, sourceSize: Size(2i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#73: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_74 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_74 ends.")
     }
 
     /*
@@ -2108,23 +2034,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_75(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_75 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_75 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv12,
-                    sourceSize: Size( 2i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv12, sourceSize: Size(2i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#74: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_75 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_75 ends.")
     }
 
     /*
@@ -2136,23 +2061,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_76(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_76 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_76 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgba8888,
-                    sourceSize: Size( 3i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgba8888, sourceSize: Size(3i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#75: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_76 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_76 ends.")
     }
 
     /*
@@ -2164,23 +2088,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_77(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_77 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_77 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Bgra8888,
-                    sourceSize: Size( 3i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Bgra8888, sourceSize: Size(3i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#76: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_77 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_77 ends.")
     }
 
     /*
@@ -2192,23 +2115,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_78(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_78 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_78 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Rgb888,
-                    sourceSize: Size( 3i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Rgb888, sourceSize: Size(3i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#77: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_78 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_78 ends.")
     }
 
     /*
@@ -2220,23 +2142,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_79(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_79 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_79 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Alpha8,
-                    sourceSize: Size( 3i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Alpha8, sourceSize: Size(3i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#78: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_79 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_79 ends.")
     }
 
     /*
@@ -2248,23 +2169,22 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_80(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_80 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_80 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.RgbaF16,
-                    sourceSize: Size( 3i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.RgbaF16, sourceSize: Size(3i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#79: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_80 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_80 ends.")
     }
 
     /*
@@ -2276,22 +2196,21 @@ class testCreateImageSource_RawFileDescriptor_SourceOptions_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_81(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_81 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_81 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
             let imageSource = createImageSource(fd,
-                options: SourceOptions( 0i32, sourcePixelFormat: PixelMapFormat.Nv21,
-                    sourceSize: Size( 3i32,  3i32)))
+                options: SourceOptions(0i32, sourcePixelFormat: PixelMapFormat.Nv21, sourceSize: Size(3i32, 3i32)))
             @Expect(true, imageSource.supportedFormats.size > 0i64)
             @Expect("assertion#80: not throw", "createImageSource fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_81 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_81 ends.")
     }
 }

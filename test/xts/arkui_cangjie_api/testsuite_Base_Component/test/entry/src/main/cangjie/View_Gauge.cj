@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length,  Color, LengthType}
+import ohos.base.{LengthProp, Length,  Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -37,8 +37,8 @@ class View_Gauge {
     var color3: LinearGradient = LinearGradient([ColorStop(0x6572B513, 0), ColorStop(0x6508efa6, 1)])
     var color4: LinearGradient = LinearGradient([ColorStop(0x65ed08f5, 0), ColorStop(0x65ef0849, 1)])
 
-    var colorArray: Array<(LinearGradient, Float32)> = [(this.color1, 1.0), (this.color2, 2.0), (this.color3, 3.0),
-        (this.color4, 4.0)]
+    var colorArray: Array<(LinearGradient, Int32)> = [(this.color1, 1i32), (this.color2, 2i32), (this.color3, 3i32),
+        (this.color4, 4i32)]
     func build() {
         Column() {
             Gauge(value: 50.0, min: 0.0, max: 100.0) {

@@ -49,7 +49,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：backdropBlur
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_0300_Component() {
         let Inspector = getInspectorByKey("Test_Text02")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -63,7 +63,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_0400_Component() {
         let Inspector = getInspectorByKey("Test_Text03")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -77,7 +77,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：brightness
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_0500_Component() {
         let Inspector = getInspectorByKey("Test_Text04")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -91,7 +91,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_0600_Component() {
         let Inspector = getInspectorByKey("Test_Text05")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -105,7 +105,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：contrast
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_0700_Component() {
         let Inspector = getInspectorByKey("Test_Text06")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -119,7 +119,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：invert
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_0800_Component() {
         let Inspector = getInspectorByKey("Test_Text07")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -133,7 +133,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：colorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_0900_Component() {
         let Inspector = getInspectorByKey("Test_Text08")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -147,7 +147,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：colorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_01000_Component() {
         let Inspector = getInspectorByKey("Test_Text09")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -161,7 +161,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_01100_Component() {
         let Inspector = getInspectorByKey("Test_Text10")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -175,7 +175,7 @@ class Test_ImageEffect_Component {
      * @tc.desic：hueRotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImagineEffect_01200_Component() {
         let Inspector = getInspectorByKey("Test_Text11")
         let obj = JsonValue.fromStr(Inspector).asObject()

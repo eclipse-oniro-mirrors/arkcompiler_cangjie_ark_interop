@@ -53,14 +53,15 @@ class Test_location {
 
     override func afterAll(): Unit {
         if (GeoLocationManager.isLocationEnabled()) {
-//            let b = Screen
-//                .getTheOnlyUiComponentWhoseIdEqualsTo("sbgright")
-//                .centerPoint
-//            swipe(from: b, deltaY: 200)
+            //            let b = Screen
+            //                .getTheOnlyUiComponentWhoseIdEqualsTo("sbgright")
+            //                .centerPoint
+            //            swipe(from: b, deltaY: 200)
             sleepFor(1.second)
             sleepFor(1.second)
             try {
-                click(at: Screen
+                click(
+                    at: Screen
                         .getTheOnlyUiComponentWhoseIdEqualsTo("Ctrl.NewToggleBaseComponent_Image_location")
                         .centerPoint)
             } catch (e: Exception) {}
@@ -69,7 +70,7 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getCurrentLocation(): Unit {
         let location = GeoLocationManager.getCurrentLocation()
         @Expect(location.latitude > -90.0 && location.latitude < 90.0, true)
@@ -115,17 +116,17 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_isLocationEnabled(): Unit {
         let manager = GeoLocationManager()
         @Expect(GeoLocationManager.isLocationEnabled() , true)
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_singlelocationrequest_1(): Unit {
         let sinlocreq = SingleLocationRequest(LocatingPriority.PriorityAccuracy, 0i32)
-        match(sinlocreq.locatingPriority){
+        match (sinlocreq.locatingPriority) {
             case PriorityAccuracy => @Expect(true)
             case _ => @Expect(false)
         }
@@ -133,10 +134,10 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_singlelocationrequest_2(): Unit {
         let sinlocreq = SingleLocationRequest(LocatingPriority.PriorityAccuracy, -1i32)
-        match(sinlocreq.locatingPriority){
+        match (sinlocreq.locatingPriority) {
             case PriorityAccuracy => @Expect(true)
             case _ => @Expect(false)
         }
@@ -144,10 +145,10 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_singlelocationrequest_3(): Unit {
         let sinlocreq = SingleLocationRequest(LocatingPriority.PriorityAccuracy, 1i32)
-        match(sinlocreq.locatingPriority){
+        match (sinlocreq.locatingPriority) {
             case PriorityAccuracy => @Expect(true)
             case _ => @Expect(false)
         }
@@ -155,10 +156,10 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_singlelocationrequest_4(): Unit {
         let sinlocreq = SingleLocationRequest(LocatingPriority.PriorityLocatingSpeed, 0i32)
-        match(sinlocreq.locatingPriority){
+        match (sinlocreq.locatingPriority) {
             case PriorityLocatingSpeed => @Expect(true)
             case _ => @Expect(false)
         }
@@ -166,10 +167,10 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_singlelocationrequest_5(): Unit {
         let sinlocreq = SingleLocationRequest(LocatingPriority.PriorityLocatingSpeed, -1i32)
-        match(sinlocreq.locatingPriority){
+        match (sinlocreq.locatingPriority) {
             case PriorityLocatingSpeed => @Expect(true)
             case _ => @Expect(false)
         }
@@ -177,10 +178,10 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
-     func test_singlelocationrequest_6(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_singlelocationrequest_6(): Unit {
         let sinlocreq = SingleLocationRequest(LocatingPriority.PriorityLocatingSpeed, 1i32)
-        match(sinlocreq.locatingPriority){
+        match (sinlocreq.locatingPriority) {
             case PriorityLocatingSpeed => @Expect(true)
             case _ => @Expect(false)
         }
@@ -188,14 +189,14 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_1(): Unit {
         let curlocreq = CurrentLocationRequest()
-        match(curlocreq.priority){
+        match (curlocreq.priority) {
             case FirstFix => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case Unset => @Expect(true)
             case _ => @Expect(false)
         }
@@ -204,14 +205,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_2(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.Unset, scenario:LocationRequestScenario.Unset, maxAccuracy:1.111f32, timeoutMs:0i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.Unset,
+            scenario: LocationRequestScenario.Unset, maxAccuracy: 1.111f32, timeoutMs: 0i32)
+        match (curlocreq.priority) {
             case Unset => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case Unset => @Expect(true)
             case _ => @Expect(false)
         }
@@ -220,14 +222,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_3(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.Accuracy, scenario:LocationRequestScenario.Navigation, maxAccuracy:1.111f32, timeoutMs:0i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.Accuracy,
+            scenario: LocationRequestScenario.Navigation, maxAccuracy: 1.111f32, timeoutMs: 0i32)
+        match (curlocreq.priority) {
             case Accuracy => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case Navigation => @Expect(true)
             case _ => @Expect(false)
         }
@@ -236,14 +239,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_4(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.LowPower, scenario:LocationRequestScenario.TrajectoryTracking, maxAccuracy:1.111f32, timeoutMs:0i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.LowPower,
+            scenario: LocationRequestScenario.TrajectoryTracking, maxAccuracy: 1.111f32, timeoutMs: 0i32)
+        match (curlocreq.priority) {
             case LowPower => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case TrajectoryTracking => @Expect(true)
             case _ => @Expect(false)
         }
@@ -252,14 +256,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_5(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.FirstFix, scenario:LocationRequestScenario.CarHailing, maxAccuracy:1.111f32, timeoutMs:0i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.FirstFix,
+            scenario: LocationRequestScenario.CarHailing, maxAccuracy: 1.111f32, timeoutMs: 0i32)
+        match (curlocreq.priority) {
             case FirstFix => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case CarHailing => @Expect(true)
             case _ => @Expect(false)
         }
@@ -268,14 +273,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_6(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.FirstFix, scenario:LocationRequestScenario.DailyLifeService, maxAccuracy:1.111f32, timeoutMs:0i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.FirstFix,
+            scenario: LocationRequestScenario.DailyLifeService, maxAccuracy: 1.111f32, timeoutMs: 0i32)
+        match (curlocreq.priority) {
             case FirstFix => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case DailyLifeService => @Expect(true)
             case _ => @Expect(false)
         }
@@ -284,14 +290,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_7(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.FirstFix, scenario:LocationRequestScenario.NoPower, maxAccuracy:1.111f32, timeoutMs:0i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.FirstFix,
+            scenario: LocationRequestScenario.NoPower, maxAccuracy: 1.111f32, timeoutMs: 0i32)
+        match (curlocreq.priority) {
             case FirstFix => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case NoPower => @Expect(true)
             case _ => @Expect(false)
         }
@@ -300,14 +307,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_8(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.FirstFix, scenario:LocationRequestScenario.NoPower, maxAccuracy:0.00001f32, timeoutMs:0i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.FirstFix,
+            scenario: LocationRequestScenario.NoPower, maxAccuracy: 0.00001f32, timeoutMs: 0i32)
+        match (curlocreq.priority) {
             case FirstFix => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case NoPower => @Expect(true)
             case _ => @Expect(false)
         }
@@ -316,14 +324,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_9(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.FirstFix, scenario:LocationRequestScenario.NoPower, maxAccuracy:-1.1112f32, timeoutMs:0i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.FirstFix,
+            scenario: LocationRequestScenario.NoPower, maxAccuracy: -1.1112f32, timeoutMs: 0i32)
+        match (curlocreq.priority) {
             case FirstFix => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case NoPower => @Expect(true)
             case _ => @Expect(false)
         }
@@ -332,14 +341,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_10(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.FirstFix, scenario:LocationRequestScenario.NoPower, maxAccuracy:-1.1112f32, timeoutMs:-1i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.FirstFix,
+            scenario: LocationRequestScenario.NoPower, maxAccuracy: -1.1112f32, timeoutMs: -1i32)
+        match (curlocreq.priority) {
             case FirstFix => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case NoPower => @Expect(true)
             case _ => @Expect(false)
         }
@@ -348,14 +358,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_11(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.FirstFix, scenario:LocationRequestScenario.NoPower, maxAccuracy:-1.1112f32, timeoutMs:0i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.FirstFix,
+            scenario: LocationRequestScenario.NoPower, maxAccuracy: -1.1112f32, timeoutMs: 0i32)
+        match (curlocreq.priority) {
             case FirstFix => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case NoPower => @Expect(true)
             case _ => @Expect(false)
         }
@@ -364,14 +375,15 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_currentlocationrequest_12(): Unit {
-        let curlocreq = CurrentLocationRequest(priority:LocationRequestPriority.FirstFix, scenario:LocationRequestScenario.NoPower, maxAccuracy:-1.1112f32, timeoutMs:100000i32)
-        match(curlocreq.priority){
+        let curlocreq = CurrentLocationRequest(priority: LocationRequestPriority.FirstFix,
+            scenario: LocationRequestScenario.NoPower, maxAccuracy: -1.1112f32, timeoutMs: 100000i32)
+        match (curlocreq.priority) {
             case FirstFix => @Expect(true)
             case _ => @Expect(false)
         }
-        match(curlocreq.scenario){
+        match (curlocreq.scenario) {
             case NoPower => @Expect(true)
             case _ => @Expect(false)
         }
@@ -380,25 +392,25 @@ class Test_location {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_location(): Unit {
         let curlocreq = CurrentLocationRequest()
         let location = GeoLocationManager.getCurrentLocation(curlocreq)
         @Expect(location.latitude>=-90.0 && location.latitude<=90.0)
         @Expect(location.longitude>=-180.0 && location.longitude<=180.0)
-        @Expect(location.altitude>=0.0)  
-        @Expect(location.accuracy>=0.0)  
-        @Expect(location.speed>=0.0) 
+        @Expect(location.altitude>=0.0)
+        @Expect(location.accuracy>=0.0)
+        @Expect(location.speed>=0.0)
         @Expect(location.timeStamp>=0i64)
-        @Expect(location.direction>=0.0)  
-        @Expect(location.timeSinceBoot>=0i64)  
-        @Expect(location.additions.getOrThrow().size > 0)   
-        @Expect(location.additionSize.getOrThrow()>=0i64)  
-        @Expect(location.altitudeAccuracy.getOrThrow()>=0.0)  
+        @Expect(location.direction>=0.0)
+        @Expect(location.timeSinceBoot>=0i64)
+        @Expect(location.additions.getOrThrow().size > 0)
+        @Expect(location.additionSize.getOrThrow()>=0i64)
+        @Expect(location.altitudeAccuracy.getOrThrow()>=0.0)
         @Expect(location.speedAccuracy.getOrThrow()>=0.0)
-        @Expect(location.directionAccuracy.getOrThrow()>=0.0) 
-        @Expect(location.uncertaintyOfTimeSinceBoot.getOrThrow()>=0i64)  
-        match(location.sourceType.getOrThrow()){
+        @Expect(location.directionAccuracy.getOrThrow()>=0.0)
+        @Expect(location.uncertaintyOfTimeSinceBoot.getOrThrow()>=0i64)
+        match (location.sourceType.getOrThrow()) {
             case NetWork => @Expect(true)
             case _ => @Expect(false)
         }

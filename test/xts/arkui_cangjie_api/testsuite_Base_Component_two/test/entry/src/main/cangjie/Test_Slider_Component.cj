@@ -48,7 +48,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_001() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_001 start")
         driver.delayMs(1000)
@@ -134,7 +134,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_002() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_002 start")
         driver.delayMs(1000)
@@ -155,7 +155,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_003() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_003 start")
         driver.delayMs(1000)
@@ -176,7 +176,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_004() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_004 start")
         driver.delayMs(1000)
@@ -197,7 +197,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_005() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_005 start")
         driver.delayMs(1000)
@@ -218,7 +218,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_006() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_005 start")
         driver.delayMs(1000)
@@ -239,7 +239,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_007() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_007 start")
         driver.delayMs(1000)
@@ -267,7 +267,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_011() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_011 start")
         driver.delayMs(1000)
@@ -289,7 +289,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_012() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_012 start")
         driver.delayMs(1000)
@@ -311,7 +311,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_013() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_013 start")
         driver.delayMs(1000)
@@ -333,7 +333,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_014() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_014 start")
         driver.delayMs(1000)
@@ -360,7 +360,7 @@ class Test_Slider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Slider_component_015() {
         Hilog.info(0, "","cangjietest", "Test_Slider_component_015 start")
         driver.delayMs(1000)

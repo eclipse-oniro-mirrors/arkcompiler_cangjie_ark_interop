@@ -48,7 +48,7 @@ class Test_Transform_Component {
      * @tc.desic：scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_0100_Component() {
         let Inspector = getInspectorByKey("Text00")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -62,7 +62,7 @@ class Test_Transform_Component {
      * @tc.desic：rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_0200_Component() {
         let Inspector = getInspectorByKey("Text00")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -76,7 +76,7 @@ class Test_Transform_Component {
      * @tc.desic：translate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_0300_Component() {
         let Inspector = getInspectorByKey("Text00")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -90,7 +90,7 @@ class Test_Transform_Component {
      * @tc.desic：scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_0400_Component() {
         let Inspector = getInspectorByKey("Text01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -104,7 +104,7 @@ class Test_Transform_Component {
      * @tc.desic：rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_0500_Component() {
         let Inspector = getInspectorByKey("Text01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -118,7 +118,7 @@ class Test_Transform_Component {
      * @tc.desic：translate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_0600_Component() {
         let Inspector = getInspectorByKey("Text01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -132,7 +132,7 @@ class Test_Transform_Component {
      * @tc.desic：scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_0700_Component() {
         let Inspector = getInspectorByKey("Text02")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -146,7 +146,7 @@ class Test_Transform_Component {
      * @tc.desic：rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_0800_Component() {
         let Inspector = getInspectorByKey("Text02")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -160,7 +160,7 @@ class Test_Transform_Component {
      * @tc.desic：translate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_0900_Component() {
         let Inspector = getInspectorByKey("Text02")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -174,7 +174,7 @@ class Test_Transform_Component {
      * @tc.desic：translate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_01200_Component() {
         let Inspector = getInspectorByKey("Text03")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -189,7 +189,7 @@ class Test_Transform_Component {
      * @tc.desic：translate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_01400_Component() {
         let Inspector = getInspectorByKey("Text04")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -203,7 +203,7 @@ class Test_Transform_Component {
      * @tc.desic：translate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_01500_Component() {
         let Inspector = getInspectorByKey("Text05")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -217,7 +217,7 @@ class Test_Transform_Component {
      * @tc.desic：translate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Trasform_01600_Component() {
         let Inspector = getInspectorByKey("Text06")
         let obj = JsonValue.fromStr(Inspector).asObject()

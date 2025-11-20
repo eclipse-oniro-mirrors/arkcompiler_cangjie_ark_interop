@@ -50,7 +50,7 @@ class View_AppStorage_SetAndLink {
         Column(space:10) {
             Button("Get setAndlink In ParentComp")
                 .id("change1")
-                .onClick {ClickEvent =>
+                .onClick({ClickEvent =>
                     this.ValueInt = AppStorage.setAndLink<Int64>("PropInt", 100).get()
                     this.ValueFloat = AppStorage.setAndLink<Float64>("PropFloat", 100.0).get()
                     this.ValueRune = AppStorage.setAndLink<Rune>("PropRune", r'C').get()
@@ -60,11 +60,11 @@ class View_AppStorage_SetAndLink {
                     this.ValueStruct = AppStorage.setAndLink<BB>("PropStruct", BB("HelloCangjie")).get().bb
                     this.ValueEnum = EE.getEnumNumber(AppStorage.setAndLink<EE>("PropEnum", EE.ee(0)).get())
                     this.ValueInt1 = AppStorage.setAndLink<Int64>("PropInt1", 100).get()
-                }
+                })
 
             Button("Set setAndlink In ParentComp")
                 .id("change2")
-                .onClick {ClickEvent =>
+                .onClick({ClickEvent =>
                     AppStorage.set("PropInt", 100)
                     AppStorage.set("PropFloat", 100.0)
                     AppStorage.set("PropRune", r'D')
@@ -83,7 +83,7 @@ class View_AppStorage_SetAndLink {
                     this.ValueStruct = AppStorage.get<BB>("PropStruct").getOrThrow().bb
                     this.ValueEnum = EE.getEnumNumber(AppStorage.get<EE>("PropEnum").getOrThrow())
                     this.ValueInt1 = AppStorage.get<Int64>("PropInt1").getOrThrow()
-                }
+                })
 
             Text("ValueInt In ParentComp: " + this.ValueInt.toString()).id("LinkInt")
             Text("ValueFloat In ParentComp: " + this.ValueFloat.toString()).id("LinkFloat")

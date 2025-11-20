@@ -41,12 +41,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_101(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_101 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format1).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format1).id), -1i64)
             @Expect("assertion#536: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -65,12 +65,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_102(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_102 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format1).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format1).id), 12345678i64)
             @Expect("assertion#537: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -89,7 +89,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_103(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_103 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -113,12 +113,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_104(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_104 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format2).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format2).id), -1i64)
             @Expect("assertion#539: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -137,12 +137,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_105(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_105 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format2).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format2).id), 12345678i64)
             @Expect("assertion#540: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -161,7 +161,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_106(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_106 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -185,12 +185,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_107(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_107 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format3).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format3).id), -1i64)
             @Expect("assertion#542: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -209,12 +209,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_108(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_108 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format3).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.Test_Format3).id), 12345678i64)
             @Expect("assertion#543: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -233,7 +233,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_109(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_109 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -257,12 +257,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_110(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_110 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.EntryAbility_desc).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.EntryAbility_desc).id), -1i64)
             @Expect("assertion#545: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -281,12 +281,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_111(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_111 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.EntryAbility_desc).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.EntryAbility_desc).id), 12345678i64)
             @Expect("assertion#546: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -305,7 +305,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_112(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_112 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -329,12 +329,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_113(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_113 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.media.layered_image).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.media.layered_image).id), -1i64)
             @Expect("assertion#548: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -353,12 +353,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_114(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_114 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.media.layered_image).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.media.layered_image).id), 12345678i64)
             @Expect("assertion#549: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -377,7 +377,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_115(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_115 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -401,12 +401,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_116(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_116 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.EntryAbility_label).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.EntryAbility_label).id), -1i64)
             @Expect("assertion#551: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -425,12 +425,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_117(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_117 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.EntryAbility_label).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.string.EntryAbility_label).id), 12345678i64)
             @Expect("assertion#552: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -449,7 +449,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_118(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_118 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -473,12 +473,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_119(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_119 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.media.startIcon).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.media.startIcon).id), -1i64)
             @Expect("assertion#554: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -497,12 +497,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_120(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_120 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.media.startIcon).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.media.startIcon).id), 12345678i64)
             @Expect("assertion#555: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -521,7 +521,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_121(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_121 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -545,12 +545,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_122(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_122 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.profile.main_pages).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.profile.main_pages).id), -1i64)
             @Expect("assertion#557: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -569,12 +569,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_123(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_123 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.profile.main_pages).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.profile.main_pages).id), 12345678i64)
             @Expect("assertion#558: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -593,7 +593,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_124(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_124 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -618,13 +618,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_125(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_125 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.color.start_window_background).id),
-                2i64)
+                -1i64)
             @Expect("assertion#560: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -643,13 +643,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_126(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_126 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.color.start_window_background).id),
-                3i64)
+                12345678i64)
             @Expect("assertion#561: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -668,7 +668,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_127(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_127 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -692,12 +692,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_128(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_128 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.float.float_1).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.float.float_1).id), -1i64)
             @Expect("assertion#563: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -716,12 +716,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_129(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_129 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.float.float_1).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.float.float_1).id), 12345678i64)
             @Expect("assertion#564: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -740,7 +740,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_130(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_130 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -764,12 +764,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_131(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_131 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.float.float_2).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.float.float_2).id), -1i64)
             @Expect("assertion#566: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -788,12 +788,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_132(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_132 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.float.float_2).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.float.float_2).id), 12345678i64)
             @Expect("assertion#567: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -812,7 +812,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_133(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_133 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -836,12 +836,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_134(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_134 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.integer.int_1).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.integer.int_1).id), -1i64)
             @Expect("assertion#569: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -860,12 +860,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_135(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_135 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.integer.int_1).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.integer.int_1).id), 12345678i64)
             @Expect("assertion#570: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -884,7 +884,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_136(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_136 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -908,12 +908,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_137(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_137 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.integer.int_2).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.integer.int_2).id), -1i64)
             @Expect("assertion#572: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -932,12 +932,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_138(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_138 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.integer.int_2).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.integer.int_2).id), 12345678i64)
             @Expect("assertion#573: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -956,7 +956,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_139(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_139 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -980,12 +980,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_140(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_140 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.test_boolean1).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.test_boolean1).id), -1i64)
             @Expect("assertion#575: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1004,12 +1004,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_141(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_141 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.test_boolean1).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.test_boolean1).id), 12345678i64)
             @Expect("assertion#576: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1028,7 +1028,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_142(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_142 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1052,12 +1052,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_143(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_143 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.test_boolean0).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.test_boolean0).id), -1i64)
             @Expect("assertion#578: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1076,12 +1076,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_144(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_144 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.test_boolean0).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.test_boolean0).id), 12345678i64)
             @Expect("assertion#579: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1100,7 +1100,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_145(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_145 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1124,12 +1124,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_146(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_146 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.boolean_3).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.boolean_3).id), -1i64)
             @Expect("assertion#581: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1148,12 +1148,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_147(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_147 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.boolean_3).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.boolean_3).id), 12345678i64)
             @Expect("assertion#582: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1172,7 +1172,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_148(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_148 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1196,12 +1196,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_149(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_149 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.boolean_4).id), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.boolean_4).id), -1i64)
             @Expect("assertion#584: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1220,12 +1220,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_150(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_150 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.boolean_4).id), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "\0", @r(app.boolean.boolean_4).id), 12345678i64)
             @Expect("assertion#585: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1244,7 +1244,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_151(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_151 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1268,12 +1268,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_152(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_152 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 1u32), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 1u32), -1i64)
             @Expect("assertion#587: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1292,12 +1292,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_153(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_153 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 1u32), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 1u32), 12345678i64)
             @Expect("assertion#588: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1316,7 +1316,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_154(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_154 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1340,12 +1340,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_155(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_155 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 0u32), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 0u32), -1i64)
             @Expect("assertion#590: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1364,90 +1364,18 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_156(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_156 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 0u32), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 0u32), 12345678i64)
             @Expect("assertion#591: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
             @Expect(e.code, 9001002i32)
         }
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_156 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_ResourceManager_getPluralStringValueByAppResource_15700
-     * @tc.name      : TestCase_157
-     * @tc.desc      :                             get PluralStringValue by AppResource(bundleName="",
-                            moduleName="nonexisting_module_name", resourceId=2u32, num=1).
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_157(): Unit {
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_157 begins.")
-        Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
-        try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 2u32), 1i64)
-            @Expect("assertion#592: not throw", "fail to get Plural.")
-        } catch (e: BusinessException) {
-            @Expect(e.message, "No matching resource is found based on the resource ID.")
-            @Expect(e.code, 9001002i32)
-        }
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_157 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_ResourceManager_getPluralStringValueByAppResource_15800
-     * @tc.name      : TestCase_158
-     * @tc.desc      :                             get PluralStringValue by AppResource(bundleName="",
-                            moduleName="nonexisting_module_name", resourceId=2u32, num=2).
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_158(): Unit {
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_158 begins.")
-        Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
-        try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 2u32), 2i64)
-            @Expect("assertion#593: not throw", "fail to get Plural.")
-        } catch (e: BusinessException) {
-            @Expect(e.message, "No matching resource is found based on the resource ID.")
-            @Expect(e.code, 9001002i32)
-        }
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_158 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_ResourceManager_getPluralStringValueByAppResource_15900
-     * @tc.name      : TestCase_159
-     * @tc.desc      :                             get PluralStringValue by AppResource(bundleName="",
-                            moduleName="nonexisting_module_name", resourceId=2u32, num=3).
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_159(): Unit {
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_159 begins.")
-        Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
-        try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", 2u32), 3i64)
-            @Expect("assertion#594: not throw", "fail to get Plural.")
-        } catch (e: BusinessException) {
-            @Expect(e.message, "No matching resource is found based on the resource ID.")
-            @Expect(e.code, 9001002i32)
-        }
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_159 ends.")
     }
 
     /*
@@ -1460,7 +1388,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_160(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_160 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1484,12 +1412,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_161(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_161 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", UInt32.Min), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", UInt32.Min), -1i64)
             @Expect("assertion#596: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1508,12 +1436,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_162(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_162 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", UInt32.Min), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", UInt32.Min), 12345678i64)
             @Expect("assertion#597: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1532,7 +1460,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_163(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_163 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1556,12 +1484,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_164(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_164 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", UInt32.Max), 2i64)
+            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", UInt32.Max), -1i64)
             @Expect("assertion#599: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1580,12 +1508,12 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_165(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_165 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
-            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", UInt32.Max), 3i64)
+            getResourceManager().getPluralStringValue(AppResource("", "nonexisting_module_name", UInt32.Max), 12345678i64)
             @Expect("assertion#600: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1604,7 +1532,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_166(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_166 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1629,13 +1557,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_167(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_167 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.module_desc).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.module_desc).id), -1i64)
             @Expect("assertion#602: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1654,13 +1582,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_168(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_168 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.module_desc).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.module_desc).id), 12345678i64)
             @Expect("assertion#603: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1679,7 +1607,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_169(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_169 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1704,13 +1632,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_170(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_170 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.strarray.sizelist).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.strarray.sizelist).id), -1i64)
             @Expect("assertion#605: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1729,13 +1657,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_171(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_171 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.strarray.sizelist).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.strarray.sizelist).id), 12345678i64)
             @Expect("assertion#606: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1754,7 +1682,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_172(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_172 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1779,13 +1707,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_173(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_173 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.plural.plural_name).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.plural.plural_name).id), -1i64)
             @Expect("assertion#608: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1804,13 +1732,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_174(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_174 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.plural.plural_name).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.plural.plural_name).id), 12345678i64)
             @Expect("assertion#609: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1829,7 +1757,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_175(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_175 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1854,13 +1782,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_176(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_176 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format1).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format1).id), -1i64)
             @Expect("assertion#611: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1879,13 +1807,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_177(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_177 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format1).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format1).id), 12345678i64)
             @Expect("assertion#612: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1904,7 +1832,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_178(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_178 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -1929,13 +1857,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_179(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_179 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format2).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format2).id), -1i64)
             @Expect("assertion#614: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1954,13 +1882,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_180(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_180 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format2).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format2).id), 12345678i64)
             @Expect("assertion#615: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -1979,7 +1907,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_181(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_181 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -2004,13 +1932,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_182(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_182 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format3).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format3).id), -1i64)
             @Expect("assertion#617: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2029,13 +1957,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_183(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_183 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format3).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.Test_Format3).id), 12345678i64)
             @Expect("assertion#618: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2054,7 +1982,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_184(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_184 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -2079,13 +2007,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_185(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_185 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.EntryAbility_desc).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.EntryAbility_desc).id), -1i64)
             @Expect("assertion#620: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2104,13 +2032,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_186(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_186 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.EntryAbility_desc).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.EntryAbility_desc).id), 12345678i64)
             @Expect("assertion#621: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2129,7 +2057,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_187(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_187 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -2154,13 +2082,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_188(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_188 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.media.layered_image).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.media.layered_image).id), -1i64)
             @Expect("assertion#623: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2179,13 +2107,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_189(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_189 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.media.layered_image).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.media.layered_image).id), 12345678i64)
             @Expect("assertion#624: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2204,7 +2132,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_190(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_190 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -2229,13 +2157,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_191(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_191 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.EntryAbility_label).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.EntryAbility_label).id), -1i64)
             @Expect("assertion#626: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2254,13 +2182,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_192(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_192 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.string.EntryAbility_label).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.string.EntryAbility_label).id), 12345678i64)
             @Expect("assertion#627: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2279,7 +2207,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_193(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_193 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -2304,13 +2232,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_194(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_194 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.media.startIcon).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.media.startIcon).id), -1i64)
             @Expect("assertion#629: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2329,13 +2257,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_195(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_195 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.media.startIcon).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.media.startIcon).id), 12345678i64)
             @Expect("assertion#630: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2354,7 +2282,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_196(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_196 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -2379,13 +2307,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_197(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_197 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.profile.main_pages).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.profile.main_pages).id), -1i64)
             @Expect("assertion#632: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2404,13 +2332,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_198(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_198 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.profile.main_pages).id), 3i64)
+                AppResource("", "nonexisting_module_name", @r(app.profile.main_pages).id), 12345678i64)
             @Expect("assertion#633: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")
@@ -2429,7 +2357,7 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_199(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_199 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
@@ -2454,13 +2382,13 @@ class TestGetPluralStringValueByAppResource_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_200(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_200 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get Plural.")
         try {
             getResourceManager().getPluralStringValue(
-                AppResource("", "nonexisting_module_name", @r(app.color.start_window_background).id), 2i64)
+                AppResource("", "nonexisting_module_name", @r(app.color.start_window_background).id), -1i64)
             @Expect("assertion#635: not throw", "fail to get Plural.")
         } catch (e: BusinessException) {
             @Expect(e.message, "No matching resource is found based on the resource ID.")

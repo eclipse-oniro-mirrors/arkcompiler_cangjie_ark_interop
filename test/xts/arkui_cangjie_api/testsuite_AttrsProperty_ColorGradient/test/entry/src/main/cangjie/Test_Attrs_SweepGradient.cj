@@ -38,7 +38,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_AlphabetIndexer_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Blank_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Button_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Checkbox_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_CheckboxGroup_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin CheckboxGroup")
@@ -165,7 +165,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_DataPanel_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin DataPanel")
@@ -190,7 +190,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_DatePicker_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin DatePicker")
@@ -215,7 +215,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Divider_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Divider")
@@ -240,7 +240,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Gauge_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Gauge")
@@ -265,7 +265,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Image_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Image")
@@ -290,7 +290,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_ImageSpan_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin ImageSpan")
@@ -315,7 +315,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_LoadingProgress_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin LoadingProgress")
@@ -340,7 +340,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Menu_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Menu")
@@ -365,7 +365,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_MenuItem_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin MenuItem")
@@ -390,7 +390,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_MenuItemGroup_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin MenuItemGroup")
@@ -415,7 +415,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Progress_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Progress")
@@ -440,7 +440,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_QRCode_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin QRCode")
@@ -465,7 +465,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Radio_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Radio")
@@ -490,7 +490,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Rating_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Rating")
@@ -515,7 +515,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Refresh_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Refresh")
@@ -540,7 +540,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_RichEditor_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin RichEditor")
@@ -565,7 +565,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_RowSplit_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_RowSplit_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin RowSplit")
@@ -590,7 +590,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_ScrollBar_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_ScrollBar_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin ScrollBar")
@@ -615,7 +615,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Search_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Search_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Search")
@@ -640,7 +640,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Slider_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Slider_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Slider")
@@ -665,7 +665,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Stepper_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Stepper_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Stepper")
@@ -690,7 +690,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_StepperItem_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_StepperItem_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin StepperItem")
@@ -715,7 +715,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Text_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Text_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Text")
@@ -740,7 +740,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_TextArea_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_TextArea_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin TextArea")
@@ -765,7 +765,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_TextClock_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_TextClock_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin TextClock")
@@ -790,7 +790,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_TextInput_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_TextInput_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin TextInput")
@@ -815,7 +815,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_TextPicker_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_TextPicker_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin TextPicker")
@@ -840,7 +840,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_TextTimer_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_TextTimer_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin TextTimer")
@@ -865,7 +865,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Toggle_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Toggle_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Toggle")
@@ -890,7 +890,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Select_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Select_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Select")
@@ -915,7 +915,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Badge_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Badge_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Badge")
@@ -940,7 +940,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Column_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Column_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Column")
@@ -965,7 +965,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Grid_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Grid_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Grid")
@@ -990,7 +990,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_GridItem_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_GridItem_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin GridItem")
@@ -1015,7 +1015,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_GridRow_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_GridRow_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin GridRow")
@@ -1040,7 +1040,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_GridCol_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_GridCol_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin GridCol")
@@ -1065,7 +1065,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Flex_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Flex_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Flex")
@@ -1090,7 +1090,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_List_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_List_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin List")
@@ -1115,7 +1115,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_ListItem_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_ListItem_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin ListItem")
@@ -1140,7 +1140,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_ListItemGroup_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_ListItemGroup_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin ListItemGroup")
@@ -1167,7 +1167,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_RelativeContainer_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_RelativeContainer_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin RelativeContainer")
@@ -1192,7 +1192,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Row_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Row_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Row")
@@ -1217,7 +1217,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Scroll_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Scroll_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Scroll")
@@ -1242,7 +1242,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Stack_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Stack_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Stack")
@@ -1267,7 +1267,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Swiper_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Swiper_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Swiper")
@@ -1292,7 +1292,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Tabs_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Tabs_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Tabs")
@@ -1317,7 +1317,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_TabContent_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_TabContent_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin TabContent")
@@ -1342,7 +1342,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Circle_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Circle_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Circle")
@@ -1367,7 +1367,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Line_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Line_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Line")
@@ -1392,7 +1392,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Rect_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Rect_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Rect")
@@ -1417,7 +1417,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Shape_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Shape_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Shape")
@@ -1443,7 +1443,7 @@ class Test_EmptyAttrs_SweepGradient {
      * @tc.desic：Empty_Path_SweepGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_SweepGradient_Path_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSweepGradient: FindBegin Path")

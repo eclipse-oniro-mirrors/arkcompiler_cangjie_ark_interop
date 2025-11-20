@@ -60,38 +60,38 @@ class View_LocalStorageLink {
         Column(space:10) {
             Button("Delete")
                 .id("Test_Button00")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.res = storage0.delete("PropA")
                     this.res1 = storage0.delete("PropB")
                     this.res2 = storage0.delete("PropD")
-                }
+                })
             Button("keys")
                 .id("Test_Button01")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.StorageKeysFlag1 = StorageKeys.contains(all: ExpectKeys)
                     this.StorageKeysFlag2 = StorageKeys.contains(ExpectExtraKeys)
-                }
-            Button("size").id("Test_Button02").onClick {
+                })
+            Button("size").id("Test_Button02").onClick({
                 ClickEvent =>
                 this.size = storage0.size()
-            }
+            })
 
-            Button("clear").id("Test_Button03").onClick {
+            Button("clear").id("Test_Button03").onClick({
                 ClickEvent =>
                 let res3 = storage0.clear()
-            }
+            })
 
-            Button("clear01").id("Test_Button04").onClick {
+            Button("clear01").id("Test_Button04").onClick({
                 ClickEvent =>
                 this.res4 = storage10.clear()
-            }
+            })
 
-            Button("size01").id("Test_Button05").onClick {
+            Button("size01").id("Test_Button05").onClick({
                 ClickEvent =>
                 this.size1 = storage10.size()
-            }
+            })
 
             Text("${this.res}").id("Test_Text00")
             Text("${this.res1}").id("Test_Text01")

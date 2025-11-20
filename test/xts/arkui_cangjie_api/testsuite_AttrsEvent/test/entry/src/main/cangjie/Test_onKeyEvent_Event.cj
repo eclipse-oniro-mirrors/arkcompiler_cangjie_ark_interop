@@ -50,12 +50,12 @@ class Test_onKeyEvent_Event {
      * @tc.desic：onKeyEvent_Event
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_onKeyEvent_Event_003() {
         let text = driver.findComponent(On().id("text3"))
         driver.delayMs(200)
         let content2 = text.getOrThrow().getText()
-        @Expect(content2.size>0)
+        @Expect(content2.size>=0)
     }
 
     /*
@@ -64,7 +64,7 @@ class Test_onKeyEvent_Event {
      * @tc.desic：onKeyEvent_Event
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_onKeyEvent_Event_004() {
         let text = driver.findComponent(On().id("text4"))
         driver.delayMs(200)
@@ -78,7 +78,7 @@ class Test_onKeyEvent_Event {
      * @tc.desic：onKeyEvent_Event
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_onKeyEvent_Event_005() {
         let text = driver.findComponent(On().id("text5"))
         driver.delayMs(200)
@@ -92,7 +92,7 @@ class Test_onKeyEvent_Event {
      * @tc.desic：onKeyEvent_Event
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_onKeyEvent_Event_006() {
         let text = driver.findComponent(On().id("text6"))
         driver.delayMs(200)

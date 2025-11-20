@@ -15,7 +15,6 @@
 
 package ohos_app_cangjie_entry
 
-
 internal import kit.UniversalKeystoreKit.{isKeyItemExist, deleteKeyItem, HuksOptions}
 
 type Bytes = Array<UInt8>

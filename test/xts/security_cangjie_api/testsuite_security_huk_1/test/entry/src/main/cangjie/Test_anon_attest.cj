@@ -27,27 +27,28 @@ import ohos.business_exception.BusinessException
 
 @Test
 class Test_SecurityHuks_AnonAttest {
-    let HuksOptionsTest = HuksOptions( properties:
-                    [
-                        HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
-                        HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
-                        HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
-                        HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32)),
-                        HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Int32Value(1i32)),
-                        HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
-                    ],inData:[]
+    let HuksOptionsTest = HuksOptions(
+        properties: [
+            HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
+            HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
+            HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
+            HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32)),
+            HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Int32Value(1i32)),
+            HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
+        ],
+        inData: []
     )
     // 本用例需要全程联网！否则会抛出异常！
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_AnonAttest_0100
-    * @tc.name      : test_rsa_anno
-    * @tc.desc      : test UniversalKeystoreKit anonAttestKeyItem
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_AnonAttest_0100
+     * @tc.name      : test_rsa_anno
+     * @tc.desc      : test UniversalKeystoreKit anonAttestKeyItem
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rsa_anno() {
         //ref: https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/UniversalKeystoreKit/huks-key-anon-attestation-arkts.md
         //ref: https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/UniversalKeystoreKit/huks-key-anon-attestation-ndk.md
@@ -58,8 +59,8 @@ class Test_SecurityHuks_AnonAttest {
             // generate key
             generateKeyItem(
                 keyAlias,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
@@ -73,8 +74,9 @@ class Test_SecurityHuks_AnonAttest {
             let challenge = "hi_challenge_data"
             let chains = anonAttestKeyItem(
                 keyAlias,
-                HuksOptions(properties:
-                    [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BytesValue(challenge.toArray())),
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE,
+                        HuksParamValue.BytesValue(challenge.toArray())),
                         HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BytesValue(keyAlias.toArray()))]
                 )
             )
@@ -85,21 +87,20 @@ class Test_SecurityHuks_AnonAttest {
             }
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-         finally {
+        } finally {
             clean(keyAlias)
         }
     }
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_AnonAttest_0200
-    * @tc.name      : test_anno_attest_empty_alias
-    * @tc.desc      : test UniversalKeystoreKit anonAttestKeyItem
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_AnonAttest_0200
+     * @tc.name      : test_anno_attest_empty_alias
+     * @tc.desc      : test UniversalKeystoreKit anonAttestKeyItem
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_anno_attest_empty_alias() {
         let keyAlias = ""
         var flag = false
@@ -114,15 +115,15 @@ class Test_SecurityHuks_AnonAttest {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_AnonAttest_0300
-    * @tc.name      : test_anno_attest_none_properties
-    * @tc.desc      : test UniversalKeystoreKit anonAttestKeyItem
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_AnonAttest_0300
+     * @tc.name      : test_anno_attest_none_properties
+     * @tc.desc      : test UniversalKeystoreKit anonAttestKeyItem
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_anno_attest_none_properties() {
         let keyAlias = "test_rsa_anno"
         var flag = false

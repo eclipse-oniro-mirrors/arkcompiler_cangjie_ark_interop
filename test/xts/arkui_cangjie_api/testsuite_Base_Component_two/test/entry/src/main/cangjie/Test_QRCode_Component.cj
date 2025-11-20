@@ -49,7 +49,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_001() {
         Hilog.info(0, "","cangjietest", "[Test_QRCode_Component_001] start")
         // 1、获取页面中id为QRCodeBasis的组件信息
@@ -77,7 +77,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_002() {
         Hilog.info(0, "","cangjietest", "[Test_QRCode_Component_002] start")
         // 1、获取页面中id为QRCodeBasis的组件信息
@@ -100,7 +100,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_003() {
         Hilog.info(0, "","cangjietest", "[Test_QRCode_Component_003] start")
         // 1、获取页面中id为QRCodeBasis的组件信息
@@ -129,7 +129,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_004() {
         Hilog.info(0, "","cangjietest", "[Test_QRCode_Component_004] start")
         // 1、获取页面中id为QRCodeBasis的组件信息
@@ -152,7 +152,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_005() {
         // 1、获取页面中id为QRCodeBasis的组件信息
         let Inspector = getInspectorByKey("QRCodeBasis2")
@@ -173,7 +173,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_006() {
         // 1、获取页面中id为QRCodeBasis的组件信息
         let Inspector = getInspectorByKey("QRCodeBasis3")
@@ -194,7 +194,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_007() {
         // 1、获取页面中id为QRCodeBasis的组件信息
         let Inspector = getInspectorByKey("QRCodeBasis2")
@@ -221,7 +221,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_008() {
         // 1、获取页面中id为QRCodeBasis的组件信息
         let Inspector = getInspectorByKey("QRCodeBasis3")
@@ -248,7 +248,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_009() {
         // 1、获取页面中id为QRCodeBasis的组件信息
         let Inspector = getInspectorByKey("QRCodeBasis2")
@@ -269,7 +269,7 @@ class Test_QRCode_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_QRCode_Component_0010() {
         // 1、获取页面中id为QRCodeBasis的组件信息
         let Inspector = getInspectorByKey("QRCodeBasis3")

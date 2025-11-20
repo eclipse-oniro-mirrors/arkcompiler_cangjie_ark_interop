@@ -43,21 +43,21 @@ class View_Font {
         Row {
             Column {
                 Button("HelloWorld1")
-                    .onClick {
+                    .onClick({
                         evt =>
                         let list = getUIContext().getFont().getSystemFontList()
                         listsize = list.size
-                        Hilog.info(0, "cangjietest", "test", "111${list.size}")
-                    }
+                        Hilog.info(0, "cangjietest", "test", "111${list.size})")
+                    })
                     .id("Button1")
                 Text("${listsize}").id("Text")
                 Button("HelloWorld2")
-                    .onClick {
+                    .onClick({
                         evt =>
                         let info = getUIContext().getFont().getFontByName("HarmonyOS Sans Italic")
                         match (info) {
                             case Some(v) =>
-                                Hilog.info(0, "cangjietest", "test", "${v.path}")
+                                Hilog.info(0, "cangjietest", "test", "${v.path})")
                                 Hilog.info(0, "cangjietest", "test", "${v.postScriptName}")
                                 Hilog.info(0, "cangjietest", "test", "${v.fullName}")
                                 Hilog.info(0, "cangjietest", "test", "${v.family}")
@@ -69,7 +69,7 @@ class View_Font {
                                 Hilog.info(0, "cangjietest", "test", "${v.symbolic}")
                             case None => Hilog.info(0, "cangjietest", "test", "None")
                         }
-                    }
+                    })
                     .id("Button2")
             }.width(100.percent)
         }.height(100.percent)

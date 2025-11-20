@@ -39,7 +39,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_AlphabetIndexer_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin AlphabetIndexer")
@@ -66,7 +66,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Blank_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Blank")
@@ -93,7 +93,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Button_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Button")
@@ -120,7 +120,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Checkbox_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Checkbox")
@@ -147,7 +147,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_CheckboxGroup_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin CheckboxGroup")
@@ -175,7 +175,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_DataPanel_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin DataPanel")
@@ -202,7 +202,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_DatePicker_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin DatePicker")
@@ -229,7 +229,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Divider_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Divider")
@@ -256,7 +256,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Gauge_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Gauge")
@@ -283,7 +283,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Image_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Image")
@@ -310,7 +310,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_ImageSpan_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin ImageSpan")
@@ -337,7 +337,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_LoadingProgress_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin LoadingProgress")
@@ -364,7 +364,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Menu_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Menu")
@@ -391,7 +391,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_MenuItem_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin MenuItem")
@@ -418,7 +418,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_MenuItemGroup_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin MenuItemGroup")
@@ -445,7 +445,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Progress_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Progress")
@@ -472,7 +472,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_QRCode_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin QRCode")
@@ -499,7 +499,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Radio_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Radio")
@@ -526,7 +526,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Rating_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Rating")
@@ -553,7 +553,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Refresh_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Refresh")
@@ -580,7 +580,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_RichEditor_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin RichEditor")
@@ -607,7 +607,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_RichText_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin RichText")
@@ -634,7 +634,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_RowSplit_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin RowSplit")
@@ -661,7 +661,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_ScrollBar_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin ScrollBar")
@@ -688,7 +688,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Search_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Search")
@@ -715,7 +715,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Slider_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Slider")
@@ -742,7 +742,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Stepper_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Stepper")
@@ -769,7 +769,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_StepperItem_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin StepperItem")
@@ -796,7 +796,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Text_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Text")
@@ -823,7 +823,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_TextArea_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin TextArea")
@@ -850,7 +850,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_TextClock_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin TextClock")
@@ -877,7 +877,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_TextInput_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin TextInput")
@@ -904,7 +904,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_TextPicker_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin TextPicker")
@@ -931,7 +931,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_TextTimer_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin TextTimer")
@@ -958,7 +958,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Toggle_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Toggle")
@@ -985,7 +985,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Web_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Web")
@@ -1012,7 +1012,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Select_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Select")
@@ -1039,7 +1039,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Badge_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Badge")
@@ -1066,7 +1066,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Column_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Column")
@@ -1093,7 +1093,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Grid_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Grid")
@@ -1120,7 +1120,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_GridItem_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin GridItem")
@@ -1147,7 +1147,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_GridRow_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin GridRow")
@@ -1174,7 +1174,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_GridCol_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin GridCol")
@@ -1201,7 +1201,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Flex_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Flex")
@@ -1228,7 +1228,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_List_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin List")
@@ -1255,7 +1255,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_ListItem_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin ListItem")
@@ -1282,7 +1282,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_ListItemGroup_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin ListItemGroup")
@@ -1311,7 +1311,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_RelativeContainer_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin RelativeContainer")
@@ -1338,7 +1338,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Row_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Row")
@@ -1365,7 +1365,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Scroll_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Scroll")
@@ -1392,7 +1392,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Stack_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Stack")
@@ -1419,7 +1419,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Swiper_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Swiper")
@@ -1446,7 +1446,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Tabs_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Tabs")
@@ -1473,7 +1473,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_TabContent_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin TabContent")
@@ -1500,7 +1500,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Circle_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Circle")
@@ -1527,7 +1527,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Line_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Line")
@@ -1554,7 +1554,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Rect_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Rect")
@@ -1581,7 +1581,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Shape_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Shape")
@@ -1610,7 +1610,7 @@ class Test_EmptyAttrs_Scale {
      * @tc.desic：Empty_Path_Scale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Scale_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckScale: FindBegin Path")

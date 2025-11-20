@@ -27,46 +27,46 @@ import ohos.arkui.state_macro_manage.r
 @Test
 class Test_call_formatPhoneNumber {
     /*
-    * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumber_0100
-    * @tc.name      : test_call_formatPhoneNumber_01
-    * @tc.desc      : test TelephoneCall test_call_formatPhoneNumber_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumber_0100
+     * @tc.name      : test_call_formatPhoneNumber_01
+     * @tc.desc      : test TelephoneCall test_call_formatPhoneNumber_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_call_formatPhoneNumber_01() {
         let result = Call.formatPhoneNumber("12345678910")
         @Expect(result,"12345678910")
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumber_0200
-    * @tc.name      : test_call_formatPhoneNumber_02
-    * @tc.desc      : test TelephoneCall test_call_formatPhoneNumber_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumber_0200
+     * @tc.name      : test_call_formatPhoneNumber_02
+     * @tc.desc      : test TelephoneCall test_call_formatPhoneNumber_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_call_formatPhoneNumber_02() {
-        let result = Call.formatPhoneNumber("12345678910", options: NumberFormatOptions(countryCode:"CN"))
+        let result = Call.formatPhoneNumber("12345678910", options: NumberFormatOptions(countryCode: "CN"))
         @Expect(result,"12345678910")
     }
     /*
-    * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumber_0300
-    * @tc.name      : test_call_formatPhoneNumber_03
-    * @tc.desc      : test TelephoneCall test_call_formatPhoneNumber_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumber_0300
+     * @tc.name      : test_call_formatPhoneNumber_03
+     * @tc.desc      : test TelephoneCall test_call_formatPhoneNumber_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_call_formatPhoneNumber_03() {
-        let result = Call.formatPhoneNumber("12345678910", options: NumberFormatOptions(countryCode:"us"))
+        let result = Call.formatPhoneNumber("12345678910", options: NumberFormatOptions(countryCode: "us"))
         @Expect(result,"1 234-567-8910")
     }
 }

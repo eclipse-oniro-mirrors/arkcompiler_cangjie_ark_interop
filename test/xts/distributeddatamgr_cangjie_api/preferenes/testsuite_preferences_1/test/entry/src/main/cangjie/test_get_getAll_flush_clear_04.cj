@@ -22,8 +22,6 @@ import ohos.ui_test.*
 import kit.ArkData.*
 import ohos.business_exception.BusinessException
 import std.convert.{Parsable}
-import ohos.data.preferences.Options as PreferencesOptions
-import ohos.data.preferences.ValueType as PreferencesValueType
 
 @Test
 class Test_get_getAll_flush_clear_04 {
@@ -79,7 +77,7 @@ class Test_get_getAll_flush_clear_04 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_get_01(): Unit {
         let pref = preferences.get("", PreferencesValueType.StringData("仓颉语言"))
         match (pref) {
@@ -98,7 +96,7 @@ class Test_get_getAll_flush_clear_04 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_get_02(): Unit {
         var preget = preferences.get("\0", PreferencesValueType.StringData("仓颉语言"))
         match (preget) {
@@ -117,7 +115,7 @@ class Test_get_getAll_flush_clear_04 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_get_03(): Unit {
         var preget = preferences.get("1", PreferencesValueType.StringData("仓颉语言"))
         match (preget) {
@@ -136,7 +134,7 @@ class Test_get_getAll_flush_clear_04 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_get_04(): Unit {
         var preget = preferences.get("1000", PreferencesValueType.StringData("仓颉语言"))
         match (preget) {
@@ -155,7 +153,7 @@ class Test_get_getAll_flush_clear_04 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_get_05(): Unit {
         var preget = preferences.get("2000", PreferencesValueType.Integer(2))
         match (preget) {
@@ -174,7 +172,7 @@ class Test_get_getAll_flush_clear_04 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_get_06(): Unit {
         var preget = preferences.get("3000", PreferencesValueType.Integer(3))
         match (preget) {
@@ -193,7 +191,7 @@ class Test_get_getAll_flush_clear_04 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getall_07(): Unit {
         for (i in 0..1000) {
             preferences.delete("${i}")
@@ -223,7 +221,7 @@ class Test_get_getAll_flush_clear_04 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getall_08(): Unit {
         for (i in 0..7000) {
             preferences.delete("${i}")

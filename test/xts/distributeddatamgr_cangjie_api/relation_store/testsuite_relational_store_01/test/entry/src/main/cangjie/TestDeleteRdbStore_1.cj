@@ -36,13 +36,13 @@ class TestDeleteRdbStore_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -62,13 +62,13 @@ class TestDeleteRdbStore_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: false,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
@@ -88,13 +88,13 @@ class TestDeleteRdbStore_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -114,19 +114,19 @@ class TestDeleteRdbStore_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "deleteRdbStore")
             deleteRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
@@ -147,16 +147,16 @@ class TestDeleteRdbStore_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "testisColumnNull the result set failed")
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: false,
+                    isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             @Expect("assertion#3: not throw", "testisColumnNull the result set failed")
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)

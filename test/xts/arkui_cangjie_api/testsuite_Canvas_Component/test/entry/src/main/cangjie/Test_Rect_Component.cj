@@ -51,7 +51,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_001() {
         let Inspector = getInspectorByKey("Rect_component")
         let aar = Inspector.split("useShadowBatching")
@@ -74,7 +74,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_004() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -92,7 +92,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_005() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -110,7 +110,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_006() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -128,7 +128,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_007() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -146,7 +146,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_008() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -164,7 +164,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_009() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -182,7 +182,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_010() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -200,7 +200,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_011() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -218,7 +218,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_012() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -235,7 +235,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_013() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -256,7 +256,7 @@ class Test_Rect_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rect_Component_014() {
         let Inspector = getInspectorByKey("Rect_component")
         let obj = JsonValue.fromStr(Inspector).asObject()

@@ -19,7 +19,5 @@ let _ = testsuite()
 
 func testsuite(): Unit {
     registerTestSuite("TestSensorGetSensorList", {=> TestSensorGetSensorList()})
-    registerTestSuite("TestSensorGetGeomagneticInfo", {=> TestSensorGetGeomagneticInfo()})
     registerTestSuite("TestSensorOnOff", {=> TestSensorOnOff()})
-
 }

@@ -19,8 +19,8 @@ internal import kit.PerformanceAnalysisKit.*
 internal import ohos.base.*
 internal import std.collection.*
 import std.unittest.testmacro.*
-import ohos.data.distributed_kv_store.{Options as Op, Entry as KVEntry, DistributedKVStore, KVManagerConfig, Query, SecurityLevel,
-    ValueType}
+// import ohos.data.distributed_kv_store.{KVOptions as KVOptions, Entry as KVEntry, DistributedKVStore, KVManagerConfig, Query, KVSecurityLevel,
+//     KVValueType}
 //import kit.ArkData.*
 import ohos.data.distributed_kv_store.*
 import std.runtime.*
@@ -74,7 +74,7 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_context() {
         @Expect(Constants.MAX_KEY_LENGTH, 1024)
         @Expect(Constants.MAX_VALUE_LENGTH, 4194303)
@@ -93,7 +93,7 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatKVManager() {
         let kvstore = DistributedKVStore()
         let kvstoreName = "com.example.myapplication"
@@ -110,10 +110,10 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getSingleKVStore_deleteKVStore() {
         let kvstoreName = "myStoreId"
-        let opt = Op(SecurityLevel.S4,)
+        let opt = KVOptions(KVSecurityLevel.S4,)
         let kvStore = kvManager.getKVStore("myStoreId", opt)
         kvManager.deleteKVStore(bundleName, kvstoreName)
     }
@@ -128,14 +128,14 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getAllKVStoreId() {
         var list = kvManager.getAllKVStoreId(bundleName)
         Hilog.info(0, "cangjietest", "list size is ${list.size}")
         let kvstoreName01 = "myStoreId01"
         let kvstoreName02 = "myStoreId02"
         let kvstoreName03 = "myStoreId03"
-        let opt = Op(SecurityLevel.S4,)
+        let opt = KVOptions(KVSecurityLevel.S4,)
         var singleKVStore = kvManager.getKVStore(kvstoreName01, opt)
         var singleKVStore01 = kvManager.getKVStore(kvstoreName02, opt)
         var singleKVStore02 = kvManager.getKVStore(kvstoreName03, opt)
@@ -162,14 +162,14 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_put_get() {
         let kvstoreName = "myStoreId"
-        let opt = Op(SecurityLevel.S4,)
+        let opt = KVOptions(KVSecurityLevel.S4,)
         let kvStore = kvManager.getKVStore(kvstoreName, opt)
         var strkey = "keyback"
         var strvalue = "keyback"
-        kvStore.put(strkey, ValueType.StringValue(strvalue))
+        kvStore.put(strkey, KVValueType.StringValue(strvalue))
         var valuestr = kvStore.get(strkey)
         match (valuestr) {
             case StringValue(v) =>
@@ -191,14 +191,14 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_delete() {
         let kvstoreName = "myStoreId"
-        let opt = Op(SecurityLevel.S4,)
+        let opt = KVOptions(KVSecurityLevel.S4,)
         let kvStore = kvManager.getKVStore(kvstoreName, opt)
         var strkey = "keyback"
         var strvalue = "keyback"
-        kvStore.put(strkey, ValueType.StringValue(strvalue))
+        kvStore.put(strkey, KVValueType.StringValue(strvalue))
         kvStore.delete(strkey)
         try {
             var valuestr = kvStore.get(strkey)
@@ -218,15 +218,15 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_backup_restore() {
         let kvstoreName = "myStoreId"
         let fileName = "backfile"
-        let opt = Op(SecurityLevel.S4,)
+        let opt = KVOptions(KVSecurityLevel.S4,)
         let kvStore = kvManager.getKVStore(kvstoreName, opt)
         var strkey = "keyback"
         var strvalue = "keyback"
-        kvStore.put(strkey, ValueType.StringValue(strvalue))
+        kvStore.put(strkey, KVValueType.StringValue(strvalue))
         kvStore.backup(fileName)
         kvStore.delete(strkey)
         try {
@@ -255,15 +255,15 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_startTransaction() {
         let kvstoreName = "myStoreId"
-        let opt = Op(SecurityLevel.S4,)
+        let opt = KVOptions(KVSecurityLevel.S4,)
         let kvStore = kvManager.getKVStore(kvstoreName, opt)
         var strkey = "keyback"
         var strvalue = "keyback"
         kvStore.startTransaction()
-        kvStore.put(strkey, ValueType.StringValue(strvalue))
+        kvStore.put(strkey, KVValueType.StringValue(strvalue))
         kvStore.rollback()
         try {
             var valuestr = kvStore.get(strkey)
@@ -272,7 +272,7 @@ class Test_distributed_kv_store {
             @Expect(true)
         }
         kvStore.startTransaction()
-        kvStore.put(strkey, ValueType.StringValue(strvalue))
+        kvStore.put(strkey, KVValueType.StringValue(strvalue))
         kvStore.commit()
         match (kvStore.get(strkey)) {
             case StringValue(v) =>
@@ -293,12 +293,12 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_common_S1S2S3() {
         let kvstoreName = "myStoreId"
-        let opt0 = Op(SecurityLevel.S1,)
-        let opt1 = Op(SecurityLevel.S2,)
-        let opt2 = Op(SecurityLevel.S3,)
+        let opt0 = KVOptions(KVSecurityLevel.S1,)
+        let opt1 = KVOptions(KVSecurityLevel.S2,)
+        let opt2 = KVOptions(KVSecurityLevel.S3,)
         let kvStore0 = kvManager.getKVStore(kvstoreName, opt0)
         let kvStore1 = kvManager.getKVStore(kvstoreName, opt1)
         let kvStore2 = kvManager.getKVStore(kvstoreName, opt2)
@@ -314,10 +314,10 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_singleKVStore_enableSync() {
         let kvstoreName = "myStoreId"
-        let opt = Op(SecurityLevel.S4,)
+        let opt = KVOptions(KVSecurityLevel.S4,)
         let kvStore = kvManager.getKVStore(kvstoreName, opt)
         kvStore.enableSync(true)
         kvManager.deleteKVStore(bundleName, kvstoreName)
@@ -332,10 +332,10 @@ class Test_distributed_kv_store {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_singleKVStore_setSyncParam() {
         let kvstoreName = "myStoreId"
-        let opt = Op(SecurityLevel.S4,)
+        let opt = KVOptions(KVSecurityLevel.S4,)
         let kvStore = kvManager.getKVStore(kvstoreName, opt)
         kvStore.setSyncParam(1000)
         kvManager.deleteKVStore(bundleName, kvstoreName)

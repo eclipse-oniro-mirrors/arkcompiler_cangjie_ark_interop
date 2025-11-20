@@ -48,7 +48,7 @@ class Test_Border_Component {
      * @tc.desic：border
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Border_Component_0100() {
         let Border = getInspectorByKey("test00")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -62,7 +62,7 @@ class Test_Border_Component {
      * @tc.desic：borderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Border_Component_0200() {
         let Border = getInspectorByKey("test01")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -76,7 +76,7 @@ class Test_Border_Component {
      * @tc.desic：borderRadius
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Border_Component_0300() {
         let Border = getInspectorByKey("test01")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -90,7 +90,7 @@ class Test_Border_Component {
      * @tc.desic：borderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Border_Component_0400() {
         let Border = getInspectorByKey("test01")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -104,7 +104,7 @@ class Test_Border_Component {
      * @tc.desic：borderWidth and borderRadius,borderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Border_Component_0500() {
         let Border = getInspectorByKey("test01")
         let obj = JsonValue.fromStr(Border).asObject()

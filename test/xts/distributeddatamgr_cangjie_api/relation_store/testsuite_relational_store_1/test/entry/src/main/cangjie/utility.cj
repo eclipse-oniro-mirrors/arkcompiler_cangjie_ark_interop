@@ -15,10 +15,8 @@
 
 package ohos_app_cangjie_entry
 
-//import ohos.hilog.HilogChannel
 import std.sync.{Monitor}
 internal import ohos.ark_interop.{JSModule}
-//import ohos.app.ability.{AbilityContext}
 import ohos.business_exception.{BusinessException}
 import ohos.resource_manager.{ResourceManager}
 import ohos.web.webview.{WebviewController}

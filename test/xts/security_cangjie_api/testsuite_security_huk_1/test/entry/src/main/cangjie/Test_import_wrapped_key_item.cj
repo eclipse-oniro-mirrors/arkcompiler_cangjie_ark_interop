@@ -27,8 +27,8 @@ import ohos.business_exception.BusinessException
 
 @Test
 class Test_SecurityHuks_ImportWrappedKeyItem {
-    let genKeyOptionsTest1 = HuksOptions( properties:
-        [
+    let genKeyOptionsTest1 = HuksOptions(
+        properties: [
             HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
             HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
             HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
@@ -37,17 +37,17 @@ class Test_SecurityHuks_ImportWrappedKeyItem {
             HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(false)),
             HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
         ]
-    )  
+    )
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportWrappedKeyItem_0100
-    * @tc.name      : test_import_wrapped_wrong
-    * @tc.desc      : test UniversalKeystoreKit importWrappedKeyItem
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportWrappedKeyItem_0100
+     * @tc.name      : test_import_wrapped_wrong
+     * @tc.desc      : test UniversalKeystoreKit importWrappedKeyItem
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_import_wrapped_wrong() {
         //这个用例是错的，只有覆盖率的作用，最后会抛出异常
         let keyAlias = "test_import_wrapped_wrong"
@@ -57,8 +57,8 @@ class Test_SecurityHuks_ImportWrappedKeyItem {
         clean(wrappingKeyAlias)
 
         try {
-            let options = HuksOptions(properties:
-                [
+            let options = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.BooleanValue(true)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
@@ -69,9 +69,8 @@ class Test_SecurityHuks_ImportWrappedKeyItem {
                 importWrappedKeyItem(
                     keyAlias,
                     wrappingKeyAlias,
-                    HuksOptions(properties:
-                        [
-        
+                    HuksOptions(
+                        properties: [
                             HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                             HuksParam(
                                 HuksTag.HUKS_TAG_PURPOSE,
@@ -91,34 +90,31 @@ class Test_SecurityHuks_ImportWrappedKeyItem {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportWrappedKeyItem_0200
-    * @tc.name      : test_import_wrapped_empty_alias
-    * @tc.desc      : test UniversalKeystoreKit importWrappedKeyItem
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportWrappedKeyItem_0200
+     * @tc.name      : test_import_wrapped_empty_alias
+     * @tc.desc      : test UniversalKeystoreKit importWrappedKeyItem
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_import_wrapped_empty_alias() {
         let keyAlias = ""
         let wrappingKeyAlias = "test_import_wrapped_wrong_wrapping_key"
         var flag = false
         try {
-
             importWrappedKeyItem(
                 keyAlias,
                 wrappingKeyAlias,
-                HuksOptions(properties:
-                    [
-    
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                         HuksParam(
                             HuksTag.HUKS_TAG_PURPOSE,
                             HuksParamValue.BytesValue([2u8])
                         )
                     ]
-
                 )
             )
         } catch (e: BusinessException) {
@@ -128,15 +124,15 @@ class Test_SecurityHuks_ImportWrappedKeyItem {
         }
     }
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportWrappedKeyItem_0300
-    * @tc.name      : test_import_wrapped_none_properties
-    * @tc.desc      : test UniversalKeystoreKit importWrappedKeyItem
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportWrappedKeyItem_0300
+     * @tc.name      : test_import_wrapped_none_properties
+     * @tc.desc      : test UniversalKeystoreKit importWrappedKeyItem
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_import_wrapped_none_properties() {
         let keyAlias = "test_import_wrapped"
         let wrappingKeyAlias = "test_import_wrapped_wrong_wrapping_key"
@@ -156,15 +152,15 @@ class Test_SecurityHuks_ImportWrappedKeyItem {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportWrappedKeyItem_0400
-    * @tc.name      : test_import_wrapped_none_indata
-    * @tc.desc      : test UniversalKeystoreKit importWrappedKeyItem
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportWrappedKeyItem_0400
+     * @tc.name      : test_import_wrapped_none_indata
+     * @tc.desc      : test UniversalKeystoreKit importWrappedKeyItem
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_import_wrapped_none_indata() {
         let keyAlias = "test_import_wrapped"
         let wrappingKeyAlias = "test_import_wrapped_wrong_wrapping_key"
@@ -175,9 +171,8 @@ class Test_SecurityHuks_ImportWrappedKeyItem {
             importWrappedKeyItem(
                 keyAlias,
                 wrappingKeyAlias,
-                HuksOptions(properties:
-                    [
-    
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                         HuksParam(
                             HuksTag.HUKS_TAG_PURPOSE,

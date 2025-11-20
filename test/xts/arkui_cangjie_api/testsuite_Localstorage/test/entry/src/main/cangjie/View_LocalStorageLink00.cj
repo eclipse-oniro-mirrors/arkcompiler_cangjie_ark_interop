@@ -56,7 +56,7 @@ class View_LocalStorageLink00 {
             Column(space:10) {
                 Button("Set Value In ParentComp")
                     .id("change1")
-                    .onClick {
+                    .onClick({
                         ClickEvent =>
                         this.ValueInt = this.ValueInt - 1
                         this.ValueFloat = this.ValueFloat - 1.00
@@ -66,7 +66,7 @@ class View_LocalStorageLink00 {
                         this.ValueClass = AA("Hello")
                         this.ValueStruct = BB("Hello")
                         this.ValueEnum = EE.ee(10)
-                    }
+                    })
 
                 Divider()
                 Text("ValueInt storage:" + this.ValueInt.toString()).id("Int1")

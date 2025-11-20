@@ -24,7 +24,7 @@ func testsuite(): Unit {
     registerTestSuite("Test_SecurityHuks_Aes", {
         => Test_SecurityHuks_Aes()
     })
- 
+
     registerTestSuite("Test_SecurityHuks_AnonAttest", {
         => Test_SecurityHuks_AnonAttest()
     })
@@ -37,13 +37,13 @@ func testsuite(): Unit {
     registerTestSuite("Test_SecurityHuks_ExportKeyItem", {
         => Test_SecurityHuks_ExportKeyItem()
     })
-        registerTestSuite("Test_SecurityHuks_GenerateKey", {
+    registerTestSuite("Test_SecurityHuks_GenerateKey", {
         => Test_SecurityHuks_GenerateKey()
     })
     registerTestSuite("Test_SecurityHuks_GetKeyItemProperties", {
         => Test_SecurityHuks_GetKeyItemProperties()
     })
- 
+
     registerTestSuite("Test_SecurityHuks_ImportKey", {
         => Test_SecurityHuks_ImportKey()
     })
@@ -56,23 +56,22 @@ func testsuite(): Unit {
     registerTestSuite("Test_SecurityHuks_KeyExchange", {
         => Test_SecurityHuks_KeyExchange()
     })
-        registerTestSuite("Test_SecurityHuks_SessionOther", {
+    registerTestSuite("Test_SecurityHuks_SessionOther", {
         => Test_SecurityHuks_SessionOther()
     })
     registerTestSuite("Test_SecurityHuks_SM2", {
         => Test_SecurityHuks_SM2()
     })
-        registerTestSuite("Test_SecurityHuks_SM4", {
+    registerTestSuite("Test_SecurityHuks_SM4", {
         => Test_SecurityHuks_SM4()
     })
     registerTestSuite("Test_SecurityHuks_Special", {
         => Test_SecurityHuks_Special()
     })
-        registerTestSuite("Test_SecurityHuks_Struct_ffi", {
+    registerTestSuite("Test_SecurityHuks_Struct_ffi", {
         => Test_SecurityHuks_Struct_ffi()
     })
     registerTestSuite("Test_SecurityHuks_Struct", {
         => Test_SecurityHuks_Struct()
     })
-
 }

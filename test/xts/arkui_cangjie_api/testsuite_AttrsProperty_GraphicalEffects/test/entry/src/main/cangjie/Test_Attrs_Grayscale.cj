@@ -38,7 +38,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_AlphabetIndexer_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Blank_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Button_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Checkbox_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_CheckboxGroup_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin CheckboxGroup")
@@ -163,7 +163,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_DataPanel_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin DataPanel")
@@ -188,7 +188,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_DatePicker_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin DatePicker")
@@ -213,7 +213,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Divider_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Divider")
@@ -238,7 +238,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Gauge_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Gauge")
@@ -263,7 +263,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Image_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Image")
@@ -288,7 +288,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_ImageSpan_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin ImageSpan")
@@ -313,7 +313,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_LoadingProgress_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin LoadingProgress")
@@ -338,7 +338,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Menu_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Menu")
@@ -363,7 +363,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_MenuItem_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin MenuItem")
@@ -388,7 +388,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_MenuItemGroup_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin MenuItemGroup")
@@ -413,7 +413,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Progress_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Progress")
@@ -438,7 +438,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_QRCode_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin QRCode")
@@ -463,7 +463,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Radio_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Radio")
@@ -488,7 +488,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Rating_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Rating")
@@ -513,7 +513,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Refresh_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Refresh")
@@ -538,7 +538,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_RichEditor_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin RichEditor")
@@ -563,7 +563,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_RichText_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin RichText")
@@ -588,7 +588,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_RowSplit_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin RowSplit")
@@ -613,7 +613,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_ScrollBar_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin ScrollBar")
@@ -638,7 +638,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Search_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Search")
@@ -663,7 +663,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Slider_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Slider")
@@ -688,7 +688,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Stepper_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Stepper")
@@ -713,7 +713,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_StepperItem_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin StepperItem")
@@ -738,7 +738,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Text_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Text")
@@ -763,7 +763,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_TextArea_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin TextArea")
@@ -788,7 +788,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_TextClock_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin TextClock")
@@ -813,7 +813,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_TextInput_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin TextInput")
@@ -838,7 +838,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_TextPicker_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin TextPicker")
@@ -863,7 +863,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_TextTimer_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin TextTimer")
@@ -888,7 +888,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Toggle_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Toggle")
@@ -913,7 +913,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Web_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Web")
@@ -938,7 +938,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Select_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Select")
@@ -963,7 +963,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Badge_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Badge")
@@ -988,7 +988,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Column_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Column")
@@ -1013,7 +1013,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Grid_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Grid")
@@ -1038,7 +1038,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_GridItem_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin GridItem")
@@ -1063,7 +1063,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_GridRow_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin GridRow")
@@ -1088,7 +1088,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_GridCol_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin GridCol")
@@ -1113,7 +1113,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Flex_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Flex")
@@ -1138,7 +1138,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_List_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin List")
@@ -1163,7 +1163,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_ListItem_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin ListItem")
@@ -1188,7 +1188,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_ListItemGroup_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin ListItemGroup")
@@ -1215,7 +1215,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_RelativeContainer_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin RelativeContainer")
@@ -1240,7 +1240,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Row_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Row")
@@ -1265,7 +1265,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Scroll_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Scroll")
@@ -1290,7 +1290,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Stack_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Stack")
@@ -1315,7 +1315,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Swiper_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Swiper")
@@ -1340,7 +1340,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Tabs_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Tabs")
@@ -1365,7 +1365,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_TabContent_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin TabContent")
@@ -1390,7 +1390,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Circle_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Circle")
@@ -1415,7 +1415,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Line_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Line")
@@ -1440,7 +1440,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Rect_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Rect")
@@ -1465,7 +1465,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Shape_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Shape")
@@ -1490,7 +1490,7 @@ class Test_EmptyAttrs_Grayscale {
      * @tc.desic：Empty_Path_Grayscale
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Grayscale_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckGrayscale: FindBegin Path")

@@ -34,18 +34,18 @@ class testIsEmergencyPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.isEmergencyPhoneNumber(""), false)
             @Expect("assertion#5: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall isEmergencyPhoneNumber failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 
     /*
@@ -57,11 +57,11 @@ class testIsEmergencyPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
         @Assert(Call.isEmergencyPhoneNumber("123456789"), false)
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
 
     /*
@@ -73,16 +73,16 @@ class testIsEmergencyPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
-        try{
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
+        try {
             @Assert(Call.isEmergencyPhoneNumber("abcdrf"), false)
-        }catch(e:BusinessException){
-            @Expect(e.message, "TelephonyCall isEmergencyPhoneNumber failed: Invalid parameter value.")
+        } catch (e: BusinessException) {
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
     }
 
     /*
@@ -94,11 +94,11 @@ class testIsEmergencyPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
         @Assert(Call.isEmergencyPhoneNumber("010-222222"), false)
-        Hilog.info(0, "cangjietest","testcase TestCase_8 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 ends.")
     }
 
     /*
@@ -110,10 +110,10 @@ class testIsEmergencyPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
         @Assert(Call.isEmergencyPhoneNumber("9223372036854775807"), false)
-        Hilog.info(0, "cangjietest","testcase TestCase_9 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 ends.")
     }
 }

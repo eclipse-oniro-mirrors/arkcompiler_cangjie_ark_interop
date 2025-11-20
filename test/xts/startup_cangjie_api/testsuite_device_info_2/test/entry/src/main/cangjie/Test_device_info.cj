@@ -26,15 +26,15 @@ import ohos.base.*
 @Test
 class Test_device_info {
     /*
-    * @tc.number    : Sub_Cangjie_BasicServicesKit_Test_device_info_0100
-    * @tc.name      : test_deviceInfo_00
-    * @tc.desc      : test BasicServicesKit DeviceInfo
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_BasicServicesKit_Test_device_info_0100
+     * @tc.name      : test_deviceInfo_00
+     * @tc.desc      : test BasicServicesKit DeviceInfo
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_deviceInfo_00(): Unit {
         let deviceType = DeviceInfo.deviceType
         let manufacture = DeviceInfo.manufacture

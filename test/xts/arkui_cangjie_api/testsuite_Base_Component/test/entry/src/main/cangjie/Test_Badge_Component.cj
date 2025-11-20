@@ -51,7 +51,7 @@ class Test_Badge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Badge_Component_001() {
         let Inspector = getInspectorByKey("Badge_commpont")
         let aar = Inspector.split("useShadowBatching")
@@ -73,7 +73,7 @@ class Test_Badge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Badge_Component_002() {
         let Inspector = getInspectorByKey("Badge_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -91,7 +91,7 @@ class Test_Badge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Badge_Component_003() {
         let Inspector = getInspectorByKey("Badge_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -109,7 +109,7 @@ class Test_Badge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Badge_Component_004() {
         let Inspector = getInspectorByKey("Badge_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -127,7 +127,7 @@ class Test_Badge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Badge_Component_005() {
         let Inspector = getInspectorByKey("Badge_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()

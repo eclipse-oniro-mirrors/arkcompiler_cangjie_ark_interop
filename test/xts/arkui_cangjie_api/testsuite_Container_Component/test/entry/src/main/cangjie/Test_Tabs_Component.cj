@@ -48,7 +48,7 @@ class Test_Tabs_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Tabs_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_Tabs_Component_001 start")
         let Tabs = getInspectorByKey("Test_Tabs")
@@ -68,7 +68,7 @@ class Test_Tabs_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Tabs_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_Tabs_Component_002 start")
         let Tabs = getInspectorByKey("Test_Tabs")
@@ -88,7 +88,7 @@ class Test_Tabs_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Tabs_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_Tabs_Component_003 start")
         let Tabs = getInspectorByKey("Test_Tabs")
@@ -108,7 +108,7 @@ class Test_Tabs_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Tabs_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_Tabs_Component_004 start")
         let Tabs = getInspectorByKey("Test_Tabs")
@@ -127,7 +127,7 @@ class Test_Tabs_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Tabs_Component_005() {
         Hilog.info(0, "","cangjietest", "Test_Tabs_Component_005 start")
         let Tabs = getInspectorByKey("Test_Tabs")
@@ -146,7 +146,7 @@ class Test_Tabs_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Tabs_Component_008() {
         Hilog.info(0, "","cangjietest", "Test_Tabs_Component_008 start")
         let Tabs = getInspectorByKey("Test_Tabs")
@@ -172,7 +172,7 @@ class Test_Tabs_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Tabs_Component_009() {
         Hilog.info(0, "","cangjietest", "Test_Tabs_Component_009 start")
         driver.findComponent(On().id("Test_TabContent_01")).getOrThrow().click()

@@ -51,7 +51,7 @@ class Test_Blank_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Blank_Component_001() {
         Hilog.info(0,"",   "cangjietest", "Test_Blank_Component_001 start")
         let Blank = getInspectorByKey("blank")
@@ -78,7 +78,7 @@ class Test_Blank_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Blank_Component_002() {
         Hilog.info(0,"",   "cangjietest", "Test_Blank_Component_002 start")
         let Blank = getInspectorByKey("blank")

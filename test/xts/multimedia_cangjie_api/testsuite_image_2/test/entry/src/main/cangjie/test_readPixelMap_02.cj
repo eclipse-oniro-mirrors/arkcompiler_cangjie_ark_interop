@@ -23,17 +23,17 @@ import kit.ImageKit.*
 
 @Test
 class Test_readPixelMap_02 {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0100
-    * @tc.name      : test_readPixelMap_01
-    * @tc.desc      : test Image test_readPixelMap_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0100
+     * @tc.name      : test_readPixelMap_01
+     * @tc.desc      : test Image test_readPixelMap_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_readPixelMap_01(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}
@@ -45,17 +45,16 @@ class Test_readPixelMap_02 {
         @Expect(read_color.toString(), Read_Buf.toString())
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0200
-    * @tc.name      : test_readPixelMap_02
-    * @tc.desc      : test Image test_readPixelMap_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0200
+     * @tc.name      : test_readPixelMap_02
+     * @tc.desc      : test Image test_readPixelMap_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_readPixelMap_02(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}
@@ -67,17 +66,16 @@ class Test_readPixelMap_02 {
         @Expect(read_color.toString(), Read_Buf2.toString())
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0300
-    * @tc.name      : test_readPixelMap_03
-    * @tc.desc      : test Image test_readPixelMap_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0300
+     * @tc.name      : test_readPixelMap_03
+     * @tc.desc      : test Image test_readPixelMap_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_readPixelMap_03(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}
@@ -89,17 +87,16 @@ class Test_readPixelMap_02 {
         @Expect(area.pixels.toString(), Read_Buf3.toString())
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0400
-    * @tc.name      : test_readPixelMap_04
-    * @tc.desc      : test Image test_readPixelMap_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0400
+     * @tc.name      : test_readPixelMap_04
+     * @tc.desc      : test Image test_readPixelMap_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_readPixelMap_04(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}
@@ -116,17 +113,16 @@ class Test_readPixelMap_02 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0500
-    * @tc.name      : test_readPixelMap_05
-    * @tc.desc      : test Image test_readPixelMap_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0500
+     * @tc.name      : test_readPixelMap_05
+     * @tc.desc      : test Image test_readPixelMap_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_readPixelMap_05(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}
@@ -143,17 +139,16 @@ class Test_readPixelMap_02 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0600
-    * @tc.name      : test_readPixelMap_06
-    * @tc.desc      : test Image test_readPixelMap_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0600
+     * @tc.name      : test_readPixelMap_06
+     * @tc.desc      : test Image test_readPixelMap_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_readPixelMap_06(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}
@@ -170,17 +165,16 @@ class Test_readPixelMap_02 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0700
-    * @tc.name      : test_readPixelMap_07
-    * @tc.desc      : test Image test_readPixelMap_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0700
+     * @tc.name      : test_readPixelMap_07
+     * @tc.desc      : test Image test_readPixelMap_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_readPixelMap_07(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}
@@ -197,24 +191,22 @@ class Test_readPixelMap_02 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0800
-    * @tc.name      : test_writePixelMap_08
-    * @tc.desc      : test Image test_writePixelMap_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0800
+     * @tc.name      : test_writePixelMap_08
+     * @tc.desc      : test Image test_writePixelMap_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_writePixelMap_08(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}
         var read_arr: Array<UInt8> = Array<UInt8>(8, repeat: 0)
         var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888)
-        let area = PositionArea(Array<UInt8>(8) {index: Int64 => UInt8(index + 1)}, 0, 8,
-            Region(Size(1, 2), 0, 0))
+        let area = PositionArea(Array<UInt8>(8) {index: Int64 => UInt8(index + 1)}, 0, 8, Region(Size(1, 2), 0, 0))
         let read_area = PositionArea(read_arr, 0, 8, Region(Size(1, 2), 0, 0))
 
         globalPixelMap = createPixelMap(color, opts)
@@ -223,17 +215,16 @@ class Test_readPixelMap_02 {
         @Expect(read_area.pixels.toString(), Read_Buf3.toString())
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0900
-    * @tc.name      : test_writePixelMap_09
-    * @tc.desc      : test Image test_writePixelMap_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_0900
+     * @tc.name      : test_writePixelMap_09
+     * @tc.desc      : test Image test_writePixelMap_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_writePixelMap_09(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -247,17 +238,16 @@ class Test_readPixelMap_02 {
         @Expect(read_arr.toString(), Read_Buf4.toString())
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_1000
-    * @tc.name      : test_writePixelMap_10
-    * @tc.desc      : test Image test_writePixelMap_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_readPixelMap_02_1000
+     * @tc.name      : test_writePixelMap_10
+     * @tc.desc      : test Image test_writePixelMap_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_writePixelMap_10(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}

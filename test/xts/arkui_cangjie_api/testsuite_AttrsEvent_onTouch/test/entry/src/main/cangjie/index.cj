@@ -37,9 +37,9 @@ class EntryView {
                             .height(30)
                             .id(viewName)
                             .borderRadius(10)
-                            .onClick {
+                            .onClick({
                                 ClickEvent => getUIContext().getRouter().pushUrl(url: "View_EmptyAttrs_onTouch", params: supportView[idx])
-                            }
+                            })
                     }
                 )
             }.width(100.percent).margin(top: 5)

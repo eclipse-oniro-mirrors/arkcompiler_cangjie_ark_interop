@@ -31,7 +31,6 @@ import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
 import ohos.arkui.ui_context.*
-import ohos.animator.AnimatorResult
 
 @Entry
 @Component
@@ -51,7 +50,7 @@ class View_Animator {
                 .id("create")
                 .fontSize(30)
                 .fontColor(Color.Black)
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.backAnimator = getUIContext().createAnimator(AnimatorOptions(
                             duration: 5000,
@@ -65,7 +64,7 @@ class View_Animator {
                         ))
                     this.backAnimator?.onFrame = {
                         value: Float64 =>
-                        Hilog.info(0, "cangjietest", "test", "onframe called ${value}")
+                        Hilog.info(0, "cangjietest", "test", "onframe called ${value})")
                         this.wid = value
                         this.hei = value
                     }
@@ -84,22 +83,22 @@ class View_Animator {
                     let callBackGet2 = this.backAnimator?.onFrame
                     let fun2 = callBackGet2.getOrThrow()
                     fun2(333.0)
-                }
+                })
 
             Button("play")
                 .id("play")
                 .fontSize(30)
                 .fontColor(Color.Black)
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.flag = false
                     this.backAnimator?.play()
-                }
+                })
             Button("expectedFrameRateRange")
                 .id("expectedFrameRateRange")
                 .fontSize(20)
                 .fontColor(Color.Black)
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.flag = false
                     this.backAnimator?.setExpectedFrameRateRange(
@@ -109,49 +108,49 @@ class View_Animator {
                             expected: 3
                         )
                     )
-                }
+                })
             Button("pause")
                 .id("pause")
                 .fontSize(30)
                 .fontColor(Color.Black)
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.flag = false
                     this.backAnimator?.pause()
-                }
+                })
             Button("cancel")
                 .id("cancel")
                 .fontSize(30)
                 .fontColor(Color.Black)
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.flag = false
                     this.backAnimator?.cancel()
-                }
+                })
             Button("reverse")
                 .id("reverse")
                 .fontSize(30)
                 .fontColor(Color.Black)
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.flag = false
                     this.backAnimator?.reverse()
-                }
+                })
             Button("finish")
                 .id("finish")
                 .fontSize(30)
                 .fontColor(Color.Black)
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.flag = true
                     this.backAnimator?.finish()
-                }
+                })
 
             Button("reset")
                 .id("reset")
                 .fontSize(30)
                 .fontColor(Color.Black)
-                .onClick {
+                .onClick({
                     ClickEvent => if (this.flag) {
                         this.flag = false
                         this
@@ -171,7 +170,7 @@ class View_Animator {
                     } else {
                         Hilog.info(0, "cangjietest", "test", "Animation not ended")
                     }
-                }
+                })
         }
     }
 }

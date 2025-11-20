@@ -22,6 +22,7 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.resource_manager.AppResource
+internal import ohos.resource.__GenerateResource__
 
 @Test
 class TestAbilityStageContext {
@@ -35,7 +36,7 @@ class TestAbilityStageContext {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test00() {
         sleepFor(3.second)
         let abilityStageContext = getAbilityStageContext()
@@ -53,7 +54,7 @@ class TestAbilityStageContext {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test01() {
         let abilityStageContext = getAbilityStageContext()
         let hapModuleInfo = abilityStageContext
@@ -72,7 +73,7 @@ class TestAbilityStageContext {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test02() {
         let abilityStageContext = getAbilityStageContext()
         let hapModuleInfo = abilityStageContext
@@ -90,7 +91,7 @@ class TestAbilityStageContext {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test03() {
         let abilityStageContext = getAbilityStageContext()
         let hapModuleInfo = abilityStageContext
@@ -108,7 +109,7 @@ class TestAbilityStageContext {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test04() {
         let abilityStageContext = getAbilityStageContext()
         let hapModuleInfo = abilityStageContext
@@ -125,7 +126,7 @@ class TestAbilityStageContext {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test05() {
         let abilityStageContext = getAbilityStageContext()
         let hapModuleInfo = abilityStageContext

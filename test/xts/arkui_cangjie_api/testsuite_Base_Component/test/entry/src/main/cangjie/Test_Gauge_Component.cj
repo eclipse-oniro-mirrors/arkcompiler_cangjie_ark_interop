@@ -50,7 +50,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_001() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_001 start")
         let Inspector = getInspectorByKey("Gaugebase")
@@ -74,7 +74,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_002() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_002 start")
         let Inspector = getInspectorByKey("Gaugebase")
@@ -98,7 +98,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_003() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_003 start")
         let Inspector = getInspectorByKey("Gaugebase")
@@ -122,7 +122,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_004() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_004 start")
         let Inspector = getInspectorByKey("Gaugebase")
@@ -146,7 +146,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_005() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_005 start")
         let Inspector = getInspectorByKey("Gaugebase")
@@ -170,7 +170,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_006() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_006 start")
         let Inspector = getInspectorByKey("Gaugebase")
@@ -193,7 +193,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_007() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_007 start")
         let Inspector = getInspectorByKey("Gaugebase")
@@ -217,7 +217,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_008() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_004 start")
         let Inspector = getInspectorByKey("Gaugebase")
@@ -241,7 +241,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_009() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_009 start")
         let Inspector = getInspectorByKey("Gaugebase")
@@ -296,7 +296,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_010() {
         Hilog.info(0,"",   "cangjietest", "Test_Gauge_Component_010 start")
         let Inspector = getInspectorByKey("Gaugebase")

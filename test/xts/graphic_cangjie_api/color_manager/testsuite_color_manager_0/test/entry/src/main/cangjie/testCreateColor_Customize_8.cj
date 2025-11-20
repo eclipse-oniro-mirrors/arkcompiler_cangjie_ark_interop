@@ -35,7 +35,7 @@ class testCreateColor_Customize_8 {
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_731(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_731 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -62,7 +62,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_731 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_732(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_732 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -89,7 +89,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_732 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_733(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_733 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -116,7 +116,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_733 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_734(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_734 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -143,7 +143,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_734 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_735(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_735 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -170,7 +170,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_735 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_736(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_736 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -197,7 +197,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_736 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_737(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_737 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -224,7 +224,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_737 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_738(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_738 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -251,7 +251,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_738 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_739(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_739 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -278,7 +278,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_739 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_740(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_740 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -305,7 +305,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_740 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_741(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_741 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -332,7 +332,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_741 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_742(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_742 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -359,7 +359,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_742 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_743(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_743 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -386,7 +386,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_743 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_744(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_744 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -413,7 +413,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_744 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_745(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_745 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -440,7 +440,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_745 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_746(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_746 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -467,7 +467,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_746 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_747(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_747 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -494,7 +494,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_747 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_748(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_748 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -521,7 +521,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_748 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_749(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_749 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -548,7 +548,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_749 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_750(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_750 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -575,7 +575,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_750 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_751(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_751 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -602,7 +602,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_751 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_752(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_752 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -629,7 +629,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_752 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_753(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_753 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -656,7 +656,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_753 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_754(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_754 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -683,7 +683,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_754 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_755(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_755 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -710,7 +710,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_755 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_756(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_756 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -737,7 +737,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_756 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_757(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_757 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -764,7 +764,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_757 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_758(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_758 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -791,7 +791,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_758 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_759(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_759 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -818,7 +818,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_759 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_760(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_760 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -845,7 +845,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_760 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_761(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_761 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -872,7 +872,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_761 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_762(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_762 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -899,7 +899,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_762 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_763(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_763 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -926,7 +926,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_763 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_764(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_764 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -953,7 +953,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_764 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_765(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_765 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -980,7 +980,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_765 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_766(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_766 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1007,7 +1007,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_766 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_767(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_767 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1034,7 +1034,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_767 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_768(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_768 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1061,7 +1061,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_768 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_769(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_769 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1088,7 +1088,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_769 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_770(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_770 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1115,7 +1115,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_770 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_771(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_771 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1142,7 +1142,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_771 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_772(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_772 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1169,7 +1169,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_772 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_773(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_773 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1196,7 +1196,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_773 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_774(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_774 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1223,7 +1223,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_774 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_775(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_775 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1250,7 +1250,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_775 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_776(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_776 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1277,7 +1277,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_776 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_777(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_777 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1304,7 +1304,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_777 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_778(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_778 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1331,7 +1331,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_778 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_779(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_779 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1358,7 +1358,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_779 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_780(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_780 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1385,7 +1385,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_780 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_781(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_781 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1412,7 +1412,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_781 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_782(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_782 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1439,7 +1439,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_782 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_783(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_783 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1466,7 +1466,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_783 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_784(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_784 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1493,7 +1493,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_784 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_785(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_785 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1520,7 +1520,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_785 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_786(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_786 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1547,7 +1547,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_786 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_787(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_787 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1574,7 +1574,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_787 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_788(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_788 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1601,7 +1601,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_788 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_789(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_789 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1628,7 +1628,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_789 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_790(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_790 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1655,7 +1655,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_790 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_791(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_791 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1682,7 +1682,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_791 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_792(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_792 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1709,7 +1709,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_792 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_793(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_793 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1736,7 +1736,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_793 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_794(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_794 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1763,7 +1763,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_794 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_795(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_795 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1790,7 +1790,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_795 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_796(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_796 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1817,7 +1817,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_796 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_797(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_797 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -1844,7 +1844,7 @@ Hilog.info(0, "cangjietest", "testcase TestCase_797 ends.")
 */
 
 @TestCase
-@Tag[APILevel21, TestLevel0]
+@Tag[APILevel22, TestLevel0]
 func TestCase_798(): Unit  {
 Hilog.info(0, "cangjietest", "testcase TestCase_798 begins.")
 Hilog.info(0, "cangjietest", "define local variable primaries")

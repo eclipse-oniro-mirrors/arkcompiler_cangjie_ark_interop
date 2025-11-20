@@ -19,7 +19,6 @@ import std.unittest.testmacro.*
 import std.unittest.*
 import std.unittest.common.*
 import kit.BasicServicesKit.*
-
 import kit.CryptoArchitectureKit.*
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.*
@@ -31,6 +30,7 @@ import ohos.ui_test.*
 import ohos.base.*
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.*
+
 @Test
 class TestCryptoFramework_Create {
 
@@ -43,7 +43,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func createSymKeyGenerator_creat_algList() {
         let algNamelist = ["3DES192", "AES192"]
         for (algName in algNamelist) {
@@ -60,7 +60,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func createSymKeyGenerator_creat_algempty() {
         let algName = " "
         try {
@@ -80,7 +80,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_3DES192() {
         let algName = "3DES192"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -98,7 +98,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_AES128() {
         let algName = "AES128"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -116,7 +116,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_AES192() {
         let algName = "AES192"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -134,7 +134,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_AES256() {
         let algName = "AES256"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -152,7 +152,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_SM4_128() {
         let algName = "SM4_128"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -170,7 +170,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_HMAC_SHA1() {
         let algName = "HMAC|SHA1"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -188,7 +188,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_HMAC_SHA224() {
         let algName = "HMAC|SHA224"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -206,7 +206,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_HMAC_SHA256() {
         let algName = "HMAC|SHA256"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -224,7 +224,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_HMAC_SHA384() {
         let algName = "HMAC|SHA384"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -242,7 +242,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_HMAC_SHA512() {
         let algName = "HMAC|SHA512"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -260,7 +260,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func generateSymKey_HMAC_SM3() {
         let algName = "HMAC|SM3"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -278,7 +278,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func symKey_convertkey_3des() {
         let algName = "3DES192"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -298,7 +298,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func symKey_convertkey_sm4() {
         let algName = "SM4_128"
         let symKeyGenerator = createSymKeyGenerator(algName)
@@ -317,7 +317,7 @@ class TestCryptoFramework_Create {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func symKey_clearMem_convertkey_3des() {
         let algName = "3DES192"
         let symKeyGenerator = createSymKeyGenerator(algName)

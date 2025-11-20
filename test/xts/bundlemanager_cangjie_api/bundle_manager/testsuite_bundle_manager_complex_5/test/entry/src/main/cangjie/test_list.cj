@@ -14,42 +14,62 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testBundleInfo_versionCode_1", { =>testBundleInfo_versionCode_1()
-})
-registerTestSuite("testBundleInfo_versionCode_2", { =>testBundleInfo_versionCode_2()
-})
-registerTestSuite("testBundleInfo_versionCode_3", { =>testBundleInfo_versionCode_3()
-})
-registerTestSuite("testBundleInfo_versionCode_4", { =>testBundleInfo_versionCode_4()
-})
-registerTestSuite("testBundleInfo_versionCode_5", { =>testBundleInfo_versionCode_5()
-})
-registerTestSuite("testBundleInfo_versionCode_6", { =>testBundleInfo_versionCode_6()
-})
-registerTestSuite("testBundleInfo_versionCode_7", { =>testBundleInfo_versionCode_7()
-})
-registerTestSuite("testBundleInfo_versionCode_8", { =>testBundleInfo_versionCode_8()
-})
-registerTestSuite("testBundleInfo_versionCode_9", { =>testBundleInfo_versionCode_9()
-})
-registerTestSuite("testBundleInfo_versionCode_10", { =>testBundleInfo_versionCode_10()
-})
-registerTestSuite("testBundleInfo_versionCode_11", { =>testBundleInfo_versionCode_11()
-})
-registerTestSuite("testBundleInfo_versionCode_12", { =>testBundleInfo_versionCode_12()
-})
-registerTestSuite("testBundleInfo_versionCode_13", { =>testBundleInfo_versionCode_13()
-})
-registerTestSuite("testBundleInfo_versionCode_14", { =>testBundleInfo_versionCode_14()
-})
-registerTestSuite("testBundleInfo_versionCode_15", { =>testBundleInfo_versionCode_15()
-})
-registerTestSuite("testBundleInfo_versionCode_16", { =>testBundleInfo_versionCode_16()
-})
-registerTestSuite("testBundleInfo_versionCode_17", { =>testBundleInfo_versionCode_17()
-})
-registerTestSuite("testBundleInfo_versionCode_18", { =>testBundleInfo_versionCode_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testBundleInfo_versionCode_1", {
+        => testBundleInfo_versionCode_1()
+    })
+    registerTestSuite("testBundleInfo_versionCode_2", {
+        => testBundleInfo_versionCode_2()
+    })
+    registerTestSuite("testBundleInfo_versionCode_3", {
+        => testBundleInfo_versionCode_3()
+    })
+    registerTestSuite("testBundleInfo_versionCode_4", {
+        => testBundleInfo_versionCode_4()
+    })
+    registerTestSuite("testBundleInfo_versionCode_5", {
+        => testBundleInfo_versionCode_5()
+    })
+    registerTestSuite("testBundleInfo_versionCode_6", {
+        => testBundleInfo_versionCode_6()
+    })
+    registerTestSuite("testBundleInfo_versionCode_7", {
+        => testBundleInfo_versionCode_7()
+    })
+    registerTestSuite("testBundleInfo_versionCode_8", {
+        => testBundleInfo_versionCode_8()
+    })
+    registerTestSuite("testBundleInfo_versionCode_9", {
+        => testBundleInfo_versionCode_9()
+    })
+    registerTestSuite("testBundleInfo_versionCode_10", {
+        => testBundleInfo_versionCode_10()
+    })
+    registerTestSuite("testBundleInfo_versionCode_11", {
+        => testBundleInfo_versionCode_11()
+    })
+    registerTestSuite("testBundleInfo_versionCode_12", {
+        => testBundleInfo_versionCode_12()
+    })
+    registerTestSuite("testBundleInfo_versionCode_13", {
+        => testBundleInfo_versionCode_13()
+    })
+    registerTestSuite("testBundleInfo_versionCode_14", {
+        => testBundleInfo_versionCode_14()
+    })
+    registerTestSuite("testBundleInfo_versionCode_15", {
+        => testBundleInfo_versionCode_15()
+    })
+    registerTestSuite("testBundleInfo_versionCode_16", {
+        => testBundleInfo_versionCode_16()
+    })
+    registerTestSuite("testBundleInfo_versionCode_17", {
+        => testBundleInfo_versionCode_17()
+    })
+    registerTestSuite("testBundleInfo_versionCode_18", {
+        => testBundleInfo_versionCode_18()
+    })
 }

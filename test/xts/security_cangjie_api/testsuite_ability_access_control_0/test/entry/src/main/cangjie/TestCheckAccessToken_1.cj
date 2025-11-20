@@ -38,7 +38,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_39 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -62,7 +62,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_40 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -86,7 +86,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_41 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -110,7 +110,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_42 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -134,7 +134,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_43 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -158,7 +158,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_44 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -182,7 +182,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_45 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -206,7 +206,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_46 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -230,7 +230,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_47(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_47 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -254,7 +254,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_48(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_48 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -278,7 +278,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_49(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_49 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -302,7 +302,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_50(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_50 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -326,7 +326,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_51(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_51 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -350,7 +350,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_52(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_52 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -374,7 +374,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_53(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_53 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -399,7 +399,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_54(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_54 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -424,7 +424,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_55(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_55 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -448,7 +448,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_56(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_56 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -472,7 +472,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_57(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_57 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -496,7 +496,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_58(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_58 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -520,7 +520,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_59(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_59 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -544,7 +544,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_60(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_60 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -568,7 +568,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_61(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_61 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -592,7 +592,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_62(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_62 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -616,7 +616,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_63(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_63 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -640,7 +640,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_64(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_64 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -664,7 +664,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_65(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_65 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -689,7 +689,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_66(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_66 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -713,7 +713,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_67(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_67 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -737,7 +737,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_68(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_68 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -761,7 +761,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_69(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_69 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -785,7 +785,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_70(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_70 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -809,7 +809,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_71(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_71 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -833,7 +833,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_72(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_72 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -858,7 +858,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_73(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_73 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -882,7 +882,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_74(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_74 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -906,7 +906,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_75(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_75 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -930,7 +930,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_76(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_76 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -955,7 +955,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_77(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_77 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -980,7 +980,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_78(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_78 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1005,7 +1005,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_79(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_79 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1030,7 +1030,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_80(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_80 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1055,7 +1055,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_81(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_81 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1079,7 +1079,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_82(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_82 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1103,7 +1103,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_83(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_83 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1127,7 +1127,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_84(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_84 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1152,7 +1152,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_85(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_85 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1177,7 +1177,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_86(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_86 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1187,7 +1187,8 @@ class TestCheckAccessToken_1 {
         Hilog.info(0u32, "CangjieTest", "define local variable accessTokenManager")
         let accessTokenManager = AbilityAccessCtrl.createAtManager()
         Hilog.info(0u32, "CangjieTest", "define local variable grantStatus")
-        let grantStatus = accessTokenManager.checkAccessToken(accessTokenId, "ohos.permission.USE_FRAUD_CALL_LOG_PICKER")
+        let grantStatus = accessTokenManager.checkAccessToken(accessTokenId, "ohos.permission.USE_FRAUD_CALL_LOG_PICKER"
+        )
         @Assert(GrantStatus.PermissionDenied.toString(), grantStatus.toString())
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_86 ends.")
     }
@@ -1201,7 +1202,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_87(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_87 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1211,7 +1212,8 @@ class TestCheckAccessToken_1 {
         Hilog.info(0u32, "CangjieTest", "define local variable accessTokenManager")
         let accessTokenManager = AbilityAccessCtrl.createAtManager()
         Hilog.info(0u32, "CangjieTest", "define local variable grantStatus")
-        let grantStatus = accessTokenManager.checkAccessToken(accessTokenId, "ohos.permission.USE_FRAUD_MESSAGES_PICKER")
+        let grantStatus = accessTokenManager.checkAccessToken(accessTokenId, "ohos.permission.USE_FRAUD_MESSAGES_PICKER"
+        )
         @Assert(GrantStatus.PermissionDenied.toString(), grantStatus.toString())
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_87 ends.")
     }
@@ -1225,7 +1227,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_88(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_88 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1250,7 +1252,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_89(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_89 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1274,7 +1276,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_90(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_90 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1298,7 +1300,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_91(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_91 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1322,7 +1324,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_92(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_92 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1347,7 +1349,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_93(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_93 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1372,7 +1374,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_94(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_94 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1396,7 +1398,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_95(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_95 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1420,7 +1422,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_96(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_96 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1444,7 +1446,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_97(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_97 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1468,7 +1470,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_98(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_98 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1492,7 +1494,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_99(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_99 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")
@@ -1516,7 +1518,7 @@ class TestCheckAccessToken_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_100(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_100 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable bundleInfo")

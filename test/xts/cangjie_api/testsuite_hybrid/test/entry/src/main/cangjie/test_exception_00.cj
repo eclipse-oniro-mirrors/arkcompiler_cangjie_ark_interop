@@ -15,8 +15,7 @@
 
 package ohos_app_cangjie_entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, 
-    JSRuntime}
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
 func testJSThreadMismatchException00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let anotherJSRuntime = JSRuntime()
@@ -36,7 +35,9 @@ func testJSArrayRangeMismatchException00(jsContext: JSContext, _: JSCallInfo): J
         jsArray[1]
         Assert.isUnreachable()
     } catch (e: Exception) {
-        Assert.equals(e.toString(), "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, 1), given: 1")
+        Assert.equals(e.toString(),
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, 1), given: 1"
+        )
     }
     jsContext.undefined().toJSValue()
 }

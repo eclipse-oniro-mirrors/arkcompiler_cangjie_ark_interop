@@ -16,7 +16,8 @@
 package ohos_app_cangjie_entry
 
 import std.unittest.testmacro.{Test, TestCase, Expect}
-import ohos.security.crypto_framework.{createCipher, createSymKeyGenerator, CryptoMode, GcmParamsSpec, DataBlob, ParamsSpec}
+import ohos.security.crypto_framework.{createCipher, createSymKeyGenerator, CryptoMode, GcmParamsSpec, DataBlob, 
+    ParamsSpec}
 import std.unittest.testmacro.*
 import std.unittest.*
 import std.unittest.common.*
@@ -37,7 +38,7 @@ class Test_init_update_doFinal_04 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_cipher_init_01(): Unit {
         var cipher = createCipher("AES128|GCM|PKCS7")
         let skg = createSymKeyGenerator("AES128")
@@ -59,7 +60,7 @@ class Test_init_update_doFinal_04 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_cipher_init_02(): Unit {
         var cipher = createCipher("3DES192|ECB|PKCS7")
         let skg = createSymKeyGenerator("3DES192")
@@ -89,7 +90,7 @@ class Test_init_update_doFinal_04 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_cipher_init_03(): Unit {
         var cipher = createCipher("AES128|GCM|PKCS7")
         let skg = createSymKeyGenerator("AES128")
@@ -111,7 +112,7 @@ class Test_init_update_doFinal_04 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_cipher_init_04(): Unit {
         var cipher = createCipher("3DES192|ECB|NoPadding")
         let skg = createSymKeyGenerator("3DES192")
@@ -133,7 +134,7 @@ class Test_init_update_doFinal_04 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_cipher_init_05(): Unit {
         var cipher = createCipher("3DES192|ECB|NoPadding")
         let skg = createSymKeyGenerator("3DES192")

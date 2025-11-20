@@ -22,12 +22,11 @@ import ohos.arkui.state_management.AppStorage
 
 class MainAbility <: UIAbility {
     init() {
-            super()
-            registerSelf()
-        }
+        super()
+        registerSelf()
+    }
 
     public func onCreate(want: Want, launchParam: LaunchParam): Unit {
-
     }
 
     public func onWindowStageCreate(windowStage: WindowStage): Unit {

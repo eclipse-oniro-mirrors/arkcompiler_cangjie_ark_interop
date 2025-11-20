@@ -48,7 +48,7 @@ class Test_ScrollBar_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ScrollBar_Component_001() {
         let Inspector = getInspectorByKey("ScrollBar_component")
         let aar = Inspector.split("useShadowBatching")
@@ -70,7 +70,7 @@ class Test_ScrollBar_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ScrollBar_Component_002() {
         let Inspector = getInspectorByKey("ScrollBar_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -89,7 +89,7 @@ class Test_ScrollBar_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ScrollBar_Component_003() {
         let Inspector = getInspectorByKey("ScrollBar_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -107,7 +107,7 @@ class Test_ScrollBar_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ScrollBar_Component_004() {
         let Inspector = getInspectorByKey("ScrollBar_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -124,7 +124,7 @@ class Test_ScrollBar_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ScrollBar_Component_005() {
         let Inspector = getInspectorByKey("ScrollBar_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -142,7 +142,7 @@ class Test_ScrollBar_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ScrollBar_Component_006() {
         let Inspector = getInspectorByKey("ScrollBar_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()

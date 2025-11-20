@@ -38,7 +38,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_AlphabetIndexer_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Blank_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Button_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Checkbox_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_CheckboxGroup_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin CheckboxGroup")
@@ -163,7 +163,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_DataPanel_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin DataPanel")
@@ -188,7 +188,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_DatePicker_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin DatePicker")
@@ -213,7 +213,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Divider_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Divider")
@@ -238,7 +238,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Gauge_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Gauge")
@@ -263,7 +263,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Image_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Image")
@@ -288,7 +288,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_ImageSpan_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin ImageSpan")
@@ -313,7 +313,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_LoadingProgress_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin LoadingProgress")
@@ -338,7 +338,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Menu_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Menu")
@@ -363,7 +363,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_MenuItem_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin MenuItem")
@@ -388,7 +388,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_MenuItemGroup_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin MenuItemGroup")
@@ -413,7 +413,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Progress_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Progress")
@@ -438,7 +438,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_QRCode_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin QRCode")
@@ -463,7 +463,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Radio_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Radio")
@@ -488,7 +488,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Rating_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Rating")
@@ -513,7 +513,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Refresh_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Refresh")
@@ -538,7 +538,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_RichEditor_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin RichEditor")
@@ -563,7 +563,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_RichText_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin RichText")
@@ -588,7 +588,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_RowSplit_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin RowSplit")
@@ -613,7 +613,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_ScrollBar_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin ScrollBar")
@@ -638,7 +638,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Search_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Search")
@@ -663,7 +663,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Slider_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Slider")
@@ -688,7 +688,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Stepper_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Stepper")
@@ -713,7 +713,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_StepperItem_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin StepperItem")
@@ -738,7 +738,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Text_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Text")
@@ -763,7 +763,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_TextArea_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin TextArea")
@@ -788,7 +788,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_TextClock_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin TextClock")
@@ -813,7 +813,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_TextInput_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin TextInput")
@@ -838,7 +838,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_TextPicker_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin TextPicker")
@@ -863,7 +863,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_TextTimer_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin TextTimer")
@@ -888,7 +888,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Toggle_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Toggle")
@@ -913,7 +913,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Web_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Web")
@@ -938,7 +938,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Select_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Select")
@@ -963,7 +963,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Badge_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Badge")
@@ -988,7 +988,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Column_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Column")
@@ -1013,7 +1013,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Grid_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Grid")
@@ -1038,7 +1038,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_GridItem_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin GridItem")
@@ -1063,7 +1063,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_GridRow_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin GridRow")
@@ -1088,7 +1088,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_GridCol_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin GridCol")
@@ -1113,7 +1113,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Flex_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Flex")
@@ -1138,7 +1138,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_List_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin List")
@@ -1163,7 +1163,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_ListItem_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin ListItem")
@@ -1188,7 +1188,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_ListItemGroup_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin ListItemGroup")
@@ -1215,7 +1215,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_RelativeContainer_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin RelativeContainer")
@@ -1240,7 +1240,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Row_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Row")
@@ -1265,7 +1265,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Scroll_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Scroll")
@@ -1290,7 +1290,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Stack_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Stack")
@@ -1315,7 +1315,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Swiper_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Swiper")
@@ -1340,7 +1340,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Tabs_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Tabs")
@@ -1365,7 +1365,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_TabContent_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin TabContent")
@@ -1390,7 +1390,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Circle_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Circle")
@@ -1415,7 +1415,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Line_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Line")
@@ -1440,7 +1440,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Rect_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Rect")
@@ -1465,7 +1465,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Shape_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Shape")
@@ -1490,7 +1490,7 @@ class Test_EmptyAttrs_BorderWidth {
      * @tc.desic：Empty_Path_BorderWidth
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_BorderWidth_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckBorderWidth: FindBegin Path")

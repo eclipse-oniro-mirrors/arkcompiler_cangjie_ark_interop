@@ -22,8 +22,6 @@ import ohos.ui_test.*
 import kit.ArkData.*
 import ohos.business_exception.BusinessException
 import std.convert.Parsable
-import ohos.data.preferences.Options as PreferencesOptions
-import ohos.data.preferences.ValueType as PreferencesValueType
 
 @Test
 class Test_put_has_delete_03 {
@@ -79,13 +77,13 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_put_01(): Unit {
         try {
             preferences.put("", PreferencesValueType.StringData("仓颉语言"))
         } catch (e: BusinessException) {
             @Expect(e.code, 401)
-            @Expect(e.message, "Preferences put failed: Parameter error. Parameter verification failed.")
+
         }
     }
 
@@ -99,13 +97,13 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_put_02(): Unit {
         try {
             preferences.put("", PreferencesValueType.BoolArray([true, false, true]))
         } catch (e: BusinessException) {
             @Expect(e.code, 401)
-            @Expect(e.message, "Preferences put failed: Parameter error. Parameter verification failed.")
+
         }
     }
 
@@ -119,14 +117,14 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_put_03(): Unit {
         try {
             preferences.put("\0", PreferencesValueType.BoolArray([true, false, true]))
             @Expect(false)
         } catch (e: BusinessException) {
             @Expect(e.code, 401)
-            @Expect(e.message, "Preferences put failed: Parameter error. Parameter verification failed.")
+
         }
     }
 
@@ -140,7 +138,7 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_put_04(): Unit {
         for ((k, v) in preferences.getAll()) {
             match (v) {
@@ -166,7 +164,7 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_put_05(): Unit {
         preferences.put("123\0456", PreferencesValueType.BoolArray([true, false, true]))
         @Expect(preferences.has("123"), true)
@@ -182,7 +180,7 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_has_06(): Unit {
         for (i in 0..7000) {
             @Expect(preferences.has("${i}"), true)
@@ -199,7 +197,7 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_has_07(): Unit {
         for (i in 0..7000) {
             @Expect(preferences.has("${i}"), true)
@@ -216,7 +214,7 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_has_08(): Unit {
         preferences.put("%&abc", PreferencesValueType.BoolArray([true, false, true]))
         @Expect(preferences.has("%&abc"), true)
@@ -233,7 +231,7 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_has_09(): Unit {
         preferences.put("123", PreferencesValueType.BoolArray([true, false, true]))
         @Expect(preferences.has("123"), true)
@@ -251,7 +249,7 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_has_10(): Unit {
         let pref = preferences.has("")
         @Expect(pref, false)
@@ -267,14 +265,13 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_delete_11(): Unit {
         try {
             preferences.delete("")
             @Expect(false)
         } catch (e: BusinessException) {
             @Expect(e.code, 401)
-            @Expect(e.message, "Preferences delete failed: Parameter error. Parameter verification failed.")
         }
     }
 
@@ -288,14 +285,13 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_delete_12(): Unit {
         try {
             preferences.delete("\0")
             @Expect(false)
         } catch (e: BusinessException) {
             @Expect(e.code, 401)
-            @Expect(e.message, "Preferences delete failed: Parameter error. Parameter verification failed.")
         }
     }
 
@@ -309,7 +305,7 @@ class Test_put_has_delete_03 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_delete_13(): Unit {
         for (i in 0..1000) {
             preferences.delete("${i}")

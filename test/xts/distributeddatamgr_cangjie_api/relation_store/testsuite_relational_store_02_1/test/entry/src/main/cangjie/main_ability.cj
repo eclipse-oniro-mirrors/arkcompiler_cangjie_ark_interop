@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-
 package ohos_app_cangjie_entry
 
 import kit.AbilityKit.*
@@ -21,23 +20,20 @@ import ohos.window.WindowStage
 import ohos.arkui.state_management.AppStorage
 import kit.PerformanceAnalysisKit.Hilog
 
-
 class MainAbility <: UIAbility {
     init() {
         super()
         registerSelf()
     }
     public func onCreate(want: Want, launchParam: LaunchParam): Unit {
-        Hilog.info(0u32, "cangjietest","","MainAbility OnCreated.${want.abilityName}")
+        Hilog.info(0u32, "cangjietest", "", "MainAbility OnCreated.${want.abilityName}")
     }
 
     public func onWindowStageCreate(windowStage: WindowStage): Unit {
-        Hilog.info(0u32, "cangjietest","","MainAbility onWindowStageCreate.")
+        Hilog.info(0u32, "cangjietest", "", "MainAbility onWindowStageCreate.")
         AppStorage.setOrCreate("windowStage", windowStage)
         AppStorage.setOrCreate("abilityContext", this.context)
-        this
-            .context
-            .resourceManager
+        this.context.resourceManager
         windowStage.loadContent("EntryView")
     }
 }

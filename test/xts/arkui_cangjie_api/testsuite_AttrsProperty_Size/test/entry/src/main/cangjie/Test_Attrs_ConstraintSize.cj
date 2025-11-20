@@ -36,7 +36,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_AlphabetIndexer_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin AlphabetIndexer")
@@ -61,7 +61,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Blank_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Blank")
@@ -86,7 +86,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Button_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Button")
@@ -111,7 +111,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Checkbox_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Checkbox")
@@ -136,7 +136,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_CheckboxGroup_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin CheckboxGroup")
@@ -161,7 +161,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_DataPanel_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin DataPanel")
@@ -186,7 +186,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_DatePicker_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin DatePicker")
@@ -211,7 +211,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Divider_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Divider")
@@ -236,7 +236,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Gauge_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Gauge")
@@ -261,7 +261,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Image_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Image")
@@ -286,7 +286,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_ImageSpan_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin ImageSpan")
@@ -311,7 +311,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_LoadingProgress_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin LoadingProgress")
@@ -336,7 +336,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Menu_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Menu")
@@ -361,7 +361,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_MenuItem_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin MenuItem")
@@ -386,7 +386,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_MenuItemGroup_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin MenuItemGroup")
@@ -411,7 +411,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Progress_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Progress")
@@ -436,7 +436,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_QRCode_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin QRCode")
@@ -461,7 +461,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Radio_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Radio")
@@ -486,7 +486,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Rating_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Rating")
@@ -511,7 +511,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Refresh_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Refresh")
@@ -536,7 +536,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_RichEditor_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin RichEditor")
@@ -561,7 +561,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_RichText_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin RichText")
@@ -586,7 +586,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_RowSplit_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin RowSplit")
@@ -611,7 +611,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_ScrollBar_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin ScrollBar")
@@ -636,7 +636,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Search_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Search")
@@ -661,7 +661,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Slider_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Slider")
@@ -686,7 +686,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Stepper_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Stepper")
@@ -711,7 +711,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_StepperItem_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin StepperItem")
@@ -736,7 +736,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Text_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Text")
@@ -761,7 +761,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_TextArea_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin TextArea")
@@ -786,7 +786,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_TextClock_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin TextClock")
@@ -811,7 +811,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_TextInput_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin TextInput")
@@ -836,7 +836,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_TextPicker_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin TextPicker")
@@ -861,7 +861,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_TextTimer_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin TextTimer")
@@ -886,7 +886,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Toggle_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Toggle")
@@ -911,7 +911,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Web_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Web")
@@ -936,7 +936,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Select_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Select")
@@ -961,7 +961,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Badge_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Badge")
@@ -986,7 +986,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Column_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Column")
@@ -1011,7 +1011,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Grid_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Grid")
@@ -1036,7 +1036,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_GridItem_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin GridItem")
@@ -1061,7 +1061,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_GridRow_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin GridRow")
@@ -1086,7 +1086,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_GridCol_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin GridCol")
@@ -1111,7 +1111,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Flex_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Flex")
@@ -1136,7 +1136,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_List_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin List")
@@ -1161,7 +1161,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_ListItem_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin ListItem")
@@ -1186,7 +1186,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_ListItemGroup_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin ListItemGroup")
@@ -1212,7 +1212,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_RelativeContainer_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin RelativeContainer")
@@ -1237,7 +1237,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Row_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Row")
@@ -1262,7 +1262,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Scroll_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Scroll")
@@ -1287,7 +1287,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Stack_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Stack")
@@ -1312,7 +1312,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Swiper_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Swiper")
@@ -1337,7 +1337,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Tabs_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Tabs")
@@ -1362,7 +1362,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_TabContent_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin TabContent")
@@ -1387,7 +1387,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Circle_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Circle")
@@ -1412,7 +1412,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Line_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Line")
@@ -1437,7 +1437,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Rect_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Rect")
@@ -1462,7 +1462,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Shape_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Shape")
@@ -1487,7 +1487,7 @@ class Test_EmptyAttrs_ConstraintSize {
      * @tc.desic：Empty_Path_ConstraintSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ConstraintSize_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckConstraintSize: FindBegin Path")

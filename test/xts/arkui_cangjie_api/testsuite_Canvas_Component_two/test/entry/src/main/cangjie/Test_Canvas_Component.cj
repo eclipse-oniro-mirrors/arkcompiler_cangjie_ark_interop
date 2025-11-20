@@ -50,7 +50,7 @@ class Test_Canvas_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Canvas_Component_0100() {
         let Text = driver.findComponent(On().id("Test_Text")).getOrThrow().getText()
         @Expect(Text, "OnReady")

@@ -36,7 +36,7 @@ class TestCryptoFramework_Init {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func enmuResult_value() {
         @Expect(Result.InvalidParams.getValue(), 401)
         @Expect(Result.NotSupport.getValue(), 801)

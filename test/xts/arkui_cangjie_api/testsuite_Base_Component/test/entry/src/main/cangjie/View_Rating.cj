@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length,  Color, LengthType}
+import ohos.base.{LengthProp, Length,  Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -56,9 +56,9 @@ class View_Rating {
                     value: Float64 => this.rating = value
                 })
                 .id("ratingbasic")
-            Button("change").onClick {ClickEvent =>
+            Button("change").onClick({ClickEvent =>
                 this.rating = 4.0
-            }.id("change")
+            }).id("change")
             Text("${this.rating}").id("rating").fontSize(16).fontColor(0x182431).margin(16)
         }.width(100.percent).padding(top: 5)
     }

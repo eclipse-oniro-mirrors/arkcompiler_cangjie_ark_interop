@@ -26,17 +26,16 @@ import ohos.ui_test.*
 class Test_Mac_08 {
 
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0100
-    * @tc.name      : test_createMac_01
-    * @tc.desc      : test Crypto test_createMac_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0100
+     * @tc.name      : test_createMac_01
+     * @tc.desc      : test Crypto test_createMac_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMac_01(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMac_01(): Unit {
         var globalMac: Mac
         var macString: String = "SHA1"
         try {
@@ -47,19 +46,17 @@ class Test_Mac_08 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0200
-    * @tc.name      : test_createMac_02
-    * @tc.desc      : test Crypto test_createMac_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0200
+     * @tc.name      : test_createMac_02
+     * @tc.desc      : test Crypto test_createMac_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMac_02(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMac_02(): Unit {
         var globalMac: Mac
         var macString: String = "SHA1X"
 
@@ -71,19 +68,17 @@ class Test_Mac_08 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0300
-    * @tc.name      : test_createMac_03
-    * @tc.desc      : test Crypto test_createMac_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0300
+     * @tc.name      : test_createMac_03
+     * @tc.desc      : test Crypto test_createMac_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMac_03(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMac_03(): Unit {
         var globalMac: Mac
         var macString: String = ""
 
@@ -95,19 +90,17 @@ class Test_Mac_08 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0400
-    * @tc.name      : test_Mac_update_04
-    * @tc.desc      : test Crypto test_Mac_update_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0400
+     * @tc.name      : test_Mac_update_04
+     * @tc.desc      : test Crypto test_Mac_update_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_Mac_update_04(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_Mac_update_04(): Unit {
         var globalMac: Mac
         var macString: String = "SM3"
         var blob = DataBlob("this is test!".toArray())
@@ -124,19 +117,17 @@ class Test_Mac_08 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0500
-    * @tc.name      : test_Mac_update_05
-    * @tc.desc      : test Crypto test_Mac_update_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0500
+     * @tc.name      : test_Mac_update_05
+     * @tc.desc      : test Crypto test_Mac_update_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_Mac_update_05(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_Mac_update_05(): Unit {
         var globalMac: Mac
         var macString: String = "SHA256"
         var blob = DataBlob("".toArray())
@@ -153,19 +144,17 @@ class Test_Mac_08 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0600
-    * @tc.name      : test_Mac_doFinal_06
-    * @tc.desc      : test Crypto test_Mac_doFinal_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Mac_08_0600
+     * @tc.name      : test_Mac_doFinal_06
+     * @tc.desc      : test Crypto test_Mac_doFinal_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_Mac_doFinal_06(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_Mac_doFinal_06(): Unit {
         var globalMac: Mac
         var macString: String = "SHA256"
         var blob = DataBlob("test".toArray())

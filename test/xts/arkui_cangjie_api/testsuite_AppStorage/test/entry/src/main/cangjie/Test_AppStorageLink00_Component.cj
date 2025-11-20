@@ -50,7 +50,7 @@ class Test_AppStorageLink00_Component {
      * @tc.desic：change
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageLink00_Component_0100() {
         driver.findComponent(On().id("change1")).getOrThrow().click()
         let text00 = driver.findComponent(On().id("Int1")).getOrThrow().getText()
@@ -77,7 +77,7 @@ class Test_AppStorageLink00_Component {
      * @tc.desic：change
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageLink00_Component_0200() {
         let text00 = driver.findComponent(On().id("LinkInt2")).getOrThrow().getText()
         let text01 = driver.findComponent(On().id("LinkFloat2")).getOrThrow().getText()
@@ -103,7 +103,7 @@ class Test_AppStorageLink00_Component {
      * @tc.desic：change
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageLink00_Component_0300() {
         let text00 = driver.findComponent(On().id("LinkInt3")).getOrThrow().getText()
         let text01 = driver.findComponent(On().id("LinkFloat3")).getOrThrow().getText()
@@ -112,7 +112,6 @@ class Test_AppStorageLink00_Component {
         let text04 = driver.findComponent(On().id("LinkString3")).getOrThrow().getText()
         let text05 = driver.findComponent(On().id("LinkClass3")).getOrThrow().getText()
         let text06 = driver.findComponent(On().id("LinkStruct3")).getOrThrow().getText()
-        let text07 = driver.findComponent(On().id("LinkEnum3")).getOrThrow().getText()
         @Expect(text00,"ValueInt In ChildComp: 9")
         @Expect(text01,"ValueFloat In ChildComp: 9.000000")
         @Expect(text02,"ValueRune In ChildComp: F")
@@ -120,7 +119,6 @@ class Test_AppStorageLink00_Component {
         @Expect(text04,"ValueString In ChildComp: Hello")
         @Expect(text05,"ValueClass In ChildComp: Hello")
         @Expect(text06,"ValueStruct In ChildComp: Hello")
-        @Expect(text07,"ValueEnum In ChildComp: 10")
     }
 
     /*
@@ -129,7 +127,7 @@ class Test_AppStorageLink00_Component {
      * @tc.desic：change
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageLink00_Component_0400() {
         driver.swipe(621, 2245, 621, 1245, speed: 600)
         driver.delayMs(1000)

@@ -37,7 +37,7 @@ class testReportNetDisconnected_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_33(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_33 begins.")
         Hilog.info(0, "cangjietest","the net id is not found")
@@ -46,7 +46,7 @@ class testReportNetDisconnected_1 {
             reportNetDisconnected(netHandle)
             @Assert(true)
         } catch (e: BusinessException) {
-            @Expect(e.message, "reportNetConnected failed: the net id is not found.")
+            @Expect(e.message, "reportNetDisconnected failed: the net id is not found.")
             @Expect(e.code, 2101006i32)
         }
         Hilog.info(0, "cangjietest","testcase TestCase_33 ends.")

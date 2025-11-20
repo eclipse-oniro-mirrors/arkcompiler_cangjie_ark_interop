@@ -50,7 +50,7 @@ class Test_onTouch_Event {
      * @tc.desic：onClick_Event
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_onClick_Event_001() {
         let text1 = driver.findComponent(On().id("text1"))
         let text2 = driver.findComponent(On().id("text2"))

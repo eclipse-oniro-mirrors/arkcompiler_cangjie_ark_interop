@@ -50,7 +50,7 @@ class Test_AppStorageProp_Component {
      * @tc.desic： before delete
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageProp_Component_0100() {
         driver.findComponent(On().id("Test_Button01")).getOrThrow().click()
         driver.findComponent(On().id("Test_Button02")).getOrThrow().click()
@@ -68,7 +68,7 @@ class Test_AppStorageProp_Component {
      * @tc.desic： delete
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageProp_Component_0200() {
         driver.findComponent(On().id("Test_Button00")).getOrThrow().click()
         let res00 = driver.findComponent(On().id("Test_Text00")).getOrThrow().getText()
@@ -85,7 +85,7 @@ class Test_AppStorageProp_Component {
      * @tc.desic： keys
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageProp_Component_0300() {
         driver.findComponent(On().id("Test_Button01")).getOrThrow().click()
         let res00 = driver.findComponent(On().id("Test_Text03")).getOrThrow().getText()
@@ -100,7 +100,7 @@ class Test_AppStorageProp_Component {
      * @tc.desic： size
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageProp_Component_0400() {
         driver.findComponent(On().id("Test_Button02")).getOrThrow().click()
         let res00 = driver.findComponent(On().id("Test_Text05")).getOrThrow().getText()
@@ -113,7 +113,7 @@ class Test_AppStorageProp_Component {
      * @tc.desic： clear
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageProp_Component_0500() {
         driver.findComponent(On().id("Test_Button03")).getOrThrow().click()
         driver.findComponent(On().id("Test_Button02")).getOrThrow().click()

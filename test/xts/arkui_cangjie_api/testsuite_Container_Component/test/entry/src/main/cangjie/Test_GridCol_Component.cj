@@ -49,7 +49,7 @@ class Test_GridCol_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_GridCol_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_GridCol_Component_002 start")
         let Inspector = getInspectorByKey("gridcolbasic")

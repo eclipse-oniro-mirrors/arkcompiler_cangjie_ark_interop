@@ -48,7 +48,7 @@ class Test_BindContentCover_Component {
      * @tc.desic：onAppear
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_BindContentCover_Component_0100() {
         driver.findComponent(On().text("transition modal 1")).getOrThrow().click()
         driver.delayMs(1000)
@@ -66,7 +66,7 @@ class Test_BindContentCover_Component {
      * @tc.desic：onDisappear
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_BindContentCover_Component_0200() {
         driver.findComponent(On().text("close modal 2")).getOrThrow().click()
         driver.delayMs(1000)

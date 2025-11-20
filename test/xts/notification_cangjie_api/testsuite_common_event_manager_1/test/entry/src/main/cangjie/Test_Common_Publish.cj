@@ -39,11 +39,9 @@ class Test_CommonEvent_Publish {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Pulish_00() {
-        CommonEventManager.publish(Support
-            .COMMON_EVENT_SCREEN_ON
-            .toString())
+        CommonEventManager.publish(Support.COMMON_EVENT_SCREEN_ON.toString())
     }
 
     /*
@@ -55,11 +53,9 @@ class Test_CommonEvent_Publish {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Pulish_01() {
-        CommonEventManager.publish(Support
-            .COMMON_EVENT_SCREEN_OFF
-            .toString())
+        CommonEventManager.publish(Support.COMMON_EVENT_SCREEN_OFF.toString())
     }
 
     /*
@@ -71,7 +67,7 @@ class Test_CommonEvent_Publish {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Pulish_02() {
         let parameters = HashMap<String, ValueType>()
         parameters.add("1", ValueType.Int32Value(1))
@@ -87,9 +83,7 @@ class Test_CommonEvent_Publish {
         parameters.add("11", ValueType.ArrayFd([1, 2]))
         let commonEventPublishData = CommonEventPublishData(bundleName: "com.example.myapplication", data: "newbee",
             code: 123321, subscriberPermissions: ["123321"], isOrdered: false, isSticky: false, parameters: parameters)
-        CommonEventManager.publish(Support
-            .COMMON_EVENT_SCREEN_ON
-            .toString(), options: commonEventPublishData)
+        CommonEventManager.publish(Support.COMMON_EVENT_SCREEN_ON.toString(), options: commonEventPublishData)
     }
 
     /*
@@ -101,15 +95,13 @@ class Test_CommonEvent_Publish {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Pulish_03() {
         try {
             let commonEventPublishData = CommonEventPublishData(bundleName: "com.example.myapplication",
                 data: "sw65^6&^$%$", code: 123321i32, subscriberPermissions: ["Data"], isOrdered: false, isSticky: true,
                 parameters: HashMap<String, ValueType>())
-            CommonEventManager.publish(Support
-                .COMMON_EVENT_SCREEN_ON
-                .toString(), options: commonEventPublishData)
+            CommonEventManager.publish(Support.COMMON_EVENT_SCREEN_ON.toString(), options: commonEventPublishData)
             @Expect(true)
         } catch (e: Exception) {
             @Expect(false)
@@ -125,13 +117,11 @@ class Test_CommonEvent_Publish {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Pulish_04() {
         let commonEventPublishData = CommonEventPublishData(bundleName: "com.example.myapplication", data: "sw65^6&^$%$",
             code: -1i32, subscriberPermissions: ["Data"], isOrdered: false, isSticky: true,
             parameters: HashMap<String, ValueType>())
-        CommonEventManager.publish(Support
-            .COMMON_EVENT_SCREEN_ON
-            .toString(), options: commonEventPublishData)
+        CommonEventManager.publish(Support.COMMON_EVENT_SCREEN_ON.toString(), options: commonEventPublishData)
     }
 }

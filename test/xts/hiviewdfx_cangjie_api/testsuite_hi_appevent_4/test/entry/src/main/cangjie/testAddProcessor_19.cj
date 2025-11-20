@@ -36,7 +36,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1801(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1801 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -59,7 +59,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1802(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1802 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -82,7 +82,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1803(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1803 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -105,7 +105,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1804(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1804 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -128,7 +128,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1805(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1805 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -151,7 +151,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1806(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1806 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -174,7 +174,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1807(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1807 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -197,7 +197,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1808(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1808 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -220,7 +220,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1809(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1809 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -243,7 +243,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1810(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1810 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -266,7 +266,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1811(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1811 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -289,7 +289,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1812(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1812 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -312,7 +312,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1813(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1813 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -335,7 +335,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1814(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1814 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -358,7 +358,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1815(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1815 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -381,7 +381,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1816(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1816 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -404,7 +404,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1817(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1817 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -427,7 +427,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1818(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1818 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -450,7 +450,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1819(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1819 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -473,7 +473,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1820(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1820 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -496,7 +496,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1821(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1821 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -519,7 +519,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1822(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1822 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -542,7 +542,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1823(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1823 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -565,7 +565,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1824(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1824 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -588,7 +588,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1825(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1825 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -611,7 +611,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1826(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1826 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -634,7 +634,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1827(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1827 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -657,7 +657,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1828(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1828 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -680,7 +680,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1829(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1829 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -703,7 +703,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1830(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1830 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -726,7 +726,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1831(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1831 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -749,7 +749,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1832(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1832 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -772,7 +772,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1833(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1833 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -795,7 +795,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1834(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1834 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -818,7 +818,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1835(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1835 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -841,7 +841,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1836(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1836 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -864,7 +864,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1837(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1837 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -887,7 +887,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1838(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1838 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -910,7 +910,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1839(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1839 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -933,7 +933,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1840(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1840 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -956,7 +956,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1841(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1841 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -979,7 +979,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1842(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1842 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1002,7 +1002,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1843(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1843 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1025,7 +1025,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1844(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1844 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1048,7 +1048,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1845(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1845 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1071,7 +1071,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1846(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1846 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1094,7 +1094,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1847(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1847 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1117,7 +1117,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1848(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1848 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1140,7 +1140,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1849(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1849 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1163,7 +1163,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1850(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1850 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1186,7 +1186,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1851(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1851 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1209,7 +1209,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1852(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1852 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1232,7 +1232,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1853(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1853 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1255,7 +1255,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1854(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1854 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1278,7 +1278,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1855(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1855 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1301,7 +1301,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1856(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1856 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1324,7 +1324,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1857(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1857 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1347,7 +1347,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1858(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1858 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1370,7 +1370,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1859(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1859 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1393,7 +1393,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1860(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1860 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1416,7 +1416,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1861(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1861 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1439,7 +1439,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1862(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1862 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1462,7 +1462,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1863(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1863 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1485,7 +1485,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1864(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1864 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1508,7 +1508,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1865(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1865 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1531,7 +1531,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1866(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1866 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1554,7 +1554,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1867(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1867 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1577,7 +1577,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1868(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1868 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1600,7 +1600,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1869(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1869 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1623,7 +1623,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1870(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1870 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1646,7 +1646,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1871(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1871 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1669,7 +1669,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1872(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1872 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1692,7 +1692,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1873(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1873 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1715,7 +1715,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1874(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1874 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1738,7 +1738,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1875(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1875 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1761,7 +1761,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1876(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1876 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1784,7 +1784,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1877(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1877 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1807,7 +1807,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1878(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1878 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1830,7 +1830,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1879(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1879 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1853,7 +1853,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1880(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1880 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1876,7 +1876,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1881(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1881 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1899,7 +1899,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1882(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1882 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1922,7 +1922,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1883(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1883 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1945,7 +1945,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1884(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1884 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1968,7 +1968,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1885(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1885 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")
@@ -1991,7 +1991,7 @@ class testAddProcessor_19 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel1]
+    @Tag[APILevel21, TestLevel1]
     func TestCase_1886(): Unit {
        Hilog.info(0, "cangjietest","testcase TestCase_1886 begins.")
        Hilog.info(0, "cangjietest","define local variable returnCode")

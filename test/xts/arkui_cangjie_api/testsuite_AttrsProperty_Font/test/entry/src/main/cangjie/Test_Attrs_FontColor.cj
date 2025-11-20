@@ -38,7 +38,7 @@ class Test_EmptyAttrs_FontColor {
      * @tc.desic：Empty_Button_FontColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontColor_Button_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontColor: FindBegin Button")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_FontColor {
      * @tc.desic：Empty_Menu_FontColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontColor_Menu_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontColor: FindBegin Menu")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_FontColor {
      * @tc.desic：Empty_Text_FontColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontColor_Text_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontColor: FindBegin Text")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_FontColor {
      * @tc.desic：Empty_TextArea_FontColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontColor_TextArea_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontColor: FindBegin TextArea")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_FontColor {
      * @tc.desic：Empty_TextClock_FontColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontColor_TextClock_0600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontColor: FindBegin TextClock")
@@ -163,7 +163,7 @@ class Test_EmptyAttrs_FontColor {
      * @tc.desic：Empty_TextInput_FontColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontColor_TextInput_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontColor: FindBegin TextInput")
@@ -188,7 +188,7 @@ class Test_EmptyAttrs_FontColor {
      * @tc.desic：Empty_TextTimer_FontColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontColor_TextTimer_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontColor: FindBegin TextTimer")

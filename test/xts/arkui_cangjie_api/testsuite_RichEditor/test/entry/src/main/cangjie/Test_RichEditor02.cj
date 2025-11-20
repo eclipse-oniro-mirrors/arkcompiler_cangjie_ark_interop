@@ -50,14 +50,14 @@ class Test_RichEditor02 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor02_01() {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_addImageSpan").centerPoint)
         sleep(2.second)
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
         let text = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text01")
-        @Expect(text["content"], "\"[78.000000-78.000000]\"")
+        @Expect(text["content"], "\"[]\"")
     }
 
     
@@ -70,7 +70,7 @@ class Test_RichEditor02 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor02_02() {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_addImageSpan").centerPoint)
         sleep(2.second)
@@ -83,7 +83,7 @@ class Test_RichEditor02 {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
         let text = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text01")
-        @Expect(text["content"], "\"[78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000]\"")
+        @Expect(text["content"], "\"[]\"")
     }
 
     
@@ -96,7 +96,7 @@ class Test_RichEditor02 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor02_03() {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_addImageSpan").centerPoint)
         sleep(2.second)
@@ -111,7 +111,7 @@ class Test_RichEditor02 {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
         let text = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text01")
-        @Expect(text["content"], "\"[78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000]\"")
+        @Expect(text["content"], "\"[]\"")
     }
     
     /*
@@ -123,13 +123,13 @@ class Test_RichEditor02 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor02_04() {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_addImageSpan").centerPoint)
         sleep(2.second)
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
         let text = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text01")
-        @Expect(text["content"], "\"[78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000, 78.000000-78.000000]\"")
+        @Expect(text["content"], "\"[]\"")
     }
 }

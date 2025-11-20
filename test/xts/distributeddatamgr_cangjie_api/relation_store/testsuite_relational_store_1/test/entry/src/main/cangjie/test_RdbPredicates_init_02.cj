@@ -20,8 +20,8 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import ohos.business_exception.{BusinessException}
 import std.collection.{HashMap}
@@ -36,10 +36,11 @@ class Test_RdbPredicates_init_02 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -82,17 +83,17 @@ class Test_RdbPredicates_init_02 {
     public override func afterEach(): Unit {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_RdbPredicates_init_02_0100
-    * @tc.name      : test_rdbpredicates_init_01
-    * @tc.desc      : test RelationStore test_rdbpredicates_init_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_RdbPredicates_init_02_0100
+     * @tc.name      : test_rdbpredicates_init_01
+     * @tc.desc      : test RelationStore test_rdbpredicates_init_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rdbpredicates_init_01(): Unit {
         try {
             let predicates = RdbPredicates("")
@@ -103,39 +104,37 @@ class Test_RdbPredicates_init_02 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_RdbPredicates_init_02_0200
-    * @tc.name      : test_rdbpredicates_init_02
-    * @tc.desc      : test RelationStore test_rdbpredicates_init_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_RdbPredicates_init_02_0200
+     * @tc.name      : test_rdbpredicates_init_02
+     * @tc.desc      : test RelationStore test_rdbpredicates_init_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rdbpredicates_init_02(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notEqualTo("NAME", RelationalStoreValueType.StringValue("Bob"))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 2)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_RdbPredicates_init_02_0300
-    * @tc.name      : test_rdbpredicates_init_03
-    * @tc.desc      : test RelationStore test_rdbpredicates_init_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_RdbPredicates_init_02_0300
+     * @tc.name      : test_rdbpredicates_init_03
+     * @tc.desc      : test RelationStore test_rdbpredicates_init_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rdbpredicates_init_03(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notEqualTo("ID", RelationalStoreValueType.Integer(3))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 2)
     }
 }

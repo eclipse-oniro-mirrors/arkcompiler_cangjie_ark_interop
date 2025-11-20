@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length, Color, LengthType}
+import ohos.base.{LengthProp, Length, Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -37,8 +37,8 @@ class View_Gauge {
     var color3: LinearGradient = LinearGradient([ColorStop(0x6572B513, 0), ColorStop(0x6508efa6, 1)])
     var color4: LinearGradient = LinearGradient([ColorStop(0x65ed08f5, 0), ColorStop(0x65ef0849, 1)])
 
-    var colorArray2: Array<(LinearGradient, Float32)> = [(this.color1, 1.0), (this.color2, 2.0), (this.color3, 3.0),
-        (this.color4, 4.0)]
+    var colorArray2: Array<(LinearGradient, Int32)> = [(this.color1, 1i32), (this.color2, 2i32), (this.color3, 3i32),
+        (this.color4, 4i32)]
 
     func build() {
         Column() {
@@ -49,7 +49,7 @@ class View_Gauge {
                 .value(10.0)
                 .startAngle(220.0)
                 .endAngle(135.0)
-                .colors([(Color.Red, 1.0)])
+                .colors([(Color.Red, 1i32)])
                 .width(80.percent)
                 .strokeWidth(18)
                 .trackShadow(radius: 7.0, offsetX: 7.0, offsetY: 7.0)
@@ -58,23 +58,23 @@ class View_Gauge {
 
             Gauge(value: 50.0) {
                 Text("50").fontSize(30).textAlign(TextAlign.Center).width(80.percent)
-            }.colors([(Color.Red, 1.0)]).indicator(space: 8).id("Gaugebase3")
+            }.colors([(Color.Red, 1i32)]).indicator(space: 8).id("Gaugebase3")
 
             Gauge(value: 50.0) {
                 Text("50").fontSize(30).textAlign(TextAlign.Center).width(80.percent)
-            }.colors([(@r(app.color.gray), 1.0)]).indicator(icon: "default", space: 8).id("Gaugebase4")
+            }.colors([(@r(app.color.gray), 1i32)]).indicator(icon: "default", space: 8).id("Gaugebase4")
 
             Gauge(value: 50.0, min: 0.0) {
                 Text("50").fontSize(30).textAlign(TextAlign.Center).width(80.percent)
-            }.colors([(@r(app.color.gray), 1.0)]).id("Gaugebase5")
+            }.colors([(@r(app.color.gray), 1i32)]).id("Gaugebase5")
 
             Gauge(value: 50.0, min: 0.0, max: 100.0) {
                 Text("50").fontSize(30).textAlign(TextAlign.Center).width(80.percent)
-            }.colors([(0x65EEC9A3, 1.0)]).id("Gaugebase6")
+            }.colors([(0x65EEC9A3, 1i32)]).id("Gaugebase6")
 
             Gauge(value: 50.0, min: 0.0, max: 100.0) {
                 Text("50").fontSize(30).textAlign(TextAlign.Center).width(80.percent)
-            }.colors([(0x65EEC9A3, 1.0)]).id("Gaugebase7")
+            }.colors([(0x65EEC9A3, 1i32)]).id("Gaugebase7")
 
             Gauge(value: 50.0, min: 0.0, max: 100.0) {
                 Text("50").fontSize(30).textAlign(TextAlign.Center).width(80.percent)

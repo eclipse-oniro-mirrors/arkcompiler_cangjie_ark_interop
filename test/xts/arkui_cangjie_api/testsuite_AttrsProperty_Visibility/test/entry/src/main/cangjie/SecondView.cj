@@ -45,9 +45,9 @@ class SecondView {
                             .height(50)
                             .id(viewName)
                             .borderRadius(10)
-                            .onClick {
+                            .onClick({
                                 ClickEvent => getUIContext().getRouter().pushUrl(url: "View_EmptyAttrs_" + attr, params: supportView[idx])
-                            }
+                            })
                     }
                 )
             }.width(100.percent).margin(top: 5)

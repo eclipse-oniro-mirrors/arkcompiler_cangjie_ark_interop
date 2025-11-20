@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length, Color, LengthType}
+import ohos.base.{LengthProp, Length, Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -57,7 +57,7 @@ class View_onTouchEvent {
                     {
                         event =>
                         timestamp = event.timestamp
-                        match (event.source) {
+                        match (event.source.getOrThrow()) {
                             case SourceType.Mouse => source = "Mouse"
                             case SourceType.TouchScreen => source = "TouchScreen"
                             case SourceType.Unknown => source = "Unknown"

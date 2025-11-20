@@ -46,7 +46,7 @@ class Test_fileUri {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_fileUri() {
         let fPath = "/data/storage/el1/base/test_fileUri.txt"
         let file = FileIo.open(fPath, mode: OpenMode.CREATE)

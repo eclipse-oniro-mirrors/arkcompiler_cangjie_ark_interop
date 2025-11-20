@@ -26,32 +26,32 @@ import ohos.arkui.state_macro_manage.r
 
 @Test
 class Test_call_formatPhoneNumberToE164 {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumberToE164_0100
-    * @tc.name      : test_call_formatPhoneNumberToE164_01
-    * @tc.desc      : test TelephoneCall test_call_formatPhoneNumberToE164_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumberToE164_0100
+     * @tc.name      : test_call_formatPhoneNumberToE164_01
+     * @tc.desc      : test TelephoneCall test_call_formatPhoneNumberToE164_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_call_formatPhoneNumberToE164_01() {
         let result = Call.formatPhoneNumberToE164("12345678910", "CN")
         @Expect(result,"12345678910")
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumberToE164_0200
-    * @tc.name      : test_call_formatPhoneNumberToE164_02
-    * @tc.desc      : test TelephoneCall test_call_formatPhoneNumberToE164_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_TelephoneCall_Test_call_formatPhoneNumberToE164_0200
+     * @tc.name      : test_call_formatPhoneNumberToE164_02
+     * @tc.desc      : test TelephoneCall test_call_formatPhoneNumberToE164_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_call_formatPhoneNumberToE164_02() {
         let result = Call.formatPhoneNumberToE164("12345678910", "us")
         @Expect(result,"1 234-567-8910")

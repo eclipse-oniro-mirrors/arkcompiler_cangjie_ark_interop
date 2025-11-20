@@ -27,27 +27,27 @@ import ohos.business_exception.BusinessException
 
 @Test
 class Test_SecurityHuks_ExportKeyItem {
-      let genKeyOptionsTest1 = HuksOptions( properties:
-                    [
-                        HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
-                        HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
-                        HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
-                        HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32)),
-                        HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Int32Value(1i32)),
-                        HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(false)),
-                        HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
-                    ]
-    )     
+    let genKeyOptionsTest1 = HuksOptions(
+        properties: [
+            HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
+            HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
+            HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
+            HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Int32Value(0i32)),
+            HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Int32Value(1i32)),
+            HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(false)),
+            HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
+        ]
+    )
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ExportKeyItem_0100
-    * @tc.name      : test_export_empty_alias
-    * @tc.desc      : test UniversalKeystoreKit exportKeyItem
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ExportKeyItem_0100
+     * @tc.name      : test_export_empty_alias
+     * @tc.desc      : test UniversalKeystoreKit exportKeyItem
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_export_empty_alias() {
         let keyAlias = ""
         var flag = false

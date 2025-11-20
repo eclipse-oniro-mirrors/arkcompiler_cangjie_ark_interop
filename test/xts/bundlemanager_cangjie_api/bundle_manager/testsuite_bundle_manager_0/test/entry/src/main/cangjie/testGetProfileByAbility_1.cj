@@ -37,13 +37,12 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "CangjieTest", "profile nonExistentProfileName not found in entry-EntryAbility")
         try {
             BundleManager.getProfileByAbility("entry", "EntryAbility", metadataName: "nonExistentProfileName")
-            @Expect("assertion#0: not throw", "profile nonExistentProfileName not found in entry-EntryAbility")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified profile is not found in the HAP.")
             @Expect(e.code, 17700024i32)
@@ -60,13 +59,12 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "CangjieTest", "ability ApplicationAbility not found in entry")
         try {
             BundleManager.getProfileByAbility("entry", "ApplicationAbility", metadataName: "profile0")
-            @Expect("assertion#1: not throw", "ability ApplicationAbility not found in entry")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified ability is not found.")
             @Expect(e.code, 17700003i32)
@@ -83,13 +81,12 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "CangjieTest", "ability ApplicationAbility not found in entry")
         try {
             BundleManager.getProfileByAbility("entry", "ApplicationAbility", metadataName: "nonExistentProfileName")
-            @Expect("assertion#2: not throw", "ability ApplicationAbility not found in entry")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified ability is not found.")
             @Expect(e.code, 17700003i32)
@@ -106,13 +103,12 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "CangjieTest", "ability nonExistentAbilityName not found in entry")
         try {
             BundleManager.getProfileByAbility("entry", "nonExistentAbilityName", metadataName: "profile0")
-            @Expect("assertion#3: not throw", "ability nonExistentAbilityName not found in entry")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified ability is not found.")
             @Expect(e.code, 17700003i32)
@@ -129,13 +125,12 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_6 begins.")
         Hilog.info(0u32, "CangjieTest", "ability nonExistentAbilityName not found in entry")
         try {
             BundleManager.getProfileByAbility("entry", "nonExistentAbilityName", metadataName: "nonExistentProfileName")
-            @Expect("assertion#4: not throw", "ability nonExistentAbilityName not found in entry")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified ability is not found.")
             @Expect(e.code, 17700003i32)
@@ -152,13 +147,12 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_7 begins.")
         Hilog.info(0u32, "CangjieTest", "ability EntryAbility not found in application")
         try {
             BundleManager.getProfileByAbility("application", "EntryAbility", metadataName: "profile0")
-            @Expect("assertion#5: not throw", "ability EntryAbility not found in application")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)
@@ -175,20 +169,18 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_8 begins.")
         Hilog.info(0u32, "CangjieTest", "ability EntryAbility not found in application")
         try {
             BundleManager.getProfileByAbility("application", "EntryAbility", metadataName: "nonExistentProfileName")
-            @Expect("assertion#6: not throw", "ability EntryAbility not found in application")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)
         }
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_8 ends.")
     }
-
 
     /*
      * @tc.number    : Sub_Cangjie_bundle_manager_getProfileByAbility_1000
@@ -199,14 +191,13 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_10 begins.")
         Hilog.info(0u32, "CangjieTest", "profile nonExistentProfileName not found in application-ApplicationAbility")
         try {
             BundleManager.getProfileByAbility("application", "ApplicationAbility",
                 metadataName: "nonExistentProfileName")
-            @Expect("assertion#7: not throw", "profile nonExistentProfileName not found in application-ApplicationAbility")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)
@@ -223,13 +214,12 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_11 begins.")
         Hilog.info(0u32, "CangjieTest", "ability nonExistentAbilityName not found in application")
         try {
             BundleManager.getProfileByAbility("application", "nonExistentAbilityName", metadataName: "profile0")
-            @Expect("assertion#8: not throw", "ability nonExistentAbilityName not found in application")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)
@@ -246,14 +236,13 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_12 begins.")
         Hilog.info(0u32, "CangjieTest", "ability nonExistentAbilityName not found in application")
         try {
             BundleManager.getProfileByAbility("application", "nonExistentAbilityName",
                 metadataName: "nonExistentProfileName")
-            @Expect("assertion#9: not throw", "ability nonExistentAbilityName not found in application")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)
@@ -270,13 +259,12 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_13 begins.")
         Hilog.info(0u32, "CangjieTest", "module nonExistentModuleName not found")
         try {
             BundleManager.getProfileByAbility("nonExistentModuleName", "EntryAbility", metadataName: "profile0")
-            @Expect("assertion#10: not throw", "module nonExistentModuleName not found")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)
@@ -293,7 +281,7 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_14 begins.")
         Hilog.info(0u32, "CangjieTest", "module nonExistentModuleName not found")
@@ -317,13 +305,12 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_15 begins.")
         Hilog.info(0u32, "CangjieTest", "module nonExistentModuleName not found")
         try {
             BundleManager.getProfileByAbility("nonExistentModuleName", "ApplicationAbility", metadataName: "profile0")
-            @Expect("assertion#12: not throw", "module nonExistentModuleName not found")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)
@@ -340,14 +327,13 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_16 begins.")
         Hilog.info(0u32, "CangjieTest", "module nonExistentModuleName not found")
         try {
             BundleManager.getProfileByAbility("nonExistentModuleName", "ApplicationAbility",
                 metadataName: "nonExistentProfileName")
-            @Expect("assertion#13: not throw", "module nonExistentModuleName not found")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)
@@ -364,14 +350,13 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_17 begins.")
         Hilog.info(0u32, "CangjieTest", "module nonExistentModuleName not found")
         try {
             BundleManager.getProfileByAbility("nonExistentModuleName", "nonExistentAbilityName",
                 metadataName: "profile0")
-            @Expect("assertion#14: not throw", "module nonExistentModuleName not found")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)
@@ -388,14 +373,13 @@ class testGetProfileByAbility_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_18 begins.")
         Hilog.info(0u32, "CangjieTest", "module nonExistentModuleName not found")
         try {
             BundleManager.getProfileByAbility("nonExistentModuleName", "nonExistentAbilityName",
                 metadataName: "nonExistentProfileName")
-            @Expect("assertion#15: not throw", "module nonExistentModuleName not found")
         } catch (e: BusinessException) {
             @Expect(e.message, "The specified module is not found.")
             @Expect(e.code, 17700002i32)

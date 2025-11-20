@@ -49,7 +49,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_001 start")
         driver.delayMs(1000)
@@ -73,7 +73,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_002 start")
         driver.delayMs(1000)
@@ -91,7 +91,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_003 start")
         driver.delayMs(1000)
@@ -113,7 +113,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_004 start")
         driver.delayMs(1000)
@@ -141,7 +141,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_005() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_005 start")
         driver.delayMs(1000)
@@ -169,7 +169,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_006() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_006 start")
         driver.delayMs(1000)
@@ -197,7 +197,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_007() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_007 start")
         driver.delayMs(1000)
@@ -219,7 +219,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_008() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_008 start")
         driver.delayMs(1000)
@@ -241,7 +241,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_009() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_009 start")
         driver.delayMs(1000)
@@ -269,7 +269,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_010() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_010 start")
         driver.delayMs(1000)
@@ -328,7 +328,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_011() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_011 start")
         driver.delayMs(1000)
@@ -356,7 +356,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_012() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_012 start")
         driver.delayMs(1000)
@@ -384,7 +384,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_013() {
         Hilog.info(0, "","cangjietest", "Test_Select_Component_013 start")
         driver.delayMs(1000)
@@ -404,7 +404,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_014() {
         let text = driver.findComponent(On().id("test_select1")).getOrThrow().getText()
         @Expect(text,"模块描述")
@@ -420,7 +420,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_015() {
         let Select = getInspectorByKey("test_select1")
         let obj = JsonValue.fromStr(Select).asObject()
@@ -444,7 +444,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_016() {
         let Select = getInspectorByKey("test_select2")
         let obj = JsonValue.fromStr(Select).asObject()
@@ -468,7 +468,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_017() {
         let Select = getInspectorByKey("test_select1")
         let obj = JsonValue.fromStr(Select).asObject()
@@ -492,7 +492,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_018() {
         let Select = getInspectorByKey("test_select2")
         let obj = JsonValue.fromStr(Select).asObject()
@@ -516,7 +516,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_019() {
         let Select = getInspectorByKey("test_select1")
         let obj = JsonValue.fromStr(Select).asObject()
@@ -534,7 +534,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_020() {
         let Select = getInspectorByKey("test_select2")
         let obj = JsonValue.fromStr(Select).asObject()
@@ -551,7 +551,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_021() {
         let Select = getInspectorByKey("test_select1")
         let obj = JsonValue.fromStr(Select).asObject()
@@ -575,7 +575,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_022() {
         let Select = getInspectorByKey("test_select2")
         let obj = JsonValue.fromStr(Select).asObject()
@@ -599,7 +599,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_023() {
         let Select = getInspectorByKey("test_select1")
         let obj = JsonValue.fromStr(Select).asObject()
@@ -623,7 +623,7 @@ class Test_Select_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Select_Component_024() {
         let Select = getInspectorByKey("test_select2")
         let obj = JsonValue.fromStr(Select).asObject()

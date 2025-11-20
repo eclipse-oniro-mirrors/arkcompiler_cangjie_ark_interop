@@ -51,7 +51,7 @@ class Test_Menu_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Menu_component_001() {
         Hilog.info(0,"",   "cangjietest", "Test_Menu_component_001 start")
         driver.findComponent(On().id("showmenu")).getOrThrow().click()
@@ -74,7 +74,7 @@ class Test_Menu_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Menu_component_002() {
         Hilog.info(0,"",   "cangjietest", "Test_Menu_component_002 start")
         driver.delayMs(1000)
@@ -141,7 +141,7 @@ class Test_Menu_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Menu_component_003() {
         Hilog.info(0,"",   "cangjietest", "Test_Menu_component_003 start")
         driver.delayMs(1000)
@@ -212,7 +212,7 @@ class Test_Menu_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Menu_component_004() {
         Hilog.info(0,"",   "cangjietest", "Test_Menu_component_004 start")
         driver.delayMs(1000)
@@ -234,7 +234,7 @@ class Test_Menu_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Menu_component_005() {
         Hilog.info(0,"",   "cangjietest", "Test_Menu_component_005 start")
         driver.delayMs(1000)

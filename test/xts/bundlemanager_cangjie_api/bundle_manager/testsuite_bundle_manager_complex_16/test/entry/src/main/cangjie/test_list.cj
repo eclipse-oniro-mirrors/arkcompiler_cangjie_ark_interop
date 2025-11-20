@@ -14,42 +14,68 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_1", { =>testModuleInfo_fileContextMenuConfig_entry_1()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_2", { =>testModuleInfo_fileContextMenuConfig_entry_2()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_3", { =>testModuleInfo_fileContextMenuConfig_entry_3()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_4", { =>testModuleInfo_fileContextMenuConfig_entry_4()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_5", { =>testModuleInfo_fileContextMenuConfig_entry_5()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_6", { =>testModuleInfo_fileContextMenuConfig_entry_6()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_7", { =>testModuleInfo_fileContextMenuConfig_entry_7()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_8", { =>testModuleInfo_fileContextMenuConfig_entry_8()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_9", { =>testModuleInfo_fileContextMenuConfig_entry_9()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_10", { =>testModuleInfo_fileContextMenuConfig_entry_10()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_11", { =>testModuleInfo_fileContextMenuConfig_entry_11()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_12", { =>testModuleInfo_fileContextMenuConfig_entry_12()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_13", { =>testModuleInfo_fileContextMenuConfig_entry_13()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_14", { =>testModuleInfo_fileContextMenuConfig_entry_14()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_15", { =>testModuleInfo_fileContextMenuConfig_entry_15()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_16", { =>testModuleInfo_fileContextMenuConfig_entry_16()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_17", { =>testModuleInfo_fileContextMenuConfig_entry_17()
-})
-registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_18", { =>testModuleInfo_fileContextMenuConfig_entry_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_1",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_1()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_2",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_2()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_3",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_3()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_4",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_4()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_5",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_5()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_9",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_9()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_10",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_10()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_11",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_11()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_12",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_12()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_13",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_13()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_14",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_14()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_15",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_15()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_16",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_16()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_17",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_17()
+        })
+    registerTestSuite("testModuleInfo_fileContextMenuConfig_entry_18",
+        {
+            => testModuleInfo_fileContextMenuConfig_entry_18()
+        })
 }

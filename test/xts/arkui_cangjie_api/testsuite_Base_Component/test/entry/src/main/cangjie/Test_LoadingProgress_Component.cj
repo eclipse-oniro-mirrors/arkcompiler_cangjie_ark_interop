@@ -52,7 +52,7 @@ class Test_LoadingProgress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LoadingProgress_Component_001() {
         Hilog.info(0,"",   "cangjietest", "[Test_LoadingProgress_Component_001] start")
         // 1、获取页面中id为checkboxBasis的组件信息

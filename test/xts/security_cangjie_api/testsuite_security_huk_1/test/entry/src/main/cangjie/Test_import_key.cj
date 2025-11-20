@@ -27,8 +27,8 @@ import ohos.business_exception.BusinessException
 
 @Test
 class Test_SecurityHuks_ImportKey {
-    let genKeyOptionsTest1 = HuksOptions( properties:
-        [
+    let genKeyOptionsTest1 = HuksOptions(
+        properties: [
             HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
             HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
             HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
@@ -37,56 +37,52 @@ class Test_SecurityHuks_ImportKey {
             HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(false)),
             HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
         ]
-    )      
+    )
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0100
-    * @tc.name      : test_import_aes
-    * @tc.desc      : test UniversalKeystoreKit HuksParam
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0100
+     * @tc.name      : test_import_aes
+     * @tc.desc      : test UniversalKeystoreKit HuksParam
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_import_aes() {
         // ref: https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/UniversalKeystoreKit/huks-import-key-in-plaintext-arkts.md
         let keyAlias = "test_import_aes"
         clean(keyAlias)
         try {
-
             importKeyItem(
                 keyAlias,
-                HuksOptions(properties:
-                    [
-    
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                         HuksParam(
                             HuksTag.HUKS_TAG_PURPOSE,
                             HuksParamValue.BytesValue([2u8])
                         )
                     ]
-
                 )
             )
             @Expect(isKeyItemExist(keyAlias, genKeyOptionsTest1))
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-        finally {
+        } finally {
             clean(keyAlias)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0200
-    * @tc.name      : test_import_ecc
-    * @tc.desc      : test UniversalKeystoreKit HuksParam
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0200
+     * @tc.name      : test_import_ecc
+     * @tc.desc      : test UniversalKeystoreKit HuksParam
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_import_ecc() {
         // ref: https://gitee.com/openharmony/docs/blob/master/zh-cn/application-dev/security/UniversalKeystoreKit/huks-import-key-in-plaintext-ndk.md
         let keyAlias = "test_import_ecc"
@@ -96,8 +92,8 @@ class Test_SecurityHuks_ImportKey {
         clean(keyAliasBak)
 
         try {
-            let options = HuksOptions(properties:
-                [
+            let options = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
@@ -107,11 +103,10 @@ class Test_SecurityHuks_ImportKey {
 
             generateKeyItem(keyAlias, options)
 
-
             importKeyItem(
                 keyAliasBak,
-                HuksOptions(properties:
-                    [
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BytesValue([1u8])),
                         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.BooleanValue(true)),
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
@@ -123,33 +118,30 @@ class Test_SecurityHuks_ImportKey {
             @Expect(isKeyItemExist(keyAliasBak, genKeyOptionsTest1))
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-         finally {
+        } finally {
             clean(keyAlias)
             clean(keyAliasBak)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0300
-    * @tc.name      : test_import_empty_alias
-    * @tc.desc      : test UniversalKeystoreKit HuksParam
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0300
+     * @tc.name      : test_import_empty_alias
+     * @tc.desc      : test UniversalKeystoreKit HuksParam
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_import_empty_alias() {
         let keyAlias = ""
         var flag = false
         try {
-
             importKeyItem(
                 keyAlias,
-                HuksOptions(properties:
-                    [
-    
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                         HuksParam(
                             HuksTag.HUKS_TAG_PURPOSE,
@@ -166,20 +158,19 @@ class Test_SecurityHuks_ImportKey {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0400
-    * @tc.name      : test_import_none_properties
-    * @tc.desc      : test UniversalKeystoreKit HuksParam
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0400
+     * @tc.name      : test_import_none_properties
+     * @tc.desc      : test UniversalKeystoreKit HuksParam
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_import_none_properties() {
         let keyAlias = "test_import"
         var flag = false
         try {
-
             importKeyItem(
                 keyAlias,
                 genKeyOptionsTest1
@@ -192,15 +183,15 @@ class Test_SecurityHuks_ImportKey {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0500
-    * @tc.name      : test_import_none_indata
-    * @tc.desc      : test UniversalKeystoreKit HuksParam
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_ImportKey_0500
+     * @tc.name      : test_import_none_indata
+     * @tc.desc      : test UniversalKeystoreKit HuksParam
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_import_none_indata() {
         let keyAlias = "test_import"
         clean(keyAlias)
@@ -208,9 +199,8 @@ class Test_SecurityHuks_ImportKey {
         try {
             importKeyItem(
                 keyAlias,
-                HuksOptions(properties:
-                    [
-    
+                HuksOptions(
+                    properties: [
                         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                         HuksParam(
                             HuksTag.HUKS_TAG_PURPOSE,

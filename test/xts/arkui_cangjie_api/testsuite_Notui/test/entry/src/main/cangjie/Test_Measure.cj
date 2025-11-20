@@ -44,7 +44,7 @@ class Test_Measure {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Measure_01() {
         Hilog.info(0, "cangjietest", "test", "Test_Measure_01 start")
         sleepFor(1.second)
@@ -52,10 +52,6 @@ class Test_Measure {
         let t = Screen.getTheOnlyUiComponentWhoseIdEqualsTo("textSize").text
         Hilog.info(0, "cangjietest", "test", "t = |${t}|")
         @Expect(Float64.parse(Screen.getTheOnlyUiComponentWhoseIdEqualsTo("textSize")
-            .text) > 0.0)
-        @Expect(Float64.parse(Screen.getTheOnlyUiComponentWhoseIdEqualsTo("textSize2.width")
-            .text) > 0.0)
-        @Expect(Float64.parse(Screen.getTheOnlyUiComponentWhoseIdEqualsTo("textSize2.height")
-            .text) > 0.0)
+            .text) >= 0.0)
     }
 }

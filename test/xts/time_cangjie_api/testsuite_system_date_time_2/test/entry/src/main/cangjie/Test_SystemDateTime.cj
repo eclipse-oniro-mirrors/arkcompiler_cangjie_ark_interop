@@ -38,7 +38,7 @@ public class Test_SystemDateTime {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getCurrentTime() {
         sleepFor(1.second)
         let time = SystemDateTime.getTime()

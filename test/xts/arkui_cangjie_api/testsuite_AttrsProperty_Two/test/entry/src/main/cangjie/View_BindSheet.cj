@@ -37,9 +37,9 @@ class View_BindSheet {
     @Builder
     public func myBuilder2():Unit {
         Column() {
-            Button("close modal 2").margin(10).fontSize(20).onClick {ClickEvent =>
+            Button("close modal 2").margin(10).fontSize(20).onClick({ClickEvent =>
                 this.isShow2 = false
-            }
+            })
         }.width(100.percent).height(100.percent).justifyContent(FlexAlign.Center)
     }
 

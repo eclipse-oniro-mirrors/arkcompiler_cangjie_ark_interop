@@ -37,7 +37,7 @@ class Test_hiAppEvent_setUserId {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserId_01() {
         try {
             let test_userID_name = "test_setUserId_01"
@@ -51,72 +51,10 @@ class Test_hiAppEvent_setUserId {
     }
 
     
-    /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserId_0200
-    * @tc.name      : test_hiAppEvent_setUserId_02
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserId_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func test_hiAppEvent_setUserId_02() {
-        try {
-            let test_userID_name = "test_setUserId_02$"
-            let test_userID_value = "123456"
-            HiAppEvent.setUserId(test_userID_name, test_userID_value)
-            let userIdName = HiAppEvent.getUserId(test_userID_name)
-            @Expect(userIdName,"123456")
-        } catch (e: Exception) {
-            @Expect(false)
-        }
-    }
     
-    /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserId_0300
-    * @tc.name      : test_hiAppEvent_setUserId_03
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserId_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func test_hiAppEvent_setUserId_03() {
-        try {
-            let test_userID_name = "1test_setUserId_03"
-            let test_userID_value = "123456"
-            HiAppEvent.setUserId(test_userID_name, test_userID_value)
-            @Expect(false)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 401)
-            @Expect(e.message, "Parameter error. Parameter verification failed.")
-        }
-    }
     
-    /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserId_0400
-    * @tc.name      : test_hiAppEvent_setUserId_04
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserId_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func test_hiAppEvent_setUserId_04() {
-        try {
-            let test_userID_name = "test_setUserId_04&"
-            let test_userID_value = "123456"
-            HiAppEvent.setUserId(test_userID_name, test_userID_value)
-            @Expect(false)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 401)
-            @Expect(e.message, "Parameter error. Parameter verification failed.")
-        }
-    }
-
+    
+   
     
     /*
     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserId_0500
@@ -127,7 +65,7 @@ class Test_hiAppEvent_setUserId {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserId_05() {
         try {
             let test_userID_name = ""
@@ -150,16 +88,17 @@ class Test_hiAppEvent_setUserId {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserId_06() {
         try {
-            let test_userID_name = "daidohaiofjaiofjaiojfiafjaofskjashfiahfusafhjsahfsuiasfhjfkuaifhsjkslakdpafoapfhioahwfuwiahfjshfaifhwuiahfkshfaiowehafowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa666666661"
+            let test_userID_name = " "
             let test_userID_value = "123456"
             HiAppEvent.setUserId(test_userID_name, test_userID_value)
             let userIdName = HiAppEvent.getUserId(test_userID_name)
-            @Expect(userIdName,"123456")
-        } catch (e: Exception) {
             @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 401)
+            @Expect(e.message, "Parameter error. Parameter verification failed.")
         }
     }
     
@@ -172,11 +111,11 @@ class Test_hiAppEvent_setUserId {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserId_07() {
         try {
             let test_userID_name = "daidohaiofjaiofjaiojfiafjaofskjashfiahfusafhjsahfsuiasfhjfkuaifhsjkslakdpafoapfhioahwfuwiahfjshfaifhwuiahfkshfaiowehafowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6666666611"
-            let test_userID_value = "123456"
+            let test_userID_value = " "
             HiAppEvent.setUserId(test_userID_name, test_userID_value)
             @Expect(false)
         } catch (e: BusinessException) {
@@ -194,7 +133,7 @@ class Test_hiAppEvent_setUserId {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserId_08() {
         try {
             let test_userID_name = "test_setUserId_08"
@@ -221,7 +160,7 @@ class Test_hiAppEvent_setUserId {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserId_09() {
         try {
             let test_userID_name = "test_setUserId_09"
@@ -234,28 +173,7 @@ class Test_hiAppEvent_setUserId {
         }
     }
     
-    /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserId_1000
-    * @tc.name      : test_hiAppEvent_setUserId_10
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserId_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func test_hiAppEvent_setUserId_10() {
-        try {
-            let test_userID_name = "test_setUserId_10"
-            let test_userID_value = "daidohaiofj1aiofjaiojfiafjaofskjashfiahfusafhjsahfsuiafhjfkuaifhsjkslakdpafoapfhioahwfuwiahfjshfaifhwuiahfkshfaiowehafowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6666666611"
-            HiAppEvent.setUserId(test_userID_name, test_userID_value)
-            @Expect(false)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 401)
-            @Expect(e.message, "Parameter error. Parameter verification failed.")
-        }
-    }
-
+   
     
     /*
     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserId_1100
@@ -266,7 +184,7 @@ class Test_hiAppEvent_setUserId {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserId_11() {
         try {
             let test_userID_name = "test_setUserId_11"

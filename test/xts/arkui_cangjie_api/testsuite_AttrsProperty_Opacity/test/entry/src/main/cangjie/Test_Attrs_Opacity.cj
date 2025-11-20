@@ -38,7 +38,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_AlphabetIndexer_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Blank_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Button_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Checkbox_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_CheckboxGroup_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin CheckboxGroup")
@@ -164,7 +164,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_DataPanel_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin DataPanel")
@@ -189,7 +189,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_DatePicker_Opacity
      */
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin DatePicker")
@@ -214,7 +214,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Divider_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Divider")
@@ -239,7 +239,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Gauge_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Gauge")
@@ -264,7 +264,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Image_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Image")
@@ -289,7 +289,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_ImageSpan_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin ImageSpan")
@@ -314,7 +314,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_LoadingProgress_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin LoadingProgress")
@@ -339,7 +339,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Menu_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Menu")
@@ -364,7 +364,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_MenuItem_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin MenuItem")
@@ -389,7 +389,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_MenuItemGroup_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin MenuItemGroup")
@@ -414,7 +414,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Progress_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Progress")
@@ -440,7 +440,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Radio_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Radio")
@@ -465,7 +465,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Rating_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Rating")
@@ -490,7 +490,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Refresh_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Refresh")
@@ -515,7 +515,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_RichEditor_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin RichEditor")
@@ -540,7 +540,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_RowSplit_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_RowSplit_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin RowSplit")
@@ -565,7 +565,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Search_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Search_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Search")
@@ -590,7 +590,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Slider_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Slider_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Slider")
@@ -615,7 +615,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Stepper_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Stepper_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Stepper")
@@ -640,7 +640,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_StepperItem_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_StepperItem_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin StepperItem")
@@ -665,7 +665,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Text_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Text_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Text")
@@ -690,7 +690,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_TextArea_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_TextArea_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin TextArea")
@@ -715,7 +715,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_TextClock_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_TextClock_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin TextClock")
@@ -740,7 +740,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_TextInput_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_TextInput_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin TextInput")
@@ -765,7 +765,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_TextTimer_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_TextTimer_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin TextTimer")
@@ -790,7 +790,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Toggle_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Toggle_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Toggle")
@@ -815,7 +815,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Web_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Web_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Web")
@@ -840,7 +840,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Select_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Select_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Select")
@@ -865,7 +865,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Badge_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Badge_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Badge")
@@ -890,7 +890,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Column_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Column_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Column")
@@ -915,7 +915,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Grid_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Grid_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Grid")
@@ -940,7 +940,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_GridItem_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_GridItem_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin GridItem")
@@ -965,7 +965,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_GridRow_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_GridRow_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin GridRow")
@@ -990,7 +990,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_GridCol_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_GridCol_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin GridCol")
@@ -1015,7 +1015,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Flex_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Flex_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Flex")
@@ -1040,7 +1040,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_List_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_List_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin List")
@@ -1065,7 +1065,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_ListItem_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_ListItem_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin ListItem")
@@ -1090,7 +1090,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_ListItemGroup_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_ListItemGroup_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin ListItemGroup")
@@ -1116,7 +1116,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_RelativeContainer_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_RelativeContainer_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin RelativeContainer")
@@ -1141,7 +1141,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Row_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Row_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Row")
@@ -1166,7 +1166,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Scroll_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Scroll_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Scroll")
@@ -1191,7 +1191,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Stack_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Stack_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Stack")
@@ -1216,7 +1216,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Swiper_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Swiper_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Swiper")
@@ -1241,7 +1241,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Tabs_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Tabs_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Tabs")
@@ -1266,7 +1266,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_TabContent_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_TabContent_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin TabContent")
@@ -1291,7 +1291,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Circle_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Circle_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Circle")
@@ -1316,7 +1316,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Line_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Line_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Line")
@@ -1341,7 +1341,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Rect_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Rect_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Rect")
@@ -1366,7 +1366,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Shape_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Shape_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Shape")
@@ -1391,7 +1391,7 @@ class Test_EmptyAttrs_Opacity {
      * @tc.desic：Empty_Path_Opacity
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Opacity_Path_6100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOpacity: FindBegin Path")

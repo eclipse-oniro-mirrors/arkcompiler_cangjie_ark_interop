@@ -19,9 +19,7 @@ import kit.AbilityKit.*
 import ohos.arkui.state_management.AppStorage
 
 class MainAbility <: UIAbility {
-
     public func onCreate(want: Want, launchParam: LaunchParam): Unit {
-
     }
 
     public func onWindowStageCreate(windowStage: WindowStage): Unit {
@@ -48,5 +46,3 @@ public class Global {
         windowStage.getOrThrow()
     }
 }
-
-

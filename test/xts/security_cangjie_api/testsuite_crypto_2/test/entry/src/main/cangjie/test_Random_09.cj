@@ -28,17 +28,16 @@ import ohos.base.*
 class Test_Random_09 {
 
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0100
-    * @tc.name      : test_createRandom_01
-    * @tc.desc      : test Crypto test_createRandom_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0100
+     * @tc.name      : test_createRandom_01
+     * @tc.desc      : test Crypto test_createRandom_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createRandom_01(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createRandom_01(): Unit {
         var globalRandom: Random
 
         try {
@@ -49,19 +48,17 @@ class Test_Random_09 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0200
-    * @tc.name      : test_generateRandom_02
-    * @tc.desc      : test Crypto test_generateRandom_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0200
+     * @tc.name      : test_generateRandom_02
+     * @tc.desc      : test Crypto test_generateRandom_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_generateRandom_02(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_generateRandom_02(): Unit {
         var globalRandom: Random
         var len: Int32 = 1
         var blob: DataBlob
@@ -75,19 +72,17 @@ class Test_Random_09 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0400
-    * @tc.name      : test_generateRandom_04
-    * @tc.desc      : test Crypto test_generateRandom_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0400
+     * @tc.name      : test_generateRandom_04
+     * @tc.desc      : test Crypto test_generateRandom_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_generateRandom_04(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_generateRandom_04(): Unit {
         var globalRandom: Random
         var len: Int32 = 0
         var blob: DataBlob
@@ -101,19 +96,17 @@ class Test_Random_09 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0500
-    * @tc.name      : test_generateRandom_05
-    * @tc.desc      : test Crypto test_generateRandom_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0500
+     * @tc.name      : test_generateRandom_05
+     * @tc.desc      : test Crypto test_generateRandom_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_generateRandom_05(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_generateRandom_05(): Unit {
         var globalRandom: Random
         var len: Int32 = -1
         var blob: DataBlob
@@ -127,19 +120,17 @@ class Test_Random_09 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0600
-    * @tc.name      : test_setSeed_06
-    * @tc.desc      : test Crypto test_setSeed_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0600
+     * @tc.name      : test_setSeed_06
+     * @tc.desc      : test Crypto test_setSeed_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_setSeed_06(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_setSeed_06(): Unit {
         var globalRandom: Random
         var len: Int32 = 1
         var blob: DataBlob
@@ -154,19 +145,17 @@ class Test_Random_09 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0700
-    * @tc.name      : test_setSeed_07
-    * @tc.desc      : test Crypto test_setSeed_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Random_09_0700
+     * @tc.name      : test_setSeed_07
+     * @tc.desc      : test Crypto test_setSeed_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_setSeed_07(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_setSeed_07(): Unit {
         var globalRandom: Random
         var blob: DataBlob = DataBlob("test".toArray())
 

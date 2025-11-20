@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length,  Color, LengthType}
+import ohos.base.{LengthProp, Length,  Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -63,11 +63,11 @@ class View_Image {
 
                 Image(@r(app.media.image))
                     .id("imagefinished")
-                    .onFinish() {
+                    .onFinish({
                         =>
                         this.finished = "finished"
                         Hilog.info(0,"",   "cangjietest", "load finished")
-                    }
+                    })
                     .height(100)
                     .width(100)
                 Text("${this.finished}").id("finished")

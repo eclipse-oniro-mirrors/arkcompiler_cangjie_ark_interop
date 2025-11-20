@@ -27,17 +27,17 @@ import ohos.base.*
 
 @Test
 class Test_ohos_hiAppEvent {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0100
-    * @tc.name      : test_hiAppEvent_clearData_01
-    * @tc.desc      : test Hiappevent test_hiAppEvent_clearData_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0100
+     * @tc.name      : test_hiAppEvent_clearData_01
+     * @tc.desc      : test Hiappevent test_hiAppEvent_clearData_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_clearData_01() {
         try {
             var params = HashMap<String, EventValueType>([
@@ -52,26 +52,26 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_clearData_01", "Test_hiappevent_write_pass")
             HiAppEvent.clearData()
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_clearData_01", "Test_hiappevent_clearData_pass")
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0200
-    * @tc.name      : test_hiAppEvent_addWatcher_01
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0200
+     * @tc.name      : test_hiAppEvent_addWatcher_01
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_01() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -89,9 +89,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_01", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_01", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_01", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_01", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -112,24 +110,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_01", "Test_hiappevent_write_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0300
-    * @tc.name      : test_hiAppEvent_addWatcher_02
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0300
+     * @tc.name      : test_hiAppEvent_addWatcher_02
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_02() {
         try {
             var condition = TriggerCondition(row: 2)
@@ -147,9 +145,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_02", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_02", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_02", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_02", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -170,24 +166,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_02", "Test_hiappevent_write_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0400
-    * @tc.name      : test_hiAppEvent_addWatcher_03
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0400
+     * @tc.name      : test_hiAppEvent_addWatcher_03
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_03() {
         try {
             var condition = TriggerCondition(size: 137)
@@ -205,9 +201,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_03", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_03", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_03", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_03", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -228,24 +222,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_03", "Test_hiappevent_write_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0500
-    * @tc.name      : test_hiAppEvent_addWatcher_04
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0500
+     * @tc.name      : test_hiAppEvent_addWatcher_04
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_04() {
         try {
             var condition = TriggerCondition(size: 140)
@@ -263,9 +257,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_04", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_04", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_04", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_04", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -286,24 +278,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_04", "Test_hiappevent_write_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0600
-    * @tc.name      : test_hiAppEvent_addWatcher_05
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0600
+     * @tc.name      : test_hiAppEvent_addWatcher_05
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_05() {
         try {
             var condition = TriggerCondition(timeOut: 30)
@@ -321,9 +313,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_05", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_05", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_05", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_05", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -344,24 +334,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_05", "Test_hiappevent_write_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0700
-    * @tc.name      : test_hiAppEvent_addWatcher_06
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0700
+     * @tc.name      : test_hiAppEvent_addWatcher_06
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_06() {
         try {
             var condition = TriggerCondition(timeOut: 0)
@@ -379,9 +369,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_06", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_06", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_06", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_06", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -402,24 +390,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_05", "Test_hiappevent_write_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0800
-    * @tc.name      : test_hiAppEvent_addWatcher_07
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0800
+     * @tc.name      : test_hiAppEvent_addWatcher_07
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_07() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -437,9 +425,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_07", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_07", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_07", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_07", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -460,7 +446,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_07", "Test_hiappevent_write_01_pass")
             var params_01 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -474,24 +460,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_01: AppEventInfo = AppEventInfo("cangjie_2", "test_event", EventType.Fault, params_01)
             HiAppEvent.write(appInfo_01)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_07", "Test_hiappevent_write_02_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0900
-    * @tc.name      : test_hiAppEvent_addWatcher_08
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_0900
+     * @tc.name      : test_hiAppEvent_addWatcher_08
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_08() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -511,9 +497,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_08", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_08", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_08", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_08", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -534,7 +518,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_08", "Test_hiappevent_write_01_pass")
             var params_01 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -548,24 +532,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_01: AppEventInfo = AppEventInfo("cangjie_2", "test_event", EventType.Fault, params_01)
             HiAppEvent.write(appInfo_01)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_08", "Test_hiappevent_write_02_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1000
-    * @tc.name      : test_hiAppEvent_addWatcher_09
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1000
+     * @tc.name      : test_hiAppEvent_addWatcher_09
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_09() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -586,9 +570,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_09", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_09", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_09", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_09", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -609,7 +591,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_09", "Test_hiappevent_write_01_pass")
             var params_01 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -623,7 +605,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_01: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Statistic, params_01)
             HiAppEvent.write(appInfo_01)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_09", "Test_hiappevent_write_02_pass")
             var params_02 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -637,7 +619,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_02: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Security, params_02)
             HiAppEvent.write(appInfo_02)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_09", "Test_hiappevent_write_03_pass")
             var params_03 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -651,24 +633,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_03: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Behavior, params_03)
             HiAppEvent.write(appInfo_03)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_09", "Test_hiappevent_write_04_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1100
-    * @tc.name      : test_hiAppEvent_addWatcher_10
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1100
+     * @tc.name      : test_hiAppEvent_addWatcher_10
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_10() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -689,9 +671,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_10", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_10", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_10", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_10", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -712,7 +692,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event_01", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_10", "Test_hiappevent_write_01_pass")
             var params_01 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -726,7 +706,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_01: AppEventInfo = AppEventInfo("cangjie_1", "test_event_02", EventType.Statistic, params_01)
             HiAppEvent.write(appInfo_01)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_10", "Test_hiappevent_write_02_pass")
             var params_02 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -740,7 +720,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_02: AppEventInfo = AppEventInfo("cangjie_1", "test_event_03", EventType.Security, params_02)
             HiAppEvent.write(appInfo_02)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_10", "Test_hiappevent_write_03_pass")
             var params_03 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -754,24 +734,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_03: AppEventInfo = AppEventInfo("cangjie_1", "test_event_04", EventType.Behavior, params_03)
             HiAppEvent.write(appInfo_03)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_10", "Test_hiappevent_write_04_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1200
-    * @tc.name      : test_hiAppEvent_addWatcher_11
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1200
+     * @tc.name      : test_hiAppEvent_addWatcher_11
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_11() {
         try {
             var condition = TriggerCondition(row: 1, size: 142, timeOut: 1)
@@ -793,9 +773,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_11", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_11", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_11", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_11", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -816,7 +794,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event_01", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_11", "Test_hiappevent_write_01_pass")
             var params_01 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -830,7 +808,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_01: AppEventInfo = AppEventInfo("cangjie_1", "test_event_02", EventType.Statistic, params_01)
             HiAppEvent.write(appInfo_01)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_11", "Test_hiappevent_write_02_pass")
             var params_02 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -844,7 +822,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_02: AppEventInfo = AppEventInfo("cangjie_1", "test_event_03", EventType.Security, params_02)
             HiAppEvent.write(appInfo_02)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_11", "Test_hiappevent_write_03_pass")
             var params_03 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -858,24 +836,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_03: AppEventInfo = AppEventInfo("cangjie_1", "test_event_04", EventType.Behavior, params_03)
             HiAppEvent.write(appInfo_03)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_11", "Test_hiappevent_write_04_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1300
-    * @tc.name      : test_hiAppEvent_addWatcher_12
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1300
+     * @tc.name      : test_hiAppEvent_addWatcher_12
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_12() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -894,9 +872,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_12", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_12", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_12", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_12", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -917,24 +893,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_12", "Test_hiappevent_write_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1400
-    * @tc.name      : test_hiAppEvent_addWatcher_13
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_13
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1400
+     * @tc.name      : test_hiAppEvent_addWatcher_13
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_13
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_13() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -953,9 +929,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_13", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_13", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_13", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_13", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -976,24 +950,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_13", "Test_hiappevent_write_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1500
-    * @tc.name      : test_hiAppEvent_addWatcher_14
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_14
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1500
+     * @tc.name      : test_hiAppEvent_addWatcher_14
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_14
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_14() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -1012,9 +986,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_14", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_14", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_14", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_11", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -1035,7 +1007,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event_01", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_14", "Test_hiappevent_write_01_pass")
             var params_01 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -1049,7 +1021,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_01: AppEventInfo = AppEventInfo("cangjie_2", "test_event_02", EventType.Statistic, params_01)
             HiAppEvent.write(appInfo_01)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_14", "Test_hiappevent_write_02_pass")
             var params_02 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -1063,7 +1035,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_02: AppEventInfo = AppEventInfo("cangjie_3", "test_event_03", EventType.Security, params_02)
             HiAppEvent.write(appInfo_02)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_14", "Test_hiappevent_write_03_pass")
             var params_03 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -1077,24 +1049,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_03: AppEventInfo = AppEventInfo("cangjie_4", "test_event_04", EventType.Behavior, params_03)
             HiAppEvent.write(appInfo_03)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_14", "Test_hiappevent_write_04_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1600
-    * @tc.name      : test_hiAppEvent_addWatcher_15
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_15
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1600
+     * @tc.name      : test_hiAppEvent_addWatcher_15
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_15
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_15() {
         try {
             Hilog.info(0, "test_hiAppEvent_addWatcher_15", "test_hiAppEvent_addWatcher_15:start")
@@ -1112,7 +1084,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event_01", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_15", "Test_hiappevent_write_01_pass")
             if (let Some(v) <- holder) {
                 while (let Some(v2) <- v.takeNext()) {
@@ -1120,9 +1092,7 @@ class Test_ohos_hiAppEvent {
                     Hilog.info(0, "test_hiAppEvent_addWatcher_15", "HiAppEvent packageId=${eventPkg.packageId}")
                     Hilog.info(0, "test_hiAppEvent_addWatcher_15", "HiAppEvent row=${eventPkg.row}")
                     Hilog.info(0, "test_hiAppEvent_addWatcher_15", "HiAppEvent size=${eventPkg.size}")
-                    for (i in 0..eventPkg
-                            .data
-                            .size) {
+                    for (i in 0..eventPkg.data.size) {
                         Hilog.info(0, "test_hiAppEvent_addWatcher_15", "HiAppEvent info=${eventPkg.data[i]}")
                     }
                 }
@@ -1132,17 +1102,17 @@ class Test_ohos_hiAppEvent {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1700
-    * @tc.name      : test_hiAppEvent_addWatcher_16
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_16
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1700
+     * @tc.name      : test_hiAppEvent_addWatcher_16
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_16
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_16() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -1159,29 +1129,15 @@ class Test_ohos_hiAppEvent {
                     let groupSize = AppEventGroups.size
                     for (i in 0..groupSize) {
                         Hilog.info(0, "test_hiAppEvent_addWatcher_16", "name =${AppEventGroups[i].name}")
-                        let appInfosize = AppEventGroups[i]
-                            .appEventInfos
-                            .size
+                        let appInfosize = AppEventGroups[i].appEventInfos.size
                         for (j in 0..appInfosize) {
                             Hilog.info(0x0000, "test_hiAppEvent_addWatcher_16",
-                                "appEventInfo name=${AppEventGroups[i].appEventInfos[j].name}",[])
+                                "appEventInfo name=${AppEventGroups[i].appEventInfos[j].name}", [])
                             Hilog.info(0x0000, "test_hiAppEvent_addWatcher_16",
-                                "appEventInfo domain=${AppEventGroups[i].appEventInfos[j].domain}",[])
-//                            Hilog.info(0x0000, "test_hiAppEvent_addWatcher_16",
-//                                "appEventInfo event=${AppEventGroups[i].appEventInfos[j].event.value}",[])
-                            let paSize = AppEventGroups[i]
-                                .appEventInfos[j]
-                                .params
-                                .size
+                                "appEventInfo domain=${AppEventGroups[i].appEventInfos[j].domain}", [])
+                            let paSize = AppEventGroups[i].appEventInfos[j].params.size
                             for (k in 0..paSize) {
-//                                Hilog.info(0x0000, "test_hiAppEvent_addWatcher_16",
-//                                    "key=${AppEventGroups[i].appEventInfos[j].params[k].key}",[])
-//                                let value = AppEventGroups[i]
-//                                    .appEventInfos[j]
-//                                    .params[k]
-//                                    .value
-//                                    .value
-//                                Hilog.info(0x0000, "test_hiAppEvent_addWatcher_16", "value=${value}",[])
+                               
                             }
                         }
                     }
@@ -1200,7 +1156,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event_01", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_16", "Test_hiappevent_write_01_pass")
             var params_01 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -1214,24 +1170,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_01: AppEventInfo = AppEventInfo("cangjie_2", "test_event_02", EventType.Fault, params_01)
             HiAppEvent.write(appInfo_01)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_16", "Test_hiappevent_write_02_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1800
-    * @tc.name      : test_hiAppEvent_addWatcher_17
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_17
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1800
+     * @tc.name      : test_hiAppEvent_addWatcher_17
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_17
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_17() {
         try {
             var condition = TriggerCondition(row: 1)
@@ -1244,29 +1200,12 @@ class Test_ohos_hiAppEvent {
                     let groupSize = AppEventGroups.size
                     for (i in 0..groupSize) {
                         Hilog.info(0, "test_hiAppEvent_addWatcher_17", "name =${AppEventGroups[i].name}")
-                        let appInfosize = AppEventGroups[i]
-                            .appEventInfos
-                            .size
+                        let appInfosize = AppEventGroups[i].appEventInfos.size
                         for (j in 0..appInfosize) {
-//                            Hilog.info(0x0000, "test_hiAppEvent_addWatcher_17",
-//                                "appEventInfo name=${AppEventGroups[i].appEventInfos[j].name}",[])
-//                            Hilog.info(0x0000, "test_hiAppEvent_addWatcher_17",
-//                                "appEventInfo domain=${AppEventGroups[i].appEventInfos[j].domain}",[])
-//                            Hilog.info(0x0000, "test_hiAppEvent_addWatcher_17",
-//                                "appEventInfo event=${AppEventGroups[i].appEventInfos[j].event.value}",[])
-                            let paSize = AppEventGroups[i]
-                                .appEventInfos[j]
-                                .params
-                                .size
+                            
+                            let paSize = AppEventGroups[i].appEventInfos[j].params.size
                             for (k in 0..paSize) {
-//                                Hilog.info(0x0000, "test_hiAppEvent_addWatcher_17",
-//                                    "key=${AppEventGroups[i].appEventInfos[j].params[k].key}",[])
-//                                let value = AppEventGroups[i]
-//                                    .appEventInfos[j]
-//                                    .params[k]
-//                                    .value
-//                                    .value
-//                                Hilog.info(0x0000, "test_hiAppEvent_addWatcher_17", "value=${value}")
+                               
                             }
                         }
                     }
@@ -1285,7 +1224,7 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo: AppEventInfo = AppEventInfo("cangjie_1", "test_event_01", EventType.Fault, params)
             HiAppEvent.write(appInfo)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_17", "Test_hiappevent_write_01_pass")
             var params_01 = HashMap<String, EventValueType>([
                 ("int_data", IntValue(100)),
@@ -1299,24 +1238,24 @@ class Test_ohos_hiAppEvent {
             ])
             var appInfo_01: AppEventInfo = AppEventInfo("cangjie_2", "test_event_02", EventType.Fault, params_01)
             HiAppEvent.write(appInfo_01)
-            @Expect(true)
+
             Hilog.info(0, "test_hiAppEvent_addWatcher_17", "Test_hiappevent_write_02_pass")
             HiAppEvent.removeWatcher(watcher)
         } catch (e: Exception) {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1900
-    * @tc.name      : test_hiAppEvent_addWatcher_18
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_18
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_1900
+     * @tc.name      : test_hiAppEvent_addWatcher_18
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_18
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_18() {
         try {
             let watcher = Watcher("watcher1$")
@@ -1327,17 +1266,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid watcher name.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2000
-    * @tc.name      : test_hiAppEvent_addWatcher_19
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_19
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2000
+     * @tc.name      : test_hiAppEvent_addWatcher_19
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_19
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_19() {
         try {
             let watcher = Watcher("1watcher1")
@@ -1348,17 +1287,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid watcher name.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2100
-    * @tc.name      : test_hiAppEvent_addWatcher_20
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_20
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2100
+     * @tc.name      : test_hiAppEvent_addWatcher_20
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_20
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_20() {
         try {
             let watcher = Watcher("")
@@ -1369,17 +1308,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid watcher name.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2200
-    * @tc.name      : test_hiAppEvent_addWatcher_21
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_21
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2200
+     * @tc.name      : test_hiAppEvent_addWatcher_21
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_21
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_21() {
         try {
             let watcher = Watcher("watcher_")
@@ -1390,17 +1329,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid watcher name.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2300
-    * @tc.name      : test_hiAppEvent_addWatcher_22
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_22
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2300
+     * @tc.name      : test_hiAppEvent_addWatcher_22
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_22
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_22() {
         try {
             let watcher = Watcher("watcher_1111111111111111111111111")
@@ -1411,17 +1350,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid watcher name.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2400
-    * @tc.name      : test_hiAppEvent_addWatcher_23
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_23
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2400
+     * @tc.name      : test_hiAppEvent_addWatcher_23
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_23
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_23() {
         try {
             var condition = TriggerCondition(size: -1)
@@ -1438,9 +1377,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_23", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_23", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_23", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_23", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -1454,17 +1391,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid size value.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2500
-    * @tc.name      : test_hiAppEvent_addWatcher_24
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_24
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2500
+     * @tc.name      : test_hiAppEvent_addWatcher_24
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_24
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_24() {
         try {
             var condition = TriggerCondition(row: -1)
@@ -1481,9 +1418,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_24", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_24", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_24", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_24", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -1492,23 +1427,22 @@ class Test_ohos_hiAppEvent {
             )
             HiAppEvent.addWatcher(watcher)
             @Expect(false)
-            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code,11102003)
             @Expect(e.message,"Invalid row value.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2600
-    * @tc.name      : test_hiAppEvent_addWatcher_25
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_25
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2600
+     * @tc.name      : test_hiAppEvent_addWatcher_25
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_25
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_25() {
         try {
             var condition = TriggerCondition(timeOut: -1)
@@ -1525,9 +1459,7 @@ class Test_ohos_hiAppEvent {
                             Hilog.info(0, "test_hiAppEvent_addWatcher_25", "HiAppEvent packageId=${eventPkg.packageId}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_25", "HiAppEvent row=${eventPkg.row}")
                             Hilog.info(0, "test_hiAppEvent_addWatcher_25", "HiAppEvent size=${eventPkg.size}")
-                            for (i in 0..eventPkg
-                                    .data
-                                    .size) {
+                            for (i in 0..eventPkg.data.size) {
                                 Hilog.info(0, "test_hiAppEvent_addWatcher_25", "HiAppEvent info=${eventPkg.data[i]}")
                             }
                         }
@@ -1541,17 +1473,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid timeout value.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2700
-    * @tc.name      : test_hiAppEvent_addWatcher_26
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_26
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2700
+     * @tc.name      : test_hiAppEvent_addWatcher_26
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_26
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_26() {
         try {
             var appEventFilter = [AppEventFilter("cangjie_1$")]
@@ -1566,17 +1498,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid filtering event domain.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2800
-    * @tc.name      : test_hiAppEvent_addWatcher_27
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_27
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2800
+     * @tc.name      : test_hiAppEvent_addWatcher_27
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_27
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_27() {
         try {
             var appEventFilter = [AppEventFilter("cangjie_")]
@@ -1591,17 +1523,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid filtering event domain.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2900
-    * @tc.name      : test_hiAppEvent_addWatcher_28
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_28
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_2900
+     * @tc.name      : test_hiAppEvent_addWatcher_28
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_28
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_28() {
         try {
             var appEventFilter = [AppEventFilter("1cangjie")]
@@ -1616,17 +1548,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid filtering event domain.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_3000
-    * @tc.name      : test_hiAppEvent_addWatcher_29
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_29
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_3000
+     * @tc.name      : test_hiAppEvent_addWatcher_29
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_29
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_29() {
         try {
             var appEventFilter = [AppEventFilter("")]
@@ -1641,17 +1573,17 @@ class Test_ohos_hiAppEvent {
             @Expect(e.message,"Invalid filtering event domain.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_3100
-    * @tc.name      : test_hiAppEvent_addWatcher_30
-    * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_30
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_ohos_hiAppEvent_3100
+     * @tc.name      : test_hiAppEvent_addWatcher_30
+     * @tc.desc      : test Hiappevent test_hiAppEvent_addWatcher_30
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_addWatcher_30() {
         try {
             var appEventFilter = [AppEventFilter("cangjie_011111111")]
@@ -1660,7 +1592,6 @@ class Test_ohos_hiAppEvent {
                 appEventFilters: appEventFilter
             )
             HiAppEvent.addWatcher(watcher)
-            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code,11102002)
             @Expect(e.message,"Invalid filtering event domain.")

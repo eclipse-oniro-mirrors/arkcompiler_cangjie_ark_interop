@@ -36,7 +36,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_AlphabetIndexer_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin AlphabetIndexer")
@@ -62,7 +62,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Button_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Button")
@@ -87,7 +87,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Checkbox_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Checkbox")
@@ -112,7 +112,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_CheckboxGroup_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin CheckboxGroup")
@@ -137,7 +137,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_DataPanel_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin DataPanel")
@@ -162,7 +162,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_DatePicker_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin DatePicker")
@@ -187,7 +187,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Divider_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Divider")
@@ -212,7 +212,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Gauge_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Gauge")
@@ -237,7 +237,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Image_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Image")
@@ -262,7 +262,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_ImageSpan_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin ImageSpan")
@@ -287,7 +287,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_LoadingProgress_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin LoadingProgress")
@@ -312,7 +312,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Menu_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Menu")
@@ -337,7 +337,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_MenuItem_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin MenuItem")
@@ -362,7 +362,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_MenuItemGroup_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin MenuItemGroup")
@@ -387,7 +387,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Progress_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Progress")
@@ -412,7 +412,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_QRCode_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin QRCode")
@@ -437,7 +437,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Radio_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Radio")
@@ -462,7 +462,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Rating_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Rating")
@@ -487,7 +487,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Refresh_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Refresh")
@@ -512,7 +512,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_RichEditor_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin RichEditor")
@@ -537,7 +537,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_RichText_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin RichText")
@@ -562,7 +562,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_RowSplit_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin RowSplit")
@@ -587,7 +587,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_ScrollBar_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin ScrollBar")
@@ -612,7 +612,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Search_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Search")
@@ -637,7 +637,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Slider_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Slider")
@@ -662,7 +662,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Stepper_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Stepper")
@@ -687,7 +687,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_StepperItem_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin StepperItem")
@@ -712,7 +712,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Text_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Text")
@@ -737,7 +737,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_TextArea_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin TextArea")
@@ -762,7 +762,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_TextClock_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin TextClock")
@@ -787,7 +787,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_TextInput_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin TextInput")
@@ -812,7 +812,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_TextPicker_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin TextPicker")
@@ -837,7 +837,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_TextTimer_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin TextTimer")
@@ -862,7 +862,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Toggle_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Toggle")
@@ -887,7 +887,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Web_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Web")
@@ -912,7 +912,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Select_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Select")
@@ -937,7 +937,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Badge_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Badge")
@@ -962,7 +962,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Column_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Column")
@@ -987,7 +987,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Grid_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Grid")
@@ -1012,7 +1012,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_GridItem_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin GridItem")
@@ -1037,7 +1037,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_GridRow_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin GridRow")
@@ -1062,7 +1062,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_GridCol_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin GridCol")
@@ -1087,7 +1087,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Flex_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Flex")
@@ -1112,7 +1112,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_List_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin List")
@@ -1137,7 +1137,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_ListItem_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin ListItem")
@@ -1162,7 +1162,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_ListItemGroup_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin ListItemGroup")
@@ -1188,7 +1188,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_RelativeContainer_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin RelativeContainer")
@@ -1213,7 +1213,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Row_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Row")
@@ -1238,7 +1238,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Scroll_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Scroll")
@@ -1263,7 +1263,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Stack_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Stack")
@@ -1288,7 +1288,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Swiper_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Swiper")
@@ -1313,7 +1313,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Tabs_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Tabs")
@@ -1338,7 +1338,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Circle_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Circle_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Circle")
@@ -1363,7 +1363,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Line_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Line_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Line")
@@ -1388,7 +1388,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Rect_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Rect_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Rect")
@@ -1413,7 +1413,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Shape_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Shape_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Shape")
@@ -1438,7 +1438,7 @@ class Test_EmptyAttrs_Height {
      * @tc.desic：Empty_Path_Height
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Height_Path_6100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckHeight: FindBegin Path")

@@ -20,6 +20,5 @@ import kit.AbilityKit.AbilityStage
 
 class MyAbilityStage <: AbilityStage {
     public func onCreate(): Unit {
-        //Hilog.info(0, "cangjietest","MyAbilityStage onCreated.")
     }
 }

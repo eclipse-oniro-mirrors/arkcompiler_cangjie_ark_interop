@@ -38,7 +38,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_AlphabetIndexer_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Blank_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Button_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Checkbox_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_CheckboxGroup_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin CheckboxGroup")
@@ -164,7 +164,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_DataPanel_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin DataPanel")
@@ -189,7 +189,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_DatePicker_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin DatePicker")
@@ -214,7 +214,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Divider_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Divider")
@@ -239,7 +239,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Gauge_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Gauge")
@@ -264,7 +264,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Image_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Image")
@@ -289,7 +289,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_ImageSpan_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin ImageSpan")
@@ -314,7 +314,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_LoadingProgress_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin LoadingProgress")
@@ -339,7 +339,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Menu_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Menu")
@@ -364,7 +364,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_MenuItem_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin MenuItem")
@@ -389,7 +389,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_MenuItemGroup_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin MenuItemGroup")
@@ -414,7 +414,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Progress_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Progress")
@@ -439,7 +439,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_QRCode_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin QRCode")
@@ -464,7 +464,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Radio_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Radio")
@@ -489,7 +489,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Rating_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Rating")
@@ -514,7 +514,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Refresh_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Refresh")
@@ -539,7 +539,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_RichEditor_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin RichEditor")
@@ -564,7 +564,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_RichText_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin RichText")
@@ -589,7 +589,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_RowSplit_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin RowSplit")
@@ -614,7 +614,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_ScrollBar_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin ScrollBar")
@@ -639,7 +639,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Search_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Search")
@@ -664,7 +664,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Slider_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Slider")
@@ -689,7 +689,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Stepper_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Stepper")
@@ -714,7 +714,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_StepperItem_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin StepperItem")
@@ -739,7 +739,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Text_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Text")
@@ -764,7 +764,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_TextArea_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin TextArea")
@@ -789,7 +789,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_TextClock_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin TextClock")
@@ -814,7 +814,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_TextInput_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin TextInput")
@@ -839,7 +839,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_TextPicker_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin TextPicker")
@@ -864,7 +864,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_TextTimer_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin TextTimer")
@@ -889,7 +889,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Toggle_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Toggle")
@@ -914,7 +914,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Web_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Web")
@@ -939,7 +939,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Select_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Select")
@@ -964,7 +964,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Badge_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Badge")
@@ -989,7 +989,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Column_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Column")
@@ -1014,7 +1014,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Grid_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Grid")
@@ -1039,7 +1039,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_GridItem_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin GridItem")
@@ -1064,7 +1064,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_GridRow_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin GridRow")
@@ -1089,7 +1089,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_GridCol_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin GridCol")
@@ -1114,7 +1114,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Flex_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Flex")
@@ -1139,7 +1139,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_List_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin List")
@@ -1164,7 +1164,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_ListItem_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin ListItem")
@@ -1189,7 +1189,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_ListItemGroup_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin ListItemGroup")
@@ -1215,7 +1215,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_RelativeContainer_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin RelativeContainer")
@@ -1240,7 +1240,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Row_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Row")
@@ -1265,7 +1265,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Scroll_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Scroll")
@@ -1290,7 +1290,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Stack_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Stack")
@@ -1315,7 +1315,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Swiper_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Swiper")
@@ -1340,7 +1340,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Tabs_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Tabs")
@@ -1365,7 +1365,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_TabContent_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin TabContent")
@@ -1390,7 +1390,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Circle_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Circle")
@@ -1415,7 +1415,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Line_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Line")
@@ -1440,7 +1440,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Rect_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Rect")
@@ -1465,7 +1465,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Shape_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Shape")
@@ -1490,7 +1490,7 @@ class Test_EmptyAttrs_Saturate {
      * @tc.desic：Empty_Path_Saturate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Saturate_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSaturate: FindBegin Path")

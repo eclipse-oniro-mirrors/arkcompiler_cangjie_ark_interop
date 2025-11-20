@@ -49,7 +49,7 @@ class Test_LocalStorageProp_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LocalStorageProp_Component_0200() {
         driver.findComponent(On().id("Test_Button00")).getOrThrow().click()
         let res00 = driver.findComponent(On().id("Test_Text00")).getOrThrow().getText()
@@ -70,7 +70,7 @@ class Test_LocalStorageProp_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LocalStorageProp_Component_0400() {
         driver.findComponent(On().id("Test_Button02")).getOrThrow().click()
         let res00 = driver.findComponent(On().id("Test_Text05")).getOrThrow().getText()
@@ -87,7 +87,7 @@ class Test_LocalStorageProp_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LocalStorageProp_Component_0500() {
         driver.findComponent(On().id("Test_Button03")).getOrThrow().click()
         driver.findComponent(On().id("Test_Button02")).getOrThrow().click()
@@ -107,7 +107,7 @@ class Test_LocalStorageProp_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LocalStorageProp_Component_0600() {
         driver.findComponent(On().id("Test_Button05")).getOrThrow().click()
         let res00 = driver.findComponent(On().id("Test_Text08")).getOrThrow().getText()

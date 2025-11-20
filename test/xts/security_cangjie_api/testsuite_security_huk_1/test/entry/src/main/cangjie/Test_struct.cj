@@ -29,40 +29,39 @@ import ohos.business_exception.BusinessException
 class Test_SecurityHuks_Struct {
 
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_Struct_0200
-    * @tc.name      : test_illegal_argument
-    * @tc.desc      : test UniversalKeystoreKit HuksParamValue
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_Struct_0200
+     * @tc.name      : test_illegal_argument
+     * @tc.desc      : test UniversalKeystoreKit HuksParamValue
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_illegal_argument() {
         // 对应exception未覆盖
         try {
             let boolean = HuksParamValue.BooleanValue(true)
             let uint32 = HuksParamValue.Uint32Value(1)
-            let orNone = boolean 
+            let orNone = boolean
         } catch (e: BusinessException) {
             @Expect(true)
         } finally {
         }
     }
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_Struct_0300
-    * @tc.name      : test_return_result
-    * @tc.desc      : test UniversalKeystoreKit HuksReturnResult
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_Struct_0300
+     * @tc.name      : test_return_result
+     * @tc.desc      : test UniversalKeystoreKit HuksReturnResult
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_return_result() {
         let outData = Option<Array<UInt8>>.None
         let properties = Option<Array<HuksParam>>.None
         let certChains = Option<Array<String>>.None
-
     }
 }

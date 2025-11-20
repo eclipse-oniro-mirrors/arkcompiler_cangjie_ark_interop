@@ -36,10 +36,10 @@ class testPixelMap_getBytesNumberPerRow_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let initOption = InitializationOptions(Size(1i32, 4), alphaType: AlphaType.Unknown, editable: true,
                 pixelFormat: PixelMapFormat.Alpha8, scaleMode: ScaleMode.FitTargetSize)
@@ -49,8 +49,6 @@ class testPixelMap_getBytesNumberPerRow_1 {
         } catch (e: BusinessException) {
             @Expect(false)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
-
-
 }

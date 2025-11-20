@@ -31,11 +31,11 @@ class NewTestRuqestUPLOAD {
     let fileName = "test.txt"
     let filePath = "/data/storage/el2/base/haps/entry/cache/"
 
-    public func afterEach():Unit {
+    public func afterEach(): Unit {
         sleepFor(2.second)
     }
 
-    public func beforeAll():Unit {
+    public func beforeAll(): Unit {
         try {
             let file = FileIo.open(
                 filePath + fileName,
@@ -45,15 +45,11 @@ class NewTestRuqestUPLOAD {
             let writeLen = FileIo.write(file.fd, str)
             FileIo.close(file)
         } catch (e: Exception) {
-           Hilog.error(0, "cangjietest", "beforeAll error: ${e.message}")
+            Hilog.error(0, "cangjietest", "beforeAll error: ${e.message}")
         }
     }
 
-    let fileSpec = FileSpec(
-        fileName,
-        filename: fileName,
-        mimeType: "application/octet-stream"
-    )
+    let fileSpec = FileSpec("./test.txt", filename: "test.text")
 
     let dataForm = ConfigData.FormItems(
         [
@@ -64,17 +60,16 @@ class NewTestRuqestUPLOAD {
         ]
     )
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0100
-    * @tc.name      : test_getTask01
-    * @tc.desc      : test Request test_getTask01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0100
+     * @tc.name      : test_getTask01
+     * @tc.desc      : test Request test_getTask01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask01() {
         let config = Config(
             Action.Upload,
@@ -92,17 +87,16 @@ class NewTestRuqestUPLOAD {
         remove(task.tid)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0200
-    * @tc.name      : test_getTask02
-    * @tc.desc      : test Request test_getTask02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0200
+     * @tc.name      : test_getTask02
+     * @tc.desc      : test Request test_getTask02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask02() {
         let config = Config(
             Action.Upload,
@@ -115,27 +109,26 @@ class NewTestRuqestUPLOAD {
         let task = create(getAbilityContext(), config)
         task.start()
         sleepFor(0.5.second)
-        try{
-          getTask(getAbilityContext(), "", token: token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            getTask(getAbilityContext(), "", token: token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0300
-    * @tc.name      : test_getTask03
-    * @tc.desc      : test Request test_getTask03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0300
+     * @tc.name      : test_getTask03
+     * @tc.desc      : test Request test_getTask03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask03() {
         let config = Config(
             Action.Upload,
@@ -149,55 +142,54 @@ class NewTestRuqestUPLOAD {
         task.start()
         sleepFor(0.5.second)
 
-        try{
-          getTask(getAbilityContext(), "$%^!@&*", token: token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            getTask(getAbilityContext(), "$%^!@&*", token: token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0500
-    * @tc.name      : test_getTask05
-    * @tc.desc      : test Request test_getTask05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0500
+     * @tc.name      : test_getTask05
+     * @tc.desc      : test Request test_getTask05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask05() {
-        let config = Config(Action.Upload, fileURL, overwrite: true, data: dataForm,
-            token: "123456789", mode: Mode.Background)
+        let config = Config(Action.Upload, fileURL, overwrite: true, data: dataForm, token: "123456789",
+            mode: Mode.Background)
         let task = create(getAbilityContext(), config)
         task.start()
         sleepFor(0.5.second)
-        try{
-          getTask(getAbilityContext(), task.tid, token: "12345678910")
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            getTask(getAbilityContext(), task.tid, token: "12345678910")
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0700
-    * @tc.name      : test_show01
-    * @tc.desc      : test Request test_show01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_0700
+     * @tc.name      : test_show01
+     * @tc.desc      : test Request test_show01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_show01() {
-        let config = Config(Action.Upload, fileURL, data: dataForm, overwrite: true,
-            mode: Mode.Background)
+        let config = Config(Action.Upload, fileURL, data: dataForm, overwrite: true, mode: Mode.Background)
         let task = create(getAbilityContext(), config)
         task.start()
         sleepFor(0.5.second)
@@ -208,17 +200,17 @@ class NewTestRuqestUPLOAD {
         @Expect(Action.Upload.toString(),"Action.Upload")
         remove(task.tid)
     }
-      
+
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1200
-    * @tc.name      : test_touch01
-    * @tc.desc      : test Request test_touch01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1200
+     * @tc.name      : test_touch01
+     * @tc.desc      : test Request test_touch01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch01() {
         let config = Config(
             Action.Upload,
@@ -238,17 +230,17 @@ class NewTestRuqestUPLOAD {
         @Expect(Action.Upload.toString(),"Action.Upload")
         remove(task.tid)
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1400
-    * @tc.name      : test_touch04
-    * @tc.desc      : test Request test_touch04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1400
+     * @tc.name      : test_touch04
+     * @tc.desc      : test Request test_touch04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch04() {
         let token1 = ""
         let config = Config(
@@ -263,26 +255,26 @@ class NewTestRuqestUPLOAD {
         task.start()
         sleepFor(0.5.second)
 
-        try{
-          let taskInfo = touch(task.tid, token1)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==401)
-        }finally{
-          remove(task.tid)
+        try {
+            let taskInfo = touch(task.tid, token1)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==401)
+        } finally {
+            remove(task.tid)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1500
-    * @tc.name      : test_touch05
-    * @tc.desc      : test Request test_touch05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1500
+     * @tc.name      : test_touch05
+     * @tc.desc      : test Request test_touch05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch05() {
         let config = Config(
             Action.Upload,
@@ -296,26 +288,26 @@ class NewTestRuqestUPLOAD {
         task.start()
         sleepFor(0.5.second)
 
-        try{
-          let taskInfo = touch("", token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            let taskInfo = touch("", token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1600
-    * @tc.name      : test_touch06
-    * @tc.desc      : test Request test_touch06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1600
+     * @tc.name      : test_touch06
+     * @tc.desc      : test Request test_touch06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch06() {
         let config = Config(
             Action.Upload,
@@ -329,27 +321,26 @@ class NewTestRuqestUPLOAD {
         task.start()
         sleepFor(0.5.second)
 
-        try{
-          let taskInfo = touch("$%^!@&*", token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            let taskInfo = touch("$%^!@&*", token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1700
-    * @tc.name      : test_touch07
-    * @tc.desc      : test Request test_touch07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1700
+     * @tc.name      : test_touch07
+     * @tc.desc      : test Request test_touch07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch07() {
         let id = """
             multiline
@@ -367,27 +358,26 @@ class NewTestRuqestUPLOAD {
         task.start()
         sleepFor(0.5.second)
 
-        try{
-          let taskInfo = touch(id, token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            let taskInfo = touch(id, token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1800
-    * @tc.name      : test_search01
-    * @tc.desc      : test Request test_search01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1800
+     * @tc.name      : test_search01
+     * @tc.desc      : test Request test_search01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_search01() {
         let config = Config(
             Action.Upload,
@@ -405,20 +395,18 @@ class NewTestRuqestUPLOAD {
         remove(task.tid)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1900
-    * @tc.name      : test_search02
-    * @tc.desc      : test Request test_search02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_1900
+     * @tc.name      : test_search02
+     * @tc.desc      : test Request test_search02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_search02() {
-        let config = Config(Action.Upload, fileURL, data: dataForm, overwrite: true,
-            mode: Mode.Background)
+        let config = Config(Action.Upload, fileURL, data: dataForm, overwrite: true, mode: Mode.Background)
         let task = create(getAbilityContext(), config)
         task.start()
         sleepFor(0.5.second)
@@ -427,17 +415,16 @@ class NewTestRuqestUPLOAD {
         remove(task.tid)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_2000
-    * @tc.name      : test_search03
-    * @tc.desc      : test Request test_search03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_2000
+     * @tc.name      : test_search03
+     * @tc.desc      : test Request test_search03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_search03() {
         let config = Config(
             Action.Upload,
@@ -448,26 +435,25 @@ class NewTestRuqestUPLOAD {
             mode: Mode.Foreground
         )
         let task = create(getAbilityContext(), config)
-        let createOnCallback = MyCallBack(touch(task.tid,token).progress)
+        let createOnCallback = MyCallBack(touch(task.tid, token).progress)
         task.on(EventCallbackType.Completed, createOnCallback)
         task.start()
         sleepFor(3.second)
-        let arr = search(filter:RFilter(action:Action.Upload))
+        let arr = search(filter: RFilter(action: Action.Upload))
         @Expect(arr.contains(task.tid))
         remove(task.tid)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_2100
-    * @tc.name      : test_search04
-    * @tc.desc      : test Request test_search04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_NewTestRuqestUPLOAD_2100
+     * @tc.name      : test_search04
+     * @tc.desc      : test Request test_search04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_search04() {
         let config = Config(
             Action.Upload,
@@ -478,11 +464,11 @@ class NewTestRuqestUPLOAD {
             mode: Mode.Foreground
         )
         let task = create(getAbilityContext(), config)
-        let createOnCallback = MyCallBack(touch(task.tid,token).progress)
+        let createOnCallback = MyCallBack(touch(task.tid, token).progress)
         task.on(EventCallbackType.Completed, createOnCallback)
         task.start()
         sleepFor(3.second)
-        let arr = search(filter:RFilter(action:Action.Download))
+        let arr = search(filter: RFilter(action: Action.Download))
         @Expect(!arr.contains(task.tid))
         remove(task.tid)
     }

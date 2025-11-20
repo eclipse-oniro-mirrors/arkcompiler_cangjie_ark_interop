@@ -61,7 +61,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_AlphabetIndexer_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin AlphabetIndexer")
@@ -82,7 +82,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Blank_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Blank")
@@ -103,7 +103,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Button_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Button")
@@ -124,7 +124,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Checkbox_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Checkbox")
@@ -145,7 +145,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_CheckboxGroup_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin CheckboxGroup")
@@ -166,7 +166,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_DataPanel_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin DataPanel")
@@ -187,7 +187,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_DatePicker_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin DatePicker")
@@ -208,7 +208,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Divider_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Divider")
@@ -229,7 +229,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Gauge_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Gauge")
@@ -250,7 +250,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Image_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Image")
@@ -271,7 +271,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_ImageSpan_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin ImageSpan")
@@ -291,7 +291,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_LoadingProgress_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin LoadingProgress")
@@ -312,7 +312,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Menu_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Menu")
@@ -333,7 +333,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_MenuItem_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin MenuItem")
@@ -354,7 +354,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_MenuItemGroup_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin MenuItemGroup")
@@ -374,7 +374,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Progress_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Progress")
@@ -395,7 +395,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_QRCode_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin QRCode")
@@ -416,7 +416,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Radio_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Radio")
@@ -437,7 +437,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Rating_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Rating")
@@ -458,7 +458,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Refresh_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Refresh")
@@ -479,7 +479,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_RichEditor_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin RichEditor")
@@ -500,7 +500,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_RichText_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin RichText")
@@ -521,7 +521,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_RowSplit_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin RowSplit")
@@ -542,7 +542,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_ScrollBar_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin ScrollBar")
@@ -563,7 +563,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Search_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Search")
@@ -584,7 +584,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Slider_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Slider")
@@ -607,7 +607,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Stepper_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Stepper_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Stepper")
@@ -628,7 +628,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_StepperItem_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_StepperItem_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin StepperItem")
@@ -648,7 +648,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Text_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Text_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Text")
@@ -670,7 +670,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_TextClock_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_TextClock_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin TextClock")
@@ -691,7 +691,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_TextInput_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_TextInput_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin TextInput")
@@ -712,7 +712,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_TextPicker_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_TextPicker_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin TextPicker")
@@ -733,7 +733,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_TextTimer_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_TextTimer_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin TextTimer")
@@ -754,7 +754,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Toggle_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Toggle_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Toggle")
@@ -775,7 +775,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Web_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Web_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Web")
@@ -796,7 +796,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Select_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Select_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Select")
@@ -817,7 +817,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Badge_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Badge_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Badge")
@@ -838,7 +838,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Column_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Column_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Column")
@@ -859,7 +859,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Grid_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Grid_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Grid")
@@ -880,7 +880,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_GridItem_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_GridItem_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin GridItem")
@@ -901,7 +901,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_GridRow_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_GridRow_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin GridRow")
@@ -922,7 +922,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_GridCol_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_GridCol_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin GridCol")
@@ -942,7 +942,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Flex_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Flex_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Flex")
@@ -963,7 +963,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_List_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_List_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin List")
@@ -984,7 +984,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_ListItem_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_ListItem_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin ListItem")
@@ -1005,7 +1005,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_ListItemGroup_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_ListItemGroup_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin ListItemGroup")
@@ -1026,7 +1026,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_RelativeContainer_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_RelativeContainer_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin RelativeContainer")
@@ -1047,7 +1047,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Row_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Row_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Row")
@@ -1068,7 +1068,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Scroll_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Scroll_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Scroll")
@@ -1089,7 +1089,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Stack_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Stack_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Stack")
@@ -1110,7 +1110,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Swiper_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Swiper_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Swiper")
@@ -1131,7 +1131,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Tabs_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Tabs_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Tabs")
@@ -1152,7 +1152,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_TabContent_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_TabContent_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin TabContent")
@@ -1172,7 +1172,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Circle_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Circle_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Circle")
@@ -1193,7 +1193,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Line_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Line_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Line")
@@ -1214,7 +1214,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Rect_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Rect_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Rect")
@@ -1235,7 +1235,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Shape_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Shape_6100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Shape")
@@ -1258,7 +1258,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Path_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Path_6300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Path")
@@ -1279,7 +1279,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Canvas_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Canvas_6400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Canvas")
@@ -1300,7 +1300,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Video_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Video_6500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Video")
@@ -1322,7 +1322,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Counter_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Counter_7000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Counter")
@@ -1343,7 +1343,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_PatternLock_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_PatternLock_7100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin PatternLock")
@@ -1364,7 +1364,7 @@ class Test_EmptyEvent_onAreaChange {
      * @tc.desic：Empty_Ellipse_onAreaChange
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onAreaChange_Ellipse_7200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onAreaChange: FindBegin Ellipse")

@@ -15,8 +15,7 @@
 
 package ohos_app_cangjie_entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject
-    }
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject}
 
 class Student_test_jsclass_00 <: SharedObject {
     var name: String

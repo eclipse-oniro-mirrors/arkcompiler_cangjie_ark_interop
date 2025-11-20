@@ -23,6 +23,7 @@ import ohos.base.*
 import stdx.encoding.json.*
 import kit.PerformanceAnalysisKit.*
 import kit.PerformanceAnalysisKit.Hilog
+
 @Test
 class testAppEventPackageHolderConstructor_1 {
     /*
@@ -34,28 +35,36 @@ class testAppEventPackageHolderConstructor_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder constructor")
-        AppEventPackageHolder("watcher1")
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder constructor")
+            AppEventPackageHolder("watcher1")
+            Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
+        } catch (e: BusinessException) {
+            @Expect(false)
+        }
     }
 
     /*
      * @tc.number    : Sub_Cangjie_Hiappevent_AppEventPackageHolder_Constructor_0200
      * @tc.name      : TestCase_2
-     * @tc.desc      : AppEventPackageHolder constructor, watcherName: "watcher2".
+     * @tc.desc      : AppEventPackageHolder constructor, watcherName: "".
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","AppEventPackageHolder constructor")
-        AppEventPackageHolder("watcher2")
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        try {
+            Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+            Hilog.info(0, "cangjietest", "AppEventPackageHolder constructor")
+            AppEventPackageHolder("")
+            Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
+        } catch (e: BusinessException) {
+            @Expect(false)
+        }
     }
 }

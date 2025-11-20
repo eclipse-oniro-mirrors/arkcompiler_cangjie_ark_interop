@@ -36,7 +36,7 @@ class TestContains_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -56,7 +56,7 @@ class TestContains_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -76,7 +76,7 @@ class TestContains_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -96,7 +96,7 @@ class TestContains_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -116,11 +116,110 @@ class TestContains_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("test")
+        Hilog.info(0u32, "cangjietest", "", "testContains")
+        rdbPridecates.contains("1234567890", "1234567890")
+        @Expect(true)
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 ends.")
+    }
+     /*
+     * @tc.number    : Test_Contains_0110
+     * @tc.name      : TestCase_1
+     * @tc.desc      : "1" Match field with field table.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func TestCase_6(): Unit {
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
+        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
+        let rdbPridecates = RdbPredicates("Reason")
+        Hilog.info(0u32, "cangjietest", "", "testContains")
+        rdbPridecates.contains("field", "value")
+        @Expect(true)
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 ends.")
+    }
+
+    /*
+     * @tc.number    : Test_Contains_0210
+     * @tc.name      : TestCase_2
+     * @tc.desc      : "2" Match field with field table.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func TestCase_7(): Unit {
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
+        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
+        let rdbPridecates = RdbPredicates("Reason")
+        Hilog.info(0u32, "cangjietest", "", "testContains")
+        rdbPridecates.contains("NAME", "os")
+        @Expect(true)
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 ends.")
+    }
+
+    /*
+     * @tc.number    : Test_Contains_0310
+     * @tc.name      : TestCase_3
+     * @tc.desc      : "3" Match field with field table.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func TestCase_8(): Unit {
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
+        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
+        let rdbPridecates = RdbPredicates("Reason")
+        Hilog.info(0u32, "cangjietest", "", "testContains")
+        rdbPridecates.contains("#!$@$23", "#!$@$23")
+        @Expect(true)
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 ends.")
+    }
+
+    /*
+     * @tc.number    : Test_Contains_0410
+     * @tc.name      : TestCase_4
+     * @tc.desc      : "4" Match field with field table.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func TestCase_9(): Unit {
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
+        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
+        let rdbPridecates = RdbPredicates("Reason")
+        Hilog.info(0u32, "cangjietest", "", "testContains")
+        rdbPridecates.contains("reason", "reason")
+        @Expect(true)
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 ends.")
+    }
+
+    /*
+     * @tc.number    : Test_Contains_0510
+     * @tc.name      : TestCase_5
+     * @tc.desc      : "1024" Match field with field table.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func TestCase_10(): Unit {
+        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
+        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
+        let rdbPridecates = RdbPredicates("Reason")
         Hilog.info(0u32, "cangjietest", "", "testContains")
         rdbPridecates.contains("1234567890", "1234567890")
         @Expect(true)

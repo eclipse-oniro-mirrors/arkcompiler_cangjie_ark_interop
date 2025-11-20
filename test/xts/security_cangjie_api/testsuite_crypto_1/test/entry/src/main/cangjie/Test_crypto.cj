@@ -31,7 +31,6 @@ import ohos.base.*
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.*
 
-
 @Test
 class Test_crypto {
     override func afterAll(): Unit {
@@ -40,15 +39,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0100
-    * @tc.name      : test_Random
-    * @tc.desc      : test CryptoArchitectureKit generateRandom
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0100
+     * @tc.name      : test_Random
+     * @tc.desc      : test CryptoArchitectureKit generateRandom
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Random(): Unit {
         let random = createRandom()
         @Expect(random.algName, "CTR_DRBG")
@@ -61,15 +60,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0200
-    * @tc.name      : test_Mac
-    * @tc.desc      : test CryptoArchitectureKit createMac
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0200
+     * @tc.name      : test_Mac
+     * @tc.desc      : test CryptoArchitectureKit createMac
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Mac(): Unit {
         let mac = createMac("SHA256")
         @Expect(mac.algName, "SHA256")
@@ -83,15 +82,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0300
-    * @tc.name      : test_Md
-    * @tc.desc      : test CryptoArchitectureKit createMd
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0300
+     * @tc.name      : test_Md
+     * @tc.desc      : test CryptoArchitectureKit createMd
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Md(): Unit {
         let md = createMd("SHA256")
         @Expect(md.algName, "SHA256")
@@ -101,17 +100,16 @@ class Test_crypto {
         @Expect(blob.data.size, Int64(md.getMdLength()))
     }
 
-   
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0400
-    * @tc.name      : test_SymKey
-    * @tc.desc      : test CryptoArchitectureKit generateSymKey
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0400
+     * @tc.name      : test_SymKey
+     * @tc.desc      : test CryptoArchitectureKit generateSymKey
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_SymKey(): Unit {
         let syg = createSymKeyGenerator("AES128")
         @Expect(syg.algName, "AES128")
@@ -124,15 +122,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0500
-    * @tc.name      : test_Cipher_AES_ECB
-    * @tc.desc      : test CryptoArchitectureKit createCipher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0500
+     * @tc.name      : test_Cipher_AES_ECB
+     * @tc.desc      : test CryptoArchitectureKit createCipher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Cipher_AES_ECB(): Unit {
         let skg = createSymKeyGenerator("AES128")
         let sk = skg.convertKey(DataBlob([83, 217, 231, 76, 28, 113, 23, 219, 250, 71, 209, 210, 205, 97, 32, 159]))
@@ -149,15 +147,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0600
-    * @tc.name      : test_Cipher_AES_GCM
-    * @tc.desc      : test CryptoArchitectureKit createCipher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0600
+     * @tc.name      : test_Cipher_AES_GCM
+     * @tc.desc      : test CryptoArchitectureKit createCipher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Cipher_AES_GCM(): Unit {
         let skg = createSymKeyGenerator("AES128")
         let sk = skg.convertKey(DataBlob([83, 217, 231, 76, 28, 113, 23, 219, 250, 71, 209, 210, 205, 97, 32, 159]))
@@ -183,15 +181,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0700
-    * @tc.name      : test_Cipher_AES_CBC
-    * @tc.desc      : test CryptoArchitectureKit createCipher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0700
+     * @tc.name      : test_Cipher_AES_CBC
+     * @tc.desc      : test CryptoArchitectureKit createCipher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Cipher_AES_CBC(): Unit {
         let skg = createSymKeyGenerator("AES128")
         let sk = skg.convertKey(DataBlob([83, 217, 231, 76, 28, 113, 23, 219, 250, 71, 209, 210, 205, 97, 32, 159]))
@@ -212,15 +210,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0800
-    * @tc.name      : test_Cipher_3DES_ECB
-    * @tc.desc      : test CryptoArchitectureKit createCipher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0800
+     * @tc.name      : test_Cipher_3DES_ECB
+     * @tc.desc      : test CryptoArchitectureKit createCipher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Cipher_3DES_ECB(): Unit {
         let skg = createSymKeyGenerator("3DES192")
         let sk = skg.convertKey(
@@ -238,15 +236,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0900
-    * @tc.name      : test_Cipher_SM4_ECB
-    * @tc.desc      : test CryptoArchitectureKit createCipher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_0900
+     * @tc.name      : test_Cipher_SM4_ECB
+     * @tc.desc      : test CryptoArchitectureKit createCipher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Cipher_SM4_ECB(): Unit {
         let skg = createSymKeyGenerator("SM4_128")
         let sk = skg.convertKey(DataBlob([7, 154, 52, 176, 4, 236, 150, 43, 237, 9, 145, 166, 141, 174, 224, 131]))
@@ -262,15 +260,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1000
-    * @tc.name      : test_Cipher_SM4_CBC
-    * @tc.desc      : test CryptoArchitectureKit createCipher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1000
+     * @tc.name      : test_Cipher_SM4_CBC
+     * @tc.desc      : test CryptoArchitectureKit createCipher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Cipher_SM4_CBC(): Unit {
         let skg = createSymKeyGenerator("SM4_128")
         let sk = skg.convertKey(DataBlob([7, 154, 52, 176, 4, 236, 150, 43, 237, 9, 145, 166, 141, 174, 224, 131]))
@@ -288,15 +286,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1100
-    * @tc.name      : test_Cipher_SM4_GCM
-    * @tc.desc      : test CryptoArchitectureKit createCipher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1100
+     * @tc.name      : test_Cipher_SM4_GCM
+     * @tc.desc      : test CryptoArchitectureKit createCipher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Cipher_SM4_GCM(): Unit {
         let skg = createSymKeyGenerator("SM4_128")
         let sk = skg.convertKey(DataBlob([83, 217, 231, 76, 28, 113, 23, 219, 250, 71, 209, 210, 205, 97, 32, 159]))
@@ -318,15 +316,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1200
-    * @tc.name      : test_Cipher_AES_CCM
-    * @tc.desc      : test CryptoArchitectureKit createCipher
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1200
+     * @tc.name      : test_Cipher_AES_CCM
+     * @tc.desc      : test CryptoArchitectureKit createCipher
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Cipher_AES_CCM(): Unit {
         let skg = createSymKeyGenerator("AES128")
         let sk = skg.convertKey(DataBlob([83, 217, 231, 76, 28, 113, 23, 219, 250, 71, 209, 210, 205, 97, 32, 159]))
@@ -352,15 +350,15 @@ class Test_crypto {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1300
-    * @tc.name      : test_Exception_01
-    * @tc.desc      : test CryptoArchitectureKit createSymKeyGenerator
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1300
+     * @tc.name      : test_Exception_01
+     * @tc.desc      : test CryptoArchitectureKit createSymKeyGenerator
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Exception_01(): Unit {
         try {
             createSymKeyGenerator("AES128")
@@ -372,15 +370,15 @@ class Test_crypto {
 
     //Result
     /*
-    * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1400
-    * @tc.name      : test_Result
-    * @tc.desc      : test CryptoArchitectureKit Result
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_CryptoArchitectureKit_Test_crypto_1400
+     * @tc.name      : test_Result
+     * @tc.desc      : test CryptoArchitectureKit Result
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Result(): Unit {
         let e1 = Result.InvalidParams
         let e2 = Result.NotSupport
@@ -398,7 +396,4 @@ class Test_crypto {
         @Expect(e4.toString(),"Runtime error.")
         @Expect(e5.toString(),"Crypto operation error.")
     }
-
 }
-
-

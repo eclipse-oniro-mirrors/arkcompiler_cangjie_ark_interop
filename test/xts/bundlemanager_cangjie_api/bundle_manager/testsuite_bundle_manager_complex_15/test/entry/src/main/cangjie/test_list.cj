@@ -14,42 +14,62 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testApplicationInfo_codePath_1", { =>testApplicationInfo_codePath_1()
-})
-registerTestSuite("testApplicationInfo_codePath_2", { =>testApplicationInfo_codePath_2()
-})
-registerTestSuite("testApplicationInfo_codePath_3", { =>testApplicationInfo_codePath_3()
-})
-registerTestSuite("testApplicationInfo_codePath_4", { =>testApplicationInfo_codePath_4()
-})
-registerTestSuite("testApplicationInfo_codePath_5", { =>testApplicationInfo_codePath_5()
-})
-registerTestSuite("testApplicationInfo_codePath_6", { =>testApplicationInfo_codePath_6()
-})
-registerTestSuite("testApplicationInfo_codePath_7", { =>testApplicationInfo_codePath_7()
-})
-registerTestSuite("testApplicationInfo_codePath_8", { =>testApplicationInfo_codePath_8()
-})
-registerTestSuite("testApplicationInfo_codePath_9", { =>testApplicationInfo_codePath_9()
-})
-registerTestSuite("testApplicationInfo_codePath_10", { =>testApplicationInfo_codePath_10()
-})
-registerTestSuite("testApplicationInfo_codePath_11", { =>testApplicationInfo_codePath_11()
-})
-registerTestSuite("testApplicationInfo_codePath_12", { =>testApplicationInfo_codePath_12()
-})
-registerTestSuite("testApplicationInfo_codePath_13", { =>testApplicationInfo_codePath_13()
-})
-registerTestSuite("testApplicationInfo_codePath_14", { =>testApplicationInfo_codePath_14()
-})
-registerTestSuite("testApplicationInfo_codePath_15", { =>testApplicationInfo_codePath_15()
-})
-registerTestSuite("testApplicationInfo_codePath_16", { =>testApplicationInfo_codePath_16()
-})
-registerTestSuite("testApplicationInfo_codePath_17", { =>testApplicationInfo_codePath_17()
-})
-registerTestSuite("testApplicationInfo_codePath_18", { =>testApplicationInfo_codePath_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testApplicationInfo_codePath_1", {
+        => testApplicationInfo_codePath_1()
+    })
+    registerTestSuite("testApplicationInfo_codePath_2", {
+        => testApplicationInfo_codePath_2()
+    })
+    registerTestSuite("testApplicationInfo_codePath_3", {
+        => testApplicationInfo_codePath_3()
+    })
+    registerTestSuite("testApplicationInfo_codePath_4", {
+        => testApplicationInfo_codePath_4()
+    })
+    registerTestSuite("testApplicationInfo_codePath_5", {
+        => testApplicationInfo_codePath_5()
+    })
+    registerTestSuite("testApplicationInfo_codePath_6", {
+        => testApplicationInfo_codePath_6()
+    })
+    registerTestSuite("testApplicationInfo_codePath_7", {
+        => testApplicationInfo_codePath_7()
+    })
+    registerTestSuite("testApplicationInfo_codePath_8", {
+        => testApplicationInfo_codePath_8()
+    })
+    registerTestSuite("testApplicationInfo_codePath_9", {
+        => testApplicationInfo_codePath_9()
+    })
+    registerTestSuite("testApplicationInfo_codePath_10", {
+        => testApplicationInfo_codePath_10()
+    })
+    registerTestSuite("testApplicationInfo_codePath_11", {
+        => testApplicationInfo_codePath_11()
+    })
+    registerTestSuite("testApplicationInfo_codePath_12", {
+        => testApplicationInfo_codePath_12()
+    })
+    registerTestSuite("testApplicationInfo_codePath_13", {
+        => testApplicationInfo_codePath_13()
+    })
+    registerTestSuite("testApplicationInfo_codePath_14", {
+        => testApplicationInfo_codePath_14()
+    })
+    registerTestSuite("testApplicationInfo_codePath_15", {
+        => testApplicationInfo_codePath_15()
+    })
+    registerTestSuite("testApplicationInfo_codePath_16", {
+        => testApplicationInfo_codePath_16()
+    })
+    registerTestSuite("testApplicationInfo_codePath_17", {
+        => testApplicationInfo_codePath_17()
+    })
+    registerTestSuite("testApplicationInfo_codePath_18", {
+        => testApplicationInfo_codePath_18()
+    })
 }

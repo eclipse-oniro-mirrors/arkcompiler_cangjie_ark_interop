@@ -21,8 +21,6 @@ import std.unittest.common.*
 import ohos.ui_test.*
 import kit.ArkData.*
 import ohos.business_exception.BusinessException
-import ohos.data.preferences.Options as PreferencesOptions
-import ohos.data.preferences.ValueType as PreferencesValueType
 
 @Test
 class Test_getPreferences_01 {
@@ -36,7 +34,7 @@ class Test_getPreferences_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getpreferences_exception_01(): Unit {
         try {
             Preferences.getPreferences(getAbilityContext(), "")
@@ -58,7 +56,7 @@ class Test_getPreferences_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getpreferences_exception_02(): Unit {
         try {
             let preferences = Preferences.getPreferences(getAbilityContext(), "\0")
@@ -79,7 +77,7 @@ class Test_getPreferences_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getpreferences_exception_03(): Unit {
         try {
             let preferences = Preferences.getPreferences(getAbilityContext(), "\0")
@@ -99,7 +97,7 @@ class Test_getPreferences_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getpreferences_exception_04(): Unit {
         try {
             let preferences = Preferences.getPreferences(getAbilityContext(), PreferencesOptions("\0"))

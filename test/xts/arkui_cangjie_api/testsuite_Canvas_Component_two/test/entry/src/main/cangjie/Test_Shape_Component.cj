@@ -51,7 +51,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_0100() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -76,7 +76,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_0200() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -99,7 +99,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_0300() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -118,7 +118,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_0400() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -137,7 +137,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_0500() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -156,7 +156,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_0600() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -174,7 +174,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_0700() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -192,7 +192,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_0800() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -210,7 +210,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_0900() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -228,7 +228,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01000() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -246,7 +246,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01100() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -263,7 +263,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01200() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -284,7 +284,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01300() {
         let Inspector = getInspectorByKey("Shape_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -302,7 +302,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01400() {
         let Inspector = getInspectorByKey("Shape_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -327,7 +327,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01500() {
         let Inspector = getInspectorByKey("Shape_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -346,7 +346,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01600() {
         let Inspector = getInspectorByKey("Shape_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -365,7 +365,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01700() {
         let Inspector = getInspectorByKey("Shape_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -384,7 +384,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01800() {
         let Inspector = getInspectorByKey("Shape_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -402,7 +402,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_01900() {
         let Inspector = getInspectorByKey("Shape_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -420,7 +420,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_02000() {
         let Inspector = getInspectorByKey("Shape_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -438,7 +438,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_02100() {
         let Inspector = getInspectorByKey("Shape_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -456,7 +456,7 @@ class Test_Shape_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Shape_component_02200() {
         let Inspector = getInspectorByKey("Shape_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()

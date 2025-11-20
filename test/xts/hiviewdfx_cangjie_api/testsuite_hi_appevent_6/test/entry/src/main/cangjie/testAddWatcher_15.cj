@@ -35,7 +35,7 @@ class testAddWatcher_15 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1401(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_1401 begins.")
         Hilog.info(0, "cangjietest","define local variable watcher")
@@ -64,7 +64,7 @@ class testAddWatcher_15 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1402(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_1402 begins.")
         Hilog.info(0, "cangjietest","define local variable watcher")
@@ -93,7 +93,7 @@ class testAddWatcher_15 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1403(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_1403 begins.")
         Hilog.info(0, "cangjietest","define local variable watcher")
@@ -122,7 +122,7 @@ class testAddWatcher_15 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1404(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_1404 begins.")
         Hilog.info(0, "cangjietest","define local variable watcher")

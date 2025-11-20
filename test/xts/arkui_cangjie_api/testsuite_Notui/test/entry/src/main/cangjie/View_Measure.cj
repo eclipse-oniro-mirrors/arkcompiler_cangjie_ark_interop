@@ -35,21 +35,25 @@ import ohos.arkui.ui_context.*
 @Entry
 @Component
 class View_Measure {
-    let textSize: Float64 = getUIContext().getMeasureUtils().measureText(
-        MeasureOptions(
-            textContent: "Hello world1",
-            fontWeight: FontWeight.Normal
-        )
-    )
+    var textSize: Float64 = 0.0
+    var context2: ?MeasureOptions = None  
+    var textSize2: ?SizeOptions = None
 
-    let context2: MeasureOptions = MeasureOptions(textContent: "Hello world2")
-    let textSize2: SizeOptions = getUIContext().getMeasureUtils().measureTextSize(context2)
+    
     func build() {
         Row() {
             Column() {
                 Text("${this.textSize}").id("textSize")
-                Text("${this.textSize2.width.value}").id("textSize2.width")
-                Text("${this.textSize2.height.value}").id("textSize2.height")
+                Button().onClick({ClickEvent =>
+                    textSize = getUIContext().getMeasureUtils().measureText(
+                        MeasureOptions(
+                            textContent: "Hello world1",
+                            fontWeight: FontWeight.Normal
+                        )
+                    )
+                    context2 = MeasureOptions(textContent: "Hello world2")
+                    textSize2 = getUIContext().getMeasureUtils().measureTextSize(context2.getOrThrow())
+                })
             }.width(100.percent)
         }.height(100.percent)
     }

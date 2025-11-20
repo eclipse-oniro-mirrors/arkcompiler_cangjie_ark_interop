@@ -47,7 +47,7 @@ class Test_ObservedAndPublish_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ObservedAndPublishNumber_001() {
         Hilog.info(0, "cangjietest", "test", "Test_ObservedAndPublishNumber_001 Start")
         let button = driver.waitForComponent(On().id("state1"), 5000).getOrThrow()
@@ -70,7 +70,7 @@ class Test_ObservedAndPublish_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ObservedAndPublishNumber_002() {
         Hilog.info(0, "cangjietest", "test", "Test_ObservedAndPublishNumber_002 Start")
         let button = driver.waitForComponent(On().id("state2"), 5000).getOrThrow()

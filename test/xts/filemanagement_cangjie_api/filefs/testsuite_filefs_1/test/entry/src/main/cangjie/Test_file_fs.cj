@@ -29,7 +29,7 @@ import kit.PerformanceAnalysisKit.Hilog
 @Test
 class Test_file_fs {
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyFile() {
         try {
             FileIo.copyFile("", "")
@@ -80,7 +80,7 @@ class Test_file_fs {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyDir_01() {
         try {
             FileIo.copyDir("", "", mode: 1)
@@ -195,7 +195,7 @@ class Test_file_fs {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyDirConflict() {
         let src1Path = "/data/storage/el2/base/haps/cpsrc1"
         let filePath = "/data/storage/el2/base/haps/cpsrc1/testcpConflict"
