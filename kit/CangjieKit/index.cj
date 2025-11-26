@@ -19,4 +19,3 @@ public import ohos.business_exception.*
 public import ohos.ark_interop.*
 public import ohos.ark_interop_helper.*
 public import ohos.callback_invoke.*
-public import ohos.ffi.*
