@@ -37,11 +37,11 @@ class Test_KVManager_getAllKVStoreId_08 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_getallkvstoreid_02() {
         let context = getAbilityContext()
-        let opt = Options(SecurityLevel.S2)
+        let opt = KVOptions(KVSecurityLevel.S2)
         let kvManager = DistributedKVStore.createKVManager(KVManagerConfig(context, "com.example.myapplication"))
         try {
             kvManager.getAllKVStoreId("")
@@ -63,11 +63,11 @@ class Test_KVManager_getAllKVStoreId_08 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_getallkvstoreid_04() {
         let context = getAbilityContext()
-        let opt = Options(SecurityLevel.S4)
+        let opt = KVOptions(KVSecurityLevel.S4)
         let kvManager = DistributedKVStore.createKVManager(KVManagerConfig(context, "com.example.myapplication"))
         @Expect(kvManager.getAllKVStoreId("com.example.myapplication"),Array<String>())
     }
@@ -81,11 +81,11 @@ class Test_KVManager_getAllKVStoreId_08 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_getallkvstoreid_05() {
         let context = getAbilityContext()
-        let opt = Options(SecurityLevel.S4)
+        let opt = KVOptions(KVSecurityLevel.S4)
         let kvManager = DistributedKVStore.createKVManager(KVManagerConfig(context, "cangjietest_appid"))
         try {
             kvManager.getAllKVStoreId("cangjietest_appid")

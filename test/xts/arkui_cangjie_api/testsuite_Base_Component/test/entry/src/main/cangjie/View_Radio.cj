@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length,  Color, LengthType}
+import ohos.base.{LengthProp, Length,  Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -40,53 +40,53 @@ class View_Radio {
         Column(space:30) {
             Column() {
                 Radio(group: "1", value: "A")
-                    .onChange {
+                    .onChange ({
                         val =>
                         if (!val) {
                             return
                         }
                         Hilog.info(0,"",   "cangjietest", "Radio A")
                         radioName = "AAA"
-                    }
+                    })
                     .size(width: 40, height: 40)
                     .checked(this.checked)
                     .id("radiobasic")
 
                 Radio(group: "1", value: "B")
-                    .onChange {
+                    .onChange ({
                         val =>
                         if (!val) {
                             return
                         }
                         Hilog.info(0,"",   "cangjietest", "Radio B")
                         radioName = "BBB"
-                    }
+                    })
                     .size(width: 40, height: 40)
                     .checked(false)
                 Radio(group: "1", value: "C")
-                    .onChange {
+                    .onChange ({
                         val =>
                         if (!val) {
                             return
                         }
                         Hilog.info(0,"",   "cangjietest", "Radio C")
                         radioName = "CCC"
-                    }
+                    })
                     .size(width: 40, height: 40)
                 Radio(group: "1", value: "D")
-                    .onChange {
+                    .onChange ({
                         val =>
                         if (!val) {
                             return
                         }
                         Hilog.info(0,"",   "cangjietest", "Radio D")
                         radioName = "DDD"
-                    }
+                    })
                     .size(width: 40, height: 40)
                 Text("${radioName}").fontSize(40)
-                Button("checked").onClick {ClickEvent =>
+                Button("checked").onClick({ClickEvent =>
                     this.checked = !checked
-                }.id("change")
+                }).id("change")
                 Text("${this.checked}").id("checked")
             }
         }.margin(top: 40, left: 40)

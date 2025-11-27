@@ -38,7 +38,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_AlphabetIndexer_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Blank_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Button_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Checkbox_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_CheckboxGroup_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin CheckboxGroup")
@@ -163,7 +163,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_DataPanel_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin DataPanel")
@@ -188,7 +188,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_DatePicker_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin DatePicker")
@@ -213,7 +213,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Divider_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Divider")
@@ -238,7 +238,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Gauge_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Gauge")
@@ -263,7 +263,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Image_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Image")
@@ -288,7 +288,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_ImageSpan_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin ImageSpan")
@@ -313,7 +313,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_LoadingProgress_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin LoadingProgress")
@@ -338,7 +338,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Menu_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Menu")
@@ -363,7 +363,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_MenuItem_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin MenuItem")
@@ -388,7 +388,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_MenuItemGroup_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin MenuItemGroup")
@@ -413,7 +413,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Progress_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Progress")
@@ -438,7 +438,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_QRCode_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin QRCode")
@@ -463,7 +463,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Radio_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Radio")
@@ -488,7 +488,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Rating_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Rating")
@@ -513,7 +513,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Refresh_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Refresh")
@@ -538,7 +538,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_RichEditor_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin RichEditor")
@@ -563,7 +563,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_RowSplit_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_RowSplit_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin RowSplit")
@@ -588,7 +588,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_ScrollBar_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_ScrollBar_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin ScrollBar")
@@ -613,7 +613,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Search_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Search_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Search")
@@ -638,7 +638,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Slider_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Slider_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Slider")
@@ -663,7 +663,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Stepper_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Stepper_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Stepper")
@@ -688,7 +688,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_StepperItem_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_StepperItem_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin StepperItem")
@@ -713,7 +713,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Text_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Text_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Text")
@@ -738,7 +738,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_TextArea_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_TextArea_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin TextArea")
@@ -763,7 +763,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_TextClock_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_TextClock_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin TextClock")
@@ -788,7 +788,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_TextInput_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_TextInput_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin TextInput")
@@ -813,7 +813,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_TextPicker_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_TextPicker_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin TextPicker")
@@ -838,7 +838,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_TextTimer_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_TextTimer_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin TextTimer")
@@ -863,7 +863,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Toggle_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Toggle_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Toggle")
@@ -888,7 +888,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Web_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Web_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Web")
@@ -913,7 +913,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Select_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Select_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Select")
@@ -938,7 +938,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Badge_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Badge_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Badge")
@@ -963,7 +963,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Column_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Column_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Column")
@@ -988,7 +988,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Grid_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Grid_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Grid")
@@ -1013,7 +1013,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_GridItem_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_GridItem_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin GridItem")
@@ -1038,7 +1038,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_GridRow_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_GridRow_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin GridRow")
@@ -1063,7 +1063,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_GridCol_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_GridCol_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin GridCol")
@@ -1088,7 +1088,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Flex_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Flex_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Flex")
@@ -1113,7 +1113,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_List_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_List_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin List")
@@ -1138,7 +1138,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_ListItem_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_ListItem_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin ListItem")
@@ -1163,7 +1163,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_ListItemGroup_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_ListItemGroup_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin ListItemGroup")
@@ -1190,7 +1190,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_RelativeContainer_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_RelativeContainer_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin RelativeContainer")
@@ -1215,7 +1215,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Row_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Row_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Row")
@@ -1240,7 +1240,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Scroll_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Scroll_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Scroll")
@@ -1265,7 +1265,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Stack_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Stack_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Stack")
@@ -1290,7 +1290,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Swiper_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Swiper_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Swiper")
@@ -1315,7 +1315,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Tabs_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Tabs_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Tabs")
@@ -1340,7 +1340,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_TabContent_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_TabContent_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin TabContent")
@@ -1365,7 +1365,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Circle_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Circle_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Circle")
@@ -1390,7 +1390,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Line_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Line_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Line")
@@ -1415,7 +1415,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Rect_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Rect_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Rect")
@@ -1440,7 +1440,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Shape_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Shape_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Shape")
@@ -1465,7 +1465,7 @@ class Test_EmptyAttrs_Overlay {
      * @tc.desic：Empty_Path_Overlay
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Overlay_Path_6100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckOverlay: FindBegin Path")

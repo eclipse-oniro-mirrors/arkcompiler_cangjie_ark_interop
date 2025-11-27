@@ -35,10 +35,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.BitsPerSample, "100")
@@ -49,7 +49,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -61,10 +61,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.jpg")
             imageSource.modifyImageProperty((PropertyKey.Orientation), "200")
@@ -75,7 +75,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -87,10 +87,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.bmp")
             imageSource.modifyImageProperty(PropertyKey.ImageLength, "100")
@@ -101,7 +101,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -113,10 +113,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.gif")
             imageSource.modifyImageProperty(PropertyKey.ImageWidth, "100")
@@ -127,7 +127,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -139,10 +139,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.123")
             imageSource.modifyImageProperty(PropertyKey.GpsLatitude, "100")
@@ -153,7 +153,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 
     /*
@@ -165,10 +165,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.GpsLongitude, "100")
@@ -179,7 +179,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
 
     /*
@@ -191,10 +191,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty((PropertyKey.GpsLatitudeRef), "100")
@@ -205,7 +205,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
     }
 
     /*
@@ -217,10 +217,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.GpsLongitudeRef, "100")
@@ -231,7 +231,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_8 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 ends.")
     }
 
     /*
@@ -243,10 +243,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.DateTimeOriginal, "100")
@@ -257,7 +257,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_9 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 ends.")
     }
 
     /*
@@ -269,10 +269,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_10 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.ExposureTime, "100")
@@ -283,7 +283,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_10 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 ends.")
     }
 
     /*
@@ -295,10 +295,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_11 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneType, "100")
@@ -309,7 +309,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_11 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 ends.")
     }
 
     /*
@@ -321,10 +321,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_12 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.IsoSpeedRatings, "100")
@@ -335,7 +335,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_12 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 ends.")
     }
 
     /*
@@ -347,10 +347,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_13 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_13 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.FNumber, "100")
@@ -361,7 +361,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_13 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_13 ends.")
     }
 
     /*
@@ -373,10 +373,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_14 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_14 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.DateTime, "100")
@@ -387,7 +387,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_14 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_14 ends.")
     }
 
     /*
@@ -399,10 +399,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_15 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_15 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.GpsDateStamp, "100")
@@ -413,7 +413,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_15 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_15 ends.")
     }
 
     /*
@@ -425,10 +425,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_16 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.GpsDateStamp, "100")
@@ -439,7 +439,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_16 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 ends.")
     }
 
     /*
@@ -451,10 +451,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_17 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.ImageDescription, "100")
@@ -465,7 +465,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_17 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 ends.")
     }
 
     /*
@@ -477,10 +477,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_18 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.Make, "100")
@@ -491,7 +491,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_18 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 ends.")
     }
 
     /*
@@ -503,10 +503,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_19 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_19 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.Model, "100")
@@ -517,7 +517,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_19 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_19 ends.")
     }
 
     /*
@@ -529,10 +529,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_20 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_20 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.PhotoMode, "100")
@@ -543,7 +543,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_20 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_20 ends.")
     }
 
     /*
@@ -555,10 +555,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_21 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_21 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SensitivityType, "100")
@@ -569,7 +569,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_21 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_21 ends.")
     }
 
     /*
@@ -581,10 +581,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_22 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.StandardOutputSensitivity, "100")
@@ -595,7 +595,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_22 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 ends.")
     }
 
     /*
@@ -607,10 +607,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_23 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.RecommendedExposureIndex, "100")
@@ -621,7 +621,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_23 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 ends.")
     }
 
     /*
@@ -633,10 +633,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_24 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.IsoSpeed, "100")
@@ -647,7 +647,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_24 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 ends.")
     }
 
     /*
@@ -659,10 +659,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_25 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_25 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.ApertureValue, "100")
@@ -673,7 +673,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_25 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_25 ends.")
     }
 
     /*
@@ -685,10 +685,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_26 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.ExposureBiasValue, "100")
@@ -699,7 +699,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_26 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 ends.")
     }
 
     /*
@@ -711,10 +711,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_27 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.MeteringMode, "100")
@@ -725,7 +725,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_27 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 ends.")
     }
 
     /*
@@ -737,10 +737,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_28 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.LightSource, "100")
@@ -751,7 +751,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_28 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 ends.")
     }
 
     /*
@@ -763,10 +763,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_29 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.Flash, "100")
@@ -777,7 +777,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_29 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 ends.")
     }
 
     /*
@@ -789,10 +789,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_30 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.FocalLength, "100")
@@ -803,7 +803,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_30 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 ends.")
     }
 
     /*
@@ -815,10 +815,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_31(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_31 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_31 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.UserComment, "100")
@@ -829,7 +829,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_31 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_31 ends.")
     }
 
     /*
@@ -841,10 +841,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_32(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_32 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_32 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.PixelXDimension, "100")
@@ -855,7 +855,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_32 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_32 ends.")
     }
 
     /*
@@ -867,10 +867,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_33(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_33 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_33 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.PixelYDimension, "100")
@@ -881,7 +881,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_33 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_33 ends.")
     }
 
     /*
@@ -893,10 +893,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_34(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_34 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.WhiteBalance, "100")
@@ -907,7 +907,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_34 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 ends.")
     }
 
     /*
@@ -919,10 +919,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_35(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_35 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.FocalLengthIn35mmFilm, "100")
@@ -933,7 +933,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_35 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 ends.")
     }
 
     /*
@@ -945,10 +945,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_36 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.CaptureMode, "100")
@@ -959,7 +959,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_36 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 ends.")
     }
 
     /*
@@ -971,10 +971,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_37 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_37 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.PhysicalAperture, "100")
@@ -985,7 +985,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_37 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_37 ends.")
     }
 
     /*
@@ -997,10 +997,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_38 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_38 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.RollAngle, "100")
@@ -1011,7 +1011,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_38 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_38 ends.")
     }
 
     /*
@@ -1023,10 +1023,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_39 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_39 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.PitchAngle, "100")
@@ -1037,7 +1037,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_39 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_39 ends.")
     }
 
     /*
@@ -1049,10 +1049,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_40 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneFoodConf, "100")
@@ -1063,7 +1063,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_40 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 ends.")
     }
 
     /*
@@ -1075,10 +1075,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_41 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneStageConf, "100")
@@ -1089,7 +1089,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_41 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 ends.")
     }
 
     /*
@@ -1101,10 +1101,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_42 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneBlueSkyConf, "100")
@@ -1115,7 +1115,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_42 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 ends.")
     }
 
     /*
@@ -1127,10 +1127,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_43 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_43 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneGreenPlantConf, "100")
@@ -1141,7 +1141,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_43 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_43 ends.")
     }
 
     /*
@@ -1153,10 +1153,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_44 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_44 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneBeachConf, "100")
@@ -1167,7 +1167,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_44 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_44 ends.")
     }
 
     /*
@@ -1179,10 +1179,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_45 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_45 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneSnowConf, "100")
@@ -1193,7 +1193,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_45 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_45 ends.")
     }
 
     /*
@@ -1205,10 +1205,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_46 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneSunsetConf, "100")
@@ -1219,7 +1219,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_46 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 ends.")
     }
 
     /*
@@ -1231,10 +1231,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_47(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_47 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneFlowersConf, "100")
@@ -1245,7 +1245,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_47 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 ends.")
     }
 
     /*
@@ -1257,10 +1257,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_48(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_48 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneNightConf, "100")
@@ -1271,7 +1271,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_48 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 ends.")
     }
 
     /*
@@ -1283,10 +1283,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_49(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_49 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_49 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.SceneTextConf, "100")
@@ -1297,7 +1297,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_49 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_49 ends.")
     }
 
     /*
@@ -1309,10 +1309,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_50(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_50 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_50 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.FaceCount, "100")
@@ -1323,7 +1323,7 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_50 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_50 ends.")
     }
 
     /*
@@ -1335,10 +1335,10 @@ class testImageSource_modifyImageProperty_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_51(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_51 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_51 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             imageSource.modifyImageProperty(PropertyKey.FocusMode, "100")
@@ -1349,6 +1349,6 @@ class testImageSource_modifyImageProperty_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_51 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_51 ends.")
     }
 }

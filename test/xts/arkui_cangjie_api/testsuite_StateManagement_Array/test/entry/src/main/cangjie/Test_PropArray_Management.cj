@@ -47,7 +47,7 @@ class Test_Prop_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_PropArray_001() {
         Hilog.info(0, "cangjietest", "Test_PropArray_001 Start")
         driver.delayMs(1000)
@@ -71,7 +71,7 @@ class Test_Prop_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_PropArray_002() {
         Hilog.info(0, "cangjietest", "Test_PropArray_002 Start")
         driver.delayMs(1000)
@@ -95,7 +95,7 @@ class Test_Prop_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_PropArray_003() {
         Hilog.info(0, "cangjietest", "Test_PropArray_003 Start")
         driver.delayMs(1000)
@@ -119,7 +119,7 @@ class Test_Prop_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_PropArray_004() {
         Hilog.info(0, "cangjietest", "Test_PropArray_004 Start")
         driver.delayMs(1000)
@@ -143,7 +143,7 @@ class Test_Prop_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_PropArray_005() {
         Hilog.info(0, "cangjietest", "Test_PropArray_005 Start")
         driver.delayMs(1000)

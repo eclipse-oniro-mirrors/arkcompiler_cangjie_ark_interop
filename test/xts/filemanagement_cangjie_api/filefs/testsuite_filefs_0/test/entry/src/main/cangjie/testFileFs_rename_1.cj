@@ -36,7 +36,7 @@ class testFileIo_rename_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rename_01() {
         let fpath = "/data/storage/el2/base/haps/entry/files/file_rename_01"
         let file = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -65,7 +65,7 @@ class testFileIo_rename_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rename_02() {
         let fpath = "/data/storage/el2/base/haps/entry/files/file_rename_02"
 
@@ -89,7 +89,7 @@ class testFileIo_rename_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rename_03() {
         let dpath = "/data/storage/el2/base/haps/entry/files/file_rename_03"
         let fpath = dpath + "/file_000"
@@ -121,7 +121,7 @@ class testFileIo_rename_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rename_04() {
         let fpath = "/data/storage/el2/base/haps/entry/files/file_rename_04"
         let file = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -153,7 +153,7 @@ class testFileIo_rename_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rename_05() {
         try {
             FileIo.rename("/data", "/data_new")
@@ -174,7 +174,7 @@ class testFileIo_rename_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rename_06() {
         let fpath = "/data/storage/el2/base/haps/entry/files/file_rename_06"
         let file = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -206,7 +206,7 @@ class testFileIo_rename_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rename_07() {
         let fpath = "/data/storage/el2/base/haps/entry/files/file_rename_07"
         let file = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))

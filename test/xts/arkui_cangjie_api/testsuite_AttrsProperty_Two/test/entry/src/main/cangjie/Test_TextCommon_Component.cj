@@ -48,7 +48,7 @@ class Test_TextCommon_Component {
      * @tc.desic：fontColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextCommon_0100_Component() {
         let Inspector = getInspectorByKey("Text00")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -62,7 +62,7 @@ class Test_TextCommon_Component {
      * @tc.desic：fontColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextCommon_0200_Component() {
         let Inspector = getInspectorByKey("Text01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -76,7 +76,7 @@ class Test_TextCommon_Component {
      * @tc.desic：fontSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextCommon_0300_Component() {
         let Inspector = getInspectorByKey("Text02")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -90,7 +90,7 @@ class Test_TextCommon_Component {
      * @tc.desic：fontSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextCommon_0400_Component() {
         let Inspector = getInspectorByKey("Text03")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -104,7 +104,7 @@ class Test_TextCommon_Component {
      * @tc.desic：fontSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextCommon_0500_Component() {
         let Inspector = getInspectorByKey("Text04")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -118,7 +118,7 @@ class Test_TextCommon_Component {
      * @tc.desic：fontFamily
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextCommon_0600_Component() {
         let Inspector = getInspectorByKey("Text05")
         let obj = JsonValue.fromStr(Inspector).asObject()

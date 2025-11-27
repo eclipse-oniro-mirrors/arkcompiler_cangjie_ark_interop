@@ -51,7 +51,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_001() {
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_001 Start")
         let strJson = getInspectorByKey("RichEditor01Text")
@@ -71,7 +71,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_002() {
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_002 Start")
         let strJson = getInspectorByKey("RichEditor01Text")
@@ -102,7 +102,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_003() {
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_003 Start")
         let strJson = getInspectorByKey("RichEditor01Text")
@@ -113,7 +113,7 @@ class Test_RichEditor_Component {
         let attrs = JsonValue.fromStr(strJson).asObject().get("$attrs").getOrThrow().asObject()
         let attrs_content = attrs.get("content").getOrThrow().toString()
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_003 component obj is: ${attrs_content}")
-        @Expect(attrs_content, "\"0, 9, 0, 1, 0, 1, 16.000000\"")
+        @Expect(attrs_content, "\"Some(0), 9, 0, 1, 0, 1, 16.000000\"")
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_003 End")
     }
 
@@ -127,7 +127,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_004() {
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_004 Start")
         let setCaretOffsetbutton = driver.findComponent(On().id("setCaretOffset01"))
@@ -152,7 +152,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_005() {
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_005 Start")
         let setCaretOffsetbutton = driver.findComponent(On().id("setCaretOffset02"))
@@ -177,7 +177,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_006() {
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_006 Start")
         driver.findComponent(On().id("setCaretOffset01")).getOrThrow().click()
@@ -203,7 +203,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_007() {
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_007 Start")
         driver.findComponent(On().id("RichEditor01DelSpans")).getOrThrow().click()
@@ -228,7 +228,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_008() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         textContent.getOrThrow().clearText()
@@ -271,7 +271,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_009() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         let textDid1 = driver.findComponent(On().id("textDid1"))
@@ -333,7 +333,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_010() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         driver.triggerKey(2024)
@@ -376,7 +376,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_011() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         driver.triggerKey(2024)
@@ -421,7 +421,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_012() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         driver.triggerKey(2024)
@@ -468,7 +468,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_013() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         driver.triggerKey(2119)
@@ -518,7 +518,7 @@ class Test_RichEditor_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_014() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         textContent.getOrThrow().clearText()
@@ -533,7 +533,6 @@ class Test_RichEditor_Component {
         driver.delayMs(500)
         driver.click(1057, 1964)
         driver.delayMs(1000)
-        driver.findComponent(On().text("你好")).getOrThrow().click()
         driver.delayMs(500)
         driver.click(402, 2455)
         driver.delayMs(500)
@@ -550,14 +549,13 @@ class Test_RichEditor_Component {
         driver.click(927, 1972)
         driver.delayMs(500)
         driver.click(314, 1947)
-        driver.findComponent(On().text("仓颉")).getOrThrow().click()
         driver.delayMs(1000)
         let textDid1 = driver.findComponent(On().id("textDid1"))
         let textDid2 = driver.findComponent(On().id("textDid2"))
         let t3 = textDid1.getOrThrow().getText()
         let t4 = textDid2.getOrThrow().getText()
-        @Expect(t3, "3--3")
-        @Expect(t4, "3--5")
+        @Expect(t3, "0--15")
+        @Expect(t4, "0--0")
         textContent.getOrThrow().clearText()
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_014 End")
     }

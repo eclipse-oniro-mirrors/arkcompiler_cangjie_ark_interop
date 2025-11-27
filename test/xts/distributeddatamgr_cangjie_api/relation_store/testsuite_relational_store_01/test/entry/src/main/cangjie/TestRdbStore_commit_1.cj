@@ -22,7 +22,7 @@ import std.collection.*
 import ohos.base.*
 import stdx.encoding.json.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.ValueType as RelaValueType
+//import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import ohos.business_exception.{BusinessException}
 import kit.PerformanceAnalysisKit.Hilog
 import std.core.*
@@ -39,25 +39,25 @@ class TestRdbStore_commit_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "beginTransaction")
             rdbStore.beginTransaction()
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("ID", RelaValueType.Integer(1i64))
+            values.add("ID", RelationalStoreValueType.Integer(1i64))
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             Hilog.info(0u32, "cangjietest", "", "insert")
             rdbStore.insert("THING", values)
             Hilog.info(0u32, "cangjietest", "", "commit failed")
@@ -78,25 +78,25 @@ class TestRdbStore_commit_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: false,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "beginTransaction")
             rdbStore.beginTransaction()
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("ID", RelaValueType.Integer(2i64))
+            values.add("ID", RelationalStoreValueType.Integer(2i64))
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("NAME", RelaValueType.StringValue("Sun"))
+            values.add("NAME", RelationalStoreValueType.StringValue("Sun"))
             Hilog.info(0u32, "cangjietest", "", "insert")
             rdbStore.insert("THING", values)
             Hilog.info(0u32, "cangjietest", "", "commit failed")
@@ -117,24 +117,24 @@ class TestRdbStore_commit_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         try {
             Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
             Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "beginTransaction")
             rdbStore.beginTransaction()
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("ID", RelaValueType.Integer(3i64))
+            values.add("ID", RelationalStoreValueType.Integer(3i64))
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             Hilog.info(0u32, "cangjietest", "", "insert")
             rdbStore.insert("THING", values)
             Hilog.info(0u32, "cangjietest", "", "commit failed")
@@ -155,25 +155,25 @@ class TestRdbStore_commit_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "beginTransaction")
             rdbStore.beginTransaction()
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("ID", RelaValueType.Integer(4i64))
+            values.add("ID", RelationalStoreValueType.Integer(4i64))
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             Hilog.info(0u32, "cangjietest", "", "insert")
             rdbStore.insert("THING", values)
             Hilog.info(0u32, "cangjietest", "", "commit failed")
@@ -194,25 +194,25 @@ class TestRdbStore_commit_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
-                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: false,
+                    isReadOnly: false, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "beginTransaction")
             rdbStore.beginTransaction()
             Hilog.info(0u32, "cangjietest", "", "define local variable values")
-            let values = HashMap<String, ValueType>()
+            let values = HashMap<String, RelationalStoreValueType>()
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("ID", RelaValueType.Integer(1024i64))
+            values.add("ID", RelationalStoreValueType.Integer(1024i64))
             Hilog.info(0u32, "cangjietest", "", "values1")
-            values.add("NAME", RelaValueType.StringValue("Lisa"))
+            values.add("NAME", RelationalStoreValueType.StringValue("Lisa"))
             Hilog.info(0u32, "cangjietest", "", "insert")
             rdbStore.insert("THING", values)
             Hilog.info(0u32, "cangjietest", "", "commit failed")

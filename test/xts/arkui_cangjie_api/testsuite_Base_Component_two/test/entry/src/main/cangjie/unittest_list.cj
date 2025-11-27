@@ -27,6 +27,6 @@ import ohos.arkui.state_management.ObservedArrayList
 
 let views = ObservedArrayList<String>(["View_Checkbox", "View_CheckboxGroup","View_AlphabetIndexer", "View_Button",
     "View_Badge", "View_Blank", "View_DataPanel", "View_DatePicker", "View_Divider", "View_Gauge", "View_ImageSpan",
-    "View_Menu", "View_LoadingProgress", "View_Progress", "View_QRCode", "View_Radio", "View_RichEditor",
+    "View_Menu", "View_LoadingProgress", "View_Progress", "View_QRCode", "View_Radio",
     "View_ScrollBar", "View_Stepper", "View_TextInput", "View_TextPicker", "View_Toggle", "View_Select",
     "View_Slider", "View_Search", "View_Text", "View_TextArea", "View_Rating"])

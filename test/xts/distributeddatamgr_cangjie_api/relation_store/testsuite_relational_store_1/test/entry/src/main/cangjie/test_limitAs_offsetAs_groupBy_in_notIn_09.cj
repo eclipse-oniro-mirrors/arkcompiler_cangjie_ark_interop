@@ -20,10 +20,11 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
+import ohos.business_exception.BusinessException
 
 @Test
 class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
@@ -35,10 +36,11 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId:  "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -125,17 +127,17 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
     public override func afterEach(): Unit {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0100
-    * @tc.name      : test_limitas_01
-    * @tc.desc      : test RelationStore test_limitas_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0100
+     * @tc.name      : test_limitas_01
+     * @tc.desc      : test RelationStore test_limitas_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_limitas_01(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(0)
@@ -143,17 +145,16 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0200
-    * @tc.name      : test_limitas_02
-    * @tc.desc      : test RelationStore test_limitas_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0200
+     * @tc.name      : test_limitas_02
+     * @tc.desc      : test RelationStore test_limitas_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_limitas_02(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(Int32.Min)
@@ -161,17 +162,16 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0300
-    * @tc.name      : test_limitas_03
-    * @tc.desc      : test RelationStore test_limitas_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0300
+     * @tc.name      : test_limitas_03
+     * @tc.desc      : test RelationStore test_limitas_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_limitas_03(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(1)
@@ -183,20 +183,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-1")
         @Expect(resultSet.getDouble(3), -1.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0400
-    * @tc.name      : test_limitas_04
-    * @tc.desc      : test RelationStore test_limitas_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0400
+     * @tc.name      : test_limitas_04
+     * @tc.desc      : test RelationStore test_limitas_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_limitas_04(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(Int32.Max)
@@ -214,19 +217,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-9223372036854775709")
         @Expect(resultSet.getDouble(3), -9223372036854775709.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0500
-    * @tc.name      : test_limitas_05
-    * @tc.desc      : test RelationStore test_limitas_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0500
+     * @tc.name      : test_limitas_05
+     * @tc.desc      : test RelationStore test_limitas_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_limitas_05(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(100)
@@ -244,19 +251,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-100")
         @Expect(resultSet.getDouble(3), -100.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0600
-    * @tc.name      : test_offsetas_06
-    * @tc.desc      : test RelationStore test_offsetas_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0600
+     * @tc.name      : test_offsetas_06
+     * @tc.desc      : test RelationStore test_offsetas_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_offsetas_06(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(700).offsetAs(-1)
@@ -274,20 +285,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-9223372036854775709")
         @Expect(resultSet.getDouble(3), -9223372036854775709.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0700
-    * @tc.name      : test_offsetas_07
-    * @tc.desc      : test RelationStore test_offsetas_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0700
+     * @tc.name      : test_offsetas_07
+     * @tc.desc      : test RelationStore test_offsetas_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_offsetas_07(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(-1).offsetAs(-1)
@@ -305,20 +319,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-9223372036854775709")
         @Expect(resultSet.getDouble(3), -9223372036854775709.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0800
-    * @tc.name      : test_offsetas_08
-    * @tc.desc      : test RelationStore test_offsetas_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0800
+     * @tc.name      : test_offsetas_08
+     * @tc.desc      : test RelationStore test_offsetas_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_offsetas_08(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(100).offsetAs(0)
@@ -336,20 +353,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-100")
         @Expect(resultSet.getDouble(3), -100.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0900
-    * @tc.name      : test_offsetas_09
-    * @tc.desc      : test RelationStore test_offsetas_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_0900
+     * @tc.name      : test_offsetas_09
+     * @tc.desc      : test RelationStore test_offsetas_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_offsetas_09(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(100).offsetAs(0)
@@ -367,20 +387,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-100")
         @Expect(resultSet.getDouble(3), -100.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1000
-    * @tc.name      : test_offsetas_10
-    * @tc.desc      : test RelationStore test_offsetas_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1000
+     * @tc.name      : test_offsetas_10
+     * @tc.desc      : test RelationStore test_offsetas_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_offsetas_10(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(0).offsetAs(0)
@@ -398,20 +421,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-9223372036854775709")
         @Expect(resultSet.getDouble(3), -9223372036854775709.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1100
-    * @tc.name      : test_offsetas_11
-    * @tc.desc      : test RelationStore test_offsetas_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1100
+     * @tc.name      : test_offsetas_11
+     * @tc.desc      : test RelationStore test_offsetas_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_offsetas_11(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.limitAs(90).offsetAs(100)
@@ -429,24 +455,27 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "190")
         @Expect(resultSet.getDouble(3), 190.5)
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1200
-    * @tc.name      : test_offsetas_12
-    * @tc.desc      : test RelationStore test_offsetas_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1200
+     * @tc.name      : test_offsetas_12
+     * @tc.desc      : test RelationStore test_offsetas_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_offsetas_12(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("NAME", RelationalStoreValueType.StringValue("Lisa")).limitAs(10).offsetAs(20)
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 10)
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "320")
@@ -460,20 +489,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getDouble(3), -10000.5)
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1300
-    * @tc.name      : test_groupby_13
-    * @tc.desc      : test RelationStore test_groupby_13
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1300
+     * @tc.name      : test_groupby_13
+     * @tc.desc      : test RelationStore test_groupby_13
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_groupby_13(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.groupBy(["NAME"])
@@ -494,20 +526,24 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet1.getString(2), "-9223372036854775708")
         @Expect(resultSet1.getDouble(3), 9223372036854775807.0)
         @Expect(resultSet1.getString(4), "0")
-        @Expect(resultSet1.goToNextRow(), false)
+        // @Expect(resultSet1.goToNextRow(), false)
+        try {
+            resultSet1.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1400
-    * @tc.name      : test_groupby_14
-    * @tc.desc      : test RelationStore test_groupby_14
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1400
+     * @tc.name      : test_groupby_14
+     * @tc.desc      : test RelationStore test_groupby_14
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_groupby_14(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.groupBy(["AGEX"])
@@ -515,17 +551,16 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.rowCount, -1)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1500
-    * @tc.name      : test_groupby_15
-    * @tc.desc      : test RelationStore test_groupby_15
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1500
+     * @tc.name      : test_groupby_15
+     * @tc.desc      : test RelationStore test_groupby_15
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_groupby_15(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.groupBy(["NAME", "CODES"]).orderByAsc("ID")
@@ -543,23 +578,26 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-9223372036854775708")
         @Expect(resultSet.getDouble(3), 9223372036854775807.0)
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1600
-    * @tc.name      : test_in_16
-    * @tc.desc      : test RelationStore test_in_16
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1600
+     * @tc.name      : test_in_16
+     * @tc.desc      : test RelationStore test_in_16
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_in_16(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
-        predicates.inValues("AGE",
+        predicates.`inValues`("AGE",
             [RelationalStoreValueType.Integer(1), RelationalStoreValueType.Integer(100),
                 RelationalStoreValueType.Integer(-400)])
         let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
@@ -576,20 +614,23 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.getString(2), "-400")
         @Expect(resultSet.getDouble(3), 400.25)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1700
-    * @tc.name      : test_in_17
-    * @tc.desc      : test RelationStore test_in_17
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1700
+     * @tc.name      : test_in_17
+     * @tc.desc      : test RelationStore test_in_17
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_in_17(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notInValues("AGE",
@@ -599,17 +640,16 @@ class Test_limitAs_offsetAs_groupBy_in_notIn_09 {
         @Expect(resultSet.rowCount, 598)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1800
-    * @tc.name      : test_notIn_18
-    * @tc.desc      : test RelationStore test_notIn_18
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_limitAs_offsetAs_groupBy_in_notIn_09_1800
+     * @tc.name      : test_notIn_18
+     * @tc.desc      : test RelationStore test_notIn_18
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_notIn_18(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notInValues("CODES", [RelationalStoreValueType.Boolean(true)])

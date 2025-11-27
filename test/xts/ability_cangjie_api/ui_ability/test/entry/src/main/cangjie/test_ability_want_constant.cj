@@ -22,6 +22,7 @@ import std.unittest.testmacro.*
 import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
+internal import ohos.resource.__GenerateResource__
 
 @Test
 class TestAbilityWantConstant {
@@ -35,27 +36,27 @@ class TestAbilityWantConstant {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_wantConstant_Params() {
-        var str1 = Params.ABILITY_BACK_TO_OTHER_MISSION_STACK
+        var str1 = Params.ABILITY_BACK_TO_OTHER_MISSION_STACK.toString()
         @Expect(str1, "ability.params.backToOtherMissionStack")
 
-        var str2 = Params.ABILITY_RECOVERY_RESTART
+        var str2 = Params.ABILITY_RECOVERY_RESTART.toString()
         @Expect(str2, "ohos.ability.params.abilityRecoveryRestart")
 
-        var str3 = Params.CONTENT_TITLE_KEY
+        var str3 = Params.CONTENT_TITLE_KEY.toString()
         @Expect(str3, "ohos.extra.param.key.contentTitle")
 
-        var str4 = Params.SHARE_ABSTRACT_KEY
+        var str4 = Params.SHARE_ABSTRACT_KEY.toString()
         @Expect(str4, "ohos.extra.param.key.shareAbstract")
 
-        var str5 = Params.SHARE_URL_KEY
+        var str5 = Params.SHARE_URL_KEY.toString()
         @Expect(str5, "ohos.extra.param.key.shareUrl")
 
-        var str6 = Params.SUPPORT_CONTINUE_PAGE_STACK_KEY
+        var str6 = Params.SUPPORT_CONTINUE_PAGE_STACK_KEY.toString()
         @Expect(str6, "ohos.extra.param.key.supportContinuePageStack")
 
-        var str7 = Params.SUPPORT_CONTINUE_SOURCE_EXIT_KEY
+        var str7 = Params.SUPPORT_CONTINUE_SOURCE_EXIT_KEY.toString()
         @Expect(str7, "ohos.extra.param.key.supportContinueSourceExit")
     }
 
@@ -68,7 +69,7 @@ class TestAbilityWantConstant {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_wantConstant_Flags() {
         var str1 = Flags.FLAG_AUTH_READ_URI_PERMISSION
         @Expect(str1, 0x00000001)

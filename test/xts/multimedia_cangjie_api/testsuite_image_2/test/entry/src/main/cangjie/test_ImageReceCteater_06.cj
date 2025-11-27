@@ -24,17 +24,16 @@ import kit.ImageKit.*
 @Test
 class Test_createImageReceCreator_06 {
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createImageReceCreator_06_0700
-    * @tc.name      : test_createImageReceiver_07
-    * @tc.desc      : test Image test_createImageReceiver_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createImageReceCreator_06_0700
+     * @tc.name      : test_createImageReceiver_07
+     * @tc.desc      : test Image test_createImageReceiver_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createImageReceiver_07(): Unit {
         var globalImageReceiver: ImageReceiver
         var Width: Int32 = 8192
@@ -53,17 +52,16 @@ class Test_createImageReceCreator_06 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createImageReceCreator_06_0800
-    * @tc.name      : test_getReceivingSurfaceId_08
-    * @tc.desc      : test Image test_getReceivingSurfaceId_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createImageReceCreator_06_0800
+     * @tc.name      : test_getReceivingSurfaceId_08
+     * @tc.desc      : test Image test_getReceivingSurfaceId_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getReceivingSurfaceId_08(): Unit {
         var globalImageReceiver: ImageReceiver
         var Width: Int32 = 8192
@@ -72,7 +70,7 @@ class Test_createImageReceCreator_06 {
         var Capacity: Int32 = 8
 
         try {
-            globalImageReceiver = createImageReceiver(Size(Width, Height),ImageFormat.Jpeg, Capacity)
+            globalImageReceiver = createImageReceiver(Size(Width, Height), ImageFormat.Jpeg, Capacity)
             var id: String = globalImageReceiver.getReceivingSurfaceId()
             @Expect(id != "")
         } catch (e: Exception) {

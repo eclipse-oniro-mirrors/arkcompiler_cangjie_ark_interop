@@ -48,7 +48,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_ImageSpan_Component_001 start")
         let Inspector = getInspectorByKey("imagespanbasic")
@@ -70,7 +70,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_ImageSpan_Component_002 start")
         let Inspector = getInspectorByKey("imagespanbasic")
@@ -93,7 +93,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_ImageSpan_Component_003 start")
         let Inspector = getInspectorByKey("imagespanbasic")
@@ -116,7 +116,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_ImageSpan_Component_004 start")
         let Inspector = getInspectorByKey("imagespanbasic")
@@ -161,7 +161,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_006() {
         let Inspector = getInspectorByKey("imagespanbasic3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -179,7 +179,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_007() {
         let Inspector = getInspectorByKey("imagespanbasic4")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -198,7 +198,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_009() {
         let Inspector = getInspectorByKey("imagespanbasic3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -217,7 +217,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_0010() {
         let Inspector = getInspectorByKey("imagespanbasic4")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -236,7 +236,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_0011() {
         let Inspector = getInspectorByKey("imagespanbasic5")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -255,7 +255,7 @@ class Test_ImageSpan_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ImageSpan_Component_0012() {
         let Inspector = getInspectorByKey("imagespanbasic6")
         let obj = JsonValue.fromStr(Inspector).asObject()

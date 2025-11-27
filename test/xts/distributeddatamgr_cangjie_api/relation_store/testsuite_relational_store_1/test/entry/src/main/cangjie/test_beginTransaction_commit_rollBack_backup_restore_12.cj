@@ -20,8 +20,8 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
 import ohos.business_exception.{BusinessException}
@@ -36,10 +36,11 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -118,17 +119,16 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0100
-    * @tc.name      : test_transactions_01
-    * @tc.desc      : test RelationStore test_transactions_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0100
+     * @tc.name      : test_transactions_01
+     * @tc.desc      : test RelationStore test_transactions_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_transactions_01(): Unit {
         rdbStore.beginTransaction()
         for (i in 1..101) {
@@ -156,17 +156,16 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
         @Expect(resultSet.isClosed, false)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0200
-    * @tc.name      : test_transactions_02
-    * @tc.desc      : test RelationStore test_transactions_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0200
+     * @tc.name      : test_transactions_02
+     * @tc.desc      : test RelationStore test_transactions_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_transactions_02(): Unit {
         try {
             rdbStore.beginTransaction()
@@ -191,24 +190,23 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
             rdbStore.rollBack()
         }
         let predicates = RdbPredicates("EMPLOYEE")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 600)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0300
-    * @tc.name      : test_backup_03
-    * @tc.desc      : test RelationStore test_backup_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0300
+     * @tc.name      : test_backup_03
+     * @tc.desc      : test RelationStore test_backup_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_backup_03(): Unit {
         let predicates1 = RdbPredicates("EMPLOYEE")
-        let resultSet1 = rdbStore.query(predicates1,columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet1 = rdbStore.query(predicates1, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet1.rowCount, 600)
         rdbStore.beginTransaction()
         for (i in 1..101) {
@@ -223,21 +221,20 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
         rdbStore.commit()
         rdbStore.backup("rdbTest.db")
         let predicates = RdbPredicates("EMPLOYEE")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0400
-    * @tc.name      : test_backup_04
-    * @tc.desc      : test RelationStore test_backup_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0400
+     * @tc.name      : test_backup_04
+     * @tc.desc      : test RelationStore test_backup_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_backup_04(): Unit {
         rdbStore.beginTransaction()
         for (i in 1..101) {
@@ -259,17 +256,16 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0500
-    * @tc.name      : test_backup_05
-    * @tc.desc      : test RelationStore test_backup_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0500
+     * @tc.name      : test_backup_05
+     * @tc.desc      : test RelationStore test_backup_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_backup_05(): Unit {
         rdbStore.beginTransaction()
         for (i in 1..101) {
@@ -291,17 +287,16 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0600
-    * @tc.name      : test_restore_06
-    * @tc.desc      : test RelationStore test_restore_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0600
+     * @tc.name      : test_restore_06
+     * @tc.desc      : test RelationStore test_restore_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_restore_06(): Unit {
         rdbStore.beginTransaction()
         for (i in 1..101) {
@@ -315,30 +310,29 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
         }
         rdbStore.commit()
         let predicates = RdbPredicates("EMPLOYEE")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 700)
         rdbStore.backup("zpstest.db")
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
         let predicates1 = RdbPredicates("EMPLOYEE")
-        let resultSet1 = rdbStore.query(predicates1,columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet1 = rdbStore.query(predicates1, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet1.rowCount, -1)
         rdbStore.restore("zpstest.db")
         let predicates2 = RdbPredicates("EMPLOYEE")
-        let resultSet2 = rdbStore.query(predicates2,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet2 = rdbStore.query(predicates2, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet2.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0700
-    * @tc.name      : test_restore_07
-    * @tc.desc      : test RelationStore test_restore_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0700
+     * @tc.name      : test_restore_07
+     * @tc.desc      : test RelationStore test_restore_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_restore_07(): Unit {
         rdbStore.beginTransaction()
         for (i in 1..101) {
@@ -352,32 +346,31 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
         }
         rdbStore.commit()
         let predicates = RdbPredicates("EMPLOYEE")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 700)
         rdbStore.backup("zpstest.db")
         let predicates1 = RdbPredicates("EMPLOYEE")
         predicates1.equalTo("NAME", RelationalStoreValueType.StringValue("Lisa"))
         rdbStore.delete(predicates1)
         let predicates2 = RdbPredicates("EMPLOYEE")
-        let resultSet2 = rdbStore.query(predicates2,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet2 = rdbStore.query(predicates2, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet2.rowCount, 600)
         rdbStore.restore("zpstest.db")
         let predicates3 = RdbPredicates("EMPLOYEE")
-        let resultSet3 = rdbStore.query(predicates3,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet3 = rdbStore.query(predicates3, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet3.rowCount, 700)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0800
-    * @tc.name      : test_restore_08
-    * @tc.desc      : test RelationStore test_restore_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_beginTransaction_commit_rollBack_backup_restore_12_0800
+     * @tc.name      : test_restore_08
+     * @tc.desc      : test RelationStore test_restore_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_restore_08(): Unit {
         rdbStore.beginTransaction()
         for (i in 1..101) {
@@ -391,17 +384,17 @@ class Test_beginTransaction_commit_rollBack_backup_restore_12 {
         }
         rdbStore.commit()
         let predicates = RdbPredicates("EMPLOYEE")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 700)
         rdbStore.backup("zpstest.db")
         let predicates1 = RdbPredicates("EMPLOYEE")
         rdbStore.delete(predicates1)
         let predicates2 = RdbPredicates("EMPLOYEE")
-        let resultSet2 = rdbStore.query(predicates2,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet2 = rdbStore.query(predicates2, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet2.rowCount, 0)
         rdbStore.restore("zpstest.db")
         let predicates3 = RdbPredicates("EMPLOYEE")
-        let resultSet3 = rdbStore.query(predicates3,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet3 = rdbStore.query(predicates3, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet3.rowCount, 700)
     }
 }

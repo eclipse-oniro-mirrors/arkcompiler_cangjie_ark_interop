@@ -23,7 +23,7 @@ import ohos.arkui.state_macro_manage.*
 import std.collection.*
 import stdx.encoding.json.*
 import std.convert.*
-import ohos.base.{LengthProp, Length,Color, LengthType}
+import ohos.base.{LengthProp, Length,Color}
 import std.time.{DateTime}
 import std.sync.{Timer}
 
@@ -50,29 +50,29 @@ class Child_Prop_Number {
     func build() {
         Column(space:20) {
             Text("变量赋值number类型: ${count_number}").key("PropNumber")
-            Button("change").onClick {ClickEvent =>
+            Button("change").onClick({ClickEvent =>
                 this.count_number = 10
-            }.key("state1")
+            }).key("state1")
 
             Text("切换变量赋值Num1: ${count_Object.pages}").key("PropObject")
-            Button("change").onClick {ClickEvent =>
+            Button("change").onClick({ClickEvent =>
                 this.count_Object = Num3(20)
-            }.key("state2")
+            }).key("state2")
 
             Text("切换变量赋值String: ${count_String}").key("PropString")
-            Button("change").onClick {ClickEvent =>
+            Button("change").onClick({ClickEvent =>
                 this.count_String = "30"
-            }.key("state3")
+            }).key("state3")
 
             Text("切换变量赋值Date: ${count_date}").key("PropDate")
-            Button("change").onClick {ClickEvent =>
+            Button("change").onClick({ClickEvent =>
                 this.count_date = DateTime.parse("2023-04-10T08:00:00+08:00")
-            }.key("state4")
+            }).key("state4")
 
             Text("切换变量赋值Boolean: ${count_Boolean}").key("PropBoolean")
-            Button("change").onClick {ClickEvent =>
+            Button("change").onClick({ClickEvent =>
                 this.count_Boolean = true
-            }.key("state5")
+            }).key("state5")
         }.width(100.percent).margin(top: 10)
     }
 }

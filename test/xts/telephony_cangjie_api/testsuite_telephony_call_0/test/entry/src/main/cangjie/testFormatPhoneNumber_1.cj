@@ -23,6 +23,7 @@ import stdx.encoding.json.*
 import ohos.telephony.call.*
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.*
+
 @Test
 class testFormatPhoneNumber_1 {
     /*
@@ -34,19 +35,19 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_26 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
-            let numberFormat = NumberFormatOptions(countryCode:"")
+            let numberFormat = NumberFormatOptions(countryCode: "")
             @Assert(Call.formatPhoneNumber("", options: numberFormat), "")
             @Expect("assertion#26: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumber failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_26 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 ends.")
     }
 
     /*
@@ -58,19 +59,19 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_27 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
-            let numberFormat = NumberFormatOptions(countryCode:"CN")
+            let numberFormat = NumberFormatOptions(countryCode: "CN")
             @Assert(Call.formatPhoneNumber("", options: numberFormat), "")
             @Expect("assertion#27: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumber failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_27 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 ends.")
     }
 
     /*
@@ -82,19 +83,19 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_28 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
-            let numberFormat = NumberFormatOptions(countryCode:"cn")
+            let numberFormat = NumberFormatOptions(countryCode: "cn")
             @Assert(Call.formatPhoneNumber("", options: numberFormat), "")
             @Expect("assertion#28: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumber failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_28 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 ends.")
     }
 
     /*
@@ -106,19 +107,19 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_29 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
-            let numberFormat = NumberFormatOptions(countryCode:"")
+            let numberFormat = NumberFormatOptions(countryCode: "")
             @Assert(Call.formatPhoneNumber("12345678910", options: numberFormat), "12345678910")
             @Expect("assertion#29: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumber failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_29 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 ends.")
     }
 
     /*
@@ -130,13 +131,13 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_30 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"CN")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "CN")
         @Assert(Call.formatPhoneNumber("12345678910", options: numberFormat), "12345678910")
-        Hilog.info(0, "cangjietest","testcase TestCase_30 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 ends.")
     }
 
     /*
@@ -148,13 +149,13 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_31(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_31 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"cn")
+        Hilog.info(0, "cangjietest", "testcase TestCase_31 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "cn")
         @Assert(Call.formatPhoneNumber("12345678910", options: numberFormat), "12345678910")
-        Hilog.info(0, "cangjietest","testcase TestCase_31 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_31 ends.")
     }
 
     /*
@@ -166,19 +167,19 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_32(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_32 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_32 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
-            let numberFormat = NumberFormatOptions(countryCode:"")
+            let numberFormat = NumberFormatOptions(countryCode: "")
             @Assert(Call.formatPhoneNumber("010-222222", options: numberFormat), "010-222222")
             @Expect("assertion#32: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumber failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_32 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_32 ends.")
     }
 
     /*
@@ -190,13 +191,13 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_33(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_33 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"CN")
+        Hilog.info(0, "cangjietest", "testcase TestCase_33 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "CN")
         @Assert(Call.formatPhoneNumber("010-222222", options: numberFormat), "010-222222")
-        Hilog.info(0, "cangjietest","testcase TestCase_33 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_33 ends.")
     }
 
     /*
@@ -208,13 +209,13 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_34(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_34 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"cn")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "cn")
         @Assert(Call.formatPhoneNumber("010-222222", options: numberFormat), "010-222222")
-        Hilog.info(0, "cangjietest","testcase TestCase_34 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 ends.")
     }
 
     /*
@@ -226,19 +227,19 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_35(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_35 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
-            let numberFormat = NumberFormatOptions(countryCode:"")
+            let numberFormat = NumberFormatOptions(countryCode: "")
             @Assert(Call.formatPhoneNumber("11122223333", options: numberFormat), "11122223333")
             @Expect("assertion#35: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumber failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_35 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 ends.")
     }
 
     /*
@@ -250,13 +251,13 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_36 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"CN")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "CN")
         @Assert(Call.formatPhoneNumber("11122223333", options: numberFormat), "11122223333")
-        Hilog.info(0, "cangjietest","testcase TestCase_36 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 ends.")
     }
 
     /*
@@ -268,13 +269,13 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_37 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"cn")
+        Hilog.info(0, "cangjietest", "testcase TestCase_37 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "cn")
         @Assert(Call.formatPhoneNumber("11122223333", options: numberFormat), "11122223333")
-        Hilog.info(0, "cangjietest","testcase TestCase_37 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_37 ends.")
     }
 
     /*
@@ -286,19 +287,19 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_38 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_38 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
-            let numberFormat = NumberFormatOptions(countryCode:"")
+            let numberFormat = NumberFormatOptions(countryCode: "")
             @Assert(Call.formatPhoneNumber("#1$2%3@4", options: numberFormat), "#1$2%3@4")
             @Expect("assertion#38: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumber failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_38 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_38 ends.")
     }
 
     /*
@@ -310,13 +311,13 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_39 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"CN")
+        Hilog.info(0, "cangjietest", "testcase TestCase_39 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "CN")
         @Assert(Call.formatPhoneNumber("#1$2%3@4", options: numberFormat), "#1$2%3@4")
-        Hilog.info(0, "cangjietest","testcase TestCase_39 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_39 ends.")
     }
 
     /*
@@ -328,13 +329,13 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_40 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"cn")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "cn")
         @Assert(Call.formatPhoneNumber("#1$2%3@4", options: numberFormat), "#1$2%3@4")
-        Hilog.info(0, "cangjietest","testcase TestCase_40 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 ends.")
     }
 
     /*
@@ -346,19 +347,19 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_41 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
-            let numberFormat = NumberFormatOptions(countryCode:"")
+            let numberFormat = NumberFormatOptions(countryCode: "")
             @Assert(Call.formatPhoneNumber("aaaa", options: numberFormat), "aaaa")
             @Expect("assertion#41: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumber failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_41 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 ends.")
     }
 
     /*
@@ -370,13 +371,13 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_42 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"CN")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "CN")
         @Assert(Call.formatPhoneNumber("aaaa", options: numberFormat), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_42 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 ends.")
     }
 
     /*
@@ -388,12 +389,12 @@ class testFormatPhoneNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_43 begins.")
-        Hilog.info(0, "cangjietest","define local variable numberFormat")
-        let numberFormat = NumberFormatOptions(countryCode:"cn")
+        Hilog.info(0, "cangjietest", "testcase TestCase_43 begins.")
+        Hilog.info(0, "cangjietest", "define local variable numberFormat")
+        let numberFormat = NumberFormatOptions(countryCode: "cn")
         @Assert(Call.formatPhoneNumber("aaaa", options: numberFormat), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_43 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_43 ends.")
     }
 }

@@ -36,7 +36,7 @@ class testRandomGenerateRandom_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable rand")
@@ -45,9 +45,8 @@ class testRandomGenerateRandom_1 {
         try {
             rand.generateRandom(-1i32)
             @Expect("assertion#6: not throw", "generateRandom fail")
-        } catch (e: IllegalArgumentException) {
+        } catch (e: BusinessException) {
             @Expect(e.message, "Parameter error.")
-
         }
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1 ends.")
     }
@@ -61,7 +60,7 @@ class testRandomGenerateRandom_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable rand")
@@ -70,7 +69,7 @@ class testRandomGenerateRandom_1 {
         try {
             rand.generateRandom(0i32)
             @Expect("assertion#7: not throw", "generateRandom fail")
-        } catch (e: IllegalArgumentException) {
+        } catch (e: BusinessException) {
             @Expect(e.message, "Parameter error.")
         }
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_2 ends.")
@@ -85,7 +84,7 @@ class testRandomGenerateRandom_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable rand")
@@ -104,7 +103,7 @@ class testRandomGenerateRandom_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "CangjieTest", "define local variable rand")

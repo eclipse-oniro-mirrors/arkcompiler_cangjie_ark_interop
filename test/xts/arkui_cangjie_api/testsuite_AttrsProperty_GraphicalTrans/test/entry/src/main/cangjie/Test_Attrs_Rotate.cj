@@ -39,7 +39,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_AlphabetIndexer_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin AlphabetIndexer")
@@ -66,7 +66,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Blank_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Blank")
@@ -93,7 +93,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Button_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Button")
@@ -120,7 +120,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Checkbox_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Checkbox")
@@ -147,7 +147,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_CheckboxGroup_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin CheckboxGroup")
@@ -175,7 +175,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_DataPanel_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin DataPanel")
@@ -202,7 +202,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_DatePicker_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin DatePicker")
@@ -229,7 +229,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Divider_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Divider")
@@ -256,7 +256,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Gauge_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Gauge")
@@ -283,7 +283,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Image_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Image")
@@ -310,7 +310,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_ImageSpan_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin ImageSpan")
@@ -337,7 +337,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_LoadingProgress_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin LoadingProgress")
@@ -364,7 +364,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Menu_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Menu")
@@ -391,7 +391,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_MenuItem_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin MenuItem")
@@ -418,7 +418,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_MenuItemGroup_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin MenuItemGroup")
@@ -445,7 +445,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Progress_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Progress")
@@ -472,7 +472,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_QRCode_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin QRCode")
@@ -499,7 +499,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Radio_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Radio")
@@ -526,7 +526,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Rating_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Rating")
@@ -553,7 +553,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Refresh_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Refresh")
@@ -580,7 +580,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_RichEditor_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin RichEditor")
@@ -607,7 +607,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_RichText_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin RichText")
@@ -634,7 +634,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_RowSplit_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin RowSplit")
@@ -661,7 +661,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_ScrollBar_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin ScrollBar")
@@ -688,7 +688,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Search_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Search")
@@ -715,7 +715,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Slider_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Slider")
@@ -742,7 +742,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Stepper_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Stepper")
@@ -769,7 +769,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_StepperItem_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin StepperItem")
@@ -796,7 +796,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Text_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Text")
@@ -823,7 +823,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_TextArea_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin TextArea")
@@ -850,7 +850,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_TextClock_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin TextClock")
@@ -877,7 +877,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_TextInput_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin TextInput")
@@ -904,7 +904,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_TextPicker_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin TextPicker")
@@ -931,7 +931,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_TextTimer_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin TextTimer")
@@ -958,7 +958,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Toggle_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Toggle")
@@ -985,7 +985,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Web_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Web")
@@ -1012,7 +1012,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Select_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Select")
@@ -1039,7 +1039,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Badge_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Badge")
@@ -1066,7 +1066,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Column_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Column")
@@ -1093,7 +1093,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Grid_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Grid")
@@ -1120,7 +1120,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_GridItem_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin GridItem")
@@ -1147,7 +1147,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_GridRow_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin GridRow")
@@ -1174,7 +1174,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_GridCol_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin GridCol")
@@ -1201,7 +1201,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Flex_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Flex")
@@ -1228,7 +1228,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_List_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin List")
@@ -1255,7 +1255,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_ListItem_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin ListItem")
@@ -1282,7 +1282,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_ListItemGroup_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin ListItemGroup")
@@ -1310,7 +1310,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_RelativeContainer_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin RelativeContainer")
@@ -1337,7 +1337,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Row_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Row")
@@ -1364,7 +1364,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Scroll_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Scroll")
@@ -1391,7 +1391,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Stack_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Stack")
@@ -1418,7 +1418,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Swiper_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Swiper")
@@ -1445,7 +1445,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Tabs_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Tabs")
@@ -1472,7 +1472,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_TabContent_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin TabContent")
@@ -1499,7 +1499,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Circle_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Circle")
@@ -1526,7 +1526,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Line_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Line")
@@ -1553,7 +1553,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Rect_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Rect")
@@ -1580,7 +1580,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Shape_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Shape")
@@ -1608,7 +1608,7 @@ class Test_EmptyAttrs_Rotate {
      * @tc.desic：Empty_Path_Rotate
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Rotate_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRotate: FindBegin Path")

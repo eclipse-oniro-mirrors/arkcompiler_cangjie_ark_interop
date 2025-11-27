@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-
 package ohos_app_cangjie_entry
 
 import kit.AbilityKit.Ability

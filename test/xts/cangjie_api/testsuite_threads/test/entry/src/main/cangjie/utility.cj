@@ -16,7 +16,6 @@
 package ohos_app_cangjie_entry
 
 import ohos.ark_interop.JSRuntime
-import ohos.base.UIThread
 
 public func createJSRuntimeAndCheck(id: String): Unit {
     let jsRuntime = JSRuntime()

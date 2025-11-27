@@ -24,6 +24,7 @@ import ohos.ui_test.*
 import ohos.base.*
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.*
+
 @Test
 class Test_creatCipher_05 {
 
@@ -36,7 +37,7 @@ class Test_creatCipher_05 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatcipher_01(): Unit {
         try {
             createCipher("PKCS11")
@@ -55,7 +56,7 @@ class Test_creatCipher_05 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatcipher_02(): Unit {
         try {
             createCipher("")
@@ -74,7 +75,7 @@ class Test_creatCipher_05 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatcipher_03(): Unit {
         try {
             createCipher("\0")
@@ -93,7 +94,7 @@ class Test_creatCipher_05 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatcipher_04(): Unit {
         try {
             createCipher("#$%abc345")
@@ -112,7 +113,7 @@ class Test_creatCipher_05 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatcipher_05(): Unit {
         let cipher = createCipher("3DES192|ECB|NoPadding")
         let cipher1 = createCipher("RSA512|NoPadding")

@@ -21,8 +21,6 @@ import std.unittest.common.*
 import ohos.ui_test.*
 import kit.ArkData.*
 import ohos.business_exception.BusinessException
-import ohos.data.preferences.Options as PreferencesOptions
-import ohos.data.preferences.ValueType as PreferencesValueType
 
 @Test
 class Test_get_getAll_flush_clear_05 {
@@ -78,7 +76,7 @@ class Test_get_getAll_flush_clear_05 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_flush_01(): Unit {
         preferences.flush()
         for (i in 0..7000) {
@@ -106,7 +104,7 @@ class Test_get_getAll_flush_clear_05 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_flush_02(): Unit {
         preferences.flush()
         Preferences.removePreferencesFromCache(getAbilityContext(), "cangjieStore")
@@ -126,7 +124,7 @@ class Test_get_getAll_flush_clear_05 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_clear_03(): Unit {
         preferences.flush()
         preferences.clear()
@@ -150,7 +148,7 @@ class Test_get_getAll_flush_clear_05 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_clear_04(): Unit {
         preferences.flush()
         preferences.clear()

@@ -49,7 +49,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_001() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let aar = Inspector.split("useShadowBatching")
@@ -71,7 +71,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_002() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -89,7 +89,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_003() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -108,7 +108,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_004() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -125,7 +125,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_005() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -143,7 +143,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_006() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -161,7 +161,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_007() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -179,7 +179,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_008() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -205,7 +205,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_009() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -231,7 +231,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_010() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -257,7 +257,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_011() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -275,7 +275,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_012() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -293,7 +293,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_013() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -311,7 +311,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_014() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -332,7 +332,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_015() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -351,7 +351,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_016() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -369,7 +369,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_017() {
         let button = driver.findComponent(On().id("AlphabetIndexer_commpont"))
         button.getOrThrow().click()
@@ -393,7 +393,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_018() {
         let button = driver.findComponent(On().id("AlphabetIndexer_commpont"))
         button.getOrThrow().click()
@@ -413,7 +413,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_019() {
         let button = driver.findComponent(On().id("AlphabetIndexer_commpont"))
         button.getOrThrow().click()
@@ -433,7 +433,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_020() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let aar = Inspector.split("useShadowBatching")
@@ -452,7 +452,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_021() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let aar = Inspector.split("useShadowBatching")
@@ -471,7 +471,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_022() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -489,7 +489,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_023() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -507,7 +507,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_024() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -526,7 +526,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_025() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -545,7 +545,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_026() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -563,7 +563,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_027() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -581,7 +581,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_028() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -599,7 +599,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_029() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -617,7 +617,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_030() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -643,7 +643,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_031() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -669,7 +669,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_032() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont4")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -695,7 +695,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_033() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -721,7 +721,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_034() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -747,7 +747,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_035() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont4")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -773,7 +773,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_036() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -799,7 +799,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_037() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -825,7 +825,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_038() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont4")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -851,7 +851,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_039() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -869,7 +869,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_040() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -887,7 +887,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_041() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -908,7 +908,7 @@ class Test_AlphabetIndexer_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AlphabetIndexer_Component_042() {
         let Inspector = getInspectorByKey("AlphabetIndexer_commpont3")
         let obj = JsonValue.fromStr(Inspector).asObject()

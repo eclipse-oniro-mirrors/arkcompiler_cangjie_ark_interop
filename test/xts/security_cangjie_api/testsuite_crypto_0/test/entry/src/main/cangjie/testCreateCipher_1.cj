@@ -36,7 +36,7 @@ class testCreateCipher_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "CangjieTest", "createCipher fail")
@@ -59,7 +59,7 @@ class testCreateCipher_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "CangjieTest", "createCipher fail")
@@ -82,7 +82,7 @@ class testCreateCipher_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "CangjieTest", "createCipher")

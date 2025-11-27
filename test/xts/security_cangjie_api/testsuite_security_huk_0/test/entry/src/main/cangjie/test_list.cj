@@ -24,7 +24,7 @@ func testsuite(): Unit {
     registerTestSuite("testImportKeyItem_1", {
         => testImportKeyItem_1()
     })
- 
+
     registerTestSuite("testAnonAttestKeyItem_1", {
         => testAnonAttestKeyItem_1()
     })

@@ -27,15 +27,15 @@ class AbilityWithoutMetadata <: UIAbility {
     }
 
     public override func onCreate(want: Want, launchParam: LaunchParam): Unit {
-        Hilog.info(0,"cangjie","MainAbility OnCreated.${want.abilityName}")
+        Hilog.info(0, "cangjie", "MainAbility OnCreated.${want.abilityName}")
         match (launchParam.launchReason) {
-            case LaunchReason.StartAbility => Hilog.info(0,"cangjie","START_ABILITY")
+            case LaunchReason.StartAbility => Hilog.info(0, "cangjie", "START_ABILITY")
             case _ => ()
         }
     }
 
     public override func onWindowStageCreate(windowStage: WindowStage): Unit {
-        Hilog.info(0,"cangjie","MainAbility onWindowStageCreate.")
+        Hilog.info(0, "cangjie", "MainAbility onWindowStageCreate.")
         windowStage.loadContent("EntryView")
     }
 }

@@ -40,7 +40,7 @@ class Test_Enabled {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Enabled_0100() {
         Hilog.info(0, "cangjietest", "Test_Enable_01 start")
         sleepFor(1.second)
@@ -59,7 +59,7 @@ class Test_Enabled {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Enabled_0200() {
         Hilog.info(0, "cangjietest", "Test_Enable_02 start")
         sleepFor(1.second)
@@ -76,7 +76,7 @@ class Test_Enabled {
     * @tc.level     : Level 0
     */  
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_Enabled_0300() {
         Hilog.info(0, "cangjietest", "Test_Enable_03 start")
         sleepFor(1.second)

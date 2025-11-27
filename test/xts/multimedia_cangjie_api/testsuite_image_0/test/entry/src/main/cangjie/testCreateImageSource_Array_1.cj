@@ -35,13 +35,13 @@ class testCreateImageSource_Array_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageSource")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageSource")
         let imageSource = createImageSource(Array<UInt8>(16i64, repeat: 0u8))
         @Expect(true, imageSource.supportedFormats.size > 0i64)
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -53,12 +53,12 @@ class testCreateImageSource_Array_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","define local variable imageSource")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imageSource")
         let imageSource = createImageSource(Array<UInt8>(32i64, repeat: 0u8))
         @Expect(true, imageSource.supportedFormats.size > 0i64)
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 }

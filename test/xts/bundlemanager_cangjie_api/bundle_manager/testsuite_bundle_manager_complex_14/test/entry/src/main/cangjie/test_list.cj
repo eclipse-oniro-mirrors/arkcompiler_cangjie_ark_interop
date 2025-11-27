@@ -14,42 +14,62 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testApplicationInfo_accessTokenId_1", { =>testApplicationInfo_accessTokenId_1()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_2", { =>testApplicationInfo_accessTokenId_2()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_3", { =>testApplicationInfo_accessTokenId_3()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_4", { =>testApplicationInfo_accessTokenId_4()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_5", { =>testApplicationInfo_accessTokenId_5()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_6", { =>testApplicationInfo_accessTokenId_6()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_7", { =>testApplicationInfo_accessTokenId_7()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_8", { =>testApplicationInfo_accessTokenId_8()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_9", { =>testApplicationInfo_accessTokenId_9()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_10", { =>testApplicationInfo_accessTokenId_10()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_11", { =>testApplicationInfo_accessTokenId_11()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_12", { =>testApplicationInfo_accessTokenId_12()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_13", { =>testApplicationInfo_accessTokenId_13()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_14", { =>testApplicationInfo_accessTokenId_14()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_15", { =>testApplicationInfo_accessTokenId_15()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_16", { =>testApplicationInfo_accessTokenId_16()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_17", { =>testApplicationInfo_accessTokenId_17()
-})
-registerTestSuite("testApplicationInfo_accessTokenId_18", { =>testApplicationInfo_accessTokenId_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testApplicationInfo_accessTokenId_1", {
+        => testApplicationInfo_accessTokenId_1()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_2", {
+        => testApplicationInfo_accessTokenId_2()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_3", {
+        => testApplicationInfo_accessTokenId_3()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_4", {
+        => testApplicationInfo_accessTokenId_4()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_5", {
+        => testApplicationInfo_accessTokenId_5()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_6", {
+        => testApplicationInfo_accessTokenId_6()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_7", {
+        => testApplicationInfo_accessTokenId_7()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_8", {
+        => testApplicationInfo_accessTokenId_8()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_9", {
+        => testApplicationInfo_accessTokenId_9()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_10", {
+        => testApplicationInfo_accessTokenId_10()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_11", {
+        => testApplicationInfo_accessTokenId_11()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_12", {
+        => testApplicationInfo_accessTokenId_12()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_13", {
+        => testApplicationInfo_accessTokenId_13()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_14", {
+        => testApplicationInfo_accessTokenId_14()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_15", {
+        => testApplicationInfo_accessTokenId_15()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_16", {
+        => testApplicationInfo_accessTokenId_16()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_17", {
+        => testApplicationInfo_accessTokenId_17()
+    })
+    registerTestSuite("testApplicationInfo_accessTokenId_18", {
+        => testApplicationInfo_accessTokenId_18()
+    })
 }

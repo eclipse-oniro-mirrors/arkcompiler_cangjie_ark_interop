@@ -37,9 +37,9 @@ class EntryView {
                             .height(50)
                             .id(attrName)
                             .borderRadius(10)
-                            .onClick {
+                            .onClick({
                                 ClickEvent => getUIContext().getRouter().pushUrl(url: "SecondView", params: Attrs_List[idx])
-                            }
+                            })
                     }
                 )
             }.width(100.percent).margin(top: 5)

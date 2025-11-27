@@ -35,7 +35,7 @@ class testFileIo_close_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
         Hilog.info(0, "cangjietest","start testFileIo_close")

@@ -37,7 +37,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_01() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_01"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_ONLY))
@@ -72,7 +72,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_02() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_02"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.WRITE_ONLY))
@@ -108,7 +108,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_03() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_03"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -147,7 +147,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_04() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_04"
 
@@ -172,7 +172,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_05() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_05"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -206,7 +206,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_06() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_06"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -242,7 +242,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_07() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_07"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -271,7 +271,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_08() {
         let dpath = "/data/storage/el2/base/haps/entry/files/test_open_08"
         FileIo.mkdir(dpath)
@@ -296,7 +296,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_09() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_09"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -324,7 +324,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_10() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_10"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -354,7 +354,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_11() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_11"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -384,7 +384,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_12() {
         let dpath = "/data/storage/el2/base/haps/entry/files/test_open_12"
         FileIo.mkdir(dpath)
@@ -409,7 +409,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_13() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_13"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -449,7 +449,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_14() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_14"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -480,7 +480,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_15() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_15"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -509,7 +509,7 @@ class testFileIo_open_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_open_16() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_open_16"
 

@@ -50,7 +50,7 @@ class Test_Background_Component {
      * @tc.desic：backgroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_0100() {
         let Border = getInspectorByKey("Test_Row00")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -70,7 +70,7 @@ class Test_Background_Component {
      * @tc.desic：backgroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_0200() {
         let Border = getInspectorByKey("Test_Row01")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -90,7 +90,7 @@ class Test_Background_Component {
      * @tc.desic：backgroundImage
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_0300() {
         let Border = getInspectorByKey("Test_Row02")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -110,7 +110,7 @@ class Test_Background_Component {
      * @tc.desic：borderColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_0400() {
         let Border = getInspectorByKey("Test_Row02")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -130,7 +130,7 @@ class Test_Background_Component {
      * @tc.desic：backgroundImagePosition
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_0500() {
         let Border = getInspectorByKey("Test_Row02")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -156,7 +156,7 @@ class Test_Background_Component {
      * @tc.desic：backgroundImageSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_0600() {
         let Border = getInspectorByKey("Test_Row03")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -186,7 +186,7 @@ class Test_Background_Component {
      * @tc.desic：backgroundImagePosition
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_0700() {
         let Border = getInspectorByKey("Test_Row03")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -212,7 +212,7 @@ class Test_Background_Component {
      * @tc.desic：backgroundImageSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_0800() {
         let Border = getInspectorByKey("Test_Row04")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -242,7 +242,7 @@ class Test_Background_Component {
      * @tc.desic：backgroundImagePosition
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_0900() {
         let Border = getInspectorByKey("Test_Row04")
         let obj = JsonValue.fromStr(Border).asObject()
@@ -268,7 +268,7 @@ class Test_Background_Component {
      * @tc.desic：backgroundImageSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Background_Component_01000() {
         let Border = getInspectorByKey("Test_Row05")
         let obj = JsonValue.fromStr(Border).asObject()

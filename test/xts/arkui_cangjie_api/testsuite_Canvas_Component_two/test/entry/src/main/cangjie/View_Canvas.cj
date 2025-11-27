@@ -21,7 +21,7 @@ import ohos.ui_test.*
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
-import ohos.prompt_action.*
+import ohos.arkui.ui_context.*
 import ohos.base.{LengthProp,  Color, Length}
 
 @Entry
@@ -48,16 +48,16 @@ class View_Canvas {
                     .onReady(
                         {
                             =>
-                            this.context.fillStyle(0xFF9EC1BB)
+                            this.context.fillStyle = 0xFF9EC1BB 
                             this.context.fillRect(30.0, 30.0, 100.0, 100.0)
                             this.context.lineWidth = 5.0
                             this.context.strokeRect(25.0, 25.0, 55.0, 75.0)
                             this.context.lineWidth = 10.0
-                            this.context.strokeStyle(0x0000ff)
+                            this.context.strokeStyle = 0x0000ff 
                             this.context.strokeRect(115.0, 25.0, 75.0, 55.0)
                             this.context.lineWidth= 8.0
                             this.context.beginPath()
-                            this.context.lineCap = LineCapStyle.Round
+                            this.context.lineCap = "LineCapStyle.Round"
                             this.context.moveTo(220.0, 50.0)
                             this.context.lineTo(320.0, 50.0)
                             this.context.stroke()

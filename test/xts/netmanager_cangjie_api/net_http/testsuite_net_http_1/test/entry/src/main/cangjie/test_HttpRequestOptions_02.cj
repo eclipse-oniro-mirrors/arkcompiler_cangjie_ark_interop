@@ -34,7 +34,7 @@ class Test_HttpRequestOptions_02 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_method_01(): Unit {
         let httpRequest = createHttp()
         httpRequest.request(

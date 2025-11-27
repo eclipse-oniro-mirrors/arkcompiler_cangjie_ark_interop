@@ -50,7 +50,7 @@ class Test_onClick_Event {
      * @tc.desic：onClick_Event
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_onClick_Event_001() {
         let text = driver.findComponent(On().id("text"))
         let content = text.getOrThrow().getText()
@@ -68,7 +68,7 @@ class Test_onClick_Event {
      * @tc.desic：onClick_Event
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_onClick_Event_002() {
         let text = driver.findComponent(On().id("text2"))
         let content = text.getOrThrow().getText()

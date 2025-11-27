@@ -38,7 +38,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_AlphabetIndexer_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Blank_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Button_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Checkbox_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_CheckboxGroup_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin CheckboxGroup")
@@ -164,7 +164,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_DataPanel_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin DataPanel")
@@ -189,7 +189,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_DatePicker_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin DatePicker")
@@ -214,7 +214,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Divider_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Divider")
@@ -239,7 +239,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Gauge_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Gauge")
@@ -264,7 +264,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Image_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Image")
@@ -289,7 +289,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_ImageSpan_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin ImageSpan")
@@ -314,7 +314,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_LoadingProgress_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin LoadingProgress")
@@ -339,7 +339,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Menu_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Menu")
@@ -364,7 +364,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_MenuItem_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin MenuItem")
@@ -389,7 +389,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_MenuItemGroup_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin MenuItemGroup")
@@ -414,7 +414,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Progress_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Progress")
@@ -439,7 +439,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_QRCode_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin QRCode")
@@ -464,7 +464,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Radio_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Radio")
@@ -489,7 +489,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Rating_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Rating")
@@ -514,7 +514,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Refresh_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Refresh")
@@ -539,7 +539,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_RichEditor_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin RichEditor")
@@ -564,7 +564,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_RichText_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin RichText")
@@ -589,7 +589,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_RowSplit_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin RowSplit")
@@ -614,7 +614,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_ScrollBar_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin ScrollBar")
@@ -639,7 +639,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Search_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Search")
@@ -664,7 +664,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Slider_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Slider")
@@ -689,7 +689,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Stepper_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Stepper")
@@ -714,7 +714,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_StepperItem_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin StepperItem")
@@ -739,7 +739,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Text_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Text")
@@ -764,7 +764,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_TextArea_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin TextArea")
@@ -789,7 +789,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_TextClock_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin TextClock")
@@ -814,7 +814,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_TextInput_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin TextInput")
@@ -839,7 +839,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_TextPicker_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin TextPicker")
@@ -864,7 +864,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_TextTimer_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin TextTimer")
@@ -889,7 +889,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Toggle_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Toggle")
@@ -914,7 +914,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Web_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Web")
@@ -939,7 +939,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Select_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Select")
@@ -964,7 +964,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Badge_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Badge")
@@ -989,7 +989,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Column_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Column")
@@ -1014,7 +1014,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Grid_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Grid")
@@ -1039,7 +1039,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_GridItem_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin GridItem")
@@ -1064,7 +1064,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_GridRow_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin GridRow")
@@ -1089,7 +1089,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_GridCol_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin GridCol")
@@ -1114,7 +1114,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Flex_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Flex")
@@ -1139,7 +1139,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_List_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin List")
@@ -1164,7 +1164,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_ListItem_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin ListItem")
@@ -1189,7 +1189,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_ListItemGroup_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin ListItemGroup")
@@ -1215,7 +1215,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_RelativeContainer_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin RelativeContainer")
@@ -1240,7 +1240,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Row_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Row")
@@ -1265,7 +1265,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Scroll_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Scroll")
@@ -1290,7 +1290,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Stack_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Stack")
@@ -1315,7 +1315,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Swiper_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Swiper")
@@ -1340,7 +1340,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Tabs_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Tabs")
@@ -1365,7 +1365,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_TabContent_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin TabContent")
@@ -1390,7 +1390,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Circle_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Circle")
@@ -1415,7 +1415,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Line_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Line")
@@ -1440,7 +1440,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Rect_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Rect")
@@ -1465,7 +1465,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Shape_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Shape")
@@ -1490,7 +1490,7 @@ class Test_EmptyAttrs_ColorBlend {
      * @tc.desic：Empty_Path_ColorBlend
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ColorBlend_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckColorBlend: FindBegin Path")

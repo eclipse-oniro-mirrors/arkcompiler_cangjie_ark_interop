@@ -35,13 +35,13 @@ class testCreateImagePacker_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
         @Expect(true, imagePacker.supportedFormats.size > 0i64)
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -53,13 +53,13 @@ class testCreateImagePacker_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
         @Expect(true, imagePacker.supportedFormats.size > 0i64)
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -71,13 +71,13 @@ class testCreateImagePacker_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
         @Expect(true, imagePacker.supportedFormats.size > 0i64)
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -89,13 +89,13 @@ class testCreateImagePacker_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
         @Expect(true, imagePacker.supportedFormats.size > 0i64)
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -107,12 +107,12 @@ class testCreateImagePacker_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
         @Expect(true, imagePacker.supportedFormats.size > 0i64)
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 }

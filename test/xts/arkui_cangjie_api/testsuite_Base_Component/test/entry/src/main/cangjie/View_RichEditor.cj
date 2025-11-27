@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length,  Color, LengthType}
+import ohos.base.{LengthProp, Length,  Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -77,7 +77,7 @@ class View_RichEditor {
             Row() {
                 Button("获取选择内容")
                     .key("RichEditor01GetSpans")
-                    .onClick {
+                    .onClick({
                         ClickEvent =>
                         this.content = ""
 //                        for (item in this.controller.getSpans(start: this.start, end: this.end)) {
@@ -86,21 +86,21 @@ class View_RichEditor {
 //                                Hilog.info(0,"",   "cangjietest", "text:" + item.textResult.getOrThrow().value.toString())
 //                            }
 //                        }
-                    }
+                    })
                 Button("删除选择内容")
                     .key("RichEditor01DelSpans")
-                    .onClick {
+                    .onClick({
                         ClickEvent =>
                         this.controller.deleteSpans(start: 0, end: 1)
                         this.start = -1
                         this.end = -1
                         this.message = "[" + this.start.toString() + ", " + this.end.toString() + "]"
-                    }
+                    })
                 Button("添加中英特殊字符")
                     .id("addTextSpan1")
-                    .onClick {
+                    .onClick({
                         evt => controller.addTextSpan(
-                            value: "你好,Cangjie!@#&%",
+                            content: "你好,Cangjie!@#&%",
                             options: RichEditorTextSpanOptions(
                                 style: RichEditorTextStyle(
                                     fontColor: Color(0XFF1298),
@@ -113,25 +113,25 @@ class View_RichEditor {
                                 )
                             )
                         )
-                    }
+                    })
             }.borderWidth(1).borderColor(Color.Red).width(100.percent).height(5.percent)
 
             Row() {
-                Button("获取组件信息").onClick {
+                Button("获取组件信息").onClick({
                     ClickEvent =>
                     let strJson = getInspectorByKey("RichEditorKey")
                     this.text = JsonValue.fromStr(strJson).toString()
-                }
+                })
                 Button("获取光标位置")
-                    .onClick {
+                    .onClick({
                         ClickEvent => this.content = this.controller.getCaretOffset().toString() + ""
-                    }
+                    })
                     .key("getCaretOffset")
                 Button("插入多行中英字符")
                     .id("addTextSpan2")
-                    .onClick {
+                    .onClick({
                         evt => controller.addTextSpan(
-                            value: """
+                            content: """
                             你好,Cangjie!@#&%
                             """,
                             options: RichEditorTextSpanOptions(
@@ -146,28 +146,28 @@ class View_RichEditor {
                                 )
                             )
                         )
-                    }
+                    })
             }.borderWidth(1).borderColor(Color.Red).width(100.percent).height(5.percent)
 
             Row() {
                 Button("设置光标位置1")
                     .key("setCaretOffset01")
-                    .onClick {
+                    .onClick({
                         ClickEvent => this.content = this.controller.setCaretOffset(1).toString() + ""
-                    }
+                    })
                 Button("设置光标位置100")
                     .key("setCaretOffset02")
-                    .onClick {
+                    .onClick({
                         ClickEvent => this.content = this.controller.setCaretOffset(100).toString() + ""
-                    }
+                    })
             }.borderWidth(1).borderColor(Color.Red).width(100.percent).height(5.percent)
 
             Row() {
                 Button("添加空字符")
                     .id("addTextSpan3")
-                    .onClick {
+                    .onClick({
                         evt => controller.addTextSpan(
-                            value: "",
+                            content: "",
                             options: RichEditorTextSpanOptions(
                                 style: RichEditorTextStyle(
                                     fontColor: Color(0XFF1298),
@@ -180,12 +180,12 @@ class View_RichEditor {
                                 )
                             )
                         )
-                    }
+                    })
                 Button("插入转义字符")
                     .id("addTextSpan4")
-                    .onClick {
+                    .onClick({
                         evt => controller.addTextSpan(
-                            value: "\n你好，仓颉\t",
+                            content: "\n你好，仓颉\t",
                             options: RichEditorTextSpanOptions(
                                 style: RichEditorTextStyle(
                                     fontColor: Color(0XFF1298),
@@ -198,7 +198,7 @@ class View_RichEditor {
                                 )
                             )
                         )
-                    }
+                    })
             }.borderWidth(1).borderColor(Color.Red).width(100.percent).height(5.percent)
 
             Column() {
@@ -215,7 +215,7 @@ class View_RichEditor {
                             this.message = "[" + this.start.toString() + ", " + this.end.toString() + "]"
                         }
                     )
-                    .aboutToIMEInput(
+                    .aboutToImeInput(
                         {
                             value =>
                             Hilog.info(0,"",   "cangjietest", "---------------------- aboutToIMEInput ----------------------")
@@ -226,16 +226,16 @@ class View_RichEditor {
                             return true
                         }
                     )
-                    .onIMEInputComplete(
+                    .onImeInputComplete(
                         {
                             value =>
                             Hilog.info(0,"",   "cangjietest", "---------------------- onIMEInputComplete ---------------------")
                             Hilog.info(0,"",   "cangjietest", "spanIndex: ${value.spanPosition.spanIndex}")
                             Hilog.info(0,"",   "cangjietest",
-                                "spanRange:[ ${value.spanPosition.spanRange[0]}, ${value.spanPosition.spanRange[1]} ]")
+                                "spanRange:[ ${value.spanPosition.spanRange.getOrThrow()[0]}, ${value.spanPosition.spanRange.getOrThrow()[1]} ]")
                             Hilog.info(0,"",   "cangjietest", "offsetInSpan:[ ${value.offsetInSpan[0]}, ${value.offsetInSpan[1]} ]")
                             Hilog.info(0,"",   "cangjietest", "value:" + value.value)
-                            this.content = "${value.spanPosition.spanIndex}, ${value.value}, ${value.spanPosition.spanRange[0]}, ${value.spanPosition.spanRange[1]}, ${value.offsetInSpan[0]}, ${value.offsetInSpan[1]}, ${value.textStyle.fontSize}"
+                            this.content = "${value.spanPosition.spanIndex}, ${value.value}, ${value.spanPosition.spanRange.getOrThrow()[0]}, ${value.spanPosition.spanRange.getOrThrow()[1]}, ${value.offsetInSpan[0]}, ${value.offsetInSpan[1]}, ${value.textStyle.fontSize}"
                         }
                     )
                     .aboutToDelete(
@@ -267,10 +267,10 @@ class View_RichEditor {
                     .onDidChange(
                         {
                             t1, t2 =>
-                            didchangestart1 = t1.start
-                            didchangeend1 = t1.end
-                            didchangestart2 = t2.start
-                            didchangeend2 = t2.end
+                            didchangestart1 = t1.start.getOrThrow()
+                            didchangeend1 = t1.end.getOrThrow()
+                            didchangestart2 = t2.start.getOrThrow()
+                            didchangeend2 = t2.end.getOrThrow()
                         }
                     )
                     .borderWidth(1)

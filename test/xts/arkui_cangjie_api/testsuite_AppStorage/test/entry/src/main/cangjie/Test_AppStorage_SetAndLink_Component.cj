@@ -50,7 +50,7 @@ class Test_AppStorage_SetAndLink_Component {
      * @tc.desic：SetAndLink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageLink_SetAndLink_Component_0100() {
         driver.findComponent(On().id("change1")).getOrThrow().click()
         let text00 = driver.findComponent(On().id("LinkInt")).getOrThrow().getText()
@@ -79,7 +79,7 @@ class Test_AppStorage_SetAndLink_Component {
      * @tc.desic： SetAndLink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorageLink_SetAndLink_Component_0200() {
         driver.findComponent(On().id("change2")).getOrThrow().click()
         let text00 = driver.findComponent(On().id("LinkInt")).getOrThrow().getText()

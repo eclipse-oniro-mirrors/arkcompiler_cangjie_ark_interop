@@ -36,11 +36,11 @@ class View_RichEditor {
         Column(space:30) {
             Row {
                 Button("getCaretOffset")
-                    .onClick {
+                    .onClick({
                         evt =>
                         Hilog.info(0, "cangjietest", controller.getCaretOffset().toString())
-                        this.position = controller.getCaretOffset()
-                    }
+                        this.position = Int64(controller.getCaretOffset())
+                    })
                     .width(400.px)
                     .height(150.px)
                     .id("button_getCaretOffset")
@@ -48,18 +48,18 @@ class View_RichEditor {
             }
 
             Row {
-                Button("setCaretOffset 0").onClick {
+                Button("setCaretOffset 0").onClick({
                     evt => controller.setCaretOffset(0)
-                }.width(400.px).height(150.px)
+                }).width(400.px).height(150.px)
 
                 Text("position: ${this.position.toString()}").id("Text_CaretOffset")
             }
 
             Row {
                 Button("addText Hello")
-                    .onClick {
+                    .onClick({
                         evt => controller.addTextSpan(
-                            value: "Helo",
+                            content: "Helo",
                             options: RichEditorTextSpanOptions(
                                 style: RichEditorTextStyle(
                                     fontColor: Color(0XFF1298),
@@ -70,19 +70,19 @@ class View_RichEditor {
                                 )
                             )
                         )
-                    }
+                    })
                     .width(400.px)
                     .height(150.px)
                     .id("Test_addTextSpan")
 
                 Button("addImage")
-                    .onClick {
+                    .onClick({
                         evt => controller.addImageSpan(
                             value: @r(app.media.startIcon),
                             options: RichEditorImageSpanOptions(
                                 imageStyle: RichEditorImageSpanStyle(size: (24.vp, 24.vp)))
                         )
-                    }
+                    })
                     .width(400.px)
                     .height(150.px)
                     .id("Test_addImageSpan")
@@ -90,7 +90,7 @@ class View_RichEditor {
 
             Row {
                 Button("getSpans")
-                    .onClick {
+                    .onClick({
                         evt =>
                         this.text0.clear()
                         for (item in this.controller.getSpans(start: 0, end: 0))
@@ -100,19 +100,19 @@ class View_RichEditor {
                         match (item) {
                             case RichEditorTextSpanResult  =>
                                 let textResult = (item as RichEditorTextSpanResult).getOrThrow()
-                                Hilog.info(0,"", "cangjietest", "RichEditor textResult. value: ${textResult.value}")
+                                Hilog.info(0,"", "cangjietest", "RichEditor textResult. value: ${textResult.value})")
                                 this.text0.append(textResult.value)
                             case RichEditorImageSpanResult  =>
                                 let imageResult = (item as RichEditorImageSpanResult).getOrThrow()
 
                                 this
                                     .text0
-                                    .append(imageResult.imageStyle.size[0].toString() + "-" + imageResult.imageStyle.size[1].toString())
+                                    .append(imageResult.imageStyle.getOrThrow().size.getOrThrow()[0].toString() + "-" + imageResult.imageStyle.getOrThrow().size.getOrThrow()[1].toString())
                             case _ => ()
                         }
                         }
                         this.text = this.controller.getSpans(start: 0, end: 0).size.toString()
-                    }
+                    })
                     .width(400.px)
                     .height(150.px)
                     .id("Test_getSpan")
@@ -120,7 +120,7 @@ class View_RichEditor {
 
             Row {
                 Button("updateParagraphStyle")
-                    .onClick {
+                    .onClick({
                         evt => let array = controller.updateParagraphStyle(
                             start: 0,
                             end: 100,
@@ -129,7 +129,7 @@ class View_RichEditor {
                                 leadingMargin: 24.px
                             )
                         )
-                    }
+                    })
                     .width(400.px)
                     .height(150.px)
                     .id("button_updateParagraphStyle")

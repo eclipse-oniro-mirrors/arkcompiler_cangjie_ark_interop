@@ -50,7 +50,7 @@ class Test_AppStorage_Clear_Component {
      * @tc.desic： before delete
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorage_Clear_Component_0100() {
         driver.findComponent(On().id("Test_Button01")).getOrThrow().click()
         let res00 = driver.findComponent(On().id("Test_Text00")).getOrThrow().getText()
@@ -63,7 +63,7 @@ class Test_AppStorage_Clear_Component {
      * @tc.desic： clear
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_AppStorage_Component_Clear_0200() {
         driver.findComponent(On().id("Test_Button02")).getOrThrow().click()
         driver.findComponent(On().id("Test_Button01")).getOrThrow().click()

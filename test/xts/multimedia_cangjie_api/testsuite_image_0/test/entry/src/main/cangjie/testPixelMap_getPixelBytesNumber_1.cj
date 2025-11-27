@@ -27,7 +27,6 @@ import ohos.multimedia.image.*
 @Test
 class testPixelMap_getPixelBytesNumber_1 {
 
-
     /*
      * @tc.number    : Sub_Cangjie_testPixelMap_getBytesNumberPerRow_1500
      * @tc.name      : TestCase_6
@@ -37,22 +36,18 @@ class testPixelMap_getPixelBytesNumber_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let initOption = InitializationOptions(Size(1i32, 4), alphaType: AlphaType.Unknown, editable: true,
                 pixelFormat: PixelMapFormat.Alpha8, scaleMode: ScaleMode.FitTargetSize)
             let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8), initOption)
             let pixelBytesNumber = pixelMap.getPixelBytesNumber()
         } catch (e: BusinessException) {
-
             @Expect(false)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
-
-
-
 }

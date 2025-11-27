@@ -19,7 +19,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length,  Color, LengthType}
+import ohos.base.{LengthProp, Length,  Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -141,7 +141,7 @@ class View_List {
                             .divider(ListDividerOptions(strokeWidth: 10.vp, color: Color.Blue, startMargin: 10.vp, endMargin: 10.vp))
                     }
                         .listDirection(Axis.Vertical)
-                        .divider(strokeWidth: 100.vp, color: Color.Green, startMargin: 10.vp, endMargin: 10.vp)
+                        .divider(ListDividerOptions(strokeWidth: 100.vp, color: Color.Green, startMargin: 10.vp, endMargin: 10.vp))
                         .scrollBar(BarState.Auto)
                         .cachedCount(5)
                         .edgeEffect(EdgeEffect.Spring)
@@ -202,12 +202,12 @@ class View_List {
                     }
                         .nestedScroll(NestedScrollOptions(NestedScrollMode.SelfFirst, NestedScrollMode.SelfFirst))
                         .height(200)
-                        .onScrollIndex {
+                        .onScrollIndex ({
                             first: Int32, initialIndex: Int32, last: Int32 =>
                             this.Text_01 = first
                             this.initialIndex = initialIndex
                             this.Text_02 = last
-                        }
+                        })
                         .onReachStart({
                             => this.Text_03 = 1
                         })

@@ -21,7 +21,6 @@ import std.unittest.testmacro.*
 import kit.CoreFileKit.*
 import kit.LocalizationKit.{ResourceManager}
 import ohos.arkui.state_macro_manage.r
-//import ohos.base.CJResource
 import ohos.bundle.bundle_manager.{ModuleMetadata, Metadata, BundleType, HapModuleInfo, AbilityInfo}
 import ohos.bundle.bundle_manager.{ApplicationInfo}
 import ohos.bundle.bundle_manager.Skill
@@ -32,18 +31,17 @@ import ohos.bundle.bundle_manager.SkillUri
 
 @Test
 class TestAbilityInfo02 {
-    
 
     /*
-    * @tc.number    : Sub_Cangjie_BundleManager01_TestAbilityInfo02_0100
-    * @tc.name      : test_abilityInfo_02
-    * @tc.desc      : test BundleManager01 test_abilityInfo_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_BundleManager01_TestAbilityInfo02_0100
+     * @tc.name      : test_abilityInfo_02
+     * @tc.desc      : test BundleManager01 test_abilityInfo_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_abilityInfo_02(): Unit {
         let bundleInfo = getFullBundleInfo()
         let hapModuleInfos = bundleInfo.hapModulesInfo
@@ -55,5 +53,4 @@ class TestAbilityInfo02 {
         let appIndex = ability[0].appIndex
         @Expect(appIndex, 0)
     }
-    
 }

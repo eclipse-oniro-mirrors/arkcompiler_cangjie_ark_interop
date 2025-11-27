@@ -24,6 +24,7 @@ import ohos.ui_test.*
 import ohos.base.*
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.*
+
 @Test
 class Test_createSymKeyGenerator_01 {
 
@@ -36,7 +37,7 @@ class Test_createSymKeyGenerator_01 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatsymkeygenerator_01(): Unit {
         try {
             createSymKeyGenerator("3DES193")
@@ -55,7 +56,7 @@ class Test_createSymKeyGenerator_01 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatsymkeygenerator_02(): Unit {
         try {
             createSymKeyGenerator("")
@@ -74,7 +75,7 @@ class Test_createSymKeyGenerator_01 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatsymkeygenerator_03(): Unit {
         try {
             createSymKeyGenerator("\0")
@@ -93,7 +94,7 @@ class Test_createSymKeyGenerator_01 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatsymkeygenerator_04(): Unit {
         try {
             createSymKeyGenerator("%^&123abc")
@@ -112,7 +113,7 @@ class Test_createSymKeyGenerator_01 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatsymkeygenerator_05(): Unit {
         let skg = createSymKeyGenerator("AES128")
         let skg1 = createSymKeyGenerator("3DES192")

@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length, Color, LengthType}
+import ohos.base.{LengthProp, Length, Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -39,33 +39,33 @@ class View_CheckboxGroup {
                 .selectAll(true)
                 .selectedColor(Color.Blue)
                 .size(width: 50.vp, height: 50.vp)
-                .onChange {
+                .onChange ({
                     val =>()
                    // BaseLog.info("checkboxGroup1 onChange status:${val.status.toString()}")
                    // BaseLog.info("checkboxGroup1 onChange names:${val.name}")
-                }
+                })
                 .id("checkboxGroupBasis")
 
             CheckboxGroup(group: "checkboxGroup2")
                 .selectAll(true)
                 .selectedColor(0xFF0000)
                 .size(width: 50.vp, height: 50.vp)
-                .onChange {
+                .onChange ({
                     val =>()
                     //BaseLog.info("checkboxGroup1 onChange status:${val.status.toString()}")
                     //BaseLog.info("checkboxGroup1 onChange names:${val.name}")
-                }
+                })
                 .id("checkboxGroupBasis2")
 
             CheckboxGroup(group: "checkboxGroup3")
                 .selectAll(true)
                 .selectedColor(@r(app.color.red_color))
                 .size(width: 50.vp, height: 50.vp)
-                .onChange {
+                .onChange ({
                     val =>()
                     //BaseLog.info("checkboxGroup1 onChange status:${val.status.toString()}")
                     //BaseLog.info("checkboxGroup1 onChange names:${val.name}")
-                }
+                })
                 .id("checkboxGroupBasis3")
         }
     }

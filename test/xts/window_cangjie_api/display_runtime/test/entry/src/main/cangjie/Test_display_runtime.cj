@@ -48,7 +48,7 @@ class Test_display_runtime {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_GetDisplayInfo() {
         try {
             let displayClass = getDefaultDisplaySync()
@@ -61,11 +61,11 @@ class Test_display_runtime {
             Hilog.info(0,"","","rotation:    " + displayClass.rotation.toString())
             Hilog.info(0,"","","width:       " + displayClass.width.toString())
             Hilog.info(0,"","","height:      " + displayClass.height.toString())
-            Hilog.info(0,"","","densityDPI:  " + displayClass.densityDPI.toString())
+            Hilog.info(0,"","","densityDpi:  " + displayClass.densityDpi.toString())
             Hilog.info(0,"","","densityPixels: " + displayClass.densityPixels.toString())
             Hilog.info(0,"","","scaledDensity: " + displayClass.scaledDensity.toString())
-            Hilog.info(0,"","","xDPI: " + displayClass.xDPI.toString())
-            Hilog.info(0,"","","yDPI: " + displayClass.yDPI.toString())
+            Hilog.info(0,"","","xDpi: " + displayClass.xDpi.toString())
+            Hilog.info(0,"","","yDpi: " + displayClass.yDpi.toString())
             Hilog.info(0,"","",
                 "state: " + match (displayClass.state) {
                     case DisplayState.StateUnknown => "unknow"
@@ -108,7 +108,7 @@ class Test_display_runtime {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_DisplayStruct() {
         try {
             let rectLeft = Rect(left:0, top:0,width:0,height:0)
@@ -128,7 +128,7 @@ class Test_display_runtime {
     }
 
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hasPrivateWindow() {
         try {
             let displayClass = getDefaultDisplaySync()

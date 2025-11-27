@@ -14,12 +14,12 @@
  */
 
 package ohos_app_cangjie_entry
+
 import ohos.business_exception.BusinessException
 internal import kit.UniversalKeystoreKit.{isKeyItemExist, deleteKeyItem, HuksOptions}
 
-
-let genKeyOptionsTest1 = HuksOptions( properties:
-    [
+let genKeyOptionsTest1 = HuksOptions(
+    properties: [
         HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
         HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
         HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
@@ -28,7 +28,8 @@ let genKeyOptionsTest1 = HuksOptions( properties:
         HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(false)),
         HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
     ]
-) 
+)
+
 func clean(keyAlias: String) {
     try {
         if (isKeyItemExist(keyAlias, genKeyOptionsTest1)) {
@@ -40,11 +41,8 @@ func clean(keyAlias: String) {
 }
 
 func generateSimpleKey(keyAlias: String) {
-    let options = HuksOptions(properties:
-        [
-            HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32)),
-            HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))
-        ]
-    )
+    let options = HuksOptions(
+        properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32)),
+            HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))])
     generateKeyItem(keyAlias, options)
 }

@@ -24,6 +24,7 @@ import stdx.encoding.json.*
 import ohos.security.huks.*
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.*
+
 @Test
 class testInitSessionKeyExchange_1 {
 
@@ -36,22 +37,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -64,7 +69,6 @@ class testInitSessionKeyExchange_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 ends.")
     }
 
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_82600
      * @tc.name      : TestCase_3
@@ -74,22 +78,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))]
-            generateKeyItem(" #5%23", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem(" #5%23.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem(" #5%23", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem(" #5%23.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem(" #5%23", HuksOptions())
             let publicKeyB = exportKeyItem(" #5%23.2nd", HuksOptions())
-            let handle1 = initSession(" #5%23.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession(" #5%23.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession(" #5%23.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession(" #5%23.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem(" #5%23", HuksOptions())
             deleteKeyItem(" #5%23.2nd", HuksOptions())
             deleteKeyItem(" #5%23.finish01", HuksOptions())
@@ -111,22 +119,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))]
-            generateKeyItem("1234567890", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("1234567890.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("1234567890", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("1234567890.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("1234567890", HuksOptions())
             let publicKeyB = exportKeyItem("1234567890.2nd", HuksOptions())
-            let handle1 = initSession("1234567890.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("1234567890.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("1234567890.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB)
+            ).handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("1234567890.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA)
+            ).handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("1234567890", HuksOptions())
             deleteKeyItem("1234567890.2nd", HuksOptions())
             deleteKeyItem("1234567890.finish01", HuksOptions())
@@ -148,22 +160,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))]
-            generateKeyItem("KBCWEUYFI", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("KBCWEUYFI.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("KBCWEUYFI", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("KBCWEUYFI.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("KBCWEUYFI", HuksOptions())
             let publicKeyB = exportKeyItem("KBCWEUYFI.2nd", HuksOptions())
-            let handle1 = initSession("KBCWEUYFI.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("KBCWEUYFI.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("KBCWEUYFI.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("KBCWEUYFI.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("KBCWEUYFI", HuksOptions())
             deleteKeyItem("KBCWEUYFI.2nd", HuksOptions())
             deleteKeyItem("KBCWEUYFI.finish01", HuksOptions())
@@ -185,22 +201,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_6 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))]
-            generateKeyItem("8927(@*$#&)", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("8927(@*$#&).2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("8927(@*$#&)", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("8927(@*$#&).2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("8927(@*$#&)", HuksOptions())
             let publicKeyB = exportKeyItem("8927(@*$#&).2nd", HuksOptions())
-            let handle1 = initSession("8927(@*$#&).finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("8927(@*$#&).finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("8927(@*$#&).finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB
+            )).handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("8927(@*$#&).finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA
+            )).handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("8927(@*$#&)", HuksOptions())
             deleteKeyItem("8927(@*$#&).2nd", HuksOptions())
             deleteKeyItem("8927(@*$#&).finish01", HuksOptions())
@@ -222,22 +242,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_7 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))]
-            generateKeyItem("NS9jhi)#&($758)", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("NS9jhi)#&($758).2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("NS9jhi)#&($758)", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("NS9jhi)#&($758).2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("NS9jhi)#&($758)", HuksOptions())
             let publicKeyB = exportKeyItem("NS9jhi)#&($758).2nd", HuksOptions())
-            let handle1 = initSession("NS9jhi)#&($758).finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("NS9jhi)#&($758).finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("NS9jhi)#&($758).finish01",
+                HuksOptions(properties: genAgreeParams, inData: publicKeyB)).handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("NS9jhi)#&($758).finish02",
+                HuksOptions(properties: genAgreeParams, inData: publicKeyA)).handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("NS9jhi)#&($758)", HuksOptions())
             deleteKeyItem("NS9jhi)#&($758).2nd", HuksOptions())
             deleteKeyItem("NS9jhi)#&($758).finish01", HuksOptions())
@@ -259,22 +283,24 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_8 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))]
-            generateKeyItem("q3", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("q3.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("q3", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("q3.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("q3", HuksOptions())
             let publicKeyB = exportKeyItem("q3.2nd", HuksOptions())
-            let handle1 = initSession("q3.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("q3.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("q3.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB)).handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("q3.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA)).handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("q3", HuksOptions())
             deleteKeyItem("q3.2nd", HuksOptions())
             deleteKeyItem("q3.finish01", HuksOptions())
@@ -296,22 +322,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_9 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))]
-            generateKeyItem("123", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("123.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("123", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("123.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("123", HuksOptions())
             let publicKeyB = exportKeyItem("123.2nd", HuksOptions())
-            let handle1 = initSession("123.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("123.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("123.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("123.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("123", HuksOptions())
             deleteKeyItem("123.2nd", HuksOptions())
             deleteKeyItem("123.finish01", HuksOptions())
@@ -333,22 +363,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_10 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))]
-            generateKeyItem("456", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("456.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("456", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("456.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("456", HuksOptions())
             let publicKeyB = exportKeyItem("456.2nd", HuksOptions())
-            let handle1 = initSession("456.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("456.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("456.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("456.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("456", HuksOptions())
             deleteKeyItem("456.2nd", HuksOptions())
             deleteKeyItem("456.finish01", HuksOptions())
@@ -370,22 +404,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_11 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))]
-            generateKeyItem("789", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("789.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("789", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("789.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("789", HuksOptions())
             let publicKeyB = exportKeyItem("789.2nd", HuksOptions())
-            let handle1 = initSession("789.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("789.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("789.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("789.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("789", HuksOptions())
             deleteKeyItem("789.2nd", HuksOptions())
             deleteKeyItem("789.finish01", HuksOptions())
@@ -407,22 +445,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_12 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))]
-            generateKeyItem("!@#$", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("!@#$.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("!@#$", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("!@#$.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("!@#$", HuksOptions())
             let publicKeyB = exportKeyItem("!@#$.2nd", HuksOptions())
-            let handle1 = initSession("!@#$.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("!@#$.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("!@#$.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("!@#$.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("!@#$", HuksOptions())
             deleteKeyItem("!@#$.2nd", HuksOptions())
             deleteKeyItem("!@#$.finish01", HuksOptions())
@@ -444,22 +486,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_13 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))]
-            generateKeyItem("%^&*", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("%^&*.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("%^&*", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("%^&*.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("%^&*", HuksOptions())
             let publicKeyB = exportKeyItem("%^&*.2nd", HuksOptions())
-            let handle1 = initSession("%^&*.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("%^&*.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("%^&*.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("%^&*.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("%^&*", HuksOptions())
             deleteKeyItem("%^&*.2nd", HuksOptions())
             deleteKeyItem("%^&*.finish01", HuksOptions())
@@ -481,22 +527,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))]
-            generateKeyItem("01294hrew", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("01294hrew.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("01294hrew", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("01294hrew.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("01294hrew", HuksOptions())
             let publicKeyB = exportKeyItem("01294hrew.2nd", HuksOptions())
-            let handle1 = initSession("01294hrew.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("01294hrew.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("01294hrew.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("01294hrew.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("01294hrew", HuksOptions())
             deleteKeyItem("01294hrew.2nd", HuksOptions())
             deleteKeyItem("01294hrew.finish01", HuksOptions())
@@ -509,8 +559,6 @@ class testInitSessionKeyExchange_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 ends.")
     }
 
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_83900
      * @tc.name      : TestCase_16
@@ -520,22 +568,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_16 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -557,22 +609,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_17 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -585,8 +641,6 @@ class testInitSessionKeyExchange_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_17 ends.")
     }
 
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_84200
      * @tc.name      : TestCase_19
@@ -596,22 +650,27 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_19 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
-            let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                HuksParamValue.BooleanValue(true))]
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -633,22 +692,27 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_20 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
-            let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                HuksParamValue.BooleanValue(true))]
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -670,22 +734,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_21 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -707,22 +775,27 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_22 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
-            let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                HuksParamValue.BooleanValue(true))]
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -744,22 +817,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_23 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -781,22 +858,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_24 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -818,22 +899,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_25 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -855,22 +940,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_26 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -892,22 +981,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_27 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -929,22 +1022,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_28 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -966,23 +1063,27 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_29 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
                 HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1004,22 +1105,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_30 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1032,9 +1137,6 @@ class testInitSessionKeyExchange_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_30 ends.")
     }
 
-
-
-  
     /*
      * @tc.number    : Sub_Cangjie_security_huks_85900
      * @tc.name      : TestCase_36
@@ -1044,22 +1146,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_36 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1081,22 +1187,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_37 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1118,22 +1228,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_38 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1155,22 +1269,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_39 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1192,22 +1310,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_40 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1229,22 +1351,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_41 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1266,22 +1392,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_42 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1303,22 +1433,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_43 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1340,22 +1474,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_44 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1377,22 +1515,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_45 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1414,22 +1556,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_46 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1442,8 +1588,6 @@ class testInitSessionKeyExchange_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_46 ends.")
     }
 
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_88700
      * @tc.name      : TestCase_64
@@ -1453,22 +1597,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_64(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_64 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1490,22 +1638,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_65(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_65 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1527,22 +1679,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_66(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_66 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1564,22 +1720,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_67(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_67 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1601,22 +1761,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_68(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_68 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1629,8 +1793,6 @@ class testInitSessionKeyExchange_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_68 ends.")
     }
 
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_89300
      * @tc.name      : TestCase_70
@@ -1640,22 +1802,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_70(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_70 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1668,10 +1834,6 @@ class testInitSessionKeyExchange_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_70 ends.")
     }
 
-
-
- 
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_90300
      * @tc.name      : TestCase_80
@@ -1681,22 +1843,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_80(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_80 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1709,8 +1875,6 @@ class testInitSessionKeyExchange_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_80 ends.")
     }
 
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_90600
      * @tc.name      : TestCase_83
@@ -1720,22 +1884,26 @@ class testInitSessionKeyExchange_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_83(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_83 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             let genAgreeParams = [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))]
-            generateKeyItem("keyAlias1", HuksOptions( properties: genAgreeParams, inData:Bytes()))
-            generateKeyItem("keyAlias1.2nd", HuksOptions( properties: genAgreeParams, inData:Bytes()))
+            generateKeyItem("keyAlias1", HuksOptions(properties: genAgreeParams, inData: Bytes()))
+            generateKeyItem("keyAlias1.2nd", HuksOptions(properties: genAgreeParams, inData: Bytes()))
             let publicKeyA = exportKeyItem("keyAlias1", HuksOptions())
             let publicKeyB = exportKeyItem("keyAlias1.2nd", HuksOptions())
-            let handle1 = initSession("keyAlias1.finish01", HuksOptions( properties: genAgreeParams, inData:publicKeyB)).handle
-            updateSession(handle1, HuksOptions( properties: genAgreeParams, inData:publicKeyB))
-            let out1 = finishSession(handle1,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
-            let handle2 = initSession("keyAlias1.finish02", HuksOptions( properties: genAgreeParams, inData:publicKeyA)).handle
-            updateSession(handle2, HuksOptions( properties: genAgreeParams, inData: publicKeyA), token:Bytes())
-            let out2 = finishSession(handle2,HuksOptions( properties: genAgreeParams, inData: Bytes()), token:Bytes()).getOrThrow()
+            let handle1 = initSession("keyAlias1.finish01", HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+                .handle
+            updateSession(handle1, HuksOptions(properties: genAgreeParams, inData: publicKeyB))
+            let out1 = finishSession(handle1, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
+            let handle2 = initSession("keyAlias1.finish02", HuksOptions(properties: genAgreeParams, inData: publicKeyA))
+                .handle
+            updateSession(handle2, HuksOptions(properties: genAgreeParams, inData: publicKeyA), token: Bytes())
+            let out2 = finishSession(handle2, HuksOptions(properties: genAgreeParams, inData: Bytes()), token: Bytes())
+                .getOrThrow()
             deleteKeyItem("keyAlias1", HuksOptions())
             deleteKeyItem("keyAlias1.2nd", HuksOptions())
             deleteKeyItem("keyAlias1.finish01", HuksOptions())
@@ -1747,5 +1915,4 @@ class testInitSessionKeyExchange_1 {
         }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_83 ends.")
     }
-
 }

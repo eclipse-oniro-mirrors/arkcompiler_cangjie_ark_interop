@@ -35,17 +35,17 @@ class testPixelMap_opacity_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Unknown,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","opacity")
+            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                pixelFormat: PixelMapFormat.Unknown, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "opacity")
         pixelMap.opacity(0.100000f32)
         @Assert(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -57,13 +57,14 @@ class testPixelMap_opacity_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let pixelMap = createPixelMap(Array<UInt8>(32i64, repeat: 0u8),
-                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Opaque, editable: false, srcPixelFormat:PixelMapFormat.Rgb565, pixelFormat: PixelMapFormat.Rgb565,
+                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Opaque, editable: false,
+                    srcPixelFormat: PixelMapFormat.Rgb565, pixelFormat: PixelMapFormat.Rgb565,
                     scaleMode: ScaleMode.CenterCrop))
             pixelMap.opacity(0.500000f32)
             @Assert(true)
@@ -72,7 +73,7 @@ class testPixelMap_opacity_1 {
             @Expect(e.message, "Image types are not supported.")
             @Expect(e.code, 62980103i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -84,17 +85,18 @@ class testPixelMap_opacity_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Premul, editable: true,srcPixelFormat:PixelMapFormat.Rgb565, pixelFormat: PixelMapFormat.Rgba8888,
+            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Premul, editable: true,
+                srcPixelFormat: PixelMapFormat.Rgb565, pixelFormat: PixelMapFormat.Rgba8888,
                 scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","opacity")
+        Hilog.info(0, "cangjietest", "opacity")
         pixelMap.opacity(1.000000f32)
         @Assert(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -106,17 +108,17 @@ class testPixelMap_opacity_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.UnPremul, editable: true, pixelFormat: PixelMapFormat.Bgra8888,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","opacity")
+            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.UnPremul, editable: true,
+                pixelFormat: PixelMapFormat.Bgra8888, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "opacity")
         pixelMap.opacity(0.100000f32)
         @Assert(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -128,14 +130,14 @@ class testPixelMap_opacity_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Rgb888,
-                    scaleMode: ScaleMode.FitTargetSize))
+                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                    pixelFormat: PixelMapFormat.Rgb888, scaleMode: ScaleMode.FitTargetSize))
             pixelMap.opacity(0.100000f32)
             @Assert(true)
             @Expect("assertion#1: not throw", "createPixelMap fail")
@@ -143,7 +145,7 @@ class testPixelMap_opacity_1 {
             @Expect(e.message, "Image types are not supported.")
             @Expect(e.code, 62980103i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 
     /*
@@ -155,17 +157,17 @@ class testPixelMap_opacity_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Alpha8,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","opacity")
+            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                pixelFormat: PixelMapFormat.Alpha8, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "opacity")
         pixelMap.opacity(0.100000f32)
         @Assert(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
 
     /*
@@ -177,17 +179,17 @@ class testPixelMap_opacity_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.RgbaF16,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","opacity")
+            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                pixelFormat: PixelMapFormat.RgbaF16, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "opacity")
         pixelMap.opacity(0.100000f32)
         @Assert(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
     }
 
     /*
@@ -199,14 +201,14 @@ class testPixelMap_opacity_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Nv21,
-                    scaleMode: ScaleMode.FitTargetSize))
+                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                    pixelFormat: PixelMapFormat.Nv21, scaleMode: ScaleMode.FitTargetSize))
             pixelMap.opacity(0.100000f32)
             @Assert(true)
             @Expect("assertion#2: not throw", "createPixelMap fail")
@@ -214,7 +216,7 @@ class testPixelMap_opacity_1 {
             @Expect(e.message, "Image types are not supported.")
             @Expect(e.code, 62980103i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_8 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 ends.")
     }
 
     /*
@@ -226,14 +228,14 @@ class testPixelMap_opacity_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Nv12,
-                    scaleMode: ScaleMode.FitTargetSize))
+                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                    pixelFormat: PixelMapFormat.Nv12, scaleMode: ScaleMode.FitTargetSize))
             pixelMap.opacity(0.100000f32)
             @Assert(true)
             @Expect("assertion#3: not throw", "createPixelMap fail")
@@ -241,6 +243,6 @@ class testPixelMap_opacity_1 {
             @Expect(e.message, "Image types are not supported.")
             @Expect(e.code, 62980103i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_9 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 ends.")
     }
 }

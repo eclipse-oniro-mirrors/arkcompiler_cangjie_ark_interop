@@ -38,7 +38,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_AlphabetIndexer_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Blank_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Button_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Checkbox_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_CheckboxGroup_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin CheckboxGroup")
@@ -163,7 +163,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_DataPanel_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin DataPanel")
@@ -188,7 +188,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_DatePicker_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin DatePicker")
@@ -213,7 +213,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Divider_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Divider")
@@ -238,7 +238,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Gauge_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Gauge")
@@ -263,7 +263,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Image_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Image")
@@ -288,7 +288,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_ImageSpan_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin ImageSpan")
@@ -313,7 +313,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_LoadingProgress_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin LoadingProgress")
@@ -338,7 +338,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Menu_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Menu")
@@ -363,7 +363,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_MenuItem_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin MenuItem")
@@ -388,7 +388,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_MenuItemGroup_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin MenuItemGroup")
@@ -413,7 +413,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Progress_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Progress")
@@ -438,7 +438,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_QRCode_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin QRCode")
@@ -463,7 +463,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Radio_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Radio")
@@ -488,7 +488,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Rating_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Rating")
@@ -513,7 +513,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Refresh_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Refresh")
@@ -538,7 +538,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_RichEditor_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin RichEditor")
@@ -563,7 +563,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_RowSplit_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_RowSplit_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin RowSplit")
@@ -588,7 +588,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_ScrollBar_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_ScrollBar_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin ScrollBar")
@@ -613,7 +613,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Search_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Search_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Search")
@@ -638,7 +638,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Slider_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Slider_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Slider")
@@ -663,7 +663,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Stepper_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Stepper_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Stepper")
@@ -688,7 +688,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_StepperItem_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_StepperItem_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin StepperItem")
@@ -713,7 +713,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Text_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Text_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Text")
@@ -738,7 +738,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_TextArea_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_TextArea_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin TextArea")
@@ -763,7 +763,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_TextClock_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_TextClock_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin TextClock")
@@ -788,7 +788,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_TextInput_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_TextInput_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin TextInput")
@@ -813,7 +813,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_TextPicker_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_TextPicker_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin TextPicker")
@@ -838,7 +838,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_TextTimer_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_TextTimer_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin TextTimer")
@@ -863,7 +863,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Toggle_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Toggle_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Toggle")
@@ -888,7 +888,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Select_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Select_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Select")
@@ -913,7 +913,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Badge_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Badge_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Badge")
@@ -938,7 +938,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Column_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Column_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Column")
@@ -963,7 +963,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Grid_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Grid_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Grid")
@@ -988,7 +988,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_GridItem_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_GridItem_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin GridItem")
@@ -1013,7 +1013,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_GridRow_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_GridRow_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin GridRow")
@@ -1038,7 +1038,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_GridCol_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_GridCol_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin GridCol")
@@ -1063,7 +1063,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Flex_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Flex_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Flex")
@@ -1088,7 +1088,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_List_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_List_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin List")
@@ -1113,7 +1113,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_ListItem_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_ListItem_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin ListItem")
@@ -1138,7 +1138,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_ListItemGroup_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_ListItemGroup_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin ListItemGroup")
@@ -1164,7 +1164,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_RelativeContainer_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_RelativeContainer_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin RelativeContainer")
@@ -1189,7 +1189,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Row_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Row_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Row")
@@ -1214,7 +1214,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Scroll_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Scroll_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Scroll")
@@ -1239,7 +1239,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Stack_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Stack_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Stack")
@@ -1264,7 +1264,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Swiper_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Swiper_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Swiper")
@@ -1289,7 +1289,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Tabs_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Tabs_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Tabs")
@@ -1314,7 +1314,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_TabContent_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_TabContent_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin TabContent")
@@ -1339,7 +1339,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Circle_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Circle_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Circle")
@@ -1364,7 +1364,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Line_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Line_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Line")
@@ -1389,7 +1389,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Rect_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Rect_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Rect")
@@ -1414,7 +1414,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Shape_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Shape_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Shape")
@@ -1439,7 +1439,7 @@ class Test_EmptyAttrs_LinearGradient {
      * @tc.desic：Empty_Path_LinearGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_LinearGradient_Path_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckLinearGradient: FindBegin Path")

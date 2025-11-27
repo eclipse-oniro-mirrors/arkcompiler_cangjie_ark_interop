@@ -48,7 +48,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_001() {
         let Inspector = getInspectorByKey("Text_component1")
         let aar = Inspector.split("useShadowBatching")
@@ -70,7 +70,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_002() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -89,7 +89,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_003() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -107,7 +107,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_004() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -126,7 +126,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_005() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -145,7 +145,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_006() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -164,7 +164,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_007() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -182,7 +182,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_008() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -200,7 +200,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_009() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -218,7 +218,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_010() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -237,7 +237,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_011() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -255,7 +255,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_012() {
         let button = driver.findComponent(On().id("Text_component2"))
         @Expect( button.getOrThrow().getText(), "I am LineThrough-span")
@@ -271,7 +271,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_013() {
         let Inspector = getInspectorByKey("Text_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -289,7 +289,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_014() {
         let Inspector = getInspectorByKey("Text_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -307,7 +307,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_015() {
         let Inspector = getInspectorByKey("Text_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -325,7 +325,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_016() {
         let Inspector = getInspectorByKey("Text_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -343,7 +343,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_017() {
         let Inspector = getInspectorByKey("Text_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -361,7 +361,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_018() {
         let Inspector = getInspectorByKey("Text_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -379,7 +379,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_019() {
         let Inspector = getInspectorByKey("Text_component2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -397,7 +397,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_020() {
         let Inspector = getInspectorByKey("Text_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -415,7 +415,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_021() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -433,7 +433,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_022() {
         let Inspector = getInspectorByKey("Text_component1")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -450,7 +450,7 @@ class Test_Text_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Text_Component_023() {
         let Inspector = getInspectorByKey("Text_component3")
         let obj = JsonValue.fromStr(Inspector).asObject()

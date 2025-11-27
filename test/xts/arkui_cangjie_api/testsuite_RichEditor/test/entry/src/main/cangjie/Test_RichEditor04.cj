@@ -52,7 +52,7 @@ class Test_RichEditor04 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor04_01() {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("button_getCaretOffset").centerPoint)
         sleep(2.second)

@@ -19,7 +19,7 @@ import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
-import ohos.prompt_action.*
+import ohos.arkui.ui_context.*
 import ohos.arkui.component.*
 import ohos.base.{LengthProp, Color, Length}
 

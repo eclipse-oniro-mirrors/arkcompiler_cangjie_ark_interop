@@ -48,7 +48,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_011() {
         let Inspector = getInspectorByKey("Gaugebase2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -56,25 +56,6 @@ class Test_Gauge_Component {
         let obj_borderStyle = obj.get("$attrs").getOrThrow().asObject().get("startAngle").getOrThrow().toString()
         Hilog.info(0, "","cangjietest", "[Test_Gauge_Component_004] borderStyle value: ${obj_borderStyle}")
         @Expect(obj_borderStyle, "\"220.00\"")
-    }
-
-    
-    /*
-    * @tc.number    : Sub_Cangjie_UIKit_Gauge_Component_1200
-    * @tc.name      : Test_Gauge_Component_012
-    * @tc.desc      : test UIKit Gauge
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func Test_Gauge_Component_012() {
-        let Inspector = getInspectorByKey("Gaugebase")
-        let obj = JsonValue.fromStr(Inspector).asObject()
-        let aar = Inspector.split("useShadowBatching")
-        let obj_borderStyle = obj.get("$attrs").getOrThrow().asObject().get("value").getOrThrow().toString()
-        @Expect(obj_borderStyle, "\"10.00\"")
     }
 
     
@@ -87,7 +68,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_013() {
         let Inspector = getInspectorByKey("Gaugebase2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -106,7 +87,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_014() {
         let Inspector = getInspectorByKey("Gaugebase2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -125,7 +106,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_015() {
         let Inspector = getInspectorByKey("Gaugebase2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -147,7 +128,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_016() {
         let Inspector = getInspectorByKey("Gaugebase3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -166,7 +147,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_017() {
         let Inspector = getInspectorByKey("Gaugebase4")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -185,7 +166,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_018() {
         let Inspector = getInspectorByKey("Gaugebase5")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -204,7 +185,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_019() {
         let Inspector = getInspectorByKey("Gaugebase6")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -223,7 +204,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_020() {
         let Inspector = getInspectorByKey("Gaugebase7")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -242,7 +223,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_021() {
         let Inspector = getInspectorByKey("Gaugebase8")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -261,7 +242,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_022() {
         let Inspector = getInspectorByKey("Gaugebase2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -301,7 +282,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_023() {
         let Inspector = getInspectorByKey("Gaugebase4")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -341,7 +322,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_024() {
         let Inspector = getInspectorByKey("Gaugebase3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -381,7 +362,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_025() {
         let Inspector = getInspectorByKey("Gaugebase2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -405,7 +386,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_026() {
         let Inspector = getInspectorByKey("Gaugebase3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -428,7 +409,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_027() {
         let Inspector = getInspectorByKey("Gaugebase4")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -451,7 +432,7 @@ class Test_Gauge_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Gauge_Component_028() {
         let Inspector = getInspectorByKey("Gaugebase5")
         let obj = JsonValue.fromStr(Inspector).asObject()

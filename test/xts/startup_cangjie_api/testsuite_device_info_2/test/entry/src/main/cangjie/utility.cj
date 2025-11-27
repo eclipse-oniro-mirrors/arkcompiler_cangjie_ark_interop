@@ -17,9 +17,3 @@ package ohos_app_cangjie_entry
 import ohos.ark_interop.*
 
 var hasCallBackRun = false
-
-//class CallBack <: Callback1Argument<String> {
-//    public func invoke(arg: String): Unit {
-//        hasCallBackRun = true
-//    }
-//}

@@ -35,7 +35,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_01(): Unit {
         var context = getAbilityContext()
@@ -52,7 +52,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_02(): Unit {
         var context = getAbilityContext()
@@ -70,7 +70,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_03(): Unit {
         var context = getAbilityContext()
@@ -88,7 +88,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_04(): Unit {
         var context = getAbilityContext()
@@ -106,7 +106,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_05(): Unit {
         var context = getAbilityContext()
@@ -124,7 +124,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_06(): Unit {
         var context = getAbilityContext()
@@ -143,7 +143,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_07(): Unit {
         var context = getAbilityContext()
@@ -162,7 +162,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_08(): Unit {
         var context = getAbilityContext()
@@ -181,7 +181,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_09(): Unit {
         var context = getAbilityContext()
@@ -200,7 +200,7 @@ class Test_creatKVManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creatkvmanager_10(): Unit {
         var context = getAbilityContext()

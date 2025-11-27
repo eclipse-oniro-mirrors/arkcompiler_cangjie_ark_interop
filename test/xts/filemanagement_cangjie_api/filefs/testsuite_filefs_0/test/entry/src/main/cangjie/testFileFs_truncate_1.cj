@@ -36,7 +36,7 @@ class testFileIo_truncate_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_truncate_01() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_truncate_01"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -65,7 +65,7 @@ class testFileIo_truncate_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_truncate_02() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_truncate_02"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -98,7 +98,7 @@ class testFileIo_truncate_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_truncate_03() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_truncate_03"
 
@@ -121,7 +121,7 @@ class testFileIo_truncate_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_truncate_04() {
         try {
             FileIo.truncate(-1, len: 2)
@@ -142,7 +142,7 @@ class testFileIo_truncate_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_truncate_05() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_truncate_05"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -171,7 +171,7 @@ class testFileIo_truncate_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_truncate_06() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_truncate_06"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -207,7 +207,7 @@ class testFileIo_truncate_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_truncate_07() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_truncate_07"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))

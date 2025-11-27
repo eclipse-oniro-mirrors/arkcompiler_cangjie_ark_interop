@@ -38,7 +38,7 @@ class Test_EmptyAttrs_FontWeight {
      * @tc.desic：Empty_Button_FontWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontWeight_Button_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontWeight: FindBegin Button")
@@ -64,7 +64,7 @@ class Test_EmptyAttrs_FontWeight {
      * @tc.desic：Empty_Text_FontWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontWeight_Text_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontWeight: FindBegin Text")
@@ -89,7 +89,7 @@ class Test_EmptyAttrs_FontWeight {
      * @tc.desic：Empty_TextArea_FontWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontWeight_TextArea_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontWeight: FindBegin TextArea")
@@ -114,7 +114,7 @@ class Test_EmptyAttrs_FontWeight {
      * @tc.desic：Empty_TextClock_FontWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontWeight_TextClock_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontWeight: FindBegin TextClock")
@@ -139,7 +139,7 @@ class Test_EmptyAttrs_FontWeight {
      * @tc.desic：Empty_TextInput_FontWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontWeight_TextInput_0600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontWeight: FindBegin TextInput")
@@ -164,7 +164,7 @@ class Test_EmptyAttrs_FontWeight {
      * @tc.desic：Empty_TextTimer_FontWeight
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontWeight_TextTimer_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontWeight: FindBegin TextTimer")

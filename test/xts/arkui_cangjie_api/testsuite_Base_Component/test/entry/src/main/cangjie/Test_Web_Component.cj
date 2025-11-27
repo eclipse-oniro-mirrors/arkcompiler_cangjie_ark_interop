@@ -43,7 +43,7 @@ class Test_Web_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Web_Component_001() {
         Hilog.info(0,"",   "cangjietest", "Test_Web_Component_001 start")
         let Inspector = getInspectorByKey("Webbasic")
@@ -67,7 +67,7 @@ class Test_Web_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Web_Component_002() {
         Hilog.info(0,"",   "cangjietest", "Test_Web_Component_002 start")
         let Inspector = getInspectorByKey("getrequesturl")
@@ -91,7 +91,7 @@ class Test_Web_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Web_Component_003() {
         Hilog.info(0,"",   "cangjietest", "Test_Web_Component_003 start")
         let Inspector = getInspectorByKey("ismainframe")
@@ -114,7 +114,7 @@ class Test_Web_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Web_Component_004() {
         Hilog.info(0,"",   "cangjietest", "Test_Web_Component_004 start")
         let Inspector = getInspectorByKey("isredirect")
@@ -138,7 +138,7 @@ class Test_Web_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Web_Component_005() {
         Hilog.info(0,"",   "cangjietest", "Test_Web_Component_005 start")
         let Inspector = getInspectorByKey("isrequestgesture")
@@ -162,7 +162,7 @@ class Test_Web_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Web_Component_006() {
         Hilog.info(0,"",   "cangjietest", "Test_Web_Component_006 start")
         driver.delayMs(3000)

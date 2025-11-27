@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) 2025 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -65,16 +64,6 @@ import std.io.ByteBuffer
 import stdx.encoding.json.stream.JsonWriter
 import std.collection.filterMap
 import kit.PerformanceAnalysisKit.Hilog
-
-foreign func __gcov_dump(): Unit
-
-public func gcov_dump(coveragePath: String): Unit {
-    Hilog.info(0, "CangjieTest", "execute test with coverage")
-    Process
-        .current
-        .setEnv("GCOV_PREFIX", coveragePath)
-    unsafe { __gcov_dump() }
-}
 
 public func registerTestSuite(_: String, testClassInstanceGenerator: () -> TestClass): Unit {
     OpenHarmonyTestRunner
@@ -367,7 +356,6 @@ public class OpenHarmonyTestRunner <: TestRunner {
                 } catch (e: Exception) {
                     Hilog.error(0, "CangjieTest", "an exception occurred:\n${getDetailedInfoOf(e)}")
                 }
-                gcov_dump("/data/storage/el1/base/cov")
                 abilityDelegator.finishTest("Test finished.", 0)
             }
         } catch (e: Exception) {
@@ -1063,4 +1051,3 @@ public class EventBuilder {
         logEvent(eventName, JsonObject(this.properties).toJsonString())
     }
 }
-

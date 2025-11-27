@@ -15,8 +15,7 @@
 
 package ohos_app_cangjie_entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, 
-    JSRuntime}
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
 func testPostJSTask00(jsContext: JSContext, _: JSCallInfo): JSValue {
     Assert.isTrue(jsContext.isInBindThread())

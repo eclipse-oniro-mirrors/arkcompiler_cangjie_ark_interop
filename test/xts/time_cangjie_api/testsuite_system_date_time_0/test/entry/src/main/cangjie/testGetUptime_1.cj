@@ -23,6 +23,7 @@ import stdx.encoding.json.*
 import ohos.system_date_time.*
 import std.regex.*
 import kit.PerformanceAnalysisKit.Hilog
+
 @Test
 class testGetUptime_1 {
     /*
@@ -34,7 +35,7 @@ class testGetUptime_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_12 begins.")
         Hilog.info(0, "cangjietest", "define local variable time")
@@ -58,7 +59,7 @@ class testGetUptime_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_13 begins.")
         Hilog.info(0, "cangjietest", "define local variable time")
@@ -82,7 +83,7 @@ class testGetUptime_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_14 begins.")
         Hilog.info(0, "cangjietest", "define local variable time")
@@ -106,7 +107,7 @@ class testGetUptime_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_15 begins.")
         Hilog.info(0, "cangjietest", "define local variable time")
@@ -130,7 +131,7 @@ class testGetUptime_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_16 begins.")
         Hilog.info(0, "cangjietest", "define local variable time")
@@ -154,7 +155,7 @@ class testGetUptime_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_17 begins.")
         Hilog.info(0, "cangjietest", "define local variable time")

@@ -36,7 +36,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_AlphabetIndexer_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin AlphabetIndexer")
@@ -61,7 +61,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Button_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Button_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Button")
@@ -86,7 +86,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Checkbox_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Checkbox_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Checkbox")
@@ -111,7 +111,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_CheckboxGroup_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_CheckboxGroup_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin CheckboxGroup")
@@ -137,7 +137,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_DataPanel_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_DataPanel_0600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin DataPanel")
@@ -162,7 +162,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_DatePicker_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_DatePicker_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin DatePicker")
@@ -187,7 +187,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Divider_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Divider_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Divider")
@@ -212,7 +212,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Gauge_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Gauge_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Gauge")
@@ -237,7 +237,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Image_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Image_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Image")
@@ -262,7 +262,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_LoadingProgress_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_LoadingProgress_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin LoadingProgress")
@@ -287,7 +287,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Menu_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Menu_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Menu")
@@ -312,7 +312,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Progress_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Progress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Progress")
@@ -337,7 +337,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_QRCode_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_QRCode_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin QRCode")
@@ -362,7 +362,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Radio_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Radio_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Radio")
@@ -387,7 +387,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Rating_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Rating_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Rating")
@@ -412,7 +412,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Refresh_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Refresh_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Refresh")
@@ -437,7 +437,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_RichEditor_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_RichEditor_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin RichEditor")
@@ -462,7 +462,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_RowSplit_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_RowSplit_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin RowSplit")
@@ -487,7 +487,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_ScrollBar_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_ScrollBar_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin ScrollBar")
@@ -512,7 +512,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Search_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Search_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Search")
@@ -537,7 +537,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Slider_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Slider_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Slider")
@@ -562,7 +562,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Stepper_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Stepper_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Stepper")
@@ -587,7 +587,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Text_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Text_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Text")
@@ -612,7 +612,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_TextArea_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_TextArea_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin TextArea")
@@ -637,7 +637,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_TextClock_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_TextClock_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin TextClock")
@@ -662,7 +662,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_TextInput_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_TextInput_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin TextInput")
@@ -687,7 +687,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_TextPicker_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_TextPicker_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin TextPicker")
@@ -712,7 +712,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_TextTimer_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_TextTimer_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin TextTimer")
@@ -737,7 +737,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Toggle_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Toggle_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Toggle")
@@ -762,7 +762,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Web_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Web_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Web")
@@ -787,7 +787,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Select_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Select_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Select")
@@ -812,7 +812,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Badge_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Badge_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Badge")
@@ -837,7 +837,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Column_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Column_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Column")
@@ -862,7 +862,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Grid_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Grid_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Grid")
@@ -887,7 +887,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_GridRow_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_GridRow_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin GridRow")
@@ -912,7 +912,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Flex_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Flex_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Flex")
@@ -937,7 +937,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_List_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_List_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin List")
@@ -962,7 +962,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_RelativeContainer_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_RelativeContainer_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin RelativeContainer")
@@ -987,7 +987,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Row_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Row_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Row")
@@ -1012,7 +1012,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Scroll_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Scroll_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Scroll")
@@ -1037,7 +1037,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Stack_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Stack_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Stack")
@@ -1062,7 +1062,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Swiper_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Swiper_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Swiper")
@@ -1087,7 +1087,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Tabs_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Tabs_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Tabs")
@@ -1112,7 +1112,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Circle_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Circle_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Circle")
@@ -1137,7 +1137,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Line_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Line_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Line")
@@ -1162,7 +1162,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Rect_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Rect_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Rect")
@@ -1187,7 +1187,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Shape_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Shape_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Shape")
@@ -1212,7 +1212,7 @@ class Test_EmptyAttrs_ZIndex {
      * @tc.desic：Empty_Path_ZIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_ZIndex_Path_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckZIndex: FindBegin Path")

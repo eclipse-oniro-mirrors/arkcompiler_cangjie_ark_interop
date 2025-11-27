@@ -20,8 +20,8 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
 import ohos.business_exception.{BusinessException}
@@ -36,10 +36,11 @@ class Test_executeSql_14 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -54,15 +55,15 @@ class Test_executeSql_14 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_executeSql_14_0100
-    * @tc.name      : test_executesql_01
-    * @tc.desc      : test RelationStore test_executesql_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_executeSql_14_0100
+     * @tc.name      : test_executesql_01
+     * @tc.desc      : test RelationStore test_executesql_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_executesql_01(): Unit {
         rdbStore.executeSql(
             "CREATE TABLE EMPLOYEE(ID int NOT NULL, NAME varchar(255) NOT NULL, AGE int, SALARY float NOT NULL, CODES Bit NOT NULL, PRIMARY KEY (Id))"
@@ -79,17 +80,16 @@ class Test_executeSql_14 {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_executeSql_14_0200
-    * @tc.name      : test_executesql_02
-    * @tc.desc      : test RelationStore test_executesql_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_executeSql_14_0200
+     * @tc.name      : test_executesql_02
+     * @tc.desc      : test RelationStore test_executesql_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_executesql_02(): Unit {
         rdbStore.executeSql(
             "CREATE TABLE EMPLOYEE(ID int NOT NULL, NAME varchar(255) NOT NULL, AGE int, SALARY float NOT NULL, CODES Bit NOT NULL, PRIMARY KEY (Id))"
@@ -104,17 +104,16 @@ class Test_executeSql_14 {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_executeSql_14_0300
-    * @tc.name      : test_executesql_03
-    * @tc.desc      : test RelationStore test_executesql_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_executeSql_14_0300
+     * @tc.name      : test_executesql_03
+     * @tc.desc      : test RelationStore test_executesql_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_executesql_03(): Unit {
         rdbStore.executeSql(
             "CREATE TABLE EMPLOYEE(ID int NOT NULL, NAME varchar(255) NOT NULL, AGE int, SALARY float NOT NULL, CODES Bit NOT NULL, PRIMARY KEY (Id))"
@@ -135,10 +134,10 @@ class Test_executeSql_14 {
             rdbStore.insert("EMPLOYEE1", values)
         }
         let predicates = RdbPredicates("EMPLOYEE")
-        let resultSet = rdbStore.query(predicates, columns:["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
         let predicates1 = RdbPredicates("EMPLOYEE1")
-        let resultSet1 = rdbStore.query(predicates1, columns:["ID"])
+        let resultSet1 = rdbStore.query(predicates1, columns: ["ID"])
         @Expect(resultSet1.rowCount, 100)
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
         rdbStore.executeSql("DROP TABLE EMPLOYEE1")

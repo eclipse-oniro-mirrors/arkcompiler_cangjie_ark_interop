@@ -49,7 +49,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_001() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_001] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -77,7 +77,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_002() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_002] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -101,7 +101,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_003() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_003] start")
         driver.findComponent(On().id("TextInputBasis")).getOrThrow().click()
@@ -129,7 +129,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_004() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_004] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -153,7 +153,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_005() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_005] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -177,7 +177,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_006() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_006] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -201,7 +201,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_007() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_007] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -231,7 +231,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_008() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_008] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -261,7 +261,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_009() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_009] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -285,7 +285,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_010() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_010] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -309,7 +309,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_011() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_011] start")
         // 1、获取页面中id为TextInputBasis的组件信息
@@ -333,7 +333,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_012() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_012] start")
         // 1、获取页面中id为onChange_callback的组件信息
@@ -356,7 +356,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_013() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_013] start")
         // 1、获取页面中id为onCopy_callback的组件信息
@@ -385,7 +385,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_014() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_014] start")
         // 1、获取页面中id为onCut_callback的组件信息
@@ -413,7 +413,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_016() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_016] start")
         // 1、获取页面中id为onEditChange_callback的组件信息
@@ -438,7 +438,7 @@ class Test_TextInput_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextInput_Component_017() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextInput_Component_017] start")
         // 1、获取页面中id为TextInputBasis的组件信息

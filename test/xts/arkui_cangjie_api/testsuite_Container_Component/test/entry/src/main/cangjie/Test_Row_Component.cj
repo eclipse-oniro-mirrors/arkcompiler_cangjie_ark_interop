@@ -49,7 +49,7 @@ class Test_Row_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Row_Component_001() {
         let Inspector = getInspectorByKey("Row_component")
         let aar = Inspector.split("useShadowBatching")
@@ -71,7 +71,7 @@ class Test_Row_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Row_Component_002() {
         let Inspector = getInspectorByKey("Row_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -89,7 +89,7 @@ class Test_Row_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Row_Component_003() {
         let Inspector = getInspectorByKey("Row_component")
         let obj = JsonValue.fromStr(Inspector).asObject()

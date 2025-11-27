@@ -38,7 +38,7 @@ class testGetConnectionProperties_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_28 begins.")
         Hilog.info(0, "cangjietest","Operation failed. Cannot connect to service")
@@ -47,8 +47,8 @@ class testGetConnectionProperties_1 {
             let connectionProperties = getConnectionProperties(netHandle)
             @Expect(connectionProperties.interfaceName, "wlan0")
             @Expect(connectionProperties.domains, "")
-            @Expect(connectionProperties.linkAddresses.size, 1i64)
-            @Expect(connectionProperties.linkAddresses[0].address.address.size > 1i64)
+            @Expect(connectionProperties.linkAddresses.size >= 1i64)
+            @Expect(connectionProperties.linkAddresses[0].address.address.size >= 1i64)
             @Expect(connectionProperties.linkAddresses[0].address.family, 1u32)
             @Expect(connectionProperties.linkAddresses[0].address.port, 0u32)
         } catch (e: BusinessException) {

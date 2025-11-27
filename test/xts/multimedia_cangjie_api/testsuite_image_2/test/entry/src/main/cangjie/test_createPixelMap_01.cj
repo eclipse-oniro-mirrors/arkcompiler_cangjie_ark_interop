@@ -23,21 +23,22 @@ import kit.ImageKit.*
 
 @Test
 class Test_createPixelMap_01 {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0100
-    * @tc.name      : test_createPixelMap_01
-    * @tc.desc      : test Image test_createPixelMap_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0100
+     * @tc.name      : test_createPixelMap_01
+     * @tc.desc      : test Image test_createPixelMap_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_01(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
-        var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888, scaleMode: ScaleMode.CenterCrop, alphaType: AlphaType.Unknown)
+        var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888,
+            scaleMode: ScaleMode.CenterCrop, alphaType: AlphaType.Unknown)
         try {
             globalPixelMap = createPixelMap(color, opts)
             @Expect(true)
@@ -45,21 +46,22 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0200
-    * @tc.name      : test_createPixelMap_02
-    * @tc.desc      : test Image test_createPixelMap_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0200
+     * @tc.name      : test_createPixelMap_02
+     * @tc.desc      : test Image test_createPixelMap_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_02(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
-        var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888, scaleMode: ScaleMode.CenterCrop, alphaType: AlphaType.Opaque)
+        var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888,
+            scaleMode: ScaleMode.CenterCrop, alphaType: AlphaType.Opaque)
         try {
             globalPixelMap = createPixelMap(color, opts)
             @Expect(true)
@@ -67,21 +69,22 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0300
-    * @tc.name      : test_createPixelMap_03
-    * @tc.desc      : test Image test_createPixelMap_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0300
+     * @tc.name      : test_createPixelMap_03
+     * @tc.desc      : test Image test_createPixelMap_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_03(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
-        var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888, scaleMode: ScaleMode.FitTargetSize, alphaType: AlphaType.Premul)
+        var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888,
+            scaleMode: ScaleMode.FitTargetSize, alphaType: AlphaType.Premul)
         try {
             globalPixelMap = createPixelMap(color, opts)
             @Expect(true)
@@ -89,21 +92,22 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0400
-    * @tc.name      : test_createPixelMap_04
-    * @tc.desc      : test Image test_createPixelMap_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0400
+     * @tc.name      : test_createPixelMap_04
+     * @tc.desc      : test Image test_createPixelMap_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_04(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
-        var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888, scaleMode: ScaleMode.FitTargetSize, alphaType: AlphaType.UnPremul)
+        var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888,
+            scaleMode: ScaleMode.FitTargetSize, alphaType: AlphaType.UnPremul)
         try {
             globalPixelMap = createPixelMap(color, opts)
             @Expect(true)
@@ -111,17 +115,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0500
-    * @tc.name      : test_createPixelMap_05
-    * @tc.desc      : test Image test_createPixelMap_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0500
+     * @tc.name      : test_createPixelMap_05
+     * @tc.desc      : test Image test_createPixelMap_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_05(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -133,17 +137,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0600
-    * @tc.name      : test_createPixelMap_06
-    * @tc.desc      : test Image test_createPixelMap_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0600
+     * @tc.name      : test_createPixelMap_06
+     * @tc.desc      : test Image test_createPixelMap_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_06(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -155,17 +159,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0700
-    * @tc.name      : test_createPixelMap_07
-    * @tc.desc      : test Image test_createPixelMap_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0700
+     * @tc.name      : test_createPixelMap_07
+     * @tc.desc      : test Image test_createPixelMap_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_07(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -177,17 +181,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0800
-    * @tc.name      : test_createPixelMap_08
-    * @tc.desc      : test Image test_createPixelMap_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0800
+     * @tc.name      : test_createPixelMap_08
+     * @tc.desc      : test Image test_createPixelMap_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_08(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -199,17 +203,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0900
-    * @tc.name      : test_createPixelMap_09
-    * @tc.desc      : test Image test_createPixelMap_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_0900
+     * @tc.name      : test_createPixelMap_09
+     * @tc.desc      : test Image test_createPixelMap_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_09(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -221,17 +225,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1000
-    * @tc.name      : test_createPixelMap_10
-    * @tc.desc      : test Image test_createPixelMap_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1000
+     * @tc.name      : test_createPixelMap_10
+     * @tc.desc      : test Image test_createPixelMap_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_10(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -243,17 +247,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1100
-    * @tc.name      : test_createPixelMap_11
-    * @tc.desc      : test Image test_createPixelMap_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1100
+     * @tc.name      : test_createPixelMap_11
+     * @tc.desc      : test Image test_createPixelMap_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_11(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -265,17 +269,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1200
-    * @tc.name      : test_createPixelMap_12
-    * @tc.desc      : test Image test_createPixelMap_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1200
+     * @tc.name      : test_createPixelMap_12
+     * @tc.desc      : test Image test_createPixelMap_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap_12(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -287,17 +291,17 @@ class Test_createPixelMap_01 {
             @Expect(e.message, "Image initialization abnormal.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1300
-    * @tc.name      : test_PixelMap_opacity_13
-    * @tc.desc      : test Image test_PixelMap_opacity_13
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1300
+     * @tc.name      : test_PixelMap_opacity_13
+     * @tc.desc      : test Image test_PixelMap_opacity_13
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_opacity_13(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -311,17 +315,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1400
-    * @tc.name      : test_PixelMap_opacity_14
-    * @tc.desc      : test Image test_PixelMap_opacity_14
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1400
+     * @tc.name      : test_PixelMap_opacity_14
+     * @tc.desc      : test Image test_PixelMap_opacity_14
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_opacity_14(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -335,17 +339,17 @@ class Test_createPixelMap_01 {
             @Expect(e.message, "Image types are not supported.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1500
-    * @tc.name      : test_PixelMap_scale_15
-    * @tc.desc      : test Image test_PixelMap_scale_15
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1500
+     * @tc.name      : test_PixelMap_scale_15
+     * @tc.desc      : test Image test_PixelMap_scale_15
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_scale_15(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -362,17 +366,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1600
-    * @tc.name      : test_PixelMap_scale_16
-    * @tc.desc      : test Image test_PixelMap_scale_16
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1600
+     * @tc.name      : test_PixelMap_scale_16
+     * @tc.desc      : test Image test_PixelMap_scale_16
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_scale_16(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -389,17 +393,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1700
-    * @tc.name      : test_PixelMap_scale_17
-    * @tc.desc      : test Image test_PixelMap_scale_17
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1700
+     * @tc.name      : test_PixelMap_scale_17
+     * @tc.desc      : test Image test_PixelMap_scale_17
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_scale_17(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -416,17 +420,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1800
-    * @tc.name      : test_PixelMap_rotate_18
-    * @tc.desc      : test Image test_PixelMap_rotate_18
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1800
+     * @tc.name      : test_PixelMap_rotate_18
+     * @tc.desc      : test Image test_PixelMap_rotate_18
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_rotate_18(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -444,17 +448,16 @@ class Test_createPixelMap_01 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1900
-    * @tc.name      : test_PixelMap_rotate_19
-    * @tc.desc      : test Image test_PixelMap_rotate_19
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_1900
+     * @tc.name      : test_PixelMap_rotate_19
+     * @tc.desc      : test Image test_PixelMap_rotate_19
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_rotate_19(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -471,17 +474,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2000
-    * @tc.name      : test_PixelMap_rotate_20
-    * @tc.desc      : test Image test_PixelMap_rotate_20
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2000
+     * @tc.name      : test_PixelMap_rotate_20
+     * @tc.desc      : test Image test_PixelMap_rotate_20
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_rotate_20(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -498,17 +501,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2100
-    * @tc.name      : test_PixelMap_rotate_21
-    * @tc.desc      : test Image test_PixelMap_rotate_21
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2100
+     * @tc.name      : test_PixelMap_rotate_21
+     * @tc.desc      : test Image test_PixelMap_rotate_21
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_rotate_21(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -525,17 +528,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2200
-    * @tc.name      : test_PixelMap_translate_22
-    * @tc.desc      : test Image test_PixelMap_translate_22
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2200
+     * @tc.name      : test_PixelMap_translate_22
+     * @tc.desc      : test Image test_PixelMap_translate_22
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_translate_22(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -553,17 +556,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2300
-    * @tc.name      : test_PixelMap_translate_23
-    * @tc.desc      : test Image test_PixelMap_translate_23
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2300
+     * @tc.name      : test_PixelMap_translate_23
+     * @tc.desc      : test Image test_PixelMap_translate_23
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_translate_23(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -581,17 +584,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2400
-    * @tc.name      : test_PixelMap_translate_24
-    * @tc.desc      : test Image test_PixelMap_translate_24
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2400
+     * @tc.name      : test_PixelMap_translate_24
+     * @tc.desc      : test Image test_PixelMap_translate_24
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_translate_24(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -609,17 +612,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2500
-    * @tc.name      : test_PixelMap_translate_25
-    * @tc.desc      : test Image test_PixelMap_translate_25
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2500
+     * @tc.name      : test_PixelMap_translate_25
+     * @tc.desc      : test Image test_PixelMap_translate_25
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_translate_25(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -637,17 +640,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2600
-    * @tc.name      : test_PixelMap_flip_26
-    * @tc.desc      : test Image test_PixelMap_flip_26
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2600
+     * @tc.name      : test_PixelMap_flip_26
+     * @tc.desc      : test Image test_PixelMap_flip_26
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_flip_26(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -665,17 +668,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2700
-    * @tc.name      : test_PixelMap_flip_27
-    * @tc.desc      : test Image test_PixelMap_flip_27
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2700
+     * @tc.name      : test_PixelMap_flip_27
+     * @tc.desc      : test Image test_PixelMap_flip_27
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_flip_27(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -693,17 +696,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2800
-    * @tc.name      : test_PixelMap_flip_28
-    * @tc.desc      : test Image test_PixelMap_flip_28
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2800
+     * @tc.name      : test_PixelMap_flip_28
+     * @tc.desc      : test Image test_PixelMap_flip_28
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_flip_28(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -721,17 +724,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2900
-    * @tc.name      : test_PixelMap_crop_29
-    * @tc.desc      : test Image test_PixelMap_crop_29
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_2900
+     * @tc.name      : test_PixelMap_crop_29
+     * @tc.desc      : test Image test_PixelMap_crop_29
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_crop_29(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -748,17 +751,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3000
-    * @tc.name      : test_PixelMap_crop_30
-    * @tc.desc      : test Image test_PixelMap_crop_30
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3000
+     * @tc.name      : test_PixelMap_crop_30
+     * @tc.desc      : test Image test_PixelMap_crop_30
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_crop_30(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -772,17 +775,17 @@ class Test_createPixelMap_01 {
             @Expect(e.message, "Cropping exceptions.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3100
-    * @tc.name      : test_PixelMap_crop_31
-    * @tc.desc      : test Image test_PixelMap_crop_31
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3100
+     * @tc.name      : test_PixelMap_crop_31
+     * @tc.desc      : test Image test_PixelMap_crop_31
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_crop_31(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -797,17 +800,17 @@ class Test_createPixelMap_01 {
             @Expect(e.message, "Cropping exceptions.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3200
-    * @tc.name      : test_PixelMap_crop_32
-    * @tc.desc      : test Image test_PixelMap_crop_32
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3200
+     * @tc.name      : test_PixelMap_crop_32
+     * @tc.desc      : test Image test_PixelMap_crop_32
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_crop_32(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -822,17 +825,17 @@ class Test_createPixelMap_01 {
             @Expect(e.message, "Cropping exceptions.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3300
-    * @tc.name      : test_PixelMap_crop_33
-    * @tc.desc      : test Image test_PixelMap_crop_33
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3300
+     * @tc.name      : test_PixelMap_crop_33
+     * @tc.desc      : test Image test_PixelMap_crop_33
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_crop_33(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -847,17 +850,17 @@ class Test_createPixelMap_01 {
             @Expect(e.message, "Cropping exceptions.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3400
-    * @tc.name      : test_PixelMap_crop_34
-    * @tc.desc      : test Image test_PixelMap_crop_34
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3400
+     * @tc.name      : test_PixelMap_crop_34
+     * @tc.desc      : test Image test_PixelMap_crop_34
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_crop_34(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -872,17 +875,17 @@ class Test_createPixelMap_01 {
             @Expect(e.message, "Cropping exceptions.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3500
-    * @tc.name      : test_PixelMap_crop_35
-    * @tc.desc      : test Image test_PixelMap_crop_35
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3500
+     * @tc.name      : test_PixelMap_crop_35
+     * @tc.desc      : test Image test_PixelMap_crop_35
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_crop_35(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -897,17 +900,17 @@ class Test_createPixelMap_01 {
             @Expect(e.message, "Cropping exceptions.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3600
-    * @tc.name      : test_PixelMap_crop_36
-    * @tc.desc      : test Image test_PixelMap_crop_36
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3600
+     * @tc.name      : test_PixelMap_crop_36
+     * @tc.desc      : test Image test_PixelMap_crop_36
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_crop_36(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -922,17 +925,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3700
-    * @tc.name      : test_createAlphaPixelmap_37
-    * @tc.desc      : test Image test_createAlphaPixelmap_37
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3700
+     * @tc.name      : test_createAlphaPixelmap_37
+     * @tc.desc      : test Image test_createAlphaPixelmap_37
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createAlphaPixelmap_37(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -947,17 +950,17 @@ class Test_createPixelMap_01 {
             @Expect(false)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3800
-    * @tc.name      : test_getImageInfo_38
-    * @tc.desc      : test Image test_getImageInfo_38
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3800
+     * @tc.name      : test_getImageInfo_38
+     * @tc.desc      : test Image test_getImageInfo_38
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getImageInfo_38(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -968,17 +971,17 @@ class Test_createPixelMap_01 {
         @Expect(imageInfo.size.height, 6)
         @Expect(imageInfo.size.width, 8)
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3900
-    * @tc.name      : test_getImageInfo_39
-    * @tc.desc      : test Image test_getImageInfo_39
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_3900
+     * @tc.name      : test_getImageInfo_39
+     * @tc.desc      : test Image test_getImageInfo_39
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getImageInfo_39(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -989,17 +992,17 @@ class Test_createPixelMap_01 {
         let num = globalPixelMap.getBytesNumberPerRow()
         @Expect(expectNum, num)
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_4000
-    * @tc.name      : test_getImageInfo_40
-    * @tc.desc      : test Image test_getImageInfo_40
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_4000
+     * @tc.name      : test_getImageInfo_40
+     * @tc.desc      : test Image test_getImageInfo_40
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getImageInfo_40(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -1010,17 +1013,17 @@ class Test_createPixelMap_01 {
         let num = globalPixelMap.getPixelBytesNumber()
         @Expect(expectNum, num)
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_4100
-    * @tc.name      : test_PixelMap_release_41
-    * @tc.desc      : test Image test_PixelMap_release_41
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_4100
+     * @tc.name      : test_PixelMap_release_41
+     * @tc.desc      : test Image test_PixelMap_release_41
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_release_41(): Unit {
         var globalPixelMap: PixelMap
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -1035,17 +1038,16 @@ class Test_createPixelMap_01 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_4200
-    * @tc.name      : test_createpm_rotate_fuzz
-    * @tc.desc      : test Image test_createpm_rotate_fuzz
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_createPixelMap_01_4200
+     * @tc.name      : test_createpm_rotate_fuzz
+     * @tc.desc      : test Image test_createpm_rotate_fuzz
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createpm_rotate_fuzz() {
         let JPG_Buf: Array<UInt8> = Array<UInt8>(96) {index: Int64 => UInt8(index + 1)}
         let newImageSource = createImageSource(JPG_Buf)

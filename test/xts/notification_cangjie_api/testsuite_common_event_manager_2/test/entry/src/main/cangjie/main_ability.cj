@@ -32,9 +32,7 @@ class MainAbility <: UIAbility {
         Hilog.info(0u32, "cangjietest", "", "MainAbility onWindowStageCreate.")
         AppStorage.setOrCreate("windowStage", windowStage)
         AppStorage.setOrCreate("abilityContext", this.context)
-        this
-            .context
-            .resourceManager
+        this.context.resourceManager
         windowStage.loadContent("EntryView")
     }
 }

@@ -21,6 +21,5 @@ import kit.AbilityKit.AbilityStage
 
 class MyAbilityStage <: AbilityStage {
     public func onCreate(): Unit {
-
     }
 }

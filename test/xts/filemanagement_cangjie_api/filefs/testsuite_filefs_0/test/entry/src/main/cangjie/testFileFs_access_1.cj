@@ -35,7 +35,7 @@ class testFileIo_access_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
         Hilog.info(0, "cangjietest","start testFileIo_access")
@@ -55,7 +55,7 @@ class testFileIo_access_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
         Hilog.info(0, "cangjietest","start testFileIo_access")

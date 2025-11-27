@@ -48,7 +48,7 @@ class Test_Button_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Button_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_Button_Component_001 start")
         let Button = getInspectorByKey("button")
@@ -69,7 +69,7 @@ class Test_Button_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Button_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_Button_Component_002 start")
         let Button = getInspectorByKey("button")
@@ -90,7 +90,7 @@ class Test_Button_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Button_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_Button_Component_003 start")
         let Button = getInspectorByKey("button")
@@ -111,7 +111,7 @@ class Test_Button_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Button_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_Button_Component_004 start")
         let Button = getInspectorByKey("button_01")
@@ -136,7 +136,7 @@ class Test_Button_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Button_Component_005() {
         Hilog.info(0, "","cangjietest", "Test_Button_Component_001 start")
         let Button = getInspectorByKey("button3")
@@ -157,7 +157,7 @@ class Test_Button_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Button_Component_006() {
         Hilog.info(0, "","cangjietest", "Test_Button_Component_002 start")
         let Button = getInspectorByKey("button3")
@@ -178,7 +178,7 @@ class Test_Button_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Button_Component_007() {
         Hilog.info(0, "","cangjietest", "Test_Button_Component_003 start")
         let Button = getInspectorByKey("button3")

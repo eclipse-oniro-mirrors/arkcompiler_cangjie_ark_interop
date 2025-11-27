@@ -51,7 +51,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek: right fd,offset(0)
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_01() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -72,7 +72,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:fd(-1)
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_02() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -94,7 +94,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek: right fd,FileIo.stat(filePath).size-1
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_03() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -114,7 +114,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,FileIo.stat(filePath).size+1,then write
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_04() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -138,7 +138,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd ,number (-1)
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_05() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -161,7 +161,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,FileIo.stat(filePath).size-1,WhenceType.SeekSet
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_06() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -181,7 +181,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,offset:-1,WhenceType.SeekSet
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_07() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -204,7 +204,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,FileIo.stat(filePath).size+1,WhenceType.SeekSet,then write,result is 42,because test_4 add 14
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_08() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -228,7 +228,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right,-(FileIo.stat(filePath).size-1) ,whence:SeekEnd
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_09() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -248,7 +248,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,-(FileIo.stat(filePath).size+1) ,whence:SeekEnd
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_10() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -270,7 +270,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,offset:1,whence:SeekEnd
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_11() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -292,7 +292,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:rigt fd,FileIo.stat(filePath).size-2,FileIo.stat(filePath).size-1,whence:SeekCur
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_12() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -314,7 +314,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,FileIo.stat(filePath).size-1,whence:SeekCur
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_13() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -336,7 +336,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,FileIo.stat(filePath).size-1,-(FileIo.stat(filePath).size-1),whence:SeekCur
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_14() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -358,7 +358,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek: right fd,FileIo.stat(filePath).size-1,-(FileIo.stat(filePath).size+2),whence: WhenceType.SeekSet
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_15() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -382,7 +382,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,-(FileIo.stat(filePath).size-1),(FileIo.stat(filePath).size-2),whence: WhenceType.SeekEnd
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_16() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -404,7 +404,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,-(FileIo.stat(filePath).size-1),-2,whence: WhenceType.SeekEnd
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_17() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)
@@ -429,7 +429,7 @@ class testFileIo_lseek_1 {
      * @tc.desc Test test_lseek:right fd,-(FileIo.stat(filePath).size-1),FileIo.stat(filePath).size,whence: WhenceType.SeekEnd
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lseek_18() {
         let filePath = "/data/storage/el2/base/haps/test_file.txt"
         let file = FileIo.open(filePath, mode: OpenMode.READ_WRITE)

@@ -50,7 +50,7 @@ class Test_Focus_Component {
      * @tc.desic：defaultFocus and focusable
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Focus_0100_Component() {
         let Inspector = getInspectorByKey("A")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -70,7 +70,7 @@ class Test_Focus_Component {
      * @tc.desic：tabIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Focus_0200_Component() {
         let abilityDelegator = AbilityDelegatorRegistry.getAbilityDelegator()
         abilityDelegator.executeShellCommand("uinput -K -d 2049", timeoutSecs:3)
@@ -94,7 +94,7 @@ class Test_Focus_Component {
      * @tc.desic：tabIndex
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Focus_0300_Component() {
         let abilityDelegator = AbilityDelegatorRegistry.getAbilityDelegator()
         abilityDelegator.executeShellCommand("uinput -K -d 2049", timeoutSecs:3)
@@ -116,7 +116,7 @@ class Test_Focus_Component {
      * @tc.desic：groupDefaultFocus
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Focus_0400_Component() {
         let abilityDelegator = AbilityDelegatorRegistry.getAbilityDelegator()
         abilityDelegator.executeShellCommand("uinput -K -d 2049", timeoutSecs:3)
@@ -139,7 +139,7 @@ class Test_Focus_Component {
      * @tc.desic：focusOnTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Focus_0500_Component() {
         driver.findComponent(On().id("A")).getOrThrow().click()
         driver.delayMs(1000)
@@ -161,7 +161,7 @@ class Test_Focus_Component {
      * @tc.desic：requestFocus
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Focus_0600_Component() {
         driver.findComponent(On().id("F")).getOrThrow().click()
         driver.delayMs(1000)

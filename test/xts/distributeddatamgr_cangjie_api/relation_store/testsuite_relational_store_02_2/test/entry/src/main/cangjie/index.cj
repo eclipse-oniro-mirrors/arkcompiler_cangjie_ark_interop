@@ -12,26 +12,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-
 package ohos_app_cangjie_entry
 
-import ohos.arkui.component.*
-import ohos.arkui.state_management.*
-import ohos.arkui.state_macro_manage.*
-import ohos.base.{LengthProp}
+internal import ohos.base.LengthProp
+internal import ohos.arkui.component.Column
+internal import ohos.arkui.component.Row
+internal import ohos.arkui.component.Text
+internal import ohos.arkui.component.CustomView
+internal import ohos.arkui.component.CJEntry
+internal import ohos.arkui.component.loadNativeView
+internal import ohos.arkui.component.FontWeight
+internal import ohos.arkui.state_management.SubscriberManager
+internal import ohos.arkui.state_management.ObservedProperty
+internal import ohos.arkui.state_management.LocalStorage
+import ohos.arkui.state_macro_manage.Entry
+import ohos.arkui.state_macro_manage.Component
+import ohos.arkui.state_macro_manage.State
+import ohos.arkui.state_macro_manage.r
 
 @Entry
 @Component
 class EntryView {
     @State
-    var message: String = "Hello Cangjie"
+    var message: String = "Hello World"
+
     func build() {
         Row {
             Column {
-                Button(message).onClick {
-                    evt =>
-                }.fontSize(40).height(80)
+                Text(this.message)
+                    .fontSize(50)
+                    .fontWeight(FontWeight.Bold)
+                    .onClick({
+                        evt => this.message = "Hello Cangjie"
+                    })
             }.width(100.percent)
         }.height(100.percent)
     }

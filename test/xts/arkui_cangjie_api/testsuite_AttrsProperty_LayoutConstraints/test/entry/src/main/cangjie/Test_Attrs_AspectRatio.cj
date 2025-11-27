@@ -38,7 +38,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_AlphabetIndexer_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin AlphabetIndexer")
@@ -76,7 +76,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Blank_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Blank")
@@ -114,7 +114,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Button_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Button")
@@ -152,7 +152,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Checkbox_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Checkbox")
@@ -190,7 +190,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_CheckboxGroup_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin CheckboxGroup")
@@ -228,7 +228,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_DataPanel_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin DataPanel")
@@ -266,7 +266,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_DatePicker_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin DatePicker")
@@ -304,7 +304,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Divider_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Divider")
@@ -342,7 +342,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Gauge_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Gauge")
@@ -380,7 +380,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Image_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Image")
@@ -418,7 +418,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_ImageSpan_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin ImageSpan")
@@ -456,7 +456,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_LoadingProgress_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin LoadingProgress")
@@ -494,7 +494,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Menu_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Menu")
@@ -532,7 +532,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_MenuItem_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin MenuItem")
@@ -570,7 +570,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_MenuItemGroup_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin MenuItemGroup")
@@ -608,7 +608,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Progress_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Progress")
@@ -646,7 +646,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_QRCode_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin QRCode")
@@ -684,7 +684,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Radio_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Radio")
@@ -722,7 +722,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Rating_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Rating")
@@ -760,7 +760,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Refresh_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Refresh")
@@ -798,7 +798,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_RichEditor_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin RichEditor")
@@ -836,7 +836,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_RichText_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin RichText")
@@ -874,7 +874,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_RowSplit_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin RowSplit")
@@ -912,7 +912,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_ScrollBar_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin ScrollBar")
@@ -950,7 +950,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Search_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Search")
@@ -988,7 +988,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Slider_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Slider")
@@ -1026,7 +1026,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Stepper_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Stepper")
@@ -1064,7 +1064,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Text_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Text_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Text")
@@ -1102,7 +1102,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_TextArea_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_TextArea_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin TextArea")
@@ -1140,7 +1140,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_TextClock_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_TextClock_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin TextClock")
@@ -1178,7 +1178,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_TextInput_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_TextInput_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin TextInput")
@@ -1216,7 +1216,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_TextPicker_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_TextPicker_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin TextPicker")
@@ -1254,7 +1254,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_TextTimer_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_TextTimer_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin TextTimer")
@@ -1292,7 +1292,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Toggle_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Toggle_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Toggle")
@@ -1330,7 +1330,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Web_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Web_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Web")
@@ -1368,7 +1368,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Select_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Select_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Select")
@@ -1406,7 +1406,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Badge_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Badge_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Badge")
@@ -1444,7 +1444,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Column_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Column_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Column")
@@ -1482,7 +1482,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Grid_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Grid_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Grid")
@@ -1520,7 +1520,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_GridItem_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_GridItem_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin GridItem")
@@ -1558,7 +1558,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_GridRow_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_GridRow_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin GridRow")
@@ -1596,7 +1596,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Flex_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Flex_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Flex")
@@ -1634,7 +1634,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_List_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_List_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin List")
@@ -1672,7 +1672,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_ListItem_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_ListItem_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin ListItem")
@@ -1710,7 +1710,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_ListItemGroup_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_ListItemGroup_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin ListItemGroup")
@@ -1750,7 +1750,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_RelativeContainer_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_RelativeContainer_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin RelativeContainer")
@@ -1788,7 +1788,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Row_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Row_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Row")
@@ -1826,7 +1826,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Scroll_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Scroll_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Scroll")
@@ -1864,7 +1864,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Stack_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Stack_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Stack")
@@ -1902,7 +1902,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Swiper_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Swiper_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Swiper")
@@ -1940,7 +1940,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Tabs_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Tabs_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Tabs")
@@ -1978,7 +1978,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Circle_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Circle_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Circle")
@@ -2016,7 +2016,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Line_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Line_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Line")
@@ -2054,7 +2054,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Rect_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Rect_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Rect")
@@ -2092,7 +2092,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Shape_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Shape_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Shape")
@@ -2131,7 +2131,7 @@ class Test_EmptyAttrs_AspectRatio {
      * @tc.desic：Empty_Path_AspectRatio
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_AspectRatio_Path_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckAspectRatio: FindBegin Path")

@@ -23,7 +23,7 @@ import ohos.arkui.state_macro_manage.*
 import std.collection.*
 import stdx.encoding.json.*
 import std.convert.*
-import ohos.base.{LengthProp, Length, Color,LengthType}
+import ohos.base.{LengthProp, Length, Color}
 import std.time.{DateTime}
 import std.sync.{Timer}
 
@@ -126,21 +126,21 @@ class View_WatchProvideAndConsume_Number {
         Column(space:20) {
             Text("WatchProvideState: ${CheckProvideString}").key("WatchProvideState")
             Child_WatchProvideAndConsume_Number()
-            Button("change").onClick {ClickEvent =>
+            Button("change").onClick({ClickEvent =>
                 this.count_number += 10
-            }.key("state1")
-            Button("change").onClick {ClickEvent =>
+            }).key("state1")
+            Button("change").onClick({ClickEvent =>
                 this.count_Object = Num2(this.count_number)
-            }.key("state2")
-            Button("change").onClick {ClickEvent =>
+            }).key("state2")
+            Button("change").onClick({ClickEvent =>
                 this.count_String += "Cangjie"
-            }.key("state3")
-            Button("change").onClick {ClickEvent =>
+            }).key("state3")
+            Button("change").onClick({ClickEvent =>
                 this.count_date = DateTime.parse(DateTime.now().toString())
-            }.key("state4")
-            Button("change").onClick {ClickEvent =>
+            }).key("state4")
+            Button("change").onClick({ClickEvent =>
                 this.count_Boolean = !this.count_Boolean
-            }.key("state5")
+            }).key("state5")
         }.width(100.percent).margin(top: 10)
     }
 }

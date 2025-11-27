@@ -38,7 +38,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_AlphabetIndexer_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Blank_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Button_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Checkbox_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_CheckboxGroup_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin CheckboxGroup")
@@ -163,7 +163,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_DataPanel_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin DataPanel")
@@ -188,7 +188,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_DatePicker_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin DatePicker")
@@ -213,7 +213,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Divider_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Divider")
@@ -238,7 +238,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Gauge_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Gauge")
@@ -263,7 +263,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Image_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Image")
@@ -288,7 +288,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_ImageSpan_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin ImageSpan")
@@ -313,7 +313,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_LoadingProgress_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin LoadingProgress")
@@ -338,7 +338,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Menu_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Menu")
@@ -363,7 +363,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_MenuItem_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin MenuItem")
@@ -388,7 +388,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_MenuItemGroup_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin MenuItemGroup")
@@ -413,7 +413,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Progress_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Progress")
@@ -438,7 +438,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_QRCode_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin QRCode")
@@ -463,7 +463,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Radio_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Radio")
@@ -488,7 +488,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Rating_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Rating")
@@ -513,7 +513,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Refresh_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Refresh")
@@ -538,7 +538,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_RichEditor_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin RichEditor")
@@ -563,7 +563,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_RowSplit_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_RowSplit_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin RowSplit")
@@ -588,7 +588,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_ScrollBar_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_ScrollBar_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin ScrollBar")
@@ -613,7 +613,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Search_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Search_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Search")
@@ -638,7 +638,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Slider_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Slider_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Slider")
@@ -663,7 +663,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Stepper_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Stepper_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Stepper")
@@ -688,7 +688,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_StepperItem_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_StepperItem_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin StepperItem")
@@ -713,7 +713,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Text_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Text_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Text")
@@ -738,7 +738,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_TextArea_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_TextArea_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin TextArea")
@@ -763,7 +763,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_TextClock_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_TextClock_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin TextClock")
@@ -788,7 +788,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_TextInput_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_TextInput_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin TextInput")
@@ -813,7 +813,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_TextPicker_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_TextPicker_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin TextPicker")
@@ -838,7 +838,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_TextTimer_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_TextTimer_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin TextTimer")
@@ -863,7 +863,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Toggle_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Toggle_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Toggle")
@@ -888,7 +888,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Select_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Select_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Select")
@@ -913,7 +913,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Badge_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Badge_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Badge")
@@ -938,7 +938,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Column_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Column_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Column")
@@ -963,7 +963,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Grid_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Grid_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Grid")
@@ -988,7 +988,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_GridItem_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_GridItem_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin GridItem")
@@ -1013,7 +1013,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_GridRow_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_GridRow_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin GridRow")
@@ -1038,7 +1038,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_GridCol_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_GridCol_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin GridCol")
@@ -1063,7 +1063,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Flex_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Flex_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Flex")
@@ -1088,7 +1088,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_List_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_List_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin List")
@@ -1113,7 +1113,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_ListItem_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_ListItem_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin ListItem")
@@ -1138,7 +1138,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_ListItemGroup_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_ListItemGroup_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin ListItemGroup")
@@ -1164,7 +1164,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_RelativeContainer_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_RelativeContainer_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin RelativeContainer")
@@ -1189,7 +1189,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Row_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Row_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Row")
@@ -1214,7 +1214,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Scroll_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Scroll_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Scroll")
@@ -1239,7 +1239,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Stack_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Stack_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Stack")
@@ -1264,7 +1264,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Swiper_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Swiper_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Swiper")
@@ -1289,7 +1289,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Tabs_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Tabs_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Tabs")
@@ -1314,7 +1314,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_TabContent_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_TabContent_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin TabContent")
@@ -1339,7 +1339,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Circle_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Circle_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Circle")
@@ -1364,7 +1364,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Line_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Line_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Line")
@@ -1389,7 +1389,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Rect_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Rect_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Rect")
@@ -1414,7 +1414,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Shape_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Shape_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Shape")
@@ -1441,7 +1441,7 @@ class Test_Attrs_RadialGradientFloat {
      * @tc.desic：Empty_Path_RadialGradient
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RadialGradientFloat_Path_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRadialGradient: FindBegin Path")

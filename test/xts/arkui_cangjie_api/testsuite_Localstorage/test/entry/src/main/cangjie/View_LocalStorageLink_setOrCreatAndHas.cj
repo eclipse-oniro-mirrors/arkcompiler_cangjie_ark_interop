@@ -83,7 +83,7 @@ class View_LocalStorageLink_setOrCreatAndHas {
 
             Button("Set Value In ParentComp")
                 .id("Test_Bottum")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.res1 = storage6.setOrCreate("PropInt", 20)
                     this.res2 = storage6.setOrCreate("PropFloat", 20.00)
@@ -93,14 +93,14 @@ class View_LocalStorageLink_setOrCreatAndHas {
                     this.res6 = storage6.setOrCreate("PropClass", AA("HelloCangjie"))
                     this.res7 = storage6.setOrCreate("PropStruct", BB("HelloCangjie"))
                     this.res8 = storage6.setOrCreate("PropEnum", EE.ee(100))
-                }
+                })
             Button("change")
                 .id("Test_Bottum_01")
-                .onClick {
+                .onClick({
                     evt =>
                     this.res00 = storage6.has("PropInt")
                     this.res01 = storage6.has("PropInt1")
-                }
+                })
             Divider()
             Text("ValueInt storage6:${this.res1} " + this.ValueInt.toString()).id("Int1")
             Text("ValueFloat storage6:${this.res2} " + this.ValueFloat.toString()).id("Float1")

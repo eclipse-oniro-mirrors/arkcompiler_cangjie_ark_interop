@@ -21,8 +21,6 @@ import std.unittest.common.*
 import ohos.ui_test.*
 import kit.ArkData.*
 import ohos.business_exception.BusinessException
-import ohos.data.preferences.Options as PreferencesOptions
-import ohos.data.preferences.ValueType as PreferencesValueType
 
 @Test
 class Test_delete_remove_Preferences_02 {
@@ -36,7 +34,7 @@ class Test_delete_remove_Preferences_02 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_deletepreferences_exception_01(): Unit {
         let preferences = Preferences.getPreferences(getAbilityContext(), "myStore")
         try {
@@ -58,7 +56,7 @@ class Test_delete_remove_Preferences_02 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_removepreferencesfromcache_exception_02(): Unit {
         let preferences = Preferences.getPreferences(getAbilityContext(), "myStore")
         try {
@@ -80,7 +78,7 @@ class Test_delete_remove_Preferences_02 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_preference_fuzz(): Unit {
         try {
             Preferences.deletePreferences(getAbilityContext(), String.fromUtf8([46]))

@@ -36,7 +36,7 @@ class testFileIo_rmdir_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rmdir_01() {
         let dpath = "/data/storage/el2/base/haps/entry/files/test_rmdir_01";
         let fpath = dpath + "/rmdir_sync_000";
@@ -79,7 +79,7 @@ class testFileIo_rmdir_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rmdir_02() {
         let dpath = "/data/storage/el2/base/haps/entry/files/test_rmdir_02";
 
@@ -102,7 +102,7 @@ class testFileIo_rmdir_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rmdir_03() {
         let dpath = "/data/storage/el2/base/haps/entry/../entry/files/test_rmdir_03";
 
@@ -128,7 +128,7 @@ class testFileIo_rmdir_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_rmdir_04() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_rmdir_04";
         let file = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))

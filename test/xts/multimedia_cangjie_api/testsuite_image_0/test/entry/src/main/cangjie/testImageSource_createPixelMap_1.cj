@@ -35,10 +35,10 @@ class testImageSource_createPixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             let createPixelMap = imageSource.createPixelMap()
@@ -48,7 +48,7 @@ class testImageSource_createPixelMap_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -60,10 +60,10 @@ class testImageSource_createPixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.jpg")
             let createPixelMap = imageSource.createPixelMap()
@@ -73,7 +73,7 @@ class testImageSource_createPixelMap_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -85,10 +85,10 @@ class testImageSource_createPixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.bmp")
             let createPixelMap = imageSource.createPixelMap()
@@ -98,7 +98,7 @@ class testImageSource_createPixelMap_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -110,10 +110,10 @@ class testImageSource_createPixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.gif")
             let createPixelMap = imageSource.createPixelMap()
@@ -123,7 +123,7 @@ class testImageSource_createPixelMap_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -135,10 +135,10 @@ class testImageSource_createPixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("/data/storage/el1/base/test.123")
             let createPixelMap = imageSource.createPixelMap()
@@ -148,6 +148,6 @@ class testImageSource_createPixelMap_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 }

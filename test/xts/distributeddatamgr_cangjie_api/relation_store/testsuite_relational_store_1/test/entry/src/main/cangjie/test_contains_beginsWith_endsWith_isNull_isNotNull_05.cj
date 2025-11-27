@@ -20,13 +20,13 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
 import ohos.hilog.Hilog
 import kit.PerformanceAnalysisKit.Hilog
-
+import ohos.business_exception.BusinessException
 
 @Test
 class Test_contains_beginsWith_endsWith_isNull_isNotNull_05 {
@@ -38,10 +38,11 @@ class Test_contains_beginsWith_endsWith_isNull_isNotNull_05 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -108,111 +109,106 @@ class Test_contains_beginsWith_endsWith_isNull_isNotNull_05 {
     public override func afterEach(): Unit {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0100
-    * @tc.name      : test_contains_01
-    * @tc.desc      : test RelationStore test_contains_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0100
+     * @tc.name      : test_contains_01
+     * @tc.desc      : test RelationStore test_contains_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_contains_01(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.contains("NAME", "is")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0200
-    * @tc.name      : test_contains_02
-    * @tc.desc      : test RelationStore test_contains_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0200
+     * @tc.name      : test_contains_02
+     * @tc.desc      : test RelationStore test_contains_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_contains_02(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.contains("NAME", "")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 500)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0300
-    * @tc.name      : test_contains_03
-    * @tc.desc      : test RelationStore test_contains_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0300
+     * @tc.name      : test_contains_03
+     * @tc.desc      : test RelationStore test_contains_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_contains_03(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.contains("NAME", "\0")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 500)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0400
-    * @tc.name      : test_contains_04
-    * @tc.desc      : test RelationStore test_contains_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0400
+     * @tc.name      : test_contains_04
+     * @tc.desc      : test RelationStore test_contains_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_contains_04(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.contains("NAME", "\\")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0500
-    * @tc.name      : test_contains_05
-    * @tc.desc      : test RelationStore test_contains_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0500
+     * @tc.name      : test_contains_05
+     * @tc.desc      : test RelationStore test_contains_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_contains_05(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.contains("NAME", "#")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0600
-    * @tc.name      : test_contains_06
-    * @tc.desc      : test RelationStore test_contains_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0600
+     * @tc.name      : test_contains_06
+     * @tc.desc      : test RelationStore test_contains_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_contains_06(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.contains("NAME", "123")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 200)
         resultSet.goToRow(0)
         @Expect(resultSet.getString(0), "400")
@@ -226,24 +222,27 @@ class Test_contains_beginsWith_endsWith_isNull_isNotNull_05 {
         @Expect(resultSet.getString(2), "-599")
         @Expect(resultSet.getString(3), "599.25")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0700
-    * @tc.name      : test_beginswith_07
-    * @tc.desc      : test RelationStore test_beginswith_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0700
+     * @tc.name      : test_beginswith_07
+     * @tc.desc      : test RelationStore test_beginswith_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_beginswith_07(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.beginsWith("NAME", "L")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
         resultSet.goToRow(0)
         @Expect(resultSet.getString(0), "300")
@@ -257,24 +256,27 @@ class Test_contains_beginsWith_endsWith_isNull_isNotNull_05 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getDouble(3), -10000.5)
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0800
-    * @tc.name      : test_beginswith_08
-    * @tc.desc      : test RelationStore test_beginswith_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0800
+     * @tc.name      : test_beginswith_08
+     * @tc.desc      : test RelationStore test_beginswith_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_beginswith_08(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.beginsWith("NAME", "a#$")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
         resultSet.goToRow(0)
         @Expect(resultSet.getString(0), "400")
@@ -288,24 +290,27 @@ class Test_contains_beginsWith_endsWith_isNull_isNotNull_05 {
         @Expect(resultSet.getString(2), "-499")
         @Expect(resultSet.getString(3), "499.25")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0900
-    * @tc.name      : test_beginswith_09
-    * @tc.desc      : test RelationStore test_beginswith_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_0900
+     * @tc.name      : test_beginswith_09
+     * @tc.desc      : test RelationStore test_beginswith_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_beginswith_09(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.beginsWith("NAME", "111")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
         resultSet.goToRow(0)
         @Expect(resultSet.getString(0), "500")
@@ -319,62 +324,72 @@ class Test_contains_beginsWith_endsWith_isNull_isNotNull_05 {
         @Expect(resultSet.getString(2), "-599")
         @Expect(resultSet.getString(3), "599.25")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1000
-    * @tc.name      : test_beginswith_10
-    * @tc.desc      : test RelationStore test_beginswith_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1000
+     * @tc.name      : test_beginswith_10
+     * @tc.desc      : test RelationStore test_beginswith_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_beginswith_10(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.beginsWith("NAME", "123")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
-        @Expect(resultSet.goToRow(0), false)
+        // @Expect(resultSet.goToRow(0), false)
+        try {
+            resultSet.goToRow(0)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1100
-    * @tc.name      : test_endswith_11
-    * @tc.desc      : test RelationStore test_endswith_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1100
+     * @tc.name      : test_endswith_11
+     * @tc.desc      : test RelationStore test_endswith_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_endswith_11(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.endsWith("NAME", "a#$")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
-        @Expect(resultSet.goToRow(0), false)
+        try {
+            resultSet.goToRow(0)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1200
-    * @tc.name      : test_endswith_12
-    * @tc.desc      : test RelationStore test_endswith_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1200
+     * @tc.name      : test_endswith_12
+     * @tc.desc      : test RelationStore test_endswith_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_endswith_12(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.endsWith("NAME", "a")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
         resultSet.goToRow(0)
         @Expect(resultSet.getString(0), "300")
@@ -388,20 +403,23 @@ class Test_contains_beginsWith_endsWith_isNull_isNotNull_05 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getString(3), "-10000")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1300
-    * @tc.name      : test_endswith_13
-    * @tc.desc      : test RelationStore test_endswith_13
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1300
+     * @tc.name      : test_endswith_13
+     * @tc.desc      : test RelationStore test_endswith_13
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_endswith_13(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.endsWith("NAME", "123")
@@ -419,132 +437,129 @@ class Test_contains_beginsWith_endsWith_isNull_isNotNull_05 {
         @Expect(resultSet.getString(2), "-599")
         @Expect(resultSet.getString(3), "599.25")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1400
-    * @tc.name      : test_endswith_14
-    * @tc.desc      : test RelationStore test_endswith_14
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1400
+     * @tc.name      : test_endswith_14
+     * @tc.desc      : test RelationStore test_endswith_14
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_endswith_14(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.endsWith("NAME", "")
-        let resultSet = rdbStore.query(predicates,columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 500)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1500
-    * @tc.name      : test_isnull_15
-    * @tc.desc      : test RelationStore test_isnull_15
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1500
+     * @tc.name      : test_isnull_15
+     * @tc.desc      : test RelationStore test_isnull_15
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_isnull_15(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.isNull("NAME")
-        let resultSet = rdbStore.query(predicates,columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1600
-    * @tc.name      : test_isnull_16
-    * @tc.desc      : test RelationStore test_isnull_16
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1600
+     * @tc.name      : test_isnull_16
+     * @tc.desc      : test RelationStore test_isnull_16
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_isnull_16(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.isNull("AGE")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1700
-    * @tc.name      : test_isnull_17
-    * @tc.desc      : test RelationStore test_isnull_17
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1700
+     * @tc.name      : test_isnull_17
+     * @tc.desc      : test RelationStore test_isnull_17
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_isnull_17(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.isNull("CODES")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1800
-    * @tc.name      : test_isnotnull_18
-    * @tc.desc      : test RelationStore test_isnotnull_18
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1800
+     * @tc.name      : test_isnotnull_18
+     * @tc.desc      : test RelationStore test_isnotnull_18
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_isnotnull_18(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.isNotNull("NAME")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 500)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1900
-    * @tc.name      : test_isnotnull_19
-    * @tc.desc      : test RelationStore test_isnotnull_19
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_1900
+     * @tc.name      : test_isnotnull_19
+     * @tc.desc      : test RelationStore test_isnotnull_19
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_isnotnull_19(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.isNotNull("AGE")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 400)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_2000
-    * @tc.name      : test_isnotnull_20
-    * @tc.desc      : test RelationStore test_isnotnull_20
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_contains_beginsWith_endsWith_isNull_isNotNull_05_2000
+     * @tc.name      : test_isnotnull_20
+     * @tc.desc      : test RelationStore test_isnotnull_20
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_isnotnull_20(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.isNotNull("CODES")
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 500)
     }
 }

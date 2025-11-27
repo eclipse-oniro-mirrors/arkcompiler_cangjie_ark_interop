@@ -14,42 +14,62 @@
  */
 
 package ohos_app_cangjie_entry
- let _ = testsuite()
-func testsuite(): Unit   {
-registerTestSuite("testApplicationInfo_description_1", { =>testApplicationInfo_description_1()
-})
-registerTestSuite("testApplicationInfo_description_2", { =>testApplicationInfo_description_2()
-})
-registerTestSuite("testApplicationInfo_description_3", { =>testApplicationInfo_description_3()
-})
-registerTestSuite("testApplicationInfo_description_4", { =>testApplicationInfo_description_4()
-})
-registerTestSuite("testApplicationInfo_description_5", { =>testApplicationInfo_description_5()
-})
-registerTestSuite("testApplicationInfo_description_6", { =>testApplicationInfo_description_6()
-})
-registerTestSuite("testApplicationInfo_description_7", { =>testApplicationInfo_description_7()
-})
-registerTestSuite("testApplicationInfo_description_8", { =>testApplicationInfo_description_8()
-})
-registerTestSuite("testApplicationInfo_description_9", { =>testApplicationInfo_description_9()
-})
-registerTestSuite("testApplicationInfo_description_10", { =>testApplicationInfo_description_10()
-})
-registerTestSuite("testApplicationInfo_description_11", { =>testApplicationInfo_description_11()
-})
-registerTestSuite("testApplicationInfo_description_12", { =>testApplicationInfo_description_12()
-})
-registerTestSuite("testApplicationInfo_description_13", { =>testApplicationInfo_description_13()
-})
-registerTestSuite("testApplicationInfo_description_14", { =>testApplicationInfo_description_14()
-})
-registerTestSuite("testApplicationInfo_description_15", { =>testApplicationInfo_description_15()
-})
-registerTestSuite("testApplicationInfo_description_16", { =>testApplicationInfo_description_16()
-})
-registerTestSuite("testApplicationInfo_description_17", { =>testApplicationInfo_description_17()
-})
-registerTestSuite("testApplicationInfo_description_18", { =>testApplicationInfo_description_18()
-})
+
+let _ = testsuite()
+
+func testsuite(): Unit {
+    registerTestSuite("testApplicationInfo_description_1", {
+        => testApplicationInfo_description_1()
+    })
+    registerTestSuite("testApplicationInfo_description_2", {
+        => testApplicationInfo_description_2()
+    })
+    registerTestSuite("testApplicationInfo_description_3", {
+        => testApplicationInfo_description_3()
+    })
+    registerTestSuite("testApplicationInfo_description_4", {
+        => testApplicationInfo_description_4()
+    })
+    registerTestSuite("testApplicationInfo_description_5", {
+        => testApplicationInfo_description_5()
+    })
+    registerTestSuite("testApplicationInfo_description_6", {
+        => testApplicationInfo_description_6()
+    })
+    registerTestSuite("testApplicationInfo_description_7", {
+        => testApplicationInfo_description_7()
+    })
+    registerTestSuite("testApplicationInfo_description_8", {
+        => testApplicationInfo_description_8()
+    })
+    registerTestSuite("testApplicationInfo_description_9", {
+        => testApplicationInfo_description_9()
+    })
+    registerTestSuite("testApplicationInfo_description_10", {
+        => testApplicationInfo_description_10()
+    })
+    registerTestSuite("testApplicationInfo_description_11", {
+        => testApplicationInfo_description_11()
+    })
+    registerTestSuite("testApplicationInfo_description_12", {
+        => testApplicationInfo_description_12()
+    })
+    registerTestSuite("testApplicationInfo_description_13", {
+        => testApplicationInfo_description_13()
+    })
+    registerTestSuite("testApplicationInfo_description_14", {
+        => testApplicationInfo_description_14()
+    })
+    registerTestSuite("testApplicationInfo_description_15", {
+        => testApplicationInfo_description_15()
+    })
+    registerTestSuite("testApplicationInfo_description_16", {
+        => testApplicationInfo_description_16()
+    })
+    registerTestSuite("testApplicationInfo_description_17", {
+        => testApplicationInfo_description_17()
+    })
+    registerTestSuite("testApplicationInfo_description_18", {
+        => testApplicationInfo_description_18()
+    })
 }

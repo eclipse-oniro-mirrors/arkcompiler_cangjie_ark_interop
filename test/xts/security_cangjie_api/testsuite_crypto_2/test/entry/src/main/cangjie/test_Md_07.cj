@@ -26,17 +26,16 @@ import ohos.ui_test.*
 class Test_Md_07 {
 
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0100
-    * @tc.name      : test_createMd_01
-    * @tc.desc      : test Crypto test_createMd_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0100
+     * @tc.name      : test_createMd_01
+     * @tc.desc      : test Crypto test_createMd_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_01(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_01(): Unit {
         var globalMd: Md
         var mdString: String = "SHA1"
 
@@ -48,19 +47,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0200
-    * @tc.name      : test_createMd_02
-    * @tc.desc      : test Crypto test_createMd_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0200
+     * @tc.name      : test_createMd_02
+     * @tc.desc      : test Crypto test_createMd_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_02(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_02(): Unit {
         var globalMd: Md
         var mdString: String = "SHA224"
 
@@ -72,19 +69,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0300
-    * @tc.name      : test_createMd_03
-    * @tc.desc      : test Crypto test_createMd_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0300
+     * @tc.name      : test_createMd_03
+     * @tc.desc      : test Crypto test_createMd_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_03(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_03(): Unit {
         var globalMd: Md
         var mdString: String = "SHA256"
 
@@ -96,19 +91,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0400
-    * @tc.name      : test_createMd_04
-    * @tc.desc      : test Crypto test_createMd_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0400
+     * @tc.name      : test_createMd_04
+     * @tc.desc      : test Crypto test_createMd_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_04(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_04(): Unit {
         var globalMd: Md
         var mdString: String = "SHA384"
 
@@ -120,19 +113,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0500
-    * @tc.name      : test_createMd_05
-    * @tc.desc      : test Crypto test_createMd_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0500
+     * @tc.name      : test_createMd_05
+     * @tc.desc      : test Crypto test_createMd_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_05(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_05(): Unit {
         var globalMd: Md
         var mdString: String = "SHA512"
 
@@ -144,19 +135,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0600
-    * @tc.name      : test_createMd_06
-    * @tc.desc      : test Crypto test_createMd_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0600
+     * @tc.name      : test_createMd_06
+     * @tc.desc      : test Crypto test_createMd_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_06(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_06(): Unit {
         var globalMd: Md
         var mdString: String = "MD5"
 
@@ -168,19 +157,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0700
-    * @tc.name      : test_createMd_07
-    * @tc.desc      : test Crypto test_createMd_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0700
+     * @tc.name      : test_createMd_07
+     * @tc.desc      : test Crypto test_createMd_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_07(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_07(): Unit {
         var globalMd: Md
         var mdString: String = "SM3"
 
@@ -192,19 +179,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0800
-    * @tc.name      : test_createMd_08
-    * @tc.desc      : test Crypto test_createMd_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0800
+     * @tc.name      : test_createMd_08
+     * @tc.desc      : test Crypto test_createMd_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_08(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_08(): Unit {
         var globalMd: Md
         var mdString: String = "SHA1X"
 
@@ -216,19 +201,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0900
-    * @tc.name      : test_createMd_09
-    * @tc.desc      : test Crypto test_createMd_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_0900
+     * @tc.name      : test_createMd_09
+     * @tc.desc      : test Crypto test_createMd_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_09(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_09(): Unit {
         var globalMd: Md
         var mdString: String = "SHA1"
         var blob: DataBlob = DataBlob("test".toArray())
@@ -242,19 +225,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_1000
-    * @tc.name      : test_createMd_10
-    * @tc.desc      : test Crypto test_createMd_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_1000
+     * @tc.name      : test_createMd_10
+     * @tc.desc      : test Crypto test_createMd_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_createMd_10(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_createMd_10(): Unit {
         var globalMd: Md
         var mdString: String = "SHA512"
         var blob: DataBlob = DataBlob("".toArray())
@@ -268,19 +249,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_1100
-    * @tc.name      : test_Md_digest_11
-    * @tc.desc      : test Crypto test_Md_digest_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_1100
+     * @tc.name      : test_Md_digest_11
+     * @tc.desc      : test Crypto test_Md_digest_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_Md_digest_11(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_Md_digest_11(): Unit {
         var globalMd: Md
         var mdString: String = "SHA512"
         var blob: DataBlob = DataBlob("test".toArray())
@@ -296,19 +275,17 @@ class Test_Md_07 {
         }
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_1200
-    * @tc.name      : test_Md_digest_12
-    * @tc.desc      : test Crypto test_Md_digest_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_Md_07_1200
+     * @tc.name      : test_Md_digest_12
+     * @tc.desc      : test Crypto test_Md_digest_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_Md_digest_12(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_Md_digest_12(): Unit {
         var globalMd: Md
         var mdString: String = "SHA512"
         var blob: DataBlob = DataBlob("test".toArray())

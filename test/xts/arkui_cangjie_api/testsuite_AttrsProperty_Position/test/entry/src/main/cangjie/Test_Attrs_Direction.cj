@@ -37,7 +37,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Menu_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Menu_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Menu")
@@ -65,7 +65,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Refresh_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Refresh_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Refresh")
@@ -93,7 +93,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_RowSplit_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_RowSplit_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin RowSplit")
@@ -121,7 +121,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Stepper_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Stepper_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Stepper")
@@ -149,7 +149,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Badge_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Badge_0600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Badge")
@@ -177,7 +177,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Grid_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Grid_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Grid")
@@ -205,7 +205,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_GridItem_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_GridItem_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin GridItem")
@@ -233,7 +233,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_GridCol_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_GridCol_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin GridCol")
@@ -261,7 +261,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Flex_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Flex_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Flex")
@@ -289,7 +289,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_List_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_List_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin List")
@@ -317,7 +317,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_ListItem_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_ListItem_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin ListItem")
@@ -345,7 +345,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_ListItemGroup_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_ListItemGroup_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin ListItemGroup")
@@ -375,7 +375,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_RelativeContainer_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_RelativeContainer_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin RelativeContainer")
@@ -403,7 +403,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Row_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Row_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Row")
@@ -431,7 +431,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Scroll_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Scroll_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Scroll")
@@ -459,7 +459,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Stack_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Stack_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Stack")
@@ -487,7 +487,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Swiper_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Swiper_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Swiper")
@@ -515,7 +515,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Tabs_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Tabs_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Tabs")
@@ -543,7 +543,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_TabContent_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_TabContent_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin TabContent")
@@ -571,7 +571,7 @@ class Test_EmptyAttrs_Direction {
      * @tc.desic：Empty_Shape_Direction
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Direction_Shape_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckDirection: FindBegin Shape")

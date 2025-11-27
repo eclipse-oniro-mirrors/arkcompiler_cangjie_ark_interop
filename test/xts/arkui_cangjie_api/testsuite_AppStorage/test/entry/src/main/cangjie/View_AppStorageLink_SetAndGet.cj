@@ -63,7 +63,7 @@ class View_AppStorageLink_SetAndGet {
         Column(space: 10) {
             Button("Set Value In ParentComp")
                 .id("change1")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.res1 = AppStorage.set("PropInt", 20)
                     this.res2 = AppStorage.set("PropFloat", 20.00)
@@ -74,7 +74,7 @@ class View_AppStorageLink_SetAndGet {
                     this.res7 = AppStorage.set("PropStruct", BB("HelloCangjie"))
                     this.res8 = AppStorage.set("PropEnum", EE.ee(100))
                     this.res9 = AppStorage.set("PropInt1", 20)
-                }
+                })
 
             Divider()
             Text("ValueInt storage:${this.res1} " + this.ValueInt.toString()).id("Int1")
@@ -120,7 +120,7 @@ class View_ChildLink_SetAndGet00 {
         Column(space: 10) {
             Button("Get LinkValue In ChildComp")
                 .id("change2")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.ValueInt = AppStorage.get<Int64>("PropInt").getOrThrow()
                     this.ValueFloat = AppStorage.get<Float64>("PropFloat").getOrThrow()
@@ -131,7 +131,7 @@ class View_ChildLink_SetAndGet00 {
                     this.ValueStruct = AppStorage.get<BB>("PropStruct").getOrThrow()
                     this.ValueEnum = AppStorage.get<EE>("PropEnum").getOrThrow()
                     this.ValueInt_01 = AppStorage.get<Int64>("ValueInt_01").isNone()
-                }
+                })
 
             Text("ValueInt In ChildComp: " + this.ValueInt.toString()).id("LinkInt2")
             Text("ValueFloat In ChildComp: " + this.ValueFloat.toString()).id("LinkFloat2")
@@ -169,7 +169,7 @@ class View_ChildLink_SetAndGet01 {
         Column(space: 10) {
             Button("change")
                 .id("change3")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.ValueInt = this.ValueInt - 1
                     this.ValueFloat = this.ValueFloat - 1.00
@@ -179,7 +179,7 @@ class View_ChildLink_SetAndGet01 {
                     this.ValueClass = AA("Hello")
                     this.ValueStruct = BB("Hello")
                     this.ValueEnum = EE.ee(10)
-                }
+                })
         }.width(100.percent)
     }
 }

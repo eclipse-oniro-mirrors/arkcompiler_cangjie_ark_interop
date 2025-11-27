@@ -28,47 +28,16 @@ import ohos.base.*
 @Test
 class Test_hiAppEvent_addProcessor {
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0100
-    * @tc.name      : Test_hiappevent_addProcessor_00
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_00
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0200
+     * @tc.name      : Test_hiappevent_addProcessor_01
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func Test_hiappevent_addProcessor_00() {
-        Hilog.info(0, "Test_hiappevent_addProcessor_00", "Test_hiappevent_addProcessor_00_start")
-        var processor: Processor = Processor("test_processor")
-        try {
-            let processorId = HiAppEvent.addProcessor(processor)
-            let res = processorId > 0
-            @Expect(res==false)
-            HiAppEvent.removeProcessor(processorId);
-            HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
-            Hilog.info(0, "Test_hiappevent_addProcessor_00", "Test_hiappevent_addProcessor_00_pass_${processorId}")
-        } catch (e: BusinessException) {
-            @Expect(e.code,-1)
-            Hilog.info(0, "Test_hiappevent_addProcessor_00", "Test_hiappevent_addProcessor_00_fail_${e.toString()}")
-        } finally {
-            Hilog.info(0, "Test_hiappevent_addProcessor_00", "Test_hiappevent_addProcessor_00_end")
-        }
-    }
-
-    
-    /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0200
-    * @tc.name      : Test_hiappevent_addProcessor_01
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_01() {
         Hilog.info(0, "Test_hiappevent_addProcessor_01", "Test_hiappevent_addProcessor_01_start")
         var processor: Processor = Processor("test_processor")
@@ -77,7 +46,6 @@ class Test_hiAppEvent_addProcessor {
             let res = processorId > 0
             @Expect(res==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_01", "Test_hiappevent_addProcessor_01_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -87,17 +55,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0300
-    * @tc.name      : Test_hiappevent_addProcessor_02
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0300
+     * @tc.name      : Test_hiappevent_addProcessor_02
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_02() {
         Hilog.info(0, "Test_hiappevent_addProcessor_02", "Test_hiappevent_addProcessor_02_start")
         try {
@@ -106,9 +73,7 @@ class Test_hiAppEvent_addProcessor {
             let res = processorId > 0
             @Expect(res==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_02", "Test_hiappevent_addProcessor_02_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -118,17 +83,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0400
-    * @tc.name      : Test_hiappevent_addProcessor_03
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0400
+     * @tc.name      : Test_hiappevent_addProcessor_03
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_03() {
         Hilog.info(0, "Test_hiappevent_addProcessor_03", "Test_hiappevent_addProcessor_03_start")
         try {
@@ -137,7 +101,6 @@ class Test_hiAppEvent_addProcessor {
             let res = processorId > 0
             @Expect(res==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_03", "Test_hiappevent_addProcessor_03_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -147,17 +110,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0500
-    * @tc.name      : Test_hiappevent_addProcessor_04
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0500
+     * @tc.name      : Test_hiappevent_addProcessor_04
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_04() {
         Hilog.info(0, "Test_hiappevent_addProcessor_04", "Test_hiappevent_addProcessor_04_start")
         try {
@@ -169,7 +131,6 @@ class Test_hiAppEvent_addProcessor {
             let res = processorId > 0
             @Expect(res==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_04", "Test_hiappevent_addProcessor_04_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -179,17 +140,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0600
-    * @tc.name      : Test_hiappevent_addProcessor_05
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0600
+     * @tc.name      : Test_hiappevent_addProcessor_05
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_05() {
         Hilog.info(0, "Test_hiappevent_addProcessor_05", "Test_hiappevent_addProcessor_05_start")
         try {
@@ -198,7 +158,6 @@ class Test_hiAppEvent_addProcessor {
             let res = processorId > 0
             @Expect(res==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_05", "Test_hiappevent_addProcessor_05_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -208,17 +167,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0700
-    * @tc.name      : Test_hiappevent_addProcessor_06
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0700
+     * @tc.name      : Test_hiappevent_addProcessor_06
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_06() {
         Hilog.info(0, "Test_hiappevent_addProcessor_06", "Test_hiappevent_addProcessor_06_start")
         try {
@@ -230,7 +188,6 @@ class Test_hiAppEvent_addProcessor {
             let res = processorId > 0
             @Expect(res==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_06", "Test_hiappevent_addProcessor_06_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -239,17 +196,17 @@ class Test_hiAppEvent_addProcessor {
             Hilog.info(0, "Test_hiappevent_addProcessor_06", "Test_hiappevent_addProcessor_06_end")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0800
-    * @tc.name      : Test_hiappevent_addProcessor_08
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0800
+     * @tc.name      : Test_hiappevent_addProcessor_08
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_08() {
         Hilog.info(0, "Test_hiappevent_addProcessor_08", "Test_hiappevent_addProcessor_08_start")
         try {
@@ -266,7 +223,6 @@ class Test_hiAppEvent_addProcessor {
             @Expect(res1==false)
             HiAppEvent.removeProcessor(processorId);
             HiAppEvent.removeProcessor(processorId1);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_08", "Test_hiappevent_addProcessor_08_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -276,17 +232,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0900
-    * @tc.name      : Test_hiappevent_addProcessor_07
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_0900
+     * @tc.name      : Test_hiappevent_addProcessor_07
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_07() {
         Hilog.info(0, "Test_hiappevent_addProcessor_07", "Test_hiappevent_addProcessor_07_start")
         try {
@@ -295,7 +250,6 @@ class Test_hiAppEvent_addProcessor {
             let res = processorId > 0
             @Expect(res==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_07", "Test_hiappevent_addProcessor_07_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -305,17 +259,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1000
-    * @tc.name      : Test_hiappevent_addProcessor_09
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1000
+     * @tc.name      : Test_hiappevent_addProcessor_09
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_09() {
         Hilog.info(0, "Test_hiappevent_addProcessor_09", "Test_hiappevent_addProcessor_09_start")
         try {
@@ -328,9 +281,7 @@ class Test_hiAppEvent_addProcessor {
             let res1 = processorId1 > 0
             @Expect(res1==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             HiAppEvent.removeProcessor(processorId1);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_09", "Test_hiappevent_addProcessor_09_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -340,17 +291,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1100
-    * @tc.name      : Test_hiappevent_addProcessor_10
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1100
+     * @tc.name      : Test_hiappevent_addProcessor_10
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_10() {
         Hilog.info(0, "Test_hiappevent_addProcessor_10", "Test_hiappevent_addProcessor_10_start")
         try {
@@ -363,9 +313,7 @@ class Test_hiAppEvent_addProcessor {
             let res1 = processorId1 > 0
             @Expect(res1==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             HiAppEvent.removeProcessor(processorId1);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_10", "Test_hiappevent_addProcessor_10_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -375,17 +323,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1200
-    * @tc.name      : Test_hiappevent_addProcessor_11
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1200
+     * @tc.name      : Test_hiappevent_addProcessor_11
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_11() {
         Hilog.info(0, "Test_hiappevent_addProcessor_11", "Test_hiappevent_addProcessor_11_start")
         try {
@@ -413,17 +360,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1300
-    * @tc.name      : Test_hiappevent_addProcessor_12
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1300
+     * @tc.name      : Test_hiappevent_addProcessor_12
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_12() {
         Hilog.info(0, "Test_hiappevent_addProcessor_12", "Test_hiappevent_addProcessor_12_start")
         try {
@@ -452,17 +398,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1400
-    * @tc.name      : Test_hiappevent_addProcessor_13
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_13
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1400
+     * @tc.name      : Test_hiappevent_addProcessor_13
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_13
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_13() {
         Hilog.info(0, "Test_hiappevent_addProcessor_13", "Test_hiappevent_addProcessor_13_start")
         try {
@@ -472,7 +417,6 @@ class Test_hiAppEvent_addProcessor {
             let res = processorId > 0
             @Expect(res==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_13", "Test_hiappevent_addProcessor_13_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -482,17 +426,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1500
-    * @tc.name      : Test_hiappevent_addProcessor_14
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_14
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1500
+     * @tc.name      : Test_hiappevent_addProcessor_14
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_14
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_14() {
         Hilog.info(0, "Test_hiappevent_addProcessor_14", "Test_hiappevent_addProcessor_14_start")
         try {
@@ -502,7 +445,6 @@ class Test_hiAppEvent_addProcessor {
             let res1 = processorId1 > 0
             @Expect(res1==false)
             HiAppEvent.removeProcessor(processorId1);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_14", "Test_hiappevent_addProcessor_14_pass_${processorId1}")
         } catch (e: Exception) {
             @Expect(false)
@@ -512,17 +454,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1600
-    * @tc.name      : Test_hiappevent_addProcessor_15
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_15
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1600
+     * @tc.name      : Test_hiappevent_addProcessor_15
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_15
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_15() {
         Hilog.info(0, "Test_hiappevent_addProcessor_15", "Test_hiappevent_addProcessor_15_start")
         try {
@@ -541,17 +482,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1700
-    * @tc.name      : Test_hiappevent_addProcessor_16
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_16
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1700
+     * @tc.name      : Test_hiappevent_addProcessor_16
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_16
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_16() {
         Hilog.info(0, "Test_hiappevent_addProcessor_16", "Test_hiappevent_addProcessor_16_start")
         try {
@@ -560,7 +500,6 @@ class Test_hiAppEvent_addProcessor {
             let res = processorId > 0
             @Expect(res==false)
             HiAppEvent.removeProcessor(processorId);
-            @Expect(true)
             Hilog.info(0, "Test_hiappevent_addProcessor_16", "Test_hiappevent_addProcessor_16_pass_${processorId}")
         } catch (e: Exception) {
             @Expect(false)
@@ -570,17 +509,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1800
-    * @tc.name      : Test_hiappevent_addProcessor_17
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_17
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1800
+     * @tc.name      : Test_hiappevent_addProcessor_17
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_17
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_17() {
         Hilog.info(0, "Test_hiappevent_addProcessor_17", "Test_hiappevent_addProcessor_17_start")
         try {
@@ -598,17 +536,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1900
-    * @tc.name      : Test_hiappevent_addProcessor_18
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_18
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_1900
+     * @tc.name      : Test_hiappevent_addProcessor_18
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_18
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_18() {
         Hilog.info(0, "Test_hiappevent_addProcessor_18", "Test_hiappevent_addProcessor_18_start")
         try {
@@ -627,17 +564,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2000
-    * @tc.name      : Test_hiappevent_addProcessor_19
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_19
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2000
+     * @tc.name      : Test_hiappevent_addProcessor_19
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_19
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_19() {
         Hilog.info(0, "Test_hiappevent_addProcessor_19", "Test_hiappevent_addProcessor_19_start")
         try {
@@ -656,17 +592,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2100
-    * @tc.name      : Test_hiappevent_addProcessor_20
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_20
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2100
+     * @tc.name      : Test_hiappevent_addProcessor_20
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_20
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_20() {
         Hilog.info(0, "Test_hiappevent_addProcessor_20", "Test_hiappevent_addProcessor_20_start")
         try {
@@ -684,17 +619,17 @@ class Test_hiAppEvent_addProcessor {
             Hilog.info(0, "Test_hiappevent_addProcessor_20", "Test_hiappevent_addProcessor_20_end")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2200
-    * @tc.name      : Test_hiappevent_addProcessor_21
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_21
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2200
+     * @tc.name      : Test_hiappevent_addProcessor_21
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_21
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_21() {
         Hilog.info(0, "Test_hiappevent_addProcessor_21", "Test_hiappevent_addProcessor_21_start")
         try {
@@ -713,17 +648,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2300
-    * @tc.name      : Test_hiappevent_addProcessor_22
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_22
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2300
+     * @tc.name      : Test_hiappevent_addProcessor_22
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_22
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_22() {
         Hilog.info(0, "Test_hiappevent_addProcessor_22", "Test_hiappevent_addProcessor_22_start")
         try {
@@ -742,17 +676,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2400
-    * @tc.name      : Test_hiappevent_addProcessor_23
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_23
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2400
+     * @tc.name      : Test_hiappevent_addProcessor_23
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_23
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_23() {
         Hilog.info(0, "Test_hiappevent_addProcessor_23", "Test_hiappevent_addProcessor_23_start")
         try {
@@ -771,17 +704,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2500
-    * @tc.name      : Test_hiappevent_addProcessor_24
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_24
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2500
+     * @tc.name      : Test_hiappevent_addProcessor_24
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_24
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_24() {
         Hilog.info(0, "Test_hiappevent_addProcessor_24", "Test_hiappevent_addProcessor_24_start")
         try {
@@ -800,17 +732,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2600
-    * @tc.name      : Test_hiappevent_addProcessor_25
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_25
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2600
+     * @tc.name      : Test_hiappevent_addProcessor_25
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_25
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_25() {
         Hilog.info(0, "Test_hiappevent_addProcessor_25", "Test_hiappevent_addProcessor_25_start")
         try {
@@ -829,17 +760,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2700
-    * @tc.name      : Test_hiappevent_addProcessor_26
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_26
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2700
+     * @tc.name      : Test_hiappevent_addProcessor_26
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_26
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_26() {
         Hilog.info(0, "Test_hiappevent_addProcessor_26", "Test_hiappevent_addProcessor_26_start")
         try {
@@ -858,17 +788,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2800
-    * @tc.name      : Test_hiappevent_addProcessor_27
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_27
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2800
+     * @tc.name      : Test_hiappevent_addProcessor_27
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_27
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_27() {
         Hilog.info(0, "Test_hiappevent_addProcessor_27", "Test_hiappevent_addProcessor_27_start")
         try {
@@ -888,17 +817,17 @@ class Test_hiAppEvent_addProcessor {
             Hilog.info(0, "Test_hiappevent_addProcessor_27", "Test_hiappevent_addProcessor_27_end")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2900
-    * @tc.name      : Test_hiappevent_addProcessor_28
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_28
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_2900
+     * @tc.name      : Test_hiappevent_addProcessor_28
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_28
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_28() {
         Hilog.info(0, "Test_hiappevent_addProcessor_28", "Test_hiappevent_addProcessor_28_start")
         try {
@@ -917,17 +846,16 @@ class Test_hiAppEvent_addProcessor {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_3000
-    * @tc.name      : Test_hiappevent_addProcessor_29
-    * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_29
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_addProcessor_3000
+     * @tc.name      : Test_hiappevent_addProcessor_29
+     * @tc.desc      : test Hiappevent Test_hiappevent_addProcessor_29
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_hiappevent_addProcessor_29() {
         Hilog.info(0, "Test_hiappevent_addProcessor_29", "Test_hiappevent_addProcessor_29_start")
         try {

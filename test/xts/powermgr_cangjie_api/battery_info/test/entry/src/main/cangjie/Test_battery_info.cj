@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-
 package ohos_app_cangjie_entry
 
 import std.unittest.testmacro.*
@@ -27,15 +26,15 @@ import ohos.base.*
 @Test
 class Test_battery_info {
     /*
-    * @tc.number    : Sub_Cangjie_BatteryInfo_Test_battery_info_0100
-    * @tc.name      : test_BatteryInfo
-    * @tc.desc      : test BatteryInfo test_BatteryInfo
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_BatteryInfo_Test_battery_info_0100
+     * @tc.name      : test_BatteryInfo
+     * @tc.desc      : test BatteryInfo test_BatteryInfo
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_BatteryInfo() {
         let batterySOCInfo = BatteryInfo.batterySOC
         let chargingStatusInfo = BatteryInfo.chargingStatus
@@ -52,9 +51,9 @@ class Test_battery_info {
         @Expect(isBatteryPresentInfo)
 
         // The following attribute information needs to be determined according to the environment and cannot be asserted.
-        Hilog.info(0, "cangjietest",chargingStatusInfo.toString())
-        Hilog.info(0, "cangjietest",healthStatusInfo.toString())
-        Hilog.info(0, "cangjietest",pluggedTypeInfo.toString())
-        Hilog.info(0, "cangjietest",batteryCapacityLevelInfo.toString())
+        Hilog.info(0, "cangjietest", chargingStatusInfo.toString())
+        Hilog.info(0, "cangjietest", healthStatusInfo.toString())
+        Hilog.info(0, "cangjietest", pluggedTypeInfo.toString())
+        Hilog.info(0, "cangjietest", batteryCapacityLevelInfo.toString())
     }
 }

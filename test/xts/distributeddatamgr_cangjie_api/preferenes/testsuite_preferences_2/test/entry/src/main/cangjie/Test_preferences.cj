@@ -28,9 +28,6 @@ import std.unittest.*
 import std.unittest.common.*
 import std.unittest.testmacro.*
 import ohos.base.*
-import ohos.data.preferences.Options as PreferencesOptions
-import ohos.data.preferences.ValueType as PreferencesValueType
-import ohos.telephony.call.Call
 import ohos.business_exception.BusinessException
 
 @Test
@@ -49,7 +46,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_context() {
         @Expect(MAX_KEY_LENGTH, 1024u32)
         @Expect(MAX_VALUE_LENGTH, 16777216u32)
@@ -64,7 +61,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getPreferences() {
         var str = "myStore"
         var str1 = "otherStore"
@@ -84,7 +81,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_deletePreferences() {
         var str = "myStore"
         var a = Preferences.getPreferences(getAbilityContext(), str)
@@ -127,7 +124,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_removePreferences() {
         var str = "myStore"
         var a = Preferences.getPreferences(getAbilityContext(), str)
@@ -170,7 +167,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_put_get() {
         var str = "myStore"
         var a = Preferences.getPreferences(getAbilityContext(), str)
@@ -255,7 +252,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_flush() {
         var str = "myStore1"
         var a = Preferences.getPreferences(getAbilityContext(), str)
@@ -284,7 +281,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_clear() {
         var str = "myStore"
         var a = Preferences.getPreferences(getAbilityContext(), str)
@@ -328,7 +325,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_delete() {
         var str = "myStore"
         var a = Preferences.getPreferences(getAbilityContext(), str)
@@ -347,7 +344,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_delete_error() {
         var str = "myStore"
         var a = Preferences.getPreferences(getAbilityContext(), str)
@@ -370,7 +367,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_deletePreferences_error() {
         var str = ""
         try {
@@ -390,7 +387,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_removePreferencesFromCache_error() {
         var str = ""
         try {
@@ -410,7 +407,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_put_error() {
         var str = "myStore"
         var a = Preferences.getPreferences(getAbilityContext(), str)
@@ -431,7 +428,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_option() {
         var str = "myStore"
         var str1 = "otherStore"
@@ -453,7 +450,7 @@ class Test_preferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_CPreferencesValueTypes() {
         var str = "myStore"
         var str1 = "otherStore"

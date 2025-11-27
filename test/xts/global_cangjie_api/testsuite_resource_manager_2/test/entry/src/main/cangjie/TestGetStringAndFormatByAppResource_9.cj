@@ -43,7 +43,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_801(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_801 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -70,7 +70,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_802(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_802 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -97,7 +97,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_803(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_803 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -124,7 +124,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_804(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_804 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -151,7 +151,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_805(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_805 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -178,7 +178,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_806(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_806 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -205,7 +205,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_807(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_807 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -232,7 +232,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_808(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_808 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -259,7 +259,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_809(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_809 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -286,7 +286,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_810(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_810 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -313,7 +313,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_811(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_811 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -340,7 +340,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_812(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_812 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -367,7 +367,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_813(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_813 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -394,7 +394,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_814(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_814 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -421,7 +421,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_815(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_815 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -448,7 +448,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_816(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_816 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -475,7 +475,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_817(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_817 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -502,7 +502,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_818(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_818 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -529,7 +529,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_819(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_819 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -556,7 +556,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_820(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_820 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -583,7 +583,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_821(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_821 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -610,7 +610,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_822(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_822 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -637,7 +637,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_823(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_823 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -664,7 +664,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_824(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_824 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -691,7 +691,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_825(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_825 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -718,7 +718,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_826(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_826 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -744,7 +744,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_827(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_827 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -770,7 +770,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_828(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_828 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -796,7 +796,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_829(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_829 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -822,7 +822,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_830(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_830 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -848,7 +848,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_831(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_831 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -864,84 +864,6 @@ class TestGetStringAndFormatByAppResource_9 {
     }
 
     /*
-     * @tc.number    : Sub_Cangjie_ResourceManager_getStringAndFormatByAppResource_83200
-     * @tc.name      : TestCase_832
-     * @tc.desc      :             get stringAndFormat by AppResource(bundleName="non.existing.bundle_name", moduleName="entry", resourceId=2u32),
-            args=Int32Value(100i32).
-
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_832(): Unit {
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_832 begins.")
-        Hilog.info(0u32, "CangjieTest", "fail to get string.")
-        try {
-            getResourceManager().getString(AppResource("non.existing.bundle_name", "entry", 2u32),
-                ArgsValueType.Int32Value(100i32))
-            @Expect("assertion#831: not throw", "fail to get string.")
-        } catch (e: BusinessException) {
-            @Expect(e.message, "No matching resource is found based on the resource ID.")
-            @Expect(e.code, 9001002i32)
-        }
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_832 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_ResourceManager_getStringAndFormatByAppResource_83300
-     * @tc.name      : TestCase_833
-     * @tc.desc      :             get stringAndFormat by AppResource(bundleName="non.existing.bundle_name", moduleName="entry", resourceId=2u32),
-            args=StringValue("hello").
-
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_833(): Unit {
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_833 begins.")
-        Hilog.info(0u32, "CangjieTest", "fail to get string.")
-        try {
-            getResourceManager().getString(AppResource("non.existing.bundle_name", "entry", 2u32),
-                ArgsValueType.StringValue("hello"))
-            @Expect("assertion#832: not throw", "fail to get string.")
-        } catch (e: BusinessException) {
-            @Expect(e.message, "No matching resource is found based on the resource ID.")
-            @Expect(e.code, 9001002i32)
-        }
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_833 ends.")
-    }
-
-    /*
-     * @tc.number    : Sub_Cangjie_ResourceManager_getStringAndFormatByAppResource_83400
-     * @tc.name      : TestCase_834
-     * @tc.desc      :             get stringAndFormat by AppResource(bundleName="non.existing.bundle_name", moduleName="entry", resourceId=2u32),
-            args=Float32Value(3.140000f32).
-
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func TestCase_834(): Unit {
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_834 begins.")
-        Hilog.info(0u32, "CangjieTest", "fail to get string.")
-        try {
-            getResourceManager().getString(AppResource("non.existing.bundle_name", "entry", 2u32),
-                ArgsValueType.Float32Value(3.140000f32))
-            @Expect("assertion#833: not throw", "fail to get string.")
-        } catch (e: BusinessException) {
-            @Expect(e.message, "No matching resource is found based on the resource ID.")
-            @Expect(e.code, 9001002i32)
-        }
-        Hilog.info(0u32, "CangjieTest", "testcase TestCase_834 ends.")
-    }
-
-    /*
      * @tc.number    : Sub_Cangjie_ResourceManager_getStringAndFormatByAppResource_83500
      * @tc.name      : TestCase_835
      * @tc.desc      :             get stringAndFormat by AppResource(bundleName="non.existing.bundle_name", moduleName="entry", resourceId=UInt32.Min),
@@ -952,7 +874,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_835(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_835 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -978,7 +900,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_836(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_836 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1004,7 +926,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_837(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_837 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1030,7 +952,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_838(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_838 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1056,7 +978,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_839(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_839 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1082,7 +1004,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_840(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_840 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1108,7 +1030,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_841(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_841 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1135,7 +1057,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_842(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_842 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1162,7 +1084,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_843(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_843 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1189,7 +1111,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_844(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_844 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1215,7 +1137,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_845(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_845 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1241,7 +1163,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_846(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_846 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1267,7 +1189,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_847(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_847 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1294,7 +1216,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_848(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_848 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1321,7 +1243,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_849(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_849 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1348,7 +1270,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_850(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_850 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1375,7 +1297,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_851(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_851 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1402,7 +1324,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_852(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_852 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1429,7 +1351,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_853(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_853 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1456,7 +1378,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_854(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_854 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1483,7 +1405,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_855(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_855 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1510,7 +1432,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_856(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_856 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1537,7 +1459,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_857(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_857 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1564,7 +1486,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_858(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_858 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1591,7 +1513,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_859(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_859 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1618,7 +1540,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_860(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_860 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1645,7 +1567,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_861(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_861 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1672,7 +1594,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_862(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_862 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1699,7 +1621,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_863(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_863 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1726,7 +1648,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_864(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_864 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1753,7 +1675,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_865(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_865 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1780,7 +1702,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_866(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_866 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1807,7 +1729,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_867(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_867 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1834,7 +1756,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_868(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_868 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1860,7 +1782,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_869(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_869 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1886,7 +1808,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_870(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_870 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1912,7 +1834,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_871(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_871 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1939,7 +1861,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_872(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_872 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1966,7 +1888,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_873(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_873 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -1993,7 +1915,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_874(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_874 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2020,7 +1942,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_875(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_875 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2047,7 +1969,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_876(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_876 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2074,7 +1996,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_877(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_877 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2100,7 +2022,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_878(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_878 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2126,7 +2048,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_879(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_879 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2152,7 +2074,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_880(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_880 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2178,7 +2100,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_881(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_881 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2204,7 +2126,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_882(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_882 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2230,7 +2152,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_883(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_883 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2256,7 +2178,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_884(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_884 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2282,7 +2204,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_885(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_885 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2308,7 +2230,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_886(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_886 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2334,7 +2256,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_887(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_887 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2360,7 +2282,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_888(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_888 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2386,7 +2308,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_889(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_889 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2413,7 +2335,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_890(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_890 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2440,7 +2362,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_891(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_891 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2467,7 +2389,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_892(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_892 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2494,7 +2416,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_893(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_893 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2521,7 +2443,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_894(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_894 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2548,7 +2470,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_895(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_895 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2574,7 +2496,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_896(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_896 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2600,7 +2522,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_897(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_897 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2626,7 +2548,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_898(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_898 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2652,7 +2574,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_899(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_899 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")
@@ -2678,7 +2600,7 @@ class TestGetStringAndFormatByAppResource_9 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_900(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_900 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get string.")

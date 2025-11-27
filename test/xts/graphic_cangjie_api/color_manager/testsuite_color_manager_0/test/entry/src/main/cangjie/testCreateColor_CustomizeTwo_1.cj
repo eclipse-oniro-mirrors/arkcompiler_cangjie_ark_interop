@@ -35,7 +35,7 @@ class testCreateColor_CustomizeTwo_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_799(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_799 begins.")
         Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -63,7 +63,7 @@ class testCreateColor_CustomizeTwo_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_800(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_800 begins.")
         Hilog.info(0, "cangjietest", "define local variable primaries")
@@ -91,7 +91,7 @@ class testCreateColor_CustomizeTwo_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_801(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_801 begins.")
         Hilog.info(0, "cangjietest", "define local variable primaries")

@@ -20,9 +20,9 @@ import ohos.ark_interop.*
 import std.collection.ArrayList
 
 class Lazy<T> {
-    var creator_: ?()->T
+    var creator_: ?() -> T
     var data_: ?T = None
-    init(creator: ()->T) {
+    init(creator: () -> T) {
         creator_ = creator
     }
 
@@ -42,13 +42,13 @@ class Lazy<T> {
 
 func createRand(length: Int64, _: UInt32, distance: UInt32) {
     let seq = Box(Array<UInt32>(length, repeat: 0))
-    let reset = {begin: Int64 =>
-        for (i in begin..length) {
+    let reset = {
+        begin: Int64 => for (i in begin..length) {
             seq.value[i] = 0
         }
     }
-    let raise = { =>
-        for (i in 0..length) {
+    let raise = {
+        => for (i in 0..length) {
             let idx = length - i - 1
             let id = seq.value[idx]
             if (id < distance - 1) {
@@ -59,9 +59,10 @@ func createRand(length: Int64, _: UInt32, distance: UInt32) {
             }
         }
     }
-    let next = { =>
-        let runes = Array<Rune>(length) { idx =>
-            Rune(seq.value[idx])
+    let next = {
+        =>
+        let runes = Array<Rune>(length) {
+            idx => Rune(seq.value[idx])
         }
         raise()
         String(runes)
@@ -70,9 +71,7 @@ func createRand(length: Int64, _: UInt32, distance: UInt32) {
 }
 
 class StrIterator <: Iterator<String> {
-    StrIterator(
-        let rand: ()->String
-    ) {}
+    StrIterator(let rand: () -> String) {}
 
     public func next(): ?String {
         rand()
@@ -80,7 +79,7 @@ class StrIterator <: Iterator<String> {
 }
 
 struct CharsetOption {
-    let randoms = HashMap<Int64, ()->String>()
+    let randoms = HashMap<Int64, () -> String>()
     CharsetOption(
         let starting: UInt32,
         let ending: UInt32
@@ -100,26 +99,23 @@ struct CharsetOption {
 
 let chara: UInt8 = 'a'
 let charz: UInt8 = 'z'
-
-let charsets = [
-    CharsetOption(UInt32(chara), UInt32(charz)),
-    CharsetOption(25105, 36213)
-]
+let charsets = [CharsetOption(UInt32(chara), UInt32(charz)), CharsetOption(25105, 36213)]
 
 func createStdLaint1(context: JSContext, callInfo: JSCallInfo): JSValue {
     let length = Int64(callInfo[0].toNumber())
     let data = charsets[0].getSamples(length)
     let next = Box("")
 
-    let doInit = context.function { _, _ =>
+    let doInit = context.function {
+        _, _ =>
         next.value = data.next().getOrThrow()
         context.undefined().toJSValue()
     }
-    let doRun = context.function { _, callInfo =>
-        context.string(next.value).toJSValue()
+    let doRun = context.function {
+        _, callInfo => context.string(next.value).toJSValue()
     }
-    let doFini = context.function { _, _ =>
-        context.undefined().toJSValue()
+    let doFini = context.function {
+        _, _ => context.undefined().toJSValue()
     }
 
     context.array([doInit.toJSValue(), doRun.toJSValue(), doFini.toJSValue()]).toJSValue()
@@ -130,15 +126,16 @@ func createStdUtf16(context: JSContext, callInfo: JSCallInfo): JSValue {
     let data = charsets[0].getSamples(length)
     let next = Box("")
 
-    let doInit = context.function { _, _ =>
+    let doInit = context.function {
+        _, _ =>
         next.value = data.next().getOrThrow()
         context.undefined().toJSValue()
     }
-    let doRun = context.function { _, callInfo =>
-        context.string(next.value).toJSValue()
+    let doRun = context.function {
+        _, callInfo => context.string(next.value).toJSValue()
     }
-    let doFini = context.function { _, _ =>
-        context.undefined().toJSValue()
+    let doFini = context.function {
+        _, _ => context.undefined().toJSValue()
     }
 
     context.array([doInit.toJSValue(), doRun.toJSValue(), doFini.toJSValue()]).toJSValue()
@@ -147,18 +144,19 @@ func createStdUtf16(context: JSContext, callInfo: JSCallInfo): JSValue {
 func createNewLaint1(context: JSContext, callInfo: JSCallInfo): JSValue {
     let length = Int64(callInfo[0].toNumber())
     let data = charsets[0].getSamples(length)
-    let next = Box(Utf16String.empty)
+    let next = Box(Utf16String.EMPTY)
 
-    let doInit = context.function { _, _ =>
+    let doInit = context.function {
+        _, _ =>
         next.value.dispose()
         next.value = Utf16String(data.next().getOrThrow())
         context.undefined().toJSValue()
     }
-    let doRun = context.function { _, callInfo =>
-        context.string(next.value).toJSValue()
+    let doRun = context.function {
+        _, callInfo => context.string(next.value).toJSValue()
     }
-    let doFini = context.function { _, _ =>
-        context.undefined().toJSValue()
+    let doFini = context.function {
+        _, _ => context.undefined().toJSValue()
     }
 
     context.array([doInit.toJSValue(), doRun.toJSValue(), doFini.toJSValue()]).toJSValue()
@@ -167,18 +165,19 @@ func createNewLaint1(context: JSContext, callInfo: JSCallInfo): JSValue {
 func createNewUtf16(context: JSContext, callInfo: JSCallInfo): JSValue {
     let length = Int64(callInfo[0].toNumber())
     let data = charsets[1].getSamples(length)
-    let next = Box(Utf16String.empty)
+    let next = Box(Utf16String.EMPTY)
 
-    let doInit = context.function { _, _ =>
+    let doInit = context.function {
+        _, _ =>
         next.value.dispose()
         next.value = Utf16String(data.next().getOrThrow())
         context.undefined().toJSValue()
     }
-    let doRun = context.function { _, callInfo =>
-        context.string(next.value).toJSValue()
+    let doRun = context.function {
+        _, callInfo => context.string(next.value).toJSValue()
     }
-    let doFini = context.function { _, _ =>
-        context.undefined().toJSValue()
+    let doFini = context.function {
+        _, _ => context.undefined().toJSValue()
     }
 
     context.array([doInit.toJSValue(), doRun.toJSValue(), doFini.toJSValue()]).toJSValue()
@@ -193,4 +192,3 @@ func readStrToC(context: JSContext, callInfo: JSCallInfo): JSValue {
     let value = callInfo[0].toString()
     context.undefined().toJSValue()
 }
-

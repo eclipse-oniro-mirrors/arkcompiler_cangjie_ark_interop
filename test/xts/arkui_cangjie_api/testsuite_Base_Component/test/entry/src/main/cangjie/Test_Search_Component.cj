@@ -48,7 +48,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_001() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_001 start")
         driver.delayMs(1000)
@@ -70,7 +70,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_002() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_002 start")
         driver.delayMs(1000)
@@ -92,7 +92,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_003() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_003 start")
         driver.delayMs(1000)
@@ -114,7 +114,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_004() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_004 start")
         driver.delayMs(1000)
@@ -136,7 +136,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_005() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_005 start")
         driver.delayMs(1000)
@@ -158,7 +158,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_006() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_006 start")
         driver.delayMs(1000)
@@ -187,7 +187,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_007() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_007 start")
         driver.delayMs(1000)
@@ -210,7 +210,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_008() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_008 start")
         driver.delayMs(1000)
@@ -231,7 +231,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_009() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_009 start")
         driver.delayMs(1000)
@@ -261,7 +261,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_010() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_010 start")
         driver.delayMs(1000)
@@ -295,7 +295,7 @@ class Test_Search_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Search_component_012() {
         Hilog.info(0,"",   "cangjietest", "Test_Search_component_011 start")
         driver.delayMs(1000)

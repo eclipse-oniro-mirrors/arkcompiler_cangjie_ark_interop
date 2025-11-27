@@ -38,7 +38,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_AlphabetIndexer_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Blank_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Button_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Checkbox_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_CheckboxGroup_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin CheckboxGroup")
@@ -163,7 +163,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_DataPanel_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin DataPanel")
@@ -188,7 +188,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_DatePicker_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin DatePicker")
@@ -213,7 +213,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Divider_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Divider")
@@ -238,7 +238,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Gauge_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Gauge")
@@ -263,7 +263,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Image_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Image")
@@ -288,7 +288,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_ImageSpan_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin ImageSpan")
@@ -313,7 +313,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_LoadingProgress_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin LoadingProgress")
@@ -338,7 +338,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Menu_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Menu")
@@ -363,7 +363,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_MenuItem_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin MenuItem")
@@ -388,7 +388,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_MenuItemGroup_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin MenuItemGroup")
@@ -413,7 +413,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Progress_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Progress")
@@ -438,7 +438,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_QRCode_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin QRCode")
@@ -463,7 +463,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Radio_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Radio")
@@ -488,7 +488,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Rating_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Rating")
@@ -513,7 +513,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Refresh_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Refresh")
@@ -538,7 +538,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_RichEditor_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin RichEditor")
@@ -563,7 +563,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_RichText_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin RichText")
@@ -588,7 +588,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_RowSplit_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin RowSplit")
@@ -613,7 +613,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_ScrollBar_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin ScrollBar")
@@ -638,7 +638,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Search_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Search")
@@ -663,7 +663,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Slider_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Slider")
@@ -688,7 +688,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Stepper_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Stepper")
@@ -713,7 +713,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_StepperItem_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin StepperItem")
@@ -738,7 +738,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Text_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Text")
@@ -763,7 +763,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_TextArea_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin TextArea")
@@ -788,7 +788,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_TextClock_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin TextClock")
@@ -813,7 +813,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_TextInput_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin TextInput")
@@ -838,7 +838,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_TextPicker_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin TextPicker")
@@ -863,7 +863,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_TextTimer_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin TextTimer")
@@ -888,7 +888,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Toggle_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Toggle")
@@ -913,7 +913,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Web_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Web")
@@ -938,7 +938,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Select_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Select")
@@ -963,7 +963,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Badge_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Badge")
@@ -988,7 +988,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Column_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Column")
@@ -1013,7 +1013,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Grid_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Grid")
@@ -1038,7 +1038,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_GridItem_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin GridItem")
@@ -1063,7 +1063,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_GridRow_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin GridRow")
@@ -1088,7 +1088,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_GridCol_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin GridCol")
@@ -1113,7 +1113,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Flex_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Flex")
@@ -1138,7 +1138,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_List_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin List")
@@ -1163,7 +1163,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_ListItem_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin ListItem")
@@ -1188,7 +1188,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_ListItemGroup_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin ListItemGroup")
@@ -1214,7 +1214,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_RelativeContainer_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin RelativeContainer")
@@ -1239,7 +1239,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Row_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Row")
@@ -1264,7 +1264,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Scroll_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Scroll")
@@ -1289,7 +1289,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Stack_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Stack")
@@ -1314,7 +1314,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Swiper_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Swiper")
@@ -1339,7 +1339,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Tabs_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Tabs")
@@ -1364,7 +1364,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_TabContent_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin TabContent")
@@ -1389,7 +1389,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Circle_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Circle")
@@ -1414,7 +1414,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Line_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Line")
@@ -1439,7 +1439,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Rect_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Rect")
@@ -1464,7 +1464,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Shape_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Shape")
@@ -1489,7 +1489,7 @@ class Test_EmptyAttrs_Sepia {
      * @tc.desic：Empty_Path_Sepia
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Sepia_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckSepia: FindBegin Path")

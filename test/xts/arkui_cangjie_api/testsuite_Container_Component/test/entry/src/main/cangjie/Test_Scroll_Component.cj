@@ -49,7 +49,7 @@ class Test_Scroll_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll_Component_001() {
         let Inspector = getInspectorByKey("Scroll_component")
         let aar = Inspector.split("useShadowBatching")
@@ -71,7 +71,7 @@ class Test_Scroll_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll_Component_002() {
         let Inspector = getInspectorByKey("Scroll_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -89,7 +89,7 @@ class Test_Scroll_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll_Component_003() {
         let Inspector = getInspectorByKey("Scroll_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -107,7 +107,7 @@ class Test_Scroll_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll_Component_004() {
         let Inspector = getInspectorByKey("Scroll_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -125,7 +125,7 @@ class Test_Scroll_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll_Component_005() {
         let Inspector = getInspectorByKey("Scroll_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -142,7 +142,7 @@ class Test_Scroll_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll_Component_008() {
         let button = driver.findComponent(On().id("listPosition"))
         let text = button.getOrThrow().getText()
@@ -163,7 +163,7 @@ class Test_Scroll_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll_Component_009() {
         let button1 = driver.findComponent(On().id("textxOffset"))
         let text = button1.getOrThrow().getText()
@@ -186,7 +186,7 @@ class Test_Scroll_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll_Component_010() {
         let button1 = driver.findComponent(On().id("scrollBottom"))
         button1.getOrThrow().click()
@@ -206,7 +206,7 @@ class Test_Scroll_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll_Component_011() {
         let button = driver.findComponent(On().id("Scroll_component"))
         button.getOrThrow().scrollToTop()

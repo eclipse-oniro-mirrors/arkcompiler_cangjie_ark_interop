@@ -100,7 +100,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_AlphabetIndexer_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin AlphabetIndexer")
@@ -129,7 +129,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Blank_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Blank")
@@ -158,7 +158,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Button_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Button")
@@ -187,7 +187,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Checkbox_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Checkbox")
@@ -213,7 +213,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_CheckboxGroup_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin CheckboxGroup")
@@ -241,7 +241,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_DataPanel_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin DataPanel")
@@ -270,7 +270,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_DatePicker_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin DatePicker")
@@ -299,7 +299,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Divider_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Divider")
@@ -328,7 +328,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Gauge_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Gauge")
@@ -357,7 +357,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Image_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Image")
@@ -386,7 +386,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_ImageSpan_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin ImageSpan")
@@ -404,7 +404,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_LoadingProgress_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin LoadingProgress")
@@ -433,7 +433,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Menu_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Menu")
@@ -462,7 +462,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_MenuItem_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin MenuItem")
@@ -491,7 +491,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_MenuItemGroup_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin MenuItemGroup")
@@ -520,7 +520,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Progress_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Progress")
@@ -549,7 +549,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_QRCode_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin QRCode")
@@ -578,7 +578,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Radio_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Radio")
@@ -604,7 +604,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Rating_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Rating")
@@ -633,7 +633,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Refresh_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Refresh")
@@ -662,7 +662,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_RichEditor_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin RichEditor")
@@ -691,7 +691,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_RichText_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin RichText")
@@ -720,7 +720,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_RowSplit_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin RowSplit")
@@ -749,7 +749,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_ScrollBar_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin ScrollBar")
@@ -778,7 +778,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Search_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Search")
@@ -807,7 +807,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Slider_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Slider")
@@ -837,7 +837,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Stepper_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Stepper_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Stepper")
@@ -866,7 +866,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_StepperItem_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_StepperItem_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin StepperItem")
@@ -895,7 +895,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Text_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Text_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Text")
@@ -924,7 +924,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_TextArea_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_TextArea_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin TextArea")
@@ -953,7 +953,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_TextClock_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_TextClock_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin TextClock")
@@ -982,7 +982,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_TextInput_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_TextInput_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin TextInput")
@@ -1011,7 +1011,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_TextPicker_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_TextPicker_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin TextPicker")
@@ -1040,7 +1040,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_TextTimer_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_TextTimer_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin TextTimer")
@@ -1069,7 +1069,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Toggle_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Toggle_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Toggle")
@@ -1098,7 +1098,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Web_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Web_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Web")
@@ -1127,7 +1127,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Select_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Select_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Select")
@@ -1156,7 +1156,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Badge_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Badge_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Badge")
@@ -1185,7 +1185,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Column_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Column_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Column")
@@ -1214,7 +1214,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Grid_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Grid_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Grid")
@@ -1243,7 +1243,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_GridItem_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_GridItem_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin GridItem")
@@ -1272,7 +1272,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_GridRow_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_GridRow_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin GridRow")
@@ -1301,7 +1301,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_GridCol_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_GridCol_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin GridCol")
@@ -1330,7 +1330,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Flex_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Flex_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Flex")
@@ -1359,7 +1359,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_List_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_List_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin List")
@@ -1388,7 +1388,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_ListItem_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_ListItem_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin ListItem")
@@ -1417,7 +1417,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_ListItemGroup_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_ListItemGroup_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin ListItemGroup")
@@ -1448,7 +1448,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_RelativeContainer_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_RelativeContainer_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin RelativeContainer")
@@ -1477,7 +1477,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Row_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Row_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Row")
@@ -1506,7 +1506,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Scroll_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Scroll_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Scroll")
@@ -1535,7 +1535,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Stack_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Stack_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Stack")
@@ -1564,7 +1564,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Swiper_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Swiper_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Swiper")
@@ -1593,7 +1593,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Tabs_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Tabs_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Tabs")
@@ -1622,7 +1622,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_TabContent_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_TabContent_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin TabContent")
@@ -1648,7 +1648,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Circle_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Circle_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Circle")
@@ -1677,7 +1677,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Line_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Line_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Line")
@@ -1706,7 +1706,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Rect_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Rect_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Rect")
@@ -1735,7 +1735,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Shape_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Shape_6100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Shape")
@@ -1766,7 +1766,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Path_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Path_6300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Path")
@@ -1795,7 +1795,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Canvas_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Canvas_6400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Canvas")
@@ -1824,7 +1824,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Video_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Video_6500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Video")
@@ -1854,7 +1854,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Counter_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Counter_7000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Counter")
@@ -1883,7 +1883,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_PatternLock_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_PatternLock_7100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin PatternLock")
@@ -1912,7 +1912,7 @@ class Test_EmptyEvent_onTouch {
      * @tc.desic：Empty_Ellipse_onTouch
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyEvent_onTouch_Ellipse_7200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "Check onTouch: FindBegin Ellipse")

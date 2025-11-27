@@ -23,17 +23,17 @@ import kit.ImageKit.*
 
 @Test
 class Test_ImageSource_creatPixelMap_04 {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0100
-    * @tc.name      : test_ImageSource_creatPixelMap_01
-    * @tc.desc      : test Image test_ImageSource_creatPixelMap_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0100
+     * @tc.name      : test_ImageSource_creatPixelMap_01
+     * @tc.desc      : test Image test_ImageSource_creatPixelMap_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_creatPixelMap_01(): Unit {
         var globalImageSource: ImageSource
         var globalPixelMap: PixelMap
@@ -47,17 +47,16 @@ class Test_ImageSource_creatPixelMap_04 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0200
-    * @tc.name      : test_ImageSource_creatPixelMap_02
-    * @tc.desc      : test Image test_ImageSource_creatPixelMap_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0200
+     * @tc.name      : test_ImageSource_creatPixelMap_02
+     * @tc.desc      : test Image test_ImageSource_creatPixelMap_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_creatPixelMap_02(): Unit {
         var globalImageSource: ImageSource
         var globalPixelMap: PixelMap
@@ -82,17 +81,16 @@ class Test_ImageSource_creatPixelMap_04 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0300
-    * @tc.name      : test_creatImageSource_03
-    * @tc.desc      : test Image test_creatImageSource_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0300
+     * @tc.name      : test_creatImageSource_03
+     * @tc.desc      : test Image test_creatImageSource_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_creatImageSource_03(): Unit {
         var globalImageSource: ImageSource
         var globalPixelMap: PixelMap
@@ -117,17 +115,16 @@ class Test_ImageSource_creatPixelMap_04 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0400
-    * @tc.name      : test_ImageSource_creatPixelMap_04
-    * @tc.desc      : test Image test_ImageSource_creatPixelMap_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0400
+     * @tc.name      : test_ImageSource_creatPixelMap_04
+     * @tc.desc      : test Image test_ImageSource_creatPixelMap_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_creatPixelMap_04(): Unit {
         var globalImageSource: ImageSource
         var globalPixelMapList: Array<PixelMap>
@@ -153,17 +150,16 @@ class Test_ImageSource_creatPixelMap_04 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0500
-    * @tc.name      : test_ImageSource_creatPixelMap_05
-    * @tc.desc      : test Image test_ImageSource_creatPixelMap_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0500
+     * @tc.name      : test_ImageSource_creatPixelMap_05
+     * @tc.desc      : test Image test_ImageSource_creatPixelMap_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_creatPixelMap_05(): Unit {
         var globalImageSource: ImageSource
         var globalPixelMapList: Array<PixelMap>
@@ -189,17 +185,16 @@ class Test_ImageSource_creatPixelMap_04 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0600
-    * @tc.name      : test_ImageSource_getFrameCount_06
-    * @tc.desc      : test Image test_ImageSource_getFrameCount_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0600
+     * @tc.name      : test_ImageSource_getFrameCount_06
+     * @tc.desc      : test Image test_ImageSource_getFrameCount_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_getFrameCount_06(): Unit {
         var globalImageSource: ImageSource
         var FrameCount: UInt32
@@ -213,17 +208,16 @@ class Test_ImageSource_creatPixelMap_04 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0700
-    * @tc.name      : test_ImageSource_getFrameCount_07
-    * @tc.desc      : test Image test_ImageSource_getFrameCount_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0700
+     * @tc.name      : test_ImageSource_getFrameCount_07
+     * @tc.desc      : test Image test_ImageSource_getFrameCount_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_getFrameCount_07(): Unit {
         var globalImageSource: ImageSource
         var FrameCount: UInt32
@@ -237,17 +231,16 @@ class Test_ImageSource_creatPixelMap_04 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0800
-    * @tc.name      : test_ImageSource_getDelayTimeList_08
-    * @tc.desc      : test Image test_ImageSource_getDelayTimeList_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImageSource_creatPixelMap_04_0800
+     * @tc.name      : test_ImageSource_getDelayTimeList_08
+     * @tc.desc      : test Image test_ImageSource_getDelayTimeList_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_getDelayTimeList_08(): Unit {
         var globalImageSource: ImageSource
         var delayList: Array<Int32>

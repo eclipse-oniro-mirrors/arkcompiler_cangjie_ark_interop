@@ -23,17 +23,17 @@ import kit.ImageKit.*
 
 @Test
 class Test_Image_release {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_Image_release_0100
-    * @tc.name      : test_PixelMap_release_01
-    * @tc.desc      : test Image test_PixelMap_release_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_Image_release_0100
+     * @tc.name      : test_PixelMap_release_01
+     * @tc.desc      : test Image test_PixelMap_release_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_release_01(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
         var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888)
@@ -49,17 +49,16 @@ class Test_Image_release {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_Image_release_0200
-    * @tc.name      : test_ImageSource_release_02
-    * @tc.desc      : test Image test_ImageSource_release_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_Image_release_0200
+     * @tc.name      : test_ImageSource_release_02
+     * @tc.desc      : test Image test_ImageSource_release_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_release_02(): Unit {
         var opts = DecodingOptions(
             sampleSize: 1,
@@ -81,17 +80,16 @@ class Test_Image_release {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_Image_release_0300
-    * @tc.name      : test_ImageSource_release_03
-    * @tc.desc      : test Image test_ImageSource_release_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_Image_release_0300
+     * @tc.name      : test_ImageSource_release_03
+     * @tc.desc      : test Image test_ImageSource_release_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_release_03(): Unit {
         var opts = DecodingOptions(
             sampleSize: 1,
@@ -113,17 +111,16 @@ class Test_Image_release {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_Image_release_0500
-    * @tc.name      : test_packer_release_05
-    * @tc.desc      : test Image test_packer_release_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_Image_release_0500
+     * @tc.name      : test_packer_release_05
+     * @tc.desc      : test Image test_packer_release_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packer_release_05(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
         var opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: PixelMapFormat.Rgba8888)

@@ -50,7 +50,7 @@ class Test_onAreaChange_Event {
      * @tc.desic：onAreaChange_Event
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_onAreaChange_Event_001() {
         let text = driver.findComponent(On().id("text"))
         let value1 = text.getOrThrow().getText()

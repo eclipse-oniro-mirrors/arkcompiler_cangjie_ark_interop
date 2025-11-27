@@ -54,17 +54,17 @@ public class View_Foreach {
         Column() {
             Button("clear")
                 .id("clear")
-                .onClick {
+                .onClick({
                     ClickEvent =>
-                    Hilog.info(0, "cangjietest", "=== size ${dataSource.size}")
+                    Hilog.info(0, "cangjietest", "=== size ${dataSource.size})")
                     dataSource.clear()
                     Hilog.info(0, "cangjietest", "=== size ${dataSource.size}")
-                }
-            Button("update").id("update").onClick {
+                })
+            Button("update").id("update").onClick({
                 ClickEvent => for (i in 0..20) {
-                    dataSource.append("${i}")
+                    dataSource.append("${i})")
                 }
-            }
+            })
 
             List() {
                 ForEach(dataSource,

@@ -47,7 +47,7 @@ class Test_State_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StateNumber_001() {
         Hilog.info(0, "cangjietest", "test", "Test_StateNumber_001 Start")
         let button = driver.waitForComponent(On().id("state1"), 5000).getOrThrow()
@@ -70,7 +70,7 @@ class Test_State_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StateNumber_002() {
         Hilog.info(0, "cangjietest", "test", "Test_StateNumber_002 Start")
         let button = driver.waitForComponent(On().id("state2"), 5000).getOrThrow()
@@ -93,7 +93,7 @@ class Test_State_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StateNumber_003() {
         Hilog.info(0, "cangjietest", "test", "Test_StateNumber_003 Start")
         let button = driver.waitForComponent(On().id("state3"), 5000).getOrThrow()
@@ -116,7 +116,7 @@ class Test_State_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StateNumber_004() {
         Hilog.info(0, "cangjietest", "test", "Test_StateNumber_004 Start")
         let button = driver.waitForComponent(On().id("state4"), 5000).getOrThrow()
@@ -139,7 +139,7 @@ class Test_State_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StateNumber_005() {
         Hilog.info(0, "cangjietest", "test", "Test_StateNumber_005 Start")
         let button = driver.waitForComponent(On().id("state5"), 5000).getOrThrow()
@@ -162,7 +162,7 @@ class Test_State_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StateNumber_006() {
         Hilog.info(0, "cangjietest", "test", "Test_StateNumber_006 Start")
         let button = driver.waitForComponent(On().id("state6"), 5000).getOrThrow()
@@ -185,7 +185,7 @@ class Test_State_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_StateNumber_007() {
         Hilog.info(0, "cangjietest", "test", "Test_StateNumber_007 Start")
         let button = driver.waitForComponent(On().id("state7"), 5000).getOrThrow()

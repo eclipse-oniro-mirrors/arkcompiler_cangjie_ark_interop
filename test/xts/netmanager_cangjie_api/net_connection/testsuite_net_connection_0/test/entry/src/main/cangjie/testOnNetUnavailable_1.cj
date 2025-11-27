@@ -39,7 +39,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_210(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_210 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -68,7 +68,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_211(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_211 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -97,7 +97,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_212(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_212 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -126,7 +126,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_213(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_213 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -155,7 +155,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_214(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_214 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -184,7 +184,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_215(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_215 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -213,7 +213,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_216(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_216 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -242,7 +242,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_217(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_217 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -271,7 +271,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_218(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_218 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -300,7 +300,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_219(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_219 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -329,7 +329,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_220(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_220 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -358,7 +358,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_221(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_221 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -387,7 +387,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_222(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_222 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -416,7 +416,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_223(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_223 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -445,7 +445,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_224(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_224 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -474,7 +474,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_225(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_225 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -503,7 +503,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_226(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_226 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -532,7 +532,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_227(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_227 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -561,7 +561,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_228(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_228 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -590,7 +590,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_229(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_229 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -619,7 +619,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_230(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_230 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -648,7 +648,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_231(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_231 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")
@@ -677,7 +677,7 @@ class testOnNetUnavailable_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_232(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_232 begins.")
         Hilog.info(0, "cangjietest","define local variable netCon")

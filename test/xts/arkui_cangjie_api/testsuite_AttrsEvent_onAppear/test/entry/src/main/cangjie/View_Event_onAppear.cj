@@ -75,8 +75,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Blank") {
                     if (this.isShow) {
@@ -86,8 +86,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Button") {
                     if (this.isShow) {
@@ -98,8 +98,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Checkbox") {
                     if (this.isShow) {
@@ -109,8 +109,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "CheckboxGroup") {
                     if (this.isShow) {
@@ -120,8 +120,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "DataPanel") {
                     if (this.isShow) {
@@ -131,8 +131,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "DatePicker") {
                     if (this.isShow) {
@@ -142,8 +142,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Divider") {
                     if (this.isShow) {
@@ -153,8 +153,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Gauge") {
                     if (this.isShow) {
@@ -166,8 +166,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Image") {
                     if (this.isShow) {
@@ -178,8 +178,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "ImageSpan") {
                     if (this.isShow) {
@@ -191,8 +191,8 @@ class View_EmptyAttrs_onAppear {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                                .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                                .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                                .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                         }
                     }
                 } else if (this.targetView == "LoadingProgress") {
@@ -203,8 +203,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Menu") {
                     if (this.isShow) {
@@ -222,8 +222,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "MenuItem") {
                     if (this.isShow) {
@@ -235,8 +235,8 @@ class View_EmptyAttrs_onAppear {
                                     .width(80.percent)
                                     .height(20.percent)
                                     .backgroundColor(this.Colors[0])
-                                    .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                                    .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                                    .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                                    .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                             }.width(80.percent).height(80.percent)
                         }.width(80.percent).height(10.percent)
                     }
@@ -253,8 +253,8 @@ class View_EmptyAttrs_onAppear {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                                .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                                .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                                .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                         }.width(80.percent).height(10.percent)
                     }
                 } else if (this.targetView == "Progress") {
@@ -265,8 +265,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "QRCode") {
                     if (this.isShow) {
@@ -276,8 +276,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Radio") {
                     if (this.isShow) {
@@ -287,8 +287,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Rating") {
                     if (this.isShow) {
@@ -298,8 +298,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Refresh") {
                     if (this.isShow) {
@@ -311,8 +311,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "RichEditor") {
                     if (this.isShow) {
@@ -322,8 +322,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "RichText") {
                     if (this.isShow) {
@@ -334,8 +334,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "RowSplit") {
                     if (this.isShow) {
@@ -356,8 +356,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "ScrollBar") {
                     if (this.isShow) {
@@ -387,8 +387,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Search") {
                     if (this.isShow) {
@@ -398,8 +398,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Slider") {
                     if (this.isShow) {
@@ -409,8 +409,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Stepper") {
                     if (this.isShow) {
@@ -424,8 +424,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "StepperItem") {
                     if (this.isShow) {
@@ -438,8 +438,8 @@ class View_EmptyAttrs_onAppear {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                                .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                                .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                                .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                         }.width(80.percent).height(10.percent)
                     }
                 } else if (this.targetView == "Text") {
@@ -450,8 +450,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "TextArea") {
                     if (this.isShow) {
@@ -461,8 +461,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "TextClock") {
                     if (this.isShow) {
@@ -472,8 +472,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "TextInput") {
                     if (this.isShow) {
@@ -483,8 +483,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "TextPicker") {
                     if (this.isShow) {
@@ -494,8 +494,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "TextTimer") {
                     if (this.isShow) {
@@ -505,8 +505,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Toggle") {
                     if (this.isShow) {
@@ -516,8 +516,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Web") {
                     if (this.isShow) {
@@ -529,8 +529,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Select") {
                     if (this.isShow) {
@@ -543,8 +543,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Badge") {
                     if (this.isShow) {
@@ -556,8 +556,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Column") {
                     if (this.isShow) {
@@ -570,8 +570,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Grid") {
                     if (this.isShow) {
@@ -585,8 +585,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "GridItem") {
                     if (this.isShow) {
@@ -599,8 +599,8 @@ class View_EmptyAttrs_onAppear {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                                .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                                .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                                .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                         }).width(80.percent).height(10.percent)
                     }
                 } else if (this.targetView == "GridRow") {
@@ -615,8 +615,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "GridCol") {
                     if (this.isShow) {
@@ -629,8 +629,8 @@ class View_EmptyAttrs_onAppear {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                                .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                                .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                                .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                         }.width(80.percent).height(10.percent)
                     }
                 } else if (this.targetView == "Flex") {
@@ -643,8 +643,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "List") {
                     if (this.isShow) {
@@ -660,8 +660,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "ListItem") {
                     if (this.isShow) {
@@ -675,8 +675,8 @@ class View_EmptyAttrs_onAppear {
                                     .width(80.percent)
                                     .height(20.percent)
                                     .backgroundColor(this.Colors[0])
-                                    .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                                    .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                                    .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                                    .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                             }.width(80.percent).height(80.percent)
                         }.width(80.percent).height(10.percent)
                     }
@@ -693,8 +693,8 @@ class View_EmptyAttrs_onAppear {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                                .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                                .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                                .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                         }.width(80.percent).height(10.percent)
                     }
                 } else if (this.targetView == "RelativeContainer") {
@@ -708,8 +708,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Row") {
                     if (this.isShow) {
@@ -722,8 +722,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Scroll") {
                     if (this.isShow) {
@@ -736,8 +736,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Stack") {
                     if (this.isShow) {
@@ -750,8 +750,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Swiper") {
                     if (this.isShow) {
@@ -764,8 +764,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Tabs") {
                     if (this.isShow) {
@@ -779,8 +779,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "TabContent") {
                     if (this.isShow) {
@@ -794,8 +794,8 @@ class View_EmptyAttrs_onAppear {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                                .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                                .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                                .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                         }.width(80.percent).height(10.percent)
                     }
                 } else if (this.targetView == "Circle") {
@@ -806,8 +806,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Line") {
                     if (this.isShow) {
@@ -820,8 +820,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Rect") {
                     if (this.isShow) {
@@ -831,8 +831,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Shape") {
                     if (this.isShow) {
@@ -842,8 +842,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Path") {
                     if (this.isShow) {
@@ -854,8 +854,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Canvas") {
                     if (this.isShow) {
@@ -865,8 +865,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Video") {
                     if (this.isShow) {
@@ -876,8 +876,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "FlowItem") {
                     if (this.isShow) {
@@ -892,8 +892,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "PatternLock") {
                     if (this.isShow) {
@@ -903,8 +903,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 } else if (this.targetView == "Ellipse") {
                     if (this.isShow) {
@@ -914,8 +914,8 @@ class View_EmptyAttrs_onAppear {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onAppear {=> this.appearStatus = "Trigger OnAppear Success"}
-                            .onDisAppear {=> this.appearStatus = "Trigger onDisAppear Success"}
+                            .onAppear ({=> this.appearStatus = "Trigger OnAppear Success"})
+                            .onDisAppear ({=> this.appearStatus = "Trigger onDisAppear Success"})
                     }
                 }
             }

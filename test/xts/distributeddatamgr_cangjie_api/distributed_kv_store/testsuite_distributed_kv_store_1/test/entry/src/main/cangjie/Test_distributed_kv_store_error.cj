@@ -56,7 +56,7 @@ class Test_distributed_kv_store_error {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_closeKVStore_error() {
         let kvstoreName = "myStoreId"
         try {
@@ -76,7 +76,7 @@ class Test_distributed_kv_store_error {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_deleteKVStore_error() {
         let kvstoreName = "myStoreId"
         try {
@@ -96,7 +96,7 @@ class Test_distributed_kv_store_error {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getAllKVStoreId_error() {
         let kvstoreName = "myStoreId"
         try {

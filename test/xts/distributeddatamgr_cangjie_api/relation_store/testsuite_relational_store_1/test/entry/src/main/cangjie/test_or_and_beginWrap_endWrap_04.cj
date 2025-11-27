@@ -20,10 +20,11 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
+import ohos.business_exception.BusinessException
 
 @Test
 class Test_or_and_beginWrap_endWrap_04 {
@@ -35,10 +36,11 @@ class Test_or_and_beginWrap_endWrap_04 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -85,111 +87,106 @@ class Test_or_and_beginWrap_endWrap_04 {
     public override func afterEach(): Unit {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0100
-    * @tc.name      : test_beginwrap_01
-    * @tc.desc      : test RelationStore test_beginwrap_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0100
+     * @tc.name      : test_beginwrap_01
+     * @tc.desc      : test RelationStore test_beginwrap_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_beginwrap_01(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.beginWrap()
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, -1)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0200
-    * @tc.name      : test_beginwrap_02
-    * @tc.desc      : test RelationStore test_beginwrap_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0200
+     * @tc.name      : test_beginwrap_02
+     * @tc.desc      : test RelationStore test_beginwrap_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_beginwrap_02(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.beginWrap().equalTo("NAME", RelationalStoreValueType.StringValue("Lisa"))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, -1)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0300
-    * @tc.name      : test_endwrap_03
-    * @tc.desc      : test RelationStore test_endwrap_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0300
+     * @tc.name      : test_endwrap_03
+     * @tc.desc      : test RelationStore test_endwrap_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_endwrap_03(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.endWrap()
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 300)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0400
-    * @tc.name      : test_endwrap_04
-    * @tc.desc      : test RelationStore test_endwrap_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0400
+     * @tc.name      : test_endwrap_04
+     * @tc.desc      : test RelationStore test_endwrap_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_endwrap_04(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.notEqualTo("NAME", RelationalStoreValueType.StringValue("Lisa")).endWrap()
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, -1)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0500
-    * @tc.name      : test_begin_endwrap_05
-    * @tc.desc      : test RelationStore test_begin_endwrap_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0500
+     * @tc.name      : test_begin_endwrap_05
+     * @tc.desc      : test RelationStore test_begin_endwrap_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_begin_endwrap_05(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.beginWrap().endWrap()
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, -1)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0600
-    * @tc.name      : test_begin_endwrap_06
-    * @tc.desc      : test RelationStore test_begin_endwrap_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0600
+     * @tc.name      : test_begin_endwrap_06
+     * @tc.desc      : test RelationStore test_begin_endwrap_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_begin_endwrap_06(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.beginWrap().equalTo("NAME", RelationalStoreValueType.StringValue("Lisa")).endWrap()
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 200)
         resultSet.goToRow(0)
         @Expect(resultSet.getString(0), "1")
@@ -203,20 +200,23 @@ class Test_or_and_beginWrap_endWrap_04 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getString(3), "10000.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0700
-    * @tc.name      : test_or_07
-    * @tc.desc      : test RelationStore test_or_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0700
+     * @tc.name      : test_or_07
+     * @tc.desc      : test RelationStore test_or_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_or_07(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates
@@ -225,7 +225,7 @@ class Test_or_and_beginWrap_endWrap_04 {
             .or()
             .equalTo("CODES", RelationalStoreValueType.Boolean(true))
             .endWrap()
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 200)
         resultSet.goToRow(0)
         @Expect(resultSet.getString(0), "1")
@@ -239,20 +239,23 @@ class Test_or_and_beginWrap_endWrap_04 {
         @Expect(resultSet.getString(2), "202")
         @Expect(resultSet.getString(3), "200.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0800
-    * @tc.name      : test_or_08
-    * @tc.desc      : test RelationStore test_or_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0800
+     * @tc.name      : test_or_08
+     * @tc.desc      : test RelationStore test_or_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_or_08(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates
@@ -261,7 +264,7 @@ class Test_or_and_beginWrap_endWrap_04 {
             .or()
             .greaterThan("ID", RelationalStoreValueType.Integer(299))
             .endWrap()
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 200)
         resultSet.goToRow(0)
         @Expect(resultSet.getString(0), "101")
@@ -275,27 +278,30 @@ class Test_or_and_beginWrap_endWrap_04 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getString(3), "10000.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0900
-    * @tc.name      : test_or_09
-    * @tc.desc      : test RelationStore test_or_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_0900
+     * @tc.name      : test_or_09
+     * @tc.desc      : test RelationStore test_or_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_or_09(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates
             .equalTo("NAME", RelationalStoreValueType.StringValue("仓颉"))
             .or()
             .equalTo("CODES", RelationalStoreValueType.Boolean(true))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 200)
         resultSet.goToRow(0)
         @Expect(resultSet.getString(0), "1")
@@ -309,20 +315,23 @@ class Test_or_and_beginWrap_endWrap_04 {
         @Expect(resultSet.getString(2), "202")
         @Expect(resultSet.getString(3), "200.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1000
-    * @tc.name      : test_and_10
-    * @tc.desc      : test RelationStore test_and_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1000
+     * @tc.name      : test_and_10
+     * @tc.desc      : test RelationStore test_and_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_and_10(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates
@@ -331,26 +340,29 @@ class Test_or_and_beginWrap_endWrap_04 {
             .and()
             .equalTo("CODES", RelationalStoreValueType.Boolean(true))
             .endWrap()
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 0)
-        @Expect(resultSet.goToFirstRow(), false)
+        try {
+            resultSet.goToFirstRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1100
-    * @tc.name      : test_and_11
-    * @tc.desc      : test RelationStore test_and_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1100
+     * @tc.name      : test_and_11
+     * @tc.desc      : test RelationStore test_and_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_and_11(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.beginWrap().isNull("AGE").and().lessThan("ID", RelationalStoreValueType.Integer(301)).endWrap()
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 1)
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "300")
@@ -358,24 +370,27 @@ class Test_or_and_beginWrap_endWrap_04 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getString(3), "10000.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1200
-    * @tc.name      : test_and_12
-    * @tc.desc      : test RelationStore test_and_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1200
+     * @tc.name      : test_and_12
+     * @tc.desc      : test RelationStore test_and_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_and_12(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.like("NAME", "%sa%").and().lessThan("ID", RelationalStoreValueType.Integer(300))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
@@ -389,20 +404,23 @@ class Test_or_and_beginWrap_endWrap_04 {
         @Expect(resultSet.getString(2), "101")
         @Expect(resultSet.getString(3), "100.25")
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1300
-    * @tc.name      : test_and_or_13
-    * @tc.desc      : test RelationStore test_and_or_13
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1300
+     * @tc.name      : test_and_or_13
+     * @tc.desc      : test RelationStore test_and_or_13
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_and_or_13(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates
@@ -411,7 +429,7 @@ class Test_or_and_beginWrap_endWrap_04 {
             .lessThan("ID", RelationalStoreValueType.Integer(300))
             .or()
             .greaterThan("AGE", RelationalStoreValueType.Integer(102))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 200)
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
@@ -425,19 +443,23 @@ class Test_or_and_beginWrap_endWrap_04 {
         @Expect(resultSet.getString(2), "202")
         @Expect(resultSet.getString(3), "200.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1400
-    * @tc.name      : test_and_or_14
-    * @tc.desc      : test RelationStore test_and_or_14
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1400
+     * @tc.name      : test_and_or_14
+     * @tc.desc      : test RelationStore test_and_or_14
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_and_or_14(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates
@@ -446,7 +468,7 @@ class Test_or_and_beginWrap_endWrap_04 {
             .lessThan("ID", RelationalStoreValueType.Integer(300))
             .and()
             .greaterThan("AGE", RelationalStoreValueType.Integer(102))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 300)
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "1")
@@ -460,20 +482,23 @@ class Test_or_and_beginWrap_endWrap_04 {
         @Expect(resultSet.getString(2), "")
         @Expect(resultSet.getString(3), "10000.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1500
-    * @tc.name      : test_and_or_15
-    * @tc.desc      : test RelationStore test_and_or_15
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_or_and_beginWrap_endWrap_04_1500
+     * @tc.name      : test_and_or_15
+     * @tc.desc      : test RelationStore test_and_or_15
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_and_or_15(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates
@@ -484,7 +509,7 @@ class Test_or_and_beginWrap_endWrap_04 {
             .endWrap()
             .and()
             .greaterThan("AGE", RelationalStoreValueType.Integer(102))
-        let resultSet = rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet = rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet.rowCount, 100)
         resultSet.goToFirstRow()
         @Expect(resultSet.getString(0), "101")
@@ -498,6 +523,10 @@ class Test_or_and_beginWrap_endWrap_04 {
         @Expect(resultSet.getString(2), "202")
         @Expect(resultSet.getString(3), "200.5")
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 }

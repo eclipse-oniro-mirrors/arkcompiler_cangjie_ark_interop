@@ -48,7 +48,7 @@ class Test_Position_Component {
      * @tc.desic：position
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Position_0100_Component() {
         let Inspector = getInspectorByKey("Test_Row")
         let obj = JsonValue.fromStr(Inspector).asObject()

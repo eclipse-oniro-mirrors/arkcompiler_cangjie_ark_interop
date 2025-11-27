@@ -38,7 +38,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_AlphabetIndexer_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin AlphabetIndexer")
@@ -68,7 +68,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Button_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Button")
@@ -96,7 +96,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Checkbox_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Checkbox")
@@ -124,7 +124,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_CheckboxGroup_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin CheckboxGroup")
@@ -153,7 +153,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_DataPanel_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin DataPanel")
@@ -181,7 +181,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_DatePicker_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin DatePicker")
@@ -209,7 +209,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Divider_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Divider")
@@ -237,7 +237,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Gauge_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Gauge")
@@ -265,7 +265,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Image_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Image")
@@ -293,7 +293,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_LoadingProgress_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_LoadingProgress_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin LoadingProgress")
@@ -321,7 +321,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Menu_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Menu_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Menu")
@@ -349,7 +349,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Progress_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Progress_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Progress")
@@ -377,7 +377,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_QRCode_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_QRCode_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin QRCode")
@@ -405,7 +405,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Radio_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Radio_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Radio")
@@ -433,7 +433,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Rating_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Rating_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Rating")
@@ -461,7 +461,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Refresh_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Refresh_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Refresh")
@@ -489,7 +489,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_RichEditor_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_RichEditor_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin RichEditor")
@@ -517,7 +517,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_RichText_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_RichText_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin RichText")
@@ -545,7 +545,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_RowSplit_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_RowSplit_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin RowSplit")
@@ -573,7 +573,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_ScrollBar_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_ScrollBar_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin ScrollBar")
@@ -601,7 +601,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Search_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Search_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Search")
@@ -629,7 +629,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Slider_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Slider_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Slider")
@@ -657,7 +657,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Stepper_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Stepper_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Stepper")
@@ -685,7 +685,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Text_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Text_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Text")
@@ -713,7 +713,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_TextArea_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_TextArea_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin TextArea")
@@ -741,7 +741,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_TextClock_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_TextClock_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin TextClock")
@@ -769,7 +769,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_TextInput_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_TextInput_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin TextInput")
@@ -797,7 +797,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_TextPicker_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_TextPicker_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin TextPicker")
@@ -825,7 +825,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_TextTimer_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_TextTimer_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin TextTimer")
@@ -853,7 +853,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Toggle_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Toggle_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Toggle")
@@ -881,7 +881,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Web_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Web_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Web")
@@ -909,7 +909,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Select_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Select_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Select")
@@ -937,7 +937,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Badge_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Badge_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Badge")
@@ -965,7 +965,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Column_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Column_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Column")
@@ -993,7 +993,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Grid_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Grid_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Grid")
@@ -1021,7 +1021,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_GridRow_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_GridRow_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin GridRow")
@@ -1049,7 +1049,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Flex_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Flex_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Flex")
@@ -1077,7 +1077,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_List_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_List_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin List")
@@ -1106,7 +1106,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_RelativeContainer_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_RelativeContainer_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin RelativeContainer")
@@ -1134,7 +1134,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Row_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Row_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Row")
@@ -1162,7 +1162,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Scroll_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Scroll_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Scroll")
@@ -1190,7 +1190,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Stack_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Stack_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Stack")
@@ -1218,7 +1218,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Swiper_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Swiper_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Swiper")
@@ -1246,7 +1246,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Tabs_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Tabs_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Tabs")
@@ -1274,7 +1274,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Circle_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Circle_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Circle")
@@ -1302,7 +1302,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Line_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Line_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Line")
@@ -1330,7 +1330,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Rect_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Rect_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Rect")
@@ -1358,7 +1358,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Shape_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Shape_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Shape")
@@ -1387,7 +1387,7 @@ class Test_EmptyAttrs_FlexShrink {
      * @tc.desic：Empty_Path_FlexShrink
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FlexShrink_Path_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFlexShrink: FindBegin Path")

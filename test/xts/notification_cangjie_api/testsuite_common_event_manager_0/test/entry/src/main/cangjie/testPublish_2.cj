@@ -49,7 +49,7 @@ class testPublish_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_31(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_31 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")
@@ -70,7 +70,7 @@ class testPublish_2 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_32(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_32 begins.")
         Hilog.info(0u32, "cangjietest", "", "case start")

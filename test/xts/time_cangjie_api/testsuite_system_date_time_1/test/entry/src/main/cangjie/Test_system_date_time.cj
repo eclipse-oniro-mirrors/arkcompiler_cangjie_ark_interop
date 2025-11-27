@@ -36,7 +36,7 @@ class Test_system_date_time {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func test_sysDateTime_getRealTime_02() {
         Hilog.info(0, "test_sysDateTime_getRealTime_02", "test_sysDateTime_getRealTime_02_start")
         let ns = 10 ** 9
@@ -51,7 +51,7 @@ class Test_system_date_time {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func test_getTime() {
         Hilog.info(0, "SystemDateTime Test", "SystemDateTime::getTime")
         try {
@@ -72,7 +72,7 @@ class Test_system_date_time {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func test_getUptime_ACTIVE() {
         Hilog.info(0, "SystemDateTime Test", "SystemDateTime::getUptime")
         try {
@@ -93,7 +93,7 @@ class Test_system_date_time {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     public func test_getUptime_Startup() {
         Hilog.info(0, "SystemDateTime Test", "SystemDateTime::getUptime")
         try {
@@ -115,7 +115,7 @@ class Test_system_date_time {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTimezone(): Unit {
         try {
             let stream = SystemDateTime.getTimezone()
@@ -136,7 +136,7 @@ class Test_system_date_time {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_init() {
         SystemDateTime()
         @Expect(true)

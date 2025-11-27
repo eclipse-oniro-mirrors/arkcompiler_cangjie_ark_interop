@@ -38,9 +38,9 @@ class EntryView {
                             .height(50)
                             .id(viewName)
                             .borderRadius(10)
-                            .onClick {ClickEvent =>
+                            .onClick({ClickEvent =>
                                 getUIContext().getRouter().pushUrl(url: viewName)
-                            }
+                            })
                     }
                 )
             }.width(100.percent).margin(top: 5)

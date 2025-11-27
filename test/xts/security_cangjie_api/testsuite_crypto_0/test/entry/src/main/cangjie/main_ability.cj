@@ -26,7 +26,6 @@ class MainAbility <: UIAbility {
     }
 
     public override func onCreate(want: Want, launchParam: LaunchParam): Unit {
-        //Hilog.info("MainAbility OnCreated.${want.abilityName}")
         match (launchParam.launchReason) {
             case LaunchReason.StartAbility => Hilog.info(0, "cangjie", "START_ABILITY")
             case _ => throw Exception("unsupported enum constructor")
@@ -34,7 +33,6 @@ class MainAbility <: UIAbility {
     }
 
     public override func onWindowStageCreate(windowStage: WindowStage): Unit {
-        //Hilog.info("MainAbility onWindowStageCreate.")
         AppStorage.setOrCreate<UIAbilityContext>("abilityContext", this.context)
         AppStorage.setOrCreate<WindowStage>("windowStage", windowStage)
         windowStage.loadContent("EntryView")

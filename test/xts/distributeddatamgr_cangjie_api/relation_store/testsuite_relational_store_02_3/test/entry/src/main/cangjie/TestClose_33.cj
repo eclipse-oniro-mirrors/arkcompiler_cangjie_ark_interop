@@ -28,7 +28,7 @@ import kit.PerformanceAnalysisKit.Hilog
 @Test
 class TestClose_33 {
     /*
-     * @tc.number    : Test_Close_320100
+     * @tc.number    : TestCase_320100
      * @tc.name      : TestCase_3201
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -36,22 +36,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3201(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3201 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3201 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -59,278 +58,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_320200
-     * @tc.name      : TestCase_3202
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3202(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3202 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3202 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_320300
-     * @tc.name      : TestCase_3203
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3203(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3203 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3203 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_320400
-     * @tc.name      : TestCase_3204
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3204(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3204 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3204 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_320500
-     * @tc.name      : TestCase_3205
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3205(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3205 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3205 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_320600
-     * @tc.name      : TestCase_3206
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3206(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3206 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3206 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_320700
-     * @tc.name      : TestCase_3207
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3207(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3207 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3207 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_320800
-     * @tc.name      : TestCase_3208
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3208(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3208 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3208 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_320900
-     * @tc.name      : TestCase_3209
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3209(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3209 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3209 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_321000
+     * @tc.number    : TestCase_321000
      * @tc.name      : TestCase_3210
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3210(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3210 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3210 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -338,7 +88,7 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_321100
+     * @tc.number    : TestCase_321100
      * @tc.name      : TestCase_3211
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -346,22 +96,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3211(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3211 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3211 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -369,278 +118,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_321200
-     * @tc.name      : TestCase_3212
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3212(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3212 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3212 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_321300
-     * @tc.name      : TestCase_3213
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3213(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3213 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3213 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_321400
-     * @tc.name      : TestCase_3214
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3214(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3214 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3214 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_321500
-     * @tc.name      : TestCase_3215
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3215(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3215 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3215 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_321600
-     * @tc.name      : TestCase_3216
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3216(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3216 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3216 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_321700
-     * @tc.name      : TestCase_3217
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3217(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3217 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3217 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_321800
-     * @tc.name      : TestCase_3218
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3218(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3218 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3218 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_321900
-     * @tc.name      : TestCase_3219
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3219(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3219 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3219 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_322000
+     * @tc.number    : TestCase_322000
      * @tc.name      : TestCase_3220
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3220(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3220 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3220 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -648,7 +148,7 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_322100
+     * @tc.number    : TestCase_322100
      * @tc.name      : TestCase_3221
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -656,22 +156,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3221(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3221 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3221 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -679,278 +178,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_322200
-     * @tc.name      : TestCase_3222
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3222(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3222 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3222 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_322300
-     * @tc.name      : TestCase_3223
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3223(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3223 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3223 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_322400
-     * @tc.name      : TestCase_3224
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3224(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3224 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3224 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_322500
-     * @tc.name      : TestCase_3225
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3225(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3225 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3225 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_322600
-     * @tc.name      : TestCase_3226
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3226(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3226 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3226 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_322700
-     * @tc.name      : TestCase_3227
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3227(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3227 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3227 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_322800
-     * @tc.name      : TestCase_3228
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3228(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3228 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3228 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_322900
-     * @tc.name      : TestCase_3229
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3229(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3229 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3229 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_323000
+     * @tc.number    : TestCase_323000
      * @tc.name      : TestCase_3230
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3230(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3230 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3230 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -958,7 +208,7 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_323100
+     * @tc.number    : TestCase_323100
      * @tc.name      : TestCase_3231
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -966,22 +216,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3231(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3231 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3231 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -989,278 +238,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_323200
-     * @tc.name      : TestCase_3232
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3232(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3232 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3232 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_323300
-     * @tc.name      : TestCase_3233
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3233(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3233 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3233 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_323400
-     * @tc.name      : TestCase_3234
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3234(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3234 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3234 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_323500
-     * @tc.name      : TestCase_3235
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3235(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3235 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3235 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_323600
-     * @tc.name      : TestCase_3236
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3236(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3236 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3236 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_323700
-     * @tc.name      : TestCase_3237
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3237(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3237 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3237 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_323800
-     * @tc.name      : TestCase_3238
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3238(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3238 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3238 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_323900
-     * @tc.name      : TestCase_3239
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3239(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3239 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3239 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_324000
+     * @tc.number    : TestCase_324000
      * @tc.name      : TestCase_3240
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3240(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3240 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3240 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -1268,7 +268,7 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_324100
+     * @tc.number    : TestCase_324100
      * @tc.name      : TestCase_3241
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -1276,22 +276,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3241(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3241 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3241 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -1299,278 +298,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_324200
-     * @tc.name      : TestCase_3242
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3242(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3242 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3242 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_324300
-     * @tc.name      : TestCase_3243
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3243(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3243 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3243 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_324400
-     * @tc.name      : TestCase_3244
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3244(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3244 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3244 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_324500
-     * @tc.name      : TestCase_3245
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3245(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3245 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3245 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_324600
-     * @tc.name      : TestCase_3246
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3246(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3246 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3246 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_324700
-     * @tc.name      : TestCase_3247
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3247(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3247 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3247 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_324800
-     * @tc.name      : TestCase_3248
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3248(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3248 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3248 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_324900
-     * @tc.name      : TestCase_3249
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3249(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3249 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3249 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_325000
+     * @tc.number    : TestCase_325000
      * @tc.name      : TestCase_3250
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3250(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3250 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3250 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -1578,7 +328,7 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_325100
+     * @tc.number    : TestCase_325100
      * @tc.name      : TestCase_3251
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -1586,22 +336,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3251(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3251 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3251 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -1609,278 +358,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_325200
-     * @tc.name      : TestCase_3252
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3252(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3252 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3252 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_325300
-     * @tc.name      : TestCase_3253
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3253(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3253 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3253 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_325400
-     * @tc.name      : TestCase_3254
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3254(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3254 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3254 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_325500
-     * @tc.name      : TestCase_3255
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3255(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3255 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3255 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_325600
-     * @tc.name      : TestCase_3256
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3256(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3256 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3256 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_325700
-     * @tc.name      : TestCase_3257
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3257(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3257 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3257 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_325800
-     * @tc.name      : TestCase_3258
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3258(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3258 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3258 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_325900
-     * @tc.name      : TestCase_3259
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3259(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3259 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3259 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_326000
+     * @tc.number    : TestCase_326000
      * @tc.name      : TestCase_3260
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3260(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3260 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3260 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -1888,7 +388,7 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_326100
+     * @tc.number    : TestCase_326100
      * @tc.name      : TestCase_3261
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -1896,22 +396,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3261(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3261 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3261 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -1919,278 +418,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_326200
-     * @tc.name      : TestCase_3262
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3262(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3262 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3262 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_326300
-     * @tc.name      : TestCase_3263
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3263(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3263 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3263 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_326400
-     * @tc.name      : TestCase_3264
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3264(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3264 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3264 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_326500
-     * @tc.name      : TestCase_3265
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3265(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3265 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3265 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_326600
-     * @tc.name      : TestCase_3266
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3266(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3266 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3266 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_326700
-     * @tc.name      : TestCase_3267
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3267(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3267 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3267 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_326800
-     * @tc.name      : TestCase_3268
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3268(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3268 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3268 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_326900
-     * @tc.name      : TestCase_3269
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3269(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3269 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3269 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_327000
+     * @tc.number    : TestCase_327000
      * @tc.name      : TestCase_3270
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3270(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3270 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3270 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -2198,7 +448,7 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_327100
+     * @tc.number    : TestCase_327100
      * @tc.name      : TestCase_3271
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -2206,22 +456,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3271(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3271 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3271 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -2229,278 +478,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_327200
-     * @tc.name      : TestCase_3272
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3272(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3272 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3272 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_327300
-     * @tc.name      : TestCase_3273
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3273(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3273 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3273 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_327400
-     * @tc.name      : TestCase_3274
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3274(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3274 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3274 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_327500
-     * @tc.name      : TestCase_3275
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3275(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3275 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3275 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_327600
-     * @tc.name      : TestCase_3276
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3276(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3276 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3276 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_327700
-     * @tc.name      : TestCase_3277
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3277(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3277 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3277 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_327800
-     * @tc.name      : TestCase_3278
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3278(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3278 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3278 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_327900
-     * @tc.name      : TestCase_3279
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3279(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3279 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3279 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_328000
+     * @tc.number    : TestCase_328000
      * @tc.name      : TestCase_3280
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3280(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3280 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
-                tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3280 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -2508,7 +508,7 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_328100
+     * @tc.number    : TestCase_328100
      * @tc.name      : TestCase_3281
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -2516,22 +516,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3281(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3281 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3281 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -2539,278 +538,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_328200
-     * @tc.name      : TestCase_3282
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3282(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3282 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3282 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_328300
-     * @tc.name      : TestCase_3283
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3283(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3283 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3283 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_328400
-     * @tc.name      : TestCase_3284
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3284(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3284 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3284 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_328500
-     * @tc.name      : TestCase_3285
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3285(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3285 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3285 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_328600
-     * @tc.name      : TestCase_3286
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3286(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3286 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3286 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_328700
-     * @tc.name      : TestCase_3287
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3287(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3287 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3287 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_328800
-     * @tc.name      : TestCase_3288
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3288(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3288 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3288 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_328900
-     * @tc.name      : TestCase_3289
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3289(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3289 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3289 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_329000
+     * @tc.number    : TestCase_329000
      * @tc.name      : TestCase_3290
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3290(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3290 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3290 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -2818,7 +568,7 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_329100
+     * @tc.number    : TestCase_329100
      * @tc.name      : TestCase_3291
      * @tc.desc      : "1" Close the result set
      * @tc.size      : MediumTest
@@ -2826,22 +576,21 @@ class TestClose_33 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3291(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3291 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3291 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }
@@ -2849,278 +598,29 @@ class TestClose_33 {
     }
 
     /*
-     * @tc.number    : Test_Close_329200
-     * @tc.name      : TestCase_3292
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3292(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3292 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3292 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_329300
-     * @tc.name      : TestCase_3293
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3293(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3293 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3293 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_329400
-     * @tc.name      : TestCase_3294
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3294(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3294 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3294 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_329500
-     * @tc.name      : TestCase_3295
-     * @tc.desc      : "1024" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3295(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3295 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3295 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_329600
-     * @tc.name      : TestCase_3296
-     * @tc.desc      : "1" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3296(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3296 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3296 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_329700
-     * @tc.name      : TestCase_3297
-     * @tc.desc      : "2" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3297(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3297 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3297 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_329800
-     * @tc.name      : TestCase_3298
-     * @tc.desc      : "3" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3298(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3298 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3298 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_329900
-     * @tc.name      : TestCase_3299
-     * @tc.desc      : "4" Close the result set
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3299(): Unit {
-        try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3299 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 14801002i32)
-        }
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3299 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Close_330000
+     * @tc.number    : TestCase_330000
      * @tc.name      : TestCase_3300
-     * @tc.desc      : "1024" Close the result set
+     * @tc.desc      : "2" Close the result set
      * @tc.size      : MediumTest
      * @tc.type      : Function
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3300(): Unit {
         try {
-
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3300 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
-        let rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
-                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
-                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
-        Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
-        let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
-        Hilog.info(0u32, "cangjietest", "", "testClose")
-        resultSet.close()
-                    @Expect(true)
+            Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3300 begins.")
+            Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
+            let rdbStore = getRdbStore(getAbilityContext(),
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                    isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: false,
+                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
+            Hilog.info(0u32, "cangjietest", "", "define local variable resultSet")
+            let resultSet = rdbStore.querySql("SELECT * FROM EMPLOYEE WHERE NAME = 'PETER")
+            Hilog.info(0u32, "cangjietest", "", "testClose")
+            resultSet.close()
+            @Expect(true)
         } catch (e: BusinessException) {
             @Expect(e.code, 14801002i32)
         }

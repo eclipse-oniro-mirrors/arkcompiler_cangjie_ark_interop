@@ -49,7 +49,7 @@ class Test_Scroll2_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Scroll2_Component_001() {
         let button = driver.findComponent(On().id("ScrollArea"))
         button.getOrThrow().click()

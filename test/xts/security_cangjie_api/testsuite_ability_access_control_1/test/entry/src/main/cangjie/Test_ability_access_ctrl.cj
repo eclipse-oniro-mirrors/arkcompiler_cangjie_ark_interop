@@ -39,13 +39,13 @@ class Test_ability_access_ctrl {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_grantStatus() {
         let abilityAccessCtrl = AbilityAccessCtrl.createAtManager()
         let grantStatus = abilityAccessCtrl.checkAccessToken(1, "READ_CONTACTS")
-        Hilog.info(0,"cangjie","grantStatus is ${grantStatus.toString()}",[""])
-        Hilog.info(0,"cangjie","grantStaus is equal to PERMISSION_DENIED: ${grantStatus == GrantStatus.PermissionDenied}",[""])
-
+        Hilog.info(0, "cangjie", "grantStatus is ${grantStatus.toString()}", [""])
+        Hilog.info(0, "cangjie",
+            "grantStaus is equal to PERMISSION_DENIED: ${grantStatus == GrantStatus.PermissionDenied}", [""])
     }
 
     /*
@@ -57,7 +57,7 @@ class Test_ability_access_ctrl {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_AtManager() {
         let abilityAccessCtrl = AbilityAccessCtrl.createAtManager()
         let stageContext = getAbilityContext()
@@ -86,7 +86,7 @@ class Test_ability_access_ctrl {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_AtManager_error() {
         let abilityAccessCtrl = AbilityAccessCtrl.createAtManager()
         let stageContext = getAbilityContext()
@@ -107,7 +107,7 @@ class Test_ability_access_ctrl {
                 }
             }
         } catch (e: BusinessException) {
-            Hilog.info(0,"cangjie","abilityaccess","test_AtManager_error: ${e}")
+            Hilog.info(0, "cangjie", "abilityaccess", "test_AtManager_error: ${e}")
         }
     }
     /* 
@@ -119,7 +119,7 @@ class Test_ability_access_ctrl {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_checkAccessToken() {
         let abilityAccessCtrl = AbilityAccessCtrl.createAtManager()
         try {

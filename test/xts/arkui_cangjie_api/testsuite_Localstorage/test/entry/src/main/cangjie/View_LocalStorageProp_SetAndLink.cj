@@ -60,7 +60,7 @@ class View_LocalStorageProp_SetAndLink {
         Column(space:10) {
             Button("Get setAndlink In ParentComp")
                 .id("change1")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     this.ValueInt = storage2.setAndLink<Int64>("PropInt", 100).get()
                     this.ValueFloat = storage2.setAndLink<Float64>("PropFloat", 100.0).get()
@@ -71,11 +71,11 @@ class View_LocalStorageProp_SetAndLink {
                     this.ValueStruct = storage2.setAndLink<BB>("PropStruct", BB("HelloCangjie")).get().bb
                     this.ValueEnum = EE.getEnumNumber(storage2.setAndLink<EE>("PropEnum", EE.ee(0)).get())
                     this.ValueInt1 = storage2.setAndLink<Int64>("PropInt1", 100).get()
-                }
+                })
 
             Button("Set setAndlink In ParentComp")
                 .id("change2")
-                .onClick {
+                .onClick({
                     ClickEvent =>
                     storage2.set("PropInt", 100)
                     storage2.set("PropFloat", 100.0)
@@ -95,7 +95,7 @@ class View_LocalStorageProp_SetAndLink {
                     this.ValueStruct = storage2.get<BB>("PropStruct").getOrThrow().bb
                     this.ValueEnum = EE.getEnumNumber(storage2.get<EE>("PropEnum").getOrThrow())
                     this.ValueInt1 = storage2.get<Int64>("PropInt1").getOrThrow()
-                }
+                })
 
             Text("ValueInt In ParentComp: " + this.ValueInt.toString()).id("LinkInt")
             Text("ValueFloat In ParentComp: " + this.ValueFloat.toString()).id("LinkFloat")

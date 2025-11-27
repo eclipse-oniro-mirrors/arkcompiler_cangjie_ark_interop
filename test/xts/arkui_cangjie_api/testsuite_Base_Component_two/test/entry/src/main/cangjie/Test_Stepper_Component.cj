@@ -48,7 +48,7 @@ class Test_Stepper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Stepper_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_Stepper_Component_001 start")
         let Inspector = getInspectorByKey("stepperbasic")
@@ -71,7 +71,7 @@ class Test_Stepper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Stepper_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_Stepper_Component_002 start")
         driver.findComponent(On().id("changebutton")).getOrThrow().click()
@@ -99,7 +99,7 @@ class Test_Stepper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Stepper_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_Stepper_Component_003 start")
         driver.findComponent(On().text("下一页")).getOrThrow().click()
@@ -125,7 +125,7 @@ class Test_Stepper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Stepper_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_Stepper_Component_004 start")
         driver.findComponent(On().text("下一页")).getOrThrow().click()
@@ -151,7 +151,7 @@ class Test_Stepper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Stepper_Component_005() {
         Hilog.info(0, "","cangjietest", "Test_Stepper_Component_005 start")
         driver.findComponent(On().text("上一页")).getOrThrow().click()
@@ -177,7 +177,7 @@ class Test_Stepper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Stepper_Component_006() {
         Hilog.info(0, "","cangjietest", "Test_Stepper_Component_006 start")
         driver.findComponent(On().text("下一页")).getOrThrow().click()
@@ -204,7 +204,7 @@ class Test_Stepper_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Stepper_Component_007() {
         driver.findComponent(On().text("finish")).getOrThrow().click()
         driver.delayMs(1000)

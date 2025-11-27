@@ -23,6 +23,7 @@ import stdx.encoding.json.*
 import ohos.system_date_time.*
 import std.regex.*
 import kit.PerformanceAnalysisKit.Hilog
+
 @Test
 class testGetTime_1 {
     /*
@@ -34,7 +35,7 @@ class testGetTime_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
         Hilog.info(0, "cangjietest", "define local variable time")
@@ -58,7 +59,7 @@ class testGetTime_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_10 begins.")
         Hilog.info(0, "cangjietest", "define local variable time")
@@ -82,7 +83,7 @@ class testGetTime_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0, "cangjietest", "testcase TestCase_11 begins.")
         Hilog.info(0, "cangjietest", "define local variable time")

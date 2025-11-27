@@ -48,7 +48,7 @@ class Test_Popup_Component {
      * @tc.desic：Popup
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Popup_0100_Component() {
         driver.findComponent(On().id("Test_Button00")).getOrThrow().click()
         driver.delayMs(1000)
@@ -66,7 +66,7 @@ class Test_Popup_Component {
      * @tc.desic：Popup
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Popup_0200_Component() {
         driver.findComponent(On().id("Test_Button01")).getOrThrow().click()
         driver.delayMs(1000)

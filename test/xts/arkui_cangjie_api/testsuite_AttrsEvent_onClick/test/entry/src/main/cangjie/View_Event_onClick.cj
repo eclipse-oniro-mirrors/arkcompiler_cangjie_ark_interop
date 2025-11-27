@@ -29,7 +29,7 @@ import ohos.arkui.state_management.*
 
 @Entry
 @Component
-class View_EmptyAttrs_onClick {
+class View_EmptyAttrs_onClick{
     @State
     var targetView = ""
     @State
@@ -99,16 +99,16 @@ class View_EmptyAttrs_onClick {
     }
 
     func getClickEvent_eventTarget(v: ClickEvent) {
-        this.clickEvent_eventTarget_area_width = v.target.area.width.value
-        this.clickEvent_eventTarget_area_height = v.target.area.height.value
-        this.clickEvent_eventTarget_area_positionX = v.target.area.position.x.value
-        this.clickEvent_eventTarget_area_positionY = v.target.area.position.y.value
-        this.clickEvent_eventTarget_area_globalPositionX = v.target.area.globalPosition.x.value
-        this.clickEvent_eventTarget_area_globalPositionY = v.target.area.globalPosition.y.value
+        this.clickEvent_eventTarget_area_width = v.target.getOrThrow().area.width.value
+        this.clickEvent_eventTarget_area_height = v.target.getOrThrow().area.height.value
+        this.clickEvent_eventTarget_area_positionX = v.target.getOrThrow().area.position.x.getOrThrow().value
+        this.clickEvent_eventTarget_area_positionY = v.target.getOrThrow().area.position.y.getOrThrow().value
+        this.clickEvent_eventTarget_area_globalPositionX = v.target.getOrThrow().area.globalPosition.x.getOrThrow().value
+        this.clickEvent_eventTarget_area_globalPositionY = v.target.getOrThrow().area.globalPosition.y.getOrThrow().value
     }
 
     func getClickEvent_sourceType(v: ClickEvent) {
-        this.clickEvent_sourceType = match (v.source) {
+        this.clickEvent_sourceType = match (v.source.getOrThrow()) {
             case TouchScreen => "SourceType.TouchScreen"
             case Mouse => "SourceType.TouchScreen"
             case _ => "SourceType.Unknown"
@@ -136,7 +136,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Blank") {
                     Text("Blank: Attrs_Event_onClick")
                     Blank(min: 10)
@@ -144,7 +144,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Button") {
                     Text("Button: Attrs_Event_onClick")
                     Button {Text("Button").width(90.percent).height(90.percent).backgroundColor(Color.Gray)}
@@ -153,7 +153,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Checkbox") {
                     Text("Checkbox: Attrs_Event_onClick")
                     Checkbox()
@@ -161,7 +161,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "CheckboxGroup") {
                     Text("CheckboxGroup: Attrs_Event_onClick")
                     CheckboxGroup()
@@ -169,7 +169,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "DataPanel") {
                     Text("DataPanel: Attrs_Event_onClick")
                     DataPanel(values: [30.0])
@@ -177,7 +177,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "DatePicker") {
                     Text("DatePicker: Attrs_Event_onClick")
                     DatePicker()
@@ -185,7 +185,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Divider") {
                     Text("Divider: Attrs_Event_onClick")
                     Divider()
@@ -193,7 +193,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Gauge") {
                     Text("Gauge: Attrs_Event_onClick")
                     Gauge(value: 50.0, min: 0.0, max: 100.0) {
@@ -203,7 +203,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Image") {
                     Text("Image: Attrs_Event_onClick")
                     Image(@r(app.media.startIcon))
@@ -212,7 +212,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "ImageSpan") {
                     Text("ImageSpan: Attrs_Event_onClick")
                     Text() {
@@ -222,7 +222,7 @@ class View_EmptyAttrs_onClick {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onClick {evt => this.callbackonClick(evt)}
+                            .onClick({evt => this.callbackonClick(evt)})
                     }
                 } else if (this.targetView == "LoadingProgress") {
                     Text("LoadingProgress: Attrs_Event_onClick")
@@ -231,7 +231,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Menu") {
                     Text("Menu: Attrs_Event_onClick")
                     Menu() {
@@ -246,7 +246,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "MenuItem") {
                     Text("MenuItem: Attrs_Event_onClick")
                     Menu() {
@@ -256,7 +256,7 @@ class View_EmptyAttrs_onClick {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onClick {evt => this.callbackonClick(evt)}
+                                .onClick({evt => this.callbackonClick(evt)})
                         }.width(80.percent).height(80.percent)
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "MenuItemGroup") {
@@ -271,7 +271,7 @@ class View_EmptyAttrs_onClick {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onClick {evt => this.callbackonClick(evt)}
+                            .onClick({evt => this.callbackonClick(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Progress") {
                     Text("Progress: Attrs_Event_onClick")
@@ -280,7 +280,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "QRCode") {
                     Text("QRCode: Attrs_Event_onClick")
                     QRCode(targetView)
@@ -288,7 +288,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Radio") {
                     Text("Radio: Attrs_Event_onClick")
                     Radio(group: "1", value: "A")
@@ -296,7 +296,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Rating") {
                     Text("Rating: Attrs_Event_onClick")
                     Rating(rating: 3.5, indicator: false)
@@ -304,7 +304,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Refresh") {
                     Text("Refresh: Attrs_Event_onClick")
                     Refresh(RefreshOptions(refreshing: @Binder(this.isRefreshing))) {
@@ -314,7 +314,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "RichEditor") {
                     Text("RichEditor: Attrs_Event_onClick")
                     RichEditor(richEditorController)
@@ -322,7 +322,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "RichText") {
                     Text("RichText: Attrs_Event_onClick")
                     RichText("""
@@ -331,7 +331,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "RowSplit") {
                     Text("RowSplit: Attrs_Event_onClick")
                     RowSplit() {
@@ -350,7 +350,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "ScrollBar") {
                     Text("ScrollBar: Attrs_Event_onClick")
 
@@ -378,7 +378,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Search") {
                     Text("Search: Attrs_Event_onClick")
                     Search(value: "", placeholder: "Type to search")
@@ -386,7 +386,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Slider") {
                     Text("Slider: Attrs_Event_onClick")
                     Slider()
@@ -394,7 +394,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Stepper") {
                     Text("Stepper: Attrs_Event_onClick")
                     Stepper(index:0) {
@@ -406,7 +406,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "StepperItem") {
                     Text("StepperItem: Attrs_Event_onClick")
                     Stepper(index:0) {
@@ -417,7 +417,7 @@ class View_EmptyAttrs_onClick {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onClick {evt => this.callbackonClick(evt)}
+                            .onClick({evt => this.callbackonClick(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Text") {
                     Text("Text: Attrs_Event_onClick")
@@ -426,7 +426,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "TextArea") {
                     Text("TextArea: Attrs_Event_onClick")
                     TextArea(text: targetView)
@@ -434,7 +434,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "TextClock") {
                     Text("TextClock: Attrs_Event_onClick")
                     TextClock()
@@ -442,7 +442,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "TextInput") {
                     Text("TextInput: Attrs_Event_onClick")
                     TextInput(placeholder: "TextInput")
@@ -450,7 +450,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "TextPicker") {
                     Text("TextPicker: Attrs_Event_onClick")
                     TextPicker(range:["apple", "banana", "orange", "peach"])
@@ -458,7 +458,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "TextTimer") {
                     Text("TextTimer: Attrs_Event_onClick")
                     TextTimer(isCountDown: true, count: 30000, controller: TextTimerController())
@@ -466,7 +466,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Toggle") {
                     Text("Toggle: Attrs_Event_onClick")
                     Toggle(ToggleType.Switch, isOn: false)
@@ -474,7 +474,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Web") {
                     Text("Web: Attrs_Event_onClick")
                     Web(src: "www.baidu.com", controller: webController)
@@ -484,7 +484,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Select") {
                     Text("Select: Attrs_Event_onClick")
                     Select(
@@ -495,7 +495,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Badge") {
                     Text("Badge: Attrs_Event_onClick")
                     Badge(count: 1, style: BadgeStyle(color: this.Colors[2])) {
@@ -505,7 +505,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Column") {
                     Text("Column: Attrs_Event_onClick")
 
@@ -516,7 +516,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Grid") {
                     Text("Grid: Attrs_Event_onClick")
                     Grid (child:{=>
@@ -528,7 +528,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "GridItem") {
                     Text("GridItem: Attrs_Event_onClick")
                     Grid (child:{=>
@@ -539,7 +539,7 @@ class View_EmptyAttrs_onClick {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onClick {evt => this.callbackonClick(evt)}
+                            .onClick({evt => this.callbackonClick(evt)})
                     }).width(80.percent).height(10.percent)
                 } else if (this.targetView == "GridRow") {
                     Text("GridRow: Attrs_Event_onClick")
@@ -552,7 +552,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "GridCol") {
                     Text("GridCol: Attrs_Event_onClick")
                     GridRow() {
@@ -563,7 +563,7 @@ class View_EmptyAttrs_onClick {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onClick {evt => this.callbackonClick(evt)}
+                            .onClick({evt => this.callbackonClick(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Flex") {
                     Text("Flex: Attrs_Event_onClick")
@@ -574,7 +574,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "List") {
                     Text("List: Attrs_Event_onClick")
                     List() {
@@ -588,7 +588,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "ListItem") {
                     Text("ListItem: Attrs_Event_onClick")
                     List() {
@@ -600,7 +600,7 @@ class View_EmptyAttrs_onClick {
                                 .width(80.percent)
                                 .height(20.percent)
                                 .backgroundColor(this.Colors[0])
-                                .onClick {evt => this.callbackonClick(evt)}
+                                .onClick({evt => this.callbackonClick(evt)})
                         }.width(80.percent).height(80.percent)
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "ListItemGroup") {
@@ -615,7 +615,7 @@ class View_EmptyAttrs_onClick {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onClick {evt => this.callbackonClick(evt)}
+                            .onClick({evt => this.callbackonClick(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "RelativeContainer") {
                     Text("RelativeContainer: Attrs_Event_onClick")
@@ -627,7 +627,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Row") {
                     Text("Row: Attrs_Event_onClick")
 
@@ -638,7 +638,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Scroll") {
                     Text("Scroll: Attrs_Event_onClick")
 
@@ -649,7 +649,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Stack") {
                     Text("Stack: Attrs_Event_onClick")
 
@@ -660,7 +660,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Swiper") {
                     Text("Swiper: Attrs_Event_onClick")
 
@@ -671,7 +671,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Tabs") {
                     Text("Tabs: Attrs_Event_onClick")
                     Tabs() {
@@ -683,7 +683,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "TabContent") {
                     Text("TabContent: Attrs_Event_onClick")
                     Tabs() {
@@ -695,7 +695,7 @@ class View_EmptyAttrs_onClick {
                             .width(80.percent)
                             .height(20.percent)
                             .backgroundColor(this.Colors[0])
-                            .onClick {evt => this.callbackonClick(evt)}
+                            .onClick({evt => this.callbackonClick(evt)})
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Circle") {
                     Text("Circle: Attrs_Event_onClick")
@@ -704,7 +704,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Line") {
                     Text("Line: Attrs_Event_onClick")
                     Line()
@@ -715,7 +715,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Rect") {
                     Text("Rect: Attrs_Event_onClick")
                     Rect()
@@ -723,7 +723,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Shape") {
                     Text("Shape: Attrs_Event_onClick")
                     Shape() {Rect().width(80.percent).height(80.percent).backgroundColor(this.Colors[1])}
@@ -731,7 +731,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Path") {
                     Text("Path: Attrs_Event_onClick")
                     Path()
@@ -740,7 +740,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Canvas") {
                     Text("Canvas: Attrs_Event_onClick")
                     Canvas(CanvasRenderingContext2D(RenderingContextSettings(antialias: true)))
@@ -748,7 +748,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Video") {
                     Text("Video: Attrs_Event_onClick")
                     Video()
@@ -756,7 +756,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Counter") {
                     Text("Counter: Attrs_Event_onClick")
                     Counter() {}
@@ -764,7 +764,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "PatternLock") {
                     Text("PatternLock: Attrs_Event_onClick")
                     PatternLock()
@@ -772,7 +772,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 } else if (this.targetView == "Ellipse") {
                     Text("Ellipse: Attrs_Event_onClick")
                     Ellipse()
@@ -780,7 +780,7 @@ class View_EmptyAttrs_onClick {
                         .width(80.percent)
                         .height(20.percent)
                         .backgroundColor(this.Colors[0])
-                        .onClick {evt => this.callbackonClick(evt)}
+                        .onClick({evt => this.callbackonClick(evt)})
                 }
                 Text("ClickEvent_x: ${this.clickEvent_x}").id("clickEvent_x").fontSize(12)
                 Text("ClickEvent_y: ${this.clickEvent_y}").id("clickEvent_y").fontSize(12)

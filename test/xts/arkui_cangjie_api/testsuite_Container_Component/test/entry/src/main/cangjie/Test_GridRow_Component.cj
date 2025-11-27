@@ -48,7 +48,7 @@ class Test_GridRow_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_GridRow_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_GridRow_Component_001 start")
         let Inspector = getInspectorByKey("gridrowbasic")
@@ -59,7 +59,7 @@ class Test_GridRow_Component {
         }
         let obj_borderStyle = obj.get("$attrs").getOrThrow().asObject().get("columns").getOrThrow().toString()
         Hilog.info(0, "","cangjietest", "[Test_GridRow_Component_001] borderStyle value: ${obj_borderStyle}")
-        @Expect(obj_borderStyle, "\"12\"")
+        @Expect(obj_borderStyle, "\"4\"")
     }
 
 }

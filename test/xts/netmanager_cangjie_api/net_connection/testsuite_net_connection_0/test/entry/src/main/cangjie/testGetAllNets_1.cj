@@ -37,7 +37,7 @@ class testGetAllNets_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
         Hilog.info(0, "cangjietest","testcase TestCase_27 begins.")
         Hilog.info(0, "cangjietest","Operation failed. Cannot connect to service")

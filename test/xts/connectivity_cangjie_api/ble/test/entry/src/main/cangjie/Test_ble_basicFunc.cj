@@ -37,13 +37,13 @@ class Test_ble_bacicFunc {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_createGattClientDevice() {
         try {
             let device: GattClientDevice = createGattClientDevice("00:11:00:11")
-        } catch (e: IllegalArgumentException) {
-            Hilog.info(0, "Bluetooth","Cangjietest", "errCodeggg: ${e.toString()}, errMessage: ${e.message}")
-            @Expect(e.toString(),"IllegalArgumentException: Invalid parameter.")
+        } catch (e: BusinessException) {
+            Hilog.info(0, "Bluetooth", "Cangjietest", "errCodeggg: ${e.toString()}, errMessage: ${e.message}")
+            @Expect(e.message,"Operation failed.")
         }
     }
 
@@ -56,7 +56,7 @@ class Test_ble_bacicFunc {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_createGattServer() {
         try {
             let gattServer: GattServer = createGattServer()
@@ -75,7 +75,7 @@ class Test_ble_bacicFunc {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_disableAdvertising() {
         let advertisingSettings = AdvertiseSetting(interval: 32, txPower: 0, connectable: true)
         let manufactureDataUnit = ManufactureData(
@@ -106,7 +106,7 @@ class Test_ble_bacicFunc {
         var advHandle: UInt32 = 0xFF
         try {
             startAdvertising(advertisingSettings, advertisingData, advResponse: advertisingResponse)
-//            let advertisingDisableParams = AdvertisingDisableParams(advHandle)
+            //            let advertisingDisableParams = AdvertisingDisableParams(advHandle)
             stopAdvertising(advHandle)
         } catch (e: BusinessException) {
             Hilog.info(0, "Bluetooth", "errCode: ${e.code}, errMessage: ${e.message}")
@@ -123,7 +123,7 @@ class Test_ble_bacicFunc {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_enableAdvertising() {
         createGattServer()
         let advertisingSettings = AdvertiseSetting(interval: 32, txPower: 0, connectable: true)
@@ -158,8 +158,8 @@ class Test_ble_bacicFunc {
         try {
             //2902054
             advHandle = startAdvertising(advertisingParams)
-//            let advertisingEnableParams = AdvertisingEnableParams(advHandle, duration: 1000)
-//            enableAdvertising(advertisingEnableParams)
+        //            let advertisingEnableParams = AdvertisingEnableParams(advHandle, duration: 1000)
+        //            enableAdvertising(advertisingEnableParams)
         } catch (e: BusinessException) {
             Hilog.info(0, "Bluetooth", "errCode: ${e.code}, errMessage: ${e.message}")
             @Expect(e.code,201)
@@ -175,7 +175,7 @@ class Test_ble_bacicFunc {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_startAdvertising() {
         createGattServer()
         let advertisingSettings = AdvertiseSetting(interval: 32, txPower: 0, connectable: true)
@@ -215,7 +215,7 @@ class Test_ble_bacicFunc {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_stopAdvertising1() {
         let advertisingSettings = AdvertiseSetting(interval: 32, txPower: 0, connectable: true)
         let manufactureDataUnit = ManufactureData(
@@ -262,7 +262,7 @@ class Test_ble_bacicFunc {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ble_stopBLEScan() {
         try {
             stopBLEScan()

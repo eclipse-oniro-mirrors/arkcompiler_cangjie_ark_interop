@@ -22,7 +22,7 @@ import std.collection.*
 import ohos.base.*
 import stdx.encoding.json.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.ValueType as RelaValueType
+//import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import ohos.business_exception.{BusinessException}
 import kit.PerformanceAnalysisKit.Hilog
 import std.core.*
@@ -39,21 +39,21 @@ class TestRdbStore_delete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable predicates")
             let predicates = RdbPredicates("EMPLOYEE")
             Hilog.info(0u32, "cangjietest", "", "values1")
-            predicates.equalTo("NAME", RelaValueType.StringValue("Lisa"))
+            predicates.equalTo("NAME", RelationalStoreValueType.StringValue("Lisa"))
             Hilog.info(0u32, "cangjietest", "", "delete failed")
             rdbStore.delete(predicates)
             @Expect("assertion#37: not throw", "delete failed")
@@ -72,21 +72,21 @@ class TestRdbStore_delete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S2, name: "valid name", encrypt: false, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: false, allowRebuild: false,
                     isReadOnly: false, pluginLibs: ["", "pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: false, enableSemanticIndex: false))
             Hilog.info(0u32, "cangjietest", "", "define local variable predicates")
             let predicates = RdbPredicates("EMPLOYEE")
             Hilog.info(0u32, "cangjietest", "", "values1")
-            predicates.equalTo("NAME", RelaValueType.StringValue("Jack"))
+            predicates.equalTo("NAME", RelationalStoreValueType.StringValue("Jack"))
             Hilog.info(0u32, "cangjietest", "", "delete failed")
             rdbStore.delete(predicates)
             @Expect("assertion#38: not throw", "delete failed")
@@ -105,21 +105,21 @@ class TestRdbStore_delete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S3, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S3, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable predicates")
             let predicates = RdbPredicates("EMPLOYEE")
             Hilog.info(0u32, "cangjietest", "", "values1")
-            predicates.equalTo("NAME", RelaValueType.StringValue("Tom"))
+            predicates.equalTo("NAME", RelationalStoreValueType.StringValue("Tom"))
             Hilog.info(0u32, "cangjietest", "", "delete failed")
             rdbStore.delete(predicates)
             @Expect("assertion#39: not throw", "delete failed")
@@ -138,21 +138,21 @@ class TestRdbStore_delete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S4, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable predicates")
             let predicates = RdbPredicates("EMPLOYEE")
             Hilog.info(0u32, "cangjietest", "", "values1")
-            predicates.equalTo("NAME", RelaValueType.StringValue("Jens"))
+            predicates.equalTo("NAME", RelationalStoreValueType.StringValue("Jens"))
             Hilog.info(0u32, "cangjietest", "", "delete failed")
             rdbStore.delete(predicates)
             @Expect("assertion#40: not throw", "delete failed")
@@ -171,21 +171,21 @@ class TestRdbStore_delete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable predicates")
             let predicates = RdbPredicates("EMPLOYEE")
             Hilog.info(0u32, "cangjietest", "", "values1")
-            predicates.equalTo("NAME", RelaValueType.StringValue("OK"))
+            predicates.equalTo("NAME", RelationalStoreValueType.StringValue("OK"))
             Hilog.info(0u32, "cangjietest", "", "delete failed")
             rdbStore.delete(predicates)
             @Expect("assertion#41: not throw", "delete failed")
@@ -204,21 +204,21 @@ class TestRdbStore_delete_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_6 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbStore")
 
         try {
             let rdbStore = getRdbStore(getAbilityContext(),
-                StoreConfig(SecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "valid name", encrypt: true, dataGroupId: "valid createTime",
                     customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: true,
                     isReadOnly: true, pluginLibs: [], cryptoParam: CryptoParam(), vector: true,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: true))
             Hilog.info(0u32, "cangjietest", "", "define local variable predicates")
             let predicates = RdbPredicates("EMPLOYEE")
             Hilog.info(0u32, "cangjietest", "", "values1")
-            predicates.equalTo("NAME", RelaValueType.StringValue("Sun"))
+            predicates.equalTo("NAME", RelationalStoreValueType.StringValue("Sun"))
             Hilog.info(0u32, "cangjietest", "", "delete failed")
             rdbStore.delete(predicates)
             @Expect("assertion#42: not throw", "delete failed")

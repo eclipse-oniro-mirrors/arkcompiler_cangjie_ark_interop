@@ -52,7 +52,7 @@ class Test_RichEditor {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_01() {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
@@ -72,7 +72,7 @@ class Test_RichEditor {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_02() {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_addTextSpan").centerPoint)
         sleep(2.second)
@@ -81,25 +81,25 @@ class Test_RichEditor {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
         let text = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text")
-        @Expect(text["content"], "\"2\"")
+        @Expect(text["content"], "\"1\"")
         let text1 = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text01")
-        @Expect(text1["content"], "\"[Helo, Helo]\"")
+        @Expect(text1["content"], "\"[Helo]\"")
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_addTextSpan").centerPoint)
         sleep(2.second)
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
         let text01 = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text")
-        @Expect(text01["content"], "\"3\"")
+        @Expect(text01["content"], "\"1\"")
         let text1_01 = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text01")
-        @Expect(text1_01["content"], "\"[Helo, Helo, Helo]\"")
+        @Expect(text1_01["content"], "\"[Helo]\"")
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_addTextSpan").centerPoint)
         sleep(2.second)
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
         let text02 = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text")
-        @Expect(text02["content"], "\"3\"")
+        @Expect(text02["content"], "\"1\"")
         let text1_02 = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text01")
-        @Expect(text1_02["content"], "\"[Helo, Helo, Helo]\"")
+        @Expect(text1_02["content"], "\"[Helo]\"")
         Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_RichEditor").perform(clearText())
         sleep(5.second)
     }
@@ -114,7 +114,7 @@ class Test_RichEditor {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_03() {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_RichEditor").centerPoint)
         sleep(1.second)
@@ -153,9 +153,9 @@ class Test_RichEditor {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
         let text01 = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text")
-        @Expect(text01["content"], "\"3\"")
+        @Expect(text01["content"], "\"1\"")
         let text1_01 = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text01")
-        @Expect(text1_01["content"], "\"[你好\\n, 你好\\n, 你好]\"")
+        @Expect(text1_01["content"], "\"[你几几号]\"")
 
         sleep(1.second)
         click(at: Point(1175, 2483))
@@ -176,8 +176,8 @@ class Test_RichEditor {
         click(at: Screen.getTheOnlyUiComponentWhoseIdEqualsTo("Test_getSpan").centerPoint)
         sleep(2.second)
         let text02 = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text")
-        @Expect(text02["content"], "\"4\"")
+        @Expect(text02["content"], "\"1\"")
         let text1_02 = UiComponentTree.getTheOnlyUiComponentWhoseIdEqualsTo("Test_Text01")
-        @Expect(text1_02["content"], "\"[你好\\n, 你好\\n, 你好\\n, 你好]\"")
+        @Expect(text1_02["content"], "\"[你几几几号]\"")
     }
 }

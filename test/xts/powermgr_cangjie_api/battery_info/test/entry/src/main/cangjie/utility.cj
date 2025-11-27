@@ -17,13 +17,5 @@ package ohos_app_cangjie_entry
 
 import ohos.ark_interop.*
 internal import kit.PerformanceAnalysisKit.Hilog
-//import ohos.state_manage.AppStorage
-//import ohos.ability.*
 
 var hasCallBackRun = false
-
-//class CallBack <: Callback1Argument<String> {
-//    public func invoke(arg: String): Unit {
-//        hasCallBackRun = true
-//    }
-//}

@@ -48,7 +48,7 @@ class Test_ForegroundColor_Component {
      * @tc.desic：foregroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ForegroundColor_0100_Component() {
         let Inspector = getInspectorByKey("Test_Button00")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -68,7 +68,7 @@ class Test_ForegroundColor_Component {
      * @tc.desic：foregroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ForegroundColor_0200_Component() {
         let Inspector = getInspectorByKey("Test_Button01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -88,7 +88,7 @@ class Test_ForegroundColor_Component {
      * @tc.desic：foregroundColor
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ForegroundColor_0300_Component() {
         let Inspector = getInspectorByKey("Test_Button02")
         let obj = JsonValue.fromStr(Inspector).asObject()

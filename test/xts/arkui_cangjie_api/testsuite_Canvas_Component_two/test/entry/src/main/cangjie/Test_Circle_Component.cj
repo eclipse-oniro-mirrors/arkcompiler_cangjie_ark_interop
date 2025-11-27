@@ -51,7 +51,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_0100() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -71,7 +71,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_0200() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -89,7 +89,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_0300() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -107,7 +107,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_0400() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -125,7 +125,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_0500() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -143,7 +143,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_0600() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -161,7 +161,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_0700() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -179,7 +179,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_0800() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -197,7 +197,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_0900() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -215,7 +215,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01000() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -233,7 +233,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01100() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -255,7 +255,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01200() {
         let Inspector = getInspectorByKey("Circle_component")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -273,7 +273,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01300() {
         let Inspector = getInspectorByKey("Circle_component_01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -293,7 +293,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01400() {
         let Inspector = getInspectorByKey("Circle_component_01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -311,7 +311,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01500() {
         let Inspector = getInspectorByKey("Circle_component_01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -329,7 +329,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01600() {
         let Inspector = getInspectorByKey("Circle_component_01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -347,7 +347,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01700() {
         let Inspector = getInspectorByKey("Circle_component_01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -365,7 +365,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01800() {
         let Inspector = getInspectorByKey("Circle_component_01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -383,7 +383,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_01900() {
         let Inspector = getInspectorByKey("Circle_component_01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -401,7 +401,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_02000() {
         let Inspector = getInspectorByKey("Circle_component_01")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -422,7 +422,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_02100() {
         let Inspector = getInspectorByKey("Circle_component_02")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -442,7 +442,7 @@ class Test_Circle_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Circle_Component_02200() {
         let Inspector = getInspectorByKey("Circle_component_03")
         let obj = JsonValue.fromStr(Inspector).asObject()

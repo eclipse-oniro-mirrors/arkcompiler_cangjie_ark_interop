@@ -48,7 +48,7 @@ class Test_BuilderParam_StateReferences {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_BuilderParam_StateReferences_0100() {
         Hilog.info(0,"", "cangjietest", "Test_BuilderParam_StateReferences_0100 Start")
         driver.findComponent(On().id("change")).getOrThrow().click()

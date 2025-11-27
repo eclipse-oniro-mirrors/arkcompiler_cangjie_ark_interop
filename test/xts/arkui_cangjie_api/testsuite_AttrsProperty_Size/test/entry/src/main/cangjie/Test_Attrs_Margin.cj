@@ -36,7 +36,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_AlphabetIndexer_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin AlphabetIndexer")
@@ -61,7 +61,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Blank_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Blank")
@@ -86,7 +86,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Button_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Button")
@@ -111,7 +111,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Checkbox_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Checkbox")
@@ -136,7 +136,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_CheckboxGroup_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin CheckboxGroup")
@@ -161,7 +161,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_DataPanel_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin DataPanel")
@@ -186,7 +186,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_DatePicker_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin DatePicker")
@@ -211,7 +211,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Divider_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Divider")
@@ -236,7 +236,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Gauge_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Gauge")
@@ -261,7 +261,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Image_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Image")
@@ -286,7 +286,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_ImageSpan_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin ImageSpan")
@@ -311,7 +311,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_LoadingProgress_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin LoadingProgress")
@@ -336,7 +336,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Menu_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Menu")
@@ -361,7 +361,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_MenuItem_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin MenuItem")
@@ -386,7 +386,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_MenuItemGroup_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin MenuItemGroup")
@@ -411,7 +411,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Progress_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Progress")
@@ -436,7 +436,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_QRCode_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin QRCode")
@@ -461,7 +461,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Radio_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Radio")
@@ -486,7 +486,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Rating_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Rating")
@@ -511,7 +511,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Refresh_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Refresh")
@@ -536,7 +536,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_RichEditor_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin RichEditor")
@@ -561,7 +561,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_RichText_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin RichText")
@@ -586,7 +586,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_RowSplit_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin RowSplit")
@@ -611,7 +611,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_ScrollBar_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin ScrollBar")
@@ -636,7 +636,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Search_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Search")
@@ -661,7 +661,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Slider_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Slider")
@@ -686,7 +686,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Stepper_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Stepper")
@@ -711,7 +711,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_StepperItem_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin StepperItem")
@@ -736,7 +736,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Text_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Text")
@@ -761,7 +761,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_TextArea_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin TextArea")
@@ -786,7 +786,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_TextClock_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin TextClock")
@@ -811,7 +811,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_TextInput_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin TextInput")
@@ -836,7 +836,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_TextPicker_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin TextPicker")
@@ -861,7 +861,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_TextTimer_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin TextTimer")
@@ -886,7 +886,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Toggle_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Toggle")
@@ -911,7 +911,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Web_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Web")
@@ -936,7 +936,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Select_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Select")
@@ -961,7 +961,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Badge_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Badge")
@@ -986,7 +986,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Column_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Column")
@@ -1011,7 +1011,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Grid_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Grid")
@@ -1036,7 +1036,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_GridItem_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin GridItem")
@@ -1061,7 +1061,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_GridRow_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin GridRow")
@@ -1086,7 +1086,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_GridCol_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin GridCol")
@@ -1111,7 +1111,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Flex_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Flex")
@@ -1136,7 +1136,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_List_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin List")
@@ -1161,7 +1161,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_ListItem_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin ListItem")
@@ -1186,7 +1186,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_ListItemGroup_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin ListItemGroup")
@@ -1211,7 +1211,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_RelativeContainer_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin RelativeContainer")
@@ -1236,7 +1236,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Row_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Row")
@@ -1261,7 +1261,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Scroll_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Scroll")
@@ -1286,7 +1286,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Stack_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Stack")
@@ -1311,7 +1311,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Swiper_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Swiper")
@@ -1336,7 +1336,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Tabs_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Tabs")
@@ -1361,7 +1361,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_TabContent_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin TabContent")
@@ -1386,7 +1386,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Circle_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Circle")
@@ -1411,7 +1411,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Line_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Line")
@@ -1436,7 +1436,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Rect_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Rect")
@@ -1461,7 +1461,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Shape_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Shape")
@@ -1486,7 +1486,7 @@ class Test_EmptyAttrs_Margin {
      * @tc.desic：Empty_Path_Margin
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Margin_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckMargin: FindBegin Path")

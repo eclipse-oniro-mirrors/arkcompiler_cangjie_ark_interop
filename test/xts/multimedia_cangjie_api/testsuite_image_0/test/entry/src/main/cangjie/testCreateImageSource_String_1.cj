@@ -35,10 +35,10 @@ class testCreateImageSource_String_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("")
             @Expect(true, imageSource.supportedFormats.size > 0i64)
@@ -47,7 +47,7 @@ class testCreateImageSource_String_1 {
             @Expect(e.message, "Invalid image parameter.")
             @Expect(e.code, 62980115i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -59,10 +59,10 @@ class testCreateImageSource_String_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("../test.jpg")
             @Expect(true, imageSource.supportedFormats.size > 0i64)
@@ -71,7 +71,7 @@ class testCreateImageSource_String_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -83,10 +83,10 @@ class testCreateImageSource_String_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource("../test.png")
             @Expect(true, imageSource.supportedFormats.size > 0i64)
@@ -95,6 +95,6 @@ class testCreateImageSource_String_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 }

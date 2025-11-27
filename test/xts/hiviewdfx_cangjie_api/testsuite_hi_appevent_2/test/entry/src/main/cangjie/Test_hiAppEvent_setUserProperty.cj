@@ -27,17 +27,17 @@ import ohos.base.*
 
 @Test
 class Test_hiAppEvent_setUserProperty {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0100
-    * @tc.name      : test_hiAppEvent_setUserProperty_01
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0100
+     * @tc.name      : test_hiAppEvent_setUserProperty_01
+     * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserProperty_01() {
         try {
             let test_userID_name = "test_setUserProperty_01"
@@ -50,86 +50,16 @@ class Test_hiAppEvent_setUserProperty {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0200
-    * @tc.name      : test_hiAppEvent_setUserProperty_02
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0500
+     * @tc.name      : test_hiAppEvent_setUserProperty_05
+     * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func test_hiAppEvent_setUserProperty_02() {
-        try {
-            let test_userID_name = "test_setUserProperty_02$"
-            let test_userID_value = "123456"
-            HiAppEvent.setUserProperty(test_userID_name, test_userID_value)
-            let userIdName = HiAppEvent.getUserProperty(test_userID_name)
-            @Expect(userIdName,"123456")
-        } catch (e: Exception) {
-            @Expect(false)
-        }
-    }
-
-    
-    /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0300
-    * @tc.name      : test_hiAppEvent_setUserProperty_03
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func test_hiAppEvent_setUserProperty_03() {
-        try {
-            let test_userID_name = "1test_setUserProperty_03"
-            let test_userID_value = "123456"
-            HiAppEvent.setUserProperty(test_userID_name, test_userID_value)
-            @Expect(false)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 401)
-            @Expect(e.message, "Parameter error. Parameter verification failed.")
-        }
-    }
-
-    
-    /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0400
-    * @tc.name      : test_hiAppEvent_setUserProperty_04
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func test_hiAppEvent_setUserProperty_04() {
-        try {
-            let test_userID_name = "test_setUserProperty_04&"
-            let test_userID_value = "123456"
-            HiAppEvent.setUserProperty(test_userID_name, test_userID_value)
-            @Expect(false)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 401)
-            @Expect(e.message, "Parameter error. Parameter verification failed.")
-        }
-    }
-
-    
-    /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0500
-    * @tc.name      : test_hiAppEvent_setUserProperty_05
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserProperty_05() {
         try {
             let test_userID_name = ""
@@ -142,40 +72,39 @@ class Test_hiAppEvent_setUserProperty {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0600
-    * @tc.name      : test_hiAppEvent_setUserProperty_06
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0600
+     * @tc.name      : test_hiAppEvent_setUserProperty_06
+     * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserProperty_06() {
         try {
-            let test_userID_name = "daidohaiofjaiofjaiojfiafjaofskjashfiahfusafhjsahfsuiasfhjfkuaifhsjkslakdpafoapfhioahwfuwiahfjshfaifhwuiahfkshfaiowehafowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa666666661"
+            let test_userID_name = " "
             let test_userID_value = "123456"
             HiAppEvent.setUserProperty(test_userID_name, test_userID_value)
             let userIdName = HiAppEvent.getUserProperty(test_userID_name)
-            @Expect(userIdName,"123456")
-        } catch (e: Exception) {
             @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 401)
+            @Expect(e.message, "Parameter error. Parameter verification failed.")
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0700
-    * @tc.name      : test_hiAppEvent_setUserProperty_07
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0700
+     * @tc.name      : test_hiAppEvent_setUserProperty_07
+     * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserProperty_07() {
         try {
             let test_userID_name = "daidohaiofjaiofjaiojfiafjaofskjashfiahfusafhjsahfsuiasfhjfkuaifhsjkslakdpafoapfhioahwfuwiahfjshfaifhwuiahfkshfaiowehafowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6666666611"
@@ -188,17 +117,16 @@ class Test_hiAppEvent_setUserProperty {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0800
-    * @tc.name      : test_hiAppEvent_setUserProperty_08
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0800
+     * @tc.name      : test_hiAppEvent_setUserProperty_08
+     * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserProperty_08() {
         try {
             let test_userID_name = "test_setUserProperty_08"
@@ -216,17 +144,16 @@ class Test_hiAppEvent_setUserProperty {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0900
-    * @tc.name      : test_hiAppEvent_setUserProperty_09
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_0900
+     * @tc.name      : test_hiAppEvent_setUserProperty_09
+     * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserProperty_09() {
         try {
             let test_userID_name = "test_setUserProperty_09"
@@ -239,40 +166,16 @@ class Test_hiAppEvent_setUserProperty {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_1000
-    * @tc.name      : test_hiAppEvent_setUserProperty_10
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_1100
+     * @tc.name      : test_hiAppEvent_setUserProperty_11
+     * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func test_hiAppEvent_setUserProperty_10() {
-        try {
-            let test_userID_name = "test_setUserProperty_10"
-            let test_userID_value = "daidohaiofjaiofjaiojfiaf1jaofskjashfiahfusafhjsahfsuiasfhjfkuaifhsjkslakdpafoapfhioahwfuwiahfjshfaifhwuiahfkshfaiowehafowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6666666666daidohaiofjaiofjaiojfiafjaofskjashfiahfusafhjsahfsuiasfhjfkuaifhsjkslakdpafoapfhioahwfuwiahfjshfaifhwuiahfkshfaiowehafowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaidohaiofjaiofjaiojfiafjaofskjashfiahfusafhjsahfsuiasfhjfkuaifhsjkslakdpafoapfhioahwfuwiahfjshfaifhwuiahfkshfaiowehafowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6666666666daidohaiofjaiofjaiojfiafjaofskjashfiahfusafhjsahfsuiasfhjfkuaifhsjkslakdpafoapfhioahwfuwiahfjshfaifhwuiahfkshfaiowehafowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa6666666666aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa666666666"
-            HiAppEvent.setUserProperty(test_userID_name, test_userID_value)
-            @Expect(false)
-        } catch (e: BusinessException) {
-            @Expect(e.code, 401)
-            @Expect(e.message, "Parameter error. Parameter verification failed.")
-        }
-    }
-
-    
-    /*
-    * @tc.number    : Sub_Cangjie_Hiappevent_Test_hiAppEvent_setUserProperty_1100
-    * @tc.name      : test_hiAppEvent_setUserProperty_11
-    * @tc.desc      : test Hiappevent test_hiAppEvent_setUserProperty_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_hiAppEvent_setUserProperty_11() {
         try {
             let test_userID_name = "test_setUserId_11"

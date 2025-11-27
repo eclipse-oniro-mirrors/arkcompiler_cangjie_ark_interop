@@ -36,16 +36,15 @@ class testCreateMac_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "CangjieTest", "createMac fail")
         try {
             createMac("errorString")
             @Expect("assertion#2: not throw", "createMac fail")
-        } catch (e: IllegalArgumentException) {
+        } catch (e: BusinessException) {
             @Expect(e.message, "Parameter error.")
-
         }
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1 ends.")
     }
@@ -59,7 +58,7 @@ class testCreateMac_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "CangjieTest", "createMac")
@@ -76,14 +75,14 @@ class testCreateMac_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "CangjieTest", "createMac fail")
         try {
             createMac("")
             @Expect("assertion#3: not throw", "createMac fail")
-        } catch (e: IllegalArgumentException) {
+        } catch (e: BusinessException) {
             @Expect(e.message, "Parameter error.")
         }
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_3 ends.")

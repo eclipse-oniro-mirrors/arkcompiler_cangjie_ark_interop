@@ -24,7 +24,6 @@ import ohos.base.*
 import stdx.encoding.json.*
 import ohos.multimedia.image.*
 
-
 @Test
 class testCreateImageSource_Int32_1 {
     /*
@@ -36,10 +35,10 @@ class testCreateImageSource_Int32_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource(-2147483648i32)
             @Expect(true, imageSource.supportedFormats.size > 0i64)
@@ -48,7 +47,7 @@ class testCreateImageSource_Int32_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -60,10 +59,10 @@ class testCreateImageSource_Int32_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource(-114514i32)
             @Expect(true, imageSource.supportedFormats.size > 0i64)
@@ -72,7 +71,7 @@ class testCreateImageSource_Int32_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -84,10 +83,10 @@ class testCreateImageSource_Int32_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource(-1i32)
             @Expect(true, imageSource.supportedFormats.size > 0i64)
@@ -96,7 +95,7 @@ class testCreateImageSource_Int32_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -108,15 +107,15 @@ class testCreateImageSource_Int32_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
 
         let imageSource = createImageSource(0i32)
         @Expect(true, imageSource.supportedFormats.size > 0i64)
 
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -128,16 +127,15 @@ class testCreateImageSource_Int32_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
 
         let imageSource = createImageSource(1i32)
         @Expect(true, imageSource.supportedFormats.size > 0i64)
 
-
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 
     /*
@@ -149,10 +147,10 @@ class testCreateImageSource_Int32_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource(114514i32)
             @Expect(true, imageSource.supportedFormats.size > 0i64)
@@ -161,7 +159,7 @@ class testCreateImageSource_Int32_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
 
     /*
@@ -173,10 +171,10 @@ class testCreateImageSource_Int32_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let imageSource = createImageSource(2147483647i32)
             @Expect(true, imageSource.supportedFormats.size > 0i64)
@@ -185,6 +183,6 @@ class testCreateImageSource_Int32_1 {
             @Expect(e.message, "The image source data is abnormal.")
             @Expect(e.code, 62980110i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
     }
 }

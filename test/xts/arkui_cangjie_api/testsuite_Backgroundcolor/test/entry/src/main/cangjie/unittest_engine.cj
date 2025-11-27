@@ -46,7 +46,7 @@ import ohos.arkui.component.*
 import ohos.ui_test
 import std.convert.*
 import std.time.DateTime
-import ohos.file.fs.FileIo as  FileFs
+import ohos.file.fs.FileIo
 import std.unittest.testmacro.*
 import std.unittest.*
 import std.unittest.common.*
@@ -64,16 +64,7 @@ import std.io.ByteBuffer
 import stdx.encoding.json.stream.JsonWriter
 import std.collection.filterMap
 import kit.PerformanceAnalysisKit.Hilog
-
-foreign func __gcov_dump(): Unit
-
-public func gcov_dump(coveragePath: String): Unit {
-    Hilog.info(0, "CangjieTest", "execute test with coverage")
-    Process
-        .current
-        .setEnv("GCOV_PREFIX", coveragePath)
-    unsafe { __gcov_dump() }
-}
+internal import ohos.resource.__GenerateResource__
 
 public func registerTestSuite(_: String, testClassInstanceGenerator: () -> TestClass): Unit {
     OpenHarmonyTestRunner
@@ -221,11 +212,11 @@ public class OpenHarmonyTestRunner <: TestRunner {
             const dryRunFilePath = "/data/storage/el1/base/dryRun.txt"
             sleepFor(1.second)
             setUp()
-            if (FileFs.access(dryRunFilePath)) {
+            if (FileIo.access(dryRunFilePath)) {
                 let dryRun = String.fromUtf8(fs
                     .File
                     .readFrom(dryRunFilePath))
-                FileFs.unlink(dryRunFilePath)
+                FileIo.unlink(dryRunFilePath)
                 this
                     .configuration
                     .setByName(
@@ -255,11 +246,11 @@ public class OpenHarmonyTestRunner <: TestRunner {
 
             let bundleName = "com.example.myapplication"
             let allTags = HashSet<String>()
-            if (FileFs.access(testTypeFilePath)) {
+            if (FileIo.access(testTypeFilePath)) {
                 let testType = String.fromUtf8(fs
                     .File
                     .readFrom(testTypeFilePath))
-                FileFs.unlink(testTypeFilePath)
+                FileIo.unlink(testTypeFilePath)
                 let tags = testType.split(",", removeEmpty: true) |> filterMap {
                     levelNumber: String => levelNumber
                 } |> collectArray
@@ -274,11 +265,11 @@ public class OpenHarmonyTestRunner <: TestRunner {
                 allTags.add(all: tags)
             }
 
-            if (FileFs.access(levelFilePath)) {
+            if (FileIo.access(levelFilePath)) {
                 let levels = String.fromUtf8(fs
                     .File
                     .readFrom(levelFilePath))
-                FileFs.unlink(levelFilePath)
+                FileIo.unlink(levelFilePath)
                 let tags = levels.split(",", removeEmpty: true) |>
                     filterMap {
                     levelNumber: String => if (levelNumber == "0") {
@@ -324,11 +315,11 @@ public class OpenHarmonyTestRunner <: TestRunner {
                 try {
                     abilityDelegator
                         .startAbility(want)
-                    if (FileFs.access(classFilePath)) {
+                    if (FileIo.access(classFilePath)) {
                         let text = String.fromUtf8(fs
                             .File
                             .readFrom(classFilePath))
-                        FileFs.unlink(classFilePath)
+                        FileIo.unlink(classFilePath)
                         Hilog.error(0, "CangjieTest", "text includeTags = ${text}")
                         text.split(",", removeEmpty: true) |>
                             forEach {
@@ -366,7 +357,6 @@ public class OpenHarmonyTestRunner <: TestRunner {
                 } catch (e: Exception) {
                     Hilog.error(0, "CangjieTest", "an exception occurred:\n${getDetailedInfoOf(e)}")
                 }
-                gcov_dump("/data/storage/el1/base/cov")
                 abilityDelegator.finishTest("Test finished.", 0)
             }
         } catch (e: Exception) {
@@ -605,6 +595,7 @@ public func enterPage(pageName: String): Unit {
 }
 
 public func enterPage(scrollerId!: String, buttonId!: String): Unit {
+    OpenHarmonyTestRunner.driver.waitForComponent(On().id(scrollerId), 3000)
     let scroller = Screen.getTheOnlyUiComponentWhoseIdEqualsTo(scrollerId)
     for (_ in 0..100) {
         if (let Some(button) <- Screen.findTheOnlyUiComponentWhoseIdEqualsTo(buttonId)) {

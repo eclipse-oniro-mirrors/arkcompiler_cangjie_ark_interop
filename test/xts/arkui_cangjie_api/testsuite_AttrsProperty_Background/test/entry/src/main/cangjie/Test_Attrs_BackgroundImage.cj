@@ -40,7 +40,7 @@ class Test_EmptyAttrs_BackgroundImage {
      * @tc.desic：Empty_AlphabetIndexer_BackgroundImage
      */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_AlphabetIndexer_0100() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin AlphabetIndexer")
@@ -69,7 +69,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Blank_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Blank_0200() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Blank")
@@ -98,7 +98,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Button_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Button_0300() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Button")
@@ -127,7 +127,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Checkbox_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Checkbox_0400() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Checkbox")
@@ -156,7 +156,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_CheckboxGroup_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_CheckboxGroup_0500() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin CheckboxGroup")
@@ -186,7 +186,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_DataPanel_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_DataPanel_0700() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin DataPanel")
@@ -215,7 +215,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_DatePicker_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_DatePicker_0800() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin DatePicker")
@@ -244,7 +244,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Divider_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Divider_0900() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Divider")
@@ -273,7 +273,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Gauge_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Gauge_1000() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Gauge")
@@ -302,7 +302,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Image_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Image_1100() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Image")
@@ -331,7 +331,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_ImageSpan_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_ImageSpan_1200() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin ImageSpan")
@@ -360,7 +360,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_LoadingProgress_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_LoadingProgress_1300() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin LoadingProgress")
@@ -389,7 +389,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Menu_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Menu_1400() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Menu")
@@ -418,7 +418,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_MenuItem_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_MenuItem_1500() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin MenuItem")
@@ -447,7 +447,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_MenuItemGroup_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_MenuItemGroup_1600() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin MenuItemGroup")
@@ -476,7 +476,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Progress_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Progress_1700() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Progress")
@@ -505,7 +505,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_QRCode_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_QRCode_1800() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin QRCode")
@@ -534,7 +534,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Radio_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Radio_1900() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Radio")
@@ -563,7 +563,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Rating_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Rating_2000() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Rating")
@@ -592,7 +592,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Refresh_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Refresh_2100() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Refresh")
@@ -621,7 +621,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_RichEditor_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_RichEditor_2200() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin RichEditor")
@@ -650,7 +650,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_RowSplit_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_RowSplit_2300() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin RowSplit")
@@ -679,7 +679,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_ScrollBar_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_ScrollBar_2400() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin ScrollBar")
@@ -708,7 +708,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Search_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Search_2500() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Search")
@@ -737,7 +737,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Slider_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Slider_2600() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Slider")
@@ -766,7 +766,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Stepper_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Stepper_2700() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Stepper")
@@ -795,7 +795,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_StepperItem_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_StepperItem_2800() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin StepperItem")
@@ -824,7 +824,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Text_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Text_2900() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Text")
@@ -853,7 +853,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_TextArea_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_TextArea_3000() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin TextArea")
@@ -882,7 +882,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_TextClock_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_TextClock_3100() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin TextClock")
@@ -911,7 +911,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_TextInput_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_TextInput_3200() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin TextInput")
@@ -940,7 +940,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_TextPicker_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_TextPicker_3300() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin TextPicker")
@@ -969,7 +969,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_TextTimer_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_TextTimer_3400() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin TextTimer")
@@ -998,7 +998,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Toggle_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Toggle_3500() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Toggle")
@@ -1027,7 +1027,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Web_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Web_3600() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Web")
@@ -1056,7 +1056,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Select_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Select_3700() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Select")
@@ -1085,7 +1085,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Badge_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Badge_3800() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Badge")
@@ -1114,7 +1114,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Column_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Column_3900() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Column")
@@ -1143,7 +1143,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Grid_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Grid_4000() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Grid")
@@ -1172,7 +1172,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_GridItem_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_GridItem_4100() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin GridItem")
@@ -1201,7 +1201,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_GridRow_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_GridRow_4200() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin GridRow")
@@ -1230,7 +1230,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_GridCol_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_GridCol_4300() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin GridCol")
@@ -1259,7 +1259,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Flex_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Flex_4400() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Flex")
@@ -1288,7 +1288,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_List_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_List_4500() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin List")
@@ -1317,7 +1317,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_ListItem_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_ListItem_4600() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin ListItem")
@@ -1346,7 +1346,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_ListItemGroup_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_ListItemGroup_4700() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin ListItemGroup")
@@ -1376,7 +1376,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_RelativeContainer_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_RelativeContainer_4900() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin RelativeContainer")
@@ -1405,7 +1405,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Row_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Row_5000() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Row")
@@ -1434,7 +1434,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Scroll_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Scroll_5100() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Scroll")
@@ -1463,7 +1463,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Stack_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Stack_5200() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Stack")
@@ -1492,7 +1492,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Swiper_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Swiper_5300() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Swiper")
@@ -1521,7 +1521,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Tabs_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Tabs_5400() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Tabs")
@@ -1550,7 +1550,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_TabContent_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_TabContent_5500() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin TabContent")
@@ -1579,7 +1579,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Circle_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Circle_5600() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Circle")
@@ -1608,7 +1608,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Line_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Line_5700() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Line")
@@ -1637,7 +1637,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Rect_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Rect_5800() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Rect")
@@ -1666,7 +1666,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Shape_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Shape_5900() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Shape")
@@ -1695,7 +1695,7 @@ class Test_EmptyAttrs_BackgroundImage {
     * @tc.desic：Empty_Path_BackgroundImage
     */
    @TestCase
-   @Tag[APILevel12, TestLevel0]
+   @Tag[APILevel22, TestLevel0]
    func Test_EmptyAttrs_BackgroundImage_Path_6100() {
        sleepFor(1.second)
        Hilog.info(0, "cangjietest", "test", "CheckCheckBackgroundImage: FindBegin Path")

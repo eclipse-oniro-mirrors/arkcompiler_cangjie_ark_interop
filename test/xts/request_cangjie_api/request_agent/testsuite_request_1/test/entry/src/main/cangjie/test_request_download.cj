@@ -26,17 +26,17 @@ import ohos.business_exception.BusinessException
 class TestRuqestDOWNLOAD {
     let fileURL = "https://img0.baidu.com/it/u=2637988091,3139593769&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=667"
     let token = "correctToken"
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0100
-    * @tc.name      : test_getTask01
-    * @tc.desc      : test Request test_getTask01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0100
+     * @tc.name      : test_getTask01
+     * @tc.desc      : test Request test_getTask01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask01() {
         let config = Config(
             Action.Download,
@@ -51,17 +51,16 @@ class TestRuqestDOWNLOAD {
         remove(task.tid)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0200
-    * @tc.name      : test_getTask02
-    * @tc.desc      : test Request test_getTask02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0200
+     * @tc.name      : test_getTask02
+     * @tc.desc      : test Request test_getTask02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask02() {
         let config = Config(
             Action.Download,
@@ -72,27 +71,26 @@ class TestRuqestDOWNLOAD {
         let task = create(getAbilityContext(), config)
         task.start()
 
-        try{
-          getTask(getAbilityContext(), "", token: token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            getTask(getAbilityContext(), "", token: token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0300
-    * @tc.name      : test_getTask03
-    * @tc.desc      : test Request test_getTask03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0300
+     * @tc.name      : test_getTask03
+     * @tc.desc      : test Request test_getTask03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask03() {
         let config = Config(
             Action.Download,
@@ -103,26 +101,26 @@ class TestRuqestDOWNLOAD {
         let task = create(getAbilityContext(), config)
         task.start()
 
-        try{
-          getTask(getAbilityContext(), "$%^!@&*", token: token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            getTask(getAbilityContext(), "$%^!@&*", token: token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0400
-    * @tc.name      : test_getTask04
-    * @tc.desc      : test Request test_getTask04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0400
+     * @tc.name      : test_getTask04
+     * @tc.desc      : test Request test_getTask04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask04() {
         let id = """
         multiline
@@ -137,27 +135,26 @@ class TestRuqestDOWNLOAD {
         let task = create(getAbilityContext(), config)
         task.start()
 
-        try{
-          getTask(getAbilityContext(), id, token: token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            getTask(getAbilityContext(), id, token: token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0500
-    * @tc.name      : test_getTask06
-    * @tc.desc      : test Request test_getTask06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0500
+     * @tc.name      : test_getTask06
+     * @tc.desc      : test Request test_getTask06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask06() {
         let token2 = """
             multiline
@@ -173,27 +170,26 @@ class TestRuqestDOWNLOAD {
         let task = create(getAbilityContext(), config)
         task.start()
 
-        try{
-          getTask(getAbilityContext(), task.tid, token: "")
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==401)
-        }finally{
-          remove(task.tid)
+        try {
+            getTask(getAbilityContext(), task.tid, token: "")
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==401)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0600
-    * @tc.name      : test_getTask05
-    * @tc.desc      : test Request test_getTask05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0600
+     * @tc.name      : test_getTask05
+     * @tc.desc      : test Request test_getTask05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getTask05() {
         let config = Config(
             Action.Download,
@@ -204,27 +200,26 @@ class TestRuqestDOWNLOAD {
         let task = create(getAbilityContext(), config)
         task.start()
 
-        try{
-          getTask(getAbilityContext(), task.tid, token: "12345678910")
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            getTask(getAbilityContext(), task.tid, token: "12345678910")
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0800
-    * @tc.name      : test_show01
-    * @tc.desc      : test Request test_show01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_0800
+     * @tc.name      : test_show01
+     * @tc.desc      : test Request test_show01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_show01() {
         let config = Config(
             Action.Download,
@@ -239,18 +234,18 @@ class TestRuqestDOWNLOAD {
         @Expect(taskInfo.title=="download")
         @Expect(Action.Download.toString(),"Action.Download")
         remove(task.tid)
-    }  
-    
+    }
+
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1300
-    * @tc.name      : test_touch01
-    * @tc.desc      : test Request test_touch01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1300
+     * @tc.name      : test_touch01
+     * @tc.desc      : test Request test_touch01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch01() {
         let config = Config(
             Action.Download,
@@ -267,17 +262,17 @@ class TestRuqestDOWNLOAD {
         @Expect(Action.Download.toString(),"Action.Download")
         remove(task.tid)
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1500
-    * @tc.name      : test_touch04
-    * @tc.desc      : test Request test_touch04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1500
+     * @tc.name      : test_touch04
+     * @tc.desc      : test Request test_touch04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch04() {
         let token2 = ""
         let config = Config(
@@ -289,27 +284,26 @@ class TestRuqestDOWNLOAD {
         let task = create(getAbilityContext(), config)
         task.start()
 
-        try{
-          let taskInfo = touch(task.tid, token2)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==401)
-        }finally{
-          remove(task.tid)
+        try {
+            let taskInfo = touch(task.tid, token2)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==401)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1600
-    * @tc.name      : test_touch05
-    * @tc.desc      : test Request test_touch05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1600
+     * @tc.name      : test_touch05
+     * @tc.desc      : test Request test_touch05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch05() {
         let config = Config(
             Action.Download,
@@ -320,27 +314,26 @@ class TestRuqestDOWNLOAD {
         let task = create(getAbilityContext(), config)
         task.start()
 
-        try{
-          let taskInfo = touch("", token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            let taskInfo = touch("", token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1700
-    * @tc.name      : test_touch06
-    * @tc.desc      : test Request test_touch06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1700
+     * @tc.name      : test_touch06
+     * @tc.desc      : test Request test_touch06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch06() {
         let config = Config(
             Action.Download,
@@ -350,28 +343,27 @@ class TestRuqestDOWNLOAD {
         )
         let task = create(getAbilityContext(), config)
         task.start()
- 
-        try{
-          let taskInfo = touch("$%^!@&*", token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+
+        try {
+            let taskInfo = touch("$%^!@&*", token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1800
-    * @tc.name      : test_touch07
-    * @tc.desc      : test Request test_touch07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1800
+     * @tc.name      : test_touch07
+     * @tc.desc      : test Request test_touch07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_touch07() {
         let id = """
         multiline
@@ -386,27 +378,26 @@ class TestRuqestDOWNLOAD {
         let task = create(getAbilityContext(), config)
         task.start()
 
-        try{
-          let taskInfo = touch("$%^!@&*", token)
-          @Expect(false)
-        }catch(e:BusinessException){
-          @Expect(e.code==21900006)
-        }finally{
-          remove(task.tid)
+        try {
+            let taskInfo = touch("$%^!@&*", token)
+            @Expect(false)
+        } catch (e: BusinessException) {
+            @Expect(e.code==21900006)
+        } finally {
+            remove(task.tid)
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1900
-    * @tc.name      : test_search01
-    * @tc.desc      : test Request test_search01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_1900
+     * @tc.name      : test_search01
+     * @tc.desc      : test Request test_search01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_search01() {
         let config = Config(
             Action.Download,
@@ -421,17 +412,16 @@ class TestRuqestDOWNLOAD {
         remove(task.tid)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_2000
-    * @tc.name      : test_search02
-    * @tc.desc      : test Request test_search02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_2000
+     * @tc.name      : test_search02
+     * @tc.desc      : test Request test_search02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_search02() {
         let config = Config(
             Action.Download,
@@ -445,17 +435,16 @@ class TestRuqestDOWNLOAD {
         remove(task.tid)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_2100
-    * @tc.name      : test_search03
-    * @tc.desc      : test Request test_search03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_2100
+     * @tc.name      : test_search03
+     * @tc.desc      : test Request test_search03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_search03() {
         let config = Config(
             Action.Download,
@@ -465,7 +454,7 @@ class TestRuqestDOWNLOAD {
             mode: Mode.Foreground
         )
         let task = create(getAbilityContext(), config)
-        let createOnCallback = MyCallBack(touch(task.tid,token).progress)
+        let createOnCallback = MyCallBack(touch(task.tid, token).progress)
         task.on(EventCallbackType.Completed, createOnCallback)
         task.start()
         let arr = search(filter: RFilter(mode: Mode.Foreground))
@@ -473,17 +462,16 @@ class TestRuqestDOWNLOAD {
         remove(task.tid)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_2200
-    * @tc.name      : test_search04
-    * @tc.desc      : test Request test_search04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Request_TestRuqestDOWNLOAD_2200
+     * @tc.name      : test_search04
+     * @tc.desc      : test Request test_search04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_search04() {
         let config = Config(
             Action.Download,
@@ -493,9 +481,9 @@ class TestRuqestDOWNLOAD {
             mode: Mode.Foreground
         )
         let task = create(getAbilityContext(), config)
-        let createOnCallback = MyCallBack(touch(task.tid,token).progress)
+        let createOnCallback = MyCallBack(touch(task.tid, token).progress)
         task.on(EventCallbackType.Completed, createOnCallback)
-        task.start()     
+        task.start()
         let arr = search(filter: RFilter(action: Action.Upload))
         @Expect(!arr.contains(task.tid))
         remove(task.tid)

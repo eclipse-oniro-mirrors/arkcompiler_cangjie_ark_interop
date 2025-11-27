@@ -38,14 +38,10 @@ func compare(jsContext: JSContext, _: JSCallInfo): JSValue {
         let sa = Utf16String(c.a)
         let sb = Utf16String(c.b)
         let ra = sa.compare(sb)
-        let rb = c
-            .a
-            .compare(c.b)
+        let rb = c.a.compare(c.b)
         Assert.equals(ra, rb)
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 struct SubStrCase {
@@ -59,8 +55,7 @@ struct SubStrCase {
 func substr(jsContext: JSContext, _: JSCallInfo): JSValue {
     let cases = [
         SubStrCase("0123456789", 0..5, "01234"),
-        SubStrCase("123456", 0..10, "123456"),
-        //        SubStrCase("132", 1..0, ""), // TODO: add to hlt
+        SubStrCase("123456", 0..6, "123456"),
         SubStrCase("你好世界，🧭123", 2..8, "世界，🧭1")
     ]
     for (c in cases) {
@@ -68,9 +63,7 @@ func substr(jsContext: JSContext, _: JSCallInfo): JSValue {
         let dst = src[c.range]
         Assert.equals(dst.toString(), c.dst)
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 struct SubstrAdvCase {
@@ -83,19 +76,15 @@ struct SubstrAdvCase {
 }
 
 func substrAdvanced(jsContext: JSContext, _: JSCallInfo): JSValue {
-    let cases = [
-        SubstrAdvCase("你好世界，🧭123", 2..8, "世界，🧭1", false),
-        SubstrAdvCase("你好世界，🧭123", 6..7, "1", true)
-    ]
+    let cases = [SubstrAdvCase("你好世界，🧭123", 2..8, "世界，🧭1", false), SubstrAdvCase("你好世界，🧭123", 6..7, "1",
+        true)]
     for (c in cases) {
         let src = Utf16String(c.src)
         let dst = src[c.range]
         //        Assert.equals(dst.isCompressed(), c.isLatin1)
         //        Assert.equals(dst.toString(), c.dst)
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 struct SplitCase {
@@ -124,16 +113,12 @@ func split(jsContext: JSContext, _: JSCallInfo): JSValue {
         let src = Utf16String(c.src)
         let spt = Utf16String(c.seperator)
         let result = src.split(spt, c.count)
-        Assert.equals(result.size, c
-            .dst
-            .size)
+        Assert.equals(result.size, c.dst.size)
         for (i in 0..result.size) {
             Assert.equals(result[i].toString(), c.dst[i])
         }
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 struct SplitElement {
@@ -172,21 +157,13 @@ func splitAdv(jsContext: JSContext, _: JSCallInfo): JSValue {
         let src = Utf16String(c.src)
         let spt = Utf16String(c.seperator)
         let result = src.split(spt, c.count)
-        Assert.equals(result.size, c
-            .dst
-            .size)
+        Assert.equals(result.size, c.dst.size)
         for (i in 0..result.size) {
-            Assert.equals(result[i].isCompressed(), c
-                .dst[i]
-                .isLatin1)
-            Assert.equals(result[i].toString(), c
-                .dst[i]
-                .value)
+            Assert.equals(result[i].isCompressed(), c.dst[i].isLatin1)
+            Assert.equals(result[i].toString(), c.dst[i].value)
         }
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 struct IndexOfCase {
@@ -210,9 +187,7 @@ func indexOf(jsContext: JSContext, _: JSCallInfo): JSValue {
         let result = src.indexOf(target, c.offset)
         Assert.equals(result, c.result)
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 func lastIndexOf(jsContext: JSContext, _: JSCallInfo): JSValue {
@@ -235,9 +210,7 @@ func lastIndexOf(jsContext: JSContext, _: JSCallInfo): JSValue {
         let result = src.lastIndexOf(target, c.offset)
         Assert.equals(result, c.result)
     }
-    return jsContext
-        .undefined()
-        .toJSValue()
+    return jsContext.undefined().toJSValue()
 }
 
 struct CountOfCase {
@@ -249,19 +222,14 @@ struct CountOfCase {
 }
 
 func countOf(jsContext: JSContext, _: JSCallInfo): JSValue {
-    let cases = [
-        CountOfCase("0123456", "123", 1),
-        CountOfCase("012345781456789148578", "7", 3)
-    ]
+    let cases = [CountOfCase("0123456", "123", 1), CountOfCase("012345781456789148578", "7", 3)]
     for (c in cases) {
         let src = Utf16String(c.src)
         let target = Utf16String(c.target)
         let result = src.count(target)
         Assert.equals(result, c.result)
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 struct ReplaceCase {
@@ -287,9 +255,7 @@ func replace(jsContext: JSContext, _: JSCallInfo): JSValue {
         let result = src.replace(from, to, count: c.count)
         Assert.equals(result.toString(), c.result)
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 func toString() {
@@ -327,9 +293,7 @@ func contains(jsContext: JSContext, _: JSCallInfo): JSValue {
         let contains = src.contains(dst)
         Assert.equals(contains, c.result)
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 struct StartsWithCase {
@@ -341,19 +305,14 @@ struct StartsWithCase {
 }
 
 func startsWith(jsContext: JSContext, _: JSCallInfo): JSValue {
-    let cases = [
-        StartsWithCase("abcd123", "abc", true),
-        StartsWithCase("abcd您那你", "abc", true)
-    ]
+    let cases = [StartsWithCase("abcd123", "abc", true), StartsWithCase("abcd您那你", "abc", true)]
     for (c in cases) {
         let src = Utf16String(c.src)
         let dst = Utf16String(c.target)
         let result = src.startsWith(dst)
         Assert.equals(result, c.result)
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 func endsWith(jsContext: JSContext, _: JSCallInfo): JSValue {
@@ -369,47 +328,21 @@ func endsWith(jsContext: JSContext, _: JSCallInfo): JSValue {
         let result = src.endsWith(target)
         Assert.equals(result, c.result)
     }
-    jsContext
-        .undefined()
-        .toJSValue()
+    jsContext.undefined().toJSValue()
 }
 
 let _ = JSModule.registerModule {
     jsContext, jsObject =>
-    jsObject["compare"] = jsContext
-        .function(compare)
-        .toJSValue()
-    jsObject["substr"] = jsContext
-        .function(substr)
-        .toJSValue()
-    jsObject["substrAdvanced"] = jsContext
-        .function(substrAdvanced)
-        .toJSValue()
-    jsObject["split"] = jsContext
-        .function(split)
-        .toJSValue()
-    jsObject["splitAdv"] = jsContext
-        .function(splitAdv)
-        .toJSValue()
-    jsObject["indexOf"] = jsContext
-        .function(indexOf)
-        .toJSValue()
-    jsObject["lastIndexOf"] = jsContext
-        .function(lastIndexOf)
-        .toJSValue()
-    jsObject["countOf"] = jsContext
-        .function(countOf)
-        .toJSValue()
-    jsObject["replace"] = jsContext
-        .function(replace)
-        .toJSValue()
-    jsObject["contains"] = jsContext
-        .function(contains)
-        .toJSValue()
-    jsObject["startsWith"] = jsContext
-        .function(startsWith)
-        .toJSValue()
-    jsObject["endsWith"] = jsContext
-        .function(endsWith)
-        .toJSValue()
+    jsObject["compare"] = jsContext.function(compare).toJSValue()
+    jsObject["substr"] = jsContext.function(substr).toJSValue()
+    jsObject["substrAdvanced"] = jsContext.function(substrAdvanced).toJSValue()
+    jsObject["split"] = jsContext.function(split).toJSValue()
+    jsObject["splitAdv"] = jsContext.function(splitAdv).toJSValue()
+    jsObject["indexOf"] = jsContext.function(indexOf).toJSValue()
+    jsObject["lastIndexOf"] = jsContext.function(lastIndexOf).toJSValue()
+    jsObject["countOf"] = jsContext.function(countOf).toJSValue()
+    jsObject["replace"] = jsContext.function(replace).toJSValue()
+    jsObject["contains"] = jsContext.function(contains).toJSValue()
+    jsObject["startsWith"] = jsContext.function(startsWith).toJSValue()
+    jsObject["endsWith"] = jsContext.function(endsWith).toJSValue()
 }

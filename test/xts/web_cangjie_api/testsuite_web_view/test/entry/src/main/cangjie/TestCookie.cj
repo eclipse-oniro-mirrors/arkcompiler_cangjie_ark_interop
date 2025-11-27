@@ -32,7 +32,7 @@ class Test_cookie {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_configCookie_fetchCookie() {
         WebCookieManager.configCookie("https://www.example.com", "a=b,c=d,e=f")
         let value = WebCookieManager.fetchCookie("https://www.example.com")
@@ -48,7 +48,7 @@ class Test_cookie {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_existCookie_clearAllCookies() {
         WebCookieManager.configCookie("https://www.example.com", "a=b,c=d,e=f")
         var bool = WebCookieManager.existCookie(incognito: true)

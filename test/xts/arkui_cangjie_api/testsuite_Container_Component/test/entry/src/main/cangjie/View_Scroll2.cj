@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length,  Color, LengthType}
+import ohos.base.{LengthProp, Length,  Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -28,6 +28,7 @@ import ohos.multimedia.image.createPixelMap
 import ohos.multimedia.image.InitializationOptions
 import ohos.multimedia.image.Size
 import ohos.multimedia.image.ScaleMode
+import ohos.arkui.component.list.*
 
 @Entry
 @Component
@@ -82,10 +83,10 @@ class View_Scroll2 {
                                 offset, state =>
                                 if ((listPosition == 0 && offset <= 0.0) || (listPosition == 2 && offset >= 0.0)) {
                                     scrollerForScroll.scrollBy(xOffset: 0.0, yOffset: offset)
-                                    return onScrollFrameBeginHandleResult(offsetRemain: 0.0)
+                                    return OnScrollFrameBeginHandlerResult(offsetRemain: 0.0)
                                 }
                                 listPosition = 1
-                                return onScrollFrameBeginHandleResult(offsetRemain: offset)
+                                return OnScrollFrameBeginHandlerResult(offsetRemain: offset)
                             }
                         )
                 }

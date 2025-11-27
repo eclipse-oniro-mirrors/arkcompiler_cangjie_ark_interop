@@ -36,7 +36,7 @@ class testFileIo_fsync_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_fdatasync_01() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_fdatasync_01"
         let f = FileIo.open(fpath, mode: (OpenMode.CREATE | OpenMode.READ_WRITE))
@@ -67,7 +67,7 @@ class testFileIo_fsync_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_fdatasync_02() {
         try {
             FileIo.fdatasync(-1)

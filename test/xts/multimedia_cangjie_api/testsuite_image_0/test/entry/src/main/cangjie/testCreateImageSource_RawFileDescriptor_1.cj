@@ -36,10 +36,10 @@ class testCreateImageSource_RawFileDescriptor_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpg")
@@ -50,7 +50,7 @@ class testCreateImageSource_RawFileDescriptor_1 {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -62,10 +62,10 @@ class testCreateImageSource_RawFileDescriptor_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.png")
@@ -76,7 +76,7 @@ class testCreateImageSource_RawFileDescriptor_1 {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -88,10 +88,10 @@ class testCreateImageSource_RawFileDescriptor_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","createImageSource fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "createImageSource fail")
         try {
             let resMgr = getAbilityContext().resourceManager
             let fd = resMgr.getRawFd("test.jpeg")
@@ -102,6 +102,6 @@ class testCreateImageSource_RawFileDescriptor_1 {
             @Expect(e.message, "Invalid relative path.")
             @Expect(e.code, 9001005i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 }

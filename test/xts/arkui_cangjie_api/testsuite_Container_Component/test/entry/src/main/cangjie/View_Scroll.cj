@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length,  Color, LengthType}
+import ohos.base.{LengthProp, Length,  Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -125,10 +125,10 @@ class View_Scroll {
                 .onClick(
                     {
                         evt =>
-                        Hilog.info(0, "","cangjietest", "scrollto--${this.scroller.currentOffset().yOffset}")
+                        Hilog.info(0, "","cangjietest", "scrollto--${this.scroller.currentOffset().getOrThrow().yOffset}")
                         this
                             .scroller
-                            .scrollTo(xOffset: 0.vp, yOffset: (this.scroller.currentOffset().yOffset + 100.0).vp)
+                            .scrollTo(xOffset: 0.vp, yOffset: (this.scroller.currentOffset().getOrThrow().yOffset + 100.0).vp)
                     }
                 )
                 .margin(top: 10, left: 20)

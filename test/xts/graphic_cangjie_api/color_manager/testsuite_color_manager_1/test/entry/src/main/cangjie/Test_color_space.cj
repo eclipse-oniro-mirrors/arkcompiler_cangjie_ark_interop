@@ -33,7 +33,7 @@ class Test_color_space {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_UNKNOWN() {
         try {
             create(ColorSpace.Unknown)
@@ -51,7 +51,7 @@ class Test_color_space {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_CUSTOM() {
         try {
             create(ColorSpace.Custom)
@@ -69,7 +69,7 @@ class Test_color_space {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_create() {
         try {
             @Expect(create(ColorSpace.AdobeRgb1998).getColorSpaceName().toString(), "ColorSpace.AdobeRgb1998")

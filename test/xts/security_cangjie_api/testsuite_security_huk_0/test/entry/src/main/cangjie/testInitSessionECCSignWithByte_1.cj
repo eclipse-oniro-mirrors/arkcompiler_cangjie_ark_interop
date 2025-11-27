@@ -24,9 +24,9 @@ import stdx.encoding.json.*
 import ohos.security.huks.*
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.*
+
 @Test
 class testInitSessionECCSignWithByte_1 {
-
 
     /*
      * @tc.number    : Sub_Cangjie_security_huks_100400
@@ -37,7 +37,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -47,22 +47,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist(" #5%23", HuksOptions()), true)
             let signHandle = initSession(" #5%23",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))], inData: " #5%23".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))],
+                    inData: " #5%23".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession(" #5%23",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))], inData: Bytes()))
-                .handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))], inData: " #5%23".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))],
+                    inData: " #5%23".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem(" #5%23", HuksOptions())
@@ -82,7 +90,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -92,20 +100,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("1234567890", HuksOptions()), true)
             let signHandle = initSession("1234567890",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))], inData: "1234567890".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))],
+                    inData: "1234567890".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("1234567890",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))], inData: "1234567890".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))],
+                    inData: "1234567890".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("1234567890", HuksOptions())
@@ -125,36 +143,47 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "generateKeyItem")
-        try{
+        try {
             generateKeyItem("KBCWEUYFI",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))], inData: Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))],
+                    inData: Bytes()))
             @Assert(isKeyItemExist("KBCWEUYFI", HuksOptions()), true)
             Hilog.info(0u32, "cangjietest", "", "define local variable signHandle")
             let signHandle = initSession("KBCWEUYFI",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))],
+                    inData: Bytes())).handle
             Hilog.info(0u32, "cangjietest", "", "updateSession")
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))], inData: "KBCWEUYFI".toArray()),
-                token: "inDatas".toArray())
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))],
+                    inData: "KBCWEUYFI".toArray()),
+                token: "inDatas".toArray()
+            )
             Hilog.info(0u32, "cangjietest", "", "define local variable  inData: sign")
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))], inData: Bytes()),
-                token: "inDatas".toArray()).getOrThrow()
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             Hilog.info(0u32, "cangjietest", "", "abortSession")
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             Hilog.info(0u32, "cangjietest", "", "define local variable verifyHandle")
             let verifyHandle = initSession("KBCWEUYFI",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))],
+                    inData: Bytes())).handle
             Hilog.info(0u32, "cangjietest", "", "updateSession")
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))], inData: "KBCWEUYFI".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))],
+                    inData: "KBCWEUYFI".toArray()), token: Bytes())
             Hilog.info(0u32, "cangjietest", "", "define local variable verify")
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(1i32))],
+                    inData: sign)).getOrThrow()
             Hilog.info(0u32, "cangjietest", "", "abortSession")
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
@@ -162,7 +191,7 @@ class testInitSessionECCSignWithByte_1 {
             deleteKeyItem("KBCWEUYFI", HuksOptions())
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }        
+        }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 ends.")
     }
 
@@ -175,36 +204,47 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_6 begins.")
         Hilog.info(0u32, "cangjietest", "", "generateKeyItem")
-        try{
+        try {
             generateKeyItem("8927(@*$#&)",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))], inData: Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))],
+                    inData: Bytes()))
             @Assert(isKeyItemExist("8927(@*$#&)", HuksOptions()), true)
             Hilog.info(0u32, "cangjietest", "", "define local variable signHandle")
             let signHandle = initSession("8927(@*$#&)",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))],
+                    inData: Bytes())).handle
             Hilog.info(0u32, "cangjietest", "", "updateSession")
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))], inData: "8927(@*$#&)".toArray()),
-                token: "inDatas".toArray())
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))],
+                    inData: "8927(@*$#&)".toArray()),
+                token: "inDatas".toArray()
+            )
             Hilog.info(0u32, "cangjietest", "", "define local variable  inData: sign")
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))], inData: Bytes()),
-                token: "inDatas".toArray()).getOrThrow()
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             Hilog.info(0u32, "cangjietest", "", "abortSession")
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             Hilog.info(0u32, "cangjietest", "", "define local variable verifyHandle")
             let verifyHandle = initSession("8927(@*$#&)",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))],
+                    inData: Bytes())).handle
             Hilog.info(0u32, "cangjietest", "", "updateSession")
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))], inData: "8927(@*$#&)".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))],
+                    inData: "8927(@*$#&)".toArray()), token: Bytes())
             Hilog.info(0u32, "cangjietest", "", "define local variable verify")
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DIGEST, HuksParamValue.Uint32Value(0u32))],
+                    inData: sign)).getOrThrow()
             Hilog.info(0u32, "cangjietest", "", "abortSession")
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
@@ -225,35 +265,44 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_7 begins.")
         Hilog.info(0u32, "cangjietest", "", "generateKeyItem")
-        try{
+        try {
             generateKeyItem("NS9jhi)#&($758)",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))], inData: Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
+                    inData: Bytes()))
             @Assert(isKeyItemExist("NS9jhi)#&($758)", HuksOptions()), true)
             Hilog.info(0u32, "cangjietest", "", "define local variable signHandle")
             let signHandle = initSession("NS9jhi)#&($758)",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
+                    inData: Bytes())).handle
             Hilog.info(0u32, "cangjietest", "", "updateSession")
             updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))], inData: "NS9jhi)#&($758)".toArray()),  token: "inDatas".toArray())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
+                    inData: "NS9jhi)#&($758)".toArray()), token: "inDatas".toArray())
             Hilog.info(0u32, "cangjietest", "", "define local variable  inData: sign")
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))], inData: Bytes()),
-                token: "inDatas".toArray()).getOrThrow()
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             Hilog.info(0u32, "cangjietest", "", "abortSession")
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             Hilog.info(0u32, "cangjietest", "", "define local variable verifyHandle")
             let verifyHandle = initSession("NS9jhi)#&($758)",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
+                    inData: Bytes())).handle
             Hilog.info(0u32, "cangjietest", "", "updateSession")
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))], inData: "NS9jhi)#&($758)".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
+                    inData: "NS9jhi)#&($758)".toArray()), token: Bytes())
             Hilog.info(0u32, "cangjietest", "", "define local variable verify")
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
+                    inData: sign)).getOrThrow()
             Hilog.info(0u32, "cangjietest", "", "abortSession")
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
@@ -274,7 +323,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_8 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -284,22 +333,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("q3", HuksOptions()), true)
             let signHandle = initSession("q3",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))], inData: "q3".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
+                    inData: "q3".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("q3",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))], inData: Bytes()))
-                .handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))], inData: "q3".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
+                    inData: "q3".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("q3", HuksOptions())
@@ -319,7 +376,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_9 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -329,20 +386,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("123", HuksOptions()), true)
             let signHandle = initSession("123",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))], inData: "123".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
+                    inData: "123".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("123",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))], inData: "123".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
+                    inData: "123".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))], inData: sign),token: Bytes()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
+                    inData: sign), token: Bytes()).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("123", HuksOptions())
@@ -362,7 +429,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_10 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -372,22 +439,27 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("456", HuksOptions()), true)
             let signHandle = initSession("456",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))], inData: Bytes()))
-                .handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
+                    inData: Bytes())).handle
             updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))], inData: "456".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
+                    inData: "456".toArray()), token: "inDatas".toArray())
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("456",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))], inData: Bytes()))
-                .handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))], inData: "456".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
+                    inData: "456".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("456", HuksOptions())
@@ -407,7 +479,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_11 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -417,20 +489,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("789", HuksOptions()), true)
             let signHandle = initSession("789",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))], inData: "789".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
+                    inData: "789".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("789",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))], inData: "789".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
+                    inData: "789".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))], inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("789", HuksOptions())
@@ -450,29 +532,40 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_12 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("!@#$",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))], inData: Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))],
+                    inData: Bytes()))
             @Assert(isKeyItemExist("!@#$", HuksOptions()), true)
             let signHandle = initSession("!@#$",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))],  inData: "!@#$".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))],
+                    inData: "!@#$".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("!@#$",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))],  inData: "!@#$".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))],
+                    inData: "!@#$".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))], inData: sign
+                )).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("!@#$", HuksOptions())
@@ -492,7 +585,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_13 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -502,20 +595,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("%^&*", HuksOptions()), true)
             let signHandle = initSession("%^&*",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))], inData: "%^&*".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
+                    inData: "%^&*".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("%^&*",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))], inData: "%^&*".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
+                    inData: "%^&*".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("%^&*", HuksOptions())
@@ -535,7 +638,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -545,20 +648,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("01294hrew", HuksOptions()), true)
             let signHandle = initSession("01294hrew",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],  inData:"01294hrew".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
+                    inData: "01294hrew".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("01294hrew",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],  inData:"01294hrew".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
+                    inData: "01294hrew".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("01294hrew", HuksOptions())
@@ -569,8 +682,6 @@ class testInitSessionECCSignWithByte_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 ends.")
     }
 
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_101700
      * @tc.name      : TestCase_16
@@ -580,7 +691,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_16 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -590,24 +701,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ITERATION, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -627,34 +747,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_17 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -665,8 +801,6 @@ class testInitSessionECCSignWithByte_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_17 ends.")
     }
 
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_102000
      * @tc.name      : TestCase_19
@@ -676,34 +810,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_19 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -723,34 +873,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_20 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -770,7 +936,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_21 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -780,22 +946,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -815,34 +989,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_22 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()),  token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                        HuksParamValue.BooleanValue(true))], inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes())).handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                        HuksParamValue.BooleanValue(true))], inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                     inData: sign)).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                        HuksParamValue.BooleanValue(true))], inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -862,34 +1052,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_23 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()),  token: "inDatas".toArray()).getOrThrow()
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -909,34 +1115,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_24 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -956,7 +1178,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_25 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -966,22 +1188,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1001,7 +1231,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_26 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1011,24 +1241,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1048,7 +1287,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_27 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1058,24 +1297,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1095,34 +1343,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_28 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()),  token: "inDatas".toArray()).getOrThrow()
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1142,34 +1406,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_29 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()),  token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes())).handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                     inData: sign)).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1189,34 +1469,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_30 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()),  token: "inDatas".toArray()).getOrThrow()
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1227,8 +1523,6 @@ class testInitSessionECCSignWithByte_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_30 ends.")
     }
 
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_103700
      * @tc.name      : TestCase_36
@@ -1238,7 +1532,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_36 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1248,20 +1542,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1281,34 +1585,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_37 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1328,7 +1648,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_38 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1338,24 +1658,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1375,7 +1704,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_39 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1385,24 +1714,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1422,7 +1760,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_40 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1432,24 +1770,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1469,34 +1816,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_41 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()),  token: "inDatas".toArray()).getOrThrow()
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1516,34 +1879,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_42 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()),  token: "inDatas".toArray()).getOrThrow()
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1563,7 +1942,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_43 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1573,24 +1952,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1610,7 +1998,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_44 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1620,24 +2008,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1657,34 +2054,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_45 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1704,34 +2117,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_46 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
-                    inData: Bytes()),  token: "inDatas".toArray()).getOrThrow()
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
                     inData: Bytes())).handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1742,9 +2171,6 @@ class testInitSessionECCSignWithByte_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_46 ends.")
     }
 
- 
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_106500
      * @tc.name      : TestCase_64
@@ -1754,7 +2180,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_64(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_64 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1764,24 +2190,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1801,34 +2236,50 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_65(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_65 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1848,7 +2299,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_66(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_66 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1858,30 +2309,39 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IS_ALLOWED_WRAP, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#796: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.code, 12000002i32)
+            @Expect(e.code, 12000014i32)
         }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_66 ends.")
     }
@@ -1895,7 +2355,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_67(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_67 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1905,24 +2365,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_WRAP_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1942,7 +2411,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_68(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_68 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1952,24 +2421,33 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(signHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()),  token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))], inData: Bytes()))
-                .handle
-            updateSession(verifyHandle,
                 HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))],
-                     inData:"inDatas".toArray()), token: Bytes())
+                    inData: Bytes())).handle
+            updateSession(
+                verifyHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: Bytes()
+            )
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))],  inData: sign))
-                .getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ID, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -1989,7 +2467,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_70(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_70 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -1999,20 +2477,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_FLAG, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -2023,9 +2511,6 @@ class testInitSessionECCSignWithByte_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_70 ends.")
     }
 
-
-
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_108100
      * @tc.name      : TestCase_80
@@ -2035,7 +2520,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_80(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_80 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -2045,20 +2530,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -2069,8 +2564,6 @@ class testInitSessionECCSignWithByte_1 {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_80 ends.")
     }
 
-  
-
     /*
      * @tc.number    : Sub_Cangjie_security_huks_108400
      * @tc.name      : TestCase_83
@@ -2080,7 +2573,7 @@ class testInitSessionECCSignWithByte_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_83(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_83 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
@@ -2090,20 +2583,30 @@ class testInitSessionECCSignWithByte_1 {
                     inData: Bytes()))
             @Assert(isKeyItemExist("keyAlias1", HuksOptions()), true)
             let signHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
-            updateSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()),
-                 token: "inDatas".toArray())
-            let sign = finishSession(signHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))], inData: Bytes()),
-                 token: "inDatas".toArray()).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
+            updateSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()),
+                token: "inDatas".toArray()
+            )
+            let sign = finishSession(
+                signHandle,
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()),
+                token: "inDatas".toArray()
+            ).getOrThrow()
             abortSession(signHandle, HuksOptions(properties: [], inData: Bytes()))
             let verifyHandle = initSession("keyAlias1",
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))], inData: Bytes())).handle
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes())).handle
             updateSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],  inData:"inDatas".toArray()), token: Bytes())
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
+                    inData: "inDatas".toArray()), token: Bytes())
             let verify = finishSession(verifyHandle,
-                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],  inData: sign)).getOrThrow()
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
+                    inData: sign)).getOrThrow()
             abortSession(verifyHandle, HuksOptions(properties: [], inData: Bytes()))
             @Assert(verify.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
@@ -2113,6 +2616,4 @@ class testInitSessionECCSignWithByte_1 {
         }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_83 ends.")
     }
-
-
 }

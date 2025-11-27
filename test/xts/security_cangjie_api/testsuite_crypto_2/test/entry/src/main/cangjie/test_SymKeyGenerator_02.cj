@@ -27,68 +27,61 @@ import ohos.base.*
 class Test_SymKeyGenerator_02 {
 
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_SymKeyGenerator_02_0100
-    * @tc.name      : test_symkeygenerator_01
-    * @tc.desc      : test Crypto test_symkeygenerator_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_SymKeyGenerator_02_0100
+     * @tc.name      : test_symkeygenerator_01
+     * @tc.desc      : test Crypto test_symkeygenerator_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_symkeygenerator_01(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_symkeygenerator_01(): Unit {
         let skg = createSymKeyGenerator("AES256")
         @Expect(skg.algName, "AES256")
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_SymKeyGenerator_02_0200
-    * @tc.name      : test_symkeygenerator_02
-    * @tc.desc      : test Crypto test_symkeygenerator_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_SymKeyGenerator_02_0200
+     * @tc.name      : test_symkeygenerator_02
+     * @tc.desc      : test Crypto test_symkeygenerator_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_symkeygenerator_02(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_symkeygenerator_02(): Unit {
         let skg = createSymKeyGenerator("3DES192")
         @Expect(skg.algName, "3DES192")
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_SymKeyGenerator_02_0300
-    * @tc.name      : test_symkeygenerator_03
-    * @tc.desc      : test Crypto test_symkeygenerator_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_SymKeyGenerator_02_0300
+     * @tc.name      : test_symkeygenerator_03
+     * @tc.desc      : test Crypto test_symkeygenerator_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_symkeygenerator_03(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_symkeygenerator_03(): Unit {
         let skg = createSymKeyGenerator("SM4_128")
         @Expect(skg.algName, "SM4_128")
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Crypto_Test_SymKeyGenerator_02_0400
-    * @tc.name      : test_symkeygenerator_04
-    * @tc.desc      : test Crypto test_symkeygenerator_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Crypto_Test_SymKeyGenerator_02_0400
+     * @tc.name      : test_symkeygenerator_04
+     * @tc.desc      : test Crypto test_symkeygenerator_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-
-        func test_symkeygenerator_04(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func test_symkeygenerator_04(): Unit {
         let skg = createSymKeyGenerator("HMAC|SHA1")
         @Expect(skg.algName, "HMAC|SHA1")
     }

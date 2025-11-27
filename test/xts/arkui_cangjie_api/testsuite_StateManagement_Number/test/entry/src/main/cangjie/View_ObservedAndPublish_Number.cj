@@ -24,7 +24,7 @@ import std.collection.*
 import std.collection.*
 import stdx.encoding.json.*
 import std.convert.*
-import ohos.base.{LengthProp, Length, Color, LengthType}
+import ohos.base.{LengthProp, Length, Color}
 
 @Observed
 class ClassAA {
@@ -51,14 +51,14 @@ class View_ObservedAndPublish_Number {
     func build() {
         Column(space:20) {
             Text("${this.count_ClassAA.a}").key("count_ClassAA")
-            Button("change count to ClassAA").onClick {ClickEvent =>
+            Button("change count to ClassAA").onClick({ClickEvent =>
                 this.count_ClassAA.a = 100
-            }.key("state1")
+            }).key("state1")
 
             Text("${this.count_ClassAA.classbb.b}").key("count_ClassBB")
-            Button("change count to ClassBB").onClick {ClickEvent =>
+            Button("change count to ClassBB").onClick({ClickEvent =>
                 this.count_ClassAA.classbb.b = 100
-            }.key("state2")
+            }).key("state2")
         }.width(100.percent).margin(top: 10)
     }
 }

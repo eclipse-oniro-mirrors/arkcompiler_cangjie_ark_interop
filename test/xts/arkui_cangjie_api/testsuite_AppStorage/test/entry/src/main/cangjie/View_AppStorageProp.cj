@@ -54,24 +54,24 @@ class View_AppStorageProp {
         Column(space:10) {
             Button("Delete")
                 .id("Test_Button00")
-                .onClick {ClickEvent =>
+                .onClick({ClickEvent =>
                     this.res = AppStorage.delete("PropInt")
                     this.res1 = AppStorage.delete("PropFloat")
                     this.res2 = AppStorage.delete("PropD")
-                }
+                })
             Button("keys")
                 .id("Test_Button01")
-                .onClick {ClickEvent =>
+                .onClick({ClickEvent =>
                     this.StorageKeysFlag1 = StorageKeys.contains(ExpectKeys)
                     this.StorageKeysFlag2 = StorageKeys.contains(ExpectExtraKeys)
-                }
-            Button("size").id("Test_Button02").onClick {ClickEvent =>
+                })
+            Button("size").id("Test_Button02").onClick({ClickEvent =>
                 this.size = AppStorage.size()
-            }
+            })
 
-            Button("clear").id("Test_Button03").onClick {ClickEvent =>
+            Button("clear").id("Test_Button03").onClick({ClickEvent =>
                 this.res3 = AppStorage.clear()
-            }
+            })
             Text("${this.res}").id("Test_Text00")
             Text("${this.res1}").id("Test_Text01")
             Text("${this.res2}").id("Test_Text02")

@@ -48,7 +48,7 @@ class Test_TabContent_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TabContent_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_TabContent_Component_001 start")
         let TabContent = getInspectorByKey("Test_TabContent_01")

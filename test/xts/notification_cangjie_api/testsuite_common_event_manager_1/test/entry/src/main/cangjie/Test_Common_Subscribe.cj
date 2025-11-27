@@ -39,7 +39,7 @@ class Test_CommonEvent_Subscribe {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Subscribe_00() {
         try {
             let isCallBackCalled = AtomicBool(false)
@@ -60,7 +60,8 @@ class Test_CommonEvent_Subscribe {
             sleepFor(1.second)
             CommonEventManager.unsubscribe(sub00)
         } catch (e: BusinessException) {
-            @Expect(e.message.contains("Parameter error"))
+            @Expect(e.code,401)
+            @Expect(e.message.contains("Parameter error."))
         }
     }
 
@@ -73,13 +74,13 @@ class Test_CommonEvent_Subscribe {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Subscribe_01() {
         try {
             let isCallBackCalled = AtomicBool(false)
             let sub01 = CommonEventManager.createSubscriber(
-                CommonEventSubscribeInfo([], publisherPermission: "ohos.permission.PLACE_CALL", publisherDeviceId: "3213",
-                    userId: 1i32, priority: 1i32, publisherBundleName: "3213"))
+                CommonEventSubscribeInfo([], publisherPermission: "ohos.permission.PLACE_CALL",
+                    publisherDeviceId: "3213", userId: 1i32, priority: 1i32, publisherBundleName: "3213"))
             let callBack = {
                 e: Option<BusinessException>, c: Option<CommonEventData> =>
                 Hilog.info(0, "CangjieTest", "", "subscribe success")
@@ -93,7 +94,8 @@ class Test_CommonEvent_Subscribe {
             sleepFor(1.second)
             CommonEventManager.unsubscribe(sub01)
         } catch (e: BusinessException) {
-            @Expect(e.message.contains("Parameter error"))
+            @Expect(e.code,401)
+            @Expect(e.message.contains("Parameter error."))
         }
     }
 
@@ -106,7 +108,7 @@ class Test_CommonEvent_Subscribe {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Subscribe_02() {
         try {
             let isCallBackCalled = AtomicBool(false)
@@ -126,7 +128,8 @@ class Test_CommonEvent_Subscribe {
             sleepFor(1.second)
             CommonEventManager.unsubscribe(sub00)
         } catch (e: BusinessException) {
-            @Expect(e.message.contains("Parameter error"))
+            @Expect(e.code,401)
+            @Expect(e.message.contains("Parameter error."))
         }
     }
 
@@ -139,13 +142,13 @@ class Test_CommonEvent_Subscribe {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Subscribe_03() {
         try {
             let isCallBackCalled = AtomicBool(false)
             let sub03 = CommonEventManager.createSubscriber(
-                CommonEventSubscribeInfo([], publisherPermission: "#!$@$23", publisherDeviceId: "#!$@$23", userId: 1024i32,
-                    priority: 1024i32, publisherBundleName: "#!$@$23"))
+                CommonEventSubscribeInfo([], publisherPermission: "#!$@$23", publisherDeviceId: "#!$@$23",
+                    userId: 1024i32, priority: 1024i32, publisherBundleName: "#!$@$23"))
             let callBack = {
                 e: Option<BusinessException>, c: Option<CommonEventData> =>
                 Hilog.info(0, "CangjieTest", "", "subscribe success")
@@ -158,7 +161,8 @@ class Test_CommonEvent_Subscribe {
             @Expect(isCallBackCalled.load(), false)
             CommonEventManager.unsubscribe(sub03)
         } catch (e: BusinessException) {
-            @Expect(e.message.contains("Parameter error"))
+            @Expect(e.code,401)
+            @Expect(e.message.contains("Parameter error."))
         }
     }
 
@@ -171,13 +175,13 @@ class Test_CommonEvent_Subscribe {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_Subscribe_04() {
         try {
             let isCallBackCalled = AtomicBool(false)
             let sub02 = CommonEventManager.createSubscriber(
-                CommonEventSubscribeInfo([], publisherPermission: "#@#$%*d./", publisherDeviceId: "#@#$%*d./", userId: 10i32,
-                    priority: 10i32, publisherBundleName: "#@#$%*d./"))
+                CommonEventSubscribeInfo([], publisherPermission: "#@#$%*d./", publisherDeviceId: "#@#$%*d./",
+                    userId: 10i32, priority: 10i32, publisherBundleName: "#@#$%*d./"))
             let callBack = {
                 e: Option<BusinessException>, c: Option<CommonEventData> =>
                 isCallBackCalled.store(true)
@@ -190,7 +194,8 @@ class Test_CommonEvent_Subscribe {
             @Expect(isCallBackCalled.load(), false)
             CommonEventManager.unsubscribe(sub02)
         } catch (e: BusinessException) {
-            @Expect(e.message.contains("Parameter error"))
+            @Expect(e.code,401)
+            @Expect(e.message.contains("Parameter error."))
         }
     }
 }

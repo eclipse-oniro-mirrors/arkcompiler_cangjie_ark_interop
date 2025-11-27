@@ -36,7 +36,7 @@ class testFileIo_copyfile_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyFile_01() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_copyFile_01"
         let fpathTarget = fpath + "tgt"
@@ -68,7 +68,7 @@ class testFileIo_copyfile_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyFile_02() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_copyFile_02"
         let fpathTarget = fpath + "tgt"
@@ -100,7 +100,7 @@ class testFileIo_copyfile_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyFile_03() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_copyFile_03"
         let fpathTarget = fpath + "tgt"
@@ -124,7 +124,7 @@ class testFileIo_copyfile_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyFile_04() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_copyFile_04"
         let fpathTarget = fpath + "tgt"
@@ -157,7 +157,7 @@ class testFileIo_copyfile_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyFile_07() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_copyFile_07"
         var fpathTarget = fpath + "tgt"

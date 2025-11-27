@@ -36,7 +36,7 @@ class TestOr_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
@@ -45,85 +45,5 @@ class TestOr_1 {
         rdbPridecates.or()
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Or_0200
-     * @tc.name      : TestCase_2
-     * @tc.desc      : "2" Choose the first index
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_2(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testOr")
-        rdbPridecates.or()
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Or_0300
-     * @tc.name      : TestCase_3
-     * @tc.desc      : "3" Choose the first index
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_3(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testOr")
-        rdbPridecates.or()
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Or_0400
-     * @tc.name      : TestCase_4
-     * @tc.desc      : "4" Choose the first index
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_4(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testOr")
-        rdbPridecates.or()
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 ends.")
-    }
-
-    /*
-     * @tc.number    : Test_Or_0500
-     * @tc.name      : TestCase_5
-     * @tc.desc      : "1024" Choose the first index
-     * @tc.size      : MediumTest
-     * @tc.type      : Function
-     * @tc.level     : Level 0
-     */
-    @TestCase
-    @Tag[APILevel21, TestLevel0]
-    func TestCase_5(): Unit {
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
-        Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
-        let rdbPridecates = RdbPredicates("EMPLOYEE")
-        Hilog.info(0u32, "cangjietest", "", "testOr")
-        rdbPridecates.or()
-        @Expect(true)
-        Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 ends.")
     }
 }

@@ -34,18 +34,18 @@ class testMakeCall_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_0(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_0 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_0 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             Call.makeCall("")
             @Expect("assertion#0: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall makeCall failed: Unknown error code: 2097205")
+            @Expect(e.message, "Unknown error code: 2097205")
             @Expect(e.code, 2097205i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_0 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_0 ends.")
     }
 
     /*
@@ -57,18 +57,18 @@ class testMakeCall_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             Call.makeCall("123456789")
             @Expect("assertion#1: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall makeCall failed: Unknown error code: 2097205")
+            @Expect(e.message, "Unknown error code: 2097205")
             @Expect(e.code, 2097205i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -80,18 +80,18 @@ class testMakeCall_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             Call.makeCall("abcdrf")
             @Expect("assertion#2: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall makeCall failed: Unknown error code: 2097205")
+            @Expect(e.message, "Unknown error code: 2097205")
             @Expect(e.code, 2097205i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -103,18 +103,18 @@ class testMakeCall_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             Call.makeCall("010-222222")
             @Expect("assertion#3: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall makeCall failed: Unknown error code: 2097205")
+            @Expect(e.message, "Unknown error code: 2097205")
             @Expect(e.code, 2097205i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -126,17 +126,17 @@ class testMakeCall_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             Call.makeCall("9223372036854775807")
             @Expect("assertion#4: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall makeCall failed: Unknown error code: 2097205")
+            @Expect(e.message, "Unknown error code: 2097205")
             @Expect(e.code, 2097205i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 }

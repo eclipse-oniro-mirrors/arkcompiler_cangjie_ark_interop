@@ -40,7 +40,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -63,12 +63,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("", 2i64)
+            getResourceManager().getPluralStringByName("", -1i64)
             @Expect("assertion#1706: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -86,12 +86,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("", 3i64)
+            getResourceManager().getPluralStringByName("", 12345678i64)
             @Expect("assertion#1707: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -109,7 +109,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -132,12 +132,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("\0", 2i64)
+            getResourceManager().getPluralStringByName("\0", -1i64)
             @Expect("assertion#1709: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -155,12 +155,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_6 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("\0", 3i64)
+            getResourceManager().getPluralStringByName("\0", 12345678i64)
             @Expect("assertion#1710: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -178,7 +178,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_7 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -201,12 +201,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_8 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("nonExistingResourceName", 2i64)
+            getResourceManager().getPluralStringByName("nonExistingResourceName", -1i64)
             @Expect("assertion#1712: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -224,12 +224,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_9 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("nonExistingResourceName", 3i64)
+            getResourceManager().getPluralStringByName("nonExistingResourceName", 12345678i64)
             @Expect("assertion#1713: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -247,7 +247,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_10 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -270,12 +270,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_11 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("module_desc", 2i64)
+            getResourceManager().getPluralStringByName("module_desc", -1i64)
             @Expect("assertion#1715: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -293,12 +293,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_12 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("module_desc", 3i64)
+            getResourceManager().getPluralStringByName("module_desc", 12345678i64)
             @Expect("assertion#1716: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -316,7 +316,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_13 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -339,12 +339,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_14 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("sizelist", 2i64)
+            getResourceManager().getPluralStringByName("sizelist", -1i64)
             @Expect("assertion#1718: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -362,12 +362,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_15 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("sizelist", 3i64)
+            getResourceManager().getPluralStringByName("sizelist", 12345678i64)
             @Expect("assertion#1719: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -385,7 +385,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_16 begins.")
         @Assert("1 test other", getResourceManager().getPluralStringByName("plural_name", 1i64))
@@ -401,10 +401,10 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_17 begins.")
-        @Assert("2 test other", getResourceManager().getPluralStringByName("plural_name", 2i64))
+        @Assert("-1 test other", getResourceManager().getPluralStringByName("plural_name", -1i64))
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_17 ends.")
     }
 
@@ -417,10 +417,10 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_18 begins.")
-        @Assert("3 test other", getResourceManager().getPluralStringByName("plural_name", 3i64))
+        @Assert("12345678 test other", getResourceManager().getPluralStringByName("plural_name", 12345678i64))
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_18 ends.")
     }
 
@@ -433,7 +433,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_19 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -456,12 +456,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_20 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("Test_Format1", 2i64)
+            getResourceManager().getPluralStringByName("Test_Format1", -1i64)
             @Expect("assertion#1721: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -479,12 +479,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_21 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("Test_Format1", 3i64)
+            getResourceManager().getPluralStringByName("Test_Format1", 12345678i64)
             @Expect("assertion#1722: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -502,7 +502,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_22 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -525,12 +525,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_23 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("Test_Format2", 2i64)
+            getResourceManager().getPluralStringByName("Test_Format2", -1i64)
             @Expect("assertion#1724: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -548,12 +548,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_24 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("Test_Format2", 3i64)
+            getResourceManager().getPluralStringByName("Test_Format2", 12345678i64)
             @Expect("assertion#1725: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -571,7 +571,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_25 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -594,12 +594,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_26 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("Test_Format3", 2i64)
+            getResourceManager().getPluralStringByName("Test_Format3", -1i64)
             @Expect("assertion#1727: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -617,12 +617,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_27 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("Test_Format3", 3i64)
+            getResourceManager().getPluralStringByName("Test_Format3", 12345678i64)
             @Expect("assertion#1728: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -640,7 +640,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_28 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -663,12 +663,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_29 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("EntryAbility_desc", 2i64)
+            getResourceManager().getPluralStringByName("EntryAbility_desc", -1i64)
             @Expect("assertion#1730: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -686,12 +686,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_30 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("EntryAbility_desc", 3i64)
+            getResourceManager().getPluralStringByName("EntryAbility_desc", 12345678i64)
             @Expect("assertion#1731: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -709,7 +709,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_31(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_31 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -732,12 +732,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_32(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_32 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("layered_image", 2i64)
+            getResourceManager().getPluralStringByName("layered_image", -1i64)
             @Expect("assertion#1733: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -755,12 +755,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_33(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_33 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("layered_image", 3i64)
+            getResourceManager().getPluralStringByName("layered_image", 12345678i64)
             @Expect("assertion#1734: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -778,7 +778,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_34(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_34 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -801,12 +801,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_35(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_35 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("EntryAbility_label", 2i64)
+            getResourceManager().getPluralStringByName("EntryAbility_label", -1i64)
             @Expect("assertion#1736: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -824,12 +824,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_36 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("EntryAbility_label", 3i64)
+            getResourceManager().getPluralStringByName("EntryAbility_label", 12345678i64)
             @Expect("assertion#1737: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -847,7 +847,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_37 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -870,12 +870,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_38 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("startIcon", 2i64)
+            getResourceManager().getPluralStringByName("startIcon", -1i64)
             @Expect("assertion#1739: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -893,12 +893,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_39 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("startIcon", 3i64)
+            getResourceManager().getPluralStringByName("startIcon", 12345678i64)
             @Expect("assertion#1740: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -916,7 +916,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_40 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -939,12 +939,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_41 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("main_pages", 2i64)
+            getResourceManager().getPluralStringByName("main_pages", -1i64)
             @Expect("assertion#1742: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -962,12 +962,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_42 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("main_pages", 3i64)
+            getResourceManager().getPluralStringByName("main_pages", 12345678i64)
             @Expect("assertion#1743: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -985,7 +985,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_43 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -1008,12 +1008,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_44 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("start_window_background", 2i64)
+            getResourceManager().getPluralStringByName("start_window_background", -1i64)
             @Expect("assertion#1745: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1031,12 +1031,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_45 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("start_window_background", 3i64)
+            getResourceManager().getPluralStringByName("start_window_background", 12345678i64)
             @Expect("assertion#1746: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1054,7 +1054,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_46 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -1077,12 +1077,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_47(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_47 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("float_1", 2i64)
+            getResourceManager().getPluralStringByName("float_1", -1i64)
             @Expect("assertion#1748: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1100,12 +1100,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_48(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_48 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("float_1", 3i64)
+            getResourceManager().getPluralStringByName("float_1", 12345678i64)
             @Expect("assertion#1749: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1123,7 +1123,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_49(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_49 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -1146,12 +1146,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_50(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_50 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("float_2", 2i64)
+            getResourceManager().getPluralStringByName("float_2", -1i64)
             @Expect("assertion#1751: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1169,12 +1169,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_51(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_51 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("float_2", 3i64)
+            getResourceManager().getPluralStringByName("float_2", 12345678i64)
             @Expect("assertion#1752: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1192,7 +1192,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_52(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_52 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -1215,12 +1215,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_53(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_53 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("int_1", 2i64)
+            getResourceManager().getPluralStringByName("int_1", -1i64)
             @Expect("assertion#1754: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1238,12 +1238,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_54(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_54 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("int_1", 3i64)
+            getResourceManager().getPluralStringByName("int_1", 12345678i64)
             @Expect("assertion#1755: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1261,7 +1261,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_55(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_55 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -1284,12 +1284,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_56(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_56 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("int_2", 2i64)
+            getResourceManager().getPluralStringByName("int_2", -1i64)
             @Expect("assertion#1757: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1307,12 +1307,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_57(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_57 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("int_2", 3i64)
+            getResourceManager().getPluralStringByName("int_2", 12345678i64)
             @Expect("assertion#1758: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1330,7 +1330,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_58(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_58 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -1353,12 +1353,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_59(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_59 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("test_boolean1", 2i64)
+            getResourceManager().getPluralStringByName("test_boolean1", -1i64)
             @Expect("assertion#1760: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1376,12 +1376,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_60(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_60 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("test_boolean1", 3i64)
+            getResourceManager().getPluralStringByName("test_boolean1", 12345678i64)
             @Expect("assertion#1761: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1399,7 +1399,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_61(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_61 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -1422,12 +1422,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_62(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_62 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("test_boolean0", 2i64)
+            getResourceManager().getPluralStringByName("test_boolean0", -1i64)
             @Expect("assertion#1763: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1445,12 +1445,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_63(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_63 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("test_boolean0", 3i64)
+            getResourceManager().getPluralStringByName("test_boolean0", 12345678i64)
             @Expect("assertion#1764: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1468,7 +1468,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_64(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_64 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -1491,12 +1491,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_65(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_65 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("boolean_3", 2i64)
+            getResourceManager().getPluralStringByName("boolean_3", -1i64)
             @Expect("assertion#1766: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1514,12 +1514,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_66(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_66 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("boolean_3", 3i64)
+            getResourceManager().getPluralStringByName("boolean_3", 12345678i64)
             @Expect("assertion#1767: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1537,7 +1537,7 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_67(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_67 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
@@ -1560,12 +1560,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_68(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_68 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("boolean_4", 2i64)
+            getResourceManager().getPluralStringByName("boolean_4", -1i64)
             @Expect("assertion#1769: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")
@@ -1583,12 +1583,12 @@ class TestGetPluralStringByName_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_69(): Unit {
         Hilog.info(0u32, "CangjieTest", "testcase TestCase_69 begins.")
         Hilog.info(0u32, "CangjieTest", "fail to get PluralString by name.")
         try {
-            getResourceManager().getPluralStringByName("boolean_4", 3i64)
+            getResourceManager().getPluralStringByName("boolean_4", 12345678i64)
             @Expect("assertion#1770: not throw", "fail to get PluralString by name.")
         } catch (e: BusinessException) {
             @Expect(e.message, "Invalid resource name.")

@@ -36,7 +36,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_AlphabetIndexer_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin AlphabetIndexer")
@@ -61,7 +61,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Blank_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Blank")
@@ -86,7 +86,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Button_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Button")
@@ -111,7 +111,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Checkbox_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Checkbox")
@@ -136,7 +136,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_CheckboxGroup_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin CheckboxGroup")
@@ -161,7 +161,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_DataPanel_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin DataPanel")
@@ -186,7 +186,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_DatePicker_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin DatePicker")
@@ -211,7 +211,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Divider_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Divider")
@@ -236,7 +236,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Gauge_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Gauge")
@@ -261,7 +261,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Image_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Image")
@@ -286,7 +286,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_ImageSpan_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin ImageSpan")
@@ -311,7 +311,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_LoadingProgress_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin LoadingProgress")
@@ -336,7 +336,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Menu_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Menu_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Menu")
@@ -361,7 +361,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_MenuItem_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin MenuItem")
@@ -386,7 +386,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_MenuItemGroup_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin MenuItemGroup")
@@ -411,7 +411,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Progress_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Progress")
@@ -436,7 +436,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_QRCode_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin QRCode")
@@ -461,7 +461,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Radio_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Radio")
@@ -486,7 +486,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Rating_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Rating")
@@ -511,7 +511,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Refresh_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Refresh")
@@ -536,7 +536,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_RichEditor_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin RichEditor")
@@ -561,7 +561,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_RowSplit_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_RowSplit_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin RowSplit")
@@ -586,7 +586,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_ScrollBar_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_ScrollBar_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin ScrollBar")
@@ -611,7 +611,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Search_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Search_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Search")
@@ -636,7 +636,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Slider_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Slider_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Slider")
@@ -661,7 +661,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Stepper_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Stepper_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Stepper")
@@ -686,7 +686,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_StepperItem_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_StepperItem_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin StepperItem")
@@ -711,7 +711,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Text_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Text_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Text")
@@ -736,7 +736,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_TextArea_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_TextArea_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin TextArea")
@@ -761,7 +761,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_TextClock_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_TextClock_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin TextClock")
@@ -786,7 +786,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_TextInput_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_TextInput_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin TextInput")
@@ -811,7 +811,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_TextPicker_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_TextPicker_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin TextPicker")
@@ -836,7 +836,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_TextTimer_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_TextTimer_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin TextTimer")
@@ -861,7 +861,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Toggle_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Toggle_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Toggle")
@@ -886,7 +886,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Web_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Web_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Web")
@@ -911,7 +911,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Select_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Select_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Select")
@@ -936,7 +936,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Badge_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Badge_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Badge")
@@ -961,7 +961,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Column_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Column_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Column")
@@ -986,7 +986,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Grid_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Grid_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Grid")
@@ -1011,7 +1011,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_GridItem_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_GridItem_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin GridItem")
@@ -1036,7 +1036,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_GridRow_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_GridRow_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin GridRow")
@@ -1061,7 +1061,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_GridCol_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_GridCol_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin GridCol")
@@ -1086,7 +1086,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Flex_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Flex_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Flex")
@@ -1111,7 +1111,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_List_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_List_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin List")
@@ -1136,7 +1136,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_ListItem_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_ListItem_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin ListItem")
@@ -1161,7 +1161,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_ListItemGroup_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_ListItemGroup_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin ListItemGroup")
@@ -1188,7 +1188,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_RelativeContainer_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_RelativeContainer_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin RelativeContainer")
@@ -1213,7 +1213,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Row_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Row_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Row")
@@ -1238,7 +1238,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Scroll_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Scroll_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Scroll")
@@ -1263,7 +1263,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Stack_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Stack_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Stack")
@@ -1288,7 +1288,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Swiper_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Swiper_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Swiper")
@@ -1313,7 +1313,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Tabs_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Tabs_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Tabs")
@@ -1338,7 +1338,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_TabContent_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_TabContent_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin TabContent")
@@ -1363,7 +1363,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Circle_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Circle_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Circle")
@@ -1388,7 +1388,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Line_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Line_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Line")
@@ -1413,7 +1413,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Rect_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Rect_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Rect")
@@ -1438,7 +1438,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Shape_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Shape_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Shape")
@@ -1463,7 +1463,7 @@ class Test_EmptyAttrs_RenderFit {
      * @tc.desic：Empty_Path_RenderFit
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_RenderFit_Path_6100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckRenderFit: FindBegin Path")

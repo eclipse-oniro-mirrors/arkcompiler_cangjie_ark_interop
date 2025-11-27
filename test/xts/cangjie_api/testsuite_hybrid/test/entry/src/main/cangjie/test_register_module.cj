@@ -16,8 +16,7 @@
 package ohos_app_cangjie_entry
 
 import ohos.file.fs.FileIo
-import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule, JSObject, 
-    SharedObject, JSClass}
+import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule, JSObject, SharedObject, JSClass}
 import std.math.{MathExtension, abs}
 import std.math.numeric.BigInt
 

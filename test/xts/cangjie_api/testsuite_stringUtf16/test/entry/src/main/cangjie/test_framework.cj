@@ -42,7 +42,7 @@ enum CaseStatus <: ToString {
 
     static func printExp(exp: Exception): String {
         var result = exp.toString()
-        for(element in exp.getStackTrace()) {
+        for (element in exp.getStackTrace()) {
             result += "\n\t at ${element.declaringClass}.${element.methodName}(${element.fileName}:${element.lineNumber})"
         }
         return result
@@ -53,19 +53,19 @@ class TestCase {
     var status = CaseStatus.NotRun
     TestCase(
         let name: String,
-        let task: ()->Unit
+        let task: () -> Unit
     ) {}
 }
 
-class AssertFail <: Exception {
-}
+class AssertFail <: Exception {}
 
-func count<T>(filter: (T)->Bool): (Iterable<T>)->Int64 {
-    return {iterator =>
+func count<T>(filter: (T) -> Bool): (Iterable<T>) -> Int64 {
+    return {
+        iterator =>
         let result = Box<Int64>(0)
-        iterator.iterator().forEach { item =>
-            if (filter(item)) {
-                result.value ++
+        iterator.iterator().forEach {
+            item => if (filter(item)) {
+                result.value++
             }
         }
         return result.value
@@ -74,7 +74,7 @@ func count<T>(filter: (T)->Bool): (Iterable<T>)->Int64 {
 
 class TestFramework {
     private static let allCase_ = ArrayList<TestCase>()
-    static func register(name: String, task: ()->Unit): Unit {
+    static func register(name: String, task: () -> Unit): Unit {
         if (allCase_ |> any({item => item.name == name})) {
             throw Exception("case of '${name}' had allready been registered")
         }
@@ -100,10 +100,10 @@ class TestFramework {
 
     static func report(): Unit {
         let total = allCase_.size
-        let passed = allCase_ |> count { item => item.status.isPass() }
-//        Hilog.info(0, "test", "execution result, passed: ${passed}/${total}")
+        let passed = allCase_ |> count {item => item.status.isPass()}
+        //        Hilog.info(0, "test", "execution result, passed: ${passed}/${total}")
         for (one in allCase_) {
-//            Hilog.info(0, "test", "case ${one.name} result: ${one.status}")
+            //            Hilog.info(0, "test", "case ${one.name} result: ${one.status}")
         }
     }
 }

@@ -35,18 +35,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_44 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_44 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("", ""), "")
             @Expect("assertion#44: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_44 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_44 ends.")
     }
 
     /*
@@ -58,18 +58,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_45 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_45 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("", "CN"), "")
             @Expect("assertion#45: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_45 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_45 ends.")
     }
 
     /*
@@ -81,18 +81,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_46 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("", "cn"), "")
             @Expect("assertion#46: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_46 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 ends.")
     }
 
     /*
@@ -104,18 +104,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_47(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_47 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("", "error"), "")
             @Expect("assertion#47: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_47 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 ends.")
     }
 
     /*
@@ -127,18 +127,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_48(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_48 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("", "US"), "")
             @Expect("assertion#48: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_48 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 ends.")
     }
 
     /*
@@ -150,18 +150,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_49(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_49 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_49 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("", "us"), "")
             @Expect("assertion#49: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_49 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_49 ends.")
     }
 
     /*
@@ -173,18 +173,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_50(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_50 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_50 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("123456789", ""), "123456789")
             @Expect("assertion#50: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_50 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_50 ends.")
     }
 
     /*
@@ -196,11 +196,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_51(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_51 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_51 begins.")
         @Assert(Call.formatPhoneNumberToE164("123456789", "CN"), "123456789")
-        Hilog.info(0, "cangjietest","testcase TestCase_51 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_51 ends.")
     }
 
     /*
@@ -212,11 +212,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_52(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_52 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_52 begins.")
         @Assert(Call.formatPhoneNumberToE164("123456789", "cn"), "123456789")
-        Hilog.info(0, "cangjietest","testcase TestCase_52 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_52 ends.")
     }
 
     /*
@@ -228,11 +228,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_53(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_53 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_53 begins.")
         @Assert(Call.formatPhoneNumberToE164("123456789", "error"), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_53 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_53 ends.")
     }
 
     /*
@@ -244,11 +244,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_54(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_54 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_54 begins.")
         @Assert(Call.formatPhoneNumberToE164("123456789", "US"), "123456789")
-        Hilog.info(0, "cangjietest","testcase TestCase_54 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_54 ends.")
     }
 
     /*
@@ -260,11 +260,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_55(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_55 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_55 begins.")
         @Assert(Call.formatPhoneNumberToE164("123456789", "us"), "123456789")
-        Hilog.info(0, "cangjietest","testcase TestCase_55 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_55 ends.")
     }
 
     /*
@@ -276,18 +276,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_56(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_56 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_56 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("010-222222", ""), "010-222222")
             @Expect("assertion#56: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_56 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_56 ends.")
     }
 
     /*
@@ -299,11 +299,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_57(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_57 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_57 begins.")
         @Assert(Call.formatPhoneNumberToE164("010-222222", "CN"), "010-222222")
-        Hilog.info(0, "cangjietest","testcase TestCase_57 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_57 ends.")
     }
 
     /*
@@ -315,11 +315,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_58(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_58 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_58 begins.")
         @Assert(Call.formatPhoneNumberToE164("010-222222", "cn"), "010-222222")
-        Hilog.info(0, "cangjietest","testcase TestCase_58 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_58 ends.")
     }
 
     /*
@@ -331,11 +331,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_59(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_59 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_59 begins.")
         @Assert(Call.formatPhoneNumberToE164("010-222222", "error"), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_59 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_59 ends.")
     }
 
     /*
@@ -347,11 +347,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_60(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_60 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_60 begins.")
         @Assert(Call.formatPhoneNumberToE164("010-222222", "US"), "010-222222")
-        Hilog.info(0, "cangjietest","testcase TestCase_60 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_60 ends.")
     }
 
     /*
@@ -363,11 +363,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_61(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_61 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_61 begins.")
         @Assert(Call.formatPhoneNumberToE164("010-222222", "us"), "010-222222")
-        Hilog.info(0, "cangjietest","testcase TestCase_61 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_61 ends.")
     }
 
     /*
@@ -379,18 +379,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_62(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_62 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_62 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("11111111111", ""), "11111111111")
             @Expect("assertion#62: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_62 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_62 ends.")
     }
 
     /*
@@ -402,11 +402,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_63(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_63 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_63 begins.")
         @Assert(Call.formatPhoneNumberToE164("11111111111", "CN"), "11111111111")
-        Hilog.info(0, "cangjietest","testcase TestCase_63 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_63 ends.")
     }
 
     /*
@@ -418,11 +418,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_64(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_64 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_64 begins.")
         @Assert(Call.formatPhoneNumberToE164("11111111111", "cn"), "11111111111")
-        Hilog.info(0, "cangjietest","testcase TestCase_64 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_64 ends.")
     }
 
     /*
@@ -434,11 +434,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_65(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_65 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_65 begins.")
         @Assert(Call.formatPhoneNumberToE164("11111111111", "error"), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_65 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_65 ends.")
     }
 
     /*
@@ -450,11 +450,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_66(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_66 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_66 begins.")
         @Assert(Call.formatPhoneNumberToE164("11111111111", "US"), "11111111111")
-        Hilog.info(0, "cangjietest","testcase TestCase_66 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_66 ends.")
     }
 
     /*
@@ -466,11 +466,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_67(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_67 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_67 begins.")
         @Assert(Call.formatPhoneNumberToE164("11111111111", "us"), "11111111111")
-        Hilog.info(0, "cangjietest","testcase TestCase_67 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_67 ends.")
     }
 
     /*
@@ -482,18 +482,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_68(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_68 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_68 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("#1$2%3@4", ""), "#1$2%3@4")
             @Expect("assertion#68: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_68 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_68 ends.")
     }
 
     /*
@@ -505,11 +505,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_69(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_69 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_69 begins.")
         @Assert(Call.formatPhoneNumberToE164("#1$2%3@4", "CN"), "#1$2%3@4")
-        Hilog.info(0, "cangjietest","testcase TestCase_69 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_69 ends.")
     }
 
     /*
@@ -521,11 +521,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_70(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_70 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_70 begins.")
         @Assert(Call.formatPhoneNumberToE164("#1$2%3@4", "cn"), "#1$2%3@4")
-        Hilog.info(0, "cangjietest","testcase TestCase_70 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_70 ends.")
     }
 
     /*
@@ -537,11 +537,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_71(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_71 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_71 begins.")
         @Assert(Call.formatPhoneNumberToE164("#1$2%3@4", "error"), "#1$2%3@4")
-        Hilog.info(0, "cangjietest","testcase TestCase_71 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_71 ends.")
     }
 
     /*
@@ -553,11 +553,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_72(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_72 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_72 begins.")
         @Assert(Call.formatPhoneNumberToE164("#1$2%3@4", "US"), "#1$2%3@4")
-        Hilog.info(0, "cangjietest","testcase TestCase_72 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_72 ends.")
     }
 
     /*
@@ -569,11 +569,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_73(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_73 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_73 begins.")
         @Assert(Call.formatPhoneNumberToE164("#1$2%3@4", "us"), "#1$2%3@4")
-        Hilog.info(0, "cangjietest","testcase TestCase_73 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_73 ends.")
     }
 
     /*
@@ -585,18 +585,18 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_74(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_74 begins.")
-        Hilog.info(0, "cangjietest","would throw exception")
+        Hilog.info(0, "cangjietest", "testcase TestCase_74 begins.")
+        Hilog.info(0, "cangjietest", "would throw exception")
         try {
             @Assert(Call.formatPhoneNumberToE164("aaaa", ""), "aaaa")
             @Expect("assertion#74: not throw", "would throw exception")
         } catch (e: BusinessException) {
-            @Expect(e.message, "TelephonyCall formatPhoneNumberToE164 failed: Invalid parameter value.")
+            @Expect(e.message, "Invalid parameter value.")
             @Expect(e.code, 8300001i32)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_74 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_74 ends.")
     }
 
     /*
@@ -608,11 +608,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_75(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_75 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_75 begins.")
         @Assert(Call.formatPhoneNumberToE164("aaaa", "CN"), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_75 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_75 ends.")
     }
 
     /*
@@ -624,11 +624,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_76(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_76 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_76 begins.")
         @Assert(Call.formatPhoneNumberToE164("aaaa", "cn"), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_76 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_76 ends.")
     }
 
     /*
@@ -640,11 +640,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_77(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_77 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_77 begins.")
         @Assert(Call.formatPhoneNumberToE164("aaaa", "error"), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_77 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_77 ends.")
     }
 
     /*
@@ -656,11 +656,11 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_78(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_78 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_78 begins.")
         @Assert(Call.formatPhoneNumberToE164("aaaa", "US"), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_78 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_78 ends.")
     }
 
     /*
@@ -672,10 +672,10 @@ class testFormatPhoneNumberToE164_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_79(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_79 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_79 begins.")
         @Assert(Call.formatPhoneNumberToE164("aaaa", "us"), "")
-        Hilog.info(0, "cangjietest","testcase TestCase_79 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_79 ends.")
     }
 }

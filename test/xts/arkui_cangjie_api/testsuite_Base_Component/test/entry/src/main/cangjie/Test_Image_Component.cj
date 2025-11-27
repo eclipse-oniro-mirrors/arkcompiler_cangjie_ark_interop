@@ -53,7 +53,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_001() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_001 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -76,7 +76,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_002() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_002 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -100,7 +100,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_003() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_003 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -124,7 +124,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_004() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_004 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -148,7 +148,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_005() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_005 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -172,7 +172,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_006() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_006 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -196,7 +196,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_007() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_007 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -226,7 +226,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_008() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_004 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -250,7 +250,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_009() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_009 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -273,7 +273,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_010() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_010 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -295,7 +295,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_011() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_010 start")
         let Inspector = getInspectorByKey("imagebasic")
@@ -318,7 +318,7 @@ class Test_Image_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Image_Component_012() {
         Hilog.info(0,"",   "cangjietest", "Test_Image_Component_012 start")
         let Inspector = getInspectorByKey("imagebasic")

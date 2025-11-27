@@ -37,11 +37,12 @@ class Test_CommonEvent_CreateSubscriber {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_CreateSubscriber_00() {
         let support = Support.COMMON_EVENT_ABILITY_ADDED
         let subscribeInfo: CommonEventSubscribeInfo = CommonEventSubscribeInfo([support.toString()])
         let subscriber = CommonEventManager.createSubscriber(subscribeInfo)
+        @Expect(true)
     }
 
     /*
@@ -53,13 +54,12 @@ class Test_CommonEvent_CreateSubscriber {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_CreateSubscriber_01() {
         let subscribeInfo: CommonEventSubscribeInfo = CommonEventSubscribeInfo(
-            [Support
-                .COMMON_EVENT_ABILITY_ADDED
-                .toString(), "new_event_commonevent"])
+            [Support.COMMON_EVENT_ABILITY_ADDED.toString(), "new_event_commonevent"])
         let subscriber = CommonEventManager.createSubscriber(subscribeInfo)
+        @Expect(true)
     }
 
     /*
@@ -71,11 +71,12 @@ class Test_CommonEvent_CreateSubscriber {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_CommonEvent_CreateSubscriber_02() {
         let subscribeInfo: CommonEventSubscribeInfo = CommonEventSubscribeInfo(["new_event_commonevent"], userId: 100,
             publisherPermission: "ohos.permission.PLACE_CALL", publisherDeviceId: "2MM0224161068529", priority: 2,
             publisherBundleName: "com.example.myapplication")
         let subscriber = CommonEventManager.createSubscriber(subscribeInfo)
+        @Expect(true)
     }
 }

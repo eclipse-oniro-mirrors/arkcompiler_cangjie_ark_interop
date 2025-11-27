@@ -43,7 +43,7 @@ class Test_Font {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Font_01() {
         Hilog.info(0, "cangjietest", "test", "Test_Font_01 start")
         sleepFor(1.second)
@@ -63,7 +63,7 @@ class Test_Font {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Font_02() {
         Hilog.info(0, "cangjietest", "test", "Test_Font_02 start")
         sleepFor(1.second)

@@ -47,7 +47,7 @@ class Test_WatchLink_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchLinkNumber_001() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchLinkNumber_001 Start")
         let button = driver.waitForComponent(On().id("state1"), 5000).getOrThrow()
@@ -70,7 +70,7 @@ class Test_WatchLink_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchLinkNumber_002() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchLinkNumber_002 Start")
         let button = driver.waitForComponent(On().id("state2"), 5000).getOrThrow()
@@ -93,7 +93,7 @@ class Test_WatchLink_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchLinkNumber_003() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchLinkNumber_003 Start")
         let button = driver.waitForComponent(On().id("state3"), 5000).getOrThrow()
@@ -116,7 +116,7 @@ class Test_WatchLink_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchLinkNumber_004() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchLinkNumber_004 Start")
         let button = driver.waitForComponent(On().id("state4"), 5000).getOrThrow()
@@ -139,7 +139,7 @@ class Test_WatchLink_Management {
      * @tc.level: Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_WatchLinkNumber_005() {
         Hilog.info(0, "cangjietest", "test", "Test_WatchLinkNumber_005 Start")
         let button = driver.waitForComponent(On().id("state5"), 5000).getOrThrow()

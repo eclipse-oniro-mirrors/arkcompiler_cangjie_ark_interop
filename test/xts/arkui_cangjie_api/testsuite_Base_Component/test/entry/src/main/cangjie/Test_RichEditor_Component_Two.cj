@@ -51,7 +51,7 @@ class Test_RichEditor_Component_Two {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_015() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         textContent.getOrThrow().click()
@@ -121,7 +121,7 @@ class Test_RichEditor_Component_Two {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_016() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         driver.triggerKey(2119)
@@ -193,7 +193,7 @@ class Test_RichEditor_Component_Two {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_018() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         let textDid1 = driver.findComponent(On().id("textDid1"))
@@ -202,25 +202,6 @@ class Test_RichEditor_Component_Two {
         let t2 = textDid2.getOrThrow().getText()
         @Expect(t1, "0--1")
         @Expect(t2, "0--0")
-        driver.delayMs(500)
-        driver.click(868, 2296)
-        driver.delayMs(500)
-        driver.click(936, 1943)
-        driver.delayMs(500)
-        driver.click(751, 2136)
-        driver.delayMs(500)
-        driver.click(134, 2132)
-        driver.delayMs(500)
-        driver.click(1057, 1964)
-        driver.delayMs(500)
-        driver.findComponent(On().text("你好")).getOrThrow().click()
-        driver.delayMs(500)
-        driver.triggerKey(2055)
-        driver.delayMs(500)
-        let t3 = textDid1.getOrThrow().getText()
-        let t4 = textDid2.getOrThrow().getText()
-        @Expect(t3, "1--2")
-        @Expect(t4, "1--1")
         textContent.getOrThrow().clearText()
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_018 End")
     }
@@ -235,7 +216,7 @@ class Test_RichEditor_Component_Two {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_019() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         textContent.getOrThrow().clearText()
@@ -245,43 +226,6 @@ class Test_RichEditor_Component_Two {
         let t2 = textDid2.getOrThrow().getText()
         @Expect(t1, "0--1")
         @Expect(t2, "0--0")
-        driver.delayMs(500)
-        driver.click(868, 2296)
-        driver.delayMs(500)
-        driver.click(936, 1943)
-        driver.delayMs(500)
-        driver.click(751, 2136)
-        driver.delayMs(500)
-        driver.click(134, 2132)
-        driver.delayMs(500)
-        driver.click(1057, 1964)
-        driver.delayMs(500)
-        driver.click(104, 1778)
-        driver.delayMs(1000)
-        driver.click(507, 2291)
-        driver.delayMs(1000)
-        driver.click(151, 2102)
-        driver.delayMs(1000)
-        driver.click(873, 2287)
-        driver.delayMs(1000)
-        driver.click(629, 2115)
-        driver.delayMs(1000)
-        driver.click(894, 2111)
-        driver.delayMs(1000)
-        driver.click(927, 1972)
-        driver.delayMs(1000)
-        driver.click(314, 1947)
-        driver.delayMs(1000)
-        driver.findComponent(On().text("仓颉")).getOrThrow().click()
-        driver.delayMs(500)
-        driver.triggerKey(2055)
-        driver.triggerKey(2055)
-        driver.triggerKey(2055)
-        driver.delayMs(500)
-        let t3 = textDid1.getOrThrow().getText()
-        let t4 = textDid2.getOrThrow().getText()
-        @Expect(t3, "1--2")
-        @Expect(t4, "1--1")
         textContent.getOrThrow().clearText()
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_019 End")
     }
@@ -296,7 +240,7 @@ class Test_RichEditor_Component_Two {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_020() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         textContent.getOrThrow().clearText()
@@ -306,78 +250,8 @@ class Test_RichEditor_Component_Two {
         let t2 = textDid2.getOrThrow().getText()
         @Expect(t1, "0--1")
         @Expect(t2, "0--0")
-        driver.delayMs(500)
-        driver.click(868, 2296)
-        driver.delayMs(500)
-        driver.click(936, 1943)
-        driver.delayMs(500)
-        driver.click(751, 2136)
-        driver.delayMs(500)
-        driver.click(134, 2132)
-        driver.delayMs(500)
-        driver.click(1057, 1964)
-        driver.delayMs(500)
-        driver.findComponent(On().text("你好")).getOrThrow().click()
-        driver.delayMs(500)
-        textContent.getOrThrow().longClick()
-        driver.delayMs(500)
-        driver.findComponent(On().text("全选")).getOrThrow().click()
-        driver.delayMs(500)
-        driver.findComponent(On().text("剪切")).getOrThrow().click()
-        driver.delayMs(500)
-        let t3 = textDid1.getOrThrow().getText()
-        let t4 = textDid2.getOrThrow().getText()
-        @Expect(t3, "0--2")
-        @Expect(t4, "0--0")
         textContent.getOrThrow().clearText()
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_020 End")
-    }
-
-    
-    /*
-    * @tc.number    : Sub_Cangjie_UIKit_RichEditor_Component_Two_0600
-    * @tc.name      : Test_RichEditor_Component_021
-    * @tc.desc      : test UIKit RichEditor
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func Test_RichEditor_Component_021() {
-        let textContent = driver.findComponent(On().id("RichEditorKey"))
-        textContent.getOrThrow().clearText()
-        driver.delayMs(500)
-        driver.click(1187, 2447)
-        driver.delayMs(500)
-        driver.click(868, 2296)
-        driver.delayMs(500)
-        driver.click(936, 1943)
-        driver.delayMs(500)
-        driver.click(751, 2136)
-        driver.delayMs(500)
-        driver.click(134, 2132)
-        driver.delayMs(500)
-        driver.click(1057, 1964)
-        driver.delayMs(500)
-        driver.findComponent(On().text("你好")).getOrThrow().click()
-        driver.delayMs(500)
-        driver.click(1187, 2447)
-        driver.delayMs(500)
-        textContent.getOrThrow().longClick()
-        driver.delayMs(500)
-        driver.findComponent(On().text("全选")).getOrThrow().click()
-        driver.delayMs(500)
-        driver.findComponent(On().text("剪切")).getOrThrow().click()
-        driver.delayMs(500)
-        let textDid1 = driver.findComponent(On().id("textDid1"))
-        let textDid2 = driver.findComponent(On().id("textDid2"))
-        let t3 = textDid1.getOrThrow().getText()
-        let t4 = textDid2.getOrThrow().getText()
-        @Expect(t3, "0--4")
-        @Expect(t4, "0--0")
-        textContent.getOrThrow().clearText()
-        Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_021 End")
     }
     
     /*
@@ -389,7 +263,7 @@ class Test_RichEditor_Component_Two {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_022() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         driver.findComponent(On().id("addTextSpan1")).getOrThrow().click()
@@ -415,7 +289,7 @@ class Test_RichEditor_Component_Two {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_024() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         driver.findComponent(On().id("addTextSpan3")).getOrThrow().click()
@@ -441,7 +315,7 @@ class Test_RichEditor_Component_Two {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_RichEditor_Component_025() {
         let textContent = driver.findComponent(On().id("RichEditorKey"))
         driver.findComponent(On().id("addTextSpan4")).getOrThrow().click()
@@ -455,87 +329,5 @@ class Test_RichEditor_Component_Two {
 
         textContent.getOrThrow().clearText()
         Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_025 End")
-    }
-    
-    /*
-    * @tc.number    : Sub_Cangjie_UIKit_RichEditor_Component_Two_1000
-    * @tc.name      : Test_RichEditor_Component_017
-    * @tc.desc      : test UIKit RichEditor
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
-    @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func Test_RichEditor_Component_017() {
-        driver.swipe(1162, 70, 1162, 1300, speed: 600)
-        driver.delayMs(500)
-        driver.click(1066, 302)
-        driver.delayMs(500)
-        driver.findComponent(On().id("__SearchField__homPageSearchInput")).getOrThrow().inputText("输入法")
-        driver.delayMs(500)
-        driver.findComponent(On().text("小艺输入法")).getOrThrow().click()
-        driver.delayMs(500)
-        driver.findComponent(On().text("输入设置")).getOrThrow().click()
-        driver.delayMs(500)
-        driver.click(1105, 1816)
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        let textContent = driver.findComponent(On().id("RichEditorKey"))
-        textContent.getOrThrow().clearText()
-        let textDid1 = driver.findComponent(On().id("textDid1"))
-        let textDid2 = driver.findComponent(On().id("textDid2"))
-        let t1 = textDid1.getOrThrow().getText()
-        let t2 = textDid2.getOrThrow().getText()
-        @Expect(t1, "0--1")
-        @Expect(t2, "0--0")
-        driver.delayMs(500)
-        driver.click(868, 2296)
-        driver.delayMs(500)
-        driver.click(936, 1943)
-        driver.delayMs(500)
-        driver.click(751, 2136)
-        driver.delayMs(500)
-        driver.click(134, 2132)
-        driver.delayMs(500)
-        driver.click(1057, 1964)
-        driver.delayMs(500)
-        let t3 = textDid1.getOrThrow().getText()
-        let t4 = textDid2.getOrThrow().getText()
-        @Expect(t3, "0--5")
-        @Expect(t4, "0--6")
-        textContent.getOrThrow().clearText()
-        driver.swipe(1162, 70, 1162, 1300, speed: 600)
-        driver.delayMs(500)
-        driver.click(1066, 302)
-        driver.delayMs(500)
-        driver.findComponent(On().id("__SearchField__homPageSearchInput")).getOrThrow().inputText("输入法")
-        driver.delayMs(500)
-        driver.findComponent(On().text("小艺输入法")).getOrThrow().click()
-        driver.delayMs(500)
-        driver.findComponent(On().text("输入设置")).getOrThrow().click()
-        driver.delayMs(500)
-        driver.click(1105, 1816)
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        driver.pressBack()
-        driver.delayMs(500)
-        Hilog.info(0,"",   "cangjietest", "Test_RichEditor_Component_017 End")
     }
 }

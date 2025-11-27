@@ -32,6 +32,7 @@ import ohos.ui_test
 import kit.PerformanceAnalysisKit.Hilog
 import ohos.business_exception.BusinessException
 import ohos.callback_invoke.Callback1Argument
+import ohos.business_exception.*
 
 @Test
 class Test_UItest {
@@ -51,9 +52,8 @@ class Test_UItest {
         gc(heavy: true)
         sleep(Duration.second)
     }
-
     /*
-    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0200
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0001
     * @tc.name      : testOn
     * @tc.desc      : test ui_test On
     * @tc.size      : MediumTest
@@ -61,7 +61,23 @@ class Test_UItest {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
+    func test_get_value() {
+
+        let on1 = On().text("111", pattern: MatchPattern.Contains)
+        let on2 = On().text("111", pattern: MatchPattern.StartsWith)
+        let on3 = On().text("111", pattern: MatchPattern.EndsWith)
+    }
+    /*
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0002
+    * @tc.name      : testOn
+    * @tc.desc      : test ui_test On
+    * @tc.size      : MediumTest
+    * @tc.type      : Function
+    * @tc.level     : Level 0
+    */
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
     func testOn() {
         let on1 = On()
             .text("111")
@@ -82,7 +98,7 @@ class Test_UItest {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0300
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0003
     * @tc.name      : testUIObserver
     * @tc.desc      : test ui_test observer
     * @tc.size      : MediumTest
@@ -90,12 +106,12 @@ class Test_UItest {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testUIObserver() {
         let observer: UIEventObserver = driver.createUIEventObserver()
         let callbackTrigger = AtomicBool(false)
         observer.once(
-            ToastShow,
+            OnceType.ToastShow,
             {
                 element =>
                 Hilog.info(0, "", element.bundleName)
@@ -104,7 +120,7 @@ class Test_UItest {
             }
         )
         observer.once(
-            DialogShow,
+            OnceType.DialogShow,
             {
                 element =>
                 Hilog.info(0, "", "onceDialogShow")
@@ -112,7 +128,7 @@ class Test_UItest {
                 Hilog.info(0, "", element.componentType)
                 Hilog.info(0, "", element.text)
                 callbackTrigger.compareAndSwap(false, true)
-                @Expect(false)
+                @Expect(true)
             }
         )
 
@@ -121,11 +137,11 @@ class Test_UItest {
         button.click()
 
         driver.delayMs(3000)
-        @Expect(callbackTrigger.load(), false)
+        @Expect(callbackTrigger.load())
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0400
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0004
     * @tc.name      : testPointerMatrix
     * @tc.desc      : test ui_test getPointerMatrix
     * @tc.size      : MediumTest
@@ -133,14 +149,14 @@ class Test_UItest {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testPointerMatrix() {
         getPointerMatrix()
         @Expect(true)
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0500
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0005
     * @tc.name      : testUIComponent
     * @tc.desc      : test ui_test UIComponent
     * @tc.size      : MediumTest
@@ -148,11 +164,15 @@ class Test_UItest {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testUIComponent() {
         let button = driver.findComponent(On().id("id")).getOrThrow()
         driver.assertComponentExist(On().onType("Button"))
 
+        let scrollBar = driver.findComponent(On().onType("Scroll")).getOrThrow()
+        let button2 = scrollBar.scrollSearch(On().text("1"))
+        scrollBar.scrollToBottom()
+        scrollBar.scrollToTop()
         let textComponent: Component = driver.findComponent(On().onType("TextInput")).getOrThrow()
         let point = textComponent.getBoundsCenter()
         driver.inputText(point, "123")
@@ -182,8 +202,8 @@ class Test_UItest {
         let drag = driver.findComponent(On().text("ohos")).getOrThrow()
 
         button.dragTo(drag)
-        let buttons = driver.findComponents(On().onType("Button"))
-        let button1 = driver.waitForComponent(On().onType("Button"), 100)
+        let buttons = driver.findComponents(On().onType("Button")).getOrThrow()
+        let button1 = driver.waitForComponent(On().onType("Button"), 100).getOrThrow()
 
         let image = driver.findComponent(On().id("icon")).getOrThrow()
         image.pinchIn(0.5)
@@ -192,7 +212,7 @@ class Test_UItest {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0600
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0006
     * @tc.name      : testDriver
     * @tc.desc      : test ui_test Driver
     * @tc.size      : MediumTest
@@ -200,7 +220,7 @@ class Test_UItest {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func testDriver() {
         driver.wakeUpDisplay()
 
@@ -261,7 +281,7 @@ class Test_UItest {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0800
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0007
     * @tc.name      : addLLT
     * @tc.desc      : test ui_test findWindow
     * @tc.size      : MediumTest
@@ -269,12 +289,70 @@ class Test_UItest {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
-    func addLLT(): Unit {
+    @Tag[APILevel22, TestLevel0]
+    func testwindow0(): Unit {
         let wf = WindowFilter(bundleName: "com.example.myapplication", title: "test", focused: true, active: true)
         Hilog.info(0, "cangjietest","windowFilter","")
         @Expect(true)
     }
+    
+    /*
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0008
+    * @tc.name      : testDriver
+    * @tc.desc      : test ui_test Driver
+    * @tc.size      : MediumTest
+    * @tc.type      : Function
+    * @tc.level     : Level 0
+    */    
+    
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func testUIWindow1() {
+        let window = driver.findWindow(WindowFilter(active: true)).getOrThrow()
+        let name = window.getBundleName()
+        @Expect(!name.isEmpty() && !name.startsWith("\""))
+    }
+
+    /*
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0009
+    * @tc.name      : testDriver
+    * @tc.desc      : test ui_test Driver
+    * @tc.size      : MediumTest
+    * @tc.type      : Function
+    * @tc.level     : Level 0
+    */    
+    
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func testUIWindow2() {
+        let window = driver.findWindow(WindowFilter(active: true)).getOrThrow()
+        let name = window.getBundleName()
+        let rect = window.getBounds()
+        let title: String = window.getTitle()
+        @Expect(title.isEmpty())
+
+    }  
+    /*
+    * @tc.number    : Sub_Cangjie_ui_test_Test_UItest_0010
+    * @tc.name      : testDriver
+    * @tc.desc      : test ui_test Driver
+    * @tc.size      : MediumTest
+    * @tc.type      : Function
+    * @tc.level     : Level 0
+    */    
+    
+    @TestCase
+    @Tag[APILevel22, TestLevel0]
+    func testUIWindow3() {
+        let window = driver.findWindow(WindowFilter(active: true)).getOrThrow()
+        let name = window.getBundleName()
+        let rect = window.getBounds()
+        let title: String = window.getTitle()
+        let mode = window.getWindowMode()
+        window.focus()
+        @Expect(window.isFocused())
+    }   
+
 }
 
 func getPointerMatrix() {

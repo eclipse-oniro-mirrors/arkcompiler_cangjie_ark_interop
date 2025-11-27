@@ -36,7 +36,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_01() {
         sleepFor(3.second)
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_01"
@@ -77,7 +77,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_02() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_02"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -112,7 +112,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_03() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_03"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -146,7 +146,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_04() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_04"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -180,7 +180,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_05() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_05"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -214,7 +214,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_06() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_06"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -249,7 +249,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_07() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_07"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -289,7 +289,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_08() {
         try {
             FileIo.write(-1, "hello, world")
@@ -310,7 +310,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_09() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_09"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -343,7 +343,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_10() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_10"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -384,7 +384,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_11() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_11"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -428,7 +428,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_12() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_12"
         let f = FileIo.open(fpath, mode: (OpenMode
@@ -464,7 +464,7 @@ class testFileIo_write01_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_write_13() {
         let fpath = "/data/storage/el2/base/haps/entry/files/test_write_13"
         let f = FileIo.open(fpath, mode: (OpenMode

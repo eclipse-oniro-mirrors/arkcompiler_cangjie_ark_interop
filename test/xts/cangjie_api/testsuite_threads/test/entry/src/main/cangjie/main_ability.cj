@@ -18,8 +18,7 @@ package ohos_app_cangjie_entry
 import ohos.window.WindowStage
 import kit.AbilityKit.*
 import ohos.hilog.Hilog
-import ohos.base.UIThread
-
+import ohos.base.*
 
 class MainAbility <: UIAbility {
     public init() {
@@ -29,28 +28,26 @@ class MainAbility <: UIAbility {
 
     public func onCreate(want: Want, launchParam: LaunchParam): Unit {
         match (launchParam.launchReason) {
-            case LaunchReason.StartAbility => Hilog.info(0,"cangjieTest","StartAbility")
+            case LaunchReason.StartAbility => Hilog.info(0, "cangjieTest", "StartAbility")
             case _ => ()
         }
     }
 
     public func onWindowStageCreate(windowStage: WindowStage): Unit {
-        spawn(UIThread) {
+        spawn (UIThread) {
             createJSRuntimeAndCheck("onWindowStageCreate spawn(UIThread)")
         }
         spawn {
-            spawn(UIThread) {
-              createJSRuntimeAndCheck("onWindowStageCreate spawn spawn(UIThread)")
+            spawn (UIThread) {
+                createJSRuntimeAndCheck("onWindowStageCreate spawn spawn(UIThread)")
             }
         }
-        spawn(UIThread) {}
-        spawn(UIThread) {
-            spawn(UIThread) {
-            createJSRuntimeAndCheck("onWindowStageCreate spawn(UIThread) spawn(UIThread)")
+        spawn (UIThread) {}
+        spawn (UIThread) {
+            spawn (UIThread) {
+                createJSRuntimeAndCheck("onWindowStageCreate spawn(UIThread) spawn(UIThread)")
             }
         }
-         windowStage.loadContent("EntryView")
+        windowStage.loadContent("EntryView")
     }
 }
-
-

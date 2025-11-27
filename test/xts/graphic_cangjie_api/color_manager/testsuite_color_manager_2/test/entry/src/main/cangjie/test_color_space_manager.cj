@@ -36,7 +36,7 @@ class Test_ColorSpaceManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creat_colorSpaceManager_01(): Unit {
         var colorSpaceName = ColorSpace.Unknown
@@ -58,7 +58,7 @@ class Test_ColorSpaceManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creat_colorSpaceManager_02(): Unit {
         var color_manager: ColorSpaceManager
@@ -81,7 +81,7 @@ class Test_ColorSpaceManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creat_colorSpaceManager_03(): Unit {
         var colorSpaceName = AdobeRgb1998
@@ -104,7 +104,7 @@ class Test_ColorSpaceManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creat_colorSpaceManager_04(): Unit {
         var color_manager: ColorSpaceManager
@@ -129,7 +129,7 @@ class Test_ColorSpaceManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creat_colorSpaceManager_05(): Unit {
         var colorSpaceName = DisplayP3
@@ -153,7 +153,7 @@ class Test_ColorSpaceManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creat_colorSpaceManager_06(): Unit {
         var color_manager: ColorSpaceManager
@@ -178,7 +178,7 @@ class Test_ColorSpaceManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creat_colorSpaceManager_07(): Unit {
         var color_manager: ColorSpaceManager
@@ -204,7 +204,7 @@ class Test_ColorSpaceManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creat_colorSpaceManager_08(): Unit {
         var color_manager: ColorSpaceManager
@@ -230,7 +230,7 @@ class Test_ColorSpaceManager_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_creat_colorSpaceManager_09(): Unit {
         var color_manager: ColorSpaceManager

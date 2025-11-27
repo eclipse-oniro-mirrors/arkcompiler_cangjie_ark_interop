@@ -36,24 +36,22 @@ class testPixelMap_applyColorSpace_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Unknown,
-                    scaleMode: ScaleMode.FitTargetSize))
+                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                    pixelFormat: PixelMapFormat.Unknown, scaleMode: ScaleMode.FitTargetSize))
             let getColorSpace = pixelMap.getColorSpace()
             @Expect("assertion#0: not throw", "createPixelMap fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Image types are not supported.")
             @Expect(e.code, 62980103)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_testPixelMap_applyColorSpace_0600
@@ -64,21 +62,21 @@ class testPixelMap_applyColorSpace_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Alpha8,
-                    scaleMode: ScaleMode.FitTargetSize))
+                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                    pixelFormat: PixelMapFormat.Alpha8, scaleMode: ScaleMode.FitTargetSize))
             let getColorSpace = pixelMap.getColorSpace()
             @Expect("assertion#5: not throw", "createPixelMap fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Image types are not supported.")
             @Expect(e.code, 62980103)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
 
     /*
@@ -90,21 +88,21 @@ class testPixelMap_applyColorSpace_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.RgbaF16,
-                    scaleMode: ScaleMode.FitTargetSize))
+                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                    pixelFormat: PixelMapFormat.RgbaF16, scaleMode: ScaleMode.FitTargetSize))
             let getColorSpace = pixelMap.getColorSpace()
             @Expect("assertion#6: not throw", "createPixelMap fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Image types are not supported.")
             @Expect(e.code, 62980103)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
     }
 
     /*
@@ -116,21 +114,21 @@ class testPixelMap_applyColorSpace_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Nv21,
-                    scaleMode: ScaleMode.FitTargetSize))
+                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                    pixelFormat: PixelMapFormat.Nv21, scaleMode: ScaleMode.FitTargetSize))
             let getColorSpace = pixelMap.getColorSpace()
             @Expect("assertion#7: not throw", "createPixelMap fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Image types are not supported.")
             @Expect(e.code, 62980103)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_8 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 ends.")
     }
 
     /*
@@ -142,20 +140,20 @@ class testPixelMap_applyColorSpace_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
-        Hilog.info(0, "cangjietest","createPixelMap fail")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
+        Hilog.info(0, "cangjietest", "createPixelMap fail")
         try {
             let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Nv12,
-                    scaleMode: ScaleMode.FitTargetSize))
+                InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                    pixelFormat: PixelMapFormat.Nv12, scaleMode: ScaleMode.FitTargetSize))
             let getColorSpace = pixelMap.getColorSpace()
             @Expect("assertion#8: not throw", "createPixelMap fail")
         } catch (e: BusinessException) {
             @Expect(e.message, "Image types are not supported.")
             @Expect(e.code, 62980103)
         }
-        Hilog.info(0, "cangjietest","testcase TestCase_9 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 ends.")
     }
 }

@@ -20,20 +20,19 @@ import std.unittest.testmacro.*
 import std.unittest.*
 import std.unittest.common.*
 
-
 @Test
 class TestBundleInfo {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_BundleManager_TestBundleInfo_0100
-    * @tc.name      : test00
-    * @tc.desc      : test BundleManager test00
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_BundleManager_TestBundleInfo_0100
+     * @tc.name      : test00
+     * @tc.desc      : test BundleManager test00
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test00(): Unit {
         let bundleInfo = getFullBundleInfo()
         @Expect(bundleInfo.name, "com.example.myapplication")
@@ -41,9 +40,8 @@ class TestBundleInfo {
         @Expect(bundleInfo.versionCode, 1000000)
         @Expect(bundleInfo.versionName, "1.0.0")
         @Expect(bundleInfo.minCompatibleVersionCode, 1000000)
-        @Expect(bundleInfo.targetVersion, 20)
+        @Expect(bundleInfo.targetVersion, 22)
         @Expect(bundleInfo.installTime > 0)
         @Expect(bundleInfo.updateTime > 0)
     }
-
 }

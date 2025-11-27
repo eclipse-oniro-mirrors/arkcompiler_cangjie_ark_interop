@@ -48,7 +48,7 @@ class Test_ListItem_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_ListItem_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_List_Component_001 start")
         let ListItem = getInspectorByKey("Test_ListItem_01")

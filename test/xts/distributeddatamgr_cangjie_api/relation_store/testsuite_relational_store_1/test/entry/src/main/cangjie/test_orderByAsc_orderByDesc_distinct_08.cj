@@ -20,11 +20,12 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import kit.PerformanceAnalysisKit.Hilog
 import std.collection.{HashMap}
+import ohos.business_exception.BusinessException
 
 @Test
 class Test_orderByAsc_orderByDesc_distinct_08 {
@@ -36,10 +37,11 @@ class Test_orderByAsc_orderByDesc_distinct_08 {
                 case None =>
                     let stageContext = getAbilityContext()
                     _rdbStore = getRdbStore(stageContext,
-                StoreConfig(SecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+                        StoreConfig(RelationalStoreSecurityLevel.S2, name: "RdbTest.db", encrypt: true, dataGroupId: "",
+                            customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true,
+                            allowRebuild: false, isReadOnly: false, pluginLibs: ["pluginLibs"],
+                            cryptoParam: CryptoParam(), vector: false, tokenizer: Tokenizer.NoneTokenizer, persist: true,
+                            enableSemanticIndex: false))
                     _rdbStore.getOrThrow()
             }
         }
@@ -127,17 +129,17 @@ class Test_orderByAsc_orderByDesc_distinct_08 {
     public override func afterEach(): Unit {
         rdbStore.executeSql("DROP TABLE EMPLOYEE")
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0100
-    * @tc.name      : test_orderbyasc_01
-    * @tc.desc      : test RelationStore test_orderbyasc_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0100
+     * @tc.name      : test_orderbyasc_01
+     * @tc.desc      : test RelationStore test_orderbyasc_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_orderbyasc_01(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.orderByAsc("ID")
@@ -155,20 +157,23 @@ class Test_orderByAsc_orderByDesc_distinct_08 {
         @Expect(resultSet.getString(2), "-9223372036854775807")
         @Expect(resultSet.getDouble(3), 9223372036854775807.0)
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0200
-    * @tc.name      : test_orderbyasc_02
-    * @tc.desc      : test RelationStore test_orderbyasc_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0200
+     * @tc.name      : test_orderbyasc_02
+     * @tc.desc      : test RelationStore test_orderbyasc_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_orderbyasc_02(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.orderByAsc("SALARY")
@@ -186,20 +191,23 @@ class Test_orderByAsc_orderByDesc_distinct_08 {
         @Expect(resultSet.getString(2), "-9223372036854775807")
         @Expect(resultSet.getDouble(3), 9223372036854775807.0)
         @Expect(resultSet.getString(4), "0")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0300
-    * @tc.name      : test_orderbyasc_03
-    * @tc.desc      : test RelationStore test_orderbyasc_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0300
+     * @tc.name      : test_orderbyasc_03
+     * @tc.desc      : test RelationStore test_orderbyasc_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_orderbyasc_03(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.orderByAsc("CODES")
@@ -217,20 +225,23 @@ class Test_orderByAsc_orderByDesc_distinct_08 {
         @Expect(resultSet.getString(2), "-9223372036854775709")
         @Expect(resultSet.getDouble(3), -9223372036854775709.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0400
-    * @tc.name      : test_orderbydesc_04
-    * @tc.desc      : test RelationStore test_orderbydesc_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0400
+     * @tc.name      : test_orderbydesc_04
+     * @tc.desc      : test RelationStore test_orderbydesc_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_orderbydesc_04(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.orderByDesc("ID")
@@ -248,20 +259,23 @@ class Test_orderByAsc_orderByDesc_distinct_08 {
         @Expect(resultSet.getString(2), "-9223372036854775808")
         @Expect(resultSet.getDouble(3), -9223372036854775808.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0500
-    * @tc.name      : test_orderbydesc_05
-    * @tc.desc      : test RelationStore test_orderbydesc_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0500
+     * @tc.name      : test_orderbydesc_05
+     * @tc.desc      : test RelationStore test_orderbydesc_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_orderbydesc_05(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.orderByDesc("SALARY")
@@ -275,7 +289,7 @@ class Test_orderByAsc_orderByDesc_distinct_08 {
         @Expect(resultSet.getString(4), "0")
         for (i in 0..10) {
             resultSet.goToNextRow()
-             Hilog.info(0u32, "cangjietest", "","${resultSet.getDouble(3)}")
+            Hilog.info(0u32, "cangjietest", "", "${resultSet.getDouble(3)}")
         }
         resultSet.goToLastRow()
         @Expect(resultSet.getString(0), "-9223372036854775709")
@@ -283,20 +297,23 @@ class Test_orderByAsc_orderByDesc_distinct_08 {
         @Expect(resultSet.getString(2), "-9223372036854775709")
         @Expect(resultSet.getDouble(3), -9223372036854775808.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0600
-    * @tc.name      : test_orderbydesc_06
-    * @tc.desc      : test RelationStore test_orderbydesc_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0600
+     * @tc.name      : test_orderbydesc_06
+     * @tc.desc      : test RelationStore test_orderbydesc_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_orderbydesc_06(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates
@@ -329,19 +346,23 @@ class Test_orderByAsc_orderByDesc_distinct_08 {
         @Expect(resultSet.getString(2), "-1")
         @Expect(resultSet.getDouble(3), -1.0)
         @Expect(resultSet.getString(4), "1")
-        @Expect(resultSet.goToNextRow(), false)
+        try {
+            resultSet.goToNextRow()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 14800012)
+        }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0700
-    * @tc.name      : test_distinct_07
-    * @tc.desc      : test RelationStore test_distinct_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_orderByAsc_orderByDesc_distinct_08_0700
+     * @tc.name      : test_distinct_07
+     * @tc.desc      : test RelationStore test_distinct_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_distinct_07(): Unit {
         let predicates = RdbPredicates("EMPLOYEE")
         predicates.equalTo("NAME", RelationalStoreValueType.StringValue("Lisa")).distinct()

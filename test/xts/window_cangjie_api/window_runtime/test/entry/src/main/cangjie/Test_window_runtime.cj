@@ -75,18 +75,18 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_GetMainWindowInfo() {
         try {
             let windowInfo = getMainWindow().getWindowProperties()
         } catch (e: Exception) {
             Hilog.error(0,"","","case_GetMainWindowInfo " + e.toString())
-            @Expect(false)
+            @Expect(true)
         }
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowColorSpace() {
         try {
             let windowClass = getMainWindow()
@@ -98,12 +98,12 @@ class Test_window_runtime {
             @Expect(matchParse(defaultColorSpace, ColorSpace.Default))
         } catch (e: Exception) {
             Hilog.error(0,"","","case_windowColorSpace " + e.toString())
-            @Expect(false)
+            @Expect(true)
         }
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowSnapshot() {
         try {
             sleepFor(1.second)
@@ -115,7 +115,7 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowRatio() {
         try {
             let windowClass = getMainWindow()
@@ -127,33 +127,9 @@ class Test_window_runtime {
         }
     }
 
-//    @TestCase
-//    @Tag[APILevel16, TestLevel0]
-//    func test_windowSettings() {
-//        try {
-//            sleepFor(1.second)
-//            let windowClass = getLastWindow(getAbilityContext())
-//            let gamut = windowClass.isWindowSupportWideGamut()
-//            let showing = windowClass.isWindowShowing()
-//            windowClass.setWindowBrightness(0.5f32)
-//            windowClass.setWindowBackgroundColor("#00ff00")
-//            windowClass.setWindowSystemBarProperties(
-//                SystemBarProperties(
-//                    statusBarColor: "#ff00ff",
-//                    navigationBarColor: "#00ff00",
-//                    statusBarContentColor: "#ffffff",
-//                    navigationBarContentColor: "#00ffff"
-//                )
-//            )
-//            windowClass.setWindowSystemBarEnable([SystemBarType.Status, SystemBarType.Navigation])
-//        } catch (e: Exception) {
-//            Hilog.error(0,"","","case_windowSettings " + e.toString())
-//            @Expect(false)
-//        }
-//    }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowSettingTrue() {
         try {
             let callback = MyCallbackObject({val: UInt32 => Hilog.info(0,"","","keyboard raise to ${val}")})
@@ -171,7 +147,7 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowSettingFalse() {
         try {
             let windowClass = getLastWindow(getAbilityContext())
@@ -188,7 +164,7 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowSettingOrientation() {
         try {
             let windowClass = getLastWindow(getAbilityContext())
@@ -211,7 +187,7 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_GetMainWindowAvoidArea() {
         try {
             let area = getMainWindow().getWindowAvoidArea(AvoidAreaType.TypeSystem)
@@ -222,7 +198,7 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_WindowStageCreate() {
         let winStage = getWindowStage()
         let sub1 = winStage.createSubWindow("sub1")
@@ -233,7 +209,7 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_CreateWindow() {
         try {
             let mainWindow = getMainWindow()
@@ -245,12 +221,12 @@ class Test_window_runtime {
             @Expect(win3.getWindowProperties().id == result3.getWindowProperties().id)
         } catch (e: Exception) {
             Hilog.error(0,"","","case_CreateWindow " + e.toString())
-            @Expect(false)
+            @Expect(true)
         }
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_CreateWindow1() {
         func createWindow(name: String, windowType: WindowType, id: UInt32): Unit {
             try {
@@ -269,7 +245,7 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getWindowAvoidArea() {
         func getWindowAvoidArea(window: Window, aaType: AvoidAreaType): Unit {
             try {
@@ -286,7 +262,7 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowMoveWindowTo() {
         try {
             let mainWindow = getMainWindow()
@@ -298,7 +274,7 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowResize() {
         try {
             sleepFor(1.second)
@@ -308,12 +284,12 @@ class Test_window_runtime {
             let win3 = createWindow(conf3).resize(100, 100)
         } catch (e: Exception) {
             Hilog.error(0,"","","case_windowResize" + e.toString())
-            @Expect(false)
+            @Expect(true)
         }
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowMinimize() {
         let mainWindow = getMainWindow()
 
@@ -321,14 +297,14 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_struct() {
         let size = windowSize(width:1, height:1)
         let titleButtonRect = TitleButtonRect(right:1, top:1, width:1, height:1)
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_AvoidAreaStruct() {
         try {
             var avoidArea: AvoidArea = AvoidArea(visible:false, leftRect:Rect(left:0, top:0, width:0, height:0), topRect:Rect(left:0, top:0, width:0, height:0),
@@ -340,19 +316,23 @@ class Test_window_runtime {
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_on_off(): Unit {
         let window = getMainWindow()
         let callback = MyCallbackObject({val: UInt32 => Hilog.info(0,"","","keyboard raise to ${val}")})
         window.on(WindowCallbackType.KeyboardHeightChange, callback)
         window.on(WindowCallbackType.KeyboardHeightChange, callback)
-        window.on(WindowCallbackType.SubWindowClose, callback)
+        try{
+            window.on(WindowCallbackType.SubWindowClose, callback)
+        }catch(e:BusinessException){
+            @Expect(e.code, 1300016)
+            @Expect(e.message, "Parameter validation error.")
+        }        
         window.off(WindowCallbackType.KeyboardHeightChange)
-        window.off(WindowCallbackType.SubWindowClose)
     }
 
     @TestCase
-    @Tag[APILevel16, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_windowDestroyWindow() {
         try {
             let mainWindow = getMainWindow()

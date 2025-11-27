@@ -35,20 +35,20 @@ class testImagePacker_packToFile_PixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Unknown,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                pixelFormat: PixelMapFormat.Unknown, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
-        Hilog.info(0, "cangjietest","define local variable packToFile")
+        Hilog.info(0, "cangjietest", "define local variable packToFile")
         let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32),
             PackingOption("image/jpeg", 1u8, bufferSize: 10485760u64))
         @Expect(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -60,19 +60,21 @@ class testImagePacker_packToFile_PixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(32i64, repeat: 0u8),
-            InitializationOptions(Size( 2i32,  1i32), alphaType: AlphaType.Opaque, editable: false, srcPixelFormat:PixelMapFormat.Rgb565, pixelFormat: PixelMapFormat.Rgb565,
+            InitializationOptions(Size(2i32, 1i32), alphaType: AlphaType.Opaque, editable: false,
+                srcPixelFormat: PixelMapFormat.Rgb565, pixelFormat: PixelMapFormat.Rgb565,
                 scaleMode: ScaleMode.CenterCrop))
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
-        Hilog.info(0, "cangjietest","define local variable packToFile")
-        let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32), PackingOption("image/png", 50u8, bufferSize: 20971520u64))
+        Hilog.info(0, "cangjietest", "define local variable packToFile")
+        let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32),
+            PackingOption("image/png", 50u8, bufferSize: 20971520u64))
         @Expect(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -84,20 +86,21 @@ class testImagePacker_packToFile_PixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size( 3i32,  1i32), alphaType: AlphaType.Premul, editable: true,srcPixelFormat:PixelMapFormat.Rgb565, pixelFormat: PixelMapFormat.Rgba8888,
+            InitializationOptions(Size(3i32, 1i32), alphaType: AlphaType.Premul, editable: true,
+                srcPixelFormat: PixelMapFormat.Rgb565, pixelFormat: PixelMapFormat.Rgba8888,
                 scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
-        Hilog.info(0, "cangjietest","define local variable packToFile")
+        Hilog.info(0, "cangjietest", "define local variable packToFile")
         let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32),
             PackingOption("image/jpeg", 100u8, bufferSize: 10485760u64))
         @Expect(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -109,20 +112,20 @@ class testImagePacker_packToFile_PixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size( 1i32,  2i32), alphaType: AlphaType.UnPremul, editable: true, pixelFormat: PixelMapFormat.Bgra8888,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+            InitializationOptions(Size(1i32, 2i32), alphaType: AlphaType.UnPremul, editable: true,
+                pixelFormat: PixelMapFormat.Bgra8888, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
-        Hilog.info(0, "cangjietest","define local variable packToFile")
+        Hilog.info(0, "cangjietest", "define local variable packToFile")
         let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32),
             PackingOption("image/jpeg", 1u8, bufferSize: 10485760u64))
         @Expect(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -134,20 +137,20 @@ class testImagePacker_packToFile_PixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size( 2i32,  2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Rgb888,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+            InitializationOptions(Size(2i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                pixelFormat: PixelMapFormat.Rgb888, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
-        Hilog.info(0, "cangjietest","define local variable packToFile")
+        Hilog.info(0, "cangjietest", "define local variable packToFile")
         let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32),
             PackingOption("image/jpeg", 1u8, bufferSize: 10485760u64))
         @Expect(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 
     /*
@@ -159,20 +162,20 @@ class testImagePacker_packToFile_PixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size( 3i32,  2i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Alpha8,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+            InitializationOptions(Size(3i32, 2i32), alphaType: AlphaType.Unknown, editable: true,
+                pixelFormat: PixelMapFormat.Alpha8, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
-        Hilog.info(0, "cangjietest","define local variable packToFile")
+        Hilog.info(0, "cangjietest", "define local variable packToFile")
         let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32),
             PackingOption("image/jpeg", 1u8, bufferSize: 10485760u64))
         @Expect(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
 
     /*
@@ -184,20 +187,20 @@ class testImagePacker_packToFile_PixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size( 1i32,  3i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.RgbaF16,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+            InitializationOptions(Size(1i32, 3i32), alphaType: AlphaType.Unknown, editable: true,
+                pixelFormat: PixelMapFormat.RgbaF16, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
-        Hilog.info(0, "cangjietest","define local variable packToFile")
+        Hilog.info(0, "cangjietest", "define local variable packToFile")
         let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32),
             PackingOption("image/jpeg", 1u8, bufferSize: 10485760u64))
         @Expect(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
     }
 
     /*
@@ -209,20 +212,20 @@ class testImagePacker_packToFile_PixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size( 2i32,  3i32), alphaType: AlphaType.Unknown, editable: true, pixelFormat: PixelMapFormat.Nv21,
-                scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+            InitializationOptions(Size(2i32, 3i32), alphaType: AlphaType.Unknown, editable: true,
+                pixelFormat: PixelMapFormat.Nv21, scaleMode: ScaleMode.FitTargetSize))
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
-        Hilog.info(0, "cangjietest","define local variable packToFile")
+        Hilog.info(0, "cangjietest", "define local variable packToFile")
         let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32),
             PackingOption("image/jpeg", 1u8, bufferSize: 10485760u64))
         @Expect(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_8 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 ends.")
     }
 
     /*
@@ -234,19 +237,20 @@ class testImagePacker_packToFile_PixelMap_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
-        Hilog.info(0, "cangjietest","define local variable pixelMap")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
+        Hilog.info(0, "cangjietest", "define local variable pixelMap")
         let pixelMap = createPixelMap(Array<UInt8>(16i64, repeat: 0u8),
-            InitializationOptions(Size( 3i32,  3i32), alphaType: AlphaType.Unknown, editable: true, srcPixelFormat: PixelMapFormat.Rgba8888, pixelFormat: PixelMapFormat.Nv12,
+            InitializationOptions(Size(3i32, 3i32), alphaType: AlphaType.Unknown, editable: true,
+                srcPixelFormat: PixelMapFormat.Rgba8888, pixelFormat: PixelMapFormat.Nv12,
                 scaleMode: ScaleMode.FitTargetSize))
-        Hilog.info(0, "cangjietest","define local variable imagePacker")
+        Hilog.info(0, "cangjietest", "define local variable imagePacker")
         let imagePacker = createImagePacker()
-        Hilog.info(0, "cangjietest","define local variable packToFile")
+        Hilog.info(0, "cangjietest", "define local variable packToFile")
         let packToFile = imagePacker.packToFile(pixelMap, Int32(1i32),
             PackingOption("image/jpeg", 1u8, bufferSize: 10485760u64))
         @Expect(true)
-        Hilog.info(0, "cangjietest","testcase TestCase_9 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 ends.")
     }
 }

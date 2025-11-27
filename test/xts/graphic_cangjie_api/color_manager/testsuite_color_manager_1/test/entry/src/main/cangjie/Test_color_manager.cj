@@ -43,7 +43,7 @@ class Test_color_manager {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getColorSpaceName() {
         try {
             let colorSpaceManagerInstance = create(ColorSpace.Srgb)
@@ -63,7 +63,7 @@ class Test_color_manager {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getWhitePoint() {
         try {
             let colorSpaceManagerInstance = create(
@@ -85,7 +85,7 @@ class Test_color_manager {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getGamma() {
         try {
             let colorSpaceManagerInstance = create(
@@ -107,7 +107,7 @@ class Test_color_manager {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_checkRet() {
         try {
             let colorSpaceManagerInstance = create(

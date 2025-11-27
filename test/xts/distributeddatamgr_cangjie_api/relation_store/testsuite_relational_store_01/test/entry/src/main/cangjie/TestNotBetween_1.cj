@@ -36,13 +36,13 @@ class TestNotBetween_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("test")
         Hilog.info(0u32, "cangjietest", "", "testNotBetween")
-        rdbPridecates.notBetween("test", ValueType.Integer(1i64), ValueType.Integer(1i64))
+        rdbPridecates.notBetween("test", RelationalStoreValueType.Integer(1i64), RelationalStoreValueType.Integer(1i64))
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 ends.")
     }
@@ -56,13 +56,13 @@ class TestNotBetween_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("test")
         Hilog.info(0u32, "cangjietest", "", "testNotBetween")
-        rdbPridecates.notBetween("test", ValueType.Integer(2i64), ValueType.Integer(2i64))
+        rdbPridecates.notBetween("test", RelationalStoreValueType.Integer(2i64), RelationalStoreValueType.Integer(2i64))
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 ends.")
     }
@@ -76,13 +76,13 @@ class TestNotBetween_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("test")
         Hilog.info(0u32, "cangjietest", "", "testNotBetween")
-        rdbPridecates.notBetween("test", ValueType.Integer(3i64), ValueType.Integer(3i64))
+        rdbPridecates.notBetween("test", RelationalStoreValueType.Integer(0i64), RelationalStoreValueType.Integer(0i64))
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 ends.")
     }
@@ -96,13 +96,13 @@ class TestNotBetween_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("test")
         Hilog.info(0u32, "cangjietest", "", "testNotBetween")
-        rdbPridecates.notBetween("test", ValueType.Integer(4i64), ValueType.Integer(4i64))
+        rdbPridecates.notBetween("test", RelationalStoreValueType.Integer(-1i64), RelationalStoreValueType.Integer(-1i64))
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 ends.")
     }
@@ -116,13 +116,13 @@ class TestNotBetween_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         Hilog.info(0u32, "cangjietest", "", "define local variable rdbPridecates")
         let rdbPridecates = RdbPredicates("test")
         Hilog.info(0u32, "cangjietest", "", "testNotBetween")
-        rdbPridecates.notBetween("test", ValueType.Integer(1024i64), ValueType.Integer(1024i64))
+        rdbPridecates.notBetween("test", RelationalStoreValueType.Integer(1024i64), RelationalStoreValueType.Integer(1024i64))
         @Expect(true)
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 ends.")
     }

@@ -85,20 +85,20 @@ class View_EmptyAttrs_onAreaChange {
     protected func callbackonAreaChange(areaEvent: areaevent, area: Area) {
         areaEvent.width = area.width.value.toString()
         areaEvent.height = area.height.value.toString()
-        areaEvent.position.x = area.position.x.value.toString()
-        areaEvent.position.y = area.position.y.value.toString()
-        areaEvent.globalPosition.x = area.globalPosition.x.value.toString()
-        areaEvent.globalPosition.y = area.globalPosition.y.value.toString()
+        areaEvent.position.x = area.position.x.getOrThrow().value.toString()
+        areaEvent.position.y = area.position.y.getOrThrow().value.toString()
+        areaEvent.globalPosition.x = area.globalPosition.x.getOrThrow().value.toString()
+        areaEvent.globalPosition.y = area.globalPosition.y.getOrThrow().value.toString()
     }
 
     func build() {
         Scroll() {
             Column(space:5) {
-                Button(this.changeArea).id("changeArea").onClick {
+                Button(this.changeArea).id("changeArea").onClick({
                     evt =>
                     this.childWidth += 10
                     this.childHeight -= 10
-                }
+                })
 
                 if (this.renderFlag) {}
                 else if (this.targetView == "AlphabetIndexer") {
@@ -108,11 +108,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Blank") {
                     Text("Blank: Attrs_Event_onAreaChange")
                     Blank(min: 10)
@@ -120,11 +120,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Button") {
                     Text("Button: Attrs_Event_onAreaChange")
                     Button {Text("Button").width(90.percent).height(90.percent).backgroundColor(Color.Gray)}
@@ -133,11 +133,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Checkbox") {
                     Text("Checkbox: Attrs_Event_onAreaChange")
                     Checkbox()
@@ -145,11 +145,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "CheckboxGroup") {
                     Text("CheckboxGroup: Attrs_Event_onAreaChange")
                     CheckboxGroup()
@@ -157,11 +157,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "DataPanel") {
                     Text("DataPanel: Attrs_Event_onAreaChange")
                     DataPanel(values: [30.0])
@@ -169,11 +169,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "DatePicker") {
                     Text("DatePicker: Attrs_Event_onAreaChange")
                     DatePicker()
@@ -181,11 +181,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Divider") {
                     Text("Divider: Attrs_Event_onAreaChange")
                     Divider()
@@ -193,11 +193,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Gauge") {
                     Text("Gauge: Attrs_Event_onAreaChange")
                     Gauge(value: 50.0, min: 0.0, max: 100.0) {
@@ -207,11 +207,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Image") {
                     Text("Image: Attrs_Event_onAreaChange")
                     Image(@r(app.media.startIcon))
@@ -220,11 +220,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "ImageSpan") {
                     Text("ImageSpan: Attrs_Event_onAreaChange")
                     Text() {
@@ -234,11 +234,11 @@ class View_EmptyAttrs_onAreaChange {
                             .width(this.childWidth)
                             .height(this.childHeight)
                             .backgroundColor(this.Colors[0])
-                            .onAreaChange {
+                            .onAreaChange ({
                                 oldArea, newArea =>
                                 this.callbackonAreaChange(this.areaEvent_old, oldArea)
                                 this.callbackonAreaChange(this.areaEvent_new, newArea)
-                            }
+                            })
                     }
                 } else if (this.targetView == "LoadingProgress") {
                     Text("LoadingProgress: Attrs_Event_onAreaChange")
@@ -247,11 +247,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Menu") {
                     Text("Menu: Attrs_Event_onAreaChange")
 
@@ -267,11 +267,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "MenuItem") {
                     Text("MenuItem: Attrs_Event_onAreaChange")
                     Menu() {
@@ -281,11 +281,11 @@ class View_EmptyAttrs_onAreaChange {
                                 .width(this.childWidth)
                                 .height(this.childHeight)
                                 .backgroundColor(this.Colors[0])
-                                .onAreaChange {
+                                .onAreaChange ({
                                     oldArea, newArea =>
                                     this.callbackonAreaChange(this.areaEvent_old, oldArea)
                                     this.callbackonAreaChange(this.areaEvent_new, newArea)
-                                }
+                                })
                         }.width(80.percent).height(80.percent)
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "MenuItemGroup") {
@@ -300,11 +300,11 @@ class View_EmptyAttrs_onAreaChange {
                             .width(this.childWidth)
                             .height(this.childHeight)
                             .backgroundColor(this.Colors[0])
-                            .onAreaChange {
+                            .onAreaChange ({
                                 oldArea, newArea =>
                                 this.callbackonAreaChange(this.areaEvent_old, oldArea)
                                 this.callbackonAreaChange(this.areaEvent_new, newArea)
-                            }
+                            })
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Progress") {
                     Text("Progress: Attrs_Event_onAreaChange")
@@ -313,11 +313,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "QRCode") {
                     Text("QRCode: Attrs_Event_onAreaChange")
                     QRCode(targetView)
@@ -325,11 +325,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Radio") {
                     Text("Radio: Attrs_Event_onAreaChange")
                     Radio(group: "1", value: "A")
@@ -337,11 +337,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Rating") {
                     Text("Rating: Attrs_Event_onAreaChange")
                     Rating(rating: 3.5, indicator: false)
@@ -349,11 +349,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Refresh") {
                     Text("Refresh: Attrs_Event_onAreaChange")
                     Refresh(RefreshOptions(refreshing: @Binder(this.isRefreshing))) {
@@ -363,11 +363,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "RichEditor") {
                     Text("RichEditor: Attrs_Event_onAreaChange")
                     RichEditor(richEditorController)
@@ -375,11 +375,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "RichText") {
                     Text("RichText: Attrs_Event_onAreaChange")
                     RichText("""
@@ -388,11 +388,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "RowSplit") {
                     Text("RowSplit: Attrs_Event_onAreaChange")
                     RowSplit() {
@@ -411,11 +411,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "ScrollBar") {
                     Text("ScrollBar: Attrs_Event_onAreaChange")
 
@@ -443,11 +443,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Search") {
                     Text("Search: Attrs_Event_onAreaChange")
                     Search(value: "", placeholder: "Type to search")
@@ -455,11 +455,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Slider") {
                     Text("Slider: Attrs_Event_onAreaChange")
                     Slider()
@@ -467,11 +467,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 }else if (this.targetView == "Stepper") {
                     Text("Stepper: Attrs_Event_onAreaChange")
                     Stepper(index:0) {
@@ -483,11 +483,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "StepperItem") {
                     Text("StepperItem: Attrs_Event_onAreaChange")
                     Stepper(index:0) {
@@ -498,11 +498,11 @@ class View_EmptyAttrs_onAreaChange {
                             .width(this.childWidth)
                             .height(this.childHeight)
                             .backgroundColor(this.Colors[0])
-                            .onAreaChange {
+                            .onAreaChange ({
                                 oldArea, newArea =>
                                 this.callbackonAreaChange(this.areaEvent_old, oldArea)
                                 this.callbackonAreaChange(this.areaEvent_new, newArea)
-                            }
+                            })
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Text") {
                     Text("Text: Attrs_Event_onAreaChange")
@@ -511,11 +511,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "TextArea") {
                     Text("TextArea: Attrs_Event_onAreaChange")
                     TextArea(text: targetView)
@@ -523,11 +523,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "TextClock") {
                     Text("TextClock: Attrs_Event_onAreaChange")
                     TextClock()
@@ -535,11 +535,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "TextInput") {
                     Text("TextInput: Attrs_Event_onAreaChange")
                     TextInput(placeholder: "TextInput")
@@ -547,11 +547,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "TextPicker") {
                     Text("TextPicker: Attrs_Event_onAreaChange")
                     TextPicker(range:["apple", "banana", "orange", "peach"])
@@ -559,11 +559,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "TextTimer") {
                     Text("TextTimer: Attrs_Event_onAreaChange")
                     TextTimer(isCountDown: true, count: 30000, controller: TextTimerController())
@@ -571,11 +571,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Toggle") {
                     Text("Toggle: Attrs_Event_onAreaChange")
                     Toggle(ToggleType.Switch, isOn: false)
@@ -583,11 +583,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Web") {
                     Text("Web: Attrs_Event_onAreaChange")
                     Web(src: "www.baidu.com", controller: webController)
@@ -597,11 +597,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Select") {
                     Text("Select: Attrs_Event_onAreaChange")
                     Select(
@@ -612,11 +612,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Badge") {
                     Text("Badge: Attrs_Event_onAreaChange")
                     Badge(count: 1, style: BadgeStyle(color: this.Colors[2])) {
@@ -626,11 +626,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Column") {
                     Text("Column: Attrs_Event_onAreaChange")
 
@@ -641,11 +641,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Grid") {
                     Text("Grid: Attrs_Event_onAreaChange")
                     Grid (child:{=>
@@ -657,11 +657,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "GridItem") {
                     Text("GridItem: Attrs_Event_onAreaChange")
                     Grid (child:{=>
@@ -672,11 +672,11 @@ class View_EmptyAttrs_onAreaChange {
                             .width(this.childWidth)
                             .height(this.childHeight)
                             .backgroundColor(this.Colors[0])
-                            .onAreaChange {
+                            .onAreaChange ({
                                 oldArea, newArea =>
                                 this.callbackonAreaChange(this.areaEvent_old, oldArea)
                                 this.callbackonAreaChange(this.areaEvent_new, newArea)
-                            }
+                            })
                     }).width(80.percent).height(10.percent)
                 } else if (this.targetView == "GridRow") {
                     Text("GridRow: Attrs_Event_onAreaChange")
@@ -689,11 +689,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "GridCol") {
                     Text("GridCol: Attrs_Event_onAreaChange")
                     GridRow() {
@@ -704,11 +704,11 @@ class View_EmptyAttrs_onAreaChange {
                             .width(this.childWidth)
                             .height(this.childHeight)
                             .backgroundColor(this.Colors[0])
-                            .onAreaChange {
+                            .onAreaChange ({
                                 oldArea, newArea =>
                                 this.callbackonAreaChange(this.areaEvent_old, oldArea)
                                 this.callbackonAreaChange(this.areaEvent_new, newArea)
-                            }
+                            })
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Flex") {
                     Text("Flex: Attrs_Event_onAreaChange")
@@ -719,11 +719,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "List") {
                     Text("List: Attrs_Event_onAreaChange")
                     List() {
@@ -737,11 +737,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "ListItem") {
                     Text("ListItem: Attrs_Event_onAreaChange")
                     List() {
@@ -753,11 +753,11 @@ class View_EmptyAttrs_onAreaChange {
                                 .width(this.childWidth)
                                 .height(this.childHeight)
                                 .backgroundColor(this.Colors[0])
-                                .onAreaChange {
+                                .onAreaChange ({
                                     oldArea, newArea =>
                                     this.callbackonAreaChange(this.areaEvent_old, oldArea)
                                     this.callbackonAreaChange(this.areaEvent_new, newArea)
-                                }
+                                })
                         }
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "ListItemGroup") {
@@ -772,11 +772,11 @@ class View_EmptyAttrs_onAreaChange {
                             .width(this.childWidth)
                             .height(this.childHeight)
                             .backgroundColor(this.Colors[0])
-                            .onAreaChange {
+                            .onAreaChange ({
                                 oldArea, newArea =>
                                 this.callbackonAreaChange(this.areaEvent_old, oldArea)
                                 this.callbackonAreaChange(this.areaEvent_new, newArea)
-                            }
+                            })
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "RelativeContainer") {
                     Text("RelativeContainer: Attrs_Event_onAreaChange")
@@ -788,11 +788,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Row") {
                     Text("Row: Attrs_Event_onAreaChange")
 
@@ -803,11 +803,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Scroll") {
                     Text("Scroll: Attrs_Event_onAreaChange")
 
@@ -818,11 +818,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Stack") {
                     Text("Stack: Attrs_Event_onAreaChange")
 
@@ -833,11 +833,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Swiper") {
                     Text("Swiper: Attrs_Event_onAreaChange")
 
@@ -848,11 +848,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Tabs") {
                     Text("Tabs: Attrs_Event_onAreaChange")
                     Tabs() {
@@ -864,11 +864,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "TabContent") {
                     Text("TabContent: Attrs_Event_onAreaChange")
                     Tabs() {
@@ -880,11 +880,11 @@ class View_EmptyAttrs_onAreaChange {
                             .width(this.childWidth)
                             .height(this.childHeight)
                             .backgroundColor(this.Colors[0])
-                            .onAreaChange {
+                            .onAreaChange ({
                                 oldArea, newArea =>
                                 this.callbackonAreaChange(this.areaEvent_old, oldArea)
                                 this.callbackonAreaChange(this.areaEvent_new, newArea)
-                            }
+                            })
                     }.width(80.percent).height(10.percent)
                 } else if (this.targetView == "Circle") {
                     Text("Circle: Attrs_Event_onAreaChange")
@@ -893,11 +893,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Line") {
                     Text("Line: Attrs_Event_onAreaChange")
                     Line()
@@ -908,11 +908,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Rect") {
                     Text("Rect: Attrs_Event_onAreaChange")
                     Rect()
@@ -920,11 +920,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Shape") {
                     Text("Shape: Attrs_Event_onAreaChange")
                     Shape() {Rect().width(80.percent).height(80.percent).backgroundColor(this.Colors[1])}
@@ -932,11 +932,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Path") {
                     Text("Path: Attrs_Event_onAreaChange")
                     Path()
@@ -945,11 +945,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Canvas") {
                     Text("Canvas: Attrs_Event_onAreaChange")
                     Canvas(CanvasRenderingContext2D(RenderingContextSettings(antialias: true)))
@@ -957,11 +957,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Video") {
                     Text("Video: Attrs_Event_onAreaChange")
                     Video()
@@ -969,11 +969,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Counter") {
                     Text("Counter: Attrs_Event_onAreaChange")
                     Counter() {}
@@ -981,11 +981,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "PatternLock") {
                     Text("PatternLock: Attrs_Event_onAreaChange")
                     PatternLock()
@@ -993,11 +993,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 } else if (this.targetView == "Ellipse") {
                     Text("Ellipse: Attrs_Event_onAreaChange")
                     Ellipse()
@@ -1005,11 +1005,11 @@ class View_EmptyAttrs_onAreaChange {
                         .width(this.childWidth)
                         .height(this.childHeight)
                         .backgroundColor(this.Colors[0])
-                        .onAreaChange {
+                        .onAreaChange ({
                             oldArea, newArea =>
                             this.callbackonAreaChange(this.areaEvent_old, oldArea)
                             this.callbackonAreaChange(this.areaEvent_new, newArea)
-                        }
+                        })
                 }
                 Text("areaEvent_old.width: " + this.areaEvent_old.width).id("areaEvent_old.width").fontSize(12)
                 Text("areaEvent_old.height: " + this.areaEvent_old.height).id("areaEvent_old.height").fontSize(12)

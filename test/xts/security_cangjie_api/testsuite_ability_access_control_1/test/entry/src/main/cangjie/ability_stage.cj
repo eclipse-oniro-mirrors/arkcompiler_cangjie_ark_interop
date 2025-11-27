@@ -19,7 +19,6 @@ import ohos.arkui.state_management.AppStorage
 
 class MyAbilityStage <: AbilityStage {
     public override func onCreate(): Unit {
-//        Hilog.info(0u32, "CangjieTest", "MyAbilityStage onCreated.")
         AppStorage.setOrCreate<AbilityStageContext>("abilityStageContext", this.context)
     }
 }

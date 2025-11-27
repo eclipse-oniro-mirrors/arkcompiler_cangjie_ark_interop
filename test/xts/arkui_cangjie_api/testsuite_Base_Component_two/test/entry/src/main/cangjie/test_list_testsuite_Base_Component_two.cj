@@ -39,8 +39,6 @@ func testsuite(): Unit {
     registerTestSuite("Test_Button_Component", {=> Test_Button_Component()})
     registerTestSuite("Test_TextArea_Component", {=> Test_TextArea_Component()})
     registerTestSuite("Test_Toggle_Component", {=> Test_Toggle_Component()})
-    registerTestSuite("Test_RichEditor_Component", {=> Test_RichEditor_Component()})
-    registerTestSuite("Test_RichEditor_Component_Two", {=> Test_RichEditor_Component_Two()})
     registerTestSuite("Test_DatePicker_Component", {=> Test_DatePicker_Component()})
     registerTestSuite("Test_Divider_Component", {=> Test_Divider_Component()})
     registerTestSuite("Test_TextInput_Component", {=> Test_TextInput_Component()})

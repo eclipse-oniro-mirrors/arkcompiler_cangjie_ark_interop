@@ -20,32 +20,32 @@ import std.unittest.*
 import std.unittest.common.*
 import ohos.ui_test.*
 import ohos.data.relational_store.*
-import ohos.data.relational_store.SecurityLevel
-import ohos.data.relational_store.ValueType as RelationalStoreValueType
+import ohos.data.relational_store.RelationalStoreSecurityLevel
+import ohos.data.relational_store.RelationalStoreValueType as RelationalStoreValueType
 import std.math.*
 import std.collection.{HashMap}
 import ohos.business_exception.{BusinessException}
 import kit.PerformanceAnalysisKit.Hilog
 
-
 @Test
 class Test_deleteRdbStore_16 {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_deleteRdbStore_16_0100
-    * @tc.name      : Test_deleterdbstore_01
-    * @tc.desc      : test RelationStore Test_deleterdbstore_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_deleteRdbStore_16_0100
+     * @tc.name      : Test_deleterdbstore_01
+     * @tc.desc      : test RelationStore Test_deleterdbstore_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_deleterdbstore_01(): Unit {
-        var rdbStore = getRdbStore(getAbilityContext(), StoreConfig(SecurityLevel.S1, name: "zps.db", encrypt: false, dataGroupId: "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+        var rdbStore = getRdbStore(getAbilityContext(),
+            StoreConfig(RelationalStoreSecurityLevel.S1, name: "zps.db", encrypt: false, dataGroupId: "",
+                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
+                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
         rdbStore.executeSql(
             "CREATE TABLE EMPLOYEE(ID int NOT NULL, NAME varchar(255) NOT NULL, AGE int, SALARY float NOT NULL, CODES Bit NOT NULL, PRIMARY KEY (Id))"
         )
@@ -58,14 +58,14 @@ class Test_deleteRdbStore_16 {
         rdbStore.insert("EMPLOYEE", values)
 
         let predicates1 = RdbPredicates("EMPLOYEE")
-        let resultSet1 = rdbStore.query(predicates1,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet1 = rdbStore.query(predicates1, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         @Expect(resultSet1.rowCount, 1)
 
         var delrdbStore = deleteRdbStore(getAbilityContext(), "zps.db")
 
         let predicates = RdbPredicates("EMPLOYEE")
         try {
-            rdbStore.query(predicates,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+            rdbStore.query(predicates, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         } catch (e: BusinessException) {
             @Expect(e.code,RdbStoreError.InnerError.code)
             @Expect(e.message,RdbStoreError.InnerError.message)
@@ -75,23 +75,23 @@ class Test_deleteRdbStore_16 {
         deleteRdbStore(stageContext, "zps.db")
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_deleteRdbStore_16_0200
-    * @tc.name      : Test_deleterdbstore_02
-    * @tc.desc      : test RelationStore Test_deleterdbstore_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_deleteRdbStore_16_0200
+     * @tc.name      : Test_deleterdbstore_02
+     * @tc.desc      : test RelationStore Test_deleterdbstore_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_deleterdbstore_02(): Unit {
-        Hilog.info(0u32,"","cangjietest aaa","")
-        var rdbStore = getRdbStore(getAbilityContext(), StoreConfig(SecurityLevel.S1, name: "zps1.db", encrypt: false, dataGroupId:  "",
-                    customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+        Hilog.info(0u32, "", "cangjietest aaa", "")
+        var rdbStore = getRdbStore(getAbilityContext(),
+            StoreConfig(RelationalStoreSecurityLevel.S1, name: "zps1.db", encrypt: false, dataGroupId: "",
+                customDir: "valid modifyTime", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
+                isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
+                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
         rdbStore.executeSql(
             "CREATE TABLE EMPLOYEE(ID int NOT NULL, NAME varchar(255) NOT NULL, AGE int, SALARY float NOT NULL, CODES Bit NOT NULL, PRIMARY KEY (Id))"
         )
@@ -103,7 +103,7 @@ class Test_deleteRdbStore_16 {
         values.add("CODES", RelationalStoreValueType.Boolean(true))
         rdbStore.insert("EMPLOYEE", values)
         let predicates1 = RdbPredicates("EMPLOYEE")
-        let resultSet1 = rdbStore.query(predicates1,  columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
+        let resultSet1 = rdbStore.query(predicates1, columns: ["ID", "NAME", "AGE", "SALARY", "CODES"])
         Hilog.info(0u32, "cangjietest", "resultSet1.rowcount is ${resultSet1.rowCount}")
         @Expect(resultSet1.rowCount, 1)
 
@@ -117,23 +117,22 @@ class Test_deleteRdbStore_16 {
         var delrdbStore1 = deleteRdbStore(getAbilityContext(), "zps1.db")
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_RelationStore_Test_deleteRdbStore_16_0300
-    * @tc.name      : Test_deleterdbstore_03
-    * @tc.desc      : test RelationStore Test_deleterdbstore_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_RelationStore_Test_deleteRdbStore_16_0300
+     * @tc.name      : Test_deleterdbstore_03
+     * @tc.desc      : test RelationStore Test_deleterdbstore_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_deleterdbstore_03(): Unit {
         var rdbStore = getRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "zps.db", encrypt: false, dataGroupId:  "",
-                    customDir: "test/", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
-                    isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
-                    tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
+            StoreConfig(RelationalStoreSecurityLevel.S1, name: "zps.db", encrypt: false, dataGroupId: "",
+                customDir: "test/", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false, isReadOnly: false,
+                pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
+                tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))
         rdbStore.executeSql(
             "CREATE TABLE EMPLOYEE(ID int NOT NULL, NAME varchar(255) NOT NULL, AGE int, SALARY float NOT NULL, CODES Bit NOT NULL, PRIMARY KEY (Id))"
         )
@@ -146,7 +145,7 @@ class Test_deleteRdbStore_16 {
         rdbStore.insert("EMPLOYEE", values)
         try {
             deleteRdbStore(getAbilityContext(),
-            StoreConfig(SecurityLevel.S1, name: "zps.db", encrypt: false, dataGroupId: "zpstesdt",
+                StoreConfig(RelationalStoreSecurityLevel.S1, name: "zps.db", encrypt: false, dataGroupId: "zpstesdt",
                     customDir: "test/", rootDir: "rootDir", autoCleanDirtyData: true, allowRebuild: false,
                     isReadOnly: false, pluginLibs: ["pluginLibs"], cryptoParam: CryptoParam(), vector: false,
                     tokenizer: Tokenizer.NoneTokenizer, persist: true, enableSemanticIndex: false))

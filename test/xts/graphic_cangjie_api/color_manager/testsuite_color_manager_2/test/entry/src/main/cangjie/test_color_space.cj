@@ -37,7 +37,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_getColorSpace_01(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -63,7 +63,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_setColorSpace_02(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -97,7 +97,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_setColorSpace_03(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -131,7 +131,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_setColorSpace_04(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -166,7 +166,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_setColorSpace_05(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -200,7 +200,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_setColorSpace_06(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -236,7 +236,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_setColorSpace_07(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -273,7 +273,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_applyColorSpace_08(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -311,7 +311,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_applyColorSpace_09(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)
@@ -347,7 +347,7 @@ class Test_ColorSpace_01 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_setColorSpace_12(): Unit {
         var color: Array<UInt8> = Array<UInt8>(96, repeat: 0)

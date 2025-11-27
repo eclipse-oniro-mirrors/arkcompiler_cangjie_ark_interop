@@ -14,25 +14,14 @@
  */
 package ohos_app_cangjie_entry
 
-
 import ohos.window.WindowStage
 import kit.AbilityKit.*
 
-
 class MainAbility <: UIAbility {
-//    init() {
-//        super()
-//        registerSelf()
-//    }
     public func onCreate(want: Want, launchParam: LaunchParam): Unit {
-        //logger.info("MainAbility OnCreated.${want.abilityName}")
-
     }
 
     public func onWindowStageCreate(windowStage: WindowStage): Unit {
-        //logger.info("MainAbility onWindowStageCreate.")
-//        AppStorage.setOrCreate("windowStage", windowStage)
-//        AppStorage.setOrCreate("abilityContext", this.context)
         Global._abilityContext = this.context
         windowStage.loadContent("EntryView")
     }
@@ -51,13 +40,7 @@ public class Global {
         _abilityContext.getOrThrow()
     }
 
-//    public static func getStageContext() {
-//        getStageContext(getAbilityContext())
-//    }
-
     public static func getWindowStage() {
         windowStage.getOrThrow()
     }
 }
-
-

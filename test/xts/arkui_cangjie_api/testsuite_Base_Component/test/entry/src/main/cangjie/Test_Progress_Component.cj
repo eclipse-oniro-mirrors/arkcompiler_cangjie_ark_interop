@@ -49,7 +49,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_001() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_001] start")
         // 1、获取页面中id为LinearProgressBasis1的组件信息
@@ -77,7 +77,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_002() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_002] start")
         // 1、获取页面中id为LinearProgressBasis2的组件信息
@@ -105,7 +105,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_003() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_003] start")
         // 1、获取页面中id为LinearProgressBasis2的组件信息
@@ -133,7 +133,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_004() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_004] start")
         // 1、获取页面中id为LinearProgressBasis2的组件信息
@@ -161,7 +161,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_005() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_005] start")
         // 1、获取页面中id为LinearProgressBasis2的组件信息
@@ -189,7 +189,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_006() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_006] start")
         // 1、获取页面中id为EclipseProgressBasis的组件信息
@@ -217,7 +217,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_007() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_007] start")
         // 1、获取页面中id为ScaleRingProgressBasis的组件信息
@@ -245,7 +245,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_008() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_008] start")
         // 1、获取页面中id为RingProgressBasis的组件信息
@@ -273,7 +273,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_009() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_009] start")
         // 1、获取页面中id为CapsuleProgressBasis的组件信息
@@ -301,7 +301,7 @@ class Test_Progress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Progress_Component_010() {
         Hilog.info(0,"",   "cangjietest", "[Test_Progress_Component_010] start")
         // 1、获取页面中id为ScaleRingProgressBasis的组件信息

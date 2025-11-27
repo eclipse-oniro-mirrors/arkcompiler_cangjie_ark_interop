@@ -27,8 +27,6 @@ import ohos.business_exception.*
 
 @Test
 class testAnonAttestKeyItem_1 {
- 
-
 
     /*
      * @tc.number    : Sub_Cangjie_security_huks_74100
@@ -39,17 +37,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_7 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("789",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("789",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("789", HuksOptions())
             @Expect("assertion#473: not throw", "would throw exception")
@@ -68,17 +66,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_8 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("!@#$",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("!@#$",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("!@#$", HuksOptions())
             @Expect("assertion#474: not throw", "would throw exception")
@@ -97,17 +95,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_9 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("%^&*",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("%^&*",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_TYPE, HuksParamValue.Uint64Value(1u64))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("%^&*", HuksOptions())
             @Expect("assertion#475: not throw", "would throw exception")
@@ -126,17 +124,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_10 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("01294hrew",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("01294hrew",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_ASSOCIATED_DATA, HuksParamValue.Uint64Value(2u64))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("01294hrew", HuksOptions())
             @Expect("assertion#476: not throw", "would throw exception")
@@ -155,17 +153,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_11 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("ihe3938(@$^*)",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("ihe3938(@$^*)",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_NONCE, HuksParamValue.Uint64Value(3u64))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("ihe3938(@$^*)", HuksOptions())
             @Expect("assertion#477: not throw", "would throw exception")
@@ -184,15 +182,15 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_12 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))]))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))]))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))]))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))]))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#478: not throw", "would throw exception")
@@ -211,17 +209,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_13 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_INFO, HuksParamValue.BytesValue([3u8]))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#479: not throw", "would throw exception")
@@ -240,17 +238,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_SALT, HuksParamValue.BytesValue([5u8]))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#480: not throw", "would throw exception")
@@ -259,10 +257,6 @@ class testAnonAttestKeyItem_1 {
         }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 ends.")
     }
-
-
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_security_huks_75400
@@ -273,17 +267,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_20 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#486: not throw", "would throw exception")
@@ -302,17 +298,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_21 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_ALG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#487: not throw", "would throw exception")
@@ -331,17 +327,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_22 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#488: not throw", "would throw exception")
@@ -360,17 +358,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_23 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#489: not throw", "would throw exception")
@@ -389,17 +389,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_24 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_AGREE_PUBLIC_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#490: not throw", "would throw exception")
@@ -418,17 +420,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_25 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY_ALIAS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#491: not throw", "would throw exception")
@@ -447,17 +449,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_26 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_DERIVE_KEY_SIZE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#492: not throw", "would throw exception")
@@ -476,17 +478,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_27 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_IMPORT_KEY_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#493: not throw", "would throw exception")
@@ -505,17 +507,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_28 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_UNWRAP_ALGORITHM_SUITE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#494: not throw", "would throw exception")
@@ -534,17 +538,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_29 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG,
+                        HuksParamValue.BooleanValue(true))], inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#495: not throw", "would throw exception")
@@ -563,17 +569,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_30 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_RSA_PSS_SALT_LEN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#496: not throw", "would throw exception")
@@ -582,10 +590,6 @@ class testAnonAttestKeyItem_1 {
         }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_30 ends.")
     }
-
-
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_security_huks_77000
@@ -596,17 +600,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_36 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_ID, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#502: not throw", "would throw exception")
@@ -625,17 +629,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_37 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_NO_AUTH_REQUIRED, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#503: not throw", "would throw exception")
@@ -654,17 +660,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_38 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_USER_AUTH_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#504: not throw", "would throw exception")
@@ -683,17 +689,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_39 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TIMEOUT, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#505: not throw", "would throw exception")
@@ -712,17 +718,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_40 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AUTH_TOKEN, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#506: not throw", "would throw exception")
@@ -741,17 +747,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_41 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_ACCESS_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#507: not throw", "would throw exception")
@@ -770,17 +778,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_42 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_SECURE_SIGN_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#508: not throw", "would throw exception")
@@ -799,17 +809,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_43 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_TYPE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#509: not throw", "would throw exception")
@@ -828,17 +838,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_44 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_CHALLENGE_POS, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#510: not throw", "would throw exception")
@@ -857,17 +867,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_45 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_KEY_AUTH_PURPOSE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#511: not throw", "would throw exception")
@@ -886,17 +898,19 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_46 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(
+                    properties: [HuksParam(HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#512: not throw", "would throw exception")
@@ -905,9 +919,6 @@ class testAnonAttestKeyItem_1 {
         }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_46 ends.")
     }
-
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_security_huks_81400
@@ -918,17 +929,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_80(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_80 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_KEY, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#546: not throw", "would throw exception")
@@ -937,8 +948,6 @@ class testAnonAttestKeyItem_1 {
         }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_80 ends.")
     }
-
-
 
     /*
      * @tc.number    : Sub_Cangjie_security_huks_81700
@@ -949,17 +958,17 @@ class testAnonAttestKeyItem_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_83(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_83 begins.")
         Hilog.info(0u32, "cangjietest", "", "would throw exception")
         try {
             generateKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             let chains = anonAttestKeyItem("keyAlias1",
-                HuksOptions(properties:[HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
-                    inData:Bytes()))
+                HuksOptions(properties: [HuksParam(HuksTag.HUKS_TAG_AE_TAG, HuksParamValue.BooleanValue(true))],
+                    inData: Bytes()))
             @Assert(chains.isEmpty(), false)
             deleteKeyItem("keyAlias1", HuksOptions())
             @Expect("assertion#549: not throw", "would throw exception")
@@ -968,6 +977,4 @@ class testAnonAttestKeyItem_1 {
         }
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_83 ends.")
     }
-
-
 }

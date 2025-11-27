@@ -36,34 +36,32 @@ import ohos.multimedia.image.*
 import ohos.device_info.*
 
 let colors: Array<UInt8> = Array<UInt8>(96, repeat: 0)
-let pixelMap = createPixelMap(colors,
-    InitializationOptions(Size(4, 6), editable: true, pixelFormat: Rgba8888))
+let pixelMap = createPixelMap(colors, InitializationOptions(Size(4, 6), editable: true, pixelFormat: Rgba8888))
 let imageSource = createImageSource(hw)
 let sourceOption = SourceOptions(0, sourcePixelFormat: Bgra8888)
 
 @Test
 class Test_image {
-    
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_0300
-    * @tc.name      : test_Packer_01
-    * @tc.desc      : test Image test_Packer_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_0300
+     * @tc.name      : test_Packer_01
+     * @tc.desc      : test Image test_Packer_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Packer_01(): Unit {
         let imagePacker = createImagePacker()
         let supportedFormats = imagePacker.supportedFormats
-        if (DeviceInfo.deviceType == "phone"){
+        if (DeviceInfo.deviceType == "phone") {
             @Expect(supportedFormats.toString(), "[image/gif, image/heic, image/jpeg, image/png, image/webp]")
         } else {
             @Expect(supportedFormats.toString(), "[image/gif, image/jpeg, image/png, image/webp]")
         }
-        Hilog.info(0, "cangjietest","supportedFormats.toString: ${supportedFormats.toString()}")
+        Hilog.info(0, "cangjietest", "supportedFormats.toString: ${supportedFormats.toString()}")
         unsafe {
             let format = "image/Jpeg"
             let packingOption = PackingOption(format, 98)
@@ -72,11 +70,8 @@ class Test_image {
             let packRes = imagePacker.packToData(pixelMap, packingOption)
             @Expect(packRes.size, 759)
             let filePath = "/data/storage/el1/base/temp.txt"
-            let file = FileIo.open(filePath, mode: (OpenMode
-                .CREATE
-                 | OpenMode
-                .READ_WRITE
-                ))
+            let file = FileIo.open(filePath, mode: (OpenMode.CREATE
+                | OpenMode.READ_WRITE))
             imagePacker.packToFile(pixelMap, Int32(file.fd), packingOption)
             FileIo.close(file)
             FileIo.unlink(filePath)
@@ -84,17 +79,16 @@ class Test_image {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_0400
-    * @tc.name      : test_Packer_02
-    * @tc.desc      : test Image test_Packer_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_0400
+     * @tc.name      : test_Packer_02
+     * @tc.desc      : test Image test_Packer_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Packer_02(): Unit {
         let imagePacker = createImagePacker()
         unsafe {
@@ -103,11 +97,8 @@ class Test_image {
             let packRes = imagePacker.packToData(imageSource, packingOption)
             @Expect(packRes.size>0)
             let filePath = "/data/storage/el1/base/temp.txt"
-            let file = FileIo.open(filePath, mode: (OpenMode
-                .CREATE
-                 | OpenMode
-                .READ_WRITE
-                ))
+            let file = FileIo.open(filePath, mode: (OpenMode.CREATE
+                | OpenMode.READ_WRITE))
             imagePacker.packToFile(imageSource, Int32(file.fd), packingOption)
             FileIo.close(file)
             FileIo.unlink(filePath)
@@ -115,17 +106,16 @@ class Test_image {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_0500
-    * @tc.name      : test_ImageReceive
-    * @tc.desc      : test Image test_ImageReceive
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_0500
+     * @tc.name      : test_ImageReceive
+     * @tc.desc      : test Image test_ImageReceive
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageReceive(): Unit {
         let imageReceiver = createImageReceiver(Size(8192, 8), ImageFormat.Jpeg, 8)
         @Expect(imageReceiver.size.width, 8)
@@ -137,17 +127,16 @@ class Test_image {
         imageReceiver.release()
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_0600
-    * @tc.name      : test_ImageReceive_exception
-    * @tc.desc      : test Image test_ImageReceive_exception
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_0600
+     * @tc.name      : test_ImageReceive_exception
+     * @tc.desc      : test Image test_ImageReceive_exception
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageReceive_exception(): Unit {
         try {
             let imageReceiver = createImageReceiver(Size(-1, -1), ImageFormat.Jpeg, 8)
@@ -156,17 +145,16 @@ class Test_image {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_0700
-    * @tc.name      : test_PixelMap_01
-    * @tc.desc      : test Image test_PixelMap_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_0700
+     * @tc.name      : test_PixelMap_01
+     * @tc.desc      : test Image test_PixelMap_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_01(): Unit {
         @Expect(pixelMap.isEditable, true)
         @Expect(pixelMap.isStrideAlignment, false)
@@ -194,46 +182,44 @@ class Test_image {
         pixelMap.release()
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_0800
-    * @tc.name      : test_ImageSource_01
-    * @tc.desc      : test Image test_ImageSource_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_0800
+     * @tc.name      : test_ImageSource_01
+     * @tc.desc      : test Image test_ImageSource_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_01(): Unit {
-        if (DeviceInfo.deviceType == "phone"){
-            @Expect(imageSource.supportedFormats.toString(), "[image/bmp, image/gif, image/heic, image/jpeg, image/png, image/svg+xml, image/webp, image/x-adobe-dng, image/x-icon]")
+        if (DeviceInfo.deviceType == "phone") {
+            @Expect(imageSource.supportedFormats.toString(), "[image/bmp, image/gif, image/heic, image/jpeg, image/png, image/svg+xml, image/wbmp, image/webp, image/x-adobe-dng, image/x-icon]")
         } else {
             @Expect(imageSource.supportedFormats.toString(), "[image/bmp, image/gif, image/jpeg, image/png, image/svg+xml, image/webp, image/x-adobe-dng, image/x-icon]")
         }
 
-        Hilog.info(0, "cangjietest","imageSource.supportedFormats :${imageSource.supportedFormats.toString()}")
+        Hilog.info(0, "cangjietest", "imageSource.supportedFormats :${imageSource.supportedFormats.toString()}")
         @Expect(imageSource.getFrameCount(), 1)
         let imageInfo = imageSource.getImageInfo()
         @Expect(imageInfo.size.width, 200)
         @Expect(imageInfo.size.height, 200)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_0900
-    * @tc.name      : test_PixelMap_02
-    * @tc.desc      : test Image test_PixelMap_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_0900
+     * @tc.name      : test_PixelMap_02
+     * @tc.desc      : test Image test_PixelMap_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PixelMap_02(): Unit {
         let pMap = imageSource.createPixelMap()
         let imageInfo = pMap.getImageInfo()
-        Hilog.error(0, "cangjietest","ohos density is ${imageInfo.density}")
+        Hilog.error(0, "cangjietest", "ohos density is ${imageInfo.density}")
         @Expect(imageInfo.size.width, 200)
         @Expect(imageInfo.size.height, 200)
         @Expect(imageInfo.density, 0)
@@ -260,17 +246,16 @@ class Test_image {
         imageSource.release()
     }
 
-
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_1100
-    * @tc.name      : test_ImageSource_03
-    * @tc.desc      : test Image test_ImageSource_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_1100
+     * @tc.name      : test_ImageSource_03
+     * @tc.desc      : test Image test_ImageSource_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_03(): Unit {
         let bufSource = createImageSource(hw, sourceOption)
         let maps = bufSource.createPixelMapList()
@@ -288,23 +273,22 @@ class Test_image {
         try {
             bufSource.getDelayTimeList()
         } catch (e: BusinessException) {
-            Hilog.error(0, "cangjietest","${e.message}")
+            Hilog.error(0, "cangjietest", "${e.message}")
             @Expect(e.message, "Invalid MIME type for the image source.")
         }
         bufSource.release()
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_1200
-    * @tc.name      : test_Exception_01
-    * @tc.desc      : test Image test_Exception_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_1200
+     * @tc.name      : test_Exception_01
+     * @tc.desc      : test Image test_Exception_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Exception_01(): Unit {
         try {
             createImageSource("")
@@ -313,17 +297,16 @@ class Test_image {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_1300
-    * @tc.name      : test_Exception_02
-    * @tc.desc      : test Image test_Exception_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_1300
+     * @tc.name      : test_Exception_02
+     * @tc.desc      : test Image test_Exception_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Exception_02(): Unit {
         try {
             createImageSource("", sourceOption)
@@ -332,17 +315,16 @@ class Test_image {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_1400
-    * @tc.name      : test_Exception_03
-    * @tc.desc      : test Image test_Exception_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_1400
+     * @tc.name      : test_Exception_03
+     * @tc.desc      : test Image test_Exception_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Exception_03(): Unit {
         try {
             createImageSource([])
@@ -351,17 +333,16 @@ class Test_image {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_1500
-    * @tc.name      : test_Exception_04
-    * @tc.desc      : test Image test_Exception_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_1500
+     * @tc.name      : test_Exception_04
+     * @tc.desc      : test Image test_Exception_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Exception_04(): Unit {
         try {
             createImageSource([], sourceOption)
@@ -370,17 +351,16 @@ class Test_image {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_1600
-    * @tc.name      : test_Exception_05
-    * @tc.desc      : test Image test_Exception_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_1600
+     * @tc.name      : test_Exception_05
+     * @tc.desc      : test Image test_Exception_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Exception_05(): Unit {
         try {
             createImageSource(0)
@@ -389,17 +369,16 @@ class Test_image {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_1700
-    * @tc.name      : test_Exception_06
-    * @tc.desc      : test Image test_Exception_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_1700
+     * @tc.name      : test_Exception_06
+     * @tc.desc      : test Image test_Exception_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Exception_06(): Unit {
         try {
             createImageSource(0, sourceOption)
@@ -407,17 +386,17 @@ class Test_image {
             @Expect(e.message, "Invalid image parameter.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_1800
-    * @tc.name      : test_PropertyKey
-    * @tc.desc      : test Image test_PropertyKey
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_1800
+     * @tc.name      : test_PropertyKey
+     * @tc.desc      : test Image test_PropertyKey
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PropertyKey(): Unit {
         @Expect(ImageWidth.toString(), "ImageWidth")
         @Expect(ImageLength.toString(), "ImageLength")
@@ -469,20 +448,18 @@ class Test_image {
         @Expect(SceneType.toString(), "SceneType")
         @Expect(WhiteBalance.toString(), "WhiteBalance")
         @Expect(FocalLengthIn35mmFilm.toString(), "FocalLengthIn35mmFilm")
-
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_1900
-    * @tc.name      : test_Enum_03
-    * @tc.desc      : test Image test_Enum_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_1900
+     * @tc.name      : test_Enum_03
+     * @tc.desc      : test Image test_Enum_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Enum_03(): Unit {
         @Expect(PixelMapFormat.Unknown, PixelMapFormat.Unknown)
         @Expect(Rgb565, Rgb565)
@@ -507,33 +484,31 @@ class Test_image {
         @Expect(ComponentType.Jpeg, ComponentType.Jpeg)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_2300
-    * @tc.name      : test_PackingDynamicRange
-    * @tc.desc      : test Image test_PackingDynamicRange
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_2300
+     * @tc.name      : test_PackingDynamicRange
+     * @tc.desc      : test Image test_PackingDynamicRange
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PackingDynamicRange(): Unit {
         @Expect(PackingDynamicRange.Auto, PackingDynamicRange.Auto)
         @Expect(PackingDynamicRange.Sdr, PackingDynamicRange.Sdr)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_2500
-    * @tc.name      : test_ImageSource_getDisposalTypeList
-    * @tc.desc      : test Image test_ImageSource_getDisposalTypeList
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_2500
+     * @tc.name      : test_ImageSource_getDisposalTypeList
+     * @tc.desc      : test Image test_ImageSource_getDisposalTypeList
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_getDisposalTypeList(): Unit {
         try {
             let imagesource = createImageSource("/data/storage/el1/base/test1.gif")
@@ -544,17 +519,17 @@ class Test_image {
             @Expect(e.message, "The image source data is abnormal.")
         }
     }
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_2600
-    * @tc.name      : test_ImageSource_PropertyKey
-    * @tc.desc      : test Image test_ImageSource_PropertyKey
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_2600
+     * @tc.name      : test_ImageSource_PropertyKey
+     * @tc.desc      : test Image test_ImageSource_PropertyKey
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImageSource_PropertyKey(): Unit {
         try {
             let imagesource = createImageSource("/data/storage/el1/base/test1.jpg")
@@ -571,18 +546,16 @@ class Test_image {
         }
     }
 
-    
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_2800
-    * @tc.name      : test_createPixelMap
-    * @tc.desc      : test Image test_createPixelMap
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_2800
+     * @tc.name      : test_createPixelMap
+     * @tc.desc      : test Image test_createPixelMap
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPixelMap(): Unit {
         let opts = InitializationOptions(Size(4, 6), editable: true, pixelFormat: Rgba8888)
         let pixelMap = createPixelMap(colors, opts)
@@ -593,17 +566,16 @@ class Test_image {
         @Expect(info.size.width, 6)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_2900
-    * @tc.name      : test_createPremultipliedPixelMap
-    * @tc.desc      : test Image test_createPremultipliedPixelMap
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_2900
+     * @tc.name      : test_createPremultipliedPixelMap
+     * @tc.desc      : test Image test_createPremultipliedPixelMap
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createPremultipliedPixelMap(): Unit {
         let color = Array<UInt8>(16, repeat: 0)
         for (i in 0..16 : 4) {
@@ -612,23 +584,21 @@ class Test_image {
             color[i + 2] = 122
             color[i + 3] = 122
         }
-        let opts = InitializationOptions(Size(2, 2), editable: true, pixelFormat: Rgba8888,
-            alphaType: UnPremul)
+        let opts = InitializationOptions(Size(2, 2), editable: true, pixelFormat: Rgba8888, alphaType: UnPremul)
         let srcPixelmap = createPixelMap(color, opts)
         let dstPixelMap = createPixelMap(color, opts)
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_3000
-    * @tc.name      : test_createUnPremultipliedPixelMap
-    * @tc.desc      : test Image test_createUnPremultipliedPixelMap
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_3000
+     * @tc.name      : test_createUnPremultipliedPixelMap
+     * @tc.desc      : test Image test_createUnPremultipliedPixelMap
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createUnPremultipliedPixelMap(): Unit {
         let color = Array<UInt8>(16, repeat: 0)
         for (i in 0..16 : 4) {
@@ -637,23 +607,20 @@ class Test_image {
             color[i + 2] = 122
             color[i + 3] = 122
         }
-        let opts = InitializationOptions(Size(2, 2), editable: true, pixelFormat: Rgba8888,
-            alphaType: Premul)
+        let opts = InitializationOptions(Size(2, 2), editable: true, pixelFormat: Rgba8888, alphaType: Premul)
         let srcPixelmap = createPixelMap(color, opts)
     }
 
-
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_image_3200
-    * @tc.name      : test_createImageSource_rawfd
-    * @tc.desc      : test Image test_createImageSource_rawfd
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_image_3200
+     * @tc.name      : test_createImageSource_rawfd
+     * @tc.desc      : test Image test_createImageSource_rawfd
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createImageSource_rawfd(): Unit {
         let resMgr = getResourceManager()
         let jpg = resMgr.getRawFd("test.jpg")

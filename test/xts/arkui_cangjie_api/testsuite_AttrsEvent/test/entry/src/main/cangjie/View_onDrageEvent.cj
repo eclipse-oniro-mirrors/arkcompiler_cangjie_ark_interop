@@ -18,7 +18,7 @@ package ohos_app_cangjie_entry
 import kit.PerformanceAnalysisKit.Hilog
 import std.unittest.testmacro.*
 import ohos.ui_test.*
-import ohos.base.{LengthProp, Length, Color, LengthType}
+import ohos.base.{LengthProp, Length, Color}
 import ohos.arkui.component.*
 import ohos.arkui.state_management.*
 import ohos.arkui.state_macro_manage.*
@@ -127,8 +127,8 @@ class View_onDrageEvent {
                                 {
                                     evt =>
                                     Hilog.info(0,"", "cangjietest",
-                                        "onDragStart info:" + evt.extraParams + "," + evt.touchPoint.x.value.toString() + "," +
-                                            evt.touchPoint.y.value.toString())
+                                        "onDragStart info:" + evt.extraParams + "," + evt.touchPoint.x.getOrThrow().value.toString() + "," +
+                                            evt.touchPoint.y.getOrThrow().value.toString())
                                     this.onDragStart_info = "onDragStart"
                                 }
                             )
@@ -138,13 +138,13 @@ class View_onDrageEvent {
                     .height(50.percent)
                     .width(90.percent)
                     .border(width: 1.px)
-                    .divider(strokeWidth: 2.px, color: Color.Red, startMargin: 20.px, endMargin: 20.px)
+                    .divider(ListDividerOptions(strokeWidth: 2.px, color: Color.Red, startMargin: 20.px, endMargin: 20.px))
                     .onDragEnter(
                         {
                             evt =>
                             Hilog.info(0,"", "cangjietest",
-                                "onDragEnter info:" + evt.extraParams + "," + evt.touchPoint.x.value.toString() + "," +
-                                    evt.touchPoint.y.value.toString())
+                                "onDragEnter info:" + evt.extraParams + "," + evt.touchPoint.x.getOrThrow().value.toString() + "," +
+                                    evt.touchPoint.y.getOrThrow().value.toString())
                             this.onDragEnter_info = "onDragEnter"
                         }
                     )
@@ -152,8 +152,8 @@ class View_onDrageEvent {
                         {
                             evt =>
                             Hilog.info(0,"", "cangjietest",
-                                "onDragMove info:" + evt.extraParams + "," + evt.touchPoint.x.value.toString() + "," +
-                                    evt.touchPoint.y.value.toString())
+                                "onDragMove info:" + evt.extraParams + "," + evt.touchPoint.x.getOrThrow().value.toString() + "," +
+                                    evt.touchPoint.y.getOrThrow().value.toString())
                             this.onDragMove_info = "onDragMove"
                         }
                     )
@@ -161,8 +161,8 @@ class View_onDrageEvent {
                         {
                             evt =>
                             Hilog.info(0,"", "cangjietest",
-                                "onDragLeave info:" + evt.extraParams + "," + evt.touchPoint.x.value.toString() + "," +
-                                    evt.touchPoint.y.value.toString())
+                                "onDragLeave info:" + evt.extraParams + "," + evt.touchPoint.x.getOrThrow().value.toString() + "," +
+                                    evt.touchPoint.y.getOrThrow().value.toString())
                             this.onDragLeave_info = "onDragLeave"
                         }
                     )
@@ -170,8 +170,8 @@ class View_onDrageEvent {
                         {
                             evt =>
                             Hilog.info(0,"", "cangjietest",
-                                "onDrop info:" + evt.extraParams + "," + evt.touchPoint.x.value.toString() + "," +
-                                    evt.touchPoint.y.value.toString())
+                                "onDrop info:" + evt.extraParams + "," + evt.touchPoint.x.getOrThrow().value.toString() + "," +
+                                    evt.touchPoint.y.getOrThrow().value.toString())
                             this.onDrop_info = "onDrop"
                         }
                     )

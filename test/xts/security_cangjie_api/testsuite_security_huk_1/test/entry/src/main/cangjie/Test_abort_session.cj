@@ -28,38 +28,33 @@ import ohos.business_exception.BusinessException
 @Test
 class Test_SecurityHuks_AbortSession {
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_AbortSession_0100
-    * @tc.name      : test_abort
-    * @tc.desc      : test UniversalKeystoreKit abortSession
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_AbortSession_0100
+     * @tc.name      : test_abort
+     * @tc.desc      : test UniversalKeystoreKit abortSession
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_abort() {
         let keyAlias = "test_abort_session"
         clean(keyAlias)
         try {
             let plainText = "123456"
             let iv = "0011223344556677"
-            let options = HuksOptions(properties:
-                [
-
-                    HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32)),
-                    HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))
-                ]
-            )
-            let encOptions = HuksOptions(properties:
-                [
-
+            let options = HuksOptions(
+                properties: [HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32)),
+                    HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32))])
+            let encOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32)),
                     HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))
                 ],
-               inData: plainText.toArray()
+                inData: plainText.toArray()
             )
 
             generateKeyItem(keyAlias, options)
@@ -70,8 +65,7 @@ class Test_SecurityHuks_AbortSession {
             abortSession(handle, encOptions)
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-        finally {
+        } finally {
             clean(keyAlias)
         }
     }

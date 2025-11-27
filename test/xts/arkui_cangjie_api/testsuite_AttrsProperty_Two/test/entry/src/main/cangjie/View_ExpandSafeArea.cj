@@ -36,9 +36,9 @@ class View_ExpandSafeArea {
                 .expandSafeArea(types: [SafeAreaType.System, SafeAreaType.Keyboard], edges: [SafeAreaEdge.Bottom])
                 .id("Test_Column")
             Column() {
-                Button("Set caretPosition 1").onClick {ClickEvent =>
+                Button("Set caretPosition 1").onClick({ClickEvent =>
                     this.controller.caretPosition(1)
-                }
+                })
                 TextInput(controller: this.controller)
                     .placeholderFont(size: 14.px)
                     .width(320)

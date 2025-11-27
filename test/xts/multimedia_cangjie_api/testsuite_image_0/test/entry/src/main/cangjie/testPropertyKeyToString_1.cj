@@ -35,11 +35,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_1 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 begins.")
         @Expect(PropertyKey.BitsPerSample.toString(), "BitsPerSample")
-        Hilog.info(0, "cangjietest","testcase TestCase_1 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_1 ends.")
     }
 
     /*
@@ -51,11 +51,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_2 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 begins.")
         @Expect((PropertyKey.Orientation).toString(), "Orientation")
-        Hilog.info(0, "cangjietest","testcase TestCase_2 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_2 ends.")
     }
 
     /*
@@ -67,11 +67,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_3 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 begins.")
         @Expect(PropertyKey.ImageLength.toString(), "ImageLength")
-        Hilog.info(0, "cangjietest","testcase TestCase_3 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_3 ends.")
     }
 
     /*
@@ -83,11 +83,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_4 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 begins.")
         @Expect(PropertyKey.ImageWidth.toString(), "ImageWidth")
-        Hilog.info(0, "cangjietest","testcase TestCase_4 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_4 ends.")
     }
 
     /*
@@ -99,11 +99,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_5 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 begins.")
         @Expect(PropertyKey.GpsLatitude.toString(), "GPSLatitude")
-        Hilog.info(0, "cangjietest","testcase TestCase_5 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_5 ends.")
     }
 
     /*
@@ -115,11 +115,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_6 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 begins.")
         @Expect(PropertyKey.GpsLongitude.toString(), "GPSLongitude")
-        Hilog.info(0, "cangjietest","testcase TestCase_6 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_6 ends.")
     }
 
     /*
@@ -131,11 +131,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_7 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 begins.")
         @Expect((PropertyKey.GpsLatitudeRef).toString(), "GPSLatitudeRef")
-        Hilog.info(0, "cangjietest","testcase TestCase_7 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_7 ends.")
     }
 
     /*
@@ -147,11 +147,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_8 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 begins.")
         @Expect(PropertyKey.GpsLatitudeRef.toString(), "GPSLatitudeRef")
-        Hilog.info(0, "cangjietest","testcase TestCase_8 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_8 ends.")
     }
 
     /*
@@ -163,11 +163,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_9 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 begins.")
         @Expect(PropertyKey.DateTimeOriginal.toString(), "DateTimeOriginal")
-        Hilog.info(0, "cangjietest","testcase TestCase_9 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_9 ends.")
     }
 
     /*
@@ -179,11 +179,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_10 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 begins.")
         @Expect(PropertyKey.ExposureTime.toString(), "ExposureTime")
-        Hilog.info(0, "cangjietest","testcase TestCase_10 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_10 ends.")
     }
 
     /*
@@ -195,11 +195,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_11 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 begins.")
         @Expect(PropertyKey.SceneType.toString(), "SceneType")
-        Hilog.info(0, "cangjietest","testcase TestCase_11 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_11 ends.")
     }
 
     /*
@@ -211,11 +211,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_12 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 begins.")
         @Expect(PropertyKey.IsoSpeedRatings.toString(), "ISOSpeedRatings")
-        Hilog.info(0, "cangjietest","testcase TestCase_12 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_12 ends.")
     }
 
     /*
@@ -227,11 +227,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_13 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_13 begins.")
         @Expect(PropertyKey.FNumber.toString(), "FNumber")
-        Hilog.info(0, "cangjietest","testcase TestCase_13 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_13 ends.")
     }
 
     /*
@@ -243,11 +243,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_14 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_14 begins.")
         @Expect(PropertyKey.DateTime.toString(), "DateTime")
-        Hilog.info(0, "cangjietest","testcase TestCase_14 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_14 ends.")
     }
 
     /*
@@ -259,11 +259,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_15 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_15 begins.")
         @Expect(PropertyKey.GpsTimeStamp.toString(), "GPSTimeStamp")
-        Hilog.info(0, "cangjietest","testcase TestCase_15 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_15 ends.")
     }
 
     /*
@@ -275,11 +275,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_16 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 begins.")
         @Expect(PropertyKey.GpsDateStamp.toString(), "GPSDateStamp")
-        Hilog.info(0, "cangjietest","testcase TestCase_16 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_16 ends.")
     }
 
     /*
@@ -291,11 +291,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_17 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 begins.")
         @Expect(PropertyKey.ImageDescription.toString(), "ImageDescription")
-        Hilog.info(0, "cangjietest","testcase TestCase_17 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_17 ends.")
     }
 
     /*
@@ -307,11 +307,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_18 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 begins.")
         @Expect(PropertyKey.Make.toString(), "Make")
-        Hilog.info(0, "cangjietest","testcase TestCase_18 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_18 ends.")
     }
 
     /*
@@ -323,11 +323,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_19 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_19 begins.")
         @Expect(PropertyKey.Model.toString(), "Model")
-        Hilog.info(0, "cangjietest","testcase TestCase_19 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_19 ends.")
     }
 
     /*
@@ -339,11 +339,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_20 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_20 begins.")
         @Expect(PropertyKey.PhotoMode.toString(), "PhotoMode")
-        Hilog.info(0, "cangjietest","testcase TestCase_20 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_20 ends.")
     }
 
     /*
@@ -355,11 +355,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_21 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_21 begins.")
         @Expect(PropertyKey.SensitivityType.toString(), "SensitivityType")
-        Hilog.info(0, "cangjietest","testcase TestCase_21 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_21 ends.")
     }
 
     /*
@@ -371,11 +371,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_22 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 begins.")
         @Expect(PropertyKey.StandardOutputSensitivity.toString(), "StandardOutputSensitivity")
-        Hilog.info(0, "cangjietest","testcase TestCase_22 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_22 ends.")
     }
 
     /*
@@ -387,11 +387,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_23 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 begins.")
         @Expect(PropertyKey.RecommendedExposureIndex.toString(), "RecommendedExposureIndex")
-        Hilog.info(0, "cangjietest","testcase TestCase_23 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_23 ends.")
     }
 
     /*
@@ -403,11 +403,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_24 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 begins.")
         @Expect(PropertyKey.IsoSpeed.toString(), "ISOSpeedRatings")
-        Hilog.info(0, "cangjietest","testcase TestCase_24 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_24 ends.")
     }
 
     /*
@@ -419,11 +419,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_25 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_25 begins.")
         @Expect(PropertyKey.ApertureValue.toString(), "ApertureValue")
-        Hilog.info(0, "cangjietest","testcase TestCase_25 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_25 ends.")
     }
 
     /*
@@ -435,11 +435,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_26 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 begins.")
         @Expect(PropertyKey.ExposureBiasValue.toString(), "ExposureBiasValue")
-        Hilog.info(0, "cangjietest","testcase TestCase_26 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_26 ends.")
     }
 
     /*
@@ -451,11 +451,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_27 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 begins.")
         @Expect(PropertyKey.MeteringMode.toString(), "MeteringMode")
-        Hilog.info(0, "cangjietest","testcase TestCase_27 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_27 ends.")
     }
 
     /*
@@ -467,11 +467,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_28 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 begins.")
         @Expect(PropertyKey.LightSource.toString(), "LightSource")
-        Hilog.info(0, "cangjietest","testcase TestCase_28 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_28 ends.")
     }
 
     /*
@@ -483,11 +483,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_29 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 begins.")
         @Expect(PropertyKey.Flash.toString(), "Flash")
-        Hilog.info(0, "cangjietest","testcase TestCase_29 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_29 ends.")
     }
 
     /*
@@ -499,11 +499,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_30 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 begins.")
         @Expect(PropertyKey.FocalLength.toString(), "FocalLength")
-        Hilog.info(0, "cangjietest","testcase TestCase_30 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_30 ends.")
     }
 
     /*
@@ -515,11 +515,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_31(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_31 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_31 begins.")
         @Expect(PropertyKey.UserComment.toString(), "UserComment")
-        Hilog.info(0, "cangjietest","testcase TestCase_31 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_31 ends.")
     }
 
     /*
@@ -531,11 +531,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_32(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_32 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_32 begins.")
         @Expect(PropertyKey.PixelXDimension.toString(), "PixelXDimension")
-        Hilog.info(0, "cangjietest","testcase TestCase_32 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_32 ends.")
     }
 
     /*
@@ -547,11 +547,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_33(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_33 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_33 begins.")
         @Expect(PropertyKey.PixelYDimension.toString(), "PixelYDimension")
-        Hilog.info(0, "cangjietest","testcase TestCase_33 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_33 ends.")
     }
 
     /*
@@ -563,11 +563,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_34(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_34 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 begins.")
         @Expect(PropertyKey.WhiteBalance.toString(), "WhiteBalance")
-        Hilog.info(0, "cangjietest","testcase TestCase_34 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_34 ends.")
     }
 
     /*
@@ -579,11 +579,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_35(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_35 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 begins.")
         @Expect(PropertyKey.FocalLengthIn35mmFilm.toString(), "FocalLengthIn35mmFilm")
-        Hilog.info(0, "cangjietest","testcase TestCase_35 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_35 ends.")
     }
 
     /*
@@ -595,11 +595,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_36(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_36 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 begins.")
         @Expect(PropertyKey.CaptureMode.toString(), "HwMnoteCaptureMode")
-        Hilog.info(0, "cangjietest","testcase TestCase_36 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_36 ends.")
     }
 
     /*
@@ -611,11 +611,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_37(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_37 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_37 begins.")
         @Expect(PropertyKey.PhysicalAperture.toString(), "HwMnotePhysicalAperture")
-        Hilog.info(0, "cangjietest","testcase TestCase_37 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_37 ends.")
     }
 
     /*
@@ -627,11 +627,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_38(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_38 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_38 begins.")
         @Expect(PropertyKey.RollAngle.toString(), "HwMnoteRollAngle")
-        Hilog.info(0, "cangjietest","testcase TestCase_38 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_38 ends.")
     }
 
     /*
@@ -643,11 +643,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_39(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_39 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_39 begins.")
         @Expect(PropertyKey.PitchAngle.toString(), "HwMnotePitchAngle")
-        Hilog.info(0, "cangjietest","testcase TestCase_39 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_39 ends.")
     }
 
     /*
@@ -659,11 +659,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_40(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_40 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 begins.")
         @Expect(PropertyKey.SceneFoodConf.toString(), "HwMnoteSceneFoodConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_40 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_40 ends.")
     }
 
     /*
@@ -675,11 +675,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_41(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_41 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 begins.")
         @Expect(PropertyKey.SceneStageConf.toString(), "HwMnoteSceneStageConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_41 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_41 ends.")
     }
 
     /*
@@ -691,11 +691,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_42(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_42 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 begins.")
         @Expect(PropertyKey.SceneBlueSkyConf.toString(), "HwMnoteSceneBlueSkyConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_42 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_42 ends.")
     }
 
     /*
@@ -707,11 +707,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_43(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_43 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_43 begins.")
         @Expect(PropertyKey.SceneGreenPlantConf.toString(), "HwMnoteSceneGreenPlantConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_43 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_43 ends.")
     }
 
     /*
@@ -723,11 +723,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_44(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_44 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_44 begins.")
         @Expect(PropertyKey.SceneBeachConf.toString(), "HwMnoteSceneBeachConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_44 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_44 ends.")
     }
 
     /*
@@ -739,11 +739,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_45(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_45 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_45 begins.")
         @Expect(PropertyKey.SceneSnowConf.toString(), "HwMnoteSceneSnowConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_45 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_45 ends.")
     }
 
     /*
@@ -755,11 +755,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_46(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_46 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 begins.")
         @Expect(PropertyKey.SceneSunsetConf.toString(), "HwMnoteSceneSunsetConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_46 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_46 ends.")
     }
 
     /*
@@ -771,11 +771,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_47(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_47 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 begins.")
         @Expect(PropertyKey.SceneFlowersConf.toString(), "HwMnoteSceneFlowersConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_47 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_47 ends.")
     }
 
     /*
@@ -787,11 +787,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_48(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_48 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 begins.")
         @Expect(PropertyKey.SceneNightConf.toString(), "HwMnoteSceneNightConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_48 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_48 ends.")
     }
 
     /*
@@ -803,11 +803,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_49(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_49 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_49 begins.")
         @Expect(PropertyKey.SceneTextConf.toString(), "HwMnoteSceneTextConf")
-        Hilog.info(0, "cangjietest","testcase TestCase_49 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_49 ends.")
     }
 
     /*
@@ -819,11 +819,11 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_50(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_50 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_50 begins.")
         @Expect(PropertyKey.FaceCount.toString(), "HwMnoteFaceCount")
-        Hilog.info(0, "cangjietest","testcase TestCase_50 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_50 ends.")
     }
 
     /*
@@ -835,10 +835,10 @@ class testPropertyKeyToString_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_51(): Unit {
-        Hilog.info(0, "cangjietest","testcase TestCase_51 begins.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_51 begins.")
         @Expect(PropertyKey.FocusMode.toString(), "HwMnoteFocusMode")
-        Hilog.info(0, "cangjietest","testcase TestCase_51 ends.")
+        Hilog.info(0, "cangjietest", "testcase TestCase_51 ends.")
     }
 }

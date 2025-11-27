@@ -24,17 +24,17 @@ import std.posix.*
 
 @Test
 class Test_ImagePacker_05 {
-    
+
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0100
-    * @tc.name      : test_createImagePacker_01
-    * @tc.desc      : test Image test_createImagePacker_01
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0100
+     * @tc.name      : test_createImagePacker_01
+     * @tc.desc      : test Image test_createImagePacker_01
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_createImagePacker_01(): Unit {
         var globalPacker: ImagePacker
 
@@ -46,17 +46,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0200
-    * @tc.name      : test_packing_02
-    * @tc.desc      : test Image test_packing_02
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0200
+     * @tc.name      : test_packing_02
+     * @tc.desc      : test Image test_packing_02
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packing_02(): Unit {
         var globalPacker: ImagePacker
         var globalPixelMap: PixelMap
@@ -75,17 +74,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0300
-    * @tc.name      : test_packing_03
-    * @tc.desc      : test Image test_packing_03
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0300
+     * @tc.name      : test_packing_03
+     * @tc.desc      : test Image test_packing_03
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packing_03(): Unit {
         var globalPacker: ImagePacker
         var globalPixelMap: PixelMap
@@ -104,17 +102,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0400
-    * @tc.name      : test_packing_04
-    * @tc.desc      : test Image test_packing_04
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0400
+     * @tc.name      : test_packing_04
+     * @tc.desc      : test Image test_packing_04
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packing_04(): Unit {
         var globalPacker: ImagePacker
         var globalPixelMap: PixelMap
@@ -132,17 +129,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0500
-    * @tc.name      : test_packing_05
-    * @tc.desc      : test Image test_packing_05
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0500
+     * @tc.name      : test_packing_05
+     * @tc.desc      : test Image test_packing_05
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packing_05(): Unit {
         var globalPacker: ImagePacker
         var globalPixelMap: PixelMap
@@ -160,17 +156,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0600
-    * @tc.name      : test_packing_06
-    * @tc.desc      : test Image test_packing_06
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0600
+     * @tc.name      : test_packing_06
+     * @tc.desc      : test Image test_packing_06
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packing_06(): Unit {
         var globalPacker: ImagePacker
         var globalPixelMap: PixelMap
@@ -189,17 +184,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0700
-    * @tc.name      : test_packing_07
-    * @tc.desc      : test Image test_packing_07
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0700
+     * @tc.name      : test_packing_07
+     * @tc.desc      : test Image test_packing_07
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packing_07(): Unit {
         var globalPacker: ImagePacker
         var globalPixelMap: PixelMap
@@ -218,17 +212,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0800
-    * @tc.name      : test_packing_08
-    * @tc.desc      : test Image test_packing_08
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0800
+     * @tc.name      : test_packing_08
+     * @tc.desc      : test Image test_packing_08
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packing_08(): Unit {
         var globalPacker: ImagePacker
         var globalPixelMap: PixelMap
@@ -246,17 +239,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0900
-    * @tc.name      : test_packing_09
-    * @tc.desc      : test Image test_packing_09
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_0900
+     * @tc.name      : test_packing_09
+     * @tc.desc      : test Image test_packing_09
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packing_09(): Unit {
         var globalPacker: ImagePacker
         var globalPixelMap: PixelMap
@@ -275,17 +267,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1000
-    * @tc.name      : test_packing_10
-    * @tc.desc      : test Image test_packing_10
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1000
+     * @tc.name      : test_packing_10
+     * @tc.desc      : test Image test_packing_10
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_packing_10(): Unit {
         var globalPacker: ImagePacker
         var globalImageSource: ImageSource
@@ -301,17 +292,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1100
-    * @tc.name      : test_PackToFile_11
-    * @tc.desc      : test Image test_PackToFile_11
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1100
+     * @tc.name      : test_PackToFile_11
+     * @tc.desc      : test Image test_PackToFile_11
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PackToFile_11(): Unit {
         var globalPacker: ImagePacker
         var globalPixelMap: PixelMap
@@ -331,17 +321,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1200
-    * @tc.name      : test_PackToFile_12
-    * @tc.desc      : test Image test_PackToFile_12
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1200
+     * @tc.name      : test_PackToFile_12
+     * @tc.desc      : test Image test_PackToFile_12
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PackToFile_12(): Unit {
         var globalPacker: ImagePacker
         var globalImageSource: ImageSource
@@ -360,17 +349,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1300
-    * @tc.name      : test_PackToFile_13
-    * @tc.desc      : test Image test_PackToFile_13
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1300
+     * @tc.name      : test_PackToFile_13
+     * @tc.desc      : test Image test_PackToFile_13
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_PackToFile_13(): Unit {
         var globalPacker: ImagePacker
         var globalImageSource: ImageSource
@@ -389,17 +377,16 @@ class Test_ImagePacker_05 {
         }
     }
 
-    
     /*
-    * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1400
-    * @tc.name      : test_ImagePacker_release_14
-    * @tc.desc      : test Image test_ImagePacker_release_14
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_Image_Test_ImagePacker_05_1400
+     * @tc.name      : test_ImagePacker_release_14
+     * @tc.desc      : test Image test_ImagePacker_release_14
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ImagePacker_release_14(): Unit {
         var globalPacker: ImagePacker
 

@@ -15,14 +15,14 @@
 
 package ohos_app_cangjie_entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, 
-    JSRuntime}
+import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
 let _ = JSModule.registerModule {
     jsContext: JSContext, jsObject: JSObject => jsObject["testExternal00"] = jsContext
         .function(test_external_00)
         .toJSValue()
 }
+
 class MyObject_test_external_00 <: SharedObject {
     var name: String
     var age: Int64

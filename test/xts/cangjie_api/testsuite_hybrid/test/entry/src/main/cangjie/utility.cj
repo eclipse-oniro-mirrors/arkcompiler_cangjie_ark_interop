@@ -144,17 +144,15 @@ approxEquals16(expected =${expected.format(".10e")},
             if (check(e)) {
                 return
             }
-            let exceptionMessage = e
-                .toString()
-                .lazySplit("\n")
-                .next() ?? ""
+            let exceptionMessage = e.toString().lazySplit("\n").next() ?? ""
             let reasonStr = if (reason.isEmpty()) {
                 ""
             } else {
                 " Reason: '${reason}'"
             }
             throw AssertException(
-                "Assertion 'throws' failed: the exception with the message '${exceptionMessage}' is not what was expected.${reasonStr}")
+                "Assertion 'throws' failed: the exception with the message '${exceptionMessage}' is not what was expected.${reasonStr}"
+            )
         }
         fail("throws", reason)
     }

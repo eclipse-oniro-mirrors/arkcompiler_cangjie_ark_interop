@@ -36,7 +36,7 @@ class testFileIo_copyDir_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_copyDir_01() {
         let dpath = "/data/storage/el1/base/test_copyDir_01"
         let ddpath = dpath + "/srcDir_first"

@@ -38,7 +38,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_AlphabetIndexer_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin AlphabetIndexer")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Blank_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Blank")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Button_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Button")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Checkbox_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Checkbox")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_CheckboxGroup_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin CheckboxGroup")
@@ -163,7 +163,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_DataPanel_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin DataPanel")
@@ -188,7 +188,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_DatePicker_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin DatePicker")
@@ -213,7 +213,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Divider_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Divider")
@@ -238,7 +238,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Gauge_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Gauge")
@@ -263,7 +263,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Image_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Image")
@@ -288,7 +288,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_ImageSpan_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_ImageSpan_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin ImageSpan")
@@ -313,7 +313,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_LoadingProgress_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_LoadingProgress_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin LoadingProgress")
@@ -340,7 +340,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_MenuItem_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_MenuItem_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin MenuItem")
@@ -365,7 +365,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_MenuItemGroup_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_MenuItemGroup_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin MenuItemGroup")
@@ -390,7 +390,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Progress_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Progress_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Progress")
@@ -415,7 +415,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_QRCode_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_QRCode_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin QRCode")
@@ -440,7 +440,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Radio_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Radio_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Radio")
@@ -465,7 +465,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Rating_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Rating_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Rating")
@@ -490,7 +490,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Refresh_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Refresh_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Refresh")
@@ -515,7 +515,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_RichEditor_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_RichEditor_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin RichEditor")
@@ -540,7 +540,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_RichText_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_RichText_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin RichText")
@@ -565,7 +565,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_RowSplit_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_RowSplit_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin RowSplit")
@@ -590,7 +590,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_ScrollBar_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_ScrollBar_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin ScrollBar")
@@ -615,7 +615,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Search_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Search_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Search")
@@ -640,7 +640,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Slider_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Slider_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Slider")
@@ -665,7 +665,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Stepper_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Stepper_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Stepper")
@@ -690,7 +690,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_StepperItem_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_StepperItem_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin StepperItem")
@@ -715,7 +715,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Text_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Text_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Text")
@@ -740,7 +740,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_TextArea_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_TextArea_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin TextArea")
@@ -765,7 +765,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_TextClock_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_TextClock_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin TextClock")
@@ -790,7 +790,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_TextInput_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_TextInput_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin TextInput")
@@ -815,7 +815,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_TextPicker_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_TextPicker_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin TextPicker")
@@ -840,7 +840,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_TextTimer_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_TextTimer_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin TextTimer")
@@ -865,7 +865,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Toggle_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Toggle_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Toggle")
@@ -890,7 +890,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Web_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Web_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Web")
@@ -915,7 +915,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Select_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Select_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Select")
@@ -940,7 +940,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Badge_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Badge_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Badge")
@@ -965,7 +965,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Column_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Column_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Column")
@@ -990,7 +990,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Grid_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Grid_4100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Grid")
@@ -1015,7 +1015,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_GridItem_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_GridItem_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin GridItem")
@@ -1040,7 +1040,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_GridRow_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_GridRow_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin GridRow")
@@ -1065,7 +1065,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_GridCol_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_GridCol_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin GridCol")
@@ -1090,7 +1090,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Flex_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Flex_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Flex")
@@ -1115,7 +1115,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_List_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_List_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin List")
@@ -1140,7 +1140,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_ListItem_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_ListItem_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin ListItem")
@@ -1165,7 +1165,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_ListItemGroup_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_ListItemGroup_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin ListItemGroup")
@@ -1192,7 +1192,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_RelativeContainer_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_RelativeContainer_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin RelativeContainer")
@@ -1217,7 +1217,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Row_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Row_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Row")
@@ -1242,7 +1242,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Scroll_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Scroll_5200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Scroll")
@@ -1267,7 +1267,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Stack_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Stack_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Stack")
@@ -1292,7 +1292,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Swiper_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Swiper_5400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Swiper")
@@ -1317,7 +1317,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Tabs_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Tabs_5500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Tabs")
@@ -1342,7 +1342,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_TabContent_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_TabContent_5600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin TabContent")
@@ -1367,7 +1367,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Circle_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Circle_5700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Circle")
@@ -1392,7 +1392,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Line_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Line_5800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Line")
@@ -1417,7 +1417,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Rect_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Rect_5900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Rect")
@@ -1442,7 +1442,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Shape_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Shape_6000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Shape")
@@ -1467,7 +1467,7 @@ class Test_EmptyAttrs_Shadow {
      * @tc.desic：Empty_Path_Shadow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Shadow_Path_6200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckShadow: FindBegin Path")

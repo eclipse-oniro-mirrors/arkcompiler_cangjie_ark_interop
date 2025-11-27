@@ -38,7 +38,7 @@ class Test_EmptyAttrs_Align {
      * @tc.desic：Empty_Button_Align
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Align_Button_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckAlign: FindBegin Button")
@@ -66,7 +66,7 @@ class Test_EmptyAttrs_Align {
      * @tc.desic：Empty_StepperItem_Align
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Align_StepperItem_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckAlign: FindBegin StepperItem")
@@ -94,7 +94,7 @@ class Test_EmptyAttrs_Align {
      * @tc.desic：Empty_Text_Align
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Align_Text_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckAlign: FindBegin Text")
@@ -122,7 +122,7 @@ class Test_EmptyAttrs_Align {
      * @tc.desic：Empty_TextArea_Align
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Align_TextArea_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckAlign: FindBegin TextArea")
@@ -150,7 +150,7 @@ class Test_EmptyAttrs_Align {
      * @tc.desic：Empty_TextInput_Align
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Align_TextInput_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckAlign: FindBegin TextInput")
@@ -178,7 +178,7 @@ class Test_EmptyAttrs_Align {
      * @tc.desic：Empty_Stack_Align
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_Align_Stack_0600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "CheckCheckAlign: FindBegin Stack")

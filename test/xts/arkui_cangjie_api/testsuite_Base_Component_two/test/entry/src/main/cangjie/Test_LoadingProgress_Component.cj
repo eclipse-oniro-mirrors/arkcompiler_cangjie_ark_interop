@@ -49,7 +49,7 @@ class Test_LoadingProgress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LoadingProgress_Component_001() {
         Hilog.info(0, "","cangjietest", "[Test_LoadingProgress_Component_001] start")
         // 1、获取页面中id为checkboxBasis的组件信息
@@ -77,7 +77,7 @@ class Test_LoadingProgress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LoadingProgress_Component_002() {
         // 1、获取页面中id为checkboxBasis的组件信息
         let Inspector = getInspectorByKey("loadingProgressBasis2")
@@ -103,7 +103,7 @@ class Test_LoadingProgress_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_LoadingProgress_Component_003() {
         // 1、获取页面中id为checkboxBasis的组件信息
         let Inspector = getInspectorByKey("loadingProgressBasis3")

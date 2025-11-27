@@ -48,7 +48,7 @@ class Test_Divider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Divider_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_Divider_Component_001 start")
         let Inspector = getInspectorByKey("dividerbase")
@@ -72,7 +72,7 @@ class Test_Divider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Divider_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_Divider_Component_002 start")
         let Inspector = getInspectorByKey("dividerbase")
@@ -93,7 +93,7 @@ class Test_Divider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Divider_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_Divider_Component_003 start")
         let Inspector = getInspectorByKey("dividerbase")
@@ -114,7 +114,7 @@ class Test_Divider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Divider_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_Divider_Component_004 start")
         let Inspector = getInspectorByKey("dividerbase")
@@ -135,7 +135,7 @@ class Test_Divider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Divider_Component_005() {
         Hilog.info(0, "","cangjietest", "Test_Divider_Component_002 start")
         let Inspector = getInspectorByKey("dividerbase2")
@@ -155,7 +155,7 @@ class Test_Divider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Divider_Component_006() {
         Hilog.info(0, "","cangjietest", "Test_Divider_Component_002 start")
         let Inspector = getInspectorByKey("dividerbase3")
@@ -175,7 +175,7 @@ class Test_Divider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Divider_Component_007() {
         let Inspector = getInspectorByKey("dividerbase2")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -194,7 +194,7 @@ class Test_Divider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Divider_Component_008() {
         let Inspector = getInspectorByKey("dividerbase3")
         let obj = JsonValue.fromStr(Inspector).asObject()
@@ -213,7 +213,7 @@ class Test_Divider_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Divider_Component_009() {
         let Inspector = getInspectorByKey("dividerbase2")
         let obj = JsonValue.fromStr(Inspector).asObject()

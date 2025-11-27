@@ -35,7 +35,7 @@ class testExecuteShellCommand_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0,"cangjie","testcase TestCase_1 begins.")
         Hilog.info(0,"cangjie","define local variable result")
@@ -53,7 +53,7 @@ class testExecuteShellCommand_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0,"cangjie","testcase TestCase_2 begins.")
         Hilog.info(0,"cangjie","define local variable result")
@@ -71,7 +71,7 @@ class testExecuteShellCommand_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0,"cangjie","testcase TestCase_3 begins.")
         Hilog.info(0,"cangjie","define local variable result")
@@ -89,7 +89,7 @@ class testExecuteShellCommand_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0,"cangjie","testcase TestCase_4 begins.")
         Hilog.info(0,"cangjie","define local variable result")
@@ -107,7 +107,7 @@ class testExecuteShellCommand_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0,"cangjie","testcase TestCase_5 begins.")
         Hilog.info(0,"cangjie","define local variable result")
@@ -125,7 +125,7 @@ class testExecuteShellCommand_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0,"cangjie","testcase TestCase_6 begins.")
         Hilog.info(0,"cangjie","define local variable result")
@@ -145,7 +145,7 @@ class testExecuteShellCommand_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0,"cangjie","testcase TestCase_7 begins.")
         Hilog.info(0,"cangjie","define local variable result")

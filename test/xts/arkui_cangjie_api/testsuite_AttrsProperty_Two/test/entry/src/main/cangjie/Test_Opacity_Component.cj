@@ -48,7 +48,7 @@ class Test_Opacity_Component {
      * @tc.desic：flexGrow
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Opacity_0100_Component() {
         let Inspector = getInspectorByKey("Test_Text")
         let obj = JsonValue.fromStr(Inspector).asObject()

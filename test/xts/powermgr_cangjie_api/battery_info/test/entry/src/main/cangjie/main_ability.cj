@@ -18,7 +18,6 @@ package ohos_app_cangjie_entry
 import ohos.window.WindowStage
 import kit.AbilityKit.*
 
-
 class MainAbility <: UIAbility {
     public func onCreate(want: Want, launchParam: LaunchParam): Unit {
     }
@@ -46,5 +45,3 @@ public class Global {
         windowStage.getOrThrow()
     }
 }
-
-

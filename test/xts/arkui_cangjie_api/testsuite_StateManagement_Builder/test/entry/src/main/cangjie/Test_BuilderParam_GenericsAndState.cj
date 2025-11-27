@@ -48,7 +48,7 @@ class Test_BuilderParam_GenericsAndState {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_BuilderParam_GenericsAndState_0100() {
         Hilog.info(0,"", "cangjietest", "Test_BuilderParam_GenericsAndState_0100 Start")
         var BuilderParam_arr = driver.findComponents(On().id("TopLevelBuilder")).getOrThrow()

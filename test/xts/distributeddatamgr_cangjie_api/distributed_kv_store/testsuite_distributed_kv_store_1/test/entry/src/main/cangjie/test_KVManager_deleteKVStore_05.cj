@@ -36,7 +36,7 @@ class Test_KVManager_deleteKVStore_05 {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 
         func test_deletekvstore_01() {
         let context = getAbilityContext()

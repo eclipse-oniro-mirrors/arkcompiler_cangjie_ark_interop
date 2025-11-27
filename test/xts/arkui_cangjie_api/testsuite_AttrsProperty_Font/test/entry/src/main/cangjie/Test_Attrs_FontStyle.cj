@@ -38,7 +38,7 @@ class Test_EmptyAttrs_FontStyle {
      * @tc.desic：Empty_Button_FontStyle
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontStyle_Button_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontStyle: FindBegin Button")
@@ -63,7 +63,7 @@ class Test_EmptyAttrs_FontStyle {
      * @tc.desic：Empty_Text_FontStyle
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontStyle_Text_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontStyle: FindBegin Text")
@@ -88,7 +88,7 @@ class Test_EmptyAttrs_FontStyle {
      * @tc.desic：Empty_TextArea_FontStyle
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontStyle_TextArea_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontStyle: FindBegin TextArea")
@@ -113,7 +113,7 @@ class Test_EmptyAttrs_FontStyle {
      * @tc.desic：Empty_TextClock_FontStyle
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontStyle_TextClock_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontStyle: FindBegin TextClock")
@@ -138,7 +138,7 @@ class Test_EmptyAttrs_FontStyle {
      * @tc.desic：Empty_TextInput_FontStyle
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontStyle_TextInput_0600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontStyle: FindBegin TextInput")
@@ -163,7 +163,7 @@ class Test_EmptyAttrs_FontStyle {
      * @tc.desic：Empty_TextTimer_FontStyle
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontStyle_TextTimer_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontStyle: FindBegin TextTimer")

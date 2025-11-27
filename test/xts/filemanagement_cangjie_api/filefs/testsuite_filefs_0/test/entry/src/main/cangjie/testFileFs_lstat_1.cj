@@ -36,7 +36,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_01() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_01"
@@ -66,7 +66,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_02() {
         let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_02"
 
@@ -89,7 +89,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_03() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_03"
@@ -121,7 +121,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_04() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_04"
@@ -154,7 +154,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_05() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_05"
@@ -187,7 +187,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_06() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_06"
@@ -220,7 +220,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_07() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_07"
@@ -253,7 +253,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_08() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_08"
@@ -285,7 +285,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_09() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_09"
@@ -318,7 +318,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_10() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_10"
@@ -351,7 +351,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_isBlockDevice() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_isBlockDevice"
@@ -383,7 +383,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_isCharacterDevice() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_isCharacterDevice"
@@ -415,7 +415,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_isDirectory_01() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_isDirectory_01"
@@ -447,7 +447,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_isDirectory_02() {
         let dpath = "/data/storage/el2/base/haps/entry/files/file_lstat_isDirectory_02"
 
@@ -472,7 +472,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_isFIFO() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_isFIFO"
@@ -504,7 +504,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_isFile_01() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_isFile_01"
@@ -535,7 +535,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_isFile_02() {
         let dpath = "/data/storage/el2/base/haps/entry/files/file_lstat_isFile_02"
 
@@ -560,7 +560,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_isSocket() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_isSocket"
@@ -592,7 +592,7 @@ class testFileIo_lstat_1 {
      * @tc.level Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_lstat_isSymbolicLink() {
         try {
             let fpath = "/data/storage/el2/base/haps/entry/files/file_lstat_isSymbolicLink"

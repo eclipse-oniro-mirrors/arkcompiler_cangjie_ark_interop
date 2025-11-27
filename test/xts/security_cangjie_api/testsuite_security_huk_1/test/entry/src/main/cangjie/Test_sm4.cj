@@ -29,23 +29,23 @@ import ohos.business_exception.BusinessException
 class Test_SecurityHuks_SM4 {
     // sm4 cbc + pkcs7
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0100
-    * @tc.name      : test_sm4_encrypt_decrypt_cbc_pkcs7
-    * @tc.desc      : test UniversalKeystoreKit finishSession
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0100
+     * @tc.name      : test_sm4_encrypt_decrypt_cbc_pkcs7
+     * @tc.desc      : test UniversalKeystoreKit finishSession
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_sm4_encrypt_decrypt_cbc_pkcs7() {
         let keyAlias = "test_sm4_encrypt_decrypt_cbc_pkcs7"
         try {
             let plainText = "123456"
             let iv = "0011223344556677"
             clean(keyAlias)
-            let options = HuksOptions(properties:
-                [
+            let options = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
@@ -53,8 +53,8 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))
                 ]
             )
-            let initOptions = HuksOptions(properties:
-                [
+            let initOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -64,8 +64,8 @@ class Test_SecurityHuks_SM4 {
                 ]
             )
 
-            let finiOptions = HuksOptions(properties:
-                [
+            let finiOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -73,7 +73,7 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
                     HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))
                 ],
-               inData: plainText.toArray()
+                inData: plainText.toArray()
             )
 
             generateKeyItem(keyAlias, options)
@@ -82,8 +82,8 @@ class Test_SecurityHuks_SM4 {
             let handle1 = initSession(keyAlias, initOptions).handle
             let cipherData = finishSession(handle1, finiOptions)
 
-            let decInitOptions = HuksOptions(properties:
-                [
+            let decInitOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -92,8 +92,8 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))
                 ]
             )
-            let decFiniOptions = HuksOptions(properties:
-                [
+            let decFiniOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -109,33 +109,32 @@ class Test_SecurityHuks_SM4 {
             let dec = String.fromUtf8(decData)
 
             @Expect(plainText == dec)
-            abortSession(handle1, HuksOptions(properties:[]))
-            abortSession(handle2, HuksOptions(properties:[]))
+            abortSession(handle1, HuksOptions(properties: []))
+            abortSession(handle2, HuksOptions(properties: []))
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-         finally {
+        } finally {
             clean(keyAlias)
         }
     }
     // sm4 ecb + pkcs7
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0200
-    * @tc.name      : test_sm4_encrypt_decrypt_ecb_pkcs7
-    * @tc.desc      : test UniversalKeystoreKit finishSession
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0200
+     * @tc.name      : test_sm4_encrypt_decrypt_ecb_pkcs7
+     * @tc.desc      : test UniversalKeystoreKit finishSession
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_sm4_encrypt_decrypt_ecb_pkcs7() {
         let keyAlias = "test_sm4_encrypt_decrypt_ecb_pkcs7"
         try {
             let plainText = "123456"
             clean(keyAlias)
-            let options = HuksOptions(properties:
-                [
+            let options = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
@@ -143,19 +142,19 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
                 ]
             )
-            let initOptions = HuksOptions(properties:
-                [
+            let initOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
-                // don't need iv
+                    // don't need iv
                 ]
             )
 
-            let finiOptions = HuksOptions(properties:
-                [
+            let finiOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -163,7 +162,7 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
                 // don't need iv
                 ],
-               inData: plainText.toArray()
+                inData: plainText.toArray()
             )
 
             generateKeyItem(keyAlias, options)
@@ -172,8 +171,8 @@ class Test_SecurityHuks_SM4 {
             let handle1 = initSession(keyAlias, initOptions).handle
             let cipherData = finishSession(handle1, finiOptions)
 
-            let decInitOptions = HuksOptions(properties:
-                [
+            let decInitOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -182,8 +181,8 @@ class Test_SecurityHuks_SM4 {
                 ]
             )
 
-            let decFiniOptions = HuksOptions(properties:
-                [
+            let decFiniOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -199,8 +198,8 @@ class Test_SecurityHuks_SM4 {
 
             // @Expect(plainText == dec)
             // 不支持 ecb + pkcs7
-            abortSession(handle1, HuksOptions(properties:[]))
-            abortSession(handle2, HuksOptions(properties:[]))
+            abortSession(handle1, HuksOptions(properties: []))
+            abortSession(handle2, HuksOptions(properties: []))
         } catch (e: BusinessException) {
             @Expect(e.code, 401)
         } finally {
@@ -209,22 +208,22 @@ class Test_SecurityHuks_SM4 {
     }
     // sm4 ecb + nopadding
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0300
-    * @tc.name      : test_sm4_encrypt_decrypt_ecb_nopadding
-    * @tc.desc      : test UniversalKeystoreKit finishSession
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0300
+     * @tc.name      : test_sm4_encrypt_decrypt_ecb_nopadding
+     * @tc.desc      : test UniversalKeystoreKit finishSession
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_sm4_encrypt_decrypt_ecb_nopadding() {
         let keyAlias = "test_sm4_encrypt_decrypt_ecb_nopadding"
         try {
             let plainText = "1234567812345678"
             clean(keyAlias)
-            let options = HuksOptions(properties:
-                [
+            let options = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
@@ -233,19 +232,19 @@ class Test_SecurityHuks_SM4 {
                 ]
             )
 
-            let initOptions = HuksOptions(properties:
-                [
+            let initOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
-                // don't need iv
+                    // don't need iv
                 ]
             )
 
-            let finiOptions = HuksOptions(properties:
-                [
+            let finiOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -253,7 +252,7 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
                 // don't need iv
                 ],
-               inData: plainText.toArray()
+                inData: plainText.toArray()
             )
 
             generateKeyItem(keyAlias, options)
@@ -262,8 +261,8 @@ class Test_SecurityHuks_SM4 {
             let handle1 = initSession(keyAlias, initOptions).handle
             let cipherData = finishSession(handle1, finiOptions)
 
-            let decInitOptions = HuksOptions(properties:
-                [
+            let decInitOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -271,8 +270,8 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
                 ]
             )
-            let decFiniOptions = HuksOptions(properties:
-                [
+            let decFiniOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -288,8 +287,8 @@ class Test_SecurityHuks_SM4 {
 
             // @Expect(plainText == dec)
             // 不支持 ecb + nopadding
-            abortSession(handle1, HuksOptions(properties:[]))
-            abortSession(handle2, HuksOptions(properties:[]))
+            abortSession(handle1, HuksOptions(properties: []))
+            abortSession(handle2, HuksOptions(properties: []))
         } catch (e: BusinessException) {
             @Expect(e.code, 401)
         } finally {
@@ -298,23 +297,23 @@ class Test_SecurityHuks_SM4 {
     }
     // sm4 cbc + nopadding
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0400
-    * @tc.name      : test_sm4_encrypt_decrypt_cbc_nopadding
-    * @tc.desc      : test UniversalKeystoreKit finishSession
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0400
+     * @tc.name      : test_sm4_encrypt_decrypt_cbc_nopadding
+     * @tc.desc      : test UniversalKeystoreKit finishSession
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_sm4_encrypt_decrypt_cbc_nopadding() {
         let keyAlias = "test_sm4_encrypt_decrypt_cbc_nopadding"
         try {
             let plainText = "1234567812345678"
             let iv = "0011223344556677"
             clean(keyAlias)
-            let options = HuksOptions(properties:
-                [
+            let options = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
@@ -322,8 +321,8 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32))
                 ]
             )
-            let initOptions = HuksOptions(properties:
-                [
+            let initOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -333,8 +332,8 @@ class Test_SecurityHuks_SM4 {
                 ]
             )
 
-            let finiOptions = HuksOptions(properties:
-                [
+            let finiOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -342,7 +341,7 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint32Value(2u32)),
                     HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))
                 ],
-               inData: plainText.toArray()
+                inData: plainText.toArray()
             )
 
             generateKeyItem(keyAlias, options)
@@ -351,8 +350,8 @@ class Test_SecurityHuks_SM4 {
             let handle1 = initSession(keyAlias, initOptions).handle
             let cipherData = finishSession(handle1, finiOptions)
 
-            let decInitOptions = HuksOptions(properties:
-                [
+            let decInitOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -361,8 +360,8 @@ class Test_SecurityHuks_SM4 {
                     HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))
                 ]
             )
-            let decFiniOptions = HuksOptions(properties:
-                [
+            let decFiniOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
@@ -378,62 +377,61 @@ class Test_SecurityHuks_SM4 {
             let dec = String.fromUtf8(decData)
 
             @Expect(plainText == dec)
-            abortSession(handle1, HuksOptions(properties:[]))
-            abortSession(handle2, HuksOptions(properties:[]))
+            abortSession(handle1, HuksOptions(properties: []))
+            abortSession(handle2, HuksOptions(properties: []))
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-         finally {
+        } finally {
             clean(keyAlias)
         }
     }
     // sm4 ctr + nopadding
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0500
-    * @tc.name      : test_sm4_encrypt_decrypt_ctr_nopadding
-    * @tc.desc      : test UniversalKeystoreKit finishSession
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_SM4_0500
+     * @tc.name      : test_sm4_encrypt_decrypt_ctr_nopadding
+     * @tc.desc      : test UniversalKeystoreKit finishSession
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_sm4_encrypt_decrypt_ctr_nopadding() {
         let keyAlias = "test_sm4_encrypt_decrypt_ctr_nopadding"
         try {
             let plainText = "1234567812345678"
             let iv = "0011223344556677"
             clean(keyAlias)
-            let options = HuksOptions(properties:
-                [
+            let options = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
-                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE,   HuksParamValue.BooleanValue(false))
+                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.BooleanValue(false))
                 ]
             )
-            let initOptions = HuksOptions(properties:
-                [
+            let initOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
-                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE,   HuksParamValue.BooleanValue(false)),
+                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.BooleanValue(false)),
                     HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))
                 ]
             )
 
-            let finiOptions = HuksOptions(properties:
-                [
+            let finiOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
-                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE,   HuksParamValue.BooleanValue(false)),
+                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.BooleanValue(false)),
                     HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))
                 ],
-               inData: plainText.toArray()
+                inData: plainText.toArray()
             )
 
             generateKeyItem(keyAlias, options)
@@ -442,23 +440,23 @@ class Test_SecurityHuks_SM4 {
             let handle1 = initSession(keyAlias, initOptions).handle
             let cipherData = finishSession(handle1, finiOptions)
 
-            let decInitOptions = HuksOptions(properties:
-                [
+            let decInitOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
-                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE,   HuksParamValue.BooleanValue(false)),
+                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.BooleanValue(false)),
                     HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))
                 ]
             )
-            let decFiniOptions = HuksOptions(properties:
-                [
+            let decFiniOptions = HuksOptions(
+                properties: [
                     HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
                     HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.Int32Value(-1i32)),
                     HuksParam(HuksTag.HUKS_TAG_PADDING, HuksParamValue.Uint32Value(1u32)),
                     HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(0i32)),
-                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE,   HuksParamValue.BooleanValue(false)),
+                    HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.BooleanValue(false)),
                     HuksParam(HuksTag.HUKS_TAG_IV, HuksParamValue.BytesValue([1u8]))
                 ]
             )
@@ -469,12 +467,11 @@ class Test_SecurityHuks_SM4 {
             let dec = String.fromUtf8(decData)
 
             @Expect(plainText == dec)
-            abortSession(handle1, HuksOptions(properties:[]))
-            abortSession(handle2, HuksOptions(properties:[]))
+            abortSession(handle1, HuksOptions(properties: []))
+            abortSession(handle2, HuksOptions(properties: []))
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-        finally {
+        } finally {
             clean(keyAlias)
         }
     }

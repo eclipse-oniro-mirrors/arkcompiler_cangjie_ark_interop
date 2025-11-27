@@ -38,7 +38,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_AlphabetIndexer_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_AlphabetIndexer_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin AlphabetIndexer")
@@ -66,7 +66,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Blank_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Blank_0200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Blank")
@@ -94,7 +94,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Button_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Button_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Button")
@@ -122,7 +122,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Checkbox_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Checkbox_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Checkbox")
@@ -150,7 +150,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_CheckboxGroup_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_CheckboxGroup_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin CheckboxGroup")
@@ -180,7 +180,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_DataPanel_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_DataPanel_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin DataPanel")
@@ -208,7 +208,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_DatePicker_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_DatePicker_0800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin DatePicker")
@@ -236,7 +236,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Divider_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Divider_0900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Divider")
@@ -264,7 +264,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Gauge_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Gauge_1000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Gauge")
@@ -292,7 +292,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Image_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Image_1100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Image")
@@ -320,7 +320,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_LoadingProgress_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_LoadingProgress_1200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin LoadingProgress")
@@ -348,7 +348,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Menu_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Menu_1300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Menu")
@@ -376,7 +376,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Progress_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Progress_1400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Progress")
@@ -404,7 +404,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_QRCode_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_QRCode_1500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin QRCode")
@@ -432,7 +432,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Radio_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Radio_1600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Radio")
@@ -460,7 +460,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Rating_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Rating_1700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Rating")
@@ -488,7 +488,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Refresh_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Refresh_1800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Refresh")
@@ -516,7 +516,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_RichEditor_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_RichEditor_1900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin RichEditor")
@@ -544,7 +544,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_RichText_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_RichText_2000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin RichText")
@@ -572,7 +572,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_RowSplit_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_RowSplit_2100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin RowSplit")
@@ -600,7 +600,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_ScrollBar_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_ScrollBar_2200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin ScrollBar")
@@ -628,7 +628,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Search_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Search_2300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Search")
@@ -656,7 +656,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Slider_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Slider_2400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Slider")
@@ -684,7 +684,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Stepper_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Stepper_2500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Stepper")
@@ -712,7 +712,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Text_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Text_2600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Text")
@@ -740,7 +740,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_TextArea_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_TextArea_2700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin TextArea")
@@ -768,7 +768,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_TextClock_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_TextClock_2800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin TextClock")
@@ -796,7 +796,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_TextInput_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_TextInput_2900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin TextInput")
@@ -824,7 +824,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_TextPicker_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_TextPicker_3000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin TextPicker")
@@ -852,7 +852,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_TextTimer_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_TextTimer_3100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin TextTimer")
@@ -880,7 +880,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Toggle_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Toggle_3200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Toggle")
@@ -908,7 +908,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Web_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Web_3300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Web")
@@ -936,7 +936,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Select_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Select_3400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Select")
@@ -964,7 +964,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Badge_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Badge_3500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Badge")
@@ -992,7 +992,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Column_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Column_3600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Column")
@@ -1020,7 +1020,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Grid_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Grid_3700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Grid")
@@ -1048,7 +1048,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_GridRow_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_GridRow_3800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin GridRow")
@@ -1076,7 +1076,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Flex_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Flex_3900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Flex")
@@ -1104,7 +1104,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_List_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_List_4000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin List")
@@ -1133,7 +1133,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_RelativeContainer_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_RelativeContainer_4200() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin RelativeContainer")
@@ -1161,7 +1161,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Row_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Row_4300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Row")
@@ -1189,7 +1189,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Scroll_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Scroll_4400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Scroll")
@@ -1217,7 +1217,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Stack_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Stack_4500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Stack")
@@ -1245,7 +1245,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Swiper_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Swiper_4600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Swiper")
@@ -1273,7 +1273,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Tabs_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Tabs_4700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Tabs")
@@ -1301,7 +1301,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Circle_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Circle_4800() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Circle")
@@ -1329,7 +1329,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Line_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Line_4900() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Line")
@@ -1357,7 +1357,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Rect_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Rect_5000() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Rect")
@@ -1385,7 +1385,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Shape_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Shape_5100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Shape")
@@ -1413,7 +1413,7 @@ class Test_EmptyAttrs_DisplayPriority {
      * @tc.desic：Empty_Path_DisplayPriority
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_DisplayPriority_Path_5300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckDisplayPriority: FindBegin Path")

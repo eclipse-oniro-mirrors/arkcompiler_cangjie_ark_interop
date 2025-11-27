@@ -30,7 +30,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the device type.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_01(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let deviceType: String = DeviceInfo.deviceType
@@ -44,7 +44,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the manufacture name.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_02(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let manufacture: String = DeviceInfo.manufacture
@@ -61,7 +61,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the brand.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_03(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let brand: String = DeviceInfo.brand
@@ -78,7 +78,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the marketName.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_04(): Unit {
         let marketName: String = DeviceInfo.marketName
         @Expect(!marketName.isEmpty() && marketName.size <= 32)
@@ -90,7 +90,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the productSeries.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_05(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let productSeries: String = DeviceInfo.productSeries
@@ -107,7 +107,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the productModel.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_06(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let productModel: String = DeviceInfo.productModel
@@ -124,7 +124,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the softwareModel.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_07(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let softwareModel: String = DeviceInfo.softwareModel
@@ -141,7 +141,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the hardwareModel.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_08(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let hardwareModel: String = DeviceInfo.hardwareModel
@@ -158,7 +158,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the hardwareProfile.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_09(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let hardwareProfile: String = DeviceInfo.hardwareProfile
@@ -175,7 +175,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the serial.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_10(): Unit {
         let serial = DeviceInfo.serial
         @Expect(serial.isEmpty())
@@ -187,7 +187,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the bootloaderVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_11(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let bootloaderVersion: String = DeviceInfo.bootloaderVersion
@@ -204,7 +204,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the abiList.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_12(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let abiList: String = DeviceInfo.abiList
@@ -221,7 +221,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the securityPatchTag.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_13(): Unit {
         let re_format_0 = Regex("^[\\x21-\\x7E]+$")
         let re_format_1 = Regex("\\d{4}\\/\\d{2}\\/\\d{2}")
@@ -242,7 +242,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the displayVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_14(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let displayVersion: String = DeviceInfo.displayVersion
@@ -256,7 +256,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the incrementalVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_15(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let incrementalVersion: String = DeviceInfo.incrementalVersion
@@ -273,7 +273,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the osReleaseType.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_16(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let osReleaseType: String = DeviceInfo.osReleaseType
@@ -290,7 +290,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the osFullName.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_17(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let osFullName: String = DeviceInfo.osFullName
@@ -307,7 +307,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the majorVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_18(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let majorVersion: Int32 = DeviceInfo.majorVersion
@@ -325,7 +325,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the seniorVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_19(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let seniorVersion: Int32 = DeviceInfo.seniorVersion
@@ -343,7 +343,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the featureVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_20(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let featureVersion: Int32 = DeviceInfo.featureVersion
@@ -361,7 +361,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the buildVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_21(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let buildVersion: Int32 = DeviceInfo.buildVersion
@@ -379,7 +379,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the sdkApiVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_22(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let sdkApiVersion: Int32 = DeviceInfo.sdkApiVersion
@@ -397,7 +397,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the firstApiVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_23(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let firstApiVersion: Int32 = DeviceInfo.firstApiVersion
@@ -415,7 +415,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the versionId.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_24(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let versionId: String = DeviceInfo.versionId
@@ -428,7 +428,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the buildType.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_25(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let buildType: String = DeviceInfo.buildType
@@ -445,7 +445,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the buildUser.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_26(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let buildUser: String = DeviceInfo.buildUser
@@ -462,7 +462,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the buildHost.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_27(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let buildHost: String = DeviceInfo.buildHost
@@ -479,7 +479,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the buildTime.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_28(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let buildTime: String = DeviceInfo.buildTime
@@ -492,7 +492,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the buildRootHash.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_29(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let buildRootHash: String = DeviceInfo.buildRootHash
@@ -509,7 +509,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the udid.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_30(): Unit {
         let udid: String = DeviceInfo.udid
         @Expect(udid.isEmpty())
@@ -521,15 +521,14 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the distributionOSName.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_31(): Unit {
         let distributionOSName: String = DeviceInfo.distributionOSName
-        if (DeviceInfo.deviceType == "phone"){
+        if (DeviceInfo.deviceType == "phone") {
             @Expect(!distributionOSName.isEmpty(),true)
         } else {
             @Expect(!distributionOSName.isEmpty(),false)
         }
-
     }
 
     /**
@@ -538,7 +537,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the distributionOSVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_32(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let distributionOSVersion: String = DeviceInfo.distributionOSVersion
@@ -555,7 +554,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the distributionOSApiVersion.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_33(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let distributionOSApiVersion: Int32 = DeviceInfo.distributionOSApiVersion
@@ -568,7 +567,7 @@ class test_device_info_01 {
      * @tc.desc      Get a string representing the distributionOSReleaseType.
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_device_info_regex_34(): Unit {
         let re = Regex("^[\\x21-\\x7E]+$")
         let distributionOSReleaseType: String = DeviceInfo.distributionOSReleaseType

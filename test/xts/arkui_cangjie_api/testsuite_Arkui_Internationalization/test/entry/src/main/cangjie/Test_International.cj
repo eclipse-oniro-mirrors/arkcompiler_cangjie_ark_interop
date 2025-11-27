@@ -52,7 +52,7 @@ class Test_International {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_International_0100() {
         Hilog.info(0, "cangjietest", "Test_International_01 start")
         sleepFor(1.second)
@@ -70,7 +70,7 @@ class Test_International {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_International_0200() {
         Hilog.info(0, "cangjietest", "Test_International_02 start")
         sleepFor(1.second)
@@ -88,7 +88,7 @@ class Test_International {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_International_0300() {
         Hilog.info(0, "cangjietest", "Test_International_03 start")
         sleepFor(1.second)
@@ -106,7 +106,7 @@ class Test_International {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_International_0400() {
         Hilog.info(0, "cangjietest", "Test_International_04 start")
         sleepFor(1.second)
@@ -116,7 +116,7 @@ class Test_International {
     }
     
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
 /* 
     * @tc.number    : Sub_Cangjie_UIKit_Image_0500
     * @tc.name      : Test_International_0500
@@ -142,7 +142,7 @@ class Test_International {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_International_0600() {
         Hilog.info(0, "cangjietest", "Test_International_06 start")
         sleepFor(1.second)
@@ -161,7 +161,7 @@ class Test_International {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_International_0700() {
         Hilog.info(0, "cangjietest", "Test_International_07 start")
         sleepFor(1.second)
@@ -180,7 +180,7 @@ class Test_International {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_International_0800() {
         Hilog.info(0, "cangjietest", "Test_International_08 start")
         sleepFor(1.second)
@@ -199,7 +199,7 @@ class Test_International {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_International_0900() {
         Hilog.info(0, "cangjietest", "Test_International_09 start")
         sleepFor(1.second)
@@ -218,7 +218,7 @@ class Test_International {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
         func Test_International_1000() {
         Hilog.info(0, "cangjietest", "Test_International_10 start")
         sleepFor(1.second)

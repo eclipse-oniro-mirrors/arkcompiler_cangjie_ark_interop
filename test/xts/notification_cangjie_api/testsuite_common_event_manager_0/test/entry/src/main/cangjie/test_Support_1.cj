@@ -48,7 +48,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_1(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_1 begins.")
         @Expect(Support.COMMON_EVENT_ABILITY_ADDED, "common.event.ABILITY_ADDED")
@@ -64,7 +64,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_2(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_2 begins.")
         @Expect(Support.COMMON_EVENT_ABILITY_REMOVED, "common.event.ABILITY_REMOVED")
@@ -80,7 +80,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_3(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_3 begins.")
         @Expect(Support.COMMON_EVENT_ABILITY_UPDATED, "common.event.ABILITY_UPDATED")
@@ -96,7 +96,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_4(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_4 begins.")
         @Expect(Support.COMMON_EVENT_ACCOUNT_DELETED, "usual.event.data.ACCOUNT_DELETED")
@@ -112,7 +112,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_5(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_5 begins.")
         @Expect(Support.COMMON_EVENT_AIRPLANE_MODE_CHANGED, "usual.event.AIRPLANE_MODE")
@@ -128,7 +128,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_6(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_6 begins.")
         @Expect(Support.COMMON_EVENT_BATTERY_CHANGED, "usual.event.BATTERY_CHANGED")
@@ -144,7 +144,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_7(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_7 begins.")
         @Expect(Support.COMMON_EVENT_BATTERY_LOW, "usual.event.BATTERY_LOW")
@@ -160,7 +160,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_8(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_8 begins.")
         @Expect(Support.COMMON_EVENT_BATTERY_OKAY, "usual.event.BATTERY_OKAY")
@@ -176,7 +176,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_9(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_9 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE, "usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE")
@@ -192,7 +192,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_10(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_10 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE, "usual.event.bluetooth.handsfree.ag.CURRENT_DEVICE_UPDATE")
@@ -208,7 +208,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_11(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_11 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE, "usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE")
@@ -224,7 +224,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_12(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_12 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE, "usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE")
@@ -240,7 +240,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_13(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_13 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE, "usual.event.bluetooth.a2dpsource.CURRENT_DEVICE_UPDATE")
@@ -256,7 +256,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_14(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_14 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE, "usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE")
@@ -272,7 +272,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_15(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_15 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE, "usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE")
@@ -288,7 +288,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_16(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_16 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE, "usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE")
@@ -304,7 +304,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_17(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_17 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED, "usual.event.bluetooth.remotedevice.DISCOVERED")
@@ -320,7 +320,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_18(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_18 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE, "usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE")
@@ -336,7 +336,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_19(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_19 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED, "usual.event.bluetooth.remotedevice.ACL_CONNECTED")
@@ -352,7 +352,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_20(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_20 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED, "usual.event.bluetooth.remotedevice.ACL_DISCONNECTED")
@@ -368,7 +368,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_21(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_21 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE, "usual.event.bluetooth.remotedevice.NAME_UPDATE")
@@ -384,7 +384,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_22(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_22 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE, "usual.event.bluetooth.remotedevice.PAIR_STATE")
@@ -400,7 +400,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_23(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_23 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE, "usual.event.bluetooth.remotedevice.BATTERY_VALUE_UPDATE")
@@ -416,7 +416,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_24(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_24 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT, "usual.event.bluetooth.remotedevice.SDP_RESULT")
@@ -432,7 +432,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_25(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_25 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE, "usual.event.bluetooth.remotedevice.UUID_VALUE")
@@ -448,7 +448,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_26(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_26 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ, "usual.event.bluetooth.remotedevice.PAIRING_REQ")
@@ -464,7 +464,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_27(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_27 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL, "usual.event.bluetooth.remotedevice.PAIRING_CANCEL")
@@ -480,7 +480,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_28(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_28 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ, "usual.event.bluetooth.remotedevice.CONNECT_REQ")
@@ -496,7 +496,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_29(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_29 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY, "usual.event.bluetooth.remotedevice.CONNECT_REPLY")
@@ -512,7 +512,7 @@ class test_Support_1 {
      * @tc.level     : Level 0
      */
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func TestCase_30(): Unit {
         Hilog.info(0u32, "cangjietest", "", "testcase TestCase_30 begins.")
         @Expect(Support.COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL, "usual.event.bluetooth.remotedevice.CONNECT_CANCEL")

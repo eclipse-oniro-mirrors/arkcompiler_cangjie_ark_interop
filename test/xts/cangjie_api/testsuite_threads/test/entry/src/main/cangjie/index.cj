@@ -12,7 +12,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package ohos_app_cangjie_entry
 
 internal import ohos.base.LengthProp
@@ -23,6 +22,7 @@ internal import ohos.arkui.component.CustomView
 internal import ohos.arkui.component.CJEntry
 internal import ohos.arkui.component.loadNativeView
 internal import ohos.arkui.component.FontWeight
+internal import ohos.arkui.component.Button
 internal import ohos.arkui.state_management.SubscriberManager
 internal import ohos.arkui.state_management.ObservedProperty
 internal import ohos.arkui.state_management.LocalStorage
@@ -30,66 +30,44 @@ import ohos.arkui.state_macro_manage.Entry
 import ohos.arkui.state_macro_manage.Component
 import ohos.arkui.state_macro_manage.State
 import ohos.arkui.state_macro_manage.r
-import ohos.base.UIThread
-
+import ohos.base.*
 
 @Entry
 @Component
 class EntryView {
-    @State
-    var message: String = "Hello World"
-
     func build() {
         Row {
             Column {
-               Text("onClick spawn(UIThread)")
-                    .onClick {
-                       evt => spawn(UIThread) {
-                           createJSRuntimeAndCheck("onClick spawn(UIThread)")
-                      }
-                  }
-                  .fontSize(40)
-                  .height(80)
-                Text("onClick spawn spawn(UIThread)")
-                    .onClick {
-                       evt => spawn {
-                        spawn(UIThread) {
-                           createJSRuntimeAndCheck("onClick spawn spawn(UIThread)")
+                Button("onClick spawn(UIThread)")
+                    .onClick({
+                        evt => spawn (UIThread) {
+                            createJSRuntimeAndCheck("onClick spawn(UIThread)")
                         }
-                    }
-                }
-                .fontSize(40)
-                .height(80)
-                Text("onClick spawn(UIThread) spawn")
-                    .onClick {
-                       evt => spawn(UIThread) {
-                        spawn {
-                           createJSRuntimeAndCheck("onClick spawn(UIThread) spawn")
-                        }
-                    }
-                }
-                .fontSize(40)
-                .height(80)
-                Text("onClick spawn(UIThread) spawn(UIThread)")
-                    .onClick {
-                       evt => spawn(UIThread) {
-                        spawn(UIThread) {
-                           createJSRuntimeAndCheck("onClick spawn(UIThread) spawn(UIThread)")
-                        }
-                    }
-                }
-                .fontSize(40)
-                .height(80)
-                Text("onClick spawn spawn")
-                    .onClick {
-                       evt => spawn {
-                        spawn {
-                           createJSRuntimeAndCheck("onClick spawn spawn")
-                        }
-                    }
-                }
-                .fontSize(40)
-                .height(80)
+                    })
+                    .fontSize(40)
+                    .height(80)
+                Button("onClick spawn(UIThread) spawn(UIThread)")
+                    .onClick(
+                        {
+                            evt => spawn (UIThread) {
+                                spawn (UIThread) {
+                                    createJSRuntimeAndCheck("onClick spawn(UIThread) spawn(UIThread)")
+                                }
+                            }
+                        })
+                    .fontSize(40)
+                    .height(80)
+                Button("onClick spawn spawn(UIThread)")
+                    .onClick(
+                        {
+                            evt => spawn {
+                                spawn (UIThread) {
+                                    createJSRuntimeAndCheck("onClick spawn spawn(UIThread)")
+                                }
+                            }
+                        })
+                    .fontSize(40)
+                    .height(80)
             }.width(100.percent)
         }.height(100.percent)
     }

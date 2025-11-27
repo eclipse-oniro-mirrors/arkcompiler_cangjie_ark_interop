@@ -14,6 +14,7 @@
  */
 
 package ohos_app_cangjie_entry
+
 import ohos.hilog.Hilog
 import kit.AbilityKit.Want
 import kit.AbilityKit.LaunchParam
@@ -22,20 +23,20 @@ import kit.AbilityKit.UIAbility
 import kit.AbilityKit.AbilityStage
 import ohos.window.WindowStage
 import ohos.arkui.state_management.AppStorage
-class MainAbility <:UIAbility {
-init() {
-super()
-registerSelf()
-}
-public func onCreate(want: Want, launchParam: LaunchParam): Unit  {
-Hilog.info(0u32, "CangjieTest", "MainAbility OnCreated.${want.abilityName}")
-}
 
-public func onWindowStageCreate(windowStage: WindowStage): Unit  {
-Hilog.info(0u32, "CangjieTest", "MainAbility onWindowStageCreate.")
-AppStorage.setOrCreate("windowStage", windowStage)
-AppStorage.setOrCreate("abilityContext", this.context)
-windowStage.loadContent("EntryView")
-}
+class MainAbility <: UIAbility {
+    init() {
+        super()
+        registerSelf()
+    }
+    public func onCreate(want: Want, launchParam: LaunchParam): Unit {
+        Hilog.info(0u32, "CangjieTest", "MainAbility OnCreated.${want.abilityName}")
+    }
 
+    public func onWindowStageCreate(windowStage: WindowStage): Unit {
+        Hilog.info(0u32, "CangjieTest", "MainAbility onWindowStageCreate.")
+        AppStorage.setOrCreate("windowStage", windowStage)
+        AppStorage.setOrCreate("abilityContext", this.context)
+        windowStage.loadContent("EntryView")
+    }
 }

@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-
 package ohos_app_cangjie_entry
 
 import std.unittest.testmacro.*
@@ -25,18 +24,19 @@ import ohos.file.fs.*
 import ohos.file.fs.OpenMode
 import ohos.file.fs.File
 import std.collection.ArrayList
+
 @Test
 class Test_rpc_02 {
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0100
-    * @tc.name      : test_ArrayBuffer
-    * @tc.desc      : Check whether the ArrayBuffer interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0100
+     * @tc.name      : test_ArrayBuffer
+     * @tc.desc      : Check whether the ArrayBuffer interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ArrayBuffer(): Unit {
         let data = MessageSequence.create()
         let arr2: Array<UInt8> = [0, 255]
@@ -63,15 +63,15 @@ class Test_rpc_02 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0200
-    * @tc.name      : test_Exception
-    * @tc.desc      : Check whether the Exception interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0200
+     * @tc.name      : test_Exception
+     * @tc.desc      : Check whether the Exception interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_Exception(): Unit {
         let data = MessageSequence.create()
         data.writeNoException()
@@ -80,15 +80,15 @@ class Test_rpc_02 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0300
-    * @tc.name      : test_File
-    * @tc.desc      : Check whether the File interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0300
+     * @tc.name      : test_File
+     * @tc.desc      : Check whether the File interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_File(): Unit {
         let filePath = "/data/storage/el2/base/test_rpc.txt"
         let file = FileIo.open(
@@ -110,15 +110,15 @@ class Test_rpc_02 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0400
-    * @tc.name      : test_getRawDataCapacity
-    * @tc.desc      : Check whether the getRawDataCapacity interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0400
+     * @tc.name      : test_getRawDataCapacity
+     * @tc.desc      : Check whether the getRawDataCapacity interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_getRawDataCapacity(): Unit {
         let data = MessageSequence.create()
         let result = data.getRawDataCapacity()
@@ -128,15 +128,15 @@ class Test_rpc_02 {
     }
 
     /*
-    * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0500
-    * @tc.name      : test_ashmem
-    * @tc.desc      : Check whether the ashmem interface in the rpc meets the expectation.
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_rpc_Test_rpc_02_0500
+     * @tc.name      : test_ashmem
+     * @tc.desc      : Check whether the ashmem interface in the rpc meets the expectation.
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel19, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_ashmem(): Unit {
         let ashmemSize: Int32 = 1024 * 1024
         let ashmem = Ashmem.create("ashmem", ashmemSize)

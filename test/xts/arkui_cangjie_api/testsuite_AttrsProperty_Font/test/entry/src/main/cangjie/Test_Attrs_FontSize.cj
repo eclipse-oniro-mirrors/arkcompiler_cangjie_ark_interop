@@ -38,7 +38,7 @@ class Test_EmptyAttrs_FontSize {
      * @tc.desic：Empty_Button_FontSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontSize_Button_0100() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontSize: FindBegin Button")
@@ -64,7 +64,7 @@ class Test_EmptyAttrs_FontSize {
      * @tc.desic：Empty_Text_FontSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontSize_Text_0300() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontSize: FindBegin Text")
@@ -89,7 +89,7 @@ class Test_EmptyAttrs_FontSize {
      * @tc.desic：Empty_TextArea_FontSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontSize_TextArea_0400() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontSize: FindBegin TextArea")
@@ -114,7 +114,7 @@ class Test_EmptyAttrs_FontSize {
      * @tc.desic：Empty_TextClock_FontSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontSize_TextClock_0500() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontSize: FindBegin TextClock")
@@ -139,7 +139,7 @@ class Test_EmptyAttrs_FontSize {
      * @tc.desic：Empty_TextInput_FontSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontSize_TextInput_0600() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontSize: FindBegin TextInput")
@@ -164,7 +164,7 @@ class Test_EmptyAttrs_FontSize {
      * @tc.desic：Empty_TextTimer_FontSize
      */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_EmptyAttrs_FontSize_TextTimer_0700() {
         sleepFor(1.second)
         Hilog.info(0, "cangjietest", "test", "CheckCheckFontSize: FindBegin TextTimer")

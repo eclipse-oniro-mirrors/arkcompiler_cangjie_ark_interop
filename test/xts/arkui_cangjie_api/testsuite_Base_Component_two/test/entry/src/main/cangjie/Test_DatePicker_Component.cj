@@ -48,7 +48,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic")
@@ -80,7 +80,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic")
@@ -109,7 +109,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic")
@@ -138,7 +138,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic")
@@ -158,7 +158,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_005() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic")
@@ -215,7 +215,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_006() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic")
@@ -272,7 +272,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_007() {
         let driver1 = Driver.create()
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
@@ -312,7 +312,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_008() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic2")
@@ -369,7 +369,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_009() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic3")
@@ -426,7 +426,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0010() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic4")
@@ -483,7 +483,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0011() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic5")
@@ -540,7 +540,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0012() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic6")
@@ -596,7 +596,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0013() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic")
@@ -656,7 +656,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0014() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic2")
@@ -713,7 +713,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0015() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic3")
@@ -770,7 +770,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0016() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic4")
@@ -827,7 +827,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0017() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic5")
@@ -884,7 +884,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0018() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic6")
@@ -941,7 +941,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0019() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic2")
@@ -998,7 +998,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0020() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic3")
@@ -1055,7 +1055,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0021() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic4")
@@ -1112,7 +1112,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0022() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic5")
@@ -1169,7 +1169,7 @@ class Test_DatePicker_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_DatePicker_Component_0023() {
         Hilog.info(0, "","cangjietest", "Test_DatePicker_Component start")
         let Inspector = getInspectorByKey("DatePickerBasic6")

@@ -27,8 +27,8 @@ import ohos.business_exception.BusinessException
 
 @Test
 class Test_SecurityHuks_GetKeyItemProperties {
-    let genKeyOptionsTest1 = HuksOptions( properties:
-        [
+    let genKeyOptionsTest1 = HuksOptions(
+        properties: [
             HuksParam(HuksTag.HUKS_TAG_ALGORITHM, HuksParamValue.Uint64Value(1u64)),
             HuksParam(HuksTag.HUKS_TAG_KEY_SIZE, HuksParamValue.BooleanValue(true)),
             HuksParam(HuksTag.HUKS_TAG_PURPOSE, HuksParamValue.Int32Value(1i32)),
@@ -37,17 +37,17 @@ class Test_SecurityHuks_GetKeyItemProperties {
             HuksParam(HuksTag.HUKS_TAG_KEY_GENERATE_TYPE, HuksParamValue.BooleanValue(false)),
             HuksParam(HuksTag.HUKS_TAG_BLOCK_MODE, HuksParamValue.Uint64Value(1u64))
         ]
-    )      
+    )
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_GetKeyItemProperties_0100
-    * @tc.name      : test_get_key_item_properties
-    * @tc.desc      : test UniversalKeystoreKit getKeyItemProperties
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_GetKeyItemProperties_0100
+     * @tc.name      : test_get_key_item_properties
+     * @tc.desc      : test UniversalKeystoreKit getKeyItemProperties
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_get_key_item_properties() {
         let keyAlias = "test_get_key_item_properties"
         clean(keyAlias)
@@ -60,21 +60,20 @@ class Test_SecurityHuks_GetKeyItemProperties {
             @Expect(!properties.isEmpty())
         } catch (e: BusinessException) {
             @Expect(e.code, 401i32)
-        }
-        finally {
+        } finally {
             clean(keyAlias)
         }
     }
     /*
-    * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_GetKeyItemProperties_0200
-    * @tc.name      : test_get_key_item_properties_empty_alias
-    * @tc.desc      : test UniversalKeystoreKit getKeyItemProperties
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_UniversalKeystoreKit_Test_SecurityHuks_GetKeyItemProperties_0200
+     * @tc.name      : test_get_key_item_properties_empty_alias
+     * @tc.desc      : test UniversalKeystoreKit getKeyItemProperties
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel15, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_get_key_item_properties_empty_alias() {
         let keyAlias = ""
         var flag = false

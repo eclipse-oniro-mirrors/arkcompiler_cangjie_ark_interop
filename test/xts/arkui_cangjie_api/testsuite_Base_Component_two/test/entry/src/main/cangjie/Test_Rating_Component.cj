@@ -48,7 +48,7 @@ class Test_Rating_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rating_Component_001() {
         Hilog.info(0, "","cangjietest", "Test_Rating_Component_001 start")
         let Inspector = getInspectorByKey("ratingbasic")
@@ -71,7 +71,7 @@ class Test_Rating_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rating_Component_002() {
         Hilog.info(0, "","cangjietest", "Test_Rating_Component_002 start")
         let Inspector = getInspectorByKey("ratingbasic")
@@ -95,7 +95,7 @@ class Test_Rating_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rating_Component_003() {
         Hilog.info(0, "","cangjietest", "Test_Rating_Component_003 start")
         let Inspector = getInspectorByKey("ratingbasic")
@@ -119,7 +119,7 @@ class Test_Rating_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rating_Component_004() {
         Hilog.info(0, "","cangjietest", "Test_Rating_Component_004 start")
         let Inspector = getInspectorByKey("ratingbasic")
@@ -143,7 +143,7 @@ class Test_Rating_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rating_Component_005() {
         Hilog.info(0, "","cangjietest", "Test_Rating_Component_005 start")
         let Inspector = getInspectorByKey("ratingbasic")
@@ -167,7 +167,7 @@ class Test_Rating_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_Rating_Component_006() {
         Hilog.info(0, "","cangjietest", "Test_Rating_Component_006 start")
         driver.findComponent(On().id("change")).getOrThrow().click()

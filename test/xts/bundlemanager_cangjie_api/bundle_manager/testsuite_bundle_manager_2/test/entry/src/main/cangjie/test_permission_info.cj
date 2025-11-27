@@ -26,19 +26,19 @@ import kit.PerformanceAnalysisKit.Hilog
 class TestPermissionInfo {
 
     /*
-    * @tc.number    : Sub_Cangjie_BundleManager_TestPermissionInfo_0100
-    * @tc.name      : test_permissionInfo_00
-    * @tc.desc      : test BundleManager test_permissionInfo_00
-    * @tc.size      : MediumTest
-    * @tc.type      : Function
-    * @tc.level     : Level 0
-    */
+     * @tc.number    : Sub_Cangjie_BundleManager_TestPermissionInfo_0100
+     * @tc.name      : test_permissionInfo_00
+     * @tc.desc      : test BundleManager test_permissionInfo_00
+     * @tc.size      : MediumTest
+     * @tc.type      : Function
+     * @tc.level     : Level 0
+     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_permissionInfo_00(): Unit {
         let bundleInfo = getFullBundleInfo()
         let reqPermissionDetails = bundleInfo.reqPermissionDetails
-        Hilog.error(0,"cangjie","reqPermissionDetails.size = ${reqPermissionDetails.size}")
+        Hilog.error(0, "cangjie", "reqPermissionDetails.size = ${reqPermissionDetails.size}")
         let permissionGrantStates = bundleInfo.permissionGrantStates
         let numberOfReqPermissionDetails = reqPermissionDetails.size
         let numberOfPermissionGrantStates = permissionGrantStates.size

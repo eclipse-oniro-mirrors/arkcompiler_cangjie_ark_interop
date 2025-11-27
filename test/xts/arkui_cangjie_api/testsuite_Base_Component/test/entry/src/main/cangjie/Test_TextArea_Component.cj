@@ -49,7 +49,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_001() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_001] start")
         // 1、获取页面中id为TextAreaBasis的组件信息
@@ -77,7 +77,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_002() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_002] start")
         // 1、获取页面中id为TextAreaBasis的组件信息
@@ -100,7 +100,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_003() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_003] start")
         // 1、获取页面中id为TextAreaBasis的组件信息
@@ -123,7 +123,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_004() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_004] start")
         // 1、点击页面中id为caretposition3的按钮，光标位置移到3
@@ -149,7 +149,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_005() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_005] start")
         // 1、获取页面中id为TextAreaBasis的组件信息
@@ -178,7 +178,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_006() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_006] start")
         // 1、获取页面中id为TextAreaBasis的组件信息
@@ -207,7 +207,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_007() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_007] start")
         // 1、获取页面中id为TextAreaBasis的组件信息
@@ -230,7 +230,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_008() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_008] start")
         // 1、获取页面中id为TextAreaBasis的组件信息
@@ -253,7 +253,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_009() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_009] start")
         // 1、获取页面中id为TextAreaBasis的组件信息
@@ -276,7 +276,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_010() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_010] start")
         driver.findComponent(On().id("TextAreaBasis1")).getOrThrow().click()
@@ -317,7 +317,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_011() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_011] start")
         driver.findComponent(On().id("changeEnterKeyType")).getOrThrow().click()
@@ -360,7 +360,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_012() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_012] start")
         driver.findComponent(On().id("changeEnterKeyType")).getOrThrow().click()
@@ -403,7 +403,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_013() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_013] start")
         driver.findComponent(On().id("changeEnterKeyType")).getOrThrow().click()
@@ -446,7 +446,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_014() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_014] start")
         driver.findComponent(On().id("changeEnterKeyType")).getOrThrow().click()
@@ -489,7 +489,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_015() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_015] start")
         // 1、获取页面中id为onChange_callback的组件信息
@@ -512,7 +512,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_017() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_017] start")
         // 1、点击页面中id为TextAreaBasis1的组件
@@ -538,7 +538,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_018() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_018] start")
         // 1、在页面中id为TextAreaBasis的组件中输入abcde
@@ -568,7 +568,7 @@ class Test_TextArea_Component {
     * @tc.level     : Level 0
     */
     @TestCase
-    @Tag[APILevel12, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func Test_TextArea_Component_019() {
         Hilog.info(0,"",   "cangjietest", "[Test_TextArea_Component_019] start")
         // 1、在页面中id为TextAreaBasis的组件中输入abcde

@@ -40,20 +40,20 @@ let Attrs_List = ObservedArrayList<String>(['RenderFit'])
 
 // RenderFit_Prop_List 格式为  (单位， setValue, expectValue)
 let RenderFit_Prop_List: Array<(String, RenderFit, String)> = [
-    ("CENTER", RenderFit.Center, "\"RenderFit.Center\""),
-    ("TOP", RenderFit.Top, "\"RenderFit.Top\""),
-    ("BOTTOM", RenderFit.Bottom, "\"RenderFit.Bottom\""),
-    ("LEFT", RenderFit.Left, "\"RenderFit.Left\""),
-    ("RIGHT", RenderFit.Right, "\"RenderFit.Right\""),
-    ("TOP_LEFT", RenderFit.TopLeft, "\"RenderFit.TopLeft\""),
-    ("TOP_RIGHT", RenderFit.TopRight, "\"RenderFit.TopRight\""),
-    ("BOTTOM_LEFT", RenderFit.BottomLeft, "\"RenderFit.BottomLeft\""),
-    ("BOTTOM_RIGHT", RenderFit.BottomRight, "\"RenderFit.BottomRight\""),
-    ("RESIZE_FILL", RenderFit.ResizeFill, "\"RenderFit.ResizeFill\""),
-    ("RESIZE_CONTAIN", RenderFit.ResizeContain, "\"RenderFit.ResizeContain\""),
-    ("RESIZE_CONTAIN_TOP_LEFT", RenderFit.ResizeContainTopLeft, "\"RenderFit.ResizeContainTopLeft\""),
-    ("RESIZE_CONTAIN_BOTTOM_RIGHT", RenderFit.ResizeContainBottomRight, "\"RenderFit.ResizeContainBottomRight\""),
-    ("RESIZE_COVER", RenderFit.ResizeCover, "\"RenderFit.ResizeCover\""),
-    ("RESIZE_COVER_TOP_LEFT", RenderFit.ResizeCoverTopLeft, "\"RenderFit.ResizeCoverTopLeft\""),
-    ("RESIZE_COVER_BOTTOM_RIGHT", RenderFit.ResizeCoverBottomRight, "\"RenderFit.ResizeCoverBottomRight\"")
+    ("CENTER", RenderFit.Center, "\"RenderFit.CENTER\""),
+    ("TOP", RenderFit.Top, "\"RenderFit.TOP\""),
+    ("BOTTOM", RenderFit.Bottom, "\"RenderFit.BOTTOM\""),
+    ("LEFT", RenderFit.Left, "\"RenderFit.LEFT\""),
+    ("RIGHT", RenderFit.Right, "\"RenderFit.RIGHT\""),
+    ("TOP_LEFT", RenderFit.TopLeft, "\"RenderFit.TOP_LEFT\""),
+    ("TOP_RIGHT", RenderFit.TopRight, "\"RenderFit.TOP_RIGHT\""),
+    ("BOTTOM_LEFT", RenderFit.BottomLeft, "\"RenderFit.BOTTOM_LEFT\""),
+    ("BOTTOM_RIGHT", RenderFit.BottomRight, "\"RenderFit.BOTTOM_RIGHT\""),
+    ("RESIZE_FILL", RenderFit.ResizeFill, "\"RenderFit.RESIZE_FILL\""),
+    ("RESIZE_CONTAIN", RenderFit.ResizeContain, "\"RenderFit.RESIZE_CONTAIN\""),
+    ("RESIZE_CONTAIN_TOP_LEFT", RenderFit.ResizeContainTopLeft, "\"RenderFit.RESIZE_CONTAIN_TOP_LEFT\""),
+    ("RESIZE_CONTAIN_BOTTOM_RIGHT", RenderFit.ResizeContainBottomRight, "\"RenderFit.RESIZE_CONTAIN_BOTTOM_RIGHT\""),
+    ("RESIZE_COVER", RenderFit.ResizeCover, "\"RenderFit.RESIZE_COVER\""),
+    ("RESIZE_COVER_TOP_LEFT", RenderFit.ResizeCoverTopLeft, "\"RenderFit.RESIZE_COVER_TOP_LEFT\""),
+    ("RESIZE_COVER_BOTTOM_RIGHT", RenderFit.ResizeCoverBottomRight, "\"RenderFit.RESIZE_COVER_BOTTOM_RIGHT\"")
 ]
