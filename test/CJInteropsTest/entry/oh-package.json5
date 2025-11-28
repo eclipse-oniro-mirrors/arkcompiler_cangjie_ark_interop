@@ -21,6 +21,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "libark_interop_loader.so": "file:./src/main/cangjie/loader"
+    "libentry.so": "file:./src/main/cangjie/types/libentry",
+    "libentry.pure.so": "file:./src/main/cangjie/types/libentry.pure"
   }
 }

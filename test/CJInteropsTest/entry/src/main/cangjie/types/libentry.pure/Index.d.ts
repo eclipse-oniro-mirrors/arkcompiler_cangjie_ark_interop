@@ -13,18 +13,4 @@
  * limitations under the License.
  */
 
-import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { JSON } from '@kit.ArkTS';
-import * as lib from "libentry.so"
-
-export default function testJSModule01() {
-  describe('TestRegisterFunc', () => {
-    it('test00', 0, () => {
-      expect(lib.testRegisterFunc00()).assertEqual('testRegisterFunc00');
-    })
-    it('test01', 0, () => {
-      expect(lib.testRegisterFunc01()).assertEqual('testRegisterFunc01');
-    })
-  })
-}
+export function runPureTests(): Promise<void>

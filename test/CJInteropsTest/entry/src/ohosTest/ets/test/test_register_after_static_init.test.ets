@@ -14,25 +14,16 @@
  */
 
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { JSON } from '@kit.ArkTS';
-
-interface Lib {
-  testRegisterAfterStaticInit00(): void;
-
-  testRegisterAfterStaticInit00_00(): void;
-}
+import * as lib from "libentry.so"
 
 export default function testJSModule04() {
   describe('TestRegisterAfterStaticInit', () => {
-    let lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       let i = Object.keys(lib).indexOf('testRegisterAfterStaticInit00_00');
       expect(i).assertEqual(-1);
       lib.testRegisterAfterStaticInit00();
-      lib = requireCJLib('libentry.so') as Lib;
       i = Object.keys(lib).indexOf('testRegisterAfterStaticInit00_00');
       expect(i).assertEqual(-1);
     })

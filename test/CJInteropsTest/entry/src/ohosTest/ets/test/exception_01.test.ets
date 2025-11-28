@@ -14,15 +14,8 @@
  */
 
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
 import { hilog } from '@kit.PerformanceAnalysisKit';
-
-interface Lib {
-  testException00(): void;
-
-  testException01(f: () => void): void;
-
-}
+import * as lib from "libentry.so"
 
 function functionThatThrows() {
   throw new Error("message of this error");
@@ -30,8 +23,6 @@ function functionThatThrows() {
 
 export default function testException01() {
   describe('TestException', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       try {
         lib.testException00();

@@ -15,33 +15,10 @@
 
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
-
-interface Lib {
-  test_types_00(a: number): void;
-  test_types_01(): void;
-  test_types_02(): void;
-  test_types_03(): void;
-  test_types_04(b: boolean): void;
-  test_types_05(c: string): void;
-  test_types_06(c: undefined): void;
-  test_types_07(c: null): void;
-  test_types_bigint_08(bigInt: bigint): void;
-  test_types_09(a: Array<string>): void;
-  test_types_10(c: string): void;
-  test_types_11(a: number): void;
-  test_types_12(): void;
-  test_types_13(c: string): void;
-  test_jsCurrent_14(c: string): void;
-  test_jsStringEx_15(c: string): void;
-  test_jsHashMap_16(c: string): void;
-}
+import * as lib from "libentry.so"
 
 export default function TestTypeValue() {
   describe('TestTypeValue', () => {
-    let tmp = requireCJLib('libentry.so')
-    const lib = tmp as Lib ;
-
     it('test_types_00', 0, () => {
       lib.test_types_00(32);
     })

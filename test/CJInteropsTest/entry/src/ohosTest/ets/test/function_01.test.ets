@@ -15,23 +15,7 @@
 
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
-
-interface Lib {
-  testFunction00(f: (a: number) => number): void;
-
-  testFunction01(f: (a: number) => number): void;
-
-  testFunction02(f: (a: number) => number): void;
-
-  testFunction03(f: (a: number) => number): void;
-
-  testFunction04(f: (a: number) => number): void;
-
-  testFunction05(f: (a: number) => number): void;
-
-  testFunction06(): (a: number) => number;
-}
+import * as lib from "libentry.so"
 
 function globalFunction(a: number): number {
   return a + 1;
@@ -55,8 +39,6 @@ class C {
 
 export default function functionTest() {
   describe('TestFunction', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       lib.testFunction00(globalFunction);
     })

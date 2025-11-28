@@ -14,13 +14,9 @@
  */
 
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { JSON } from '@kit.ArkTS';
-
-interface Lib {
-  testRegisterClass00: () => IPerson;
-}
+import * as lib from "libentry.so"
 
 interface IPerson {
   name: string;
@@ -29,8 +25,6 @@ interface IPerson {
 
 export default function testJSModule00() {
   describe('TestRegisterClass', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       lib.testRegisterClass00 = () => {
         class Person implements IPerson {

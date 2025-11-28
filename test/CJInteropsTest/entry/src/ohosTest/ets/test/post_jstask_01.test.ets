@@ -15,18 +15,10 @@
 
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
-
-interface Lib {
-  testPostJSTask00(): void;
-
-  testPostJSTask01(a: number, b: number, f: (a: number, b: number) => number): Promise<number>;
-}
+import * as lib from "libentry.so"
 
 export default function postJSTask() {
   describe('TestPostJSTask', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       lib.testPostJSTask00();
     })

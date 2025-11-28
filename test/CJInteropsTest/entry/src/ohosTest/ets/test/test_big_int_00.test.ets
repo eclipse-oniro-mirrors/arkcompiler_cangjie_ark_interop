@@ -15,43 +15,10 @@
 
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
-
-interface Lib {
-  testBigInt00(bigInt: bigint): void;
-
-  testBigInt01(): bigint;
-
-  testBigInt02(bigInt: bigint): void;
-
-  testBigInt03(bigInt: bigint): void;
-
-  testBigInt04(bigInt: bigint): void;
-
-  testBigInt05(bigInt: bigint): void;
-
-  testBigInt06(): bigint;
-
-  testBigInt07(): bigint;
-
-  testBigInt08(): bigint;
-
-  testBigInt09(): bigint;
-
-  testBigInt10(): bigint;
-
-  testBigInt11(): bigint;
-
-  testBigInt12(): bigint;
-
-  testBigInt13(): bigint;
-}
-
+import * as lib from "libentry.so"
 
 export default function testBigInt00() {
   describe('TestBigInt01', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       const bigInt = 123n;
       lib.testBigInt00(bigInt);

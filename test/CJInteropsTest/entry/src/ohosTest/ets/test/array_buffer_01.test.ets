@@ -15,20 +15,10 @@
 
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
-
-interface Lib {
-  testArray00<T>(array: Array<T>): void;
-
-  testArray01<T>(array: Array<T>): void;
-
-  testArray02(): Array<number | boolean>;
-}
+import * as lib from "libentry.so"
 
 export default function arrayTest() {
   describe('TestArray', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       let emptyArray = [];
       lib.testArray00(emptyArray);

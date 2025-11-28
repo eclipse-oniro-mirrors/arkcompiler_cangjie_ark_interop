@@ -14,20 +14,11 @@
  */
 
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect, ExpectExtend } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { JSON } from '@kit.ArkTS';
 
-interface Lib {
-  testRegisterOverride00(): () => number;
-
-  testRegisterOverride01(): number;
-}
-
 export default function testJSModule03() {
   describe('TestRegisterOverride', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       expect(lib.testRegisterOverride00()).assertEqual(3);
     })
