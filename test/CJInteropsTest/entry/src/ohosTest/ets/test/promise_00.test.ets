@@ -15,25 +15,9 @@
 
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
-
-interface Lib {
-  testString00(s: string): void;
-  testPromise00(promise: Promise<number>): void;
-
-  testPromise01(promise: Promise<number>): void;
-
-  testPromise02(): Promise<string>;
-
-  testPromise03(): Promise<string>;
-
-  testPromise04(): Promise<string>;
-
-  testPromise05(src: Promise<void>): Promise<number>;
-}
+import * as lib from "libentry.so"
 
 export default function promiseTest() {
-  const lib = requireCJLib('libentry.so') as Lib;
   describe('TestString00', () => {
     it('test00', 0, () => {
       const result = 114514;

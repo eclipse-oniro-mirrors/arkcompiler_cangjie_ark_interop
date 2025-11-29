@@ -25,4 +25,7 @@ cangjie_ark_interop_sdk_modules = [
 
 copy_ohos_cangjie_sdk_api_lib("copy_cangjie_ark_interop_libs") {
   ohos_inputs = cangjie_ark_interop_sdk_modules
+  kit_inputs = [
+    "//arkcompiler/cangjie_ark_interop/kit/CangjieKit:kit.CangjieKit"
+  ]
 }

@@ -15,28 +15,10 @@
 
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
-
-interface Lib {
-  testPromise10(promise: Promise<number>): void;
-
-  testPromise11(promise: Promise<number>): void;
-
-  testPromise12(): Promise<string>;
-
-  testPromise13(): Promise<string>;
-
-  testPromise14(): Promise<string>;
-
-  testPromise15(src: Promise<void>): Promise<number>;
-
-  testPromise16(src: Promise<void>): Promise<number>;
-}
+import * as lib from "libentry.so"
 
 export default function promiseTest1() {
   describe('TestPromise', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       const result = 114514;
       // js创建promise，传给cj，由cj处理promise结果。

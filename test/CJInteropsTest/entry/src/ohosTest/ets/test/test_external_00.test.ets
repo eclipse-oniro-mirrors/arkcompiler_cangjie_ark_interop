@@ -14,15 +14,8 @@
  */
 
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
 import worker from "@ohos.worker";
-
-interface Lib {
-  testExternal00(o: MyObject_test_external_00): void;
-  MyObject_test_external_00: (name: string, age: number, grade: number) => void
-  gcov_dump(): void
-  testRuntime(): void
-}
+import * as lib from "libentry.so"
 
 function runPureTestsAsync() {
     interface Req {
@@ -45,18 +38,10 @@ function runPureTestsAsync() {
     });
 }
 
-declare class MyObject_test_external_00 {
-  name: string;
-  age: number;
-  grade: number;
-}
-
 export default function TestExternal() {
-  const lib = requireCJLib('libentry.so') as Lib;
   describe('TestExternal', () => {
     it('test00', 0, () => {
-      let student = new
-      lib.MyObject_test_external_00("tom", 19, 99) as MyObject_test_external_00
+      let student = new lib.MyObject_test_external_00("tom", 19, 99)
       expect(student.name).assertEqual('tom');
       lib.testExternal00(student);
     })

@@ -15,68 +15,11 @@
 
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
+import * as lib from "libentry.so"
 import { print } from './utility';
-
-interface Lib {
-  testBigInt13(bigInt: bigint): void;
-
-  testBigInt14(bigInt: bigint): void;
-
-  testBigInt15(bigInt: bigint): void;
-
-  testBigInt16(bigInt: bigint): void;
-
-  testBigInt17(bigInt: bigint): void;
-
-  testBigInt18(bigInt: bigint): void;
-
-  testBigInt19(bigInt: bigint): void;
-
-  testBigInt20(bigInt: bigint): void;
-
-  testBigInt21(bigInt: bigint): void;
-
-  testBigInt22(bigInt: bigint): void;
-
-  testBigInt23(bigInt: bigint): void;
-
-  testBigInt24(bigInt: bigint): void;
-
-  testBigInt25(bigInt: bigint): void;
-
-  testBigInt26(bigInt: bigint): void;
-
-  testBigInt27(bigInt: bigint): void;
-
-  testBigInt28(bigInt: bigint): void;
-
-  testBigInt29(bigInt: bigint): void;
-
-  testBigInt30(bigInt: bigint): void;
-
-  testBigInt31(bigInt: bigint): void;
-
-  testBigInt32(bigInt: bigint): void;
-
-  testBigInt33(bigInt: bigint): void;
-
-  testBigInt34(bigInt: bigint): void;
-
-  testBigInt35(bigInt: bigint): void;
-
-  testBigInt36(bigInt: bigint): void;
-
-  testBigInt37(bigInt: bigint): void;
-
-  testBigInt38(bigInt: bigint): void;
-
-  testBigInt39(bigInt: bigint): void;
-}
 
 export default function testBigInt01() {
   describe('TestBigIntPrecision', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
     const int64MinValue = -9_223_372_036_854_775_808n;
     // print(int64MinValue.toString());
     const int64MaxValue = 9_223_372_036_854_775_807n;

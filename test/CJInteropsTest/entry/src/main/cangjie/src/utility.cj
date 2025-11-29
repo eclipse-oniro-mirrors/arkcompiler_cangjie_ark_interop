@@ -45,13 +45,24 @@ class HilogChannel {
     }
 }
 
-foreign func __gcov_dump(): Unit
 let _ = { =>
     Process.current.setEnv("GCOV_PREFIX", "/data/storage/el1/base/cov")
 }()
 
+@FastNative
+foreign func dlsym(handle: CPointer<Unit>, name: CString): CPointer<Unit>
+
 func gcov_dump(): Unit {
-    unsafe { __gcov_dump() }
+    unsafe {
+        let cName = LibC.mallocCString("__gcov_dump")
+        let handle = dlsym(CPointer<Unit>(), cName)
+        LibC.free(cName)
+        if (handle.isNull()) {
+            return
+        }
+        let call = CFunc<()->Unit>(symbol)
+        call()
+    }
     Hilog.error(0, "test", "call gcov_dump")
 }
 

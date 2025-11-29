@@ -14,24 +14,9 @@
  */
 
 import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from '@ohos/hypium';
-import { requireCJLib } from "libark_interop_loader.so"
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { JSON } from '@kit.ArkTS';
-
-interface Lib {
-  testRegisterModule00: undefined;
-  testRegisterModule01: null;
-  testRegisterModule02: boolean;
-  testRegisterModule03: number;
-  testRegisterModule04: string;
-  testRegisterModule05: (a: number, b: number) => number;
-  testRegisterModule06: () => IPerson;
-  testRegisterModule07: Symbol;
-  testRegisterModule08: Array<number | boolean>
-  testRegisterModule09: object;
-  testRegisterModule10: bigint;
-  testRegisterModule11: ArrayBuffer;
-}
+import * as lib from "libentry.so"
 
 interface IPerson {
   name: string;
@@ -39,8 +24,6 @@ interface IPerson {
 
 export default function testJSModule02() {
   describe('TestRegisterModule', () => {
-    const lib = requireCJLib('libentry.so') as Lib;
-
     it('test00', 0, () => {
       expect(typeof lib.testRegisterModule00).assertEqual('undefined');
       expect(lib.testRegisterModule00).assertEqual(undefined);
