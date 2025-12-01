@@ -60,7 +60,7 @@ func gcov_dump(): Unit {
         if (handle.isNull()) {
             return
         }
-        let call = CFunc<()->Unit>(symbol)
+        let call = CFunc<()->Unit>(handle)
         call()
     }
     Hilog.error(0, "test", "call gcov_dump")
