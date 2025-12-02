@@ -22,6 +22,7 @@ import std.io.{SeekPosition, readToEnd}
 import std.sync.Mutex
 import std.ast.{PropDecl, InterfaceDecl, FuncDecl, ClassDecl, TypeNode, Body, VarDecl, PrimaryCtorDecl, FuncParam, FuncType, RefType, Tokens}
 import std.collection.{ArrayList, HashMap}
+import std.regex.Regex
 
 let TYPE_TABLE_G = HashMap<String, String>(
     [("Int8", "number"), ("Int16", "number"), ("Int32", "number"), ("Int64", "number"), ("UInt8", "number"),
@@ -35,22 +36,22 @@ func genFuncDeclareFile(funcDecl: FuncDecl, isAsync: Bool) {
     let file = genFile()
     let funcDeclare = genFuncDeclare(funcDecl, isAsync)
 
-    funcDeclareWriteIntoFile(funcDeclare, file)
+    funcDeclareWriteIntoApiFile(funcDeclare, file)
 
     let pkgName = IDLCustomTypeWL.getPkgName(funcDecl.identifier.value)
     let newFile = genFile(currentPkg: pkgName)
-    declareWriteIntoFileTail("export declare function " + funcDeclare, newFile)
+    funcDeclareWriteIntoIndexFile("export declare function " + funcDeclare, newFile)
 }
 
 func genInterfaceDeclareFile(interfaceDecl: InterfaceDecl) {
     let file = genFile()
     let interfaceDeclare = genInterfaceDeclare(interfaceDecl)
 
-    declareWriteIntoFileHead(interfaceDeclare, file)
+    ciDeclareWriteIntoApiFile(interfaceDeclare, file)
 
     let pkgName = IDLCustomTypeWL.getPkgName(interfaceDecl.identifier.value)
     let newFile = genFile(currentPkg: pkgName)
-    declareWriteIntoFileHead(interfaceDeclare, newFile)
+    ciDeclareWriteIntoIndexFile(interfaceDeclare, newFile)
 }
 
 func getVisibleClassMembers(classDecl: ClassDecl) {
@@ -72,15 +73,15 @@ func genClassDeclareFile(classDecl: ClassDecl) {
 
     let visibleClassDecl = getVisibleClassMembers(classDecl)
     let classDeclare = genClassDeclare(visibleClassDecl)
-    declareWriteIntoFileHead(classDeclare, file)
+    ciDeclareWriteIntoApiFile(classDeclare, file)
 
     let classInitDeclare = genClassInitDeclare(visibleClassDecl)
-    funcDeclareWriteIntoFile(classInitDeclare, file)
+    funcDeclareWriteIntoApiFile(classInitDeclare, file)
 
     let pkgName = IDLCustomTypeWL.getPkgName(classDecl.identifier.value)
     let newFile = genFile(currentPkg: pkgName)
     let newClassDeclare = genClassDeclare(visibleClassDecl, withConstructor: true)
-    declareWriteIntoFileHead(newClassDeclare, newFile)
+    ciDeclareWriteIntoIndexFile(newClassDeclare, newFile)
 }
 
 func getFuncRetType(retType: TypeNode) {
@@ -269,20 +270,20 @@ func genFile(currentPkg!: String = "") {
     filePath.toString()
 }
 
-func funcDeclareWriteIntoFile(funcDeclare: String, filePath: String) {
+func funcDeclareWriteIntoApiFile(funcDeclare: String, filePath: String) {
     synchronized(MTX) {
         let file = try {
             File(filePath, OpenMode.ReadWrite)
         } catch (e: FSException | IllegalArgumentException) {
             return
         }
-        let context = String.fromUtf8(readToEnd(file))
+        let content = String.fromUtf8(readToEnd(file))
 
-        if (context.contains(funcDeclare)) {
+        if (content.contains(funcDeclare)) {
             return
         }
 
-        if (context.contains("interface CustomLib")) {
+        if (content.contains("interface CustomLib")) {
             file.seek(SeekPosition.End(-1))
             file.write((TAB_STR + funcDeclare).toArray())
             file.write("}".toArray())
@@ -291,47 +292,83 @@ func funcDeclareWriteIntoFile(funcDeclare: String, filePath: String) {
             file.write((TAB_STR + funcDeclare).toArray())
             file.write("}".toArray())
         }
-        file.flush()
         file.close()
     }
 }
 
-func declareWriteIntoFileTail(functionDecl: String, filePath: String) {
+func funcDeclareWriteIntoIndexFile(funcDecl: String, filePath: String) {
     synchronized(MTX) {
         let file = try {
             File(filePath, OpenMode.ReadWrite)
         } catch (e: FSException | IllegalArgumentException) {
             return
         }
-        let context = String.fromUtf8(readToEnd(file))
+        var content = String.fromUtf8(readToEnd(file))
 
-        if (context.contains(functionDecl)) {
+        if (content.contains(funcDecl)) {
             return
         }
 
-        file.seek(SeekPosition.End(0))
-        file.write(("\n" + functionDecl).toArray())
-        file.flush()
+        // Get the front part of funcDecl, e.g. "export declare function xxx".
+        let front = funcDecl.split("(")[0]
+        let re = Regex(front + "\\([\\s\\S]*?\\): [\\s\\S]*?\\n")
+        if (re.matches(content)) {
+            content = re.replaceAll(content, funcDecl)
+        } else {
+            content = content + "\n" + funcDecl
+        }
+
+        file.setLength(0)
+        file.seek(SeekPosition.Begin(0))
+        file.write(content.toArray())
         file.close()
     }
 }
 
-func declareWriteIntoFileHead(InterfaceDeclare: String, filePath: String) {
+func ciDeclareWriteIntoApiFile(ciDeclare: String, filePath: String) {
     synchronized(MTX) {
         let file = try {
             File(filePath, OpenMode.ReadWrite)
         } catch (e: FSException | IllegalArgumentException) {
             return
         }
-        let context = String.fromUtf8(readToEnd(file))
+        let content = String.fromUtf8(readToEnd(file))
 
-        if (context.contains(InterfaceDeclare)) {
+        if (content.contains(ciDeclare)) {
             return
         }
 
         file.seek(SeekPosition.Begin(0))
-        file.write((InterfaceDeclare + "\n" + context).toArray())
-        file.flush()
+        file.write((ciDeclare + "\n" + content).toArray())
+        file.close()
+    }
+}
+
+func ciDeclareWriteIntoIndexFile(ciDeclare: String, filePath: String) {
+    synchronized(MTX) {
+        let file = try {
+            File(filePath, OpenMode.ReadWrite)
+        } catch (e: FSException | IllegalArgumentException) {
+            return
+        }
+        var content = String.fromUtf8(readToEnd(file))
+
+        if (content.contains(ciDeclare)) {
+            return
+        }
+
+        // Get the first line of ciDeclare, e.g. "export declare interface XXX {".
+        let firstLine = ciDeclare.split("\n")[0]
+        let re = Regex(firstLine + "[\\s\\S]*?\\n}\\n")
+        if (re.matches(content)) {
+            content = re.replaceAll(content, ciDeclare)
+        } else {
+            content = "\n" + ciDeclare + content
+        }
+
+        file.setLength(0)
+        file.seek(SeekPosition.Begin(0))
+        file.write(content.toArray())
         file.close()
     }
 }
