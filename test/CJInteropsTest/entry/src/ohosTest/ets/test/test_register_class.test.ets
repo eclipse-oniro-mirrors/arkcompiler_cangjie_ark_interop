@@ -26,17 +26,6 @@ interface IPerson {
 export default function testJSModule00() {
   describe('TestRegisterClass', () => {
     it('test00', 0, () => {
-      lib.testRegisterClass00 = () => {
-        class Person implements IPerson {
-          name: string;
-          age: number;
-          constructor(name: string, age: number){
-            this.name = name
-            this.age = age
-          }
-        }
-        return new Person('tom', 23)
-      }
       let person = lib.testRegisterClass00();
       expect(JSON.stringify(person)).assertEqual('{"name":"tom","age":23}');
       expect(person.name).assertEqual('tom');

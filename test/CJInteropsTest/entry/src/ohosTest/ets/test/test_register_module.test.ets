@@ -50,17 +50,6 @@ export default function testJSModule02() {
     })
     it('test06', 0, () => {
       expect(typeof lib.testRegisterModule06).assertEqual('function');
-      lib.testRegisterModule06 = () => {
-        class Person implements IPerson {
-          name: string;
-          age: number;
-          constructor(name: string, age: number){
-            this.name = name
-            this.age = age
-          }
-        }
-        return new Person('tom', 23)
-      }
       const person = lib.testRegisterModule06();
       expect(person.name).assertEqual('tom');
       expect(JSON.stringify(person)).assertEqual('{"name":"tom","age":23}');

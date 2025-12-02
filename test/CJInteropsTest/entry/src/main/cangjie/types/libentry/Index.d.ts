@@ -60,7 +60,7 @@ export function testBigInt09(): bigint;
 export function testBigInt10(): bigint;
 export function testBigInt11(): bigint;
 export function testBigInt12(): bigint;
-export function testBigInt13(): bigint;
+export function testBigInt13(bigInt: bigint): bigint;
 export function testBigInt14(bigInt: bigint): void;
 export function testBigInt15(bigInt: bigint): void;
 export function testBigInt16(bigInt: bigint): void;
