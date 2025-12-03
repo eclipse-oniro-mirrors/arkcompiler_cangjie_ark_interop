@@ -61,29 +61,32 @@ class TestBigInt {
         let random = Random()
         let originals = [0, 123456798, -321457896564, random.nextInt64(), random.nextInt64(), random.nextInt64(),
             random.nextInt64(), Int64.Max, Int64.Min, Int64(Int32.Max), Int64(Int32.Min), Int64(UInt32.Max)]
-        for (originI64 in originals) {
-            let jsBigint = await(jsContext) {jsContext.bigint(originI64)}
-            let jsValue = await(jsContext) {jsBigint.toJSValue()}
-            let jsValueType = await(jsContext) {jsValue.typeof()}
-            @Expect(jsValueType == JSType.BIGINT)
-            @Expect(await(jsContext){jsValue.isBigInt()}, true)
-            @Expect(await(jsContext){jsValue.isNull()}, false)
-            @Expect(await(jsContext){jsValue.isBoolean()}, false)
-            @Expect(await(jsContext){jsValue.isUndefined()}, false)
-            @Expect(await(jsContext){jsValue.isArray()}, false)
-            @Expect(await(jsContext){jsValue.isClass()}, false)
-            @Expect(await(jsContext){jsValue.isNumber()}, false)
-            @Expect(await(jsContext){jsValue.isString()}, false)
-            @Expect(await(jsContext){jsValue.isObject()}, false)
-            @Expect(await(jsContext){jsValue.isSymbol()}, false)
-            @Expect(await(jsContext){jsValue.isPromise()}, false)
-            @Expect(await(jsContext){jsValue.isFunction()}, false)
-            await(jsContext) {jsValue.asBigInt()}
-            let received0 = await(jsContext) {jsBigint.toBigInt()}
-            let received1 = await(jsContext) {jsValue.toBigInt()}
-            @Expect(received0, received1)
-            @Expect(received0.toInt64(), originI64)
+        await(jsContext) {
+            for (originI64 in originals) {
+                let jsBigint = jsContext.bigint(originI64)
+                let jsValue = jsBigint.toJSValue()
+                let jsValueType = jsValue.typeof()
+                @Expect(jsValueType == JSType.BIGINT)
+                @Expect(jsValue.isBigInt(), true)
+                @Expect(jsValue.isNull(), false)
+                @Expect(jsValue.isBoolean(), false)
+                @Expect(jsValue.isUndefined(), false)
+                @Expect(jsValue.isArray(), false)
+                @Expect(jsValue.isClass(), false)
+                @Expect(jsValue.isNumber(), false)
+                @Expect(jsValue.isString(), false)
+                @Expect(jsValue.isObject(), false)
+                @Expect(jsValue.isSymbol(), false)
+                @Expect(jsValue.isPromise(), false)
+                @Expect(jsValue.isFunction(), false)
+                jsValue.asBigInt()
+                let received0 = jsBigint.toBigInt()
+                let received1 = jsValue.toBigInt()
+                @Expect(received0, received1)
+                @Expect(received0.toInt64(), originI64)
+            }
         }
+
     }
 
     @TestCase

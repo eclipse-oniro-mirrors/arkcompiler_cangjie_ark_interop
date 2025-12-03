@@ -17,6 +17,8 @@
 
 package ohos.ark_interop
 
+import ohos.business_exception.*
+
 import std.sync.{Mutex, AtomicInt8}
 import std.collection.HashMap
 
@@ -83,6 +85,8 @@ foreign func ARKTS_GetGlobalNapiEnv(env: JSEnv): napi_env
 
 @FastNative
 foreign func ARKTS_GetExceptionAndClear(env: JSEnv): JSValue_
+
+foreign func ARKTS_RequireArkModule(env: JSEnv, path: CPointer<UInt8>, size: UIntNative, kind: Int32): JSValue_
 
 @C
 func asyncCallbackExecutor(env: JSEnv, id: Int64): Unit {
@@ -888,5 +892,94 @@ public class JSContext {
             Int32(0)
         }
         jsCodeError(code, message, stack)
+    }
+
+    private let cachedKits = HashMap<String, JSObject>()
+    var isOnLoadingCJ = false
+
+    // create kit object
+    private func createKit(config: KitConfig): JSObject {
+        let result = object()
+        for ((pkgName, data) in config) {
+            match (data) {
+                // import napi default, like: import hilog from "@ohos.hilog"(name: "hilog", pkgName: "@ohos.hilog")
+                case Package(name) =>
+                    result.defineOwnAccessor(name, getter: { context, _ =>
+                        context.requireArkModule(pkgName)
+                    })
+                // import napi content.
+                case Decls(decls) =>
+                    for (one in decls) {
+                        match (one) {
+                            // export as import, like:
+                            // import {AVCastPickerState} from "@ohos.multimedia.avCastPickerParam"
+                            // export {AVCastPickerState}
+                            case Name(name) =>
+                                result.defineOwnAccessor(name, getter: { context, _ =>
+                                    let pkg = context.requireArkModule(pkgName).asObject()
+                                    return pkg[name]
+                                })
+                            // export alias, like:
+                            // import {LabelOptions as ChipItemLabelOptions} from "@ohos.arkui.advanced.ChipGroup"
+                            // export {ChipItemLabelOptions} (from: "LabelOptions", to: ChipItemLabelOptions)
+                            case Mapping(from, to) =>
+                                result.defineOwnAccessor(to, getter: { context, _ =>
+                                    let pkg = context.requireArkModule(pkgName).asObject()
+                                    return pkg[from]
+                                })
+                        }
+                    }
+            }
+        }
+        return result
+    }
+
+    /**
+     * Load ArkTS module.
+     *
+     * @param { String } src - ArkTS module specifier.
+     * @throws { BusinessException } 34300002 - Outside error occurred.
+     * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @throws { BusinessException } 34300004 - Thread mismatch.
+     * @throws { BusinessException } 34300006 - The module not exist.
+     * @throws { BusinessException } 34300007 - Can not requireArkModule during initializing cangjie module.
+     * @throws { BusinessException } 34300008 - Current application have not support requireArkModule of the url.
+     * @returns { JSValue } Module return value, typically an object. Returns undefined if loading fails.
+     */
+    @!APILevel[
+        since: "23",
+        throwexception: true
+    ]
+    public func requireArkModule(src: String): JSValue {
+        let env = this.env // thread check and lifecycle check here.
+        if (isOnLoadingCJ) {
+            throw noRequireWhenExport()
+        }
+        if (!ArkModuleHelper.checkSpecifier(src)) {
+            throw moduleNotExist(src)
+        }
+        // ArkTS kit dit not exist at runtime, cangjie create an object to fake a kit module object.
+        if (src.startsWith("@kit.")) {
+            if (let Some(object) <- cachedKits.get(src)) {
+                return object.toJSValue()
+            }
+            let object = createKit(kitConfigs[src])
+            cachedKits[src] = object
+            return object.toJSValue()
+        }
+        // process native
+        let (url, kind) = ArkModuleHelper.resolveUrl(src)
+        unsafe {
+            let handle = acquireArrayRawData(url.rawData())
+            let size = UIntNative(url.size)
+            let result = try {
+                ARKTS_RequireArkModule(env, handle.pointer, size, kind)
+            } catch (e: Exception) {
+                releaseArrayRawData(handle)
+                throw e
+            }
+            releaseArrayRawData(handle)
+            return JSValue(this, result)
+        }
     }
 }

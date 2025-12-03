@@ -1,0 +1,9 @@
+{
+    "name": "localhar",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Index.ets",
+    "author": "",
+    "license": "Apache-2.0",
+    "dependencies": {}
+}

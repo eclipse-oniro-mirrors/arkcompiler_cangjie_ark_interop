@@ -42,14 +42,14 @@ func testArray00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -9223372036854775808"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -9223372036854775808"
         )
     }
     try {
         array[-1]
         Assert.isUnreachable()
     } catch (e: BusinessException) {
-        Assert.equals(e.toString(), "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -1")
+        Assert.equals(e.toString(), "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -1")
     }
     try {
         array[Int64.Max]
@@ -57,7 +57,7 @@ func testArray00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: 9223372036854775807"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: 9223372036854775807"
         )
     }
 
@@ -68,14 +68,14 @@ func testArray00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -9223372036854775808"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: -9223372036854775808"
         )
     }
     try {
         array[-1] = Random.jsValue(jsContext)
         Assert.isUnreachable()
     } catch (e: BusinessException) {
-        Assert.equals(e.toString(), "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -1")
+        Assert.equals(e.toString(), "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: -1")
     }
     try {
         array[Int64.Max] = Random.jsValue(jsContext)
@@ -83,7 +83,7 @@ func testArray00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: ${Int64.Max}"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: ${Int64.Max}"
         )
     }
 
@@ -94,14 +94,14 @@ func testArray00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -9223372036854775808"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: -9223372036854775808"
         )
     }
     try {
         array[-1] = Random.jsHeapObject(jsContext)
         Assert.isUnreachable()
     } catch (e: BusinessException) {
-        Assert.equals(e.toString(), "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: -1")
+        Assert.equals(e.toString(), "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: -1")
     }
     try {
         array[Int64.Max] = Random.jsHeapObject(jsContext)
@@ -109,7 +109,7 @@ func testArray00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, 0), given: 9223372036854775807"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: 9223372036854775807"
         )
     }
     jsContext.undefined().toJSValue()

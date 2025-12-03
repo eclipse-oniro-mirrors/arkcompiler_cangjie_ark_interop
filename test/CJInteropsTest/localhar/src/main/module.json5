@@ -1,0 +1,9 @@
+{
+    "module": {
+        "name": "localhar",
+        "type": "har",
+        "deviceTypes": [
+            "default"
+        ]
+    }
+}

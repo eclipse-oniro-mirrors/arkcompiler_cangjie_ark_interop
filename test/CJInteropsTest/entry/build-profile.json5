@@ -23,6 +23,27 @@
       workers: [
         "./src/ohosTest/ets/test/PureWorker.ets"
       ]
+    },
+    "arkOptions": {
+      "runtimeOnly": {
+        "packages": [
+          "localhar",
+          "@ohos/lottie",
+        ],
+        "sources": [
+          "./src/main/ets/localets.ets"
+        ]
+      }
+    },
+    "externalNativeOptions": {
+      "path": "./src/main/cpp/CMakeLists.txt",
+      "arguments": "",
+      "cppFlags": "",
+    },
+    "sourceOption": {
+      "workers": [
+        "./src/ohosTest/ets/test/PureWorker.ets"
+      ]
     }
   },
   buildOptionSet: [

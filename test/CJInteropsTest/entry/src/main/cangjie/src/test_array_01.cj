@@ -37,7 +37,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${Int64.Min}"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${Int64.Min}"
         )
     }
     try {
@@ -46,7 +46,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: -1"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: -1"
         )
     }
     let elem_0 = array[0]
@@ -69,7 +69,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${array.size}"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${array.size}"
         )
     }
     try {
@@ -78,7 +78,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${array.size + 1}"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${array.size + 1}"
         )
     }
 
@@ -88,7 +88,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${Int64.Max}"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${Int64.Max}"
         )
     }
 
@@ -99,7 +99,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${Int64.Min}"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: ${Int64.Min}"
         )
     }
     try {
@@ -108,7 +108,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: -1"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: -1"
         )
     }
 
@@ -128,7 +128,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${Int64.Max}"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: ${Int64.Max}"
         )
     }
 
@@ -139,7 +139,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${Int64.Min}"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: ${Int64.Min}"
         )
     }
     try {
@@ -148,7 +148,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: -1"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: -1"
         )
     }
     for (index in 0..array.size) {
@@ -168,7 +168,7 @@ func testArray01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     } catch (e: BusinessException) {
         Assert.equals(
             e.toString(),
-            "BusinessExceptionBusinessException: errorCode: 34300001, message: The accessing index is out of range, allowed: [0, ${array.size}), given: ${Int64.Max}"
+            "BusinessException: errorcode: 34300001, message: The accessing index is out of range, allowed: [0, ${UInt32.Max}), given: ${Int64.Max}"
         )
     }
     jsContext.undefined().toJSValue()

@@ -55,22 +55,24 @@ class TestJSValue {
     @TestCase
     func testJSValueUndefined() {
         let jsContext = getJSContext()
-        let undefined = jsContext.undefined()
-        let value = undefined.toJSValue()
-        @Expect(await(jsContext){value.isUndefined()}, true)
-        @Expect(await(jsContext){value.isBoolean()}, false)
-        @Expect(await(jsContext){value.isArray()}, false)
-        @Expect(await(jsContext){value.isNull()}, false)
-        @Expect(await(jsContext){value.isClass()}, false)
-        @Expect(await(jsContext){value.isNumber()}, false)
-        @Expect(await(jsContext){value.isString()}, false)
-        @Expect(await(jsContext){value.isBigInt()}, false)
-        @Expect(await(jsContext){value.isObject()}, false)
-        @Expect(await(jsContext){value.isSymbol()}, false)
-        @Expect(await(jsContext){value.isPromise()}, false)
-        @Expect(await(jsContext){value.isFunction()}, false)
-        let valueType = await(jsContext) {value.typeof()}
-        @Expect(valueType == JSType.UNDEFINED)
+        await (jsContext) {
+            let undefined = jsContext.undefined()
+            let value = undefined.toJSValue()
+            @Expect(value.isUndefined(), true)
+            @Expect(value.isBoolean(), false)
+            @Expect(value.isArray(), false)
+            @Expect(value.isNull(), false)
+            @Expect(value.isClass(), false)
+            @Expect(value.isNumber(), false)
+            @Expect(value.isString(), false)
+            @Expect(value.isBigInt(), false)
+            @Expect(value.isObject(), false)
+            @Expect(value.isSymbol(), false)
+            @Expect(value.isPromise(), false)
+            @Expect(value.isFunction(), false)
+            let valueType = value.typeof()
+            @Expect(valueType == JSType.UNDEFINED)
+        }
     }
 
     @TestCase
@@ -121,9 +123,10 @@ class TestJSValue {
         @Expect(await(jsContext){value.isFunction()}, false)
         let valueType = await(jsContext) {value.typeof()}
         @Expect(valueType == JSType.BOOLEAN)
-        let cjValue = await(jsContext) {value.toBoolean()}
-        @Expect(value.toBoolean(), false)
-        @Expect(value.asBoolean().toBool(), false)
+        await(jsContext) {
+            @Expect(value.toBoolean(), false)
+            @Expect(value.asBoolean().toBool(), false)
+        }
     }
 
     @TestCase
@@ -256,14 +259,16 @@ class TestJSValue {
     @TestCase
     func testJSValueSymbol() {
         let jsContext = getJSContext()
-        let symbol = await(jsContext) {jsContext.symbol()}
-        let value = await(jsContext) {symbol.toJSValue()}
-        let value1 = symbol.toJSValue()
-        @Expect(await(jsContext){value.strictEqual(value1)})
-        @Expect(await(jsContext){value.isSymbol()})
-        @Expect(await(jsContext){value.typeof()} == JSType.SYMBOL)
-        await(jsContext) {value.asSymbol()}
-        @Expect(await(jsContext){symbol.description}, "")
+        await(jsContext) {
+            let symbol = jsContext.symbol()
+            let value = symbol.toJSValue()
+            let value1 = symbol.toJSValue()
+            @Expect(value.strictEqual(value1))
+            @Expect(value.isSymbol())
+            @Expect(value.typeof() == JSType.SYMBOL)
+            value.asSymbol()
+            @Expect(symbol.description, "")
+        }
     }
 
     @TestCase

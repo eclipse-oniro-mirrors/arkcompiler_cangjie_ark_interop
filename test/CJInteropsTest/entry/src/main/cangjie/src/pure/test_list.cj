@@ -35,4 +35,5 @@ func testsuite(): Unit {
     registerTestSuite("TestString", {=> TestString()})
     registerTestSuite("TestSymbol", {=> TestSymbol()})
     registerTestSuite("TestUtf16String", {=> TestUtf16String()})
+    registerTestSuite("TestRequireArkModule", {=> TestRequireArkModule()})
 }

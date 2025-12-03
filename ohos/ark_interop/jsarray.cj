@@ -146,8 +146,8 @@ public class JSArray <: JSHeapObject {
     ]
     public operator func [](index: Int64, value!: JSHeapObject): Unit {
         let env = context.env // do lifecycle check and thread check here.
-        if (index < 0) {
-            throw jsArrayRangeMisMatch(0, size, index)
+        if (index < 0 || index > Int64(UInt32.Max)) {
+            throw jsArrayRangeMisMatch(0, Int64(UInt32.Max), index)
         }
         unsafe { ARKTS_SetElement(env, innerValue, UInt32(index), value.innerValue) }
     }

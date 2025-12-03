@@ -38,7 +38,7 @@ class TestJSClass {
             let _ = await(jsContext) {jsClass.new()}
             @Assert(false)
         } catch (e: BusinessException) {
-            @Expect(e.code, 0)
+            @Expect(e.code, 34300002)
         }
     }
     @TestCase

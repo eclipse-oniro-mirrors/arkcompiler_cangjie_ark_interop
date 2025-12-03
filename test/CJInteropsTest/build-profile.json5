@@ -52,5 +52,21 @@
         },
       ],
     },
+    {
+      "name": "localhar",
+      "srcPath": "./localhar"
+    },
+    {
+      "name": "localhsp",
+      "srcPath": "./localhsp",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
   ],
 }

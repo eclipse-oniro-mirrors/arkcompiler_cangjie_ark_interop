@@ -3,6 +3,10 @@ import * as lib from "libentry.pure.so";
 
 const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
 
+globalThis.callSync = (callback: ()=>void) => {
+    callback()
+}
+
 workerPort.onmessage = async (event: MessageEvents) => {
     interface Res {
         data: string;
