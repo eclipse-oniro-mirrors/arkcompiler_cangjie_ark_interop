@@ -1,4 +1,4 @@
-import { requireCJLib } from "libark_interop_loader.so";
+import testsuite from "../../../ohosTest/ets/test/List.test";
 
 interface CJLib {
   testCJ(src: string): string
@@ -19,8 +19,7 @@ struct Index {
           middle: { anchor: '__container__', align: HorizontalAlign.Center }
         })
         .onClick(() => {
-          const lib = requireCJLib("libohos_app_cangjie_entry.so") as CJLib
-          this.message = lib.testCJ("Cangjie")
+            testsuite()
         })
     }
     .height('100%')

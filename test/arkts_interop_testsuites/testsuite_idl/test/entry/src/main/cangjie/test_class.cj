@@ -35,16 +35,61 @@ let _ = JSModule.registerFunc("test02") {
     jsContext.boolean(true).toJSValue()
 }
 
+private var ticketCounter: Int64 = 0
+
+@Interop[ArkTS]
+public class TicketMachine {
+    public init() {}
+
+    public static func reset(nextId: Int64): Unit {
+        ticketCounter = if (nextId > 0) {
+            nextId
+        } else {
+            0
+        }
+    }
+
+    public static func nextId(): Int64 {
+        ticketCounter += 1
+        return ticketCounter
+    }
+}
+
+@Interop[ArkTS]
+public class Person {
+    public var name: String = ""
+    public var age: Int32 = 0
+
+    public init() {}
+
+    public static func build(): Person {
+        return Person()
+    }
+
+    public static func buildFromSeason(season: Season): Person {
+        let person = Person()
+        match (season) {
+            case Season.Spring =>
+                person.name = "breeze"
+                person.age = 1
+            case Season.Summer =>
+                person.name = "sun"
+                person.age = 2
+            case Season.Autumn =>
+                person.name = "harvest"
+                person.age = 3
+            case Season.Winter =>
+                person.name = "ember"
+                person.age = 4
+        }
+        return person
+    }
+}
+
 @Interop[ArkTS]
 public class AbnormalClass {
-    // 不支持主构造函数
-    //    public AbnormalClass() {
-    //    }
     public init() {
     }
-    // 静态成员函数被禁止
-    //    public static func staticMemberFunction(): Unit {
-    //    }
     // 静态成员属性被禁止
     //    public static prop staticMemberProperty: Int64 {
     //        get() {
@@ -103,6 +148,31 @@ public class ClassThatImplementsInterfaces {
 @Interop[ArkTS]
 public class ClassThatBothInheritsAnotherClassAndImplementsInterfaces {
     public init() {}
+}
+
+@Interop[ArkTS]
+public class ClassWithMultiCtors {
+    public var name: String = "default"
+
+    public init() {
+        this.name = "empty"
+    }
+
+    public init(a: Int64) {
+        this.name = "Int64"
+    }
+
+    public ClassWithMultiCtors(a: Float64) {
+        this.name = "Float64"
+    }
+
+    public init(a: Int64, b: Int64) {
+        this.name = "2Int64"
+    }
+
+    public init(a: Float64, b: Float64) {
+        this.name = "2Float64"
+    }
 }
 
 @Interop[ArkTS]

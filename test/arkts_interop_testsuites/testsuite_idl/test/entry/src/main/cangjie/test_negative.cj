@@ -158,3 +158,29 @@ import std.core
 //public func createJSStringExAsync(): JSStringEx {
 //
 //}
+
+// error: Generics are not supported within the `Interop` macro scope.
+//@Interop[ArkTS]
+//public enum E<T> {
+//    A
+//}
+
+// error: Enum parameterized constructors are not supported within the `Interop` macro scope.
+//@Interop[ArkTS]
+//public enum E {
+//    A(Int8)
+//}
+
+// error: Enum members support only parameterless constructors within the `Interop` macro scope.
+//@Interop[ArkTS]
+//public enum E {
+//    A
+//
+//    public func foo() {}
+//}
+
+// error: Modifier only supports `public` modifier within the `Interop` macro scope.
+//@Interop[ArkTS]
+//enum E {
+//    A
+//}

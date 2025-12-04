@@ -21,6 +21,7 @@
   "author": "",
   "license": "",
   "dependencies": {
+    "libohos_app_cangjie_entry.so": "file:./src/main/cangjie/types/libohos_app_cangjie_entry",
     "libark_interop_loader.so": "file:./src/main/cangjie/loader",
     "libark_interop_api.so": "file:./src/main/cangjie/ark_interop_api"
   }

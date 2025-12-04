@@ -15,6 +15,7 @@
 
 import TestAsyncFunction from './TestAsyncFunction.test';
 import TestBinaryTree from './TestBinaryTree.test';
+import TestEnum from './TestEnum.test';
 import TestJSArrayEx from './TestJSArrayEx.test';
 import TestJSClass from './TestJSClass.test';
 import TestJSMapEx from './TestJSMapEx.test';
@@ -25,11 +26,11 @@ import TestParameterNumber from './TestParameterNumber.test';
 import TestParameterType from './TestParameterType.test';
 import TestQuestionMarkSyntacticSugar from './TestQuestionMarkSyntacticSugar.test';
 import TestReturnType from './TestReturnType.test'
-import TestStringAnalyzer from './TestStringAnalyzer.test';
 import TestZoo from './TestZoo.test';
 
 export default function testsuite() {
   TestAsyncFunction();
+  TestEnum();
   TestNamedParameter();
   TestOption();
   TestParameterNumber();
@@ -41,6 +42,5 @@ export default function testsuite() {
   TestJSMapEx();
   TestBinaryTree();
   TestZoo();
-  TestStringAnalyzer();
   TestJSClass();
 }

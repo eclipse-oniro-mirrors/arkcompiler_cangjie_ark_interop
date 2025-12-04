@@ -17,7 +17,7 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.{Visitor, Decl, FuncDecl, RefType, PrimaryCtorDecl, InterfaceDecl, ClassDecl, PropDecl, Token, Tokens, MacroExpandDecl, PackageHeader, VarDecl, parseProgram, cangjieLex}
+import std.ast.{Visitor, Decl, FuncDecl, RefType, PrimaryCtorDecl, InterfaceDecl, ClassDecl, PropDecl, EnumDecl, Token, Tokens, MacroExpandDecl, PackageHeader, VarDecl, parseProgram, cangjieLex}
 import std.collection.{ArrayList, HashSet, HashMap, forEach}
 import std.fs.{FileInfo, Path, FSException, File, Directory, OpenMode}
 import std.sync.Mutex
@@ -31,7 +31,28 @@ let CONTEXT_TYPE_G: Array<String> = ["JSStringEx", "JSArrayEx", "JSHashMapEx"]
 func checkModifierBePublic(decl: Decl) {
     let modifiers = decl.modifiers
     if (modifiers.size == 0 || modifiers.size > 1 || modifiers.get(0).getOrThrow().keyword.kind != PUBLIC) {
-        IDLUtil.diagReportTE(Tokens(decl.keyword), "Modifier only supports public within the `Interop` macro scope.")
+        IDLUtil.diagReportTE(Tokens(decl.keyword),
+            "Modifier only supports `public` modifier within the `Interop` macro scope.")
+    }
+}
+
+// public [static]
+func checkModifierBePublicCanStatic(decl: Decl) {
+    let modifiers = decl.modifiers
+    var hasPublic = false
+    for (mod in modifiers) {
+        if (mod.keyword.kind == PUBLIC) {
+            hasPublic = true
+            continue
+        }
+        if (mod.keyword.kind != STATIC) {
+            IDLUtil.diagReportTE(Tokens(mod.keyword),
+                "Class members only support the `static` modifier within the `Interop` macro scope.")
+        }
+    }
+    if (!hasPublic) {
+        IDLUtil.diagReportTE(Tokens(decl.keyword),
+            "Class members must have `public` modifier within the `Interop` macro scope.")
     }
 }
 
@@ -173,10 +194,8 @@ func checkStaticInit(classDecl: ClassDecl) {
     }
 }
 
-// one init
+// at least one init
 func checkClassInitFuncNum(classDecl: ClassDecl) {
-    var cnt: Int8 = 0
-
     let decls = classDecl.body.decls
     for (decl in decls) {
         if (IDLClassMemberInvisible(decl).isMemberInvisible()) {
@@ -185,24 +204,16 @@ func checkClassInitFuncNum(classDecl: ClassDecl) {
         match (decl) {
             case funcDecl: FuncDecl =>
                 if (funcDecl.identifier.value == "init") {
-                    cnt++
-                    if (cnt > 1) {
-                        break
-                    }
+                    return
                 }
             case primary: PrimaryCtorDecl =>
-                cnt++
-                if (cnt > 1) {
-                    break
-                }
+                return
             case _ => ()
         }
     }
 
-    if (cnt != 1) {
-        IDLUtil.diagReportTE(Tokens(classDecl.identifier),
-            "Only one constructor is supported in a class within the `Interop` macro scope.")
-    }
+    IDLUtil.diagReportTE(Tokens(classDecl.identifier),
+        "At least one constructor is required in a class within the `Interop` macro scope.")
 }
 
 // no duplicate func name
@@ -245,7 +256,7 @@ func checkClassInitFunc(funcDecl: FuncDecl) {
 // check parameter, operator func and member func
 func checkClassFunc(funcDecl: FuncDecl) {
     checkOperator(funcDecl)
-    checkModifierBePublic(funcDecl)
+    checkModifierBePublicCanStatic(funcDecl)
     checkParamDefault(funcDecl)
     checkRetType(funcDecl)
 }
@@ -298,7 +309,16 @@ func checkClassMembers(classDecl: ClassDecl) {
     }
 }
 
-/* 
+func checkEnumConstructors(enumDecl: EnumDecl) {
+    for (ctor in enumDecl.constructors) {
+        if (ctor.typeArguments.size > 0) {
+            IDLUtil.diagReportTE(Tokens(ctor.identifier),
+                "Enum parameterized constructors are not supported within the `Interop` macro scope.")
+        }
+    }
+}
+
+/*
     modifiers          | type parameters | named parameters                     | return value
     only can be public | not supported   | supported, cannot have default value | cannot be defaulted
  */
@@ -328,15 +348,28 @@ func checkInterface(interfaceDecl: InterfaceDecl) {
 
 /*
     modifiers          | type paramenters | inherited from other class            | inherited from other interface            |
-    only can be public | not supported    | supported, but not expand super class | supported, but not expand super interface |
+    can only be public | not supported    | supported, but not expand super class | supported, but not expand super interface |
 
-    modifiers of member | static constructor | constructor      | member variables         | operator function | member attibutes |
-    only can be public  | not supported      | support one most | supported except generic | not supported     | supported        |
+    modifiers of member                 | static constructor | constructors | member variables         | operator function | member attibutes |
+    can only be public or public static | not supported      | supported    | supported except generic | not supported     | supported        |
  */
 func checkClass(classDecl: ClassDecl) {
     checkModifierBePublic(classDecl)
     checkGenericParam(classDecl)
     checkClassMembers(classDecl)
+}
+
+/*
+    modifiers          | type paramenters | inherited from other class            | inherited from other interface            |
+    only can be public | not supported    | supported, but not expand super class | supported, but not expand super interface |
+
+    | constructors                    | member functions | operator functions | member properties |
+    | only parameterless constructors | not supported    | not supported      | not supported     |
+ */
+func checkEnum(enumDecl: EnumDecl) {
+    checkModifierBePublic(enumDecl)
+    checkGenericParam(enumDecl)
+    checkEnumConstructors(enumDecl)
 }
 
 func getCangjieSrcPath(): String {
@@ -463,7 +496,7 @@ class IDLCustomTypeWL {
                     tokenStr += (fileTokens[i].value + "\n")
                 }
 
-                let classMDArr = Regex(##"^@\s*Interop\s*\[\s*ArkTS\s*\]\s*public\s*(class|interface)\s*(\w+)$"##,
+                let classMDArr = Regex(##"^@\s*Interop\s*\[\s*ArkTS\s*\]\s*public\s*(class|interface|enum)\s*(\w+)$"##,
                     [MultiLine]).findAll(tokenStr, group: true)
                 for (md in classMDArr) {
                     whitelistSet.add(md.matchString(2))
