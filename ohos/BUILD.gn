@@ -81,6 +81,9 @@ ohos_cangjie_shared_library("ohos.ark_interop") {
 
   deps = [
     ":utf16string",
+  ]
+
+  data_deps = [
     "../tools/config_gen:ark_interop_config",
   ]
 
