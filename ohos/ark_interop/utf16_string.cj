@@ -690,6 +690,9 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
             release()
             return []
         }
+        if (maxSplit > Int64(UInt32.Max)) {
+            maxSplit = Int64(UInt32.Max)
+        }
         let list = ArrayList<Utf16String>()
         let jArr = unsafe { CJUtf16StringSplit(handle_, separator.handle_, UInt32(maxSplit)) }
 
