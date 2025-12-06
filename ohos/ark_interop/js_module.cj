@@ -148,6 +148,9 @@ func searchNotExist(src: String): ?String {
     let begins = ["cannot find record '", "Cannot find module '"]
     for (target in begins) {
         let endingChar: UInt8 = "'"
+        if (!src.startsWith(target)) {
+            continue
+        }
         if (let Some(ending) <- src.indexOf(endingChar, target.size)) {
             return src[target.size..ending]
         }
