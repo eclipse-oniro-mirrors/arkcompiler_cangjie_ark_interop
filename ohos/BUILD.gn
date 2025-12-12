@@ -137,6 +137,7 @@ ohos_cangjie_macro_library("ohos.ark_interop_macro") {
     "ark_interop_macro/ark_idl_define.cj",
     "ark_interop_macro/ark_idl_func.cj",
     "ark_interop_macro/ark_idl_interface.cj",
+    "ark_interop_macro/ark_idl_enum.cj",
   ]
   compilation_config = "pipeline=NG"
   subsystem_name = "arkcompiler"
