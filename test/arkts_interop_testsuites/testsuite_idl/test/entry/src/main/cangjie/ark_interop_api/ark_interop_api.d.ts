@@ -107,7 +107,9 @@ export declare interface CustomLib {
     ClassWithMultiCtors: {
         new (): ClassWithMultiCtors;
         new (a: number): ClassWithMultiCtors;
+        new (a: string): ClassWithMultiCtors;
         new (a: number, b: number): ClassWithMultiCtors;
+        new (a: string, b: string): ClassWithMultiCtors;
     }
     f(p: Array<string>, p1: Array<string>, p2: Map<string, string>): void
     test(p0: Map<string, number>): void

@@ -32,14 +32,14 @@ class IDLUtil {
         if (attrTokens.size == 1) {
             e = parseExpr(attrTokens)
             if (e.toTokens().toString() != "ArkTS") {
-                diagReportTE(attrTokens, "Only `ArkTS` interop macro is supported.")
+                diagReportTEAndThrow(attrTokens, "Only `ArkTS` interop macro is supported.")
                 return InteropKind.InteropOther
             }
             return InteropKind.InteropArkTS
         } else if (attrTokens.size == 3) {
             (e, p) = parseExprFragment(attrTokens)
             if (e.toTokens().toString() != "ArkTS" || attrTokens[p].kind != TokenKind.COMMA) {
-                diagReportTE(attrTokens,
+                diagReportTEAndThrow(attrTokens,
                     "Incorrect attributed macros format. Please write in the format of " +
                         "`@Interop[ArkTS]` or `@Interop[ArkTS, Async]` or `@Interop[ArkTS, Invisible]`.")
                 return InteropKind.InteropOther
@@ -50,13 +50,13 @@ class IDLUtil {
             } else if (e.toTokens().toString() == "Invisible") {
                 return InteropKind.InteropInvisible
             } else {
-                diagReportTE(attrTokens,
+                diagReportTEAndThrow(attrTokens,
                     "Incorrect attributed macros format. Please write in the format of " +
                         "`@Interop[ArkTS]` or `@Interop[ArkTS, Async]` or `@Interop[ArkTS, Invisible]`.")
                 return InteropKind.InteropOther
             }
         } else {
-            diagReportTE(attrTokens,
+            diagReportTEAndThrow(attrTokens,
                 "Incorrect attributed macros format. Please write in the format of " +
                     "`@Interop[ArkTS]` or `@Interop[ArkTS, Async]` or `@Interop[ArkTS, Invisible]`.")
         }
@@ -167,6 +167,21 @@ class IDLUtil {
         }
     }
 
+    // Without let keyword.
+    static func jsvalue2Cangjie1(paramType: TypeNode, desVarName: Tokens, srcVarName: Tokens, context: Tokens) {
+        var desSen = Tokens()
+        if (desVarName.size != 0) {
+            desSen = quote($desVarName =)
+        }
+        match (paramType) {
+            case p: FuncType =>
+                let argCallbackName = genRandomVarName("argCallback")
+                return quote($argCallbackName = $srcVarName.asFunction()
+                            $(desSen)$(genFuncTypeLambda(p, argCallbackName, context)))
+            case p: TypeNode => return quote($(desSen)$p.fromJSValue($context, $srcVarName))
+        }
+    }
+
     static func genInputArg(funcParam: FuncParam, newArgName: Tokens, notLast: Bool): Tokens {
         var notName = Tokens()
         if (funcParam.not != Token()) {
@@ -212,9 +227,13 @@ class IDLUtil {
     /**
      * @throws { Exception }.
      */
-    static func diagReportTE(tokens: Tokens, message: String) {
+    static func diagReportTEAndThrow(tokens: Tokens, message: String) {
         diagReport(DiagReportLevel.ERROR, tokens, message, "")
         throw Exception(message)
+    }
+
+    static func diagReportTE(tokens: Tokens, message: String) {
+        diagReport(DiagReportLevel.ERROR, tokens, message, "")
     }
 
     static func diagReportTW(tokens: Tokens, message: String) {

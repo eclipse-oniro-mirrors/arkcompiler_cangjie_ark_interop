@@ -41,7 +41,7 @@ func handleArkTS(input: Tokens): Tokens {
         case funcDecl: FuncDecl => handleFunc(funcDecl, false)
         case enumDecl: EnumDecl => handleEnum(enumDecl)
         case _ =>
-            IDLUtil.diagReportTE(
+            IDLUtil.diagReportTEAndThrow(
                 input,
                 "Only user-defined `class`, `interface`, `enum` types and function declarations are allowed to be applied with `Interop` macro."
             )
@@ -109,7 +109,7 @@ func handleAsyncFunc(input: Tokens): Tokens {
     match (decl) {
         case funcDecl: FuncDecl => handleFunc(funcDecl, true)
         case _ =>
-            IDLUtil.diagReportTE(input,
+            IDLUtil.diagReportTEAndThrow(input,
                 "Only function declarations are allowed to be applied with `Interop Async` macro.")
             input
     }

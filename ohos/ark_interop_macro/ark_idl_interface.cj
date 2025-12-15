@@ -35,7 +35,7 @@ class IDLInterface {
             match (decl) {
                 case funcDecl: FuncDecl => funcs_.add(funcDecl)
                 case propDecl: PropDecl => props_.add(propDecl)
-                case other => IDLUtil.diagReportTE(Tokens(other.identifier),
+                case other => IDLUtil.diagReportTEAndThrow(Tokens(other.identifier),
                     "Unsupported interface member." +
                         "Interface members support only functions and properties within the `Interop` macro scope.")
             }

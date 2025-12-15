@@ -184,3 +184,11 @@ import std.core
 //enum E {
 //    A
 //}
+
+// error: Constructor synonymous with a previous one. Please use static functions instead.
+//@Interop[ArkTS]
+//public class ClassWithSynonymousCtors {
+//    public init(a: Int64) {}
+//
+//    public init(a: Float64) {}
+//}
