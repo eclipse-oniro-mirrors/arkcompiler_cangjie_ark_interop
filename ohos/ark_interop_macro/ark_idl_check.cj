@@ -31,7 +31,7 @@ let CONTEXT_TYPE_G: Array<String> = ["JSStringEx", "JSArrayEx", "JSHashMapEx"]
 func checkModifierBePublic(decl: Decl) {
     let modifiers = decl.modifiers
     if (modifiers.size == 0 || modifiers.size > 1 || modifiers.get(0).getOrThrow().keyword.kind != PUBLIC) {
-        IDLUtil.diagReportTE(Tokens(decl.keyword),
+        IDLUtil.diagReportTEAndThrow(Tokens(decl.keyword),
             "Modifier only supports `public` modifier within the `Interop` macro scope.")
     }
 }
@@ -46,12 +46,12 @@ func checkModifierBePublicCanStatic(decl: Decl) {
             continue
         }
         if (mod.keyword.kind != STATIC) {
-            IDLUtil.diagReportTE(Tokens(mod.keyword),
+            IDLUtil.diagReportTEAndThrow(Tokens(mod.keyword),
                 "Class members only support the `static` modifier within the `Interop` macro scope.")
         }
     }
     if (!hasPublic) {
-        IDLUtil.diagReportTE(Tokens(decl.keyword),
+        IDLUtil.diagReportTEAndThrow(Tokens(decl.keyword),
             "Class members must have `public` modifier within the `Interop` macro scope.")
     }
 }
@@ -60,7 +60,7 @@ func checkModifierBePublicCanStatic(decl: Decl) {
 func checkModifierNone(decl: Decl) {
     let modifiers = decl.modifiers
     if (modifiers.size != 0) {
-        IDLUtil.diagReportTE(Tokens(modifiers[0].keyword),
+        IDLUtil.diagReportTEAndThrow(Tokens(modifiers[0].keyword),
             "Interface function members do not support modifiers within the `Interop` macro scope.")
     }
 }
@@ -70,7 +70,7 @@ func checkModifierCanMut(decl: Decl) {
     let modifiers = decl.modifiers
     for (mod in modifiers) {
         if (mod.keyword.kind != MUT) {
-            IDLUtil.diagReportTE(Tokens(mod.keyword),
+            IDLUtil.diagReportTEAndThrow(Tokens(mod.keyword),
                 "Interface property members only support the `mut` modifier within the `Interop` macro scope.")
         }
     }
@@ -84,7 +84,7 @@ func checkModifierBePublicCanMut(decl: Decl) {
             continue
         }
         if (mod.keyword.kind != MUT) {
-            IDLUtil.diagReportTE(Tokens(mod.keyword),
+            IDLUtil.diagReportTEAndThrow(Tokens(mod.keyword),
                 "Class property members only support the `mut` modifier within the `Interop` macro scope.")
         }
     }
@@ -98,7 +98,7 @@ func checkGenericParam(decl: Decl) {
     } catch (_) {
         false
     }) {
-        IDLUtil.diagReportTE(decl.genericParam.parameters,
+        IDLUtil.diagReportTEAndThrow(decl.genericParam.parameters,
             "Generics are not supported within the `Interop` macro scope.")
     }
 }
@@ -107,7 +107,7 @@ func checkGenericParam(decl: Decl) {
 func checkParamDefault(funcDecl: FuncDecl) {
     for (param in funcDecl.funcParams) {
         if (param.assign != Token()) {
-            IDLUtil.diagReportTE(Tokens(param.identifier),
+            IDLUtil.diagReportTEAndThrow(Tokens(param.identifier),
                 "The function parameter does not support the default value within the `Interop` macro scope.")
         }
     }
@@ -118,7 +118,7 @@ func checkTypesNoContext(funcDecl: FuncDecl) {
         match (param.paramType) {
             case p: RefType =>
                 if (CONTEXT_TYPE_G.contains(p.identifier.value)) {
-                    IDLUtil.diagReportTE(
+                    IDLUtil.diagReportTEAndThrow(
                         Tokens(param.identifier),
                         "Asynchronous functions do not support JSStringEx, JSArrayEx and JSHashMapEx types within the `Interop Async` macro scope."
                     )
@@ -130,7 +130,7 @@ func checkTypesNoContext(funcDecl: FuncDecl) {
     match (funcDecl.declType) {
         case p: RefType =>
             if (CONTEXT_TYPE_G.contains(p.identifier.value)) {
-                IDLUtil.diagReportTE(
+                IDLUtil.diagReportTEAndThrow(
                     Tokens(funcDecl.identifier),
                     "Asynchronous functions do not support JSStringEx, JSArrayEx and JSHashMapEx types within the `Interop Async` macro scope."
                 )
@@ -143,7 +143,7 @@ func checkTypesNoContext(funcDecl: FuncDecl) {
 func checkParamDefaultPrimaryCtor(primaryCtorDecl: PrimaryCtorDecl) {
     for (param in primaryCtorDecl.funcParams) {
         if (param.assign != Token()) {
-            IDLUtil.diagReportTE(Tokens(param.identifier),
+            IDLUtil.diagReportTEAndThrow(Tokens(param.identifier),
                 "The function parameter does not support the default value within the `Interop` macro scope.")
         }
     }
@@ -157,7 +157,7 @@ func checkRetType(funcDecl: FuncDecl) {
     } catch (_) {
         true
     }) {
-        IDLUtil.diagReportTE(Tokens(funcDecl.identifier),
+        IDLUtil.diagReportTEAndThrow(Tokens(funcDecl.identifier),
             "The return type of the function cannot be omitted within the `Interop` macro scope.")
     }
 }
@@ -165,7 +165,7 @@ func checkRetType(funcDecl: FuncDecl) {
 // no super type
 func checkSuperType(interfaceDecl: InterfaceDecl) {
     if (interfaceDecl.superTypes.size != 0) {
-        IDLUtil.diagReportTE(Tokens(interfaceDecl.identifier),
+        IDLUtil.diagReportTEAndThrow(Tokens(interfaceDecl.identifier),
             "Superinterface is not supported within the `Interop` macro scope.")
     }
 }
@@ -173,7 +173,7 @@ func checkSuperType(interfaceDecl: InterfaceDecl) {
 // no operator
 func checkOperator(funcDecl: FuncDecl) {
     if (funcDecl.overloadOp.size != 0) {
-        IDLUtil.diagReportTE(Tokens(funcDecl.identifier),
+        IDLUtil.diagReportTEAndThrow(Tokens(funcDecl.identifier),
             "Operator overloaded function is not supported within the `Interop` macro scope.")
     }
 }
@@ -185,7 +185,7 @@ func checkStaticInit(classDecl: ClassDecl) {
         match (decl) {
             case funcDecl: FuncDecl => for (mod in funcDecl.modifiers) {
                 if (mod.keyword.kind == STATIC && funcDecl.identifier.value == "init") {
-                    IDLUtil.diagReportTE(Tokens(mod.keyword) + Tokens(funcDecl.identifier),
+                    IDLUtil.diagReportTEAndThrow(Tokens(mod.keyword) + Tokens(funcDecl.identifier),
                         "Static initializer is not supported within the `Interop` macro scope.")
                 }
             }
@@ -212,14 +212,14 @@ func checkClassInitFuncNum(classDecl: ClassDecl) {
         }
     }
 
-    IDLUtil.diagReportTE(Tokens(classDecl.identifier),
+    IDLUtil.diagReportTEAndThrow(Tokens(classDecl.identifier),
         "At least one constructor is required in a class within the `Interop` macro scope.")
 }
 
 // no duplicate func name
 func checkClassFuncDup(funcNameSet: HashSet<String>, funcDecl: FuncDecl) {
     if (funcNameSet.contains(funcDecl.identifier.value)) {
-        IDLUtil.diagReportTE(Tokens(funcDecl.identifier),
+        IDLUtil.diagReportTEAndThrow(Tokens(funcDecl.identifier),
             "The function name cannot be duplicate in a class within the `Interop` macro scope.")
     }
 }
@@ -240,7 +240,7 @@ func checkInterfaceMembers(interfaceDecl: InterfaceDecl) {
         match (decl) {
             case propDecl: PropDecl => checkInterfaceProp(propDecl)
             case funcDecl: FuncDecl => checkInterfaceFunc(funcDecl)
-            case other => IDLUtil.diagReportTE(Tokens(other.identifier),
+            case other => IDLUtil.diagReportTEAndThrow(Tokens(other.identifier),
                 "Unsupported interface member." +
                     "Interface members support only functions and properties within the `Interop` macro scope.")
         }
@@ -300,7 +300,7 @@ func checkClassMembers(classDecl: ClassDecl) {
             case primaryCtorDecl: PrimaryCtorDecl => checkClassPrimaryCtor(primaryCtorDecl)
             case varDecl: VarDecl => checkClassVar(varDecl)
             case propDecl: PropDecl => checkClassProp(propDecl)
-            case other => IDLUtil.diagReportTE(
+            case other => IDLUtil.diagReportTEAndThrow(
                 Tokens(other.identifier),
                 "Unsupported class member." +
                     "Class members support only functions, properties, variables and constructor within the `Interop` macro scope."
@@ -312,7 +312,7 @@ func checkClassMembers(classDecl: ClassDecl) {
 func checkEnumConstructors(enumDecl: EnumDecl) {
     for (ctor in enumDecl.constructors) {
         if (ctor.typeArguments.size > 0) {
-            IDLUtil.diagReportTE(Tokens(ctor.identifier),
+            IDLUtil.diagReportTEAndThrow(Tokens(ctor.identifier),
                 "Enum parameterized constructors are not supported within the `Interop` macro scope.")
         }
     }

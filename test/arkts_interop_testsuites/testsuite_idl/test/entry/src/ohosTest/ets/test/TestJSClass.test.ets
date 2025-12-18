@@ -74,14 +74,14 @@ export default function TestJSClass() {
       const obj2 = new lib.ClassWithMultiCtors(100);
       expect(obj2.name).assertEqual("Int64");
 
-      const obj3 = new lib.ClassWithMultiCtors(1.5);
-      expect(obj3.name).assertEqual("Int64");
+      const obj3 = new lib.ClassWithMultiCtors("test");
+      expect(obj3.name).assertEqual("String");
 
       const obj4 = new lib.ClassWithMultiCtors(200, 300);
       expect(obj4.name).assertEqual("2Int64");
 
-      const obj5 = new lib.ClassWithMultiCtors(2.5, 3.5);
-      expect(obj5.name).assertEqual("2Int64");
+      const obj5 = new lib.ClassWithMultiCtors("a", "b");
+      expect(obj5.name).assertEqual("2String");
     })
   })
 }

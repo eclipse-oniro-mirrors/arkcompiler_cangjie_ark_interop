@@ -162,16 +162,16 @@ public class ClassWithMultiCtors {
         this.name = "Int64"
     }
 
-    public ClassWithMultiCtors(a: Float64) {
-        this.name = "Float64"
+    public ClassWithMultiCtors(a: String) {
+        this.name = "String"
     }
 
     public init(a: Int64, b: Int64) {
         this.name = "2Int64"
     }
 
-    public init(a: Float64, b: Float64) {
-        this.name = "2Float64"
+    public init(a: String, b: String) {
+        this.name = "2String"
     }
 }
 

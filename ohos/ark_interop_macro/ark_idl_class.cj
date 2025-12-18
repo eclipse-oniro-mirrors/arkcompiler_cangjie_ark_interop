@@ -32,7 +32,7 @@ class IDLClassMemberInvisible {
             case varDecl: VarDecl => keyWord = getVarMemberKey(varDecl)
             case propDecl: PropDecl => keyWord = getPropMemberKey(propDecl)
             case other =>
-                IDLUtil.diagReportTE(
+                IDLUtil.diagReportTEAndThrow(
                     Tokens(other.identifier),
                     "Unsupported class member." +
                         "Class members support only functions, properties, variables and constructor within the `Interop` macro scope."
@@ -126,7 +126,7 @@ class IDLClass {
                     constructors_.add(primaryCtorDecl)
                 case propDecl: PropDecl => props_.add(propDecl)
                 case varDecl: VarDecl => vars_.add(varDecl)
-                case other => IDLUtil.diagReportTE(
+                case other => IDLUtil.diagReportTEAndThrow(
                     Tokens(other.identifier),
                     "Unsupported class member." +
                         "Class members support only functions, properties, variables and constructor within the `Interop` macro scope."
@@ -236,26 +236,28 @@ class IDLClass {
                 ))
                 continue
             }
-            construct.append(quote(case $paramNum =>
-            ))
+            construct.append(quote(case $paramNum =>))
             for (funcParams in funcParamsMap[paramNum]) {
-                construct.append(quote(try {
-                ))
+                let paramDecls = Tokens()
+                let fromJSValues = Tokens()
                 let callArgs = Tokens()
                 for (i in 0..funcParams.size) {
                     let funcParam = funcParams[i]
+                    let paramType = funcParam.paramType
                     let newArgName = IDLUtil.genRandomVarName("arg")
-                    let callInfoName = quote(callInfo[$i])
-                    construct.append(IDLUtil.jsvalue2Cangjie(funcParam.paramType, newArgName, callInfoName, quote(context)))
+                    paramDecls.append(quote(var $(newArgName): Option<$(paramType)> = None)).append(Token(NL))
+                    fromJSValues.append(IDLUtil.jsvalue2Cangjie1(paramType, newArgName, quote(callInfo[$i]), quote(context)))
                         .append(Token(NL))
-                    callArgs.append(IDLUtil.genInputArg(funcParam, newArgName, i != funcParams.size - 1))
+                    callArgs.append(IDLUtil.genInputArg(funcParam, quote($(newArgName).getOrThrow()), i != funcParams.size - 1))
                 }
-                construct.append(quote(return $(identifier_)($callArgs)
-                } catch (_) {}
+                construct.append(quote(
+                    $(paramDecls)if \(try {
+                            $(fromJSValues)true
+                        } catch (_) { false }
+                    \) { return $(identifier_)($callArgs) }
                 ))
             }
-            construct.append(quote(throw Exception("class: construct failed.")
-            ))
+            construct.append(Token(NL)).append(quote(throw Exception("class: construct failed."))).append(Token(NL)).append(Token(NL))
         }
         construct.append(quote(case _ => throw Exception("class: construct failed.")))
 

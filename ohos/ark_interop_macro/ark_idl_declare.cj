@@ -164,7 +164,7 @@ func genInterfaceBodyDeclare(body: Body) {
         match (decl) {
             case funcDecl: FuncDecl => retBody += (TAB_STR + genFuncDeclareForInterface(funcDecl))
             case propDecl: PropDecl => retBody += (TAB_STR + genPropDeclare(propDecl))
-            case _ => IDLUtil.diagReportTE(Tokens(decl.identifier),
+            case _ => IDLUtil.diagReportTEAndThrow(Tokens(decl.identifier),
                 "Unsupported interface member." +
                     "Interface members support only functions and properties within the `Interop` macro scope.")
         }
@@ -197,7 +197,7 @@ func genClassBodyDeclare(classDecl: ClassDecl, withConstructor!: Bool) {
             case propDecl: PropDecl => retBody += (TAB_STR + genPropDeclare(propDecl))
             case varDecl: VarDecl => retBody += (TAB_STR + genVarDeclare(varDecl))
             case primaryCtorDecl: PrimaryCtorDecl => ()
-            case other => IDLUtil.diagReportTE(
+            case other => IDLUtil.diagReportTEAndThrow(
                 Tokens(other.identifier),
                 "Unsupported class member." +
                     "Class members support only functions, properties, variables and constructor within the `Interop` macro scope."
@@ -236,6 +236,7 @@ func genClassInitsDeclare(pubClassDecl: ClassDecl, insideClassDecl!: Bool = fals
 
     var retInits = ""
     let decls = pubClassDecl.body.decls
+    var synonymous = false
     for (decl in decls) {
         var retInit = ""
         match (decl) {
@@ -248,14 +249,18 @@ func genClassInitsDeclare(pubClassDecl: ClassDecl, insideClassDecl!: Bool = fals
             case _ => ()
         }
         if (!retInit.isEmpty() && retInits.contains(retInit)) {
-            IDLUtil.diagReportTW(
+            synonymous = true
+            IDLUtil.diagReportTE(
                 Tokens(decl.identifier),
                 "Constructor synonymous with a previous one. " +
-                    "This constructor declaration will be ignored."
+                    "Please use static functions instead."
             )
         } else {
             retInits += retInit
         }
+    }
+    if (synonymous) {
+        throw Exception(classId + " has synonymous constructors.")
     }
     return retInits
 }
@@ -463,7 +468,7 @@ func cjType2ArktsType(typeNode: TypeNode, nameBase: String): String {
             case p: FuncType => funcType2Arkts(p, nameBase)
             case p: RefType => refType2Arkts(p)
             case _ =>
-                IDLUtil.diagReportTE(
+                IDLUtil.diagReportTEAndThrow(
                     Tokens(),
                     "Ark Interop: Mismatched Types. " +
                         "Only supports conversion of primitive, function and reference types within the `Interop` macro scope."
@@ -493,7 +498,7 @@ func refType2Arkts(refType: RefType): String {
     match (refType.identifier.value) {
         case "Option" =>
             if (refType.typeArguments.size == 0) {
-                IDLUtil.diagReportTE(Tokens(refType.identifier),
+                IDLUtil.diagReportTEAndThrow(Tokens(refType.identifier),
                     "Option type format error. There are no type arguments.")
                 return ""
             }
@@ -501,12 +506,12 @@ func refType2Arkts(refType: RefType): String {
             match (typeNode) {
                 case p: RefType =>
                     if (p.identifier.value == "Option") {
-                        IDLUtil.diagReportTE(
+                        IDLUtil.diagReportTEAndThrow(
                             Tokens(refType.identifier),
                             "The T of the Option type does not support the Option type within the `Interop` macro scope."
                         )
                     }
-                case p: FuncType => IDLUtil.diagReportTE(Tokens(refType.identifier),
+                case p: FuncType => IDLUtil.diagReportTEAndThrow(Tokens(refType.identifier),
                     "The T of the Option type does not support the function type within the `Interop` macro scope.")
                 case _ => ()
             }
@@ -518,14 +523,14 @@ func refType2Arkts(refType: RefType): String {
             if (refType.typeArguments[0].toTokens().toString() == "Byte") {
                 "ArrayBuffer"
             } else {
-                IDLUtil.diagReportTE(Tokens(refType.identifier),
+                IDLUtil.diagReportTEAndThrow(Tokens(refType.identifier),
                     "The T of the Array type only support Byte type within the `Interop` macro scope.")
                 ""
             }
         // class/interface/enum
         case _ =>
             if (!IDLCustomTypeWL.isWhitelisted(refType.identifier.value)) {
-                IDLUtil.diagReportTE(
+                IDLUtil.diagReportTEAndThrow(
                     Tokens(refType.identifier),
                     "Unsupported user-defined type. " +
                         "Ensure user-defined type is exposed by `Interop` macros before using within the `Interop` macro scope."
