@@ -1,4 +1,4 @@
-Subject: [PATCH] update patch
+Subject: [PATCH] fix coverage build
 ---
 Index: test/CJInteropsTest/build-profile.json5
 IDEA additional info:
@@ -6,8 +6,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/test/CJInteropsTest/build-profile.json5 b/test/CJInteropsTest/build-profile.json5
---- a/test/CJInteropsTest/build-profile.json5	(revision 611efd05a7f0197a16137ed43f26866d37afd448)
-+++ b/test/CJInteropsTest/build-profile.json5	(revision 72c1e3b458c71e04f25d6d2752dc36b2836a5af5)
+--- a/test/CJInteropsTest/build-profile.json5	(revision 4bad49d332b1e5451a7249996954afa6a6e65091)
++++ b/test/CJInteropsTest/build-profile.json5	(revision 4cca9c406ff9c194e9aec2afc4800543bd48092c)
 @@ -19,9 +19,9 @@
        {
          name: "default",
@@ -27,8 +27,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/test/CJInteropsTest/entry/build-profile.json5 b/test/CJInteropsTest/entry/build-profile.json5
---- a/test/CJInteropsTest/entry/build-profile.json5	(revision 611efd05a7f0197a16137ed43f26866d37afd448)
-+++ b/test/CJInteropsTest/entry/build-profile.json5	(revision 72c1e3b458c71e04f25d6d2752dc36b2836a5af5)
+--- a/test/CJInteropsTest/entry/build-profile.json5	(revision 4bad49d332b1e5451a7249996954afa6a6e65091)
++++ b/test/CJInteropsTest/entry/build-profile.json5	(revision 4cca9c406ff9c194e9aec2afc4800543bd48092c)
 @@ -16,9 +16,6 @@
  {
    apiType: "stageMode",
@@ -45,8 +45,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/test/CJInteropsTest/entry/hvigorfile.ts b/test/CJInteropsTest/entry/hvigorfile.ts
---- a/test/CJInteropsTest/entry/hvigorfile.ts	(revision 611efd05a7f0197a16137ed43f26866d37afd448)
-+++ b/test/CJInteropsTest/entry/hvigorfile.ts	(revision 72c1e3b458c71e04f25d6d2752dc36b2836a5af5)
+--- a/test/CJInteropsTest/entry/hvigorfile.ts	(revision 4bad49d332b1e5451a7249996954afa6a6e65091)
++++ b/test/CJInteropsTest/entry/hvigorfile.ts	(revision 4cca9c406ff9c194e9aec2afc4800543bd48092c)
 @@ -13,7 +13,7 @@
   * limitations under the License.
   */
@@ -62,8 +62,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml b/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml
---- a/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml	(revision 611efd05a7f0197a16137ed43f26866d37afd448)
-+++ b/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml	(revision 72c1e3b458c71e04f25d6d2752dc36b2836a5af5)
+--- a/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml	(revision 4bad49d332b1e5451a7249996954afa6a6e65091)
++++ b/test/CJInteropsTest/entry/src/main/cangjie/cjpm.toml	(revision 4cca9c406ff9c194e9aec2afc4800543bd48092c)
 @@ -13,9 +13,9 @@
  
  [target]
@@ -82,8 +82,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/test/CJInteropsTest/hvigor/hvigor-config.json5 b/test/CJInteropsTest/hvigor/hvigor-config.json5
---- a/test/CJInteropsTest/hvigor/hvigor-config.json5	(revision 611efd05a7f0197a16137ed43f26866d37afd448)
-+++ b/test/CJInteropsTest/hvigor/hvigor-config.json5	(revision 72c1e3b458c71e04f25d6d2752dc36b2836a5af5)
+--- a/test/CJInteropsTest/hvigor/hvigor-config.json5	(revision 4bad49d332b1e5451a7249996954afa6a6e65091)
++++ b/test/CJInteropsTest/hvigor/hvigor-config.json5	(revision 4cca9c406ff9c194e9aec2afc4800543bd48092c)
 @@ -16,7 +16,6 @@
  {
    "modelVersion": "6.0.0",
@@ -92,3 +92,28 @@ diff --git a/test/CJInteropsTest/hvigor/hvigor-config.json5 b/test/CJInteropsTes
    },
    "execution": {
      // "analyze": "normal",                     /* Define the build analyze mode. Value: [ "normal" | "advanced" | "ultrafine" | false ]. Default: "normal" */
+Index: test/CJInteropsTest/localhsp/build-profile.json5
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/CJInteropsTest/localhsp/build-profile.json5 b/test/CJInteropsTest/localhsp/build-profile.json5
+--- a/test/CJInteropsTest/localhsp/build-profile.json5	(revision 4bad49d332b1e5451a7249996954afa6a6e65091)
++++ b/test/CJInteropsTest/localhsp/build-profile.json5	(revision 4cca9c406ff9c194e9aec2afc4800543bd48092c)
+@@ -15,11 +15,11 @@
+                     "enable": false,
+                     "files": [
+                         "./obfuscation-rules.txt"
+-                    ]
+-                },
+-                "consumerFiles": [
+-                    "./consumer-rules.txt"
+-                ]
++                    ],
++                    "consumerFiles": [
++                        "./consumer-rules.txt"
++                    ]
++                }
+             }
+         }
+     ],
