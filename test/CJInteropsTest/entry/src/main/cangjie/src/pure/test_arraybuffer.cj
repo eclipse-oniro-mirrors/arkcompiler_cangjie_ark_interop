@@ -24,6 +24,7 @@ class TestArrayBuffer {
     @TestCase
     func testJSArrayBufferToUInt8Array() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt8> = [0, 255, 128, 64, 32]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toUInt8Array()}
@@ -34,11 +35,13 @@ class TestArrayBuffer {
         for (i in 0..result.size) { //然后才是覆盖率
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToInt8Array() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Int8> = [-128, -64, 0, 64, 127]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toInt8Array()}
@@ -49,11 +52,13 @@ class TestArrayBuffer {
         for (i in 0..result.size) {
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToUInt16Array() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt16> = [0, 65535, 32768, 12345]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toUInt16Array()}
@@ -64,11 +69,13 @@ class TestArrayBuffer {
         for (i in 0..result.size) {
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToInt16Array() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Int16> = [-32768, -12345, 0, 12345, 32767]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toInt16Array()}
@@ -79,11 +86,13 @@ class TestArrayBuffer {
         for (i in 0..result.size) {
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToInt32Array() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Int32> = [-2147483648, -1000000000, 0, 1000000000, 2147483647]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toInt32Array()}
@@ -94,11 +103,13 @@ class TestArrayBuffer {
         for (i in 0..result.size) {
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToUInt32Array() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt32> = [0, 4294967295, 2147483648, 1234567890]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toUInt32Array()}
@@ -109,11 +120,13 @@ class TestArrayBuffer {
         for (i in 0..result.size) {
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToFloat32Array() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Float32> = [0.0, 3.14, -1.23, 1.23, 99999.999]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toFloat32Array()}
@@ -124,11 +137,13 @@ class TestArrayBuffer {
         for (i in 0..result.size) {
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToUInt64Array() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt64> = [0, 1000000000000000, UInt64.Max]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toUInt64Array()}
@@ -139,11 +154,13 @@ class TestArrayBuffer {
         for (i in 0..result.size) {
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToInt64Array() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Int64> = [-9223372036854775808, -1000000000, 9223372036854775807, 1234567890123456]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toInt64Array()}
@@ -154,11 +171,13 @@ class TestArrayBuffer {
         for (i in 0..result.size) {
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToFloat64() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Float64> = [-9223372036854775808.0, -1000000000.0, 9223372036854775807.0, 1234567890123456.0]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toFloat64Array()}
@@ -169,138 +188,163 @@ class TestArrayBuffer {
         for (i in 0..result.size) {
             @Expect(result[i], data[i])
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToArrayBuffer() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt8> = [0, 255, 128, 64, 32]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toArrayBufferJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "ArrayBuffer"))
+        }
     }
 
     @TestCase
     func testToUInt8ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt8> = [0, 255, 128, 64, 32]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toUInt8ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "Uint8Array"))
+        }
     }
 
     @TestCase
     func testToUInt8ClampedArray() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt8> = [0, 255, 128, 64, 32]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toUInt8ClampedArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "Uint8ClampedArray"))
+        }
     }
 
     @TestCase
     func testToInt8ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Int8> = [-128, -64, 0, 64, 127]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toInt8ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "Int8Array"))
+        }
     }
 
     @TestCase
     func testToUInt16ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt16> = [0, 65535, 32768, 12345]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toUInt16ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "Uint16Array"))
+        }
     }
 
     @TestCase
     func testToInt16ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Int16> = [-32768, -12345, 0, 12345, 32767]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toInt16ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "Int16Array"))
+        }
     }
 
     @TestCase
     func testToInt32ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Int32> = [-2147483648, -1000000000, 0, 1000000000, 2147483647]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toInt32ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "Int32Array"))
+        }
     }
 
     @TestCase
     func testToUInt32ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt32> = [0, 4294967295, 2147483648, 1234567890]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toUInt32ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "Uint32Array"))
+        }
     }
 
     @TestCase
     func testToFloat32ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Float32> = [0.0, 3.14, -1.23, 1.23, 99999.999]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toFloat32ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "Float32Array"))
+        }
     }
 
     @TestCase
     func testToFloat64ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Float64> = [0.0, 3.1415926535, -123456.789, 9999999.888]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toFloat64ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "Float64Array"))
+        }
     }
 
     @TestCase
     func testToInt64ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<Int64> = [-223372036854775808, 1000000000, 9223372036854775807, -1234567890123456]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toInt64ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "BigInt64Array"))
+        }
     }
 
     @TestCase
     func testToUInt64ArrayJSValueHandler() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt64> = [9223372036854775808, 1000000000, 9223372036854775807, 1234567890123456]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
         let result = await(jsContext) {buffer.toUInt64ArrayJSValue()}
 
         @Expect(await(jsContext){result.isArrayBuffer()}, true)
         @Expect(isInstanceOf(jsContext, result, "BigUint64Array"))
+        }
     }
 
     @TestCase
@@ -318,6 +362,7 @@ class TestArrayBuffer {
     @TestCase
     func testArrayBufferBytes() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let source: Array<Byte> = [0, 1, 2, 3, 4]
         let buffer = await(jsContext) {jsContext.arrayBuffer(source)}
         @Expect(Int64(await(jsContext){buffer.byteLength}), source.size)
@@ -325,11 +370,13 @@ class TestArrayBuffer {
         let received = await(jsContext) {buffer.readBytes()}
         await(jsContext) {buffer.readBytes()}
         @Expect(source, received)
+        }
     }
 
     @TestCase
     func testArrayBufferUnsafe() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let source: CPointer<Byte> = unsafe {
             let result = LibC.malloc<Byte>(count: 100)
             for (i in 0..100) {
@@ -361,11 +408,13 @@ class TestArrayBuffer {
         for (i in 0..100) {
             @Expect(data[i], UInt8(i))
         }
+        }
     }
 
     @TestCase
     func testJSArrayBufferToArrayException() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let data: Array<UInt8> = [0]
         let buffer = await(jsContext) {jsContext.arrayBuffer(data)}
 
@@ -416,6 +465,7 @@ class TestArrayBuffer {
                 buffer.toFloat64Array()
             }
         })
+        }
     }
 
     @TestCase

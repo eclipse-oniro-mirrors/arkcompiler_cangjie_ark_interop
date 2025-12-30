@@ -107,7 +107,9 @@ public class JSArray <: JSHeapObject {
             throw jsArrayRangeMisMatch(0, size, index)
         }
         let result = unsafe { ARKTS_GetElement(env, innerValue, UInt32(index)) }
-        JSValue(context, result)
+        let back = JSValue(context, result)
+        context.handleValue(back)
+        return back
     }
 
     /**

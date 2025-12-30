@@ -28,6 +28,9 @@ foreign func ARKTS_DisposeGlobal(env: JSEnv, ref: JSGlobal): Unit
 @FastNative
 foreign func ARKTS_GetGlobalValue(ref: JSGlobal): JSValue_
 
+@FastNative
+foreign func ARKTS_IsHeapObject(value: JSValue_): Bool
+
 /**
  * JSObjects into cj are references, JSHeapObject is the base class of all JSObject references.
  *  JSHeapObject keeps the JSObject alive by create global handle, and dispose global handle after cj object are
@@ -46,6 +49,10 @@ abstract sealed class JSHeapObject {
         context: JSContext,
         value: JSValue_
     ) {
+        if (!unsafe {ARKTS_IsHeapObject(value)}) {
+            context.checkJSException()
+            throw invalidHeapObject(value)
+        }
         this.context = context
         (globalValue_, innerValue) = unsafe {
             let global = ARKTS_CreateGlobal(context.env, value)
@@ -67,6 +74,8 @@ abstract sealed class JSHeapObject {
     ]
     public func toJSValue(): JSValue {
         context.checkLifecycleAndThread()
-        JSValue(context, innerValue)
+        let back = JSValue(context, innerValue)
+        context.handleValue(back)
+        return back
     }
 }

@@ -54,8 +54,19 @@ struct JSCallInfoPrivate {
 public class JSCallInfo {
     JSCallInfo(
         let context: JSContext,
-        let callInfo: JSCallInfoPrivate
+        private let callInfo_: JSCallInfoPrivate
     ) {}
+
+    private var isSafe = true
+
+    prop callInfo: JSCallInfoPrivate {
+        get() {
+            if (!isSafe) {
+                throw jsObjUseAfterFree("JSCallInfo")
+            }
+            callInfo_
+        }
+    }
 
     /**
      * Number of input arguments.
@@ -88,7 +99,9 @@ public class JSCallInfo {
         get() {
             context.checkLifecycleAndThread()
             let result = unsafe { ARKTS_GetThisArg(callInfo) }
-            JSValue(context, result)
+            let back = JSValue(context, result)
+            context.handleValue(back)
+            return back
         }
     }
 
@@ -115,7 +128,13 @@ public class JSCallInfo {
             throw jsArrayRangeMisMatch(0, count, index, message: "The call argument index is invalid")
         }
         let result = unsafe { ARKTS_GetArg(callInfo, UInt32(index)) }
-        JSValue(context, result)
+        let back = JSValue(context, result)
+        context.handleValue(back)
+        return back
+    }
+
+    func dispose(): Unit {
+        isSafe = false
     }
 }
 
@@ -128,14 +147,20 @@ public type JSLambda = (JSContext, JSCallInfo) -> JSValue
 func cjLambdaInvoker(info: JSCallInfoPrivate, lambdaId: Int64): JSValue_ {
     let env = info.env()
     let context = JSContext.getOrCreate(env)
+    let callInfo = JSCallInfo(context, info)
     try {
         let lambda = context.sharedLambda_[lambdaId]
-        let callInfo = JSCallInfo(context, info)
-        lambda(context, callInfo).value
+        let result = context.newScope {
+            lambda(context, callInfo).value
+        }
+        callInfo.dispose()
+        return result
     } catch (err: Exception) {
+        callInfo.dispose()
         context.throwJSError(err)
         context.undefined().toJSValue().value
     } catch (err: Error) {
+        callInfo.dispose()
         context.throwJSError(err)
         context.undefined().toJSValue().value
     }

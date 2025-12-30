@@ -33,6 +33,7 @@ class TestUtf16String {
             "asdafas电",
             "暗色调😊😞🚹👴🚺"
             ]
+        await(jsContext) {
         for (one in cases) {
             let u16 = Utf16String(one)
             u16.hashCode()
@@ -44,6 +45,7 @@ class TestUtf16String {
             let value = await(jsContext) {u16.toJSValue(jsContext)}
             let received1 = await(jsContext) {Utf16String.fromJSValue(jsContext, value)}
             @Expect(received1, u16)
+        }
         }
     }
 

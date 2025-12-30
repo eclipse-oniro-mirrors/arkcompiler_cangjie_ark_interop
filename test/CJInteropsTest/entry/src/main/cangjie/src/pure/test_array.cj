@@ -104,6 +104,7 @@ class TestArray {
     @TestCase
     func testArray22(): Unit {
         let jsContext = getJSContext()
+        await(jsContext) {
         let array = await(jsContext) {jsContext.array()}
         let value = await(jsContext) {array.toJSValue()}
         let negativeWrite = try {
@@ -156,11 +157,13 @@ class TestArray {
         let receivedElement0 = await(jsContext) {value.getElement(0)}
         @Expect(await(jsContext){receivedElement0.isBoolean()}, true)
         @Expect(await(jsContext){receivedElement0.toBoolean()}, true)
+        }
     }
 
     @TestCase
     func testArray33(): Unit {
         let jsContext = getJSContext()
+        await(jsContext) {
         let array = await(jsContext) {
             jsContext.array(
                 [
@@ -192,5 +195,6 @@ class TestArray {
 
         let value: JSValue = await(jsContext){array[0]}
         @Expect(await(jsContext){value.toNumber()}, 1.0)
+        }
     }
 }
