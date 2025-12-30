@@ -936,7 +936,9 @@ public class JSValue {
         }
         let keyValue = key.toJSValue(context)
         let result = unsafe { ARKTS_GetProperty(context.env, value, keyValue.value) }
-        JSValue(context, result)
+        let back = JSValue(context, result)
+        context.checkJSException()
+        return back
     }
 
     /**
@@ -959,6 +961,7 @@ public class JSValue {
         }
         let keyValue = key.toJSValue(context)
         unsafe { ARKTS_SetProperty(context.env, value, keyValue.value, setValue.value) }
+        context.checkJSException()
     }
 
     /**
