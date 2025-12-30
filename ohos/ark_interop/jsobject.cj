@@ -145,7 +145,9 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public func getProperty(key: JSKeyable): JSValue {
         let keyValue = key.toJSValue(context)
         let result = unsafe { ARKTS_GetProperty(context.env, innerValue, keyValue.value) }
-        JSValue(context, result)
+        let back = JSValue(context, result)
+        context.checkJSException()
+        return back
     }
 
     /**
@@ -219,6 +221,7 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public func setProperty(key: JSKeyable, setValue: JSValue): Unit {
         let keyValue = key.toJSValue(context)
         unsafe { ARKTS_SetProperty(context.env, innerValue, keyValue.value, setValue.value) }
+        context.checkJSException()
     }
 
     /**
