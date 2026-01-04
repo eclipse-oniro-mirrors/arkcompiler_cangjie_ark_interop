@@ -15,11 +15,11 @@
                     "enable": false,
                     "files": [
                         "./obfuscation-rules.txt"
+                    ],
+                    "consumerFiles": [
+                        "./consumer-rules.txt"
                     ]
-                },
-                "consumerFiles": [
-                    "./consumer-rules.txt"
-                ]
+                }
             }
         }
     ],
