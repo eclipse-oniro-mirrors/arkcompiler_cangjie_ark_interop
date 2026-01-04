@@ -27,6 +27,7 @@ class TestSymbol {
     @TestCase
     func testSymbol00() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let symbol = await(jsContext) {jsContext.symbol()}
         let value = await(jsContext) {symbol.toJSValue()}
         let valueType = await(jsContext) {value.typeof()}
@@ -53,11 +54,13 @@ class TestSymbol {
         let value1 = await(jsContext) {symbol.toJSValue(jsContext)}
         @Expect(await(jsContext){value1.isSymbol()})
         await(jsContext) {value1.asSymbol()}
+        }
     }
 
     @TestCase
     func testSymbolIsKey() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let symbol = await(jsContext) {jsContext.symbol()}
         let object = await(jsContext) {jsContext.object()}
         await(jsContext) {
@@ -68,11 +71,13 @@ class TestSymbol {
         let received = await(jsContext) {object[symbol]}
         @Expect(await(jsContext){received.isBoolean()})
         @Expect(await(jsContext){received.toBoolean()}, false)
+        }
     }
 
     @TestCase
     func testSymbolKeyIsUnique() {
         let jsContext = getJSContext()
+        await(jsContext) {
         // 2 symbol with same description is different key
         let key1 = await(jsContext) {
             jsContext
@@ -105,5 +110,6 @@ class TestSymbol {
         @Expect(await(jsContext){value2.toBoolean()}, true)
         await(jsContext) {key1.toString()}
         @Expect(await(jsContext){key1.description},await(jsContext) {key2.description})
+        }
     }
 }

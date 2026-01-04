@@ -72,6 +72,9 @@ private enum Result<T, E> {
 }
 
 func await<T>(context: JSContext, f: ()-> T): T {
+    if (context.isInBindThread()) {
+        return f()
+    }
     let result = Box(None<Result<T, Exception>>)
     let monitor = Monitor()
     context.postJSTask {

@@ -24,6 +24,7 @@ class TestString {
     @TestCase
     func testJSString() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let originals = [
             "a plain text",
             "`~!@#$%^&*()_+[]\\",
@@ -45,11 +46,13 @@ class TestString {
             let utf16Value = await(jsContext){jsStr.toUtf16String()}
             @Expect(await(jsContext){utf16Value.toString()}, original)
         }
+        }
     }
 
     @TestCase
     func testJSStringAsKey() {
         let jsContext = getJSContext()
+        await(jsContext) {
         let originals = [
             ("a", await(jsContext) {
                     jsContext
@@ -76,6 +79,7 @@ class TestString {
             @Expect(keys.contains(k))
             let received = await(jsContext) {object[k]}
             @Expect(await(jsContext){received.strictEqual(v)})
+        }
         }
     }
 }

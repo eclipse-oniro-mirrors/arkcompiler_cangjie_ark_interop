@@ -226,8 +226,20 @@ public class JSNumber {
 public class JSValue {
     protected JSValue(
         let context: JSContext,
-        protected let value: JSValue_
+        private let value_: JSValue_
     ) {}
+
+    var isSafe = true
+
+    // do lifecycle check.
+    protected prop value: JSValue_ {
+        get() {
+            if (!isSafe) {
+                throw jsObjUseAfterFree("JSValue")
+            }
+            value_
+        }
+    }
 
     /**
      * Get the type of JSValue.
@@ -889,7 +901,9 @@ public class JSValue {
             throw jsArrayRangeMisMatch(0, safeSize, index)
         }
         let value_ = unsafe { ARKTS_GetElement(context.env, value, UInt32(index)) }
-        JSValue(context, value_)
+        let back = JSValue(context, value_)
+        context.handleValue(back)
+        return back
     }
 
     /**
@@ -938,6 +952,7 @@ public class JSValue {
         let result = unsafe { ARKTS_GetProperty(context.env, value, keyValue.value) }
         let back = JSValue(context, result)
         context.checkJSException()
+        context.handleValue(back)
         return back
     }
 

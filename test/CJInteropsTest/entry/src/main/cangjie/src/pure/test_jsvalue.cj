@@ -26,6 +26,7 @@ class TestJSValue {
     @TestCase
     func testJSValueNull() {
         let jsContext = getJSContext()
+        await (jsContext) {
         let null = await(jsContext) {jsContext.null()}
         let value = await(jsContext) {null.toJSValue()}
         @Expect(await(jsContext){value.isNull()}, true)
@@ -50,6 +51,7 @@ class TestJSValue {
         let valueType = await(jsContext) {value.typeof()}
         @Expect(valueType == JSType.NULL)
         @Expect(valueType != JSType.NULL, false)
+        }
     }
 
     @TestCase
@@ -78,6 +80,7 @@ class TestJSValue {
     @TestCase
     func testJSValueBooleanTrue() {
         let jsContext = getJSContext()
+        await (jsContext) {
         let value = await(jsContext) {
             jsContext
                 .boolean(true)
@@ -99,11 +102,13 @@ class TestJSValue {
         @Expect(valueType == JSType.BOOLEAN)
         let cjValue = await(jsContext) {value.toBoolean()}
         @Expect(cjValue)
+        }
     }
 
     @TestCase
     func testJSValueBooleanFalse() {
         let jsContext = getJSContext()
+        await (jsContext) {
         let value = await(jsContext) {
             jsContext
                 .boolean(false)
@@ -127,11 +132,13 @@ class TestJSValue {
             @Expect(value.toBoolean(), false)
             @Expect(value.asBoolean().toBool(), false)
         }
+        }
     }
 
     @TestCase
     func testJSValueNumber() {
         let jsContext = getJSContext()
+        await (jsContext) {
         let i32 = await(jsContext) {
             jsContext
                 .number(Int32(12))
@@ -152,11 +159,13 @@ class TestJSValue {
         let f64Num = await(jsContext) {f64.asNumber()}
         @Expect(await(jsContext){i32Num.toFloat64()}, 12.0)
         @Expect(await(jsContext){f64Num.toFloat64()}, 2.0)
+        }
     }
 
     @TestCase
     func testJSValueString() {
         let jsContext = getJSContext()
+        await (jsContext) {
         let text = await(jsContext) {jsContext.string("abc")}
         let value = await(jsContext) {text.toJSValue()}
         let value1 = await(jsContext) {text.toJSValue()}
@@ -167,11 +176,13 @@ class TestJSValue {
         let text1 = await(jsContext) {value.asString()}
         let text2 = await(jsContext) {value.asString()}
         @Expect(await(jsContext){text1.toString()},await(jsContext){ text2.toString()})
+        }
     }
 
     @TestCase
     func testJSValueObject() {
         let jsContext = getJSContext()
+        await (jsContext) {
         let source = await(jsContext) {jsContext.object()}
         let value = await(jsContext) {source.toJSValue()}
         @Expect(await(jsContext){value.isObject()})
@@ -215,11 +226,13 @@ class TestJSValue {
         @Expect(b.isSome())
         let objA = a.getOrThrow() as MyObject
         @Expect(objA.isSome())
+        }
     }
 
     @TestCase
     func testJSValueArray() {
         let jsContext = getJSContext()
+        await (jsContext) {
         let array = await(jsContext) {jsContext.array()}
         let value = await(jsContext) {array.toJSValue()}
         @Expect(await(jsContext){value.isArray()})
@@ -241,11 +254,13 @@ class TestJSValue {
         @Expect(await(jsContext){ele0.toNumber()}, 0.0)
         @Expect(await(jsContext){ele1.isNumber()})
         @Expect(await(jsContext){ele1.toNumber()}, 1.0)
+        }
     }
 
     @TestCase
     func testJSValueBigint() {
         let jsContext = getJSContext()
+        await (jsContext) {
         let bigint = await(jsContext) {jsContext.bigint(123)}
         let value = await(jsContext) {bigint.toJSValue()}
         @Expect(await(jsContext){value.isBigInt()})
@@ -254,6 +269,7 @@ class TestJSValue {
         let receivedBigint = await(jsContext) {received.toBigInt()}
         let receivedI64 = await(jsContext) {receivedBigint.toInt64()}
         @Expect(receivedI64, 123)
+        }
     }
 
     @TestCase
@@ -274,11 +290,13 @@ class TestJSValue {
     @TestCase
     func testJSValueExternal() {
         let jsContext = getJSContext()
+        await (jsContext) {
         let mydata = MyObject()
         let external = await(jsContext) {jsContext.external(mydata)}
         let value = await(jsContext) {external.toJSValue()}
         @Expect(await(jsContext){value.isExternal()})
         @Expect(await(jsContext){value.typeof()} == JSType.EXTERNAL)
         await(jsContext) {value.asExternal()}
+        }
     }
 }
