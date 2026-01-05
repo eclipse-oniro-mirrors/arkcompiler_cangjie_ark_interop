@@ -104,7 +104,12 @@ public class JSPromise <: JSHeapObject {
 ]
 public class JSPromiseCapability {
     static func create(context: JSContext): JSPromiseCap {
-        unsafe { ARKTS_CreatePromiseCapability(context.env) }
+        let result = unsafe { ARKTS_CreatePromiseCapability(context.env) }
+        if (result.isNull()) {
+            context.checkJSException()
+            throw cHeapOOM()
+        }
+        return result
     }
 
     private let context: JSContext

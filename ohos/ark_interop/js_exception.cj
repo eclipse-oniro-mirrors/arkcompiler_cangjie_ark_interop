@@ -81,6 +81,10 @@ internal func indexInvalid(key: String): BusinessException {
     return outsideError("Dict key not found.")
 }
 
+internal func cHeapOOM(): BusinessException {
+    return outsideError("c heap out of memory")
+}
+
 internal func moduleNotExist(src: String): BusinessException {
     BusinessException(34300006, "Fail to load module '${src}' which doesn't exist.")
 }
