@@ -111,6 +111,9 @@ struct Scope {
 
     init(env: JSEnv) {
         handle_ = unsafe { ARKTS_OpenScope(env) }
+        if (handle_.isNull()) {
+            throw cHeapOOM()
+        }
     }
 
     func close(env: JSEnv): Unit {
@@ -882,8 +885,15 @@ public class JSContext {
         let env = this.env // do lifecycle check and thread check here.
         unsafe {
             let moduleNameC = LibC.mallocCString(moduleName)
+            if (moduleNameC.isNull()) {
+                throw cHeapOOM()
+            }
             let result = if (let Some(p) <- prefix) {
                 let cp = LibC.mallocCString(p)
+                if (cp.isNull()) {
+                    LibC.free(moduleNameC)
+                    throw cHeapOOM()
+                }
                 let ret = ARKTS_Require(env, moduleNameC, true, false, cp)
                 LibC.free(cp)
                 ret

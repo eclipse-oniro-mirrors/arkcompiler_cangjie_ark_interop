@@ -56,6 +56,9 @@ abstract sealed class JSHeapObject {
         this.context = context
         (globalValue_, innerValue) = unsafe {
             let global = ARKTS_CreateGlobal(context.env, value)
+            if (global.isNull()) {
+                throw cHeapOOM()
+            }
             let local = ARKTS_GetGlobalValue(global)
             (global, local)
         }
