@@ -19,7 +19,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "@ohos/hypium": "1.0.21",
-    "@ohos/hamock": "1.0.1-rc2"
+    "@ohos/hypium": "latest",
+    "@ohos/hamock": "latest"
   }
 }
