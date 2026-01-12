@@ -15,7 +15,7 @@
 
 package ohos.ark_interop
 
-import std.collection.*
+import std.collection.HashMap
 
-let bundleMap = HashMap<String, String>(
+let BUNDLE_MAP = HashMap<String, String>(
 )

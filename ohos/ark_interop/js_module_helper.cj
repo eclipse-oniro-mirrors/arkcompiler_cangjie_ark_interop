@@ -28,7 +28,7 @@ class ArkModuleHelper {
     // normalize kitConfigs to api set.
     private static let apiSets = LazyInit {
         let result = HashSet<String>()
-        for ((_, kitConfig) in kitConfigs) {
+        for ((_, kitConfig) in KIT_CONFIGS) {
             for ((apiName, _) in kitConfig) {
                 result.add(apiName)
             }
@@ -58,7 +58,7 @@ class ArkModuleHelper {
             }
             // check kit with whitelist
             if (fileName.startsWith("@kit.")) {
-                return kitConfigs.contains(src)
+                return KIT_CONFIGS.contains(src)
             }
             // check system apis with whitelist
             return apiSets.data.contains(src);
@@ -104,7 +104,7 @@ class ArkModuleHelper {
             return (url, 0)
         }
         // process bundle
-        if (let Some(bundle) <- bundleMap.get(src)) {
+        if (let Some(bundle) <- BUNDLE_MAP.get(src)) {
             let url = "@bundle:" + bundle
             return (url, 1)
         }
