@@ -74,6 +74,9 @@
                 },
                 {
                     "name": "//arkcompiler/cangjie_ark_interop:copy_cangjie_ark_interop_libs"
+                },
+                {
+                    "name": "//arkcompiler/cangjie_ark_interop:copy_cangjie_ark_interop_libs_kit"
                 }
             ],
             "test": []
