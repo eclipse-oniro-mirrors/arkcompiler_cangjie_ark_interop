@@ -900,8 +900,8 @@ public class JSValue {
         if (index < 0 || index >= safeSize) {
             throw jsArrayRangeMisMatch(0, safeSize, index)
         }
-        let value_ = unsafe { ARKTS_GetElement(context.env, value, UInt32(index)) }
-        let back = JSValue(context, value_)
+        let elementValue = unsafe { ARKTS_GetElement(context.env, value, UInt32(index)) }
+        let back = JSValue(context, elementValue)
         context.handleValue(back)
         return back
     }
@@ -1014,8 +1014,8 @@ public class JSValue {
         throwexception: true
     ]
     public func bindObject(data: SharedObject): Unit {
-        let value_ = JSValue(context, JSExternal.createExternal(context, data))
-        bindObject(value_)
+        let externalValue = JSValue(context, JSExternal.createExternal(context, data))
+        bindObject(externalValue)
     }
 
     /**

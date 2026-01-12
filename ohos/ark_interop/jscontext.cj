@@ -1016,7 +1016,7 @@ public class JSContext {
             if (let Some(object) <- cachedKits.get(src)) {
                 return object.toJSValue()
             }
-            let object = createKit(kitConfigs[src])
+            let object = createKit(KIT_CONFIGS[src])
             cachedKits[src] = object
             return object.toJSValue()
         }

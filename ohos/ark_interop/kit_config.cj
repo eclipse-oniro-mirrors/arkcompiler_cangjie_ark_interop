@@ -15,7 +15,7 @@
 
 package ohos.ark_interop
 
-import std.collection.*
+import std.collection.HashMap
 
 enum Decl {
     | Name(String)
@@ -30,7 +30,7 @@ enum ImportClause {
 type KitConfig = HashMap<String, ImportClause>
 type KitConfigs = HashMap<String, KitConfig>
 
-let kitConfigs = HashMap<String, KitConfig>(
+let KIT_CONFIGS = HashMap<String, KitConfig>(
     ("@kit.AVSessionKit", KitConfig(
         ("@ohos.multimedia.avCastPicker", Package("AVCastPicker")),
         ("@ohos.multimedia.avInputCastPicker", Decls([

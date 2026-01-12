@@ -202,7 +202,7 @@ function normalizeSublist(exportAlias, sub) {
 
 function kitToCangjie(cjPkg, kitMap) {
     let result = 'package ' + cjPkg + '\n\n';
-    result += 'import std.collection.*\n\n';
+    result += 'import std.collection.HashMap\n\n';
     result += 'enum Decl {\n';
     result += '    | Name(String)\n';
     result += '    | Mapping(String, String)\n';
@@ -213,7 +213,7 @@ function kitToCangjie(cjPkg, kitMap) {
     result += '}\n\n';
     result += 'type KitConfig = HashMap<String, ImportClause>\n';
     result += 'type KitConfigs = HashMap<String, KitConfig>\n\n';
-    result += 'let kitConfigs = HashMap<String, KitConfig>(\n';
+    result += 'let KIT_CONFIGS = HashMap<String, KitConfig>(\n';
     for (const kitName in kitMap) {
         const kitConfig = kitMap[kitName];
         result += `    ("${kitName}", KitConfig(\n`;
@@ -244,8 +244,8 @@ function kitToCangjie(cjPkg, kitMap) {
 
 function apiToCangjie(cjPkg, bundleMap) {
     let result = 'package ' + cjPkg + '\n\n';
-    result += 'import std.collection.*\n\n';
-    result += 'let bundleMap = HashMap<String, String>(\n';
+    result += 'import std.collection.HashMap\n\n';
+    result += 'let BUNDLE_MAP = HashMap<String, String>(\n';
     for (const apiName in bundleMap) {
         result += `    ("${apiName}", "${bundleMap[apiName]}"),\n`;
     }
