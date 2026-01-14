@@ -17,8 +17,6 @@
 
 package ohos.ark_interop
 
-import ohos.business_exception.*
-
 import std.sync.{Mutex, AtomicInt8}
 import std.collection.*
 

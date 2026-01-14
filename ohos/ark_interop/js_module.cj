@@ -19,7 +19,6 @@ package ohos.ark_interop
 
 import std.collection.{HashMap, ArrayList}
 import std.convert.Parsable
-import ohos.business_exception.*
 
 @C
 struct CJModuleCallbacks {

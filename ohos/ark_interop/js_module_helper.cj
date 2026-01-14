@@ -18,8 +18,6 @@ package ohos.ark_interop
 import std.regex.*
 import std.collection.*
 
-import ohos.business_exception.*
-
 class ArkModuleHelper {
     private static let idReg = Regex("^[A-Za-z][A-Za-z0-9_]*$")
     private static func isIdentifier(name: String): Bool {
