@@ -3,7 +3,7 @@
         "name": "localhsp",
         "type": "shared",
         "deviceTypes": [
-            "phone"
+            "default"
         ],
         "deliveryWithInstall": true
     }
