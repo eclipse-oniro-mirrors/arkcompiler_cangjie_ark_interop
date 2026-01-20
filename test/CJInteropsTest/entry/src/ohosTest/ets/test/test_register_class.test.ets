@@ -26,9 +26,9 @@ interface IPerson {
 export default function testJSModule00() {
   describe('TestRegisterClass', () => {
     it('test00', 0, () => {
-      let person = lib.testRegisterClass00();
-      expect(JSON.stringify(person)).assertEqual('{"name":"tom","age":23}');
+      let person = new lib.testRegisterClass00("tom", 23);
       expect(person.name).assertEqual('tom');
+      expect(person.age).assertEqual(23);
     })
   })
 }
