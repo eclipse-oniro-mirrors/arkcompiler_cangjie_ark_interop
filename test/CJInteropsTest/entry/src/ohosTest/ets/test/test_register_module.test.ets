@@ -50,9 +50,9 @@ export default function testJSModule02() {
     })
     it('test06', 0, () => {
       expect(typeof lib.testRegisterModule06).assertEqual('function');
-      const person = lib.testRegisterModule06();
+      const person = new lib.testRegisterModule06("tom", 23);
       expect(person.name).assertEqual('tom');
-      expect(JSON.stringify(person)).assertEqual('{"name":"tom","age":23}');
+      expect(person.age).assertEqual(23);
     })
     it('test07', 0, () => {
       expect(typeof lib.testRegisterModule07).assertEqual('symbol');

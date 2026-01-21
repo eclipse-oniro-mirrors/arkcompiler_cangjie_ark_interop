@@ -15,8 +15,7 @@
 
 package entry
 
-import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule, JSObject, 
-    SharedObject, JSClass}
+import ohos.ark_interop.*
 import std.math.{MathExtension, abs}
 import std.math.numeric.BigInt
 
@@ -41,6 +40,22 @@ let _ = JSModule.registerModule {
                 let jsObject = jsCallInfo.thisArg.asObject()
                 let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
                 jsContext.string(person.name).toJSValue()
+            },
+            setter: {
+                jsContext, jsCallInfo =>
+                let jsObject = jsCallInfo.thisArg.asObject()
+                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                person.name = jsCallInfo[0].toString()
+                jsContext.undefined().toJSValue()
+            }
+        )
+        jsClass.addAccessor(
+            "age",
+            getter: {
+                jsContext, jsCallInfo =>
+                let jsObject = jsCallInfo.thisArg.asObject()
+                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                person.age.toJSValue(jsContext)
             },
             setter: {
                 jsContext, jsCallInfo =>
@@ -99,6 +114,22 @@ class Person <: SharedObject {
                 let jsObject = jsCallInfo.thisArg.asObject()
                 let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
                 person.name = jsCallInfo[0].toString()
+                jsContext.undefined().toJSValue()
+            }
+        )
+        jsClass.addAccessor(
+            "age",
+            getter: {
+                jsContext, jsCallInfo =>
+                let jsObject = jsCallInfo.thisArg.asObject()
+                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                person.age.toJSValue(jsContext)
+            },
+            setter: {
+                jsContext, jsCallInfo =>
+                let jsObject = jsCallInfo.thisArg.asObject()
+                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                person.age = Int64(jsCallInfo[0].toNumber())
                 jsContext.undefined().toJSValue()
             }
         )

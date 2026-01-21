@@ -122,6 +122,7 @@ export const testRegisterModule04: string;
 export const testRegisterModule05: (a: number, b: number) => number;
 export class testRegisterModule06 {
     name: string;
+    age: number;
     constructor(name: string, age: number);
 }
 export const testRegisterModule07: Symbol;
