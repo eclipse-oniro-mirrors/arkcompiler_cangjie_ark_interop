@@ -41,11 +41,11 @@ foreign func ARKTS_GetElement(env: JSEnv, arr: JSValue_, index: UInt32): JSValue
 ]
 public class JSArray <: JSHeapObject {
     init(context: JSContext, value: JSValue_) {
-        super(context, value)
+        super(context, value, JSType.OBJECT)
     }
 
     init(context: JSContext, arr: Array<JSValue>) {
-        super(context, createWithInit(context, arr))
+        super(context, createWithInit(context, arr), JSType.OBJECT)
     }
 
     static func createWithInit(context: JSContext, arr: Array<JSValue>): JSValue_ {

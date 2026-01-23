@@ -90,17 +90,17 @@ public class JSExternal <: JSHeapObject {
     private var id_: ?Int64
 
     init(context: JSContext, value: JSValue_) {
-        super(context, value)
+        super(context, value, JSType.EXTERNAL)
         id_ = None
     }
 
     init(context: JSContext, data: SharedObject) {
-        super(context, createExternal(context, data))
+        super(context, createExternal(context, data), JSType.EXTERNAL)
         id_ = data.nativeId_
     }
 
     private init(context: JSContext, value: JSValue, id: Int64) {
-        super(context, value.value)
+        super(context, value.value, JSType.EXTERNAL)
         id_ = id
     }
 

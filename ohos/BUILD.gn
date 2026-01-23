@@ -81,6 +81,10 @@ ohos_cangjie_shared_library("ohos.ark_interop") {
     "./business_exception:ohos.business_exception",
   ]
 
+  cj_external_deps = [
+    "hiviewdfx_cangjie_wrapper:ohos.hilog"
+  ]
+
   deps = [
     ":utf16string",
   ]
