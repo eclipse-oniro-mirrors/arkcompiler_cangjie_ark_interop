@@ -36,11 +36,11 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
     private var desc_: ?String = None
 
     init(context: JSContext, value: JSValue_) {
-        super(context, value)
+        super(context, value, JSType.SYMBOL)
     }
 
     init(context: JSContext, description: String) {
-        super(context, createSymbol(context, description))
+        super(context, createSymbol(context, description), JSType.SYMBOL)
         desc_ = description
     }
 

@@ -58,20 +58,26 @@ public type FuncRegister = (JSContext) -> JSFunction
 func loadArkInteropModule(env: JSEnv, cname: CString, exports: JSValue_): JSValue_ {
     let context = JSContext.getOrCreate(env)
     context.isOnLoadingCJ = true
-    try {
-        let name = cname.toString()
-        let module = match (JSModule.getCachedModule(name)) {
-            case Some(mod) => mod
-            case None => JSModule.finishLoad(name)
+    let exportValue = JSValue(context, exports)
+    context.newScope {
+        try {
+            let name = cname.toString()
+            let exportObj = exportValue.asObject()
+            let module = match (JSModule.getCachedModule(name)) {
+                case Some(mod) => mod
+                case None => JSModule.finishLoad(name)
+            }
+            module.fillInto(context, exportObj)
+            exportValue.value
+        } catch (err: Exception) {
+            context.throwJSError(err)
+            context.void_
+        } catch (err: Error) {
+            context.throwJSError(err)
+            context.void_
+        } finally {
+            context.isOnLoadingCJ = false
         }
-        let exportObj = JSValue(context, exports).asObject()
-        module.fillInto(context, exportObj)
-        context.isOnLoadingCJ = false
-        exports
-    } catch (err: Exception) {
-        context.isOnLoadingCJ = false
-        context.throwJSError(err)
-        context.undefined().toJSValue().value
     }
 }
 

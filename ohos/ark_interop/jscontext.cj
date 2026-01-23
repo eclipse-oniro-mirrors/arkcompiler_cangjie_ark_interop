@@ -105,6 +105,29 @@ func disposeJSContext(env: JSEnv): Unit {
     }
 }
 
+class Scope {
+    private let handle_: JSScope
+    private let handledValues_ = ArrayList<JSValue>()
+
+    init(env: JSEnv) {
+        handle_ = unsafe { ARKTS_OpenScope(env) }
+        if (handle_.isNull()) {
+            throw cHeapOOM()
+        }
+    }
+
+    func close(env: JSEnv): Unit {
+        for (value in handledValues_) {
+            value.isSafe = false
+        }
+        unsafe { ARKTS_CloseScope(env, handle_) }
+    }
+
+    func add(value: JSValue): Unit {
+        handledValues_.add(value)
+    }
+}
+
 /**
  * A single-thread ArkTS interop context. JSContext has a one-to-one correspondence with the ArkTS runtime. 
  * Its main purpose is to create JSValues and safe references and manage the lifecycle of Cangjie objects 
@@ -138,7 +161,8 @@ public class JSContext {
     private let bindTid_: UInt64
     var global_: ?JSObject = None
     var constants_: ?JSConstants = None
-    private let void_: JSValue_
+    let void_: JSValue_
+    private let scopes_ = ArrayList<Scope>()
 
     /**
      * @throws { Exception } - Create JSContext failed, env is null.
@@ -154,7 +178,7 @@ public class JSContext {
 
     prop void: JSValue {
         get() {
-            JSValue(this, void_)
+            JSValue(this, void_, JSType.UNDEFINED)
         }
     }
 
@@ -283,12 +307,29 @@ public class JSContext {
         }
     }
 
-    func newScope(callback: () -> Unit): Unit {
-        unsafe {
-            let scope = ARKTS_OpenScope(env)
-            callback()
-            ARKTS_CloseScope(env, scope)
+    func handleValue(value: JSValue): Unit {
+        if (scopes_.isEmpty()) {
+            printExp(noScopeError())
+            return
         }
+        scopes_[scopes_.size - 1].add(value)
+    }
+
+    func newScope<T>(callback: () -> T): T {
+        let scope = Scope(env)
+        let index = scopes_.size
+        scopes_.add(scope)
+        let result = try {
+            callback()
+        } catch (e: Exception) {
+            throw e
+        } catch (e: Error) {
+            throw e
+        } finally {
+            scopes_.remove(at: index)
+            scope.close(env_)
+        }
+        return result
     }
 
     /**
@@ -320,7 +361,7 @@ public class JSContext {
     ]
     public func null(): JSNull {
         checkLifecycleAndThread()
-        JSNull(JSValue(this, unsafe { ARKTS_CreateNull() }))
+        JSNull(JSValue(this, unsafe { ARKTS_CreateNull() }, JSType.NULL))
     }
 
     /**
@@ -337,7 +378,7 @@ public class JSContext {
     ]
     public func boolean(value: Bool): JSBoolean {
         checkLifecycleAndThread()
-        JSBoolean(JSValue(this, unsafe { ARKTS_CreateBool(value) }))
+        JSBoolean(JSValue(this, unsafe { ARKTS_CreateBool(value) }, JSType.BOOLEAN))
     }
 
     /**
@@ -354,7 +395,7 @@ public class JSContext {
     ]
     public func number(value: Float64): JSNumber {
         checkLifecycleAndThread()
-        JSNumber(JSValue(this, unsafe { ARKTS_CreateF64(value) }))
+        JSNumber(JSValue(this, unsafe { ARKTS_CreateF64(value) }, JSType.NUMBER))
     }
 
     /**
@@ -371,7 +412,7 @@ public class JSContext {
     ]
     public func number(value: Int32): JSNumber {
         checkLifecycleAndThread()
-        JSNumber(JSValue(this, unsafe { ARKTS_CreateI32(value) }))
+        JSNumber(JSValue(this, unsafe { ARKTS_CreateI32(value) }, JSType.NUMBER))
     }
 
     /**
@@ -841,8 +882,15 @@ public class JSContext {
         let env = this.env // do lifecycle check and thread check here.
         unsafe {
             let moduleNameC = LibC.mallocCString(moduleName)
+            if (moduleNameC.isNull()) {
+                throw cHeapOOM()
+            }
             let result = if (let Some(p) <- prefix) {
                 let cp = LibC.mallocCString(p)
+                if (cp.isNull()) {
+                    LibC.free(moduleNameC)
+                    throw cHeapOOM()
+                }
                 let ret = ARKTS_Require(env, moduleNameC, true, false, cp)
                 LibC.free(cp)
                 ret
