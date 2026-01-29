@@ -102,3 +102,7 @@ class JSInteropNativeError <: Exception {
         "JSInteropNativeError"
     }
 }
+
+internal func invalidHeapObject(value: JSValue_): BusinessException {
+    outsideError("Target value[${value.value}] is not heap object.")
+}
