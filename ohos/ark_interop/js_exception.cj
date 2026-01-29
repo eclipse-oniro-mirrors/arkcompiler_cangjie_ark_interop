@@ -37,10 +37,6 @@ internal func outsideError(message: String): BusinessException {
     return BusinessException(34300002, "Outside error occurred, ${message}")
 }
 
-internal func noScopeError(): BusinessException {
-    return BusinessException(34300003, "Without any scope")
-}
-
 internal func jsObjUseAfterFree(kind: String): BusinessException {
     return BusinessException(34300003, "Accessing reference [${kind}] is beyond reach.")
 }
@@ -105,8 +101,4 @@ class JSInteropNativeError <: Exception {
     protected func getClassName(): String {
         "JSInteropNativeError"
     }
-}
-
-internal func invalidHeapObject(value: JSValue_): BusinessException {
-    outsideError("Target value[${value.value}] is not heap object.")
 }

@@ -60,25 +60,18 @@ func loadArkInteropModule(env: JSEnv, cname: CString, exports: JSValue_): JSValu
     context.isOnLoadingCJ = true
     try {
         let name = cname.toString()
-        let exportObj = JSValue(context, exports).asObject()
-        context.newScope {
-            let module = match (JSModule.getCachedModule(name)) {
-                case Some(mod) => mod
-                case None => JSModule.finishLoad(name)
-            }
-
-            module.fillInto(context, exportObj)
-            context.isOnLoadingCJ = false
+        let module = match (JSModule.getCachedModule(name)) {
+            case Some(mod) => mod
+            case None => JSModule.finishLoad(name)
         }
+        let exportObj = JSValue(context, exports).asObject()
+        module.fillInto(context, exportObj)
+        context.isOnLoadingCJ = false
         exports
     } catch (err: Exception) {
         context.isOnLoadingCJ = false
         context.throwJSError(err)
-        context.void_
-    } catch (err: Error) {
-        context.isOnLoadingCJ = false
-        context.throwJSError(err)
-        context.void_
+        context.undefined().toJSValue().value
     }
 }
 
