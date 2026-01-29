@@ -102,9 +102,7 @@ public class JSClass <: JSHeapObject {
     public func new(): JSValue {
         let env = context.env // do lifecycle check and thread check here.
         let result = unsafe { ARKTS_New(env, innerValue, 0, CPointer<JSValue_>()) }
-        let back = JSValue(context, result)
-        context.handleValue(back)
-        return back
+        JSValue(context, result)
     }
 
     /**
@@ -124,9 +122,7 @@ public class JSClass <: JSHeapObject {
         let env = context.env // do lifecycle check and thread check here.
         var mutableArg = arg.value
         let result = unsafe { ARKTS_New(env, innerValue, 1, inout mutableArg) }
-        let back = JSValue(context, result)
-        context.handleValue(back)
-        return back
+        JSValue(context, result)
     }
 
     /**
@@ -157,9 +153,7 @@ public class JSClass <: JSHeapObject {
         } else {
             unsafe { ARKTS_New(env, innerValue, 0, CPointer<JSValue_>()) }
         }
-        let back = JSValue(context, result)
-        context.handleValue(back)
-        return back
+        JSValue(context, result)
     }
 
     /**
