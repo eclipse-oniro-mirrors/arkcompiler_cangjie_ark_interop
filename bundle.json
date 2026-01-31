@@ -12,8 +12,7 @@
     "component": {
         "name": "cangjie_ark_interop",
         "subsystem": "arkcompiler",
-        "syscap": [
-        ],
+        "syscap": [ "SystemCapability.ArkCompiler.CangjieInterop" ],
         "features": [],
         "adapted_system_type": [
             "standard"
