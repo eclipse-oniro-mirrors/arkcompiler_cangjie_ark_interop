@@ -62,7 +62,7 @@ internal func codecError(): BusinessException {
 }
 
 internal func nativeIdInvalid(value: Int64): BusinessException {
-    return outsideError("Unknown native reference.")
+    return outsideError("Unknown native reference, id is ${value}.")
 }
 
 internal func propertyError(object: String, propertyName: String, expectType: String): BusinessException {
@@ -74,7 +74,7 @@ internal func integerOverflow(): BusinessException {
 }
 
 internal func indexInvalid(key: String): BusinessException {
-    return outsideError("Dict key not found.")
+    return outsideError("Dict key ${key} not found.")
 }
 
 internal func cHeapOOM(): BusinessException {
