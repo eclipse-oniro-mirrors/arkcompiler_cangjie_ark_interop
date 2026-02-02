@@ -16,6 +16,7 @@ import("//build/templates/cangjie/cjc.gni")
 ohos_cangjie_shared_library("ohos.callback_invoke") {
   sources = [
     "callback_object.cj",
+    "callback_list.cj",
   ]
 
   cj_deps = [
