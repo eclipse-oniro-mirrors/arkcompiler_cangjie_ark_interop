@@ -153,5 +153,8 @@ protected class Callback5Param<T0, T1, T2, T3, T4, R> <: BaseCallBack where T0 <
 @C
 func ohosFFICJCallbackInvoker(id: Int64, argc: Int32, argv: CPointer<CPointer<Unit>>, res: CPointer<Unit>): Unit {
     let callback = FFIDataManager.getInstance().getData<BaseCallBack>(id)
-    getOrThrow(callback, msg: "can not find CJCallback according to lambdaId: ${id}").invoke(argc, argv, res)
+    match (callback) {
+        case Some(callback) => callback.invoke(argc, argv, res)
+        case _ => FFI_BIND_LOG.error("can not find CJCallback according to lambdaId: ${id}")
+    }
 }
