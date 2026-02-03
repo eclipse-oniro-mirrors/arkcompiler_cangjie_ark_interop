@@ -18,6 +18,7 @@
 package ohos.ark_interop
 
 import ohos.business_exception.BusinessException
+import ohos.hilog.*
 
 internal func jsArrayRangeMisMatch(min: Int64, max: Int64, given: Int64, message!: String = "The accessing index is out of range"): BusinessException {
     return BusinessException(34300001, "${message}, allowed: [${min}, ${max}), given: ${given}")
@@ -35,6 +36,11 @@ internal func jsCodeError(jsMessage: String, jsStack: Array<String>): BusinessEx
 
 internal func outsideError(message: String): BusinessException {
     return BusinessException(34300002, "Outside error occurred, ${message}")
+}
+
+// throw when create Local value without any scope.
+internal func noScopeError(): BusinessException {
+    return BusinessException(34300003, "Without any scope")
 }
 
 internal func jsObjUseAfterFree(kind: String): BusinessException {
@@ -105,4 +111,11 @@ class JSInteropNativeError <: Exception {
 
 internal func invalidHeapObject(value: JSValue_): BusinessException {
     outsideError("Target value[${value.value}] is not heap object.")
+}
+
+internal func printExp(exp: Exception): Unit {
+    Hilog.error(0xD003900, "ark_interop", exp.toString())
+    for (element in exp.getStackTrace()) {
+        Hilog.error(0xD003900, "ark_interop", "\t at ${element.declaringClass}.${element.methodName}(${element.fileName}:${element.lineNumber})")
+    }
 }

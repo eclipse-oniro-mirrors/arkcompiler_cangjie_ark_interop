@@ -65,78 +65,78 @@ public class JSArrayBuffer <: JSHeapObject {
     private var buffer_: ?Array<Byte> = None
 
     init(context: JSContext, value: JSValue_) {
-        super(context, value)
+        super(context, value, JSType.OBJECT)
         byteLength_ = None
     }
 
     init(context: JSContext, length: Int32) {
-        super(context, unsafe { ARKTS_CreateArrayBuffer(context.env, length) })
+        super(context, unsafe { ARKTS_CreateArrayBuffer(context.env, length) }, JSType.OBJECT)
         context.checkJSException() // in case of ArkTS OOM
         byteLength_ = length
     }
 
     init(context: JSContext, buffer: Array<Byte>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size)
         buffer_ = buffer
     }
 
     init(context: JSContext, buffer: Array<Int8>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size)
         buffer_ = None
     }
 
     init(context: JSContext, buffer: Array<Int16>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size) * 2
         buffer_ = None
     }
 
     init(context: JSContext, buffer: Array<UInt16>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size) * 2
         buffer_ = None
     }
 
     init(context: JSContext, buffer: Array<UInt32>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size) * 4
         buffer_ = None
     }
 
     init(context: JSContext, buffer: Array<Int32>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size) * 4
         buffer_ = None
     }
 
     init(context: JSContext, buffer: Array<Float32>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size) * 4
         buffer_ = None
     }
 
     init(context: JSContext, buffer: Array<Int64>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size) * 8
         buffer_ = None
     }
 
     init(context: JSContext, buffer: Array<UInt64>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size) * 8
         buffer_ = None
     }
 
     init(context: JSContext, buffer: Array<Float64>) {
-        super(context, createArrayBuffer(context, buffer))
+        super(context, createArrayBuffer(context, buffer), JSType.OBJECT)
         byteLength_ = Int32(buffer.size) * 8
         buffer_ = None
     }
 
     init(context: JSContext, buffer: CPointer<Byte>, length: Int32, finalizer: JSBufferFinalizer) {
-        super(context, createArrayBuffer(context, buffer, length, finalizer))
+        super(context, createArrayBuffer(context, buffer, length, finalizer), JSType.OBJECT)
         byteLength_ = length
     }
 

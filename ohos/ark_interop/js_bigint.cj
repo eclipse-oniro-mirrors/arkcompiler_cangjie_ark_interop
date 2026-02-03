@@ -44,16 +44,16 @@ foreign func ARKTS_BigIntReadBytes(env: JSEnv, value: JSValue_, isNegative: CPoi
 ]
 public class JSBigInt <: JSHeapObject {
     init(context: JSContext, value: JSValue_) {
-        super(context, value)
+        super(context, value, JSType.BIGINT)
     }
 
     init(context: JSContext, value: Int64) {
-        super(context, createWithInt64(context, value))
+        super(context, createWithInt64(context, value), JSType.BIGINT)
         context.checkJSException() // in case of ArkTS OOM
     }
 
     init(context: JSContext, value: BigInt) {
-        super(context, createWithBigInt(context, value))
+        super(context, createWithBigInt(context, value), JSType.BIGINT)
         context.checkJSException() // in case of ArkTS OOM
     }
 
