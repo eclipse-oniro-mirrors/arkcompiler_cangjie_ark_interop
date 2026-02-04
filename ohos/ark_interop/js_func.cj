@@ -128,6 +128,10 @@ public class JSCallInfo {
         let result = unsafe { ARKTS_GetArg(callInfo, UInt32(index)) }
         JSValue(context, result)
     }
+
+    func dispose(): Unit {
+        isSafe = false
+    }
 }
 
 /**

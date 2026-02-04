@@ -57,7 +57,7 @@ public class JSClass <: JSHeapObject {
     }
 
     init(context: JSContext, constructor: JSLambda, superClass: ?JSClass) {
-        super(context, createClass(context, constructor, superClass))
+        super(context, createClass(context, constructor, superClass), JSType.FUNCTION)
         let proto = unsafe { ARKTS_GetPrototype(context.env, innerValue) }
         prototype_ = if (unsafe { ARKTS_IsObject(context.env, proto) }) {
             JSObject(context, proto)
