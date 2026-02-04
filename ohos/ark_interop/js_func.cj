@@ -54,8 +54,19 @@ struct JSCallInfoPrivate {
 public class JSCallInfo {
     JSCallInfo(
         let context: JSContext,
-        let callInfo: JSCallInfoPrivate
+        private let callInfo_: JSCallInfoPrivate
     ) {}
+
+    private var isSafe = true
+
+    prop callInfo: JSCallInfoPrivate {
+        get() {
+            if (!isSafe) {
+                printExp(jsObjUseAfterFree("JSCallInfo"))
+            }
+            callInfo_
+        }
+    }
 
     /**
      * Number of input arguments.
@@ -117,6 +128,10 @@ public class JSCallInfo {
         let result = unsafe { ARKTS_GetArg(callInfo, UInt32(index)) }
         JSValue(context, result)
     }
+
+    func dispose(): Unit {
+        isSafe = false
+    }
 }
 
 /**
@@ -128,16 +143,20 @@ public type JSLambda = (JSContext, JSCallInfo) -> JSValue
 func cjLambdaInvoker(info: JSCallInfoPrivate, lambdaId: Int64): JSValue_ {
     let env = info.env()
     let context = JSContext.getOrCreate(env)
-    try {
-        let lambda = context.sharedLambda_[lambdaId]
-        let callInfo = JSCallInfo(context, info)
-        lambda(context, callInfo).value
-    } catch (err: Exception) {
-        context.throwJSError(err)
-        context.undefined().toJSValue().value
-    } catch (err: Error) {
-        context.throwJSError(err)
-        context.undefined().toJSValue().value
+    let callInfo = JSCallInfo(context, info)
+    context.newScope {
+        try {
+            let lambda = context.sharedLambda_[lambdaId]
+            lambda(context, callInfo).value
+        } catch (err: Exception) {
+            context.throwJSError(err)
+            context.undefined().toJSValue().value
+        } catch (err: Error) {
+            context.throwJSError(err)
+            context.undefined().toJSValue().value
+        } finally {
+            callInfo.dispose()
+        }
     }
 }
 
@@ -162,11 +181,11 @@ public class JSFunction <: JSHeapObject {
     }
 
     init(context: JSContext, value: JSValue_) {
-        super(context, value)
+        super(context, value, JSType.FUNCTION)
     }
 
     init(context: JSContext, lambda: JSLambda) {
-        super(context, createFunction(context, lambda))
+        super(context, createFunction(context, lambda), JSType.FUNCTION)
     }
 
     ~init() {

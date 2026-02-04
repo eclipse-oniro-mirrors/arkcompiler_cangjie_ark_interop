@@ -47,7 +47,8 @@ abstract sealed class JSHeapObject {
 
     JSHeapObject(
         context: JSContext,
-        value: JSValue_
+        value: JSValue_,
+        private let type_: JSType
     ) {
         if (!unsafe {ARKTS_IsHeapObject(value)}) {
             context.checkJSException()
@@ -77,6 +78,6 @@ abstract sealed class JSHeapObject {
     ]
     public func toJSValue(): JSValue {
         context.checkLifecycleAndThread()
-        JSValue(context, innerValue)
+        JSValue(context, innerValue, type_)
     }
 }

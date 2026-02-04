@@ -88,7 +88,7 @@ foreign func ARKTS_DefineAccessorsV2(env: JSEnv, object: JSValue_, key: JSValue_
 ]
 abstract sealed class JSObjectBase <: JSHeapObject {
     init(context: JSContext, value: JSValue_) {
-        super(context, value)
+        super(context, value, JSType.OBJECT)
     }
 
     /**
@@ -145,9 +145,8 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     public func getProperty(key: JSKeyable): JSValue {
         let keyValue = key.toJSValue(context)
         let result = unsafe { ARKTS_GetProperty(context.env, innerValue, keyValue.value) }
-        let back = JSValue(context, result)
         context.checkJSException()
-        return back
+        return JSValue(context, result)
     }
 
     /**

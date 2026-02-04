@@ -151,17 +151,17 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
     private var cjStrCache_: ?String
 
     init(context: JSContext, source: String) {
-        super(context, createString(context, source))
+        super(context, createString(context, source), JSType.STRING)
         cjStrCache_ = Some(source)
     }
 
     init(context: JSContext, jsValue: JSValue_) {
-        super(context, jsValue)
+        super(context, jsValue, JSType.STRING)
         cjStrCache_ = None
     }
 
     init(context: JSContext, value: Utf16String) {
-        super(context, createString(context, value))
+        super(context, createString(context, value), JSType.STRING)
         cjStrCache_ = None
     }
 
