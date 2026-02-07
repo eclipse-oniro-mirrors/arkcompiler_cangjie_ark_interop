@@ -17,7 +17,7 @@
 
 protected package ohos.ffi
 
-import std.collection.HashMap
+import std.collection.concurrent.ConcurrentHashMap
 import std.sync.Mutex
 
 /**
@@ -65,21 +65,18 @@ protected class FFIDataManager {
         INSTANCE
     }
 
-    private let store_ = HashMap<Int64, FFIData>();
+    private let store_ = ConcurrentHashMap<Int64, FFIData>();
     private var gid_: Int64 = 0
     private let maxId: Int64 = 0x7fff_ffff_ffff_ffff
-    private let dataLock = Mutex()
     // maxCapacity can be set to a larger number if needed, make sure maxCapacity is less than maxId
     private let maxCapacity: Int64 = 0x7fff_ffff_ffff_ffff
 
     protected func register(data: FFIData): Unit {
-        synchronized(dataLock) {
-            let id = data.getID()
-            if (store_.contains(id)) {
-                FFI_BIND_LOG.info("FFIData id duplicate: ${id} with cache!")
-            }
-            store_.add(id, data)
+        let id = data.getID()
+        if (store_.contains(id)) {
+            FFI_BIND_LOG.info("FFIData id duplicate: ${id} with cache!")
         }
+        store_.add(id, data)
     }
 
     private func gidSafeIncrease(): Int64 {
@@ -93,48 +90,40 @@ protected class FFIDataManager {
     }
 
     protected func newId(): Int64 {
-        synchronized(dataLock) {
-            if (store_.size >= Int64(maxCapacity)) {
-                let msg = "FFIData store_ over max capacity: ${maxCapacity}"
-                throw Exception(msg)
-            }
-            var resetTimes = gidSafeIncrease()
-            while (store_.contains(gid_) && resetTimes < 2) {
-                resetTimes += gidSafeIncrease()
-            }
-            if (resetTimes >= 2) {
-                let msg = "FFIData id run out"
-                throw Exception(msg)
-            }
-            gid_
+        if (store_.size >= Int64(maxCapacity)) {
+            let msg = "FFIData store_ over max capacity: ${maxCapacity}"
+            throw Exception(msg)
         }
+        var resetTimes = gidSafeIncrease()
+        while (store_.contains(gid_) && resetTimes < 2) {
+            resetTimes += gidSafeIncrease()
+        }
+        if (resetTimes >= 2) {
+            let msg = "FFIData id run out"
+            throw Exception(msg)
+        }
+        gid_
     }
 
     protected func getData<T>(id: Int64): Option<T> where T <: FFIData {
-        synchronized(dataLock) {
-            let optData = store_.get(id)
-            match (optData) {
-                case None => Option<T>.None
-                case Some(data) => data as T
-            }
+        let optData = store_.get(id)
+        match (optData) {
+            case None => Option<T>.None
+            case Some(data) => data as T
         }
     }
 
     protected func exist(id: Int64): Bool {
-        synchronized(dataLock) {
-            return store_.contains(id)
-        }
+        return store_.contains(id)
     }
 
     protected func releaseData(id: Int64): Bool {
-        synchronized(dataLock) {
-            let optData = store_.remove(id)
-            match (optData) {
-                case None => false
-                case Some(data) =>
-                    data.onDestroyed()
-                    true
-            }
+        let optData = store_.remove(id)
+        match (optData) {
+            case None => false
+            case Some(data) =>
+                data.onDestroyed()
+                true
         }
     }
 }
