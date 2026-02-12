@@ -19,6 +19,7 @@ protected package ohos.ffi
 
 import std.sync.Mutex
 import std.collection.HashMap
+import std.collection.concurrent.ConcurrentHashMap
 
 foreign func FfiOHOSFFIFFIDataExist(id: Int64): Bool
 
@@ -131,41 +132,34 @@ protected class RemoteDataManager {
         INSTANCE
     }
 
-    private let store_ = HashMap<Int64, RemoteData>()
-    private let dataLock = Mutex()
+    private let store_ = ConcurrentHashMap<Int64, RemoteData>()
     protected func getOrCreate<T>(id: Int64, creator: (Int64) -> T): T where T <: RemoteData {
-        synchronized(dataLock) {
-            let optData = store_.get(id)
-            match (optData) {
-                case Some(data) => getOrThrow(data as T, msg: "getOrCreate fail, data exist but type mismatch.")
-                case _ =>
-                    let data = creator(id)
-                    store_.add(id, data)
-                    data
-            }
+        let optData = store_.get(id)
+        match (optData) {
+            case Some(data) => getOrThrow(data as T, msg: "getOrCreate fail, data exist but type mismatch.")
+            case _ =>
+                let data = creator(id)
+                store_.add(id, data)
+                data
         }
     }
 
     protected func register(data: RemoteData): Unit {
-        synchronized(dataLock) {
-            let id = data.getID();
-            if (store_.contains(id)) {
-                FFI_BIND_LOG.error("RemoteData repeat register: " + id.toString())
-            }
-            store_.add(id, data)
+        let id = data.getID();
+        if (store_.contains(id)) {
+            FFI_BIND_LOG.error("RemoteData repeat register: " + id.toString())
         }
+        store_.add(id, data)
     }
 
     protected func releaseData(id: Int64): Bool {
-        synchronized(dataLock) {
-            let optData = store_.get(id)
-            match (optData) {
-                case Some(data) =>
-                    data.onDestroyed()
-                    store_.remove(id)
-                    true
-                case _ => false
-            }
+        let optData = store_.get(id)
+        match (optData) {
+            case Some(data) =>
+                data.onDestroyed()
+                store_.remove(id)
+                true
+            case _ => false
         }
     }
 }
