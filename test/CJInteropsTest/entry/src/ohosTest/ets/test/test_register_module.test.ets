@@ -17,6 +17,7 @@ import { describe, beforeAll, beforeEach, afterEach, afterAll, it, expect } from
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { JSON } from '@kit.ArkTS';
 import * as lib from "libentry.so"
+import deviceInfo from "@ohos.deviceInfo";
 
 interface IPerson {
   name: string;
@@ -78,25 +79,27 @@ export default function testJSModule02() {
     it('test12', 0, () => {
       expect(Object.keys(lib).indexOf('testRegisterModule12') !== undefined).assertTrue();
     })
-    it("fail during cangjie load", 0, ()=> {
-      try {
-        loadNativeModule("libentry.fail_load.so")
-        expect().assertFail();
-      } catch (e) {
-        hilog.error(0, 'WBT', `|${e.message.toString()}|`);
-      }
-    })
-    it("load pub sys native", 0, () => {
-        const sources = [
-            "@system.app",
-            "@system.router",
-            "@ohos.curves",
-            "@ohos.matrix4"
-        ]
-        for (const src of sources) {
-            const data = lib.requireArkModule(src)
-            expect(typeof data).assertEqual("object")
+    if (deviceInfo.sdkApiVersion >= 23) {
+      it("fail during cangjie load", 0, ()=> {
+        try {
+          loadNativeModule("libentry.fail_load.so")
+          expect().assertFail();
+        } catch (e) {
+          hilog.error(0, 'WBT', `|${e.message.toString()}|`);
         }
-    })
+      })
+      it("load pub sys native", 0, () => {
+          const sources = [
+              "@system.app",
+              "@system.router",
+              "@ohos.curves",
+              "@ohos.matrix4"
+          ]
+          for (const src of sources) {
+              const data = lib.requireArkModule(src)
+              expect(typeof data).assertEqual("object")
+          }
+      })
+    }
   })
 }

@@ -15,6 +15,8 @@
 
 package entry.pure
 
+import ohos.device_info.DeviceInfo
+
 let _ = testsuite()
 
 func testsuite(): Unit {
@@ -35,5 +37,7 @@ func testsuite(): Unit {
     registerTestSuite("TestString", {=> TestString()})
     registerTestSuite("TestSymbol", {=> TestSymbol()})
     registerTestSuite("TestUtf16String", {=> TestUtf16String()})
-    registerTestSuite("TestRequireArkModule", {=> TestRequireArkModule()})
+    if (DeviceInfo.sdkApiVersion >= 23) {
+        registerTestSuite("TestRequireArkModule", {=> TestRequireArkModule()})
+    }
 }
