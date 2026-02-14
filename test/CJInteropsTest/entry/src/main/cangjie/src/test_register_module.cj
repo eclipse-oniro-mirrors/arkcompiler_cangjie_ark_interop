@@ -18,6 +18,7 @@ package entry
 import ohos.ark_interop.*
 import std.math.{MathExtension, abs}
 import std.math.numeric.BigInt
+import ohos.device_info.DeviceInfo
 
 let _ = JSModule.registerModule {
     jsContext: JSContext, jsObject: JSObject =>
@@ -79,9 +80,11 @@ let _ = JSModule.registerModule {
     jsObject["testRegisterModule10"] = jsContext.bigint(BigInt("12345678901234567890")).toJSValue()
     jsObject["testRegisterModule11"] = jsContext.arrayBuffer(114514).toJSValue()
     jsObject["testRegisterModule12"] = jsContext.external(Person("tom", 23)).toJSValue()
-    jsObject["requireArkModule"] = jsContext.function {context, callInfo =>
-        context.requireArkModule(callInfo[0].toString())
-    }.toJSValue()
+    if (DeviceInfo.sdkApiVersion >= 23) {
+        jsObject["requireArkModule"] = jsContext.function {context, callInfo =>
+            context.requireArkModule(callInfo[0].toString())
+        }.toJSValue()
+    }
 }
 
 class Person <: SharedObject {
