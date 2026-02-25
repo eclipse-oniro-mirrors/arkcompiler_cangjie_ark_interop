@@ -24,6 +24,7 @@ ohos_cangjie_shared_library("ohos.ffi") {
     "remote_data_lite.cj",
     "ret_data.cj",
     "utility.cj",
+    "atomic_mutex.cj",
   ]
 
   cj_external_deps = [ "hiviewdfx_cangjie_wrapper:ohos.hilog" ]
