@@ -35,7 +35,7 @@ class CallbackWrapper {
 protected class CallbackList {
     var list: ?ArrayList<CallbackWrapper> = None
     var listMut: Mutex = Mutex()
-    static let defaultLambda = { => }
+    static let DEFAULTLAMBDA = { => }
     private func tryInitialize(): Bool {
         synchronized(listMut) {
             match (list) {
@@ -97,9 +97,9 @@ protected class CallbackList {
     protected func addCallback(
         callback: CallbackObject,
         isOnce!: Bool = false,
-        onInitialize!: () -> Unit = defaultLambda,
-        onSucceed!: () -> Unit = defaultLambda,
-        onFailed!: () -> Unit = defaultLambda
+        onInitialize!: () -> Unit = DEFAULTLAMBDA,
+        onSucceed!: () -> Unit = DEFAULTLAMBDA,
+        onFailed!: () -> Unit = DEFAULTLAMBDA
     ): Unit {
         if (tryInitialize()) {
             onInitialize()
@@ -114,8 +114,8 @@ protected class CallbackList {
 
     protected func removeCallback(
         callback: CallbackObject,
-        onSucceed!: () -> Unit = defaultLambda,
-        onFailed!: () -> Unit = defaultLambda
+        onSucceed!: () -> Unit = DEFAULTLAMBDA,
+        onFailed!: () -> Unit = DEFAULTLAMBDA
     ): Unit {
         synchronized(listMut) {
             if (let Some(callbackList) <- list) {
