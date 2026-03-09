@@ -17,7 +17,7 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.{Visitor, Decl, FuncDecl, RefType, PrimaryCtorDecl, InterfaceDecl, ClassDecl, PropDecl, EnumDecl, Token, Tokens, MacroExpandDecl, PackageHeader, VarDecl, parseProgram, cangjieLex}
+import std.ast.{Visitor, Decl, FuncDecl, RefType, PrimaryCtorDecl, InterfaceDecl, ClassDecl, PropDecl, EnumDecl, Token, Tokens, MacroExpandDecl, PackageHeader, VarDecl, parseProgram, cangjieLex, ToTokens}
 import std.collection.{ArrayList, HashSet, HashMap, forEach}
 import std.fs.{FileInfo, Path, FSException, File, Directory, OpenMode}
 import std.sync.Mutex
@@ -460,19 +460,14 @@ class IDLCustomTypeWL {
             if (isCreated) {
                 return
             }
+            // CJ_LSP_INTEROP_PATH contains the source code directories of all the Cangjie modules.
+            let path = getVariable("CJ_LSP_INTEROP_PATH") ?? ""
             let list: ArrayList<FileInfo> = ArrayList<FileInfo>()
-            let relativePath: String = getCangjieSrcPath()
-            let fileInfoList = if (!relativePath.isEmpty()) {
-                getFileList(relativePath)
-            } else {
-                let path = getVariable("CJ_LSP_INTEROP_PATH") ?? ""
-                path.split(";") |> forEach {
-                    it: String => list.add(all: getFileList(it))
-                }
-                list
+            path.split(";") |> forEach {
+                it: String => list.add(all: getFileList(it))
             }
 
-            for (info in fileInfoList) {
+            for (info in list) {
                 let fileName = info.path.fileName
                 if (!Regex(#"\.cj$"#, []).matches(fileName)) {
                     continue

@@ -34,24 +34,34 @@ let TAB_STR = "    "
 
 func genFuncDeclareFile(funcDecl: FuncDecl, isAsync: Bool) {
     let file = genFile()
+    if (file.isEmpty()) {
+        return
+    }
     let funcDeclare = genFuncDeclare(funcDecl, isAsync)
 
     funcDeclareWriteIntoApiFile(funcDeclare, file)
 
     let pkgName = IDLCustomTypeWL.getPkgName(funcDecl.identifier.value)
     let newFile = genFile(currentPkg: pkgName)
-    funcDeclareWriteIntoIndexFile("export declare function " + funcDeclare, newFile)
+    if (!newFile.isEmpty()) {
+        funcDeclareWriteIntoIndexFile("export declare function " + funcDeclare, newFile)
+    }
 }
 
 func genInterfaceDeclareFile(interfaceDecl: InterfaceDecl) {
     let file = genFile()
+    if (file.isEmpty()) {
+        return
+    }
     let interfaceDeclare = genInterfaceDeclare(interfaceDecl)
 
     ciDeclareWriteIntoApiFile(interfaceDeclare, file)
 
     let pkgName = IDLCustomTypeWL.getPkgName(interfaceDecl.identifier.value)
     let newFile = genFile(currentPkg: pkgName)
-    cieDeclareWriteIntoIndexFile(interfaceDeclare, newFile)
+    if (!newFile.isEmpty()) {
+        cieDeclareWriteIntoIndexFile(interfaceDeclare, newFile)
+    }
 }
 
 func getVisibleClassMembers(classDecl: ClassDecl) {
@@ -70,6 +80,9 @@ func getVisibleClassMembers(classDecl: ClassDecl) {
 
 func genClassDeclareFile(classDecl: ClassDecl) {
     let file = genFile()
+    if (file.isEmpty()) {
+        return
+    }
 
     let visibleClassDecl = getVisibleClassMembers(classDecl)
     let classDeclare = genClassDeclare(visibleClassDecl)
@@ -80,16 +93,20 @@ func genClassDeclareFile(classDecl: ClassDecl) {
 
     let pkgName = IDLCustomTypeWL.getPkgName(classDecl.identifier.value)
     let newFile = genFile(currentPkg: pkgName)
-    let newClassDeclare = genClassDeclare(visibleClassDecl, withConstructor: true)
-    cieDeclareWriteIntoIndexFile(newClassDeclare, newFile)
+    if (!newFile.isEmpty()) {
+        let newClassDeclare = genClassDeclare(visibleClassDecl, withConstructor: true)
+        cieDeclareWriteIntoIndexFile(newClassDeclare, newFile)
+    }
 }
 
 func genEnumDeclareFile(enumDecl: EnumDecl) {
     // No need to write into files under ark_interop_api.
     let pkgName = IDLCustomTypeWL.getPkgName(enumDecl.identifier.value)
     let file = genFile(currentPkg: pkgName)
-    let enumDeclare = genEnumDeclare(enumDecl)
-    cieDeclareWriteIntoIndexFile(enumDeclare, file)
+    if (!file.isEmpty()) {
+        let enumDeclare = genEnumDeclare(enumDecl)
+        cieDeclareWriteIntoIndexFile(enumDeclare, file)
+    }
 }
 
 func getFuncRetType(retType: TypeNode) {
@@ -304,6 +321,12 @@ func genFile(currentPkg!: String = "") {
     if (relativePath.isEmpty()) {
         return ""
     }
+
+    // Check if the currentPkg belongs to the current module.
+    if (!currentPkg.isEmpty() && IDLCustomTypeWL.combinedPkgName != "" && !currentPkg.startsWith(IDLCustomTypeWL.combinedPkgName)) {
+        return ""
+    }
+
     let (dirName, soName, fileName): (String, String, String) = if (currentPkg.isEmpty()) {
         ("ark_interop_api", "libark_interop_api.so", "ark_interop_api.d.ts")
     } else {
