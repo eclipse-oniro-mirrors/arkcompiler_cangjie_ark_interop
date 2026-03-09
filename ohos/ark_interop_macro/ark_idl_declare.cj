@@ -41,10 +41,12 @@ func genFuncDeclareFile(funcDecl: FuncDecl, isAsync: Bool) {
 
     funcDeclareWriteIntoApiFile(funcDeclare, file)
 
-    let pkgName = IDLCustomTypeWL.getPkgName(funcDecl.identifier.value)
-    let newFile = genFile(currentPkg: pkgName)
-    if (!newFile.isEmpty()) {
-        funcDeclareWriteIntoIndexFile("export declare function " + funcDeclare, newFile)
+    let pkgNames = IDLCustomTypeWL.getPkgNames(funcDecl)
+    for (pkgName in pkgNames) {
+        let newFile = genFile(currentPkg: pkgName)
+        if (!newFile.isEmpty()) {
+            funcDeclareWriteIntoIndexFile("export declare function " + funcDeclare, newFile)
+        }
     }
 }
 
@@ -57,10 +59,12 @@ func genInterfaceDeclareFile(interfaceDecl: InterfaceDecl) {
 
     ciDeclareWriteIntoApiFile(interfaceDeclare, file)
 
-    let pkgName = IDLCustomTypeWL.getPkgName(interfaceDecl.identifier.value)
-    let newFile = genFile(currentPkg: pkgName)
-    if (!newFile.isEmpty()) {
-        cieDeclareWriteIntoIndexFile(interfaceDeclare, newFile)
+    let pkgNames = IDLCustomTypeWL.getPkgNames(interfaceDecl)
+    for (pkgName in pkgNames) {
+        let newFile = genFile(currentPkg: pkgName)
+        if (!newFile.isEmpty()) {
+            cieDeclareWriteIntoIndexFile(interfaceDeclare, newFile)
+        }
     }
 }
 
@@ -91,21 +95,25 @@ func genClassDeclareFile(classDecl: ClassDecl) {
     let classInitsDeclare = genClassInitsDeclare(visibleClassDecl)
     funcDeclareWriteIntoApiFile(classInitsDeclare.replace("\n", "\n" + TAB_STR).trimEnd(" "), file)
 
-    let pkgName = IDLCustomTypeWL.getPkgName(classDecl.identifier.value)
-    let newFile = genFile(currentPkg: pkgName)
-    if (!newFile.isEmpty()) {
-        let newClassDeclare = genClassDeclare(visibleClassDecl, withConstructor: true)
-        cieDeclareWriteIntoIndexFile(newClassDeclare, newFile)
+    let pkgNames = IDLCustomTypeWL.getPkgNames(classDecl)
+    for (pkgName in pkgNames) {
+        let newFile = genFile(currentPkg: pkgName)
+        if (!newFile.isEmpty()) {
+            let newClassDeclare = genClassDeclare(visibleClassDecl, withConstructor: true)
+            cieDeclareWriteIntoIndexFile(newClassDeclare, newFile)
+        }
     }
 }
 
 func genEnumDeclareFile(enumDecl: EnumDecl) {
     // No need to write into files under ark_interop_api.
-    let pkgName = IDLCustomTypeWL.getPkgName(enumDecl.identifier.value)
-    let file = genFile(currentPkg: pkgName)
-    if (!file.isEmpty()) {
-        let enumDeclare = genEnumDeclare(enumDecl)
-        cieDeclareWriteIntoIndexFile(enumDeclare, file)
+    let pkgNames = IDLCustomTypeWL.getPkgNames(enumDecl)
+    for (pkgName in pkgNames) {
+        let file = genFile(currentPkg: pkgName)
+        if (!file.isEmpty()) {
+            let enumDeclare = genEnumDeclare(enumDecl)
+            cieDeclareWriteIntoIndexFile(enumDeclare, file)
+        }
     }
 }
 

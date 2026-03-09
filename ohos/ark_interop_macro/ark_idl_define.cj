@@ -35,6 +35,7 @@ public macro Interop(attrTokens: Tokens, input: Tokens): Tokens {
 
 func handleArkTS(input: Tokens): Tokens {
     let decl = parseDecl(input)
+    IDLCustomTypeWL.checkDuplicate(decl)
     match (decl) {
         case classDecl: ClassDecl => handleClass(classDecl)
         case interfaceDecl: InterfaceDecl => handleInterface(interfaceDecl)
@@ -106,6 +107,7 @@ func handleInvisible(input: Tokens): Tokens {
 
 func handleAsyncFunc(input: Tokens): Tokens {
     let decl = parseDecl(input)
+    IDLCustomTypeWL.checkDuplicate(decl)
     match (decl) {
         case funcDecl: FuncDecl => handleFunc(funcDecl, true)
         case _ =>
