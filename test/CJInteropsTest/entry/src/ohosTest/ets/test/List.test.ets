@@ -28,6 +28,7 @@ import testJSModule01 from './test_register_func.test';
 import testJSModule02 from './test_register_module.test';
 import testJSModule03 from './test_register_override.test';
 import TestExternal from './test_external_00.test'
+import TestNewScopeTask from './test_newScope.test'
 
 export default function testsuite() {
   promiseTest();
@@ -46,4 +47,5 @@ export default function testsuite() {
   testJSModule04();
   testJSModule04();
   TestExternal();
+  TestNewScopeTask();
 }
