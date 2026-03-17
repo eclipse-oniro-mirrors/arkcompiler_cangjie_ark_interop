@@ -35,7 +35,7 @@ foreign func ARKTS_IsArrayBuffer(env: JSEnv, value: JSValue_): Bool
 foreign func ARKTS_GetArrayBufferRawPtr(env: JSEnv, value: JSValue_): CPointer<Unit>
 
 @FastNative
-foreign func memcpy_s(dst: CPointer<Unit>, dstSize: UIntNative, src: CPointer<Unit>, srcSize: UIntNative): Unit
+foreign func memcpy_s(dst: CPointer<Unit>, dstSize: UIntNative, src: CPointer<Unit>, srcSize: UIntNative): Int32
 
 @FastNative
 foreign func ARKTS_ArrayBufferReadBytes(env: JSEnv, value: JSValue_, dest: CPointer<Byte>, count: Int32): Int32
@@ -730,8 +730,11 @@ public class JSArrayBuffer <: JSHeapObject {
             context.checkJSException() // in case of ArkTS OOM
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             result
         }
     }
@@ -743,8 +746,11 @@ public class JSArrayBuffer <: JSHeapObject {
             context.checkJSException() // in case of ArkTS OOM
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             result
         }
     }
@@ -755,8 +761,11 @@ public class JSArrayBuffer <: JSHeapObject {
             let result = ARKTS_CreateArrayBuffer(context.env, length)
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             context.checkJSException() // in case of ArkTS OOM
             result
         }
@@ -769,8 +778,11 @@ public class JSArrayBuffer <: JSHeapObject {
             context.checkJSException() // in case of ArkTS OOM
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             result
         }
     }
@@ -782,8 +794,11 @@ public class JSArrayBuffer <: JSHeapObject {
             context.checkJSException() // in case of ArkTS OOM
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             result
         }
     }
@@ -795,8 +810,11 @@ public class JSArrayBuffer <: JSHeapObject {
             context.checkJSException() // in case of ArkTS OOM
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             result
         }
     }
@@ -808,8 +826,11 @@ public class JSArrayBuffer <: JSHeapObject {
             context.checkJSException() // in case of ArkTS OOM
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             result
         }
     }
@@ -821,8 +842,11 @@ public class JSArrayBuffer <: JSHeapObject {
             context.checkJSException() // in case of ArkTS OOM
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             result
         }
     }
@@ -834,8 +858,11 @@ public class JSArrayBuffer <: JSHeapObject {
             context.checkJSException() // in case of ArkTS OOM
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             result
         }
     }
@@ -847,8 +874,11 @@ public class JSArrayBuffer <: JSHeapObject {
             context.checkJSException() // in case of ArkTS OOM
             let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
             let rawHandle = acquireArrayRawData(buffer)
-            memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
+            let status = memcpy_s(dst, UIntNative(length), CPointer<Unit>(rawHandle.pointer), UIntNative(length))
             releaseArrayRawData(rawHandle)
+            if (status != 0) {
+                throw badCCall("memcpy_s", status)
+            }
             result
         }
     }

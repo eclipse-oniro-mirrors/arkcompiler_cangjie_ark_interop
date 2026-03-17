@@ -83,6 +83,10 @@ internal func indexInvalid(key: String): BusinessException {
     return outsideError("Dict key ${key} not found.")
 }
 
+internal func badCCall(key: String, status: Int32): BusinessException {
+    return outsideError("Bad C call ${key}, status: ${status}.")
+}
+
 internal func cHeapOOM(): BusinessException {
     return outsideError("c heap out of memory")
 }
