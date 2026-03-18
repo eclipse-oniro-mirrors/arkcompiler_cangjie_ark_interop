@@ -22,5 +22,14 @@ export default function newScopeTask() {
     it('test00', 0, () => {
       lib.testNewScope00();
     })
+    it('testNewScope0', 0, async ()=> {
+        await lib.testNewScope0()
+    })
+    it('testNewScope1', 0, async ()=> {
+        await lib.testNewScope1()
+    })
+    it('testNewScope2', 0, ()=> {
+        expect(lib.testNewScope2()).assertTrue()
+    })
   })
 }
