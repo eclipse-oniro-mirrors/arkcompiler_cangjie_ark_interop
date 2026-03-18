@@ -26,8 +26,6 @@ type JSEngine = CPointer<JSEnginePrivate>
 
 foreign func ARKTS_CreateEngine(): JSEngine
 
-foreign func CJ_MRT_ARKTS_CreateEngineStub(): JSEngine
-
 foreign func ARKTS_CreateEngineWithNewThread(): JSEngine
 
 foreign func ARKTS_DestroyEngine(engine: JSEngine): Unit
@@ -81,7 +79,7 @@ public class JSRuntime {
         throwexception: true
     ]
     public init() {
-        let engine = unsafe { CJ_MRT_ARKTS_CreateEngineStub() }
+        let engine = unsafe { ARKTS_CreateEngine() }
         if (engine.isNull()) {
             throw BusinessException(34300014, "Create ArkTS engine fail")
         }
@@ -96,11 +94,7 @@ public class JSRuntime {
      */
     protected init(inCJThread: Bool) {
         let engine = unsafe {
-            if (inCJThread) {
-                ARKTS_CreateEngine()
-            } else {
-                CJ_MRT_ARKTS_CreateEngineStub()
-            }
+            ARKTS_CreateEngine()
         }
         if (engine.isNull()) {
             throw Exception("failed to create JSRuntime")
