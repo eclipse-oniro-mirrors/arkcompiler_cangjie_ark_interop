@@ -26,8 +26,6 @@ import ohos.ark_interop.{JSRuntime, JSModule}
 import std.convert.Parsable
 import std.env.getProcessId
 
-foreign func gettid(): Int64
-
 const JS_INTERNAL_ERROR = -1i32
 protected let EMPTY_ARG = {_: JSContext => Array<JSValue>()}
 private let MAIN_CONTEXT_MODULE_MAP = ConcurrentHashMap<String, JSObject>()
