@@ -32,6 +32,58 @@ let TYPE_TABLE_G = HashMap<String, String>(
 let MTX = Mutex()
 let TAB_STR = "    "
 
+func genPackageHelperFile(declName: String) {
+    let pkgNames = IDLCustomTypeWL.getOrigPkgNames(declName)
+    for (pkgName in pkgNames) {
+        if (pkgName.isEmpty()) {
+            continue
+        }
+
+        let pkgPath = IDLCustomTypeWL.getPkgPath(pkgName)
+        if (pkgPath.isEmpty()) {
+            continue
+        }
+
+        let fileName = "ark_interop_helper.cj"
+        let filePath = Path(pkgPath).join(fileName)
+
+        synchronized(MTX) {
+            if (exists(filePath)) {
+                continue
+            }
+
+            let file = try {
+                File.create(filePath)
+            } catch (e: FSException | IllegalArgumentException) {
+                continue
+            }
+
+            let content = '''
+package ${pkgName}
+
+@C func ArkTS_Interop_Stub() {}
+
+@C struct DL_info {
+    var dli_fname: CString = CString(CPointer<UInt8>())
+    var dli_fbase: CPointer<Unit> = CPointer<Unit>()
+    var dli_sname: CString = CString(CPointer<UInt8>())
+    var dli_saddr: CPointer<Unit> = CPointer<Unit>()
+}
+
+foreign func dladdr(addr: CPointer<Unit>, info: CPointer<DL_info>): Int
+
+func getLibName(): String {
+    var info = DL_info()
+    unsafe { dladdr(CPointer<Unit>(ArkTS_Interop_Stub), inout info) }
+    return info.dli_fname.toString().split('/').last.getOrThrow()
+}
+'''
+            file.write(content.toArray())
+            file.close()
+        }
+    }
+}
+
 func genFuncDeclareFile(funcDecl: FuncDecl, isAsync: Bool) {
     let file = genFile()
     if (file.isEmpty()) {

@@ -53,6 +53,7 @@ func handleArkTS(input: Tokens): Tokens {
 func handleFunc(funcDecl: FuncDecl, isAsync: Bool): Tokens {
     checkFunc(funcDecl, isAsync)
     genFuncDeclareFile(funcDecl, isAsync)
+    genPackageHelperFile(funcDecl.identifier.value)
     IDLFunction(funcDecl, isAsync).genIDLFunction()
 }
 
@@ -65,6 +66,7 @@ func handleInterface(interfaceDecl: InterfaceDecl): Tokens {
 func handleClass(classDecl: ClassDecl): Tokens {
     checkClass(classDecl)
     genClassDeclareFile(classDecl)
+    genPackageHelperFile(classDecl.identifier.value)
     IDLClass(classDecl).genIDLClass()
 }
 
