@@ -15,22 +15,62 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
-import ohos.base.UIThread
+import std.runtime.*
+import ohos.ark_interop.*
+import ohos.base.*
 
-func testNewScope00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    Assert.isTrue(jsContext.isInBindThread())
-    spawn(UIThread) {
-        jsContext.newScope<Unit> {
-            let str = jsContext.string("123")
-            let fun = jsContext.function({context, callinfo => context.undefined().toJSValue()})
-            fun.call()
+func test_newScope_fix_memory_leak_success(context: JSContext, callInfo: JSCallInfo): JSValue {
+    let promise = context.promiseCapability()
+    let result = promise.toJSValue()
+    spawn (UIThread) {
+        try {
+            context.newScope {
+                let fun = context.function({context, callinfo => context.undefined().toJSValue()})
+                fun.call()
+            }
+            promise.resolve(context.boolean(true).toJSValue())
+        } catch (e: Exception) {
+            promise.resolve(context.boolean(true).toJSValue())
         }
     }
-    jsContext.undefined().toJSValue()
+    result
 }
 
-let _ = JSModule.registerModule {
-    jsContext, jsObject =>
-    jsObject["testNewScope00"] = jsContext.function(testNewScope00).toJSValue()
+func createContext(): JSContext {
+    JSRuntime().mainContext
+}
+
+func test_newScope_throw_exception_reference_beyond_reach(context: JSContext, callInfo: JSCallInfo): JSValue {
+    let promise = context.promiseCapability()
+    let result = promise.toJSValue()
+    let newContext = createContext()
+    gc(heavy: true)
+    context.global.callMethod("setTimeout", context.function {c, _ =>
+        try {
+            newContext.newScope {}
+            promise.reject(context.string("no exception throw").toJSValue())
+        } catch (e: Exception) {
+            promise.resolve(context.string(e.message).toJSValue())
+        }
+        c.undefined().toJSValue()
+    }.toJSValue(), context.number(2000).toJSValue())
+    return result
+}
+
+func test_newScope_throw_exception_thread_mismatch(context: JSContext, callInfo: JSCallInfo): JSValue {
+    let message = spawn {
+        try {
+            context.newScope {}
+            "no exception throw"
+        } catch (e: Exception) {
+            e.message[0..15]
+        }
+    }.get()
+    context.string(message).toJSValue()
+}
+
+let _ = JSModule.registerModule { context, exports =>
+    exports["test_newScope_fix_memory_leak_success"] = context.function(test_newScope_fix_memory_leak_success).toJSValue()
+    exports["test_newScope_throw_exception_reference_beyond_reach"] = context.function(test_newScope_throw_exception_reference_beyond_reach).toJSValue()
+    exports["test_newScope_throw_exception_thread_mismatch"] = context.function(test_newScope_throw_exception_thread_mismatch).toJSValue()
 }
