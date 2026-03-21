@@ -17,6 +17,8 @@
 
 package ohos.ark_interop
 
+import std.collection.*
+
 protected class LazyInit<T> {
     private var data_: ?T = None
     private var func_: ?() -> T
@@ -177,13 +179,48 @@ class JSTypedArrayFuncs {
 }
 
 class JSConstants {
+    let context: JSContext
     let builtinText: JSBuiltinText
     let mapFuncs: JSMapFuncs
     let typedArray: JSTypedArrayFuncs
+    let errClsByName = HashMap<String, JSClass>()
 
     init(context: JSContext) {
+        this.context = context
         builtinText = JSBuiltinText(context)
         mapFuncs = JSMapFuncs(context)
         typedArray = JSTypedArrayFuncs(context)
+        errClsByName["Error"] = context.global["Error"].asClass()
+    }
+
+    func getErrorClass(clsName: String): JSClass {
+        if (let Some(cls) <- errClsByName.get(clsName)) {
+            cls
+        } else {
+            let base = errClsByName["Error"]
+            let cls = context.clazz({ context, callInfo =>
+                callInfo.thisArg
+            }, superClass: base)
+            cls.addProperty("name", context.string(clsName).toJSValue())
+            errClsByName[clsName] = cls
+            cls
+        }
+    }
+
+    func getArkStack(): Array<String> {
+        let cls = errClsByName["Error"]
+        let obJ = cls.new().asObject()
+        let stack = obJ["stack"].toString()
+        parseArkStack(stack)
+    }
+
+    func parseArkStack(stack: String): Array<String> {
+        let result = ArrayList<String>()
+        for (line in stack.split("\n")) {
+            if (!line.trimStart().isEmpty()) {
+                result.add(line)
+            }
+        }
+        result.toArray()
     }
 }
