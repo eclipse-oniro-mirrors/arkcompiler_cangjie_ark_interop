@@ -723,6 +723,9 @@ public class JSArrayBuffer <: JSHeapObject {
         clazz.new(toArrayJSValue())
     }
 
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<UInt64>): JSValue_ {
         let length = Int32(buffer.size) * 8
         unsafe {
@@ -739,6 +742,9 @@ public class JSArrayBuffer <: JSHeapObject {
         }
     }
 
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<Int64>): JSValue_ {
         let length = Int32(buffer.size) * 8
         unsafe {
@@ -755,6 +761,9 @@ public class JSArrayBuffer <: JSHeapObject {
         }
     }
 
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<Float64>): JSValue_ {
         let length = Int32(buffer.size) * 8
         unsafe {
@@ -771,6 +780,9 @@ public class JSArrayBuffer <: JSHeapObject {
         }
     }
 
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<Float32>): JSValue_ {
         let length = Int32(buffer.size) * 4
         unsafe {
@@ -787,6 +799,9 @@ public class JSArrayBuffer <: JSHeapObject {
         }
     }
 
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<Int32>): JSValue_ {
         let length = Int32(buffer.size) * 4
         unsafe {
@@ -803,6 +818,10 @@ public class JSArrayBuffer <: JSHeapObject {
         }
     }
 
+
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<UInt32>): JSValue_ {
         let length = Int32(buffer.size) * 4
         unsafe {
@@ -819,6 +838,9 @@ public class JSArrayBuffer <: JSHeapObject {
         }
     }
 
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<Int16>): JSValue_ {
         let length = Int32(buffer.size) * 2
         unsafe {
@@ -835,6 +857,9 @@ public class JSArrayBuffer <: JSHeapObject {
         }
     }
 
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<UInt16>): JSValue_ {
         let length = Int32(buffer.size) * 2
         unsafe {
@@ -851,6 +876,9 @@ public class JSArrayBuffer <: JSHeapObject {
         }
     }
 
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<Int8>): JSValue_ {
         let length = Int32(buffer.size)
         unsafe {
@@ -867,6 +895,9 @@ public class JSArrayBuffer <: JSHeapObject {
         }
     }
 
+    /**
+     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
+     */
     static func createArrayBuffer(context: JSContext, buffer: Array<Byte>): JSValue_ {
         let length = Int32(buffer.size)
         unsafe {
