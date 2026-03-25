@@ -153,7 +153,6 @@ export function test_jsCurrent_14(c: string): void;
 export function test_jsStringEx_15(c: string): void;
 export function test_jsHashMap_16(c: string): void;
 export function requireArkModule(src: string): Object;
-export function testNewScope00(): void;
-export function testNewScope0(): Promise<void>
-export function testNewScope1(): Promise<void>
-export function testNewScope2(): boolean
+export function test_newScope_fix_memory_leak_success(): Promise<boolean>
+export function test_newScope_throw_exception_reference_beyond_reach(): Promise<string>
+export function test_newScope_throw_exception_thread_mismatch(): string
