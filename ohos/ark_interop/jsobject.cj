@@ -195,13 +195,13 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     func getClassName(): String {
         let ctor = this["constructor"]
         if (!ctor.isObject() || !ctor.isFunction()) {
-            return "[unknown]"
+            return "unknown"
         }
         let name = ctor.getProperty("name")
         if (!name.isString()) {
-            return "[unknown]"
+            return "unknown"
         }
-        return "[${name.toString()}]"
+        return "${name.toString()}"
     }
 
     /**

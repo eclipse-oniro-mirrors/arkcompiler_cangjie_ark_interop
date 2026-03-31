@@ -156,3 +156,7 @@ export function requireArkModule(src: string): Object;
 export function test_newScope_fix_memory_leak_success(): Promise<boolean>
 export function test_newScope_throw_exception_reference_beyond_reach(): Promise<string>
 export function test_newScope_throw_exception_thread_mismatch(): string
+export function testMixedStack0(callback: (c: ()=>void)=>void): void
+export function testMixedStack1(callback: (c: (c: ()=>void)=>void)=>void): void
+export function testMixedStack2(callback: (c: ()=>void)=>void): boolean
+export function testMixedStack3(callback: (c: ()=>void)=>void): boolean

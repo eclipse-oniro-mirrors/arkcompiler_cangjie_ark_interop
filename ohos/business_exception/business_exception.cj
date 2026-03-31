@@ -44,7 +44,7 @@ protected func getUniversalErrorMsg(code: Int32): ?String {
 @!APILevel[
     since: "22"
 ]
-public class BusinessException <: Exception {
+public open class BusinessException <: Exception {
     /**
      * Defines the basic error code.
      */
@@ -77,7 +77,7 @@ public class BusinessException <: Exception {
         this.errData = data
     }
 
-    protected override func getClassName(): String {
+    protected open func getClassName(): String {
         "BusinessException"
     }
 
@@ -89,7 +89,7 @@ public class BusinessException <: Exception {
     @!APILevel[
         since: "22"
     ]
-    public func toString(): String {
+    public open func toString(): String {
         let className: String = getClassName()
         let message: String = this.message
         if (message.isEmpty()) {

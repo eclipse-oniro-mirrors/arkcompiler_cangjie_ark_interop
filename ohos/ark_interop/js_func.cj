@@ -17,6 +17,8 @@
 
 package ohos.ark_interop
 
+import ohos.business_exception.*
+
 @FastNative
 foreign func ARKTS_CreateFunc(env: JSEnv, lambdaId: Int64): JSValue_
 
@@ -148,9 +150,19 @@ func cjLambdaInvoker(info: JSCallInfoPrivate, lambdaId: Int64): JSValue_ {
         try {
             let lambda = context.sharedLambda_[lambdaId]
             lambda(context, callInfo).value
+        } catch (err: MixedException) {
+            unsafe { ARKTS_Throw(context.env, err.toJSError(context).value) }
+            context.void_
+        } catch (err: BusinessException) {
+            let stack = context.constants.getArkStack()
+            let mixedExp = MixedException(err.code, err, stack)
+            unsafe { ARKTS_Throw(context.env, mixedExp.toJSError(context).value) }
+            context.void_
         } catch (err: Exception) {
-            context.throwJSError(err)
-            context.undefined().toJSValue().value
+            let stack = context.constants.getArkStack()
+            let mixedExp = MixedException(0, err, stack)
+            unsafe { ARKTS_Throw(context.env, mixedExp.toJSError(context).value) }
+            context.void_
         } catch (err: Error) {
             context.throwJSError(err)
             context.undefined().toJSValue().value
