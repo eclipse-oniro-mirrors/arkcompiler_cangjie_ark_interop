@@ -17,4 +17,5 @@ package entry
 
 import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule}
 
-let _ = JSModule.registerClass("testRegisterClass00", Person.getJSClass)
+// registerClass(name, register: ClassRegister)
+let _ = JSModule.registerClass("test_JSModule_registerClass_ClassPerson_success", Person.getJSClass)

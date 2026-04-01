@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025 Huawei Device Co., Ltd.
+ * Copyright (c) 2026 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,10 +13,18 @@
  * limitations under the License.
  */
 
-package entry.fail_load
+package entry.pure
 
-import ohos.ark_interop.*
+import ohos.ark_interop.JSType
+import std.unittest.*
+import std.unittest.testmacro.*
 
-let _ = JSModule.registerModule {
-    context, exports => context.requireArkModule("libentry.so")
+@Test
+class TestJSType {
+    @TestCase
+    func test_JSType_operatorEqual_operatorNotEqual_toString_success() {
+        @Expect(JSType.NUMBER == JSType.NUMBER, true)
+        @Expect(JSType.NUMBER != JSType.STRING, true)
+        @Expect(JSType.NUMBER.toString(), "number")
+    }
 }

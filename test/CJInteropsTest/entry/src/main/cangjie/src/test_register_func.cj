@@ -17,16 +17,18 @@ package entry
 
 import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule}
 
-let _ = JSModule.registerFunc("testRegisterFunc00", testRegisterFunc00)
+// registerFunc(name, lambda: JSLambda)，JSLambda 为 (JSContext, JSCallInfo) -> JSValue（见 js_func.cj / js_module.cj）
+let _ = JSModule.registerFunc("test_JSModule_registerFunc_JSLambda_success", test_JSModule_registerFunc_JSLambda_success)
 
-let _ = JSModule.registerFunc("testRegisterFunc01") {
-    jsContext => jsContext.function(testRegisterFunc01)
+// registerFunc(name, register: FuncRegister)，FuncRegister 为 (JSContext) -> JSFunction
+let _ = JSModule.registerFunc("test_JSModule_registerFunc_FuncRegister_success") {
+    jsContext => jsContext.function(test_JSModule_registerFunc_FuncRegister_body_success)
 }
 
-func testRegisterFunc00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    jsContext.string("testRegisterFunc00").toJSValue()
+func test_JSModule_registerFunc_JSLambda_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+    jsContext.string("test_JSModule_registerFunc_JSLambda_success").toJSValue()
 }
 
-func testRegisterFunc01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    jsContext.string("testRegisterFunc01").toJSValue()
+func test_JSModule_registerFunc_FuncRegister_body_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+    jsContext.string("test_JSModule_registerFunc_FuncRegister_success").toJSValue()
 }

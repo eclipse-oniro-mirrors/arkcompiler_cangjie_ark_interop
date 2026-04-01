@@ -17,13 +17,15 @@ package entry
 
 import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule}
 
+// 模块注册回调内再 registerFunc，校验与静态初始化顺序相关的注册路径
 let _ = JSModule.registerModule {
-    jsContext, jsObject => jsObject["testRegisterAfterStaticInit00"] = jsContext.function(testRegisterAfterStaticInit00).
-        toJSValue()
+    jsContext, jsObject => jsObject["test_JSModule_registerFunc_afterStaticInit_success"] = jsContext
+        .function(test_JSModule_registerFunc_afterStaticInit_success)
+        .toJSValue()
 }
 
-func testRegisterAfterStaticInit00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    JSModule.registerFunc("testRegisterAfterStaticInit00_00") {
+func test_JSModule_registerFunc_afterStaticInit_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+    JSModule.registerFunc("test_JSModule_registerFunc_afterStaticInit_registeredFunc") {
         jsContext, jsCallInfo => jsContext.number(1.0).toJSValue()
     }
     jsContext.undefined().toJSValue()

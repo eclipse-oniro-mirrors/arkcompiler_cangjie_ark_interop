@@ -18,53 +18,53 @@ package entry
 import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
 // js创建promise resolve number，cj then resolve
-func testPromise10(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSPromise_then_onFulfilled_success_2(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsCallInfo[0].isPromise())
     let promise = jsCallInfo[0].asPromise()
     promise.then(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
-            let result = jsCallInfo[0].toNumber()
-            Assert.approxEquals(114514.0, result, reason: "my reason")
-            jsContext.undefined().toJSValue()
+                let result = jsCallInfo[0].toNumber()
+                Assert.approxEquals(114514.0, result, reason: "my reason")
+                jsContext.undefined().toJSValue()
         },
         onRejected: jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
-            Assert.isUnreachable()
-            jsContext.undefined().toJSValue()
+                Assert.isUnreachable()
+                jsContext.undefined().toJSValue()
         }
     )
     promise.catchError(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
-            Assert.isUnreachable()
-            jsContext.undefined().toJSValue()
+                Assert.isUnreachable()
+                jsContext.undefined().toJSValue()
         }
     )
     jsContext.undefined().toJSValue()
 }
 
 // js创建promise reject number，cj then reject
-func testPromise11(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSPromise_then_onRejected_success_2(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsCallInfo[0].isPromise())
     let promise = jsCallInfo[0].asPromise()
     promise.then(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
-            Assert.isUnreachable()
-            jsContext.undefined().toJSValue()
+                Assert.isUnreachable()
+                jsContext.undefined().toJSValue()
         },
         onRejected: jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
-            let result = jsCallInfo[0].toNumber()
-            Assert.approxEquals(114514.0, result)
-            jsContext.undefined().toJSValue()
+                let result = jsCallInfo[0].toNumber()
+                Assert.approxEquals(114514.0, result)
+                jsContext.undefined().toJSValue()
         }
     )
     jsContext.undefined().toJSValue()
 }
 
-func testPromise12(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSPromiseCapability_resolve_success_2(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let promise = jsContext.promiseCapability()
     spawn {
         jsContext.postJSTask {
@@ -74,7 +74,7 @@ func testPromise12(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     promise.toJSValue()
 }
 
-func testPromise13(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSPromiseCapability_reject_thenRejected_success_2(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let promise = jsContext.promiseCapability()
     spawn {
         jsContext.postJSTask {
@@ -84,7 +84,7 @@ func testPromise13(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     promise.toJSValue()
 }
 
-func testPromise14(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSPromiseCapability_reject_success_2(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let promise = jsContext.promiseCapability()
     spawn {
         jsContext.postJSTask {
@@ -94,29 +94,29 @@ func testPromise14(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     promise.toJSValue()
 }
 
-func testPromise15(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSPromise_catchError_success_2(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsCallInfo[0].isPromise())
     let promise = jsCallInfo[0].asPromise()
     promise.then(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
-            Assert.isUnreachable()
-            jsContext.undefined().toJSValue()
+                Assert.isUnreachable()
+                jsContext.undefined().toJSValue()
         }
     )
 
     promise.catchError(
         jsContext.function {
             jsContext: JSContext, jsCallInfo: JSCallInfo =>
-            let result = jsCallInfo[0].toNumber()
-            Assert.equals(114514.0, result)
-            jsContext.undefined().toJSValue()
+                let result = jsCallInfo[0].toNumber()
+                Assert.equals(114514.0, result)
+                jsContext.undefined().toJSValue()
         }
     )
     jsContext.undefined().toJSValue()
 }
 
-func testPromise16(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSPromiseCapability_resolve_undefined_success_2(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let promise = jsContext.promiseCapability()
     let result = promise.toJSValue()
     promise.resolve(jsContext.undefined().toJSValue())
@@ -125,11 +125,25 @@ func testPromise16(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
 
 let _ = JSModule.registerModule {
     jsContext, jsObject =>
-    jsObject["testPromise10"] = jsContext.function(testPromise10).toJSValue()
-    jsObject["testPromise11"] = jsContext.function(testPromise11).toJSValue()
-    jsObject["testPromise12"] = jsContext.function(testPromise12).toJSValue()
-    jsObject["testPromise13"] = jsContext.function(testPromise13).toJSValue()
-    jsObject["testPromise14"] = jsContext.function(testPromise14).toJSValue()
-    jsObject["testPromise15"] = jsContext.function(testPromise15).toJSValue()
-    jsObject["testPromise16"] = jsContext.function(testPromise16).toJSValue()
+        jsObject["test_JSPromise_then_onFulfilled_success_2"] = jsContext
+            .function(test_JSPromise_then_onFulfilled_success_2)
+            .toJSValue()
+        jsObject["test_JSPromise_then_onRejected_success_2"] = jsContext
+            .function(test_JSPromise_then_onRejected_success_2)
+            .toJSValue()
+        jsObject["test_JSPromiseCapability_resolve_success_2"] = jsContext
+            .function(test_JSPromiseCapability_resolve_success_2)
+            .toJSValue()
+        jsObject["test_JSPromiseCapability_reject_thenRejected_success_2"] = jsContext
+            .function(test_JSPromiseCapability_reject_thenRejected_success_2)
+            .toJSValue()
+        jsObject["test_JSPromiseCapability_reject_success_2"] = jsContext
+            .function(test_JSPromiseCapability_reject_success_2)
+            .toJSValue()
+        jsObject["test_JSPromise_catchError_success_2"] = jsContext
+            .function(test_JSPromise_catchError_success_2)
+            .toJSValue()
+        jsObject["test_JSPromiseCapability_resolve_undefined_success_2"] = jsContext
+            .function(test_JSPromiseCapability_resolve_undefined_success_2)
+            .toJSValue()
 }

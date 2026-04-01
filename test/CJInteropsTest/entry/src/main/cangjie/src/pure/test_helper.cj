@@ -22,7 +22,7 @@ import std.collection.HashMap
 import std.unittest.testmacro.*
 
 @Test
-func testInteropHelper() {
+func test_interopHelper_placeholder_success() {
     // let context = getJSContext()
     // let env = context.getNapiEnv()
     // let jsValue = context.boolean(true).toJSValue()
@@ -32,7 +32,7 @@ func testInteropHelper() {
 }
 
 @Test
-func testMapHelper() {
+func test_mapHelper_placeholder_success() {
     // let context = getJSContext()
     // let map = HashMap<String, Float64>([("a", 0.0), ("b", 1.0), ("c", 2.0)])
     // let value = mapToJSValue(context, Some(map),

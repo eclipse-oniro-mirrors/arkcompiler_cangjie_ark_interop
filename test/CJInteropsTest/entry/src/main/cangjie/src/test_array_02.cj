@@ -19,11 +19,14 @@ import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSObject}
 import std.math.MathExtension
 
 let _ = JSModule.registerModule {
-    jsContext: JSContext, jsObject: JSObject => jsObject["testArray02"] = jsContext.function(testArray02).toJSValue()
+    jsContext: JSContext, jsObject: JSObject => jsObject["test_JSArray_OperatorSetJSValue_success_2"] = jsContext
+        .function(test_JSArray_OperatorSetJSValue_success_2)
+        .toJSValue()
 }
 
 // js创建空array传入cj
-func testArray02(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+// operator func [](index: Int64, value!: JSValue): Unit
+func test_JSArray_OperatorSetJSValue_success_2(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let array = jsContext.array(Array<JSValue>(5, repeat: jsContext.null().toJSValue()))
     array[0] = jsContext.number(114.514f64).toJSValue()
     array[1] = jsContext.boolean(false).toJSValue()

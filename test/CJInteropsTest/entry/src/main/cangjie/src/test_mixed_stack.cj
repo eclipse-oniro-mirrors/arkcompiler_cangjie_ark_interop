@@ -17,29 +17,34 @@ package entry
 
 import ohos.ark_interop.*
 
-func testMixedStack0(context: JSContext, callInfo: JSCallInfo): JSValue {
+// 嵌套 cj 回调内对 JSValue 误用 asClass，抛出 ArkTS 类型不匹配（34300005）
+func test_mixedStack_asClass_throwException34300005(context: JSContext, callInfo: JSCallInfo): JSValue {
     let callback = callInfo[0].asFunction()
-    callback.call(context.function {c, _ =>
-        let v = c.undefined().toJSValue().asClass() // expect throw TypeMismatch
-        c.undefined().toJSValue()
+    callback.call(context.function {
+        c, _ =>
+            let v = c.undefined().toJSValue().asClass() // expect throw TypeMismatch
+            c.undefined().toJSValue()
     }.toJSValue())
 }
 
-func testMixedStack1(context: JSContext, callInfo: JSCallInfo): JSValue {
+// 嵌套 JSFunction.call：ArkTS 侧抛 BusinessError，经混合栈回传
+func test_mixedStack_nestedCall_propagateArkTsError_success(context: JSContext, callInfo: JSCallInfo): JSValue {
     let callback = callInfo[0].asFunction()
-    callback.call(context.function { c, callInfo =>
-        callInfo[0].asFunction().call()
+    callback.call(context.function {
+        c, callInfo => callInfo[0].asFunction().call()
     }.toJSValue())
 }
 
-func testMixedStack2(context: JSContext, callInfo: JSCallInfo): JSValue {
+// cj 内 catch 到的异常与外层 e 的 toString 是否一致（用于区分传播路径）
+func test_mixedStack_caughtException_identityMismatch_success(context: JSContext, callInfo: JSCallInfo): JSValue {
     let callback = callInfo[0].asFunction()
     let error = Box<?Exception>(None)
     try {
-        callback.call(context.function {c, _ =>
-            let e = Exception("This is an exception")
-            error.value = e
-            throw e
+        callback.call(context.function {
+            c, _ =>
+                let e = Exception("This is an exception")
+                error.value = e
+                throw e
         }.toJSValue())
         return context.boolean(false).toJSValue()
     } catch (e: Exception) {
@@ -51,12 +56,14 @@ func testMixedStack2(context: JSContext, callInfo: JSCallInfo): JSValue {
     }
 }
 
-func testMixedStack3(context: JSContext, callInfo: JSCallInfo): JSValue {
+// 混合栈异常栈中是否不含 .ets 帧
+func test_mixedStack_stackTrace_noEtsFrame_success(context: JSContext, callInfo: JSCallInfo): JSValue {
     let callback = callInfo[0].asFunction()
     try {
-        callback.call(context.function { c, _ =>
-            let v = c.undefined().toJSValue().asClass()
-            throw Exception("should never happen")
+        callback.call(context.function {
+            c, _ =>
+                let v = c.undefined().toJSValue().asClass()
+                throw Exception("should never happen")
         }.toJSValue())
         return context.boolean(false).toJSValue()
     } catch (e: Exception) {
@@ -71,10 +78,18 @@ func testMixedStack3(context: JSContext, callInfo: JSCallInfo): JSValue {
     }
 }
 
-let _ = JSModule.registerModule { context, exports =>
-    exports["testMixedStack0"] = context.function(testMixedStack0).toJSValue()
-    exports["testMixedStack1"] = context.function(testMixedStack1).toJSValue()
-    exports["testMixedStack2"] = context.function(testMixedStack2).toJSValue()
-    exports["testMixedStack3"] = context.function(testMixedStack3).toJSValue()
-
+let _ = JSModule.registerModule {
+    context, exports =>
+        exports["test_mixedStack_asClass_throwException34300005"] = context
+            .function(test_mixedStack_asClass_throwException34300005)
+            .toJSValue()
+        exports["test_mixedStack_nestedCall_propagateArkTsError_success"] = context
+            .function(test_mixedStack_nestedCall_propagateArkTsError_success)
+            .toJSValue()
+        exports["test_mixedStack_caughtException_identityMismatch_success"] = context
+            .function(test_mixedStack_caughtException_identityMismatch_success)
+            .toJSValue()
+        exports["test_mixedStack_stackTrace_noEtsFrame_success"] = context
+            .function(test_mixedStack_stackTrace_noEtsFrame_success)
+            .toJSValue()
 }

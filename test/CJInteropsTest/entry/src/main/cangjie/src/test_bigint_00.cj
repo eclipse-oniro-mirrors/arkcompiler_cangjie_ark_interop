@@ -20,81 +20,42 @@ import std.math.numeric.BigInt
 
 let _ = JSModule.registerModule {
     jsContext, jsObject =>
-    jsObject["testBigInt00"] = jsContext.function(testBigInt00).toJSValue()
-    jsObject["testBigInt01"] = jsContext.function(testBigInt01).toJSValue()
-    jsObject["testBigInt02"] = jsContext.function(testBigInt02).toJSValue()
-    jsObject["testBigInt03"] = jsContext.function(testBigInt03).toJSValue()
-    jsObject["testBigInt04"] = jsContext.function(testBigInt04).toJSValue()
-    jsObject["testBigInt05"] = jsContext.function(testBigInt05).toJSValue()
-    jsObject["testBigInt06"] = jsContext.function(testBigInt06).toJSValue()
-    jsObject["testBigInt07"] = jsContext.function(testBigInt07).toJSValue()
-    jsObject["testBigInt08"] = jsContext.function(testBigInt08).toJSValue()
-    jsObject["testBigInt09"] = jsContext.function(testBigInt09).toJSValue()
-    jsObject["testBigInt10"] = jsContext.function(testBigInt10).toJSValue()
-    jsObject["testBigInt11"] = jsContext.function(testBigInt11).toJSValue()
-    jsObject["testBigInt13"] = jsContext.function(testBigInt13).toJSValue()
-    jsObject["testBigInt14"] = jsContext.function(testBigInt14).toJSValue()
-    jsObject["testBigInt15"] = jsContext.function(testBigInt15).toJSValue()
-    jsObject["testBigInt16"] = jsContext.function(testBigInt16).toJSValue()
-    jsObject["testBigInt17"] = jsContext.function(testBigInt17).toJSValue()
-    jsObject["testBigInt18"] = jsContext.function(testBigInt18).toJSValue()
-    jsObject["testBigInt19"] = jsContext.function(testBigInt19).toJSValue()
-    jsObject["testBigInt20"] = jsContext.function(testBigInt20).toJSValue()
-    jsObject["testBigInt21"] = jsContext.function(testBigInt21).toJSValue()
-    jsObject["testBigInt22"] = jsContext.function(testBigInt22).toJSValue()
-    jsObject["testBigInt23"] = jsContext.function(testBigInt23).toJSValue()
-    jsObject["testBigInt24"] = jsContext.function(testBigInt24).toJSValue()
-    jsObject["testBigInt25"] = jsContext.function(testBigInt25).toJSValue()
-    jsObject["testBigInt26"] = jsContext.function(testBigInt26).toJSValue()
-    jsObject["testBigInt27"] = jsContext.function(testBigInt27).toJSValue()
-    jsObject["testBigInt28"] = jsContext.function(testBigInt28).toJSValue()
-    jsObject["testBigInt29"] = jsContext.function(testBigInt29).toJSValue()
-
-    jsObject["testBigInt30"] = jsContext.function(testBigInt30).toJSValue()
-
-    jsObject["testBigInt31"] = jsContext.function(testBigInt31).toJSValue()
-
-    jsObject["testBigInt32"] = jsContext.function(testBigInt32).toJSValue()
-
-    jsObject["testBigInt33"] = jsContext.function(testBigInt33).toJSValue()
-
-    jsObject["testBigInt34"] = jsContext.function(testBigInt34).toJSValue()
-
-    jsObject["testBigInt35"] = jsContext.function(testBigInt35).toJSValue()
-
-    jsObject["testBigInt36"] = jsContext.function(testBigInt36).toJSValue()
-
-    jsObject["testBigInt37"] = jsContext.function(testBigInt37).toJSValue()
-
-    jsObject["testBigInt38"] = jsContext.function(testBigInt38).toJSValue()
-
-    jsObject["testBigInt39"] = jsContext.function(testBigInt39).toJSValue()
+        jsObject["test_JSBigInt_case_00_success"] = jsContext.function(test_JSBigInt_case_00_success).toJSValue()
+        jsObject["test_JSBigInt_case_01_success"] = jsContext.function(test_JSBigInt_case_01_success).toJSValue()
+        jsObject["test_JSBigInt_case_02_success"] = jsContext.function(test_JSBigInt_case_02_success).toJSValue()
+        jsObject["test_JSBigInt_case_03_success"] = jsContext.function(test_JSBigInt_case_03_success).toJSValue()
+        jsObject["test_JSBigInt_case_04_success"] = jsContext.function(test_JSBigInt_case_04_success).toJSValue()
+        jsObject["test_JSBigInt_case_05_success"] = jsContext.function(test_JSBigInt_case_05_success).toJSValue()
+        jsObject["test_JSBigInt_case_06_success"] = jsContext.function(test_JSBigInt_case_06_success).toJSValue()
+        jsObject["test_JSBigInt_case_07_success"] = jsContext.function(test_JSBigInt_case_07_success).toJSValue()
+        jsObject["test_JSBigInt_case_08_success"] = jsContext.function(test_JSBigInt_case_08_success).toJSValue()
+        jsObject["test_JSBigInt_case_09_success"] = jsContext.function(test_JSBigInt_case_09_success).toJSValue()
+        jsObject["test_JSBigInt_case_10_success"] = jsContext.function(test_JSBigInt_case_10_success).toJSValue()
+        jsObject["test_JSBigInt_case_11_success"] = jsContext.function(test_JSBigInt_case_11_success).toJSValue()
+        jsObject["test_JSBigInt_case_12_success"] = jsContext.function(test_JSBigInt_case_12_success).toJSValue()
+        jsObject["test_JSBigInt_case_13_success"] = jsContext.function(test_JSBigInt_case_13_success).toJSValue()
+        jsObject["test_JSBigInt_case_14_success"] = jsContext.function(test_JSBigInt_case_14_success).toJSValue()
+        jsObject["test_JSBigInt_case_15_success"] = jsContext.function(test_JSBigInt_case_15_success).toJSValue()
+        jsObject["test_JSBigInt_case_16_success"] = jsContext.function(test_JSBigInt_case_16_success).toJSValue()
+        jsObject["test_JSBigInt_case_17_success"] = jsContext.function(test_JSBigInt_case_17_success).toJSValue()
 }
 
-func testBigInt00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    Assert.isTrue(!jsCallInfo[0].isBigInt())
+func test_JSBigInt_case_00_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+    Assert.isTrue(jsCallInfo[0].isBigInt())
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_01_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.bigint(0).toJSValue()
 }
 
-func testBigInt02(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    Assert.isTrue(!jsCallInfo[0].isBigInt())
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt03(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_02_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     jsCallInfo[0].toBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, 114514)
-//    Assert.isTrue(isLossless)
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt04(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_03_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.isTrue(bigInt == BigInt(3))
@@ -103,131 +64,21 @@ func testBigInt04(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt05(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_04_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, 123)
-//    Assert.isFalse(isLossless)
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt06(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_05_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.bigint(3).toJSValue()
 }
 
-func testBigInt07(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    jsContext.bigint(3).toJSValue()
-}
-
-func testBigInt08(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    jsContext.bigint(3).toJSValue()
-}
-
-func testBigInt09(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    jsContext.bigint(3).toJSValue()
-}
-
-func testBigInt10(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    jsContext.bigint(3).toJSValue()
-}
-
-func testBigInt11(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    jsContext.bigint(3).toJSValue()
-}
-
-func testBigInt12(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    jsContext.bigint(3).toJSValue()
-}
-
-func testBigInt13(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_06_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, Int64.Min)
-//    Assert.isTrue(isLossless)
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt14(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, Int64.Min)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt15(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, Int64.Min + 1)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt16(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, -114514)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt17(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, -1)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt18(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, 0)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt19(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, 1)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt20(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, 114514)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt21(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, Int64.Max - 1)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt22(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, Int64.Max)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt23(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-//    let (int64Value, isLossless) = jsBigInt.toInt64()
-//    Assert.equals(int64Value, Int64.Max)
-//    Assert.isTrue(isLossless)
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt24(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_07_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
@@ -235,7 +86,7 @@ func testBigInt24(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt25(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_08_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
@@ -243,7 +94,7 @@ func testBigInt25(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt26(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_09_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
@@ -251,7 +102,7 @@ func testBigInt26(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt27(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_10_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
@@ -259,7 +110,7 @@ func testBigInt27(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt28(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_11_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, -1)
@@ -267,7 +118,7 @@ func testBigInt28(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt29(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_12_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 0)
@@ -275,7 +126,7 @@ func testBigInt29(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt30(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_13_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
@@ -283,7 +134,7 @@ func testBigInt30(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt31(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_14_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
@@ -291,7 +142,7 @@ func testBigInt31(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt32(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_15_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
@@ -299,7 +150,7 @@ func testBigInt32(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt33(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_16_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
@@ -307,50 +158,10 @@ func testBigInt33(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testBigInt34(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSBigInt_case_17_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsBigInt = jsCallInfo[0].asBigInt()
     let bigInt = jsBigInt.toBigInt()
     Assert.equals(bigInt.sign, 1)
     Assert.equals(bigInt.toString(), "9223372036854775808")
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt35(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-    let bigInt = jsBigInt.toBigInt()
-    Assert.equals(bigInt.sign, 0)
-    Assert.equals(bigInt.toString(), "xxx")
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt36(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-    let bigInt = jsBigInt.toBigInt()
-    Assert.equals(bigInt.sign, 0)
-    Assert.equals(bigInt.toString(), "xxx")
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt37(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-    let bigInt = jsBigInt.toBigInt()
-    Assert.equals(bigInt.sign, 0)
-    Assert.equals(bigInt.toString(), "xxx")
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt38(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-    let bigInt = jsBigInt.toBigInt()
-    Assert.equals(bigInt.sign, 0)
-    Assert.equals(bigInt.toString(), "xxx")
-    jsContext.undefined().toJSValue()
-}
-
-func testBigInt39(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
-    let jsBigInt = jsCallInfo[0].asBigInt()
-    let bigInt = jsBigInt.toBigInt()
-    Assert.equals(bigInt.sign, 0)
-    Assert.equals(bigInt.toString(), "xxx")
     jsContext.undefined().toJSValue()
 }

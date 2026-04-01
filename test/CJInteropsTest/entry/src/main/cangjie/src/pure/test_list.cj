@@ -30,6 +30,7 @@ func testsuite(): Unit {
     registerTestSuite("TestIDLType", {=> TestIDLType()})
     registerTestSuite("TestJSCallInfo", {=> TestJSCallInfo()})
     registerTestSuite("TestJSContext", {=> TestJSContext()})
+    registerTestSuite("TestJSType", {=> TestJSType()})
     registerTestSuite("TestJSValue", {=> TestJSValue()})
     registerTestSuite("TestObject", {=> TestObject()})
     registerTestSuite("TestPrime", {=> TestPrime()})

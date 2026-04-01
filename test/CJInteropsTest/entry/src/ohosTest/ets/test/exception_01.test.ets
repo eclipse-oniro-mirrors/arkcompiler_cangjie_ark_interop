@@ -25,7 +25,7 @@ export default function testException01() {
   describe('TestException', () => {
     it('test00', 0, () => {
       try {
-        lib.testException00();
+        lib.test_throwException();
         expect().assertFail();
       } catch (e) {
         hilog.error(0, 'WBT', `|${e.message.toString()}|`);
@@ -33,7 +33,7 @@ export default function testException01() {
     })
     it('test01', 0, () => {
       try {
-        lib.testException01(functionThatThrows);
+        lib.test_JSFunction_throwException(functionThatThrows);
       } catch (e) {
         hilog.error(0, 'WBT', `|${e.message.toString()}|`);
       }

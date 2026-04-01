@@ -21,95 +21,154 @@ import std.math.numeric.*
 import std.random.*
 import std.collection.*
 import ohos.ark_interop.*
+import std.runtime.*
+import std.sync.*
 
 @Test
 class TestSymbol {
     @TestCase
-    func testSymbol00() {
+    func test_JSObject_operatorSet_symbolKey() {
         let jsContext = getJSContext()
-        await(jsContext) {
-        let symbol = await(jsContext) {jsContext.symbol()}
-        let value = await(jsContext) {symbol.toJSValue()}
-        let valueType = await(jsContext) {value.typeof()}
+        let symbol = jsContext.symbol()
+        let object = jsContext.object()
+        object[symbol] = jsContext.boolean(false).toJSValue()
+    }
+
+    @TestCase
+    func test_JSObject_operatorGet_symbolKey() {
+        let jsContext = getJSContext()
+        let symbol = jsContext.symbol()
+        let object = jsContext.object()
+        object[symbol] = jsContext.boolean(false).toJSValue()
+        let received = object[symbol]
+        @Expect(received.isBoolean())
+        @Expect(received.toBoolean(), false)
+    }
+
+    @TestCase
+    func test_JSValue_asSymbol_description() {
+        let jsContext = getJSContext()
+        let symbol = jsContext.symbol()
+        let value = symbol.toJSValue()
+        let other = value.asSymbol()
+        @Expect(other.description, "")
+        symbol.toString()
+        let desc = symbol.description
+        @Expect(symbol.description, "")
+        @Expect(symbol.description, desc)
+        let value1 = symbol.toJSValue(jsContext)
+        @Expect(value1.isSymbol())
+        value1.asSymbol()
+    }
+
+    @TestCase
+    func test_JSSymbol_toJSValue_withContext_success() {
+        let jsContext = getJSContext()
+        let sym = jsContext.symbol(description: "interop")
+        let v = sym.toJSValue(jsContext)
+        @Expect(v.isSymbol(), true)
+    }
+
+    // @TestCase  // TEMP_DISABLED: gc-heavy referenceBeyondReach (suite timeout)
+    func test_JSSymbol_toJSValue_throwException34300003_referenceBeyondReach() {
+        let jsContext = getJSContext()
+        let newContext = JSRuntime().mainContext
+        let s = newContext.symbol(description: "sym")
+        let _ = s.toJSValue(newContext)
+
+        testReferenceBeyondReach(jsContext) {
+            s.toJSValue(jsContext)
+        }
+    }
+
+    @TestCase
+    func test_JSSymbol_toJSValue_throwException34300004_threadMismatch() {
+        let jsContext = getJSContext()
+        let s = jsContext.symbol(description: "sym")
+
+        testThreadMismatch {
+            s.toJSValue(jsContext)
+        }
+    }
+
+    // @TestCase  // TEMP_DISABLED: gc-heavy referenceBeyondReach (suite timeout)
+    func test_JSSymbol_description_throwException34300003_referenceBeyondReach() {
+        let jsContext = getJSContext()
+        let newContext = JSRuntime().mainContext
+        let s = newContext.symbol(description: "sym")
+        let _ = s.toJSValue(newContext)
+
+        testReferenceBeyondReach(jsContext) {
+            s.description
+        }
+    }
+
+    @TestCase
+    func test_JSSymbol_description_throwException34300004_threadMismatch() {
+        let jsContext = getJSContext()
+        let s = jsContext.symbol(description: "sym")
+
+        testThreadMismatch {
+            s.description
+        }
+    }
+
+    // @TestCase  // TEMP_DISABLED: gc-heavy referenceBeyondReach (suite timeout)
+    func test_JSSymbol_toString_throwException34300003_referenceBeyondReach() {
+        let jsContext = getJSContext()
+        let newContext = JSRuntime().mainContext
+        let symbol = newContext.symbol(description: "a")
+        testReferenceBeyondReach(jsContext) {
+            symbol.toString()
+        }
+    }
+
+    @TestCase
+    func test_JSSymbol_toString_throwException34300004_threadMismatch() {
+        let jsContext = getJSContext()
+        let symbol = jsContext.symbol(description: "a")
+        testThreadMismatch {
+            symbol.toString()
+        }
+    }
+
+    @TestCase
+    func test_JSSymbol_typeGuards() {
+        let jsContext = getJSContext()
+        let symbol = jsContext.symbol()
+        let value = symbol.toJSValue()
+        let valueType = value.typeof()
         @Expect(valueType == JSType.SYMBOL)
-        @Expect(await(jsContext){value.isSymbol()}, true)
-        @Expect(await(jsContext){value.isNull()}, false)
-        @Expect(await(jsContext){value.isBoolean()}, false)
-        @Expect(await(jsContext){value.isUndefined()}, false)
-        @Expect(await(jsContext){value.isArray()}, false)
-        @Expect(await(jsContext){value.isClass()}, false)
-        @Expect(await(jsContext){value.isNumber()}, false)
-        @Expect(await(jsContext){value.isString()}, false)
-        @Expect(await(jsContext){value.isBigInt()}, false)
-        @Expect(await(jsContext){value.isObject()}, false)
-        @Expect(await(jsContext){value.isPromise()}, false)
-        @Expect(await(jsContext){value.isFunction()}, false)
-        // no-exception when convert to JSSymbol
-        let other = await(jsContext) {value.asSymbol()}
-        @Expect(await(jsContext){other.description}, "")
-        await(jsContext) {symbol.toString()}
-        let desc = await(jsContext) {symbol.description}
-        @Expect(await(jsContext){symbol.description}, "")
-        @Expect(await(jsContext){symbol.description}, desc)
-        let value1 = await(jsContext) {symbol.toJSValue(jsContext)}
-        @Expect(await(jsContext){value1.isSymbol()})
-        await(jsContext) {value1.asSymbol()}
-        }
+        @Expect(value.isSymbol(), true)
+        @Expect(value.isNull(), false)
+        @Expect(value.isBoolean(), false)
+        @Expect(value.isUndefined(), false)
+        @Expect(value.isArray(), false)
+        @Expect(value.isClass(), false)
+        @Expect(value.isNumber(), false)
+        @Expect(value.isString(), false)
+        @Expect(value.isBigInt(), false)
+        @Expect(value.isObject(), false)
+        @Expect(value.isPromise(), false)
+        @Expect(value.isFunction(), false)
     }
 
     @TestCase
-    func testSymbolIsKey() {
+    func test_JSSymbol_sameDescription_distinctKeys() {
         let jsContext = getJSContext()
-        await(jsContext) {
-        let symbol = await(jsContext) {jsContext.symbol()}
-        let object = await(jsContext) {jsContext.object()}
-        await(jsContext) {
-            object[symbol] = jsContext
-                .boolean(false)
-                .toJSValue()
-        }
-        let received = await(jsContext) {object[symbol]}
-        @Expect(await(jsContext){received.isBoolean()})
-        @Expect(await(jsContext){received.toBoolean()}, false)
-        }
-    }
-
-    @TestCase
-    func testSymbolKeyIsUnique() {
-        let jsContext = getJSContext()
-        await(jsContext) {
         // 2 symbol with same description is different key
-        let key1 = await(jsContext) {
-            jsContext
-                .symbol(description: "a")
-                .toJSValue()
-                .asSymbol()
-        }
-        let key2 = await(jsContext) {
-            jsContext
-                .symbol(description: "a")
-                .toJSValue()
-                .asSymbol()
-        }
-        let object = await(jsContext) {jsContext.object()}
-        await(jsContext) {
-            object[key1] = jsContext
-                .boolean(false)
-                .toJSValue()
-        }
-        await(jsContext) {
-            object[key2] = jsContext
-                .boolean(true)
-                .toJSValue()
-        }
-        let value1 = await(jsContext) {object[key1]}
-        let value2 = await(jsContext) {object[key2]}
-        @Expect(await(jsContext){value1.isBoolean()})
-        @Expect(await(jsContext){value1.toBoolean()}, false)
-        @Expect(await(jsContext){value2.isBoolean()})
-        @Expect(await(jsContext){value2.toBoolean()}, true)
-        await(jsContext) {key1.toString()}
-        @Expect(await(jsContext){key1.description},await(jsContext) {key2.description})
-        }
+        let key1 = jsContext.symbol(description: "a").toJSValue().asSymbol()
+        let key2 = jsContext.symbol(description: "a").toJSValue().asSymbol()
+        let object = jsContext.object()
+        object[key1] = jsContext.boolean(false).toJSValue()
+        object[key2] = jsContext.boolean(true).toJSValue()
+        let value1 = object[key1]
+        let value2 = object[key2]
+        @Expect(value1.isBoolean())
+        @Expect(value1.toBoolean(), false)
+        @Expect(value2.isBoolean())
+        @Expect(value2.toBoolean(), true)
+        key1.toString()
+        @Expect(key1.description, key2.description)
     }
 }

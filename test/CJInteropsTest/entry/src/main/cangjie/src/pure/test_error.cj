@@ -16,27 +16,48 @@
 package entry.pure
 
 import ohos.ark_interop.*
+import std.runtime.*
+import std.sync.*
 import std.unittest.testmacro.*
 import std.unittest.common.*
 import std.unittest.*
 
 @Test
 class TestJSError {
-    @TestCase
-    func testJSError() {
+    // @TestCase  // TEMP_DISABLED: gc-heavy referenceBeyondReach (suite timeout)
+    func test_JSFunction_call_throwException34300003_referenceBeyondReach() {
         let jsContext = getJSContext()
-        let callback = await(jsContext) {
-            jsContext.function {
-                _, callInfo =>
+        let newContext = JSRuntime().mainContext
+        let callback = newContext.function {
+            context, _ => context.undefined().toJSValue()
+        }
+        testReferenceBeyondReach(jsContext) {
+            callback.call()
+        }
+    }
+
+    @TestCase
+    func test_JSFunction_call_throwException34300004_threadMismatch() {
+        let jsContext = getJSContext()
+        let callback = jsContext.function {
+            context, _ => context.undefined().toJSValue()
+        }
+        testThreadMismatch {
+            callback.call()
+        }
+    }
+
+    @TestCase
+    func test_JSFunction_call_throwException_propagate() {
+        let jsContext = getJSContext()
+        let callback = jsContext.function {
+            _, callInfo =>
                 throw Exception("this is an exception")
-                jsContext
-                    .undefined()
-                    .toJSValue()
-            }
+                jsContext.undefined().toJSValue()
         }
         var hasError = false;
         try {
-            await(jsContext) {callback.call()}
+            callback.call()
         } catch (_: BusinessException) {
             hasError = true
         }

@@ -17,7 +17,7 @@ package entry
 
 import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
-func testFunction00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSFunction_call_globalFunction_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.equals(jsCallInfo.count, 1)
     Assert.isTrue(jsCallInfo[0].isFunction())
     let f = jsCallInfo[0].asFunction()
@@ -27,7 +27,8 @@ func testFunction00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testFunction01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSFunction_call_undefinedFunction_throwException34300002_notDefined(jsContext: JSContext,
+    jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
@@ -42,7 +43,7 @@ func testFunction01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testFunction02(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSFunction_call_globalLambda_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
@@ -56,7 +57,7 @@ func testFunction02(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testFunction03(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSFunction_call_localLambda_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
@@ -70,7 +71,7 @@ func testFunction03(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testFunction04(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSFunction_call_instanceMethod_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
@@ -84,7 +85,7 @@ func testFunction04(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testFunction05(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSFunction_call_staticMethod_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
@@ -102,25 +103,39 @@ func globalFunction_test_function_06(a: Float64): Float64 {
     a + 1.0
 }
 
-func testFunction06(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSContext_function_returnCallable_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let jsValue = jsContext.function {
         jsContext: JSContext, jsCallInfo: JSCallInfo =>
-        Assert.equals(jsCallInfo.count, 1)
-        Assert.isTrue(jsCallInfo[0].isNumber())
-        let a = jsCallInfo[0].toNumber()
-        let result = globalFunction_test_function_06(a)
-        jsContext.number(result).toJSValue()
+            Assert.equals(jsCallInfo.count, 1)
+            Assert.isTrue(jsCallInfo[0].isNumber())
+            let a = jsCallInfo[0].toNumber()
+            let result = globalFunction_test_function_06(a)
+            jsContext.number(result).toJSValue()
     }.toJSValue()
     return jsValue
 }
 
 let _ = JSModule.registerModule {
     jsContext, jsObject =>
-    jsObject["testFunction00"] = jsContext.function(testFunction00).toJSValue()
-    jsObject["testFunction01"] = jsContext.function(testFunction01).toJSValue()
-    jsObject["testFunction02"] = jsContext.function(testFunction02).toJSValue()
-    jsObject["testFunction03"] = jsContext.function(testFunction03).toJSValue()
-    jsObject["testFunction04"] = jsContext.function(testFunction04).toJSValue()
-    jsObject["testFunction05"] = jsContext.function(testFunction05).toJSValue()
-    jsObject["testFunction06"] = jsContext.function(testFunction06).toJSValue()
+        jsObject["test_JSFunction_call_globalFunction_success"] = jsContext
+            .function(test_JSFunction_call_globalFunction_success)
+            .toJSValue()
+        jsObject["test_JSFunction_call_undefinedFunction_throwException34300002_notDefined"] = jsContext
+            .function(test_JSFunction_call_undefinedFunction_throwException34300002_notDefined)
+            .toJSValue()
+        jsObject["test_JSFunction_call_globalLambda_success"] = jsContext
+            .function(test_JSFunction_call_globalLambda_success)
+            .toJSValue()
+        jsObject["test_JSFunction_call_localLambda_success"] = jsContext
+            .function(test_JSFunction_call_localLambda_success)
+            .toJSValue()
+        jsObject["test_JSFunction_call_instanceMethod_success"] = jsContext
+            .function(test_JSFunction_call_instanceMethod_success)
+            .toJSValue()
+        jsObject["test_JSFunction_call_staticMethod_success"] = jsContext
+            .function(test_JSFunction_call_staticMethod_success)
+            .toJSValue()
+        jsObject["test_JSContext_function_returnCallable_success"] = jsContext
+            .function(test_JSContext_function_returnCallable_success)
+            .toJSValue()
 }

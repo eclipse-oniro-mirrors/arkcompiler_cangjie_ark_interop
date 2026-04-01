@@ -21,10 +21,10 @@ import * as lib from "libentry.so"
 export default function testJSModule03() {
   describe('TestRegisterOverride', () => {
     it('test00', 0, () => {
-      expect(lib.testRegisterOverride00()).assertEqual(3);
+      expect(lib.test_JSModule_registerFunc_repeatedRegister_lastWins_success()).assertEqual(3);
     })
     it('test01', 0, () => {
-      expect(lib.testRegisterOverride01).assertEqual(2);
+      expect(lib.test_JSModule_registerModule_overridesRegisterFunc_success).assertEqual(2);
     })
   })
 }

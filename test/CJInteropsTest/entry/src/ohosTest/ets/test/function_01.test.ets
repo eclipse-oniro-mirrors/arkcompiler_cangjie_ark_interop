@@ -40,36 +40,36 @@ class C {
 export default function functionTest() {
   describe('TestFunction', () => {
     it('test00', 0, () => {
-      lib.testFunction00(globalFunction);
+      lib.test_JSFunction_call_globalFunction_success(globalFunction);
     })
     it('test01', 0, () => {
       try {
-        lib.testFunction01(globalFunction01);
+        lib.test_JSFunction_call_undefinedFunction_throwException34300002_notDefined(globalFunction01);
       } catch (e) {
         expect(e.message.toString()).assertEqual('globalFunction01 is not defined');
       }
     })
     it('test02', 0, () => {
-      lib.testFunction02(globalLambda);
+      lib.test_JSFunction_call_globalLambda_success(globalLambda);
     })
     it('test03', 0, () => {
       let localLambda = (a: number) => {
         return a + 1;
       }
-      lib.testFunction03(localLambda);
+      lib.test_JSFunction_call_localLambda_success(localLambda);
     })
     it('test04', 0, async () => {
       let c = new C();
       let m = c.instanceMethod;
-      lib.testFunction04(m);
+      lib.test_JSFunction_call_instanceMethod_success(m);
     })
     it('test05', 0, async () => {
       let c = new C();
       let m = C.staticMethod;
-      lib.testFunction05(m);
+      lib.test_JSFunction_call_staticMethod_success(m);
     })
     it('test06', 0, () => {
-      let f = lib.testFunction06();
+      let f = lib.test_JSContext_function_returnCallable_success();
       expect(f(114.514)).assertEqual(115.514);
     })
   })

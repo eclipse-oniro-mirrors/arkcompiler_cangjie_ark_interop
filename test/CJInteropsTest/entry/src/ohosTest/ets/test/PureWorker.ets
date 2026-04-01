@@ -14,7 +14,7 @@ workerPort.onmessage = async (event: MessageEvents) => {
 
     let req = event.data as Res;
     if (req.data === "start") {
-        await lib.runPureTests();
+        lib.runPureTests();
         let res: Res = { data: "end" };
         workerPort.postMessage(res);
     }

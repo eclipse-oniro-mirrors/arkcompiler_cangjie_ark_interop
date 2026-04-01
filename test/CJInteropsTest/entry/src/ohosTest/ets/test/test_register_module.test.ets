@@ -26,58 +26,58 @@ interface IPerson {
 export default function testJSModule02() {
   describe('TestRegisterModule', () => {
     it('test00', 0, () => {
-      expect(typeof lib.testRegisterModule00).assertEqual('undefined');
-      expect(lib.testRegisterModule00).assertEqual(undefined);
+      expect(typeof lib.test_JSModule_registerModule_exportUndefined_success).assertEqual('undefined');
+      expect(lib.test_JSModule_registerModule_exportUndefined_success).assertEqual(undefined);
     })
     it('test01', 0, () => {
-      expect(typeof lib.testRegisterModule01).assertEqual('object');
-      expect(lib.testRegisterModule01).assertEqual(null);
+      expect(typeof lib.test_JSModule_registerModule_exportNull_success).assertEqual('object');
+      expect(lib.test_JSModule_registerModule_exportNull_success).assertEqual(null);
     })
     it('test02', 0, () => {
-      expect(typeof lib.testRegisterModule02).assertEqual('boolean');
-      expect(lib.testRegisterModule02).assertEqual(true);
+      expect(typeof lib.test_JSModule_registerModule_exportBoolean_success).assertEqual('boolean');
+      expect(lib.test_JSModule_registerModule_exportBoolean_success).assertEqual(true);
     })
     it('test03', 0, () => {
-      expect(typeof lib.testRegisterModule03).assertEqual('number');
-      expect(lib.testRegisterModule03).assertEqual(114.514);
+      expect(typeof lib.test_JSModule_registerModule_exportNumber_success).assertEqual('number');
+      expect(lib.test_JSModule_registerModule_exportNumber_success).assertEqual(114.514);
     })
     it('test04', 0, () => {
-      expect(typeof lib.testRegisterModule04).assertEqual('string');
-      expect(lib.testRegisterModule04).assertEqual('hello world');
+      expect(typeof lib.test_JSModule_registerModule_exportString_success).assertEqual('string');
+      expect(lib.test_JSModule_registerModule_exportString_success).assertEqual('hello world');
     })
     it('test05', 0, () => {
-      expect(typeof lib.testRegisterModule05).assertEqual('function');
-      expect(lib.testRegisterModule05(1, 2)).assertEqual(3);
+      expect(typeof lib.test_JSModule_registerModule_exportFuncAddTwoNumbers_success).assertEqual('function');
+      expect(lib.test_JSModule_registerModule_exportFuncAddTwoNumbers_success(1, 2)).assertEqual(3);
     })
     it('test06', 0, () => {
-      expect(typeof lib.testRegisterModule06).assertEqual('function');
-      const person = new lib.testRegisterModule06("tom", 23);
+      expect(typeof lib.test_JSModule_registerModule_exportClassPerson_success).assertEqual('function');
+      const person = new lib.test_JSModule_registerModule_exportClassPerson_success("tom", 23);
       expect(person.name).assertEqual('tom');
       expect(person.age).assertEqual(23);
     })
     it('test07', 0, () => {
-      expect(typeof lib.testRegisterModule07).assertEqual('symbol');
+      expect(typeof lib.test_JSModule_registerModule_exportSymbol_success).assertEqual('symbol');
     })
     it('test08', 0, () => {
-      expect(typeof lib.testRegisterModule08).assertEqual('object');
-      const array = lib.testRegisterModule08;
+      expect(typeof lib.test_JSModule_registerModule_exportArray_success).assertEqual('object');
+      const array = lib.test_JSModule_registerModule_exportArray_success;
       expect(array[0]).assertEqual(1);
       expect(array[1]).assertEqual(true);
     })
     it('test09', 0, () => {
-      expect(typeof lib.testRegisterModule09).assertEqual('object');
-      expect(JSON.stringify(lib.testRegisterModule09)).assertEqual('{"name":"tom"}');
+      expect(typeof lib.test_JSModule_registerModule_exportPlainObject_success).assertEqual('object');
+      expect(JSON.stringify(lib.test_JSModule_registerModule_exportPlainObject_success)).assertEqual('{"name":"tom"}');
     })
     it('test10', 0, () => {
-      expect(typeof lib.testRegisterModule10).assertEqual('bigint');
-      expect(lib.testRegisterModule10).assertEqual(12345678901234567890n);
+      expect(typeof lib.test_JSModule_registerModule_exportBigInt_success).assertEqual('bigint');
+      expect(lib.test_JSModule_registerModule_exportBigInt_success).assertEqual(12345678901234567890n);
     })
     it('test11', 0, () => {
-      expect(typeof lib.testRegisterModule11).assertEqual('object');
-      expect(lib.testRegisterModule11.byteLength).assertEqual(114514);
+      expect(typeof lib.test_JSModule_registerModule_exportArrayBuffer_success).assertEqual('object');
+      expect(lib.test_JSModule_registerModule_exportArrayBuffer_success.byteLength).assertEqual(114514);
     })
     it('test12', 0, () => {
-      expect(Object.keys(lib).indexOf('testRegisterModule12') !== undefined).assertTrue();
+      expect(Object.keys(lib).indexOf('test_JSModule_registerModule_exportExternal_success') !== undefined).assertTrue();
     })
     if (deviceInfo.sdkApiVersion >= 23) {
       it("fail during cangjie load", 0, ()=> {
@@ -96,7 +96,7 @@ export default function testJSModule02() {
               "@ohos.matrix4"
           ]
           for (const src of sources) {
-              const data = lib.requireArkModule(src)
+              const data = lib.test_JSContext_requireArkModule_success(src)
               expect(typeof data).assertEqual("object")
           }
       })
