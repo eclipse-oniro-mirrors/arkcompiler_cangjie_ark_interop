@@ -17,7 +17,7 @@
 
 protected package ohos.encoding.json
 
-import std.collection.HashMap
+import std.collection.{ArrayList,HashMap}
 
 const VALUE_TYPE_BOOLEAN: String = "1"
 const VALUE_TYPE_INT: String = "5"
@@ -154,6 +154,30 @@ protected func jsonObjectWrapper(jsObj: JsonObject): JsonObject {
     return JsonObject(newMap)
 }
 
+func escapeUnescapedQuotes(s: String): String {
+    let bytes = ArrayList<Byte>()
+    var i = 0
+    while (i < s.size) {
+        if (s[i] == b'\\') {
+            bytes.add(s[i])
+            i++
+            if (i < s.size) {
+                bytes.add(s[i])
+                i++
+            }
+            continue
+        }
+        if (s[i] == b'"') {
+            bytes.add(b'\\')
+            bytes.add(b'"')
+        } else {
+            bytes.add(s[i])
+        }
+        i++
+    }
+    return unsafe { String.fromUtf8Unchecked(bytes.toArray()) }
+}
+
 func addSlashesInString(jsString: String, brakinds: BracketKinds): String {
     let quoString = match (brakinds) {
         case Braces => "\"9\":\"{"
@@ -185,7 +209,7 @@ func addSlashesInString(jsString: String, brakinds: BracketKinds): String {
                     continue
                 }
                 let old = jsString[index..i]
-                let new = old.replace("\"", "\\\"")
+                let new = escapeUnescapedQuotes(old)
                 arrayNew[c] = new
                 arrayOld[c] = old
                 break
