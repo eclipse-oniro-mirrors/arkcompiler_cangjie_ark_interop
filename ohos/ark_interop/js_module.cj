@@ -19,6 +19,7 @@ package ohos.ark_interop
 
 import std.collection.{HashMap, ArrayList}
 import std.convert.Parsable
+import ohos.business_exception.*
 
 @C
 struct CJModuleCallbacks {
@@ -97,9 +98,9 @@ func throwJSErrorToCJ(env: JSEnv, rawError: JSValue_): Unit {
 
     if (error.isString()) {
         let errorMsg = error.toString()
-        throw MixedException("Error", 0, errorMsg, [])
+        throw BusinessException("Error", 0, errorMsg, [])
     } else if (!error.isObject()) {
-        throw MixedException("Error", 0, "unsupported js error[${error.typeof().toString()}]", [])
+        throw BusinessException("Error", 0, "unsupported js error[${error.typeof().toString()}]", [])
     }
     if (let Some(shared) <- error.getBindingObject()) {
         if (let Some(mixed) <- (shared as SharedException)) {
@@ -137,7 +138,7 @@ func throwJSErrorToCJ(env: JSEnv, rawError: JSValue_): Unit {
     if (errMsg.startsWith("ReferenceError Unable to get recordName and fileName due to failure")) {
         throw withoutArkFrame()
     }
-    throw MixedException(errName, errCode, errMsg, errStack)
+    throw BusinessException(errName, errCode, errMsg, errStack)
 }
 
 // case1: cannot find record '&somemodule/somedir/somefile&1.0.0'

@@ -150,18 +150,19 @@ func cjLambdaInvoker(info: JSCallInfoPrivate, lambdaId: Int64): JSValue_ {
         try {
             let lambda = context.sharedLambda_[lambdaId]
             lambda(context, callInfo).value
-        } catch (err: MixedException) {
-            unsafe { ARKTS_Throw(context.env, err.toJSError(context).value) }
-            context.void_
         } catch (err: BusinessException) {
-            let stack = context.constants.getArkStack()
-            let mixedExp = MixedException(err.code, err, stack)
-            unsafe { ARKTS_Throw(context.env, mixedExp.toJSError(context).value) }
+            let exp = if (err.isCross()) {
+                err
+            } else {
+                let stack = context.constants.getArkStack()
+                BusinessException(err.code, err, stack)
+            }
+            unsafe { ARKTS_Throw(context.env, toJSError(context, exp).value) }
             context.void_
         } catch (err: Exception) {
             let stack = context.constants.getArkStack()
-            let mixedExp = MixedException(0, err, stack)
-            unsafe { ARKTS_Throw(context.env, mixedExp.toJSError(context).value) }
+            let mixedExp = BusinessException(0, err, stack)
+            unsafe { ARKTS_Throw(context.env, toJSError(context, mixedExp).value) }
             context.void_
         } catch (err: Error) {
             context.throwJSError(err)
