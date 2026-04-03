@@ -616,9 +616,16 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         throwexception: true
     ]
     public func lastIndexOf(target: Utf16String, fromIndex: Int64): ?Int64 {
+        if (fromIndex < 0) {
+            return None
+        }
         acquire()
         target.acquire()
-        let result = unsafe {CJUtf16StringLastIndexOf(handle_, target.handle_, fromIndex)}
+        let result = if (fromIndex > size) {
+            -1
+        } else {
+            unsafe {CJUtf16StringLastIndexOf(handle_, target.handle_, fromIndex)}
+        }
         target.release()
         release()
         if (result >= 0) {
