@@ -85,17 +85,21 @@ public class BusinessException <: Exception {
         kind = Normal
     }
 
-    protected init(className: String, code: Int32, message: String, arkStack: Array<String>) {
+    protected init(className: String, code: Int32, message: String, arkStack: Array<String>, data: ?Any) {
         super(message)
         this.code = code
-        this.errData = None
+        this.errData = data
         kind = CrossArkTS(className, arkStack)
     }
 
     protected init(code: Int32, exp: Exception, stack: Array<String>) {
         super("")
         this.code = code
-        this.errData = None
+        this.errData = if (let Some(business) <- (exp as BusinessException)) {
+            business.errData
+        } else {
+            None
+        }
         kind = CrossCangjie(exp, stack)
     }
 
