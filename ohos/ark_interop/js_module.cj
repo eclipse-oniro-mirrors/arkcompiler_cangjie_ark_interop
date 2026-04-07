@@ -98,9 +98,9 @@ func throwJSErrorToCJ(env: JSEnv, rawError: JSValue_): Unit {
 
     if (error.isString()) {
         let errorMsg = error.toString()
-        throw BusinessException("Error", 0, errorMsg, [])
+        throw BusinessException("Error", 0, errorMsg, [], None)
     } else if (!error.isObject()) {
-        throw BusinessException("Error", 0, "unsupported js error[${error.typeof().toString()}]", [])
+        throw BusinessException("Error", 0, "unsupported js error[${error.typeof().toString()}]", [], None)
     }
     if (let Some(shared) <- error.getBindingObject()) {
         if (let Some(mixed) <- (shared as SharedException)) {
@@ -138,7 +138,13 @@ func throwJSErrorToCJ(env: JSEnv, rawError: JSValue_): Unit {
     if (errMsg.startsWith("ReferenceError Unable to get recordName and fileName due to failure")) {
         throw withoutArkFrame()
     }
-    throw BusinessException(errName, errCode, errMsg, errStack)
+    let errDataValue = errObJ["data"]
+    let errData: ?Any = if (errDataValue.isObject()) {
+        errDataValue.asObject()
+    } else {
+        None
+    }
+    throw BusinessException(errName, errCode, errMsg, errStack, errData)
 }
 
 // case1: cannot find record '&somemodule/somedir/somefile&1.0.0'
