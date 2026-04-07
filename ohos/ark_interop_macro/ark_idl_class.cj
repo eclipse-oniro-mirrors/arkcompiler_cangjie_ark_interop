@@ -196,7 +196,7 @@ class IDLClass {
         }
         return quote(
             static init() {
-                JSModule.registerClass($(identifier_.value)) { $(contextName) =>
+                JSModule.registerClass(getLibName() + "@" + $(identifier_.value)) { $(contextName) =>
                     let clazz = $(contextName).clazz($(constructorName))
                     $(varsAccessor)
                     $(propsAccessor)

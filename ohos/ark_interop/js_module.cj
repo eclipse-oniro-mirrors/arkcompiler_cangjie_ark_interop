@@ -63,11 +63,7 @@ func loadArkInteropModule(env: JSEnv, cname: CString, exports: JSValue_): JSValu
         try {
             let name = cname.toString()
             let exportObj = exportValue.asObject()
-            let module = match (JSModule.getCachedModule(name)) {
-                case Some(mod) => mod
-                case None => JSModule.finishLoad(name)
-            }
-            module.fillInto(context, exportObj)
+            JSModule.finishLoad(name).fillInto(context, exportObj)
             exportValue.value
         } catch (err: Exception) {
             context.throwJSError(err)
@@ -181,6 +177,8 @@ func throwNativeErrorToCJ(message: CString): Unit {
 public class JSModule {
     private static var lastModule_ = JSModule()
     static let LOADED_MODULES_ = HashMap<String, JSModule>()
+    // Reference to usage in ohpm.
+    private static const DELIMITER = "@"
 
     static init() {
         var moduleCallbacks = CJModuleCallbacks(
@@ -213,6 +211,18 @@ public class JSModule {
         lastModule_.addExporter(register)
     }
 
+    // To be made public.
+    static func registerModule(name: String, register: ModuleRegister): Unit {
+        if (name.isEmpty()) {
+            return registerModule(register)
+        }
+        if (!JSModule.LOADED_MODULES_.contains(name)) {
+            let newModule = JSModule()
+            JSModule.LOADED_MODULES_.add(name, newModule)
+        }
+        LOADED_MODULES_[name].addExporter(register)
+    }
+
     /**
      * Register a class to be exported to ArkTS.
      *
@@ -223,6 +233,14 @@ public class JSModule {
         since: "22"
     ]
     public static func registerClass(name: String, register: ClassRegister): Unit {
+        if (name.contains(DELIMITER)) {
+            let split = name.split(DELIMITER, 2)
+            let moduleName = split[0]
+            let identifier = split[1]
+            return registerModule(moduleName) { context, exports =>
+                exports[identifier] = register(context).toJSValue()
+            }
+        }
         lastModule_.addClass(name, register)
     }
 
@@ -236,6 +254,14 @@ public class JSModule {
         since: "22"
     ]
     public static func registerFunc(name: String, register: FuncRegister): Unit {
+        if (name.contains(DELIMITER)) {
+            let split = name.split(DELIMITER, 2)
+            let moduleName = split[0]
+            let identifier = split[1]
+            return registerModule(moduleName) { context, exports =>
+                exports[identifier] = register(context).toJSValue()
+            }
+        }
         lastModule_.addFunc(name, register)
     }
 
@@ -249,6 +275,14 @@ public class JSModule {
         since: "22"
     ]
     public static func registerFunc(name: String, lambda: JSLambda): Unit {
+        if (name.contains(DELIMITER)) {
+            let split = name.split(DELIMITER, 2)
+            let moduleName = split[0]
+            let identifier = split[1]
+            return registerModule(moduleName) { context, exports =>
+                exports[identifier] = context.function(lambda).toJSValue()
+            }
+        }
         lastModule_.addRawFunc(name, lambda)
     }
 
@@ -259,14 +293,27 @@ public class JSModule {
     static func finishLoad(name: String): JSModule {
         let result = lastModule_
         lastModule_ = JSModule()
-        LOADED_MODULES_.add(name, result)
-        result
+        if (let Some(module) <- getCachedModule(name)) {
+            if (!module.finished_) {
+                module.exports_.add(all: result.exports_)
+                module.classes_.add(all: result.classes_)
+                module.funcs_.add(all: result.funcs_)
+                module.rawFuncs_.add(all: result.rawFuncs_)
+                module.finished_ = true
+            }
+            return module
+        } else {
+            LOADED_MODULES_.add(name, result)
+            result.finished_ = true
+            return result
+        }
     }
 
     private let classes_ = HashMap<String, ClassRegister>()
     private let funcs_ = HashMap<String, FuncRegister>()
     private let rawFuncs_ = HashMap<String, JSLambda>()
     private let exports_ = ArrayList<ModuleRegister>()
+    private var finished_ = false
 
     func addClass(name: String, register: ClassRegister): Unit {
         classes_.add(name, register)

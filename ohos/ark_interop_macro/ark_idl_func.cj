@@ -43,8 +43,8 @@ class IDLFunction {
         let moduleName = Token(TokenKind.IDENTIFIER, identifier_.value + "Module")
         let newInteropIdentifier = IDLUtil.genNewInteropIdentifier(identifier_)
         return quote(
-            let $(moduleName) = JSModule.registerModule { context, exports =>
-                exports[$(identifier_.value)] = context.function($(newInteropIdentifier)).toJSValue()
+            let $(moduleName) = JSModule.registerFunc(getLibName() + "@" + $(identifier_.value)) { context =>
+                context.function($(newInteropIdentifier))
             }
         )
     }

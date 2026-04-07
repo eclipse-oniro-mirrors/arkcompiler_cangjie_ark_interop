@@ -17,13 +17,13 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.{Visitor, Decl, FuncDecl, RefType, PrimaryCtorDecl, InterfaceDecl, ClassDecl, PropDecl, EnumDecl, Token, Tokens, MacroExpandDecl, PackageHeader, VarDecl, parseProgram, cangjieLex}
+import std.ast.{Visitor, Decl, FuncDecl, RefType, PrimaryCtorDecl, InterfaceDecl, ClassDecl, PropDecl, EnumDecl, Token, Tokens, MacroExpandDecl, PackageHeader, VarDecl, parseProgram, cangjieLex, ToTokens}
 import std.collection.{ArrayList, HashSet, HashMap, forEach}
-import std.fs.{FileInfo, Path, FSException, File, Directory, OpenMode}
+import std.fs.{FileInfo, Path, FSException, File, Directory, OpenMode, exists}
 import std.sync.Mutex
 import std.io.readToEnd
 import std.regex.{Regex, RegexFlag}
-import std.env.{getVariable, getHomeDirectory}
+import std.env.getVariable
 
 let CONTEXT_TYPE_G: Array<String> = ["JSStringEx", "JSArrayEx", "JSHashMapEx"]
 
@@ -373,10 +373,11 @@ func checkEnum(enumDecl: EnumDecl) {
 }
 
 func getCangjieSrcPath(): String {
-    if (getHomeDirectory().fileName == "cangjie") {
-        return "./"
+    let allPaths = getVariable("CJ_LSP_INTEROP_PATH") ?? ""
+    if (allPaths.contains(";")) {
+        return getVariable("CJ_BUILD_INTEROP_PATH") ?? ""
     }
-    return getVariable("CJ_BUILD_INTEROP_PATH") ?? ""
+    return allPaths  // Only one module.
 }
 
 // If root pacakge is not combined, then decls will be generated into seperate .d.ts (per package)
@@ -395,9 +396,10 @@ func getOutputPkg(pkgName: String): String {
 
 class PackageNameCollector <: Visitor {
     var outputPkg: String = ""
-    var packageNameMap = HashMap<String, String>()
+    var currentPkg: String = ""
+    // Map<decl name, ArrayList<(output package, original package, decl string)>>
+    var packageNameMap = HashMap<String, ArrayList<(String, String, String)>>()
     public override func visit(packageHeader: PackageHeader): Unit {
-        var currentPkg: String = ""
         for (i in packageHeader.prefixPaths) {
             currentPkg += i.value
             currentPkg += "."
@@ -410,11 +412,14 @@ class PackageNameCollector <: Visitor {
             return
         }
         let kind = IDLUtil.parseInteropKind(macroExpandDecl.macroAttrs)
+        let declName = macroExpandDecl.macroInputDecl.identifier.value
+        let declStr = macroExpandDecl.macroInputDecl.toTokens().toString()
+        if (!packageNameMap.contains(declName)) {
+            packageNameMap.add(declName, ArrayList<(String, String, String)>())
+        }
         match (kind) {
-            case InteropKind.InteropArkTS => packageNameMap.add(macroExpandDecl.macroInputDecl.identifier.value,
-                outputPkg)
-            case InteropKind.InteropAsyncFunc => packageNameMap.add(macroExpandDecl.macroInputDecl.identifier.value,
-                outputPkg)
+            case InteropKind.InteropArkTS => packageNameMap[declName].add((outputPkg, currentPkg, declStr))
+            case InteropKind.InteropAsyncFunc => packageNameMap[declName].add((outputPkg, currentPkg, declStr))
             case InteropKind.InteropInvisible => ()
             case InteropKind.InteropOther => ()
         }
@@ -422,11 +427,12 @@ class PackageNameCollector <: Visitor {
     }
 }
 
-//user-defined type whitelist
+// user-defined type whitelist
 class IDLCustomTypeWL {
     private static let MTX = Mutex()
     private static var whitelistSet = HashSet<String>()
-    private static var packageNameMap = HashMap<String, String>()
+    private static var packageNameMap = HashMap<String, ArrayList<(String, String, String)>>()
+    private static var packagePathMap = HashMap<String, String>()
     private static var packagesSet = HashSet<String>()
     private static var isCreated = false
     private static var isRead = false
@@ -446,12 +452,57 @@ class IDLCustomTypeWL {
         return files
     }
 
-    static func collectPkgInfo(fileTokens: Tokens): Unit {
+    static func collectPkgInfo(fileTokens: Tokens, filePath: String): Unit {
         let source = parseProgram(fileTokens)
         let visitor = PackageNameCollector()
         source.traverse(visitor)
-        packageNameMap.add(all: visitor.packageNameMap)
+        for ((name, list) in visitor.packageNameMap) {
+            if (!packageNameMap.contains(name)) {
+                packageNameMap.add(name, ArrayList<(String, String, String)>())
+            }
+            for ((outPkg, origPkg, declStr) in list) {
+                packageNameMap[name].add((origPkg, outPkg, declStr))
+            }
+        }
+        if (!visitor.currentPkg.isEmpty()) {
+            packagePathMap.add(visitor.currentPkg, Path(filePath).parent.toString())
+        }
         packagesSet.add(visitor.outputPkg)
+    }
+
+    static func checkDuplicate(decl: Decl): Unit {
+        let name = decl.identifier.value
+        let tokens = decl.identifier.toTokens()
+
+        if (!packageNameMap.contains(name)) {
+            return
+        }
+        let list = packageNameMap.get(name).getOrThrow()
+
+        let reverseMap = HashMap<String, ArrayList<String>>()
+
+        for ((orig, out, _) in list) {
+            if (!reverseMap.contains(out)) {
+                reverseMap.add(out, ArrayList<String>())
+            }
+            if (!reverseMap[out].contains(orig)) {
+                reverseMap[out].add(orig)
+            }
+        }
+
+        for ((out, origs) in reverseMap) {
+            if (origs.size > 1) {
+                var msg = "Duplicate declaration '${name}' found in module '${out}'. Defined in packages: "
+                for (i in 0..origs.size) {
+                    msg += "'${origs[i]}'"
+                    if (i < origs.size - 1) {
+                        msg += ", "
+                    }
+                }
+                msg += "."
+                IDLUtil.diagReportTW(tokens, msg)
+            }
+        }
     }
 
     static func createWL(): Unit {
@@ -460,19 +511,14 @@ class IDLCustomTypeWL {
             if (isCreated) {
                 return
             }
+            // CJ_LSP_INTEROP_PATH contains the source code directories of all the Cangjie modules.
+            let path = getVariable("CJ_LSP_INTEROP_PATH") ?? ""
             let list: ArrayList<FileInfo> = ArrayList<FileInfo>()
-            let relativePath: String = getCangjieSrcPath()
-            let fileInfoList = if (!relativePath.isEmpty()) {
-                getFileList(relativePath)
-            } else {
-                let path = getVariable("CJ_LSP_INTEROP_PATH") ?? ""
-                path.split(";") |> forEach {
-                    it: String => list.add(all: getFileList(it))
-                }
-                list
+            path.split(";") |> forEach {
+                it: String => list.add(all: getFileList(it))
             }
 
-            for (info in fileInfoList) {
+            for (info in list) {
                 let fileName = info.path.fileName
                 if (!Regex(#"\.cj$"#, []).matches(fileName)) {
                     continue
@@ -486,7 +532,7 @@ class IDLCustomTypeWL {
                     return
                 }
 
-                collectPkgInfo(fileTokens)
+                collectPkgInfo(fileTokens, info.path.toString())
 
                 var tokenStr: String = ""
                 for (i in 0..fileTokens.size) {
@@ -521,7 +567,11 @@ class IDLCustomTypeWL {
                 return
             }
 
-            let filePath = "./cjpm.toml"
+            // '...\entry\src\main\cangjie' to '...\entry\cjpm.toml'
+            let filePath = Path(relativePath).parent.parent.parent.join("cjpm.toml")
+            if (!exists(filePath)) {
+                return
+            }
             let file = File(filePath, OpenMode.Read)
             let fileContent = String.fromUtf8(readToEnd(file))
             let classMDArr = Regex(##"(\[|\.)combined\]\s*(\w+)\s*=\s*\"dynamic\""##, [MultiLine]).findAll(fileContent, group: true)
@@ -532,8 +582,38 @@ class IDLCustomTypeWL {
         }
     }
 
-    static func getPkgName(declName: String): String {
-        return packageNameMap.get(declName) ?? ""
+    static func getPkgPath(pkgName: String): String {
+        return packagePathMap.get(pkgName) ?? ""
+    }
+
+    static func getOrigPkgNames(declName: String): ArrayList<String> {
+        let list = ArrayList<String>()
+        match (packageNameMap.get(declName)) {
+            case Some(pkgMap) =>
+                for ((origPkg, _, _) in pkgMap) {
+                    list.add(origPkg)
+                }
+            case None => ()
+        }
+        return list
+    }
+
+    static func getPkgNames(decl: Decl): ArrayList<String> {
+        let declName = decl.identifier.value
+        let declStr = decl.toTokens().toString()
+        let res = ArrayList<String>()
+        match (packageNameMap.get(declName)) {
+            case Some(list) =>
+                for ((_, outPkg, storedDeclStr) in list) {
+                    if (storedDeclStr == declStr) {
+                        if (!res.contains(outPkg)) {
+                            res.add(outPkg)
+                        }
+                    }
+                }
+            case None => ()
+        }
+        return res
     }
 
     static func isWhitelisted(id: String): Bool {
