@@ -150,6 +150,12 @@ public class JSContext {
         }
     }
 
+    static func getContext(env: JSEnv): ?JSContext {
+        synchronized(RUNTIMES_MUTEX) {
+            ALL_RUNTIMES_.get(env)
+        }
+    }
+
     var sharedObjects_ = Slab<SharedObject>()
     var sharedLambda_ = Slab<JSLambda>()
     var asyncCallbacks_ = SlabMT<() -> Unit>()

@@ -25,7 +25,7 @@ foreign func ARKTS_GetExternalData(env: JSEnv, value: JSValue_): Int64
 
 @C
 func cjExternalDestructor(id: Int64, env: JSEnv): Unit {
-    let context = JSContext.getOrCreate(env)
+    let context = JSContext.getContext(env) ?? return ()
     if (let Some(data) <- context.sharedObjects_.get(id)) {
         data.shareCnt_--
         if (data.shareCnt_ == 0) {

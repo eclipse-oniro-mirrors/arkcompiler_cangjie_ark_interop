@@ -175,7 +175,7 @@ func cjLambdaInvoker(info: JSCallInfoPrivate, lambdaId: Int64): JSValue_ {
 
 @C
 func cjLambdaDestructor(env: JSEnv, lambdaId: Int64): Unit {
-    let context = JSContext.getOrCreate(env)
+    let context = JSContext.getContext(env) ?? return ()
     context.sharedLambda_.remove(lambdaId)
 }
 
