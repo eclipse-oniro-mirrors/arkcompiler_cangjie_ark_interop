@@ -57,7 +57,7 @@ public type FuncRegister = (JSContext) -> JSFunction
 func loadArkInteropModule(env: JSEnv, cname: CString, exports: JSValue_): JSValue_ {
     let context = JSContext.getOrCreate(env)
     context.isOnLoadingCJ = true
-    let exportValue = JSValue(context, exports)
+    let exportValue = JSValue(context, exports, true)
     context.newScope {
         try {
             let name = cname.toString()
