@@ -236,6 +236,15 @@ public class JSValue {
         handleValue()
     }
 
+    protected init(context: JSContext, value: JSValue_, ignoreScope: Bool) {
+        this.context = context
+        value_ = value
+        type_ = unsafe { ARKTS_GetValueType(context.env, value) }
+        if (!ignoreScope) {
+            handleValue()
+        }
+    }
+
     protected init(context: JSContext, value: JSValue_, ty: JSType) {
         this.context = context
         value_ = value
