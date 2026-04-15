@@ -131,14 +131,25 @@ class SharedException <: SharedObject {
 }
 
 func toJSError(context: JSContext, exception: BusinessException): JSValue {
+    let pendingJSError = context.pendingJSError ?? return createJSError(context, exception)
+    let attachInfo = pendingJSError.getAttachInfo() ?? return createJSError(context, exception)
+    let sharedException = attachInfo.cast<SharedException>() ?? return createJSError(context, exception)
+    if (refEq(sharedException.mixedException, exception)) {
+        return pendingJSError.toJSValue()
+    }
+    return createJSError(context, exception)
+}
+
+func createJSError(context: JSContext, exception: BusinessException): JSValue {
     let cls = context.constants.getErrorClass(exception.getClassName())
     let obj = cls.new().asObject()
-    obj["message"] = context.string(exception.getCrossMessage()).toJSValue()
-    obj["stack"] = context.string(exception.getMixedStackTrace()).toJSValue()
+    obj[context.constants.builtinText.message] = context.string(exception.getCrossMessage()).toJSValue()
+    obj[context.constants.builtinText.stack] = context.string(exception.getMixedStackTrace()).toJSValue()
     if (exception.code != 0) {
-        obj["code"] = context.number(exception.code).toJSValue()
+        obj[context.constants.builtinText.code] = context.number(exception.code).toJSValue()
     }
     let external = context.external(SharedException(exception))
     obj.attachCJObject(external)
+    context.pendingJSError = obj
     return obj.toJSValue()
 }

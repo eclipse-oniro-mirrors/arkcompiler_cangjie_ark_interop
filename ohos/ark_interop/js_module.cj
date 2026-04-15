@@ -18,7 +18,6 @@
 package ohos.ark_interop
 
 import std.collection.{HashMap, ArrayList}
-import std.convert.Parsable
 import ohos.business_exception.*
 
 @Intrinsic func getJSLambdaAddr(lambda: (JSContext, JSCallInfo)->JSValue): CPointer<Unit>
@@ -110,34 +109,13 @@ func throwJSErrorToCJ(env: JSEnv, rawError: JSValue_): Unit {
     } else if (!error.isObject()) {
         throw BusinessException("Error", 0, "unsupported js error[${error.typeof().toString()}]", [], None)
     }
-    if (let Some(shared) <- error.getBindingObject()) {
-        if (let Some(mixed) <- (shared as SharedException)) {
-            throw mixed.mixedException
-        }
-    }
+
     let errObJ = error.asObject()
-    let errName = errObJ.getClassName()
-    var errMsg = if (errObJ["message"].isString()) {
-        errObJ["message"].toString()
+    let rawMsg = errObJ[context.constants.builtinText.message]
+    var errMsg = if (rawMsg.isString()) {
+        rawMsg.toString()
     } else {
         "[unknown]"
-    }
-    let errStack: Array<String> = if (errObJ["stack"].isString()) {
-        context.constants.parseArkStack(errObJ["stack"].toString())
-    } else {
-        []
-    }
-    let errCode: Int32 = if (errObJ["code"].isNumber()) {
-        Int32(errObJ["code"].toNumber())
-    } else if (errObJ["code"].isString()) {
-        let code = Int32.tryParse(errObJ["code"].toString())
-        if (let Some(v) <- code) {
-            v
-        } else {
-            0
-        }
-    } else {
-        0
     }
     if (let Some(missingModule) <- searchNotExist(errMsg)) {
         throw moduleNotExist(missingModule)
@@ -146,13 +124,7 @@ func throwJSErrorToCJ(env: JSEnv, rawError: JSValue_): Unit {
     if (errMsg.startsWith("ReferenceError Unable to get recordName and fileName due to failure")) {
         throw withoutArkFrame()
     }
-    let errDataValue = errObJ["data"]
-    let errData: ?Any = if (errDataValue.isObject()) {
-        errDataValue.asObject()
-    } else {
-        None
-    }
-    throw BusinessException(errName, errCode, errMsg, errStack, errData)
+    context.rethrowJSError(errObJ)
 }
 
 // case1: cannot find record '&somemodule/somedir/somefile&1.0.0'
