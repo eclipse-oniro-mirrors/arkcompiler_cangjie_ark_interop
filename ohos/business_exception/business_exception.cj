@@ -93,7 +93,7 @@ public class BusinessException <: Exception {
     }
 
     protected init(code: Int32, exp: Exception, stack: Array<String>) {
-        super("")
+        super(exp.message)
         this.code = code
         this.errData = if (let Some(business) <- (exp as BusinessException)) {
             business.errData
@@ -150,7 +150,7 @@ public class BusinessException <: Exception {
     }
 
     protected func getMixedStackTrace(): String {
-        match (kind) {
+        let result = match (kind) {
             case CrossCangjie(exp, arkStack) =>
                 var s = ""
                 for (element in exp.getStackTrace()) {
@@ -171,6 +171,7 @@ public class BusinessException <: Exception {
                 s
             case _ => throw Exception()
         }
+        result + "\n"
     }
 
     private func toNormalStr(): String {
