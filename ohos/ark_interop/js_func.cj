@@ -155,12 +155,14 @@ func cjLambdaInvoker(info: JSCallInfoPrivate, lambdaId: Int64): JSValue_ {
                 err
             } else {
                 let stack = context.constants.getArkStack()
+                unsafe { CJDFX_IgnoreNextBacktrace() }
                 BusinessException(err.code, err, stack)
             }
             unsafe { ARKTS_Throw(context.env, toJSError(context, exp).value) }
             context.void_
         } catch (err: Exception) {
             let stack = context.constants.getArkStack()
+            unsafe { CJDFX_IgnoreNextBacktrace() }
             let mixedExp = BusinessException(0, err, stack)
             unsafe { ARKTS_Throw(context.env, toJSError(context, mixedExp).value) }
             context.void_
