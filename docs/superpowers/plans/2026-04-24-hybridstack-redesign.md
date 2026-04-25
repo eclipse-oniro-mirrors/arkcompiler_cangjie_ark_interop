@@ -4,7 +4,7 @@
 
 **Goal:** 在 `feat/hybridstack-redesign` 分支上从零实现新方案，使 faultlog 与语言层均能稳定显示仓颉栈帧。
 
-**Architecture:** 采用 **PC 指针更新 API 统一方案** — 复用 ets_runtime 的 `PcVector` 与 `DFXJSNApi::GetHybridStackTrace`；在 `toJSError` 中创建新 JSError（自动绑定当前 vm），通过 `ARKTS_RestorePcVectorSnapshot` 恢复 Cangjie 帧的 PC 集合到新 JSError 的 PcVector，完全支持嵌套 JSRuntime 等多 VM 场景。上游新增 cjffi C API：`ARKTS_GetPcVectorSnapshot`、`ARKTS_RestorePcVectorSnapshot`、`ARKTS_AppendPcVector`。详见 [`doc/hybridstack_architecture_design.md`](../../../doc/hybridstack_architecture_design.md) 和 [`doc/multiruntime_jserror_analysis.md`](../../../doc/multiruntime_jserror_analysis.md)。
+**Architecture:** 采用 **单接口直接写 PcVector 统一方案** — 复用 ets_runtime 的 `PcVector` 与 `DFXJSNApi::GetHybridStackTrace`；在 `toJSError` 中创建新 JSError（自动绑定当前 vm），通过 `CJ_HybridStack_UpdatePc` 将仓颉 PC 帧直接写入 PcVector（覆盖写，无需读快照），完全支持嵌套 JSRuntime 等多 VM 场景。上游仅新增 1 个 cjffi C API：`DFXJSNApi::UpdateHybridStackTracePc`。详见 [`doc/hybridstack_architecture_design.md`](../../../doc/hybridstack_architecture_design.md) 和 [`doc/multiruntime_jserror_analysis.md`](../../../doc/multiruntime_jserror_analysis.md)。
 
 **Tech Stack:** Cangjie (`.cj`) + C++ (`frameworks/native`) + GN/cjpm 双构建 + cjffi (`napi_get_hybrid_stack_trace` + 新增 PC API).
 
@@ -48,7 +48,7 @@
 ## Task 1: 新增 C++ 桥接骨架 + cjffi 新 PC API 调用封装
 
 > 本 Task **不修改** ets_runtime / arkui_napi。仅在本仓库内调用上游在 Task 0 spike 结果中锁定的路径：
-> - 路径主选：假定上游已接受 `ARKTS_GetPcVectorSnapshot` / `ARKTS_RestorePcVectorSnapshot` / `ARKTS_AppendPcVector`。本 Task 只按该签名转调。
+> - 路径主选：假定上游已接受 `DFXJSNApi::UpdateHybridStackTracePc`。本 Task 只按该签名转调。
 > - 若 spike 表明上游接口未落地，在本 Task Step 0 中 **加入 weak 符号占位**（`__attribute__((weak))`）与运行时检测，仅语言层路径生效。
 
 **Files:**
@@ -78,20 +78,10 @@
   // *outLen 为所需字节数（不含 '\0'）。
   int CJ_HybridStack_GetTrace(napi_env env, char* buf, size_t bufLen, size_t* outLen);
 
-  // faultlog 路径：将仓颉 backtrace PC 追加到当前 vm 的 PcVector。
-  // frames: PC 指针数组；count: 数组长度。
-  // 返回 0 = 成功；非 0 = 上游接口不可用（weak 符号未链接）或调用失败。
-  int CJ_HybridStack_AppendFrames(uint64_t vmAddr,
-                                  const uintptr_t* frames,
-                                  size_t count);
-
-  // 保护路径：快照 / 恢复 PcVector。outSnap 负责调用者 free。
-  int CJ_HybridStack_SnapshotPcVector(uint64_t vmAddr,
-                                      uintptr_t** outFrames,
-                                      size_t* outCount);
-  int CJ_HybridStack_RestorePcVector(uint64_t vmAddr,
-                                     const uintptr_t* frames,
-                                     size_t count);
+  // faultlog 路径：将仓颉 backtrace PC 帧直接写入当前 vm 的 PcVector。
+  // frames: void* 指针数组（每元素为 PC 地址）；count: 数组长度。
+  // 返回 0 = 成功；-1 = 参数非法；-2 = 上游接口不可用（weak 符号未链接）。
+  int CJ_HybridStack_UpdatePc(napi_env env, void** frames, int count);
 
   #ifdef __cplusplus
   }
@@ -105,19 +95,20 @@
   // frameworks/native/hybrid_stack/hybrid_stack_bridge.cpp
   #include "hybrid_stack_bridge.h"
 
-  #include <cstdlib>
   #include <cstring>
   #include <string>
 
+  #include "native_engine/native_engine.h"
   #include "native_node_api.h"
-  // 上游 cjffi 新增接口（spike 锁定后从 arkui_napi 头文件引入）
-  // 若 weak 模式，这里使用本地 extern 并加 weak attribute。
-  extern "C" __attribute__((weak)) int ARKTS_GetPcVectorSnapshot(
-      uint64_t, uintptr_t**, size_t*);
-  extern "C" __attribute__((weak)) int ARKTS_RestorePcVectorSnapshot(
-      uint64_t, const uintptr_t*, size_t);
-  extern "C" __attribute__((weak)) int ARKTS_AppendPcVector(
-      uint64_t, const uintptr_t*, size_t);
+  // 上游 ets_runtime dfx 头文件
+  #include "ecmascript/napi/include/dfx_jsnapi.h"
+
+  // weak 占位：若 ets_runtime 未提供该符号则链接时设为 nullptr
+  namespace panda {
+  class DFXJSNApi;
+  }
+  __attribute__((weak)) extern void DFX_UpdateHybridStackTracePc(
+      const panda::EcmaVM*, void**, int);
 
   extern "C" int CJ_HybridStack_GetTrace(napi_env env, char* buf,
                                          size_t bufLen, size_t* outLen)
@@ -141,32 +132,18 @@
       return 0;
   }
 
-  extern "C" int CJ_HybridStack_AppendFrames(uint64_t vmAddr,
-                                             const uintptr_t* frames,
-                                             size_t count)
+  extern "C" int CJ_HybridStack_UpdatePc(napi_env env, void** frames, int count)
   {
-      if (frames == nullptr || count == 0) { return -1; }
-      if (ARKTS_AppendPcVector == nullptr) { return -2; }
-      return ARKTS_AppendPcVector(vmAddr, frames, count);
-  }
-
-  extern "C" int CJ_HybridStack_SnapshotPcVector(uint64_t vmAddr,
-                                                 uintptr_t** outFrames,
-                                                 size_t* outCount)
-  {
-      if (outFrames == nullptr || outCount == nullptr) { return -1; }
-      if (ARKTS_GetPcVectorSnapshot == nullptr) { return -2; }
-      return ARKTS_GetPcVectorSnapshot(vmAddr, outFrames, outCount);
-  }
-
-  extern "C" int CJ_HybridStack_RestorePcVector(uint64_t vmAddr,
-                                                const uintptr_t* frames,
-                                                size_t count)
-  {
-      if (ARKTS_RestorePcVectorSnapshot == nullptr) { return -2; }
-      return ARKTS_RestorePcVectorSnapshot(vmAddr, frames, count);
+      if (env == nullptr || frames == nullptr || count <= 0) { return -1; }
+      if (DFX_UpdateHybridStackTracePc == nullptr) { return -2; }
+      auto* engine = reinterpret_cast<NativeEngine*>(env);
+      auto* vm = reinterpret_cast<panda::EcmaVM*>(engine->GetEcmaVm());
+      DFX_UpdateHybridStackTracePc(vm, frames, count);
+      return 0;
   }
   ```
+
+  > **说明**：由于 `DFXJSNApi::UpdateHybridStackTracePc` 是静态成员函数，weak 符号需要封装为普通 C 函数。若上游 API 已落地，可改为直接包含头文件和调用。
 
 - [ ] **Step 3：编写 BUILD.gn**
 
