@@ -338,9 +338,9 @@
 
 ---
 
-## Task 3: 改造 `js_exception.cj`：`toJSError` 创建新 JSError 并恢复 Cangjie PC 帧
+## Task 3: 改造 `js_exception.cj`：`toJSError` 创建新 JSError 并立即用 cjPcSnapshot 恢复
 
-**核心思路（PC API 统一方案）：** `toJSError` 每次调用均通过 `createJSError` 创建**全新** JSError（自动绑定当前 vm，天然支持多 VM / 嵌套 JSRuntime），再通过 `HybridStack.restorePcVector(vmAddr, snap)` 将 `SharedException.cjPcSnapshot` 中保存的 Cangjie PC 数组恢复到该新 JSError 的 PcVector，无需任何构造期回调或跨 VM 传递已有 JSError 对象。
+**核心思路（二阶段恢复方案）：** `toJSError` 创建新 JSError（自动绑定当前 vm）后，**立即检测 `SharedException.cjPcSnapshot` 非空**，调用 `HybridStack.updatePc(env, cjPcSnapshot)` 将备份的仓颉 PC 帧恢复到新 JSError 的 PcVector 中，彻底解决覆盖问题。支持多 VM / 嵌套 JSRuntime，无构造期回调、无跨 VM 传递。
 
 **Files:**
 - Modify: `ohos/ark_interop/js_exception.cj`（重点为 `toJSError`；`SharedException` 增加 `cjPcSnapshot` 字段）
@@ -355,7 +355,7 @@
   //   1. 构造一个 SharedException，手动设置非空 cjPcSnapshot
   //   2. 调用 toJSError(env)
   //   3. 断言总是调用了 createJSError（新建 JSError，非复用旧对象）
-  //   4. 断言调用了 HybridStack.restorePcVector（PcVector 已被恢复）
+  //   4. 断言调用了 HybridStack.updatePc（PcVector 已被恢复）
   //   5. 断言 PcVector 帧数 == cjPcSnapshot.size()
   ```
 
@@ -369,8 +369,7 @@
   - `SharedException` 类增加 `var cjPcSnapshot: ?Array<UIntNative> = None`。
   - `toJSError` 主路径：
     1. 调用 `createJSError(env, message, stack)` 创建新 JSError（绑定当前 vm）。
-    2. 若 `cjPcSnapshot` 非 `None`，将其转为 `CPointer<UIntNative>` 后调用
-       `HybridStack.restore(vmAddr, PcSnapshot(framesPtr, count))`，将 Cangjie 帧恢复到新 JSError 的 PcVector。
+    2. 若 `cjPcSnapshot` 非 `None`，**立即调用 `HybridStack.updatePc(env, cjPcSnapshot)` 将备份的 PC 帧恢复到该新 JSError 的 PcVector**。
     3. 调用 `ARKTS_Throw(newJSError)`。
   - 无兼容兜底分支、无 VM 地址比较逻辑；代码路径单一。
 
@@ -382,44 +381,49 @@
 
   ```powershell
   git add ohos/ark_interop/js_exception.cj test/hybridstack/
-  git commit -m "feat(hybridstack): toJSError creates new JSError and restores CJ PC frames via HybridStack.restorePcVector"
+  git commit -m "feat(hybridstack): toJSError creates new JSError and immediately restores CJ PC frames from cjPcSnapshot"
   ```
 
 ---
 
-## Task 4: 初始化 `cjPcSnapshot`——从仓颉异常 backtrace 提取 PC 数组
+## Task 4: 初始化 `cjPcSnapshot`——在互操作回调中备份仓颉 PC
 
-**核心思路（PC API 统一方案）：** 在捕获到仓颉异常时（互操作边界 catch 块内），直接从异常对象的 backtrace 提取 PC 指针数组并赋值给 `SharedException.cjPcSnapshot`。无需注册任何构造期回调，无需跨 VM 缓存预创建对象，实现最简单的直接初始化路径。
+**核心思路（二阶段恢复方案）：** 在仓颉异常创建期回调 `onCJExceptionCreated` 中，使用公开 HiDebug API（`OH_HiDebug_CreateBacktraceObject` + `OH_HiDebug_BacktraceFromFp`）获取仓颉 PC 帧数组，**同时备份到 `SharedException.cjPcSnapshot`** 和写入 PcVector（供 faultlog）。该备份在后续 `toJSError` 中用于恢复。
 
 **Files:**
-- Modify: `ohos/ark_interop/js_exception.cj`（互操作边界 catch 块中填充 `cjPcSnapshot`）
-- Add unit test: `test/hybridstack/cj_pc_snapshot_init_test.cj`
+- Modify: `ohos/ark_interop/js_module.cj`（新增或改造 `onCJExceptionCreated` 回调）
+- Modify: `ohos/ark_interop/js_exception.cj`（`SharedException` 增加 `cjPcSnapshot` 字段）
+- Add unit test: `test/hybridstack/cj_pc_snapshot_backup_test.cj`
 
 - [ ] **Step 1：先写失败测试**
 
   ```cangjie
-  // test/hybridstack/cj_pc_snapshot_init_test.cj
-  // 场景：仓颉抛出异常 → 互操作边界捕获 → cjPcSnapshot 已被正确填充
+  // test/hybridstack/cj_pc_snapshot_backup_test.cj
+  // 场景：仓颉异常触发 → 回调中备份 PC → cjPcSnapshot 已填充 && PcVector 已写
   // 过程：
-  //   1. 在测试中抛出带有 backtrace 的仓颉异常
-  //   2. 在 catch 块中将其包装为 SharedException
-  //   3. 断言 cjPcSnapshot != None
-  //   4. 断言 cjPcSnapshot 数组长度 > 0（backtrace 至少包含一帧）
-  //   5. 断言数组中各元素为非零 PC 值
+  //   1. 在 onCJExceptionCreated 回调中执行
+  //   2. 断言通过 HiDebug API 成功获取 PC 帧数组
+  //   3. 断言 cjPcSnapshot 非空且长度 > 0
+  //   4. 断言调用 UpdateHybridStackTracePc 将 PC 写入 PcVector（供 faultlog）
+  //   5. 二者都已填充，ready for toJSError 阶段
   ```
 
 - [ ] **Step 2：运行测试确认失败**
 
   Run：按 `.agents/skills/cjpm-build` 指定的 test 命令执行；Expected: FAIL。
 
-- [ ] **Step 3：实现 `cjPcSnapshot` 初始化**
+- [ ] **Step 3：实现 `onCJExceptionCreated` 回调**
 
-  在互操作边界 catch 块（`SharedException` 构造或填充处）增加：
-  1. 从仓颉异常对象读取 backtrace（`getStackTrace()` 或等效 API）。
-  2. 遍历 backtrace 帧，提取各帧的 PC 指针（`UIntNative`）组成 `Array<UIntNative>`。
-  3. 赋值 `sharedEx.cjPcSnapshot = Some(pcArray)`。
-  - **无需注册回调**；整个初始化在同步 catch 代码路径内完成。
-  - 若 backtrace 为空或不支持，设 `cjPcSnapshot = None`（Task 3 中 `toJSError` 对 `None` 的处理已有覆盖）。
+  在 `ohos/ark_interop/js_module.cj` 中新增或改造回调：
+  1. 使用公开 HiDebug API 序列：
+     ```
+     OH_HiDebug_CreateBacktraceObject()
+     → OH_HiDebug_BacktraceFromFp() 填充 backtrace 对象
+     → 读取 backtrace 中的 PC 指针数组
+     ```
+  2. **备份该 PC 数组到异常对象的 `cjPcSnapshot`**。
+  3. 调用 `HybridStack.updatePc(env, frames, count)` 将 PC 写入当前 vm 的 PcVector（供 faultlog 路径）。
+  4. 若任何步骤失败（HiDebug API 不可用、PC 数组为空等），置 `cjPcSnapshot = None`；`toJSError` 中的逻辑已对此有处理。
 
 - [ ] **Step 4：测试通过**
 
@@ -428,42 +432,92 @@
 - [ ] **Step 5：提交**
 
   ```powershell
-  git add ohos/ark_interop/js_exception.cj test/hybridstack/
-  git commit -m "feat(hybridstack): initialize cjPcSnapshot from CJ exception backtrace at interop boundary"
+  git add ohos/ark_interop/js_module.cj ohos/ark_interop/js_exception.cj test/hybridstack/
+  git commit -m "feat(hybridstack): backup CJ PC frames in onCJExceptionCreated callback and store in cjPcSnapshot"
   ```
 
 ---
 
-## Task 5: 重构 `BusinessException` 的 `toString` / `getMixedStackTrace`
+## Task 5: 重构 `BusinessException` 的 `toString` / `getMixedStackTrace` — 语言层混合栈显示
 
 **Files:**
 - Modify: `ohos/business_exception/business_exception.cj`
 - Add: `test/hybridstack/business_exception_mixed_trace_test.cj`
 
-- [ ] **Step 1：失败测试**
+**场景矩阵（语言层 catch 打印）**：基于**首帧语言类型**，设计以下场景：
 
-  构造三个场景：
-  1. 跨语言场景：断言 `e.getMixedStackTrace()` 返回字符串含「==Cangjie==」、「==ArkTS==」（路径 P1），如果平台上 `napi_get_hybrid_stack_trace` 返回 Native 帧，并含「==Native==」。
-  2. PcVector 空场景：表示仓颉未 push 帧，验证不抛异常、返回仅含仓颉本地缓存字符串。
-  3. 调用 `getMixedStackTrace` 两次，验证第二次返回同一 String 实例（缓存生效）。
+| 场景编号 | 首帧语言 | 异常调用链 | 测试内容 |
+| ---- | ---- | ---- | ---- |
+| **L1** | Native | Native → ArkTS → Cangjie (throw) → catch | ① 获取完整栈：Native + ArkTS + Cangjie ② `getMixedStackTrace()` 包含三段标记（==Native==、==ArkTS==、==Cangjie==）③ 缓存：第二次调用返回同一 String 实例 |
+| **L2** | ArkTS | ArkTS → Cangjie (throw) → catch | ① 获取栈：ArkTS + Cangjie ② 无 Native 帧（调用链无Native） ③ 缓存生效 |
+| **L3** | Cangjie | Cangjie (throw) → catch | ① 获取栈：仅 Cangjie 帧 ② `cjPcSnapshot` 备份被 `toJSError` 恢复 ③ 缓存生效 |
+| **L4** | Cangjie | Cangjie (throw) + PcVector 无帧 | ① 异常发生但未通过回调获取 PC（如回调失败、HiDebug API 不可用）② `cjPcSnapshot` = None ③ `getMixedStackTrace()` 返回仅含仓颉本地缓存字符串（不崩溃）|
+| **L5** | Multi-VM | 多个 vm 各抛异常 | ① 每个 vm 独立的 `cjPcSnapshot` 和 PcVector ② toJSError 恢复针对当前 vm ③ Worker 场景：各 worker 各自显示完整混合栈 |
+| **L6** | Cangjie | 嵌套 JSRuntime：内层 vm → Cangjie throw | ① 内层 vm 的 PcVector 独立 ② toJSError 在内层 vm 恢复 ③ 外层 vm 不受影响 |
 
-- [ ] **Step 2：实现**
+- [ ] **Step 1：设计失败测试**
 
-  - `getMixedStackTrace()` 内：
-    1. 若 `cachedHybridTrace` 已赋值 → 直接返回。
-    2. 取本地仓颉 backtrace 缓存。
-    3. 调用 `HybridStack.getTrace(env)`。
-    4. 拼接并去重（仓颉部分若已在混合栈出现则只保留一份）。
-    5. 缓存结果到 `cachedHybridTrace: ?String` 字段。
-  - `toString()`：复用 `getMixedStackTrace()` 输出。
+  在 `test/hybridstack/business_exception_mixed_trace_test.cj` 中为场景 L1-L6 各编写一个失败用例：
+  ```cangjie
+  // test/hybridstack/business_exception_mixed_trace_test.cj
+  // 场景 L1：三语言混合
+  func test_mixed_trace_native_arkts_cangjie() {
+      // 调用栈：C++ Native → ArkTS → Cangjie throw
+      // 断言：e.getMixedStackTrace() 含 ==Native==、==ArkTS==、==Cangjie==
+  }
+  
+  // 场景 L3：仅 Cangjie
+  func test_mixed_trace_cangjie_only() {
+      // 调用栈：Cangjie throw → catch
+      // 断言：cjPcSnapshot 非空 && toJSError 恢复后 PcVector 包含 Cangjie 帧
+  }
+  
+  // 场景 L4：PcVector 缺失
+  func test_mixed_trace_no_pc_snapshot() {
+      // 异常发生但回调未填充 cjPcSnapshot
+      // 断言：getMixedStackTrace() 不抛异常、返回仅含本地缓存
+  }
+  
+  // 场景 L5：多 VM
+  func test_mixed_trace_multi_vm() {
+      // 启动两个 worker，各自抛异常
+      // 断言：每个 worker 各自的 getMixedStackTrace() 正确，无串联
+  }
+  
+  // 场景 L6：嵌套 JSRuntime
+  func test_mixed_trace_nested_jsruntime() {
+      // 内层 vm 抛异常
+      // 断言：内层 vm 的 PcVector 恢复，外层 vm 不受影响
+  }
+  ```
 
-- [ ] **Step 3：测试通过**
+- [ ] **Step 2：运行测试确认失败**
 
-- [ ] **Step 4：提交**
+  Run：`hb build napi -t 2>&1 | grep "business_exception_mixed_trace_test"`；Expected: 所有 6 个用例 FAIL。
+
+- [ ] **Step 3：实现 `getMixedStackTrace()` 核心逻辑**
+
+  - `SharedException` 类新增 `cachedHybridTrace: ?String = None`。
+  - `getMixedStackTrace()` 主路径：
+    1. 若 `cachedHybridTrace` 非 `None` → 直接返回（缓存命中）。
+    2. 取本地仓颉 backtrace 字符串（已在异常构造期收集）。
+    3. 调用 `HybridStack.getTrace(env)` 获取 PcVector 符号化结果（含 Native + ArkTS + Cangjie 帧）。
+    4. 拼接两部分；若重复则仅保留一份。
+    5. 赋值 `cachedHybridTrace = result`，返回。
+  - 处理边界情况：
+    - `HybridStack.getTrace()` 返回空 → 使用本地缓存。
+    - `cjPcSnapshot = None` → 仅返回本地缓存。
+  - `toString()` 复用 `getMixedStackTrace()` 结果（可选添加前缀如「Exception: ...」）。
+
+- [ ] **Step 4：测试通过**
+
+  Run 同 Step 2；Expected: 所有 6 个用例 PASS。
+
+- [ ] **Step 5：提交**
 
   ```powershell
-  git add ohos/business_exception/business_exception.cj test/hybridstack/
-  git commit -m "feat(hybridstack): unify BusinessException trace via HybridStack.getTrace and add per-instance cache"
+  git add ohos/business_exception/business_exception.cj test/hybridstack/business_exception_mixed_trace_test.cj
+  git commit -m "feat(hybridstack): implement getMixedStackTrace with L1-L6 multi-VM and nested JSRuntime support"
   ```
 
 ---
@@ -481,19 +535,147 @@
 
 ---
 
-## Task 6: 端到端验证（VerifyBuild + faultlog）
+## Task 6: 端到端验证（语言层 + faultlog 层）
 
-**Files:** 仅运行；产出验证报告 `doc/hybridstack_e2e_report.md`
+**Files:** 
+- Add: `test/hybridstack/e2e_scenario_faultlog_test.cj`（faultlog 层测试场景 F1-F6）
+- Add: `doc/hybridstack_e2e_report.md`（验证报告）
 
-- [ ] **Step 1：完整 cjpm 构建** — 走 `.agents/skills/cjpm-build/SKILL.md`。
-- [ ] **Step 2：兼容 SDK 产物替换 + VerifyBuild** — 走 `.agents/skills/verifybuild-e2e-validation/SKILL.md`。
-- [ ] **Step 3：确认 faultlog 调用链路已贯通**
-  在 `D:\docker\code\ability_ability_runtime` 搜索 `napi_get_hybrid_stack_trace` / `GetHybridStackTraceForCrash`。确认 ability_runtime 在进程启动时已向 faultloggerd / dfx_dump_catcher 注册调用点；若**未**注册，需补充子任务 Task 6b（见下）。并在报告中记录调用路径代码位置。
-- [ ] **Step 4：在设备上运行 VerifyBuild 应用，分别构造场景 A/B/C** —
-  - A：仓颉抛未捕获异常 → 抓 faultlog 检查仓颉帧出现。
-  - B：仓颉抛 → ArkTS catch → 调用 `e.getMixedStackTrace()` → 检查日志含三段。
-  - C：纯 ArkTS 抛 → 抓 faultlog 检查无回归。
-- [ ] **Step 5：编写 `doc/hybridstack_e2e_report.md`** — 列出每场景的关键日志片段、PASS/FAIL、复现命令、ability_runtime 代码参考位置。
+**场景矩阵（faultlog 层 crash 时自动捕获）**：基于**首帧语言类型**，设计以下场景：
+
+| 场景编号 | 首帧语言 | 异常调用链 | faultlog 验证内容 |
+| ---- | ---- | ---- | ---- |
+| **F1** | Native | Native → ArkTS → Cangjie (throw) → **未catch（崩溃）** | ① DFXJSNApi::GetHybridStackTrace 读取 PcVector ② faultlog 输出完整混合栈（Native + ArkTS + Cangjie） ③ 无回退降级（PC Array 已在回调中写入） |
+| **F2** | ArkTS | ArkTS → Cangjie (throw) → **未catch（崩溃）** | ① faultlog 输出 ArkTS + Cangjie 帧 ② 无 Native 帧 |
+| **F3** | Cangjie | Cangjie (throw) → **未catch（崩溃）** | ① faultlog 输出 Cangjie 帧 ② PC Array 由 `onCJExceptionCreated` 回调写入 |
+| **F4** | Cangjie | 异常发生但回调失败（HiDebug API 不可用、PC 获取失败） → **未catch（崩溃）** | ① faultlog 输出现有帧（仅 ArkTS，无 Cangjie） ② 无崩溃（降级处理）|
+| **F5** | Multi-VM | 多个 worker，各抛异常 → **各自未catch（各自崩溃）** | ① 每个 worker 进程各自的 faultlog 包含其对应语言层的完整栈 ② 无跨 worker 污染 |
+| **F6** | Cangjie | 嵌套 JSRuntime：内层 vm → Cangjie throw → **内层未catch（崩溃）** | ① 内层 vm 的 faultlog 包含完整混合栈 ② 外层 vm 不受影响，继续运行 |
+
+- [ ] **Step 1：设计 faultlog 层测试**
+
+  在 `test/hybridstack/e2e_scenario_faultlog_test.cj` 中为场景 F1-F6 各编写场景启动代码（包括故意崩溃的 hook）：
+  ```cangjie
+  // test/hybridstack/e2e_scenario_faultlog_test.cj
+  
+  // 场景 F1：三语言混合 + 崩溃
+  func setup_scenario_f1_native_arkts_cangjie_crash() {
+      // 调用链：C++ Native → ArkTS → Cangjie throw（不 catch）
+      // 期望：faultlog 后处理程序 (dfx_dump_catcher 或 faultloggerd) 调用
+      // DFXJSNApi::GetHybridStackTrace，读 PcVector 并输出完整栈
+  }
+  
+  // 场景 F3：仅 Cangjie 崩溃
+  func setup_scenario_f3_cangjie_only_crash() {
+      // 调用链：Cangjie throw（不 catch）
+      // 回调 onCJExceptionCreated 中已备份 PC 到 cjPcSnapshot & 写 PcVector
+      // 期望：faultlog 包含 Cangjie 帧
+  }
+  
+  // 场景 F5：多 worker 崩溃
+  func setup_scenario_f5_multi_worker_crash() {
+      // 启动 Worker 1 & Worker 2，各自抛异常不 catch
+      // 期望：两个 worker 各自生成独立 faultlog，互不影响
+  }
+  
+  // 场景 F6：嵌套 JSRuntime 崩溃
+  func setup_scenario_f6_nested_jsruntime_crash() {
+      // 启动嵌套 JSRuntime，内层 vm 抛异常不 catch
+      // 期望：内层崩溃，外层继续，各自 faultlog 独立
+  }
+  ```
+
+- [ ] **Step 2：梳理 faultlog 调用链路**
+
+  在 `D:\docker\code\ability_ability_runtime` 搜索并记录：
+  - `napi_get_hybrid_stack_trace` 调用点（在哪个模块、哪个文件）
+  - DFXJSNApi::GetHybridStackTrace 被哪个系统服务调用（如 dfx_dump_catcher、faultloggerd）
+  - 调用时的上下文（是否已知当前 vm 地址、如何获取）
+  
+  产出：在 `doc/hybridstack_e2e_report.md` 中记录调用链路关键代码位置。
+
+- [ ] **Step 3：在 ability_runtime 中注册/启用 faultlog 回调**
+
+  若 Step 2 发现 `napi_get_hybrid_stack_trace` 尚未被 faultlog 系统调用，需要补充**子任务 Task 6b**（见下）以完成注册。若已注册，跳过此步。
+
+- [ ] **Step 4：完整 cjpm 构建**
+
+  运行 `.agents/skills/cjpm-build/SKILL.md` 中的构建命令链路，验证所有目标编译成功（包括 `test/hybridstack/e2e_scenario_faultlog_test.cj`）。
+
+- [ ] **Step 5：兼容 SDK 产物替换 + VerifyBuild 打包**
+
+  运行 `.agents/skills/verifybuild-e2e-validation/SKILL.md` 中的完整流程：
+  1. 编译互操作库产物。
+  2. 替换兼容 SDK 中的产物。
+  3. VerifyBuild hvigor 打包应用。
+  4. 使用 `collectSDKLibs=true` 验证产物可用。
+
+- [ ] **Step 6：在设备上执行场景 F1-F6 并采集 faultlog**
+
+  对每个场景执行以下步骤（可编写 shell/Python 脚本自动化）：
+  1. 启动应用/worker，触发异常不 catch。
+  2. 应用崩溃，系统自动生成 faultlog。
+  3. 从设备上拉取 faultlog 日志（位置如 `/data/log/faultlog` 或 `adb logcat` 输出）。
+  4. 检查日志是否包含对应场景的完整混合栈符号（包括函数名、文件名、行号）。
+  5. 对比三语言帧数是否正确（无丢失、无重复）。
+  
+  记录每个场景的 PASS/FAIL 结果及关键日志片段。
+
+- [ ] **Step 7：生成 E2E 验证报告**
+
+  在 `doc/hybridstack_e2e_report.md` 中记录：
+  ```markdown
+  # 混合栈 E2E 验证报告
+  
+  ## 环境
+  - 编译时间、设备型号、系统版本、ability_runtime 版本
+  
+  ## 场景验证结果
+  
+  ### 语言层 (Task 5)
+  | 场景 | 状态 | 关键验证点 | 日志片段 |
+  | ---- | ---- | ---- | ---- |
+  | L1 | PASS | 三语言混合、缓存生效 | [日志输出] |
+  | L5 | PASS | 多 VM 隔离 | [日志输出] |
+  | ... | ... | ... | ... |
+  
+  ### faultlog 层 (Task 6)
+  | 场景 | 状态 | 关键验证点 | faultlog 片段 |
+  | ---- | ---- | ---- | ---- |
+  | F1 | PASS | Native+ArkTS+Cangjie 完整栈 | [faultlog] |
+  | F5 | PASS | Worker 隔离 | [faultlog] |
+  | ... | ... | ... | ... |
+  
+  ## ability_runtime faultlog 调用链路
+  - 文件：`services/abilitymgr/src/fault_handler.cpp` (示例)
+  - 调用点：Line XXX，调用 `DFXJSNApi::GetHybridStackTrace(vm, ...)`
+  
+  ## 已知限制 & 后续优化
+  - ...
+  ```
+
+- [ ] **Step 8：提交**
+
+  ```powershell
+  git add test/hybridstack/e2e_scenario_faultlog_test.cj doc/hybridstack_e2e_report.md
+  git commit -m "test(hybridstack): add E2E faultlog scenarios F1-F6 with multi-VM and nested JSRuntime coverage"
+  ```
+
+---
+
+## Task 6b: 若需要 — ability_runtime faultlog 系统集成（可选子任务）
+
+若 Task 6 Step 3 发现 `napi_get_hybrid_stack_trace` 尚未被 ability_runtime 的 faultlog 系统调用，需要补充以下步骤（此任务仅在 Task 6 Step 2 发现缺失时执行）：
+
+**Files:**
+- Modify: `services/abilitymgr/src/fault_handler.cpp` 或类似 faultlog 调用点
+- Modify: `BUILD.gn` 依赖项
+
+- [ ] **研究现有 faultlog 调用点** — 定位 ability_runtime 中何处调用 DFXJSNApi / dfx 相关接口。
+- [ ] **增加 `napi_get_hybrid_stack_trace` 调用** — 在获取 ArkTS 栈后，额外调用该接口以获取混合栈。
+- [ ] **参数传递** — 确保 current vm 地址被正确传递到 dfx 系统。
+- [ ] **测试** — 验证 faultlog 输出混合栈无崩溃。
+- [ ] **提交** — 同步提交到 ability_runtime 仓库（超出本计划范围，由下游跟进）。
 - [ ] **Step 6：提交**
 
   ```powershell

@@ -15,10 +15,18 @@
 ## 2. 关键约束与重要事实校正
 
 1. **PC Array 单例语义**：`EcmaVM` 上仅保留最近一次 ArkTS Error 创建时刻的 PC 向量，后续任何 Error 创建都会覆盖（参见 `ets_runtime/ecmascript/napi/dfx_jsnapi.cpp:1234` 的 `GetHybridStackTrace`）。
-2. **互操作侧当前实现问题**：`ohos/business_exception/business_exception.cj` 与 `ohos/ark_interop/js_exception.cj` 现状是在 `toJSError()` 边界构造新的 ArkTS Error，覆盖 PC Array，是当前 faultlog 丢失仓颉帧的根因。本方案采用 **PC 指针更新 API** 方案：在 `toJSError` 中创建新 JSError（自动绑定当前 vm），通过 `DFXJSNApi::UpdateHybridStackTracePc(vm, frames, count)` 将仓颉 PC 帧直接写入 PcVector（无需先读快照）。该方案支持所有 vm 配置场景（单 VM、多 VM、嵌套 JSRuntime 等），避免跨 VM JSError 转移的绑定问题。详见 [multiruntime_jserror_analysis.md](./multiruntime_jserror_analysis.md)。
+2. **互操作侧当前实现问题 & toJSError 覆盖风险**：`ohos/business_exception/business_exception.cj` 与 `ohos/ark_interop/js_exception.cj` 现状是在 `toJSError()` 边界构造新的 ArkTS Error，覆盖 PC Array。**关键洞察**：`toJSError` 创建新 JSError 时会自动捕获当前 ArkTS 栈并生成新 PcVector，覆盖回调中写入的仓颉帧。本方案采用 **二阶段恢复机制** 策略：
+   - **阶段 ①（回调中）**：使用公开 HiDebug API 获取仓颉 PC 帧 → **同时备份到 cjPcSnapshot** → 写入 vm PcVector（供 faultlog）
+   - **阶段 ②（toJSError 中立即）**：创建新 JSError（PcVector 被 ArkTS 帧覆盖）→ **立即调用 UpdateHybridStackTracePc(env, cjPcSnapshot) 用备份恢复** → throw
+   
+   后续 faultlog 和 getMixedStackTrace 直接使用已恢复的 PcVector。该方案支持所有 vm 配置场景（单 VM、多 VM、嵌套 JSRuntime 等），避免跨 VM JSError 转移的绑定问题。详见 [multiruntime_jserror_analysis.md](./multiruntime_jserror_analysis.md)。
 3. **不引入仓颉自己抓取 C 栈的能力**：Native 栈仅依赖 ets_runtime / faultloggerd 已有的 `GetHybridStackTrace` 解析能力。
 4. **二进制兼容性**：`BusinessException` 类公开 API（`getCrossMessage` / `getMixedStackTrace` / 错误码 34300001-34300008）必须保持兼容。
-5. **PC Array 与跨 VM 问题**：`ARKTS_UpdateStackInfo(opKind)` 仅切换 fiber 栈上下文，不能写 PcVector。JSError 在创建时自动绑定到特定 EcmaVM 实例。若使用预创建方案（vm_A 中创建 JSError），当该 JSError 被 throw 到另一个 vm_B（例如嵌套 JSRuntime）时，会产生 vm address mismatch，导致符号化失败或新 Error 创建覆盖 PcVector。本方案改为：**统一采用单接口直接写入** — 每次 `toJSError` 创建新 JSError（自动绑定当前 vm），再通过 `DFXJSNApi::UpdateHybridStackTracePc(vm, frames, count)` 将仓颉 PC 帧直接写入该 vm 的 PcVector。上游仅需新增 1 个接口见 §4.2.4，无需读快照、无需恢复，亦无需新增上游 opKind。
+5. **PC Array 与 toJSError 覆盖风险**：`toJSError` 创建新 JSError 时自动捕获 ArkTS 栈帧并写入 PcVector，会覆盖之前回调中写入的仓颉帧。**二阶段恢复机制**：
+   - **①回调中**：使用公开 HiDebug API 获取仓颉 PC → **同时备份到 cjPcSnapshot** → 写入 vm PcVector
+   - **②toJSError 中立即**：创建新 JSError（PcVector 被 ArkTS 帧重写） → **立即调用 UpdateHybridStackTracePc(env, cjPcSnapshot) 用备份恢复** → throw
+   
+   该方案完全避免跨 VM 绑定问题，每个 vm 各自管理自己的 PcVector。
 6. **JSEnv 类型与 HiDebug API**：
    - `JSEnv = IntNative`（参见 `ohos/ark_interop/jscontext.cj`），是裸指针值，不是带方法的类。FFI 调用时直接当作 `CPointer<Unit>` 使用。
    - **Cangjie 异常创建期回调**中，使用公开的 HiDebug 栈回溯 API：
@@ -53,7 +61,7 @@ flowchart LR
     end
 
     subgraph Napi[arkui_napi]
-        CJFFI[\"hybrid_stack_bridge.h<br/>CJ_HybridStack_UpdatePc<br/>(→ DFXJSNApi::UpdateHybridStackTracePc)\"]
+        CJFFI["hybrid_stack_bridge.h<br/>CJ_HybridStack_UpdatePc"]
         NapiHS["napi_get_hybrid_stack_trace<br/>(native_node_api.h:174)"]
         ArkEng["ArkNativeEngine<br/>GetHybridStackTraceForCrash"]
     end
@@ -161,11 +169,13 @@ sequenceDiagram
     Note over CR: 异常构造期：调用互操作回调获取 PC & 写 PcVector
     CR->>IF: onCJExceptionCreated(e)
     IF->>CFFI: HiDebug_GetFrames() → CJ_HybridStack_UpdatePc()
-    CFFI->>VM: 写 PcVector
-    Note over CR: 同时存储 PC 快照到 cjPcSnapshot
+    CFFI->>VM: ① 写入仓颉 PC 帧到 PcVector（供 faultlog）
+    Note over CR: 同时备份 PC 快照到 cjPcSnapshot
     CR->>JS: 跨边界 toJSError(e)
     JS->>JS: createJSError（新 JSError，自动绑定当前 vm）
-    Note over JS: PC 已在回调中写入 PcVector，<br/>toJSError 无需再调用 UpdatePc
+    Note over JS: ⚠️ 新 JSError 创建时 PcVector 被 ArkTS 栈帧覆盖
+    JS->>CFFI: ② 立即调用 CJ_HybridStack_UpdatePc(env, cjPcSnapshot)
+    CFFI->>VM: 用备份恢复仓颉 PC 帧到 PcVector
     JS->>ETS: ARKTS_Throw(newJSError)
     ETS->>BIZ: e.toString() / e.getMixedStackTrace()
     BIZ->>HS: getMixedStackTrace()
@@ -240,12 +250,12 @@ public class HybridStack {
 
 #### 4.2.3 重构点
 
-| 文件 | 现状 | 改动（单接口统一方案） |
+| 文件 | 现状 | 改动（二阶段恢复机制） |
 | ---- | ---- | ---- |
-| `ohos/ark_interop/js_module.cj` 互操作回调 | 不存在或未实现 | **新增**: 在 `onCJExceptionCreated` 回调中：① 使用 HiDebug 公开 API (`OH_HiDebug_CreateBacktraceObject` + `OH_HiDebug_BacktraceFromFp`) 获取 PC 帧数组 ② 调用 `CJ_HybridStack_UpdatePc(env, frames, count)` 直接写入当前 vm 的 PcVector ③ 同时存储 PC 帧到 `SharedException.cjPcSnapshot`。支持所有 vm 配置，无存在跨 vm 绑定问题。 |
-| `ohos/ark_interop/js_exception.cj:145-165 toJSError` | 每次跨边界都创建 ArkTS Error，覆盖 PcVector | **不假起加**: toJSError 创建新 JSError（自动绑定当前 vm）并 throw。PC 已在回调中写入，无需调用 UpdatePc。 |
-| `ohos/business_exception/business_exception.cj:152-178 getMixedStackTrace` | 自行拼接仓颉 + ArkTS 字符串 | **重构**: 使用公开的 `OH_HiDebug_SymbolicAddress` API 进行符号解析 PC 帧，输出 ArkTS+Native+Cangjie 完整混合栈。 |
-| `ohos/ark_interop/js_exception.cj` 缓存机制 | 无 | 新增字段：`SharedException.cjPcSnapshot: ?Array<UIntNative>` 存储仓颉帧 PC 快照，在回调中填充。`toJSError` 中仅读取（不追例使用）。 |
+| `ohos/ark_interop/js_module.cj` 互操作回调 | 不存在或未实现 | **新增**: 在 `onCJExceptionCreated` 回调中：① 使用 HiDebug 公开 API (`OH_HiDebug_CreateBacktraceObject` + `OH_HiDebug_BacktraceFromFp`) 获取 PC 帧数组 ② **同时备份到 `SharedException.cjPcSnapshot`** ③ 调用 `CJ_HybridStack_UpdatePc(env, frames, count)` 写入 PcVector（供 faultlog）。支持所有 vm 配置，无跨 vm 绑定问题。 |
+| `ohos/ark_interop/js_exception.cj:145-165 toJSError` | 每次跨边界都创建 ArkTS Error，覆盖 PcVector | **改造**: ① 创建新 JSError（自动绑定当前 vm）→ ② **立即检测 cjPcSnapshot 非空，调用 CJ_HybridStack_UpdatePc(env, cjPcSnapshot) 恢复** → ③ throw。保证 PcVector 始终包含仓颉帧。 |
+| `ohos/business_exception/business_exception.cj:152-178 getMixedStackTrace` | 自行拼接仓颉 + ArkTS 字符串 | **重构**: 直接使用已恢复的 PcVector 中的 PC 帧 → 用公开的 `OH_HiDebug_SymbolicAddress` API 进行符号解析 → 输出 ArkTS+Native+Cangjie 完整混合栈。 |
+| `ohos/ark_interop/js_exception.cj` 缓存机制 | 无 | 新增字段：`SharedException.cjPcSnapshot: ?Array<UIntNative>` 存储仓颉帧 PC 快照。在回调中填充，供 toJSError 中恢复使用。 |
 
 #### 4.2.4 PC 指针更新接口与 HiDebug API 调用（上游新增 1 个 API）
 
@@ -263,30 +273,32 @@ void DFXJSNApi::UpdateHybridStackTracePc(const EcmaVM *vm, void** data, int size
 
 1. **Cangjie 异常创建期（运行时回调 `onCJExceptionCreated` 中）**：
    - 使用公开 HiDebug API：`OH_HiDebug_CreateBacktraceObject()` → `OH_HiDebug_BacktraceFromFp()` 获取 PC 帧
-   - 调用互操作的 `CJ_HybridStack_UpdatePc(env, frames, count)` → `DFXJSNApi::UpdateHybridStackTracePc()` 写入
-   - 同时存储 PC 快照到 `SharedException.cjPcSnapshot` 作为备用
+   - 调用互操作的 `CJ_HybridStack_UpdatePc(env, frames, count)` → `DFXJSNApi::UpdateHybridStackTracePc()` 写入当前 vm PcVector（为后续 faultlog 提供数据）
+   - **同时存储 PC 快照到 `SharedException.cjPcSnapshot`**，保留副本用于恢复
 
-2. **语言层 `toString()/getMixedStackTrace()` 中**：
-   - 不再依赖内部 `DFXJSNApi::GetHybridStackTrace`，而是使用公开的 `OH_HiDebug_SymbolicAddress()` 进行符号解析
-   - 将 PC 帧转换为带符号名的字符串输出
+2. **语言层 `toJSError()` 边界中**：
+   - 创建新 JSError（自动捕获当前 ArkTS 栈帧并生成新 PcVector，导致仓颉帧被覆盖）
+   - **立即检测 cjPcSnapshot 非空** → **调用 `CJ_HybridStack_UpdatePc(env, cjPcSnapshot)` 用备份恢复仓颉帧到新 PcVector**
+   - throw 至 ArkTS 运行时；后续 faultlog 和 getMixedStackTrace 直接使用已恢复的 PcVector
 
-3. **Faultlog 路径（自动）**：
-   - DFXJSNApi::GetHybridStackTrace 直接读取已更新的 PcVector（无需额外干预）
+3. **faultlog 路径（自动）**：
+   - DFXJSNApi::GetHybridStackTrace 直接读取已恢复的 PcVector（包含仓颉帧）
 
 **使用模式**：
 
 | 场景 | 处理 |
 | ---- | ---- |
 | 未捕获异常 faultlog（场景 A） | ① Cangjie 回调中用 HiDebug 获取 PC ② 调用 UpdateHybridStackTracePc 写 PcVector ③ 信号触发 crash ④ DFXJSNApi::GetHybridStackTrace 读已更新的 PcVector → faultlog 输出完整混合栈 |
-| 跨边界 toJSError（场景 B） | ① Cangjie 回调已写入 PcVector + 存 cjPcSnapshot ② toJSError 创建新 JSError ③ throw ④ getMixedStackTrace 用公开 HiDebug API 符号解析 → 输出完整栈 |
-| 多 worker 场景 | 每个 worker 独立 vm，回调各自 UpdatePc 自己的 vm，无跨 vm 冲突 |
+| 跨边界 toJSError（场景 B） | ① Cangjie 回调已写入 PcVector + 存 cjPcSnapshot ② toJSError 创建新 JSError ③ **立即用 cjPcSnapshot 恢复 PcVector** ④ throw ⑤ getMixedStackTrace 直接读 PcVector → 输出完整栈 |
+| 多 worker 场景 | 每个 worker 独立 vm，回调各自 UpdatePc 自己的 vm，toJSError 各自恢复自己的 vm PcVector，无跨 vm 冲突 |
 
 > **优势**：
-> - ✓ 完全避免 JSError vm address 绑定问题（每个 vm 独立处理）
+> - ✓ 完全避免 JSError vm address 绑定问题（每个 vm 独立处理，恢复在当前 vm 中）
 > - ✓ 统一代码路径，无复杂的检测与降级逻辑
-> - ✓ **上游仅需 1 个接口**（vs 旧方案的 3 个），协作成本极低
-> - ✓ **客户端 PC 获取和符号解析都用公开 HiDebug API**，无依赖私有实现
+> - ✓ **上游仅需 1 个接口**（UpdateHybridStackTracePc），协作成本极低
+> - ✓ **客户端 PC 获取都用公开 HiDebug API**，无依赖私有实现
 > - ✓ 支持所有 vm 配置（单 VM、多 VM、嵌套 JSRuntime）
+> - ✓ **toJSError 中立即恢复**，无后续路径复杂性，PcVector 始终有效
 
 > **上游依赖**：ets_runtime 仅需提供 `DFXJSNApi::UpdateHybridStackTracePc`。若无法接受，回退至仅语言层（P1/P2），faultlog 能力不完整。
 
