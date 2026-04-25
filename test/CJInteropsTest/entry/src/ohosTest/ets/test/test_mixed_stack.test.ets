@@ -21,6 +21,7 @@ class BusinessError extends Error {
   constructor(code: number, message: string) {
     super(message)
     this.code = code
+    this.name = "BusinessError"
   }
 }
 
