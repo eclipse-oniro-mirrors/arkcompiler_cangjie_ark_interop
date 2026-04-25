@@ -255,9 +255,10 @@ public class HybridStack {
 
 | 文件 | 现状 | 改动（二阶段恢复机制） |
 | ---- | ---- | ---- |
-| `ohos/ark_interop/js_module.cj` 互操作回调 | 不存在或未实现 | **新增**: 在 `onCJExceptionCreated` 回调中：① 使用 HiDebug 公开 API (`OH_HiDebug_CreateBacktraceObject` + `OH_HiDebug_BacktraceFromFp`) 获取 PC 帧数组 ② **同时备份到 `SharedException.cjPcSnapshot`** ③ 调用 `CJ_HybridStack_UpdatePc(env, frames, count)` 写入 PcVector（供 faultlog）。支持所有 vm 配置，无跨 vm 绑定问题。 |
-| `ohos/ark_interop/js_exception.cj:145-165 toJSError` | 每次跨边界都创建 ArkTS Error，覆盖 PcVector | **改造**: ① 创建新 JSError（自动绑定当前 vm）→ ② **立即检测 cjPcSnapshot 非空，调用 CJ_HybridStack_UpdatePc(env, cjPcSnapshot) 恢复** → ③ throw。保证 PcVector 始终包含仓颉帧。 |
-| `ohos/business_exception/business_exception.cj:152-178 getMixedStackTrace` | 自行拼接仓颉 + ArkTS 字符串 | **重构**: 直接使用已恢复的 PcVector 中的 PC 帧 → 用公开的 `OH_HiDebug_SymbolicAddress` API 进行符号解析 → 输出 ArkTS+Native+Cangjie 完整混合栈。 |
+| `ohos/ark_interop/js_module.cj` 互操作回调 | 不存在或未实现 | **新增回调 onCJExceptionCreated**（由仓颉运行时在异常创建时调用）：① 使用 HiDebug API 获取 PC 帧 ② 备份到 cjPcSnapshot ③ **直接调用** `CJ_HybridStack_UpdatePc(env, frames)` 写入当前 vm PcVector（供 faultlog）。 |
+| `ohos/ark_interop/js_exception.cj:145-165 toJSError` | 每次跨边界都创建 ArkTS Error | **互操作实现改造**：① `createJSError()` 创建新 JSError（自动绑定当前 vm）② **立即调用** `CJ_HybridStack_UpdatePc(env, cjPcSnapshot)` 恢复 PcVector ③ `ARKTS_Throw()` 抛出。 |
+| `ohos/business_exception/business_exception.cj` getMixedStackTrace | 自行拼接字符串 | **重构**：调用 `HybridStack.getTrace(env)` 读已恢复的 PcVector → 用公开 HiDebug API 符号解析 → 输出完整栈。缓存结果到 `cachedHybridTrace: ?String`。 |
+| `ohos/ark_interop/js_exception.cj` 缓存机制 | 无 | 新增字段 `SharedException.cjPcSnapshot: ?Array<UIntNative>`，在回调中填充，供 toJSError 恢复使用。 |
 | `ohos/ark_interop/js_exception.cj` 缓存机制 | 无 | 新增字段：`SharedException.cjPcSnapshot: ?Array<UIntNative>` 存储仓颉帧 PC 快照。在回调中填充，供 toJSError 中恢复使用。 |
 
 #### 4.2.4 互操作回调与上游 API（上游新增 1 个 API）
