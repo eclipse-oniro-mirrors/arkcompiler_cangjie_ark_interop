@@ -1,0 +1,60 @@
+<mxfile host="app.diagrams.net" modified="2026-04-25T00:00:00.000Z" agent="hand-built" version="22.1.16" type="device">
+  <diagram name="seq_lang_catch" id="seq-lang-catch">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Title -->
+        <mxCell id="title" value="场景 1：语言层能力 — 用户中间 catch 并打印（P1）" style="text;html=1;align=center;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="1160" height="24" as="geometry" />
+        </mxCell>
+        <!-- Lifeline headers (10 lifelines, 110px spacing, x=60..1050) -->
+        <mxCell id="h1" value="ArkTS 中间层" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="20" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="h2" value="Cangjie 顶层&#xa;(try/catch)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="130" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="h3" value="Cangjie 内层&#xa;(throw 点)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="240" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="h4" value="cangjie_runtime" style="rounded=1;fillColor=#ffe0e0;strokeColor=#c0392b;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="350" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="h5" value="Interop&#xa;onCJExceptionCreated" style="rounded=1;fillColor=#fff5cc;strokeColor=#d4a017;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="460" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="h6" value="Interop&#xa;toJSError" style="rounded=1;fillColor=#fff5cc;strokeColor=#d4a017;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="570" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="h7" value="HiViewDFX hidebug" style="rounded=1;fillColor=#eaeaea;strokeColor=#666666;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="680" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="h8" value="EcmaVM&#xa;PcVector" style="rounded=1;fillColor=#eaeaea;strokeColor=#666666;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="790" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="h9" value="arkui_napi&#xa;cjffi" style="rounded=1;fillColor=#fff5cc;strokeColor=#d4a017;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="900" y="40" width="100" height="40" as="geometry" /></mxCell>
+        <mxCell id="h10" value="BusinessException&#xa;(仓颉 API)" style="rounded=1;fillColor=#fff5cc;strokeColor=#d4a017;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1010" y="40" width="100" height="40" as="geometry" /></mxCell>
+
+        <!-- Lifelines (dashed vertical, x = header center, from y=80 to y=780) -->
+        <mxCell id="ll1" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="70" y="80" as="sourcePoint"/><mxPoint x="70" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="ll2" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="180" y="80" as="sourcePoint"/><mxPoint x="180" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="ll3" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="290" y="80" as="sourcePoint"/><mxPoint x="290" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="ll4" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="400" y="80" as="sourcePoint"/><mxPoint x="400" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="ll5" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="510" y="80" as="sourcePoint"/><mxPoint x="510" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="ll6" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="620" y="80" as="sourcePoint"/><mxPoint x="620" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="ll7" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="730" y="80" as="sourcePoint"/><mxPoint x="730" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="ll8" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="840" y="80" as="sourcePoint"/><mxPoint x="840" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="ll9" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="950" y="80" as="sourcePoint"/><mxPoint x="950" y="780" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="ll10" style="endArrow=none;strokeColor=#888;dashed=1;dashPattern=4 4;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1060" y="80" as="sourcePoint"/><mxPoint x="1060" y="780" as="targetPoint"/></mxGeometry></mxCell>
+
+        <!-- Messages (40px vertical spacing) -->
+        <mxCell id="m01" value="① 跨边界调用仓颉" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="70" y="110" as="sourcePoint"/><mxPoint x="180" y="110" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m02" value="② call (try)" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="180" y="150" as="sourcePoint"/><mxPoint x="290" y="150" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m03" value="③ throw e" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="290" y="190" as="sourcePoint"/><mxPoint x="400" y="190" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m04" value="④ onCJExceptionCreated(e)（新增触发点）" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#c0392b;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="400" y="230" as="sourcePoint"/><mxPoint x="510" y="230" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m05" value="⑤ OH_HiDebug_BacktraceFromFp" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="510" y="270" as="sourcePoint"/><mxPoint x="730" y="270" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m06" value="⑥ PC 数组" style="endArrow=open;endFill=0;dashed=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="730" y="310" as="sourcePoint"/><mxPoint x="510" y="310" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m07" value="⑦ 保存 cjPcSnapshot（不写 VM）" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;curved=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="510" y="350" as="sourcePoint"/><mxPoint x="510" y="380" as="targetPoint"/><Array as="points"><mxPoint x="560" y="365"/></Array></mxGeometry></mxCell>
+        <mxCell id="m08" value="⑧ 异常越界" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="400" y="410" as="sourcePoint"/><mxPoint x="620" y="410" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m09" value="⑨ createJSError（PcVector 被 ArkTS 帧覆盖）" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="620" y="450" as="sourcePoint"/><mxPoint x="840" y="450" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m10" value="⑩ ARKTS_UpdateHybridStackTracePc(env, cjPcSnapshot)" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="620" y="490" as="sourcePoint"/><mxPoint x="950" y="490" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m11" value="⑪ 恢复 PcVector" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="950" y="530" as="sourcePoint"/><mxPoint x="840" y="530" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m12" value="⑫ catch 拿到 BusinessException" style="endArrow=open;endFill=0;dashed=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="620" y="570" as="sourcePoint"/><mxPoint x="180" y="570" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m13" value="⑬ e.toString() / getMixedStackTrace()" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="180" y="610" as="sourcePoint"/><mxPoint x="1060" y="610" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m14" value="⑭ 复用 cjPcSnapshot 调 OH_HiDebug_SymbolicAddress" style="endArrow=block;endFill=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1060" y="650" as="sourcePoint"/><mxPoint x="730" y="650" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m15" value="⑮ Cangjie + ArkTS (+ Native) 分段字符串" style="endArrow=open;endFill=0;dashed=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="730" y="690" as="sourcePoint"/><mxPoint x="1060" y="690" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="m16" value="⑯ 返回字符串" style="endArrow=open;endFill=0;dashed=1;html=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1060" y="730" as="sourcePoint"/><mxPoint x="180" y="730" as="targetPoint"/></mxGeometry></mxCell>
+
+        <!-- Legend -->
+        <mxCell id="leg" value="图例：蓝=应用层  黄=互操作/新增  红=cangjie_runtime 新增触发点  灰=既有外部组件  实线=调用  虚线=返回/继续传播" style="text;html=1;align=center;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="800" width="1160" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
