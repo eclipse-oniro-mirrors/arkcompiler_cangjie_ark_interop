@@ -15,10 +15,10 @@
 ## 2. 关键约束与重要事实校正
 
 1. **PC Array 单例语义**：`EcmaVM` 上仅保留最近一次 ArkTS Error 创建时刻的 PC 向量，后续任何 Error 创建都会覆盖（参见 `ets_runtime/ecmascript/napi/dfx_jsnapi.cpp:1234` 的 `GetHybridStackTrace`）。
-2. **互操作侧当前实现问题**：`ohos/business_exception/business_exception.cj` 与 `ohos/ark_interop/js_exception.cj` 现状是在 `toJSError()` 边界构造新的 ArkTS Error，覆盖 PC Array，是当前 faultlog 丢失仓颉帧的根因。本方案要求将 JSError 的创建时机前移到「仓颉异常对象创建时」。
+2. **互操作侧当前实现问题**：`ohos/business_exception/business_exception.cj` 与 `ohos/ark_interop/js_exception.cj` 现状是在 `toJSError()` 边界构造新的 ArkTS Error，覆盖 PC Array，是当前 faultlog 丢失仓颉帧的根因。本方案采用 **PC 指针更新 API** 方案：在 `toJSError` 中创建新 JSError（自动绑定当前 vm），通过 `ARKTS_RestorePcVectorSnapshot` 恢复 Cangjie 帧的 PC 集合到新 JSError 的 PcVector。该方案支持所有 vm 配置场景（单 VM、多 VM、嵌套 JSRuntime 等），避免跨 VM JSError 转移的绑定问题。详见 [multiruntime_jserror_analysis.md](./multiruntime_jserror_analysis.md)。
 3. **不引入仓颉自己抓取 C 栈的能力**：Native 栈仅依赖 ets_runtime / faultloggerd 已有的 `GetHybridStackTrace` 解析能力。
 4. **二进制兼容性**：`BusinessException` 类公开 API（`getCrossMessage` / `getMixedStackTrace` / 错误码 34300001-34300008）必须保持兼容。
-5. **`ARKTS_UpdateStackInfo` 的真实语义**：经核对 `ets_runtime/ecmascript/js_thread.h` 与 `arkui_napi` 实现，现行 `opKind` 仅有 `0=SwitchToSubStackInfo`、`1=SwitchToMainStackInfo`，其作用是切换 fiber/线程的栈上下文（`stackLimit`/`leaveFrame`），**并不会直接写入 `PcVector`**。`PcVector` 实际由 ets_runtime 在异常对象构造路径上 `BacktraceHybrid()` 产生。本设计的「向 PcVector 注入仓颉 PC」必须通过新增/扩展接口实现，可选实现路径见 §4.2.4，**默认采用「快照-恢复」回退方案**（不依赖上游新 opKind）。
+5. **PC Array 与跨 VM 问题**：`ARKTS_UpdateStackInfo(opKind)` 仅切换 fiber 栈上下文，不能写 PcVector。JSError 在创建时自动绑定到特定 EcmaVM 实例。若使用预创建方案（vm_A 中创建 JSError），当该 JSError 被 throw 到另一个 vm_B（例如嵌套 JSRuntime）时，会产生 vm address mismatch，导致符号化失败或新 Error 创建覆盖 PcVector。本方案改为：**统一采用 PC 快照/恢复 API** — 每次 `toJSError` 创建新 JSError（自动绑定当前 vm），再通过 `ARKTS_GetPcVectorSnapshot/RestorePcVectorSnapshot` 手动转移 Cangjie PC 帧。新增 3 个 cjffi 接口见 §4.2.4，无需新增上游 opKind。
 6. **JSEnv 类型**：`JSEnv = IntNative`（参见 `ohos/ark_interop/jscontext.cj`），是裸指针值，不是带方法的类。FFI 调用时直接当作 `CPointer<Unit>` 使用，避免出现「`env.rawPointer()`」之类的伪 API。
 
 ## 3. 总体架构
@@ -47,7 +47,7 @@ flowchart LR
     end
 
     subgraph Napi[arkui_napi]
-        CJFFI["cjffi/ark_interop_napi.h<br/>ARKTS_PushCJFramesToPcVector /<br/>ARKTS_PreCreateJSError"]
+        CJFFI[\"cjffi/ark_interop_napi.h<br/>ARKTS_GetPcVectorSnapshot /<br/>ARKTS_RestorePcVectorSnapshot\"]
         NapiHS["napi_get_hybrid_stack_trace<br/>(native_node_api.h:174)"]
         ArkEng["ArkNativeEngine<br/>GetHybridStackTraceForCrash"]
     end
@@ -77,11 +77,10 @@ flowchart LR
     CJApp -->|throw| CJExc
     ETSApp -->|throw / 调用 CJ| JsExc
 
-    CJExc -->|经互操作回调| IFCallbacks
-    IFCallbacks -->|构造期回调：预创建 JSError + 当前帧 PC| CJFFI
-    CJFFI -->|更新 PcVector| VM
+    CJExc -->|跨边界| IFCallbacks
+    IFCallbacks -->|记录 Cangjie PC 快照| CJFFI
 
-    JsExc -->|仅取缓存 JSError 并 throw 到 ArkTS| ETSApp
+    JsExc -->|创建新 JSError + 恢复 PC + throw| ETSApp
 
     BizExc -->|toString / getMixedStackTrace| HybridApi
     HybridApi -->|FFI: napi_get_hybrid_stack_trace| NapiHS
@@ -203,63 +202,71 @@ arkcompiler_cangjie_ark_interop/
 #### 4.2.1 C 桥接（新增 `frameworks/native/hybrid_stack/hybrid_stack_bridge.h`）
 
 ```cpp
-// 被仓颉侧通过 @C foreign 调用
-// 返回值: 0=成功, 非 0=错误码
+// 被仓颉侧通过 @C foreign 调用，获取混合栈信息（语言层路径）
 extern "C" int CJ_HybridStack_GetTrace(napi_env env,
                                        char* buf,
                                        size_t bufLen,
                                        size_t* outLen);
 
-// 仅在仓颉异常对象创建回调中调用（场景 A/B 前置）
-extern "C" int CJ_HybridStack_PreCreateJSErrorAndPushFrames(unsigned long long vmAddr,
-                                                             void* cjException,
-                                                             void* frames,
-                                                             size_t frameCount);
+// 获取 PcVector 快照
+extern "C" int CJ_HybridStack_GetPcVectorSnapshot(unsigned long long vmAddr,
+                                                  uintptr_t** outFrames,
+                                                  size_t* outCount);
+
+// 恢复 PcVector（覆盖写）
+extern "C" int CJ_HybridStack_RestorePcVector(unsigned long long vmAddr,
+                                              const uintptr_t* frames,
+                                              size_t count);
 ```
 
 实现内部转调：
-- `CJ_HybridStack_GetTrace` → `napi_get_hybrid_stack_trace`（语言层路径）
-- `CJ_HybridStack_PreCreateJSErrorAndPushFrames` → `ARKTS_PushCJFramesToPcVector + ARKTS_PreCreateJSError`（faultlog/语言层共用前置路径）
+- `CJ_HybridStack_GetTrace` → `napi_get_hybrid_stack_trace`（语言层获取混合栈）
+- `CJ_HybridStack_GetPcVectorSnapshot` → `ARKTS_GetPcVectorSnapshot`（读 PcVector）
+- `CJ_HybridStack_RestorePcVector` → `ARKTS_RestorePcVectorSnapshot`（写 PcVector）
 
 #### 4.2.2 仓颉侧 API（新增 `ohos/hybrid_stack/hybrid_stack.cj`）
 
 ```cangjie
 public class HybridStack {
+    // 获取混合栈信息（语言层 toString/getMixedStackTrace 调用）
     public static func getTrace(env: JSEnv): String { ... }
-    // 在仓颉异常构造点由互操作回调内部使用
-    static func pushCangjieFrames(vmAddr: UInt64, subStackInfo: CPointer<Unit>): Unit { ... }
 }
 ```
 
 #### 4.2.3 重构点
 
-| 文件 | 现状 | 改动 |
+| 文件 | 现状 | 改动（PC API 统一方案） |
 | ---- | ---- | ---- |
-| `ohos/ark_interop/js_exception.cj:145-155 createJSError` | 每次跨边界都创建 ArkTS Error，覆盖 PcVector | 主路径改为：`toJSError` 不再调用 `createJSError`，只读取「仓颉异常构造阶段由互操作回调创建并缓存」的 JSError 并抛出。`createJSError` 仅保留为兼容兜底（缓存缺失时启用并打告警日志）。 |
-| `ohos/ark_interop/js_module.cj:36-43 CJModuleCallbacks` | 仅有 `throwJSError` 回调 | 新增 `onCJExceptionCreated` 回调，由 cangjie_runtime 在异常对象构造时回调互操作：完成「预创建 JSError + 绑定原始仓颉异常 + 写入/追加 PcVector」。这是本方案主路径。 |
-| `ohos/business_exception/business_exception.cj:152-178 getMixedStackTrace` | 自行拼接仓颉 + ArkTS 字符串 | 调用 `HybridStack.getTrace(env)` 获取 ArkTS+Native+Cangjie 完整字符串，与本地仓颉帧合并去重 |
+| `ohos/ark_interop/js_exception.cj:145-165 toJSError` | 每次跨边界都创建 ArkTS Error，覆盖 PcVector | **主路径**：① 创建新 JSError（自动绑定当前 vm）② 从 Cangjie 异常对象读取 PC 快照 ③ 调用 `CJ_HybridStack_RestorePcVector` 将快照写入新 JSError 的 PcVector ④ throw 新 JSError。完全支持嵌套 JSRuntime 等多 VM 场景。 |
+| `ohos/ark_interop/js_exception.cj` 缓存机制 | 无 | 新增字段：`SharedException.cjPcSnapshot: ?Array<UIntNative>` 存储仓颉帧 PC 快照，由 Cangjie 侧在异常入站时填充。`toJSError` 读取该字段。 |
+| `ohos/business_exception/business_exception.cj:152-178 getMixedStackTrace` | 自行拼接仓颉 + ArkTS 字符串 | 调用 `HybridStack.getTrace(env)` 获取 ArkTS+Native+Cangjie 完整混合栈字符串，与本地仓颉帧缓存合并去重后返回。 |
 
-#### 4.2.4 PcVector 注入与保护策略
+#### 4.2.4 PC 指针更新接口（新增 cjffi C API）
 
-现行 `ARKTS_UpdateStackInfo(opKind=0/1)` 只切换 fiber 栈上下文，不能直接写 PcVector。本设计采用 **「快照-恢复」+ 仓颉 PC 直注** 的组合策略，**不依赖上游新增 opKind**：
+本设计采用 **\"创建本地 JSError + 手动恢复 PcVector\"** 的策略，避免跨 VM JSError 绑定问题。新增 3 个 cjffi 接口：
 
-1. **PcVector 快照接口（新增 cjffi C API）**
-   - `ARKTS_GetPcVectorSnapshot(vmAddr, **dataOut, *sizeOut)`：读 `vm->GetPcVectorData()` / `GetPcVectorSize()`，复制一份返回。
-   - `ARKTS_RestorePcVectorSnapshot(vmAddr, *data, size)`：将快照写回 vm 内部的 PcVector 字段。
-   - 实现位置：`arkui_napi/native_engine/impl/ark/ark_native_engine.cpp` 暴露 + `ets_runtime` 提供新的 `JSNApi::SetPcVector(vm, ...)` 内部接口。**这是本设计唯一对上游的硬依赖**。
+1. **获取 PcVector 快照**
+   - `ARKTS_GetPcVectorSnapshot(vmAddr, *outFrames, *outCount)`：读 `vm->GetPcVectorData()` / `GetPcVectorSize()` 并返回指针+大小。
+   - 实现位置：`arkui_napi/native_engine/impl/ark/ark_native_engine.cpp` 暴露；底层调用 `ets_runtime` 的 `JSNApi` 访问 vm 内部 PcVector。
 
-2. **仓颉 PC 直注接口（新增 cjffi C API）**
-   - `ARKTS_PushCJFramesToPcVector(vmAddr, frames[], frameCount)`：将仓颉 backtrace 帧（PC 数组）追加到 vm 的 PcVector。同样需要在 ets_runtime 暴露 `JSNApi::AppendPcVector`。
+2. **恢复 PcVector**
+   - `ARKTS_RestorePcVectorSnapshot(vmAddr, *frames, frameCount)`：将 frames 数组完全覆盖写回 vm 的 PcVector 字段。
+   - 需要 `ets_runtime` 新增内部接口 `JSNApi::SetPcVector(vm, data, size)`。
 
-3. **使用模式（与原始思路一致）**：
+3. **追加 PcVector**（可选，用于语言层 stitched 情景）
+   - `ARKTS_AppendPcVector(vmAddr, *frames, frameCount)`：将 frames 数组追加到现有 PcVector 末尾。
+   - 同样需要 `ets_runtime` 新增 `JSNApi::AppendPcVector(vm, data, size)`。
+
+4. **使用模式**（PC API 统一方案）：
 
 | 场景 | 处理 |
 | ---- | ---- |
-| 仓颉异常对象创建（场景 A/B 共同前置） | 回调中预创建 JSError，并同时执行 `ARKTS_PushCJFramesToPcVector` 直注 |
-| 跨边界 `toJSError`（场景 B） | 仅提取已缓存 JSError 并抛出；不再创建新 Error |
-| 兼容兜底 | 若缓存缺失，才走 `createJSError` + `Snapshot/Restore`，并记录告警用于追踪构造回调缺失 |
+| 跨边界 `toJSError`（场景 B 主路径） | ① 读取 Cangjie 异常对象中缓存的 PC 快照 ② 创建新 JSError（自动绑定当前 vm，PcVector 为当前 ArkTS 帧）③ 调用 `ARKTS_RestorePcVectorSnapshot` 覆盖 PcVector ④ throw 新 JSError。支持任意 vm 配置，包括嵌套 JSRuntime。 |
+| 未捕获异常 faultlog（场景 A） | 同上：toJSError 执行时恢复 PcVector，后续 DFXJSNApi::GetHybridStackTrace 读取已包含 Cangjie 帧的 PcVector。 |
+| 多 worker 场景 | 每个 worker 有独立 vm + PcVector，恢复操作针对当前 vm，无跨 vm 冲突。 |
 
-> 如果上游短期无法接受 `SetPcVector/AppendPcVector` 内部接口，**最终回退**：仅做语言层（P1/P2 目标）；faultlog 仓颉栈帧暂以「business_exception.message + stitched 文本」形式呈现（旧方案能力的子集），等价于不解锁 P0。该回退会在 plan Task 0 的上游对齐结果中明确选定。
+> **优势**：完全避免 JSError vm address 绑定问题；单一代码路径，易测试；支持所有 vm 配置。
+> **依赖**：ets_runtime 必须提供 `SetPcVector/AppendPcVector` 内部接口。若上游无法接受，则仅支持语言层（P1/P2），faultlog 回退至旧方案（stitched 文本）。
 
 ## 5. 性能与可优化空间
 
@@ -269,14 +276,30 @@ public class HybridStack {
 | **PcVector 快照成本** | 仅在 wrapper 创建场景调用，O(n) n=PcVector size，估计 < 1KB | 启用 |
 | **跨语言 FFI 调用** | `CJ_HybridStack_GetTrace` 仅在异常路径触发，频次低 | 启用 |
 
-## 6. 兼容性 / 风险
+## 6. 兼容性 / 风险与 PC API 方案的安全性
 
-1. **PcVector 读写接口的上游依赖**：`SetPcVector/AppendPcVector` 必须落地到 ets_runtime + arkui_napi。Plan Task 0 spike 决定上游接受度；若拒绝，启用 §4.2.4 末尾的最终回退（仅 P1/P2，不解锁 P0）。
-2. **回调时序（硬约束）**：cangjie_runtime 必须在异常**对象**构造时（而非 throw 时）回调，否则本方案主路径无法成立。`toJSError` 不负责创建 JSError，只负责取回预创建对象并抛出。若构造回调缺失，仅能进入兼容兜底路径（`createJSError + Snapshot/Restore`），不作为目标实现。
-3. **多 VM / 多 worker 安全**：每个 EcmaVM 独立 PcVector；`ALL_RUNTIMES_` map（`jscontext.cj`）按 `vmAddr` 索引，访问点已在仓颉侧 `synchronized`。新增的 `pushCangjieFrames`/`getTrace` FFI 调用必须在持有对应 `JSContext` lock 的上下文内执行；C++ 侧 `ARKTS_UpdateStackInfo` 与新增 `Append/SetPcVector` 实现需要在 ets_runtime 侧使用 `JSNApi::EnterEnv` 切换正确 vm。
-4. **跨 VM 异常传播**：禁止在 worker A 抛出、被 worker B 捕获的场景下复用 PcVector；wrapper Error 创建前必须断言 `vmAddr == pendingException 的 vm`。
-5. **API Level**：新增仓颉 API 需打 `@APILevel` 装饰器（参考 `ohos/labels/api_level.cj`）。
-6. **wrapper 识别**：`pendingJSError` 复用条件依赖 `refEq(sharedException.mixedException, exception)`；为避免 user 代码自行 throw 同一对象时被错误复用，新增「互操作内部生成」标记字段（如 `SharedException.fromInteropBoundary: Bool`）作为额外条件。
+1. **PcVector 读写接口的上游依赖**：`SetPcVector/AppendPcVector` 必须落地到 ets_runtime + arkui_napi。Plan Task 1 spike 决定上游接受度；若拒绝，启用语言层降级（P1/P2），faultlog 能力不完整。
+
+2. **多 VM 安全性（PC API 方案的优势）**：
+   - 每个 `toJSError` 调用时都创建**新的** JSError，该 JSError 自动绑定到当前执行的 vm。
+   - 恢复 PcVector 操作只作用于当前 vm，不涉及跨 vm 对象转移。
+   - 完全避免「预创建方案」中的 vm address mismatch 问题（参见 [multiruntime_jserror_analysis.md](./multiruntime_jserror_analysis.md)）。
+   - 支持嵌套 JSRuntime、worker 隔离等所有场景。
+
+3. **缓存机制（Cangjie PC 快照存储）**：
+   - 在 `SharedException` 中新增 `cjPcSnapshot: ?Array<UIntNative>` 字段，在跨边界前（`toJSError` 入口）由仓颉侧填充。
+   - 恢复时从该字段读取，若缺失则 PcVector 保留初始值（ArkTS-only）。
+   - 无需预创建 JSError，无需 vm 地址匹配检查。
+
+4. **多 worker 线程安全**：
+   - 每个 worker 独立的 EcmaVM + PcVector；`ALL_RUNTIMES_` map（`jscontext.cj`）按 `vmAddr` 索引，访问点已在仓颉侧 `synchronized`。
+   - `ARKTS_RestorePcVectorSnapshot` 调用前需锁住对应 `JSContext`；C++ 侧实现使用 `JSNApi::EnterEnv` 切换正确 vm。
+
+5. **异常对象字段扩展**：
+   - 新增 `SharedException.cjPcSnapshot: ?Array<UIntNative>` 存储仓颉帧 PC 快照。
+   - 新增 `SharedException.fromInteropBoundary: Bool` 标记是否为互操作内部生成的 wrapper（可选，用于加强类型安全）。
+
+6. **API Level**：新增仓颉 API 需打 `@APILevel` 装饰器（参考 `ohos/labels/api_level.cj`）。
 
 ## 7. 端到端验证策略
 
@@ -289,16 +312,16 @@ public class HybridStack {
 
 ## 8. 与历史方案的差异
 
-| 维度 | 旧 stitching 方案（`feat/mixed-exception-stack-stitching`） | 本设计 |
+| 维度 | 旧 stitching 方案（`feat/mixed-exception-stack-stitching`） | 本设计（PC API 方案） |
 | ---- | --------------------------------------------------------- | ------ |
-| Faultlog 仓颉栈来源 | 互操作侧自行 stitch 字符串注入 faultlog | 复用 ets_runtime PcVector + DFXJSNApi 已有路径 |
-| ArkTS Wrapper 与 PC 覆盖 | 未处理，依赖 stitching 弥补 | JSError 创建时机前移到仓颉异常构造点；`toJSError` 不再创建，默认无覆盖（仅保留兼容兜底） |
+| Faultlog 仓颉栈来源 | 互操作侧自行 stitch 字符串注入 faultlog | 复用 ets_runtime PcVector + DFXJSNApi 已有路径，通过恢复 PC 避免覆盖 |
+| ArkTS Wrapper 与 PC 覆盖 | 未处理，依赖 stitching 弥补 | 在 `toJSError` 中创建新 JSError（自动绑定当前 vm），再恢复 Cangjie PC 到 PcVector；支持嵌套 JSRuntime |
 | 语言层混合栈 | 字符串拼接 | 调用 `napi_get_hybrid_stack_trace` 统一来源 |
-| 对仓颉运行时依赖 | 强（自带 HiDebug backtrace 抓取） | 弱（仅一个异常构造回调） |
-| 上游协作面 | 仓颉运行时 + interop | ets_runtime opKind + interop（cangjie_runtime 异常回调可选） |
+| 多 VM 支持 | 无考虑 | ✓ 完全支持（PC API 方案的核心优势） |
+| 对仓颉运行时依赖 | 强（自带 HiDebug backtrace 抓取） | 弱（仅需异常对象记录本地 backtrace，无需回调） |
+| 上游协作面 | 仓颉运行时 + interop | ets_runtime (`SetPcVector`) + arkui_napi（cjffi 包装）+ interop |
 
 ## 9. 后续工作
 
-1. 与 ets_runtime / arkui_napi owner 对齐 `PushCJFramesToPcVector`、`PreCreateJSError`、`Snapshot/Restore PcVector` 接口。
-2. 与 cangjie_runtime owner 对齐异常构造回调点，并补齐“构造期创建 JSError + 绑定仓颉异常对象”的运行时调用点。
-3. 实施 plan：[`docs/superpowers/plans/2026-04-24-hybridstack-redesign.md`](../docs/superpowers/plans/2026-04-24-hybridstack-redesign.md)
+1. 与 ets_runtime / arkui_napi owner 对齐 `GetPcVectorSnapshot`、`SetPcVector`、`AppendPcVector` 接口。
+2. 实施 plan：[`docs/superpowers/plans/2026-04-24-hybridstack-redesign.md`](../docs/superpowers/plans/2026-04-24-hybridstack-redesign.md)
