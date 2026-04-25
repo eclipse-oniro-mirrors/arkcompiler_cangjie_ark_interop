@@ -157,30 +157,33 @@ sequenceDiagram
     autonumber
     participant U as 仓颉用户代码
     participant CR as cangjie_runtime
-    participant JS as js_exception.cj toJSError
+    participant IFCB as IF: onCJExceptionCreated 回调<br/>（互操作实现）
+    participant UpdatePc as CJ_HybridStack_UpdatePc<br/>→ DFXJSNApi::UpdateHybridStackTracePc
+    participant VM as EcmaVM::PcVector
+    participant ToJS as toJSError<br/>（互操作实现）
     participant BIZ as BusinessException
-    participant CFFI as CJ_HybridStack_UpdatePc (新增)
-    participant VM as EcmaVM
     participant ETS as ArkTS catch
-    participant HS as HybridStack 客户端
-    participant NAPI as napi_get_hybrid_stack_trace
+    participant HS as HybridStack.getTrace<br/>（语言层读取 PcVector）
 
     U->>CR: throw e
-    Note over CR: 异常构造期：调用互操作回调获取 PC & 写 PcVector
-    CR->>IF: onCJExceptionCreated(e)
-    IF->>CFFI: HiDebug_GetFrames() → CJ_HybridStack_UpdatePc()
-    CFFI->>VM: ① 写入仓颉 PC 帧到 PcVector（供 faultlog）
-    Note over CR: 同时备份 PC 快照到 cjPcSnapshot
-    CR->>JS: 跨边界 toJSError(e)
-    JS->>JS: createJSError（新 JSError，自动绑定当前 vm）
-    Note over JS: ⚠️ 新 JSError 创建时 PcVector 被 ArkTS 栈帧覆盖
-    JS->>CFFI: ② 立即调用 CJ_HybridStack_UpdatePc(env, cjPcSnapshot)
-    CFFI->>VM: 用备份恢复仓颉 PC 帧到 PcVector
-    JS->>ETS: ARKTS_Throw(newJSError)
-    ETS->>BIZ: e.toString() / e.getMixedStackTrace()
-    BIZ->>HS: getMixedStackTrace()
-    HS->>HS: 使用公开 HiDebug_SymbolicAddress API<br/>对 PC 帧进行符号解析
-    HS-->>BIZ: 完整的 ArkTS+Native+Cangjie 字符串
+    Note over CR: 异常构造期：运行时调用互操作回调
+    CR->>IFCB: onCJExceptionCreated(e)
+    IFCB->>IFCB: ① 使用 HiDebug API 获取仓颉 PC 帧数组
+    IFCB->>IFCB: ② 备份 PC 数组到 e.cjPcSnapshot
+    IFCB->>UpdatePc: ③ CJ_HybridStack_UpdatePc(env, frames)
+    UpdatePc->>VM: 写入仓颉 PC 帧到当前 vm PcVector（供 faultlog）
+    IFCB-->>CR: 回调完成
+    CR->>ToJS: 跨边界 toJSError(e)
+    ToJS->>ToJS: ① 使用 createJSError(env)
+    Note over ToJS: ⚠️ 创建新 JSError 时 PcVector 被 ArkTS 帧覆盖
+    ToJS->>UpdatePc: ② 立即调用 CJ_HybridStack_UpdatePc(env, e.cjPcSnapshot)
+    UpdatePc->>VM: 用备份恢复仓颉 PC 帧到新 JSError 的 PcVector
+    ToJS->>ETS: ③ ARKTS_Throw(newJSError)
+    ETS->>BIZ: e.getMixedStackTrace()
+    BIZ->>HS: ① 调用 HybridStack.getTrace(env) 读 PcVector
+    HS->>VM: 读取已恢复的 PcVector（含 ArkTS+Native+Cangjie 帧）
+    HS->>HS: ② 使用公开 HiDebug_SymbolicAddress API 符号化
+    HS-->>BIZ: 返回完整混合栈字符串
     BIZ-->>ETS: 返回给应用
 ```
 
@@ -257,11 +260,11 @@ public class HybridStack {
 | `ohos/business_exception/business_exception.cj:152-178 getMixedStackTrace` | 自行拼接仓颉 + ArkTS 字符串 | **重构**: 直接使用已恢复的 PcVector 中的 PC 帧 → 用公开的 `OH_HiDebug_SymbolicAddress` API 进行符号解析 → 输出 ArkTS+Native+Cangjie 完整混合栈。 |
 | `ohos/ark_interop/js_exception.cj` 缓存机制 | 无 | 新增字段：`SharedException.cjPcSnapshot: ?Array<UIntNative>` 存储仓颉帧 PC 快照。在回调中填充，供 toJSError 中恢复使用。 |
 
-#### 4.2.4 PC 指针更新接口与 HiDebug API 调用（上游新增 1 个 API）
+#### 4.2.4 互操作回调与上游 API（上游新增 1 个 API）
 
-本设计采用 **"Cangjie 回调中获取 PC + 互操作写入 PcVector"** 的策略，完全利用公开的 HiDebug API。
+本设计采用 **"异常创建期回调 → 互操作调用 UpdatePc 写入 PcVector"** 的策略。运行时侧无需调用互操作任何接口，仅需提供一个内部 API 供互操作调用。
 
-**上游新增接口**：
+**上游新增接口**（ets_runtime 内部使用）：
 
 ```c
 // 将 Cangjie backtrace 的 PC 帧直接写入指定 vm 的 PcVector
@@ -269,28 +272,50 @@ public class HybridStack {
 void DFXJSNApi::UpdateHybridStackTracePc(const EcmaVM *vm, void** data, int size);
 ```
 
-**调用时机与流程**：
+**运行时的角色**：
 
-1. **Cangjie 异常创建期（运行时回调 `onCJExceptionCreated` 中）**：
-   - 使用公开 HiDebug API：`OH_HiDebug_CreateBacktraceObject()` → `OH_HiDebug_BacktraceFromFp()` 获取 PC 帧
-   - 调用互操作的 `CJ_HybridStack_UpdatePc(env, frames, count)` → `DFXJSNApi::UpdateHybridStackTracePc()` 写入当前 vm PcVector（为后续 faultlog 提供数据）
-   - **同时存储 PC 快照到 `SharedException.cjPcSnapshot`**，保留副本用于恢复
+仓颉运行时（cangjie_runtime）在异常对象构造时，调用互操作注册的回调 `onCJExceptionCreated`。该回调由互操作侧实现，负责：
+1. 使用公开 HiDebug API 获取仓颉 PC 帧
+2. 备份到异常对象的 `cjPcSnapshot` 字段
+3. **调用 UpdateHybridStackTracePc 将 PC 写入当前 vm 的 PcVector**
 
-2. **语言层 `toJSError()` 边界中**：
-   - 创建新 JSError（自动捕获当前 ArkTS 栈帧并生成新 PcVector，导致仓颉帧被覆盖）
-   - **立即检测 cjPcSnapshot 非空** → **调用 `CJ_HybridStack_UpdatePc(env, cjPcSnapshot)` 用备份恢复仓颉帧到新 PcVector**
-   - throw 至 ArkTS 运行时；后续 faultlog 和 getMixedStackTrace 直接使用已恢复的 PcVector
+运行时本身**不需要知道 UpdateHybridStackTracePc 的存在**；它只负责调用回调。
 
-3. **faultlog 路径（自动）**：
-   - DFXJSNApi::GetHybridStackTrace 直接读取已恢复的 PcVector（包含仓颉帧）
+**互操作的角色**：
 
-**使用模式**：
+互操作在两个地方使用 UpdateHybridStackTracePc：
 
-| 场景 | 处理 |
+1. **回调 onCJExceptionCreated 中**（由运行时自动触发）：
+   - 获取 PC 帧 → 备份 → 调用 UpdateHybridStackTracePc 写 PcVector
+   
+2. **toJSError 实现中**（语言层调用 toJSError 时触发）：
+   - 创建新 JSError → 立即调用 UpdateHybridStackTracePc 恢复 cjPcSnapshot
+
+**调用时序**：
+
+| 阶段 | 调用者 | 被调用方 | 操作 |
+| ---- | ---- | ---- | ---- |
+| ①异常创建期 | cangjie_runtime | 互操作回调 onCJExceptionCreated | 获取 PC、备份、**调用 UpdateHybridStackTracePc 写 PcVector** |
+| ②toJSError | 互操作 toJSError | 互操作内部 / UpdateHybridStackTracePc | 恢复 **PcVector**（从 cjPcSnapshot） |
+| ③语言层 toString | 语言层代码 | HybridStack.getTrace | **读** PcVector、符号化（不调用 UpdatePc） |
+
+**场景说明**：
+
+| 场景 | 处理流程 |
 | ---- | ---- |
-| 未捕获异常 faultlog（场景 A） | ① Cangjie 回调中用 HiDebug 获取 PC ② 调用 UpdateHybridStackTracePc 写 PcVector ③ 信号触发 crash ④ DFXJSNApi::GetHybridStackTrace 读已更新的 PcVector → faultlog 输出完整混合栈 |
-| 跨边界 toJSError（场景 B） | ① Cangjie 回调已写入 PcVector + 存 cjPcSnapshot ② toJSError 创建新 JSError ③ **立即用 cjPcSnapshot 恢复 PcVector** ④ throw ⑤ getMixedStackTrace 直接读 PcVector → 输出完整栈 |
-| 多 worker 场景 | 每个 worker 独立 vm，回调各自 UpdatePc 自己的 vm，toJSError 各自恢复自己的 vm PcVector，无跨 vm 冲突 |
+| 未捕获异常 faultlog（场景 A） | ① 仓颉运行时异常创建时调用互操作回调 ② 回调使用 HiDebug 获取 PC ③ 回调调用 UpdateHybridStackTracePc 写 PcVector ④ 异常未捕获 → 进程崩溃 ⑤ dfx_dump_catcher 调用 DFXJSNApi::GetHybridStackTrace 读已更新的 PcVector → faultlog 输出完整混合栈 |
+| 跨边界 toJSError（场景 B） | ① 回调阶段已完成（同上） ② 互操作的 toJSError 实现中创建新 JSError（PcVector 被覆盖） ③ toJSError 立即调用 UpdateHybridStackTracePc 恢复 ④ throw ⑤ 语言层 getMixedStackTrace 调用 HybridStack.getTrace → 读已恢复的 PcVector → 符号化输出 |
+| 多 worker 场景 | 每个 worker 的仓颉运行时独立；各回调各自调用 UpdateHybridStackTracePc 更新各自 vm 的 PcVector；toJSError 各自恢复各自 vm；无串联 |
+
+> **优势**：
+> - ✓ **运行时侧无需知道互操作的任何实现细节**，仅调用标准回调接口
+> - ✓ **完全避免 JSError vm address 绑定问题**（每个 vm 独立处理）
+> - ✓ 统一代码路径，无复杂的检测与降级逻辑
+> - ✓ **上游仅需 1 个内部 API**（UpdateHybridStackTracePc），对外完全透明
+> - ✓ **客户端 PC 获取都用公开 HiDebug API**，无依赖私有实现
+> - ✓ 支持所有 vm 配置（单 VM、多 VM、嵌套 JSRuntime）
+
+> **上游依赖**：ets_runtime 仅需在 DFXJSNApi 中新增 UpdateHybridStackTracePc 接口。若无法接受，回退至仅语言层（P1/P2），faultlog 能力不完整。
 
 > **优势**：
 > - ✓ 完全避免 JSError vm address 绑定问题（每个 vm 独立处理，恢复在当前 vm 中）
