@@ -18,28 +18,32 @@
 
 ### 2.1 现有 master 主干实现
 
-当前 master 主干（`feat/mixed-exception-stack-stitching` 已合入，即本仓库当前的 master）在异常跨边界点进行**字符串拼接**式的混合栈输出：
+以远程 `origin/master` 为准（最新合入：`c0c3b82d !323 merge feature_mixstack into master`、`3a2b915e fix mixstack missing scene`、`70a96d08 fix mixstack non-compatible changes`、`2ce3762b mixed stack adapt`）。当前 master 在异常跨边界点进行**纯字符串拼接**式的混合栈输出，**不涉及任何 HiViewDFX hidebug 调用、也不写 `EcmaVM::PcVector`**。
 
 ![master 主干现状 - 字符串拼接混合栈](./hybridstack_master_state.svg)
 
-要点：
-- HiViewDFX hidebug 采集与符号化已经**通过 `external_deps = [ "hiviewdfx_hidebug:libohhidebug" ]` 内部接口直链**完成，不再使用 dlopen，也不存在本仓库自有的 C++ 桥接层；
-- `BusinessException.toString()` 在用户 catch 路径下能输出「HiDebug + legacy」字符串；
-- faultlog 路径仍只能落到 `EcmaVM::PcVector` 中由 `createJSError` 覆盖后的 ArkTS 帧，**仓颉帧丢失**。
+实现要点（基于 `ohos/business_exception/business_exception.cj`、`ohos/ark_interop/js_exception.cj`、`ohos/ark_interop/js_func.cj`、`ohos/ark_interop/js_constants.cj`）：
+
+- `BusinessException` 维护 `kind: Normal | CrossCangjie(Exception, Array<String>) | CrossArkTS(String, Array<String>)` 枚举；
+- ArkTS → 仓颉路径上，`cjLambdaInvoker` 在 catch 中调用 `context.constants.getArkStack()`，**通过新建 `Error` 并解析 `.stack`** 拿到 ArkTS 当前帧字符串数组，再以 `BusinessException(code, cause, arkStack)` 形式构造跨边界异常；
+- `getMixedStackTrace()` 把仓颉 `getStackTrace()` 输出与 `arkStack` 字符串数组**直接拼接**返回；
+- `toJSError` → `createJSError` 把 `getMixedStackTrace()` 的结果写入新建 JSError 的 `stack` 属性，作为 ArkTS 用户 `e.stack` 的字符串；
+- **从未触碰 `EcmaVM::PcVector`，也不调用任何 HiViewDFX hidebug 接口**（仓内全局 grep 确认仅 `kit_config.cj` 把 `@ohos.hidebug` 注册为 kit 包别名，零 FFI 调用、零 `external_deps` 引用）；
+- faultlog 路径只能落到 `EcmaVM::PcVector`，未捕获时 PcVector 仅含 ArkTS 帧，**仓颉帧完全丢失**。
 
 ### 2.2 现状与设计目标的差距
 
 | 目标 | 现状 | 差距 |
 | ---- | ---- | ---- |
-| P0 faultlog 含仓颉帧 | faultlog 仅含 `createJSError` 写入的 ArkTS 帧 | **完全未达成**：仓颉帧从未到达 `EcmaVM::PcVector`，崩溃栈无仓颉信息 |
-| P1 仓颉 API 混合栈 | `BusinessException.toString()` 拼接「HiDebug + legacy stitched」 | **形式达成、内容近似**：依赖 `toJSError` 时 `fp` 仍在仓颉一侧的窗口，对真正越界后 catch 的场景不稳定 |
-| P2 含 Native 帧 | 通过 `classifyFrame` 启发式分段，覆盖度依赖符号匹配 | 部分达成，质量取决于 HiDebug 符号化输出 |
+| P0 faultlog 含仓颉帧 | faultlog 仅含 ets_runtime 自身写入 `PcVector` 的 ArkTS 帧 | **完全未达成**：master 字符串拼接只写 JSError.stack 属性，PcVector 从未被写入仓颉 PC，崩溃栈无仓颉信息 |
+| P1 仓颉 API 混合栈 | `BusinessException.toString()` 输出「Cangjie `getStackTrace()` + ArkTS `Error.stack` 解析」拼接字符串 | **形式达成**：能输出两段；但 ArkTS 段来自越界点新建 `Error` 的 `.stack`，**信息源不是 throw 点**；缺失 Native 段 |
+| P2 含 Native 帧 | 当前未实现 | **未达成**：master 没有任何 Native 栈采集机制 |
 
 ### 2.3 关键技术约束（用于审查决策）
 
 1. **`EcmaVM::PcVector` 单例语义**：`EcmaVM` 上仅保留最近一次写入的 PC 向量，`createJSError` 会以当前 ArkTS 调用栈覆盖。任何「先把仓颉 PC 写入 PcVector → 再创建 JSError」的顺序都会被覆盖。
 2. **仓颉栈帧的有效窗口极短**：`throw e` 触发后 cangjie_runtime 立即 unwind；等到 `toJSError` 时仓颉栈已销毁，必须在**异常对象构造瞬间**完成 PC 采集，否则采到的是越界后的栈而非 throw 点。
-3. **HiViewDFX hidebug 内部接口可用**：`OH_HiDebug_CreateBacktraceObject` / `OH_HiDebug_BacktraceFromFp` / `OH_HiDebug_SymbolicAddress` 通过 `hiviewdfx_hidebug:libohhidebug` 内部接口直链调用，不引入额外私有依赖。
+3. **HiViewDFX hidebug 内部接口可用但本仓库尚未集成**：`OH_HiDebug_CreateBacktraceObject` / `OH_HiDebug_BacktraceFromFp` / `OH_HiDebug_SymbolicAddress` 由 `hiviewdfx_hidebug:libohhidebug` 通过 `external_deps` 暴露，本设计**首次引入**该依赖（master 当前完全未集成）。
 4. **`BusinessException` 是仓颉 API**：`toString()` / `getMixedStackTrace()` / `getCrossMessage()` 由仓颉代码实现并被仓颉用户代码调用，不是 ArkTS 接口；ArkTS 侧拿到的是 `JSError`，需经互操作再次桥回仓颉对象后才能调用上述方法。
 5. **互操作不直连 ets_runtime**：互操作对 ets_runtime 的所有调用统一经 `arkui_napi/interfaces/inner_api/cjffi/ark_interop` 中转。
 6. **二进制兼容性**：`BusinessException` 公开 API 与错误码 34300001-34300008 必须保持兼容。
@@ -48,12 +52,12 @@
 
 ### 3.1 PC 采集时机：边界采集 vs. 构造期回调
 
-基于 §2.1 的现状（仅在 `toJSError` 边界采集），核心抉择是是否将 PC 采集前移至异常对象构造瞬间：
+基于 §2.1 的现状（master 在 `toJSError` 边界拼字符串、不采 PC、不写 PcVector），核心抉择是 PC 采集是否前移至异常对象构造瞬间：
 
 | 候选 | 触发时机 | 能否覆盖 P0 | 能否覆盖 P1 | 结论 |
 | ---- | ---- | ---- | ---- | ---- |
-| B. 维持现状：仅在互操作边界 `toJSError` 中采集 | 异常跨边界时 | ✗ 仓颉栈已 unwind，采不到 throw 点 | △ 当前主干已实现「近似」字符串拼接，但 throw 点信息不稳定 | 现状，无法升级到 P0 |
-| **C. cangjie_runtime 新增 `onCJExceptionCreated` 回调** | **异常对象构造瞬间** | ✓ 仓颉栈仍在；保存 PC 快照，跨边界后恢复写入 PcVector | ✓ catch 路径同样触发，PC 来自 throw 点 | **采用** |
+| A. 边界采集：仅在 `toJSError` 中通过 hidebug 采当前 fp | 异常跨边界时 | ✗ 仓颉栈已 unwind，采到的是越界后的栈 | △ 能拿到非空仓颉帧，但**不是 throw 点** | 不采用 |
+| **B. 构造期回调：cangjie_runtime 新增 `onCJExceptionCreated`** | **异常对象构造瞬间** | ✓ 仓颉栈仍在；保存 PC 快照，跨边界后恢复写入 PcVector | ✓ catch 路径同样触发，PC 稳定来自 throw 点 | **采用** |
 
 **结论**：本方案**主动要求 cangjie_runtime 新增一个异常构造期回调** `onCJExceptionCreated`。这是在「方案设计阶段明确提出的运行时改动」，与边界采集方案完全独立。
 
@@ -127,12 +131,7 @@
 
 #### 5.1.1 cangjie_runtime（新增异常构造期回调）
 
-新增导出，在仓颉异常对象构造收尾处同步调用，单次 throw 仅触发一次：
-
-```c
-typedef void (*OnCJExceptionCreatedFn)(void* cjException);
-MRT_EXPORT void RegisterCJExceptionCreatedHandler(OnCJExceptionCreatedFn fn);
-```
+要求在仓颉异常对象构造收尾处同步调用一次注册回调，单次 throw 仅触发一次。回调语义：传入新构造的仓颉异常对象，由互操作侧采集并保存当前线程仓颉栈 PC 快照。**具体导出签名 / 注册函数命名由 cangjie_runtime owner 决定**（参见 §7 末尾说明），本文档不预设占位 C 原型。
 
 #### 5.1.2 arkcompiler_ets_runtime（DFXJSNApi 新增 1 个 API）
 
@@ -158,15 +157,19 @@ PC 采集与符号化不再新增 ARKTS 中转，由本仓库通过 HiViewDFX hi
 
 #### 5.1.4 arkcompiler_cangjie_ark_interop（本仓库）
 
-沿用主干 `feat/mixed-exception-stack-stitching` 的纯仓颉直链格局（`@FastNative foreign` 直链 `hiviewdfx_hidebug:libohhidebug`，无 dlopen、无自有 C++ 桥接层），在此基础上接入运行时回调与 `cjffi` 中转：
+master 当前**完全未集成 HiViewDFX hidebug**（也不存在 `hidebug_backtrace.cj` / 自有 C++ 桥接层）。本设计在本仓库首次引入：
+
+- 通过 `external_deps = [ "hiviewdfx_hidebug:libohhidebug" ]` 直链 HiViewDFX hidebug 内部接口；
+- `@C foreign` 声明 `OH_HiDebug_BacktraceFromFp` / `OH_HiDebug_SymbolicAddress`，无 dlopen、无自有 C++ 桥接层；
+- 通过 cjffi 直链 `ARKTS_UpdateHybridStackTracePc` 写入 PcVector。
 
 | 文件 | 改动 |
 | ---- | ---- |
-| `ohos/ark_interop/js_module.cj` | 初始化路径调用 `RegisterCJExceptionCreatedHandler` 注册 `onCJExceptionCreated` 回调 |
-| `ohos/ark_interop/js_exception.cj` | `SharedException` 增加字段 `cjPcSnapshot: ?Array<UIntNative>`；异常构造期回调中只保存快照、不更新 VM；`toJSError` 在 `createJSError` 之后立即调用 `ARKTS_UpdateHybridStackTracePc` 用快照恢复 PcVector |
-| `ohos/business_exception/business_exception.cj` | `toString` / `getMixedStackTrace` 复用 `cjPcSnapshot` + 既有 `hidebug_backtrace.cj` 的 `symbolicateAll` / `classifyFrame`；结果缓存到 `cachedHybridTrace: ?String` |
-| `ohos/business_exception/hidebug_backtrace.cj` | 既有，无结构改动；新增「按外部 PC 数组直接符号化」的入口（场景 1 不再依赖运行时 fp 重新采集） |
-| `ohos/business_exception/ark_interop_ffi.cj`（新增） | `@C foreign` 声明：`ARKTS_UpdateHybridStackTracePc`（仅此 1 个新 cjffi 符号；HiViewDFX hidebug 符号声明已在 `hidebug_backtrace.cj`） |
+| `ohos/ark_interop/js_module.cj` | 初始化路径向 cangjie_runtime 注册 `onCJExceptionCreated` 回调（注册符号名以 cangjie_runtime owner 决定为准）|
+| `ohos/ark_interop/js_exception.cj` | `SharedException` 增加字段 `cjPcSnapshot: ?Array<UIntNative>`；异常构造期回调中**只保存快照、不更新 VM**；`toJSError` 在 `createJSError` 之后立即调用 `ARKTS_UpdateHybridStackTracePc` 用快照恢复 PcVector |
+| `ohos/business_exception/business_exception.cj` | `toString` / `getMixedStackTrace` 切换为基于 `cjPcSnapshot` 的稳定路径，结果缓存到 `cachedHybridTrace: ?String`，覆盖现 master 的「Cangjie `getStackTrace` + ArkTS `Error.stack` 解析」字符串拼接实现 |
+| `ohos/business_exception/hidebug_backtrace.cj`（新增） | HiViewDFX hidebug `@C foreign` 声明 + 「按外部 PC 数组直接符号化」入口 |
+| `ohos/business_exception/ark_interop_ffi.cj`（新增） | `ARKTS_UpdateHybridStackTracePc` 的 `@C foreign` 声明 |
 
 **onCJExceptionCreated 回调内部行为**：
 1. 直接通过 HiViewDFX hidebug 内部接口（`OH_HiDebug_BacktraceFromFp`）采集当前线程仓颉 PC 帧；
@@ -221,15 +224,15 @@ int ARKTS_UpdateHybridStackTracePc(napi_env env, void** frames, int count);
 ```
 
 ```cangjie
-// 本仓库 ohos/business_exception/business_exception.cj（仓颉 API，沿用既有签名）
+// 本仓库 ohos/business_exception/business_exception.cj（仓颉 API，签名不变）
 public class BusinessException <: Exception {
-    // 既有：用户在 catch 后调用；本设计将其切换为基于 cjPcSnapshot 的稳定路径
+    // 既有签名；实现切换为基于 cjPcSnapshot 的 hidebug 符号化
     public override func toString(): String { ... }
     public func getMixedStackTrace(): String { ... }
 }
 ```
 
-> cangjie_runtime 侧的回调注册接口（用于触发 `onCJExceptionCreated`）由 cangjie_runtime owner 决定 ABI 形态，本文档不再列出占位签名，避免与最终落地不一致。
+> cangjie_runtime 侧的异常构造期回调注册接口由 cangjie_runtime owner 决定 ABI 形态，本文档不列出占位签名，避免与最终落地不一致。
 
 ## 8. 性能与可优化点
 
@@ -245,7 +248,7 @@ public class BusinessException <: Exception {
 1. **`onCJExceptionCreated` 落地分级降级方案**（基于现状的可控退化）：
    - **L0（满足 P0）**：cangjie_runtime 接受新增构造期回调 + ets_runtime/arkui_napi 接受 PcVector 写入接口 → faultlog 含仓颉帧，仓颉 API 含完整三段。
    - **L1（仅满足 P1）**：cangjie_runtime 回调被拒，但 ets_runtime/arkui_napi 接口落地 → 退化为现状的「`toJSError` 边界采集 + 立即写 PcVector」方案，throw 点信息与现状一致（不稳定但 faultlog 至少有非空仓颉帧）。
-   - **L2（仅维持现状）**：ets_runtime/arkui_napi 接口都被拒 → 退化为主干 `feat/mixed-exception-stack-stitching` 的纯字符串拼接方案（仓颉 API 输出「HiDebug + legacy」），faultlog 不含仓颉帧。
+   - **L2（仅维持现状）**：ets_runtime/arkui_napi 接口都被拒 → 退化为 master 当前的纯字符串拼接方案（`getMixedStackTrace()` 拼接 Cangjie `getStackTrace` + ArkTS `Error.stack` 解析结果），faultlog 不含仓颉帧。
 2. **ets_runtime 接口落地**：`DFXJSNApi::UpdateHybridStackTracePc` 必须被接受。若拒绝，按 L2 退化。
 3. **arkui_napi cjffi 中转函数落地**：新增 `ARKTS_UpdateHybridStackTracePc` 必须被 napi 团队接受。
 4. **多 VM / worker**：每个 vm 独立写入与恢复自身 PcVector，无跨 vm 状态。
@@ -265,11 +268,12 @@ public class BusinessException <: Exception {
 
 | 维度 | 现状（master 字符串拼接） | 本设计 |
 | ---- | ---- | ---- |
-| Faultlog 仓颉栈来源 | 无（PcVector 始终被 ArkTS 帧覆盖） | ets_runtime PcVector，由 cangjie_runtime 新增回调保存快照，并在 `toJSError` 后经 cjffi 恢复写入 |
-| 跨边界 PC 覆盖处理 | 无 | `toJSError` 内立即用 `cjPcSnapshot` 恢复 |
-| 仓颉 API 混合栈 | `BusinessException.toString()` 拼接「HiDebug + legacy」字符串，throw 点信息不稳定 | `BusinessException.toString()` 基于 `cjPcSnapshot` 直接调用 HiViewDFX hidebug 符号化，throw 点稳定 |
+| Faultlog 仓颉栈来源 | 无（PcVector 仅被 ets_runtime 自身的 ArkTS 帧填充，仓颉帧丢失） | ets_runtime PcVector，由 cangjie_runtime 新增回调保存仓颉 PC 快照，并在 `toJSError` 后经 cjffi 恢复写入 |
+| 跨边界 PC 覆盖处理 | 无（master 不写 PcVector） | `toJSError` 内立即用 `cjPcSnapshot` 写回 |
+| 仓颉 API 混合栈 | `getMixedStackTrace()` 拼接 Cangjie `getStackTrace` + ArkTS `Error.stack` 解析字符串，无 Native 段 | 基于 `cjPcSnapshot` 直接调用 HiViewDFX hidebug 符号化，throw 点稳定，含 Cangjie / ArkTS / Native 三段 |
+| HiViewDFX hidebug | 完全未集成 | 通过 `external_deps` + `@C foreign` 首次引入 |
 | 多 VM 支持 | 未考虑 | 每 vm 独立，天然支持 |
-| 对仓颉运行时依赖 | 仅 throw / catch | **明确要求新增一个构造期回调**，PC 采集仍由互操作直接通过 HiViewDFX hidebug 完成 |
+| 对仓颉运行时依赖 | 仅 throw / catch | **明确要求新增一个构造期回调** |
 | 上游协作面 | interop 单仓 | cangjie_runtime（+1 回调）+ ets_runtime（+1 API）+ arkui_napi cjffi（+1 中转）+ interop |
 
 ## 12. 后续工作
