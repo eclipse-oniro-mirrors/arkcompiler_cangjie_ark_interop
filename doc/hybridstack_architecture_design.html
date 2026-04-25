@@ -1,0 +1,577 @@
+<!DOCTYPE html><html><head>
+      <title>hybridstack_architecture_design</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\xuanj\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.24\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\xuanj\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.24\crossnote\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="混合栈支持仓颉---架构设计">混合栈支持仓颉 - 架构设计 </h1>
+<blockquote>
+<p>配套需求文档：<a href="./hybridstack_support_cangjie_design.md">hybridstack_support_cangjie_design.md</a><br>
+适用分支：<code>feat/hybridstack-redesign</code><br>
+状态：草案 v3（Draft）</p>
+</blockquote>
+<h2 id="1-设计目标对齐">1. 设计目标对齐 </h2>
+<p>应用形态前提：<strong>ArkTS 为应用入口</strong>，通过互操作调用仓颉模块；仓颉抛出的异常在跨边界时由互操作 <code>toJSError</code> 转为 <code>JSError</code>，由 ArkTS 侧捕获或继续向上传播。本设计不涉及「纯仓颉应用入口」场景（该场景下未捕获仓颉异常的处理由 ability_runtime 经既有 <code>CJUncaughtExceptionInfo</code> 完成，与混合栈无关）。</p>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>目标</th>
+<th>验证场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0 (主要)</td>
+<td>faultlog 中能稳定显示仓颉栈帧（异常自仓颉抛出，未被 ArkTS 捕获，最终触发进程崩溃）</td>
+<td>ArkTS 入口 → 调用仓颉 → 仓颉 throw → ArkTS 未捕获 → 进程崩溃 → faultlog 含仓颉帧</td>
+</tr>
+<tr>
+<td>P1 (次要)</td>
+<td>仓颉侧 <code>BusinessException.toString()</code> / <code>getMixedStackTrace()</code>（仓颉 API）至少呈现「Cangjie + ArkTS」混合栈</td>
+<td>仓颉 try/catch 后调用 toString 打印</td>
+</tr>
+<tr>
+<td>P2 (可选)</td>
+<td>上述混合栈进一步包含 Native (C/C++) 帧</td>
+<td>同上</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-关键技术约束决定方案形态的事实">2. 关键技术约束（决定方案形态的事实） </h2>
+<ol>
+<li><strong><code>EcmaVM::PcVector</code> 单例语义</strong>：<code>EcmaVM</code> 上仅保留最近一次写入的 PC 向量，<code>createJSError</code> 会以当前 ArkTS 调用栈覆盖。任何「先把仓颉 PC 写入 PcVector → 再创建 JSError」的顺序都会被覆盖。</li>
+<li><strong>仓颉栈帧的有效窗口极短</strong>：<code>throw e</code> 触发后，cangjie_runtime 立刻开始 unwind。等到异常跨过互操作边界（<code>toJSError</code>）时，仓颉栈已被销毁，从当前 <code>fp</code> 调用 <code>OH_HiDebug_BacktraceFromFp</code> 已无法采到原 throw 点的帧。<strong>因此 PC 必须在异常构造瞬间采集</strong>。</li>
+<li><strong>现有 <code>CJUncaughtExceptionInfo</code> 的覆盖面不足</strong>：cangjie_runtime 现有的 <code>RegisterUncaughtExceptionHandler</code> 仅在异常未被捕获、进入默认 dispatcher 时触发；触发点已晚于 unwind，无法拿到 throw 点的栈，且本设计场景下所有仓颉异常都会跨边界进入 ArkTS，根本不会走仓颉自己的 dispatcher。</li>
+<li><strong>公开 HiDebug 栈回溯 API 可用</strong>：<code>OH_HiDebug_CreateBacktraceObject</code> / <code>OH_HiDebug_BacktraceFromFp</code> / <code>OH_HiDebug_SymbolicAddress</code> 已对外开放，本设计不引入私有依赖。</li>
+<li><strong><code>BusinessException</code> 是仓颉 API</strong>：<code>BusinessException.toString()</code> / <code>getMixedStackTrace()</code> / <code>getCrossMessage()</code> 由仓颉代码实现并被仓颉用户代码调用，不是 ArkTS 接口；ArkTS 侧拿到的是 <code>JSError</code>，需经互操作再次桥回仓颉对象后才能调用上述方法。</li>
+<li><strong>互操作不直连 ets_runtime</strong>：互操作对 ets_runtime 的所有调用统一经 <code>arkui_napi/interfaces/inner_api/cjffi/ark_interop</code> 中转。</li>
+<li><strong>二进制兼容性</strong>：<code>BusinessException</code> 公开 API 与错误码 34300001-34300008 必须保持兼容。</li>
+</ol>
+<h2 id="3-方案核心设计抉择">3. 方案核心设计抉择 </h2>
+<h3 id="31-是否需要在-cangjie_runtime-新增异常构造期回调">3.1 是否需要在 cangjie_runtime 新增「异常构造期回调」 </h3>
+<table>
+<thead>
+<tr>
+<th>候选</th>
+<th>触发时机</th>
+<th>能否覆盖 P0</th>
+<th>能否覆盖 P1</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. 复用 <code>CJUncaughtExceptionInfo</code></td>
+<td>未捕获异常进入 dispatcher</td>
+<td>✗ ArkTS 入口下根本不会走该路径</td>
+<td>✗ catch 后不触发</td>
+<td>不满足设计目标</td>
+</tr>
+<tr>
+<td>B. 仅在互操作边界 <code>toJSError</code> 中采集</td>
+<td>异常跨边界时</td>
+<td>✗ 仓颉栈已 unwind，采不到 throw 点</td>
+<td>✗ 同上</td>
+<td>技术上不可行</td>
+</tr>
+<tr>
+<td><strong>C. cangjie_runtime 新增 <code>onCJExceptionCreated</code> 回调</strong></td>
+<td><strong>异常对象构造瞬间</strong></td>
+<td>✓ 仓颉栈仍在；写 PcVector 即可被 faultlog 读取</td>
+<td>✓ catch 路径同样触发</td>
+<td><strong>采用</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>：本方案<strong>主动要求 cangjie_runtime 新增一个异常构造期回调</strong> <code>onCJExceptionCreated</code>。这是在「方案设计阶段明确提出的运行时改动」，并非事后假设；与既有 <code>CJUncaughtExceptionInfo</code> 解耦，互不影响。</p>
+<h3 id="32-pc-采集与tojserror-覆盖的处理顺序">3.2 PC 采集与「toJSError 覆盖」的处理顺序 </h3>
+<p>由于 <code>createJSError</code> 必然覆盖 PcVector，单点写入无法兼顾「faultlog」与「toJSError 后的仓颉侧读取」。本设计采用<strong>二阶段写入</strong>：</p>
+<ul>
+<li><strong>阶段 ①（异常构造期，运行时回调中）</strong>：互操作回调获取仓颉 PC → 备份至 <code>SharedException.cjPcSnapshot</code> → 经 cjffi 中转写入当前 vm PcVector。faultlog 路径在此后任何时刻读取均可见仓颉帧。</li>
+<li><strong>阶段 ②（互操作 <code>toJSError</code> 内）</strong>：<code>createJSError</code> 创建新 JSError 并覆盖 PcVector → <strong>立即</strong>用 <code>cjPcSnapshot</code> 再次写入 PcVector 恢复。后续仓颉 API 读到的就是恢复后的 PcVector。</li>
+</ul>
+<p>每个 <code>EcmaVM</code> 自带 PcVector，恢复操作只作用于当前 vm，天然支持多 VM / worker / 嵌套 JSRuntime。</p>
+<h2 id="4-涉及组件与改动范围">4. 涉及组件与改动范围 </h2>
+<blockquote>
+<p>原则：仅对<strong>本次需要改动</strong>的组件展开接口；其余组件只描述其在本方案中的<strong>行为角色</strong>。</p>
+</blockquote>
+<h3 id="41-需要改动的组件">4.1 需要改动的组件 </h3>
+<h4 id="411-cangjie_runtime新增异常构造期回调">4.1.1 cangjie_runtime（新增异常构造期回调） </h4>
+<p>新增导出，在仓颉异常对象构造收尾处同步调用，单次 throw 仅触发一次：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-typedef">typedef</span> <span class="token keyword keyword-void">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>OnCJExceptionCreatedFn<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token operator">*</span> cjException<span class="token punctuation">)</span><span class="token punctuation">;</span>
+MRT_EXPORT <span class="token keyword keyword-void">void</span> <span class="token function">RegisterCJExceptionCreatedHandler</span><span class="token punctuation">(</span>OnCJExceptionCreatedFn fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h4 id="412-arkcompiler_ets_runtimedfxjsnapi-新增-1-个-api">4.1.2 arkcompiler_ets_runtime（DFXJSNApi 新增 1 个 API） </h4>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token comment">// 将 PC 数组直接写入指定 vm 的 PcVector，覆盖原值</span>
+<span class="token keyword keyword-void">void</span> <span class="token class-name">DFXJSNApi</span><span class="token double-colon punctuation">::</span><span class="token function">UpdateHybridStackTracePc</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> EcmaVM<span class="token operator">*</span> vm<span class="token punctuation">,</span> <span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token operator">*</span> data<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>仅此一个新增接口，既有 <code>GetHybridStackTrace</code> / <code>SymbolicAddress</code> 不动。<strong>该 API 不直接对互操作开放</strong>，由 arkui_napi cjffi 模块封装中转。</p>
+<h4 id="413-arkui_napi-cjffi新增-3-个中转函数">4.1.3 arkui_napi cjffi（新增 3 个中转函数） </h4>
+<p>互操作不直接链接 <code>libark_jsruntime</code>，也不直接调用 HiDebug；对 ets_runtime 与 HiDebug 的访问统一经 <code>interfaces/inner_api/cjffi/ark_interop</code> 中转。本设计在该模块新增 3 个函数：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token comment">// arkui_napi/interfaces/inner_api/cjffi/ark_interop/ark_interop_napi.h（新增）</span>
+
+<span class="token comment">// ① 写：将 PC 数组写入当前 napi_env 对应 vm 的 PcVector</span>
+<span class="token comment">//    内部：解出 EcmaVM → DFXJSNApi::UpdateHybridStackTracePc</span>
+<span class="token keyword keyword-int">int</span> <span class="token function">ARKTS_UpdateHybridStackTracePc</span><span class="token punctuation">(</span>napi_env env<span class="token punctuation">,</span> <span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token operator">*</span> frames<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ② 取 PC 帧：用 OH_HiDebug_CreateBacktraceObject + OH_HiDebug_BacktraceFromFp</span>
+<span class="token comment">//    采集当前线程的仓颉 PC 帧数组</span>
+<span class="token keyword keyword-int">int</span> <span class="token function">ARKTS_GetHybridStackTracePc</span><span class="token punctuation">(</span>napi_env env<span class="token punctuation">,</span> <span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token operator">*</span> outFrames<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span> outCount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ③ 符号化：对一组 PC 调用 OH_HiDebug_SymbolicAddress，输出格式化字符串</span>
+<span class="token keyword keyword-int">int</span> <span class="token function">ARKTS_GetHybridStackTraceStr</span><span class="token punctuation">(</span>napi_env env<span class="token punctuation">,</span> <span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token operator">*</span> frames<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> count<span class="token punctuation">,</span>
+                                 <span class="token keyword keyword-char">char</span><span class="token operator">*</span> buf<span class="token punctuation">,</span> <span class="token class-name">size_t</span> bufLen<span class="token punctuation">,</span> <span class="token class-name">size_t</span><span class="token operator">*</span> outLen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>这 3 个函数构成互操作访问 ets_runtime 与 HiDebug 的唯一通道。</p>
+<h4 id="414-arkcompiler_cangjie_ark_interop本仓库">4.1.4 arkcompiler_cangjie_ark_interop（本仓库） </h4>
+<p>互操作完全在仓颉侧通过 <code>@C foreign</code> 调用上述 cjffi 函数，<strong>不再需要本仓库自有 C++ 桥接层</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>改动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ohos/ark_interop/js_module.cj</code></td>
+<td>在初始化路径调用 <code>RegisterCJExceptionCreatedHandler</code> 注册 <code>onCJExceptionCreated</code> 回调</td>
+</tr>
+<tr>
+<td><code>ohos/ark_interop/js_exception.cj</code></td>
+<td><code>SharedException</code> 增加字段 <code>cjPcSnapshot: ?Array&lt;UIntNative&gt;</code>；<code>toJSError</code> 在 <code>createJSError</code> 之后立即调用 <code>ARKTS_UpdateHybridStackTracePc</code> 用快照恢复 PcVector</td>
+</tr>
+<tr>
+<td><code>ohos/business_exception/business_exception.cj</code></td>
+<td>仓颉 API <code>toString</code> / <code>getMixedStackTrace</code> 改为调用 <code>HybridStack.getTrace</code>；结果缓存到实例字段 <code>cachedHybridTrace: ?String</code></td>
+</tr>
+<tr>
+<td><code>ohos/hybrid_stack/hybrid_stack.cj</code>（新增）</td>
+<td>仓颉 API <code>HybridStack.getTrace(env)</code>；按本场景所需聚合调用 cjffi 三个新函数</td>
+</tr>
+<tr>
+<td><code>ohos/hybrid_stack/hybrid_stack_ffi.cj</code>（新增）</td>
+<td><code>@C foreign</code> 声明：<code>ARKTS_UpdateHybridStackTracePc</code> / <code>ARKTS_GetHybridStackTracePc</code> / <code>ARKTS_GetHybridStackTraceStr</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>onCJExceptionCreated 回调内部行为</strong>：</p>
+<ol>
+<li>经 cjffi 调 <code>ARKTS_GetHybridStackTracePc</code> 采集当前线程的仓颉 PC 帧；</li>
+<li>备份 PC 数组到对应 <code>SharedException.cjPcSnapshot</code>；</li>
+<li>经 cjffi 调 <code>ARKTS_UpdateHybridStackTracePc(env, frames, n)</code> 写入当前 vm PcVector。</li>
+</ol>
+<p><strong>仓颉 API 符号化路径</strong>：<code>HybridStack.getTrace</code> 经 cjffi 调 <code>ARKTS_GetHybridStackTraceStr</code> 完成「PcVector → 符号化字符串」的全过程，<strong>不依赖 <code>napi_get_hybrid_stack_trace</code></strong>。</p>
+<h3 id="42-不改动-仅依赖其既有行为的组件">4.2 不改动、仅依赖其既有行为的组件 </h3>
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>在本方案中的角色</th>
+<th>是否改动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arkui_napi cjffi（除 §4.1.3 新增 3 个中转外）</td>
+<td>既有 ark_interop 系列封装继续承担 <code>napi_env ↔ EcmaVM</code> 桥接</td>
+<td>否</td>
+</tr>
+<tr>
+<td>ets_runtime（除 DFXJSNApi 新增外）</td>
+<td><code>EcmaVM</code> 持有 PcVector；faultlog 路径既有的混合栈解析继续生效</td>
+<td>否</td>
+</tr>
+<tr>
+<td>HiDebug</td>
+<td>提供公开栈回溯（PC 采集）与符号化 API，<strong>仅由 cjffi 中转层调用</strong>，互操作不直接接触</td>
+<td>否</td>
+</tr>
+<tr>
+<td>faultloggerd / dfx_signalhandler / dfx_dump_catcher</td>
+<td>进程崩溃时读 vm PcVector 落 faultlog</td>
+<td>否</td>
+</tr>
+<tr>
+<td>ability_runtime</td>
+<td>不参与本方案；其经 <code>CJUncaughtExceptionInfo</code> 处理纯仓颉入口未捕获异常的能力保持原样</td>
+<td>否</td>
+</tr>
+<tr>
+<td>hilog / hisysevent</td>
+<td>日志通道</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-总体架构">5. 总体架构 </h2>
+<h3 id="51-组件依赖仅含本方案相关交互">5.1 组件依赖（仅含本方案相关交互） </h3>
+<div class="mermaid">%%{init: {'flowchart': {'nodeSpacing': 25, 'rankSpacing': 45, 'curve': 'linear'}} }%%
+flowchart LR
+    subgraph User["应用代码（多层调用，自上而下）"]
+        direction TB
+        ETSTop["ArkTS 顶层 / 应用入口"]
+        ETSMid["ArkTS 中间层"]
+        CJTop["Cangjie 顶层（被 ArkTS 调用）"]
+        CJBot["Cangjie 内层（throw 点）"]
+        ETSTop --&gt; ETSMid
+        ETSMid --&gt; CJTop
+        CJTop --&gt; CJBot
+    end
+
+    subgraph CJRT["cangjie_runtime"]
+        direction TB
+        CJExc["异常对象构造收尾&lt;br/&gt;（本设计要求新增&lt;br/&gt;onCJExceptionCreated 触发点）"]
+    end
+
+    subgraph Interop["arkcompiler_cangjie_ark_interop（本仓库改动）"]
+        direction TB
+        IFCB["onCJExceptionCreated 实现"]
+        ToJS["toJSError 跨边界转换&lt;br/&gt;(createJSError + 立即恢复 PcVector)"]
+        Biz["BusinessException.toString /&lt;br/&gt;getMixedStackTrace（仓颉 API）"]
+    end
+
+    subgraph Napi["arkui_napi cjffi（新增中转函数）"]
+        direction TB
+        ArkRelay3["ARKTS_GetHybridStackTracePc"]
+        ArkRelay["ARKTS_UpdateHybridStackTracePc"]
+        ArkRelay2["ARKTS_GetHybridStackTraceStr"]
+    end
+
+    subgraph EtsRT["ets_runtime（DFXJSNApi +1）"]
+        direction TB
+        UpdPc["DFXJSNApi::&lt;br/&gt;UpdateHybridStackTracePc&lt;br/&gt;（新增）"]
+        VM["EcmaVM PcVector"]
+    end
+
+    subgraph External["外部既有组件"]
+        direction TB
+        HiDbg["HiDebug 公开 API&lt;br/&gt;（PC 采集 + 符号化）"]
+        Fault["faultloggerd /&lt;br/&gt;signalhandler /&lt;br/&gt;dfx_dump_catcher"]
+    end
+
+    CJBot --&gt;|throw| CJExc
+    CJExc --&gt;|构造时回调| IFCB
+    IFCB --&gt;|2. 备份 cjPcSnapshot + 写 PcVector| ArkRelay
+    ArkRelay --&gt; UpdPc --&gt; VM
+    ToJS --&gt;|抛 JSError 给 ArkTS| ETSMid
+    CJTop -.-&gt;|用户 catch 后调用仓颉 API（可选）| Biz
+    IFCB --&gt;|1. 经 cjffi 取 PcVector| ArkRelay3
+    ArkRelay3 --&gt;|通过公开 API 获取 PcVector| HiDbg
+    Biz --&gt;|3. 对每个 PC 符号化| ArkRelay2
+    ArkRelay2 --&gt;|通过公开 API 对每个 PC 符号化| HiDbg
+    Fault --&gt;|进程崩溃读 vm PcVector| VM
+
+    classDef app fill:#e6f4ff,stroke:#1f6feb,stroke-width:1.5px,color:#0b3a82;
+    class ETSTop,ETSMid,CJTop,CJBot app;
+    style User fill:#f5faff,stroke:#1f6feb,stroke-dasharray:3 3
+
+    classDef new fill:#fff5cc,stroke:#d4a017,stroke-width:2px;
+    class IFCB,ToJS,Biz,ArkRelay,ArkRelay2,ArkRelay3,UpdPc new;
+
+    classDef runtime_change fill:#ffe0e0,stroke:#c0392b,stroke-width:2px;
+    class CJExc runtime_change;
+</div><blockquote>
+<p>图例：</p>
+<ul>
+<li>蓝色（虚线框 <code>User</code>）= 应用代码，自上而下展示「ArkTS → Cangjie」多层调用；</li>
+<li>黄色 = 互操作 / arkui_napi cjffi / ets_runtime 新增组件或函数；</li>
+<li>红色 = 本设计要求 cangjie_runtime 新增的触发点；</li>
+<li>其余为既有组件，仅依赖其行为；</li>
+<li><strong>虚线箭头</strong>（<code>CJTop ⤏ Biz</code>）表示用户态可选行为：用户 catch 后才会调用仓颉 API；若用户不 catch，异常继续沿 <code>toJSError</code> → ArkTS 上抛，最终走场景 A 的 faultlog 路径，本步骤不发生。</li>
+</ul>
+</blockquote>
+<h3 id="52-控制流时序">5.2 控制流时序 </h3>
+<p>应用统一以 ArkTS 为入口，仓颉异常<strong>必然</strong>经 <code>toJSError</code> 转为 <code>JSError</code> 进入 ArkTS。下面两个场景的差别只在 ArkTS 是否捕获。</p>
+<h4 id="场景-aarkts-未捕获--进程崩溃--faultlogp0">场景 A：ArkTS 未捕获 → 进程崩溃 → faultlog（P0） </h4>
+<div class="mermaid">sequenceDiagram
+    autonumber
+    participant ETSTop as ArkTS 顶层
+    participant ETSMid as ArkTS 中间层
+    participant CJTop as Cangjie 顶层
+    participant CJBot as Cangjie 内层（throw 点）
+    participant CR as cangjie_runtime
+    participant IF as Interop onCJExceptionCreated
+    participant TJ as Interop toJSError
+    participant Cjffi as arkui_napi cjffi
+    participant VM as EcmaVM PcVector
+    participant FL as faultloggerd / signalhandler
+
+    ETSTop-&gt;&gt;ETSMid: call
+    ETSMid-&gt;&gt;CJTop: 跨边界调用仓颉
+    CJTop-&gt;&gt;CJBot: call
+    CJBot-&gt;&gt;CR: throw e
+    CR-&gt;&gt;IF: onCJExceptionCreated(e)（新增触发点）
+    IF-&gt;&gt;IF: HiDebug 采 PC + 备份 cjPcSnapshot
+    IF-&gt;&gt;Cjffi: ARKTS_GetHybridStackTracePc 采 PC + 备份 cjPcSnapshot
+    IF-&gt;&gt;Cjffi: ARKTS_UpdateHybridStackTracePc(env, frames)
+    Cjffi-&gt;&gt;VM: 写入 PcVector
+    Note over CR: 仓颉栈 unwind 至边界
+    CR-&gt;&gt;TJ: 异常越界
+    TJ-&gt;&gt;VM: createJSError 创建新 JSError（PcVector 被 ArkTS 帧覆盖）
+    TJ-&gt;&gt;Cjffi: 立即 ARKTS_UpdateHybridStackTracePc(env, cjPcSnapshot) 恢复
+    Cjffi-&gt;&gt;VM: 恢复 PcVector
+    TJ-&gt;&gt;ETSMid: throw JSError
+    ETSMid--&gt;&gt;ETSTop: 未捕获，继续上抛
+    ETSTop-&gt;&gt;FL: 触发崩溃信号
+    FL-&gt;&gt;VM: 读 PcVector + 走既有混合栈解析
+    FL--&gt;&gt;ETSTop: faultlog 含 Cangjie + ArkTS (+ Native) 帧
+</div><h4 id="场景-b仓颉侧捕获并经仓颉-api-打印p1">场景 B：仓颉侧捕获并经仓颉 API 打印（P1） </h4>
+<blockquote>
+<p>该场景下异常先跨边界变成 <code>JSError</code>；若 ArkTS 不处理而是再次回调到仓颉，或调用方本就在仓颉侧 try/catch（仓颉调用仓颉），仓颉侧拿到 <code>BusinessException</code> 后调用其 <code>toString</code> / <code>getMixedStackTrace</code>。</p>
+</blockquote>
+<div class="mermaid">sequenceDiagram
+    autonumber
+    participant ETSTop as ArkTS 顶层
+    participant ETSMid as ArkTS 中间层
+    participant CJTop as Cangjie 顶层（try/catch）
+    participant CJBot as Cangjie 内层（throw 点）
+    participant CR as cangjie_runtime
+    participant IF as Interop onCJExceptionCreated
+    participant TJ as Interop toJSError
+    participant Cjffi as arkui_napi cjffi
+    participant VM as EcmaVM PcVector
+    participant Biz as BusinessException（仓颉 API）
+    participant HiDbg as HiDebug 符号化
+
+    ETSTop-&gt;&gt;ETSMid: call
+    ETSMid-&gt;&gt;CJTop: 跨边界
+    CJTop-&gt;&gt;CJBot: call (try)
+    CJBot-&gt;&gt;CR: throw e
+    CR-&gt;&gt;IF: onCJExceptionCreated(e)
+    IF-&gt;&gt;Cjffi: ARKTS_GetHybridStackTracePc 采 PC + 备份 cjPcSnapshot
+    IF-&gt;&gt;Cjffi: ARKTS_UpdateHybridStackTracePc 写 PcVector
+    Cjffi-&gt;&gt;VM: 更新 PcVector
+    CR-&gt;&gt;TJ: 越界
+    TJ-&gt;&gt;VM: createJSError（覆盖 PcVector）
+    TJ-&gt;&gt;Cjffi: 立即 ARKTS_UpdateHybridStackTracePc(env, cjPcSnapshot) 恢复
+    Cjffi-&gt;&gt;VM: 恢复 PcVector
+    Note over TJ,CJTop: 异常被仓颉调用方捕获（直接拿到 BusinessException 对象）
+    CJTop-&gt;&gt;Biz: e.toString() / e.getMixedStackTrace()（仓颉 API）
+    Biz-&gt;&gt;Cjffi: ARKTS_GetHybridStackTraceStr（PcVector → 符号化字符串）
+    Cjffi-&gt;&gt;VM: 取 PcVector
+    Cjffi-&gt;&gt;HiDbg: 对每帧 OH_HiDebug_SymbolicAddress
+    HiDbg--&gt;&gt;Cjffi: (file, function, line)
+    Cjffi--&gt;&gt;Biz: 「Cangjie + ArkTS (+ Native)」分段字符串
+    Biz--&gt;&gt;CJTop: 返回
+</div><h4 id="场景-carkts-抛出异常无仓颉参与">场景 C：ArkTS 抛出异常（无仓颉参与） </h4>
+<p>互操作完全不参与；ets_runtime 自身在 <code>JSError</code> 创建时已写入 PcVector，faultlog 走原路径。</p>
+<h2 id="6-仓库内目录规划">6. 仓库内目录规划 </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>arkcompiler_cangjie_ark_interop/
+├── doc/
+│   ├── hybridstack_support_cangjie_design.md
+│   └── hybridstack_architecture_design.md         # 本文件
+├── ohos/
+│   ├── ark_interop/
+│   │   ├── js_exception.cj                        # 改：SharedException.cjPcSnapshot + toJSError 恢复
+│   │   └── js_module.cj                           # 改：注册 onCJExceptionCreated
+│   ├── business_exception/
+│   │   └── business_exception.cj                  # 改：toString / getMixedStackTrace 走 HybridStack
+│   └── hybrid_stack/                              # 新增子模块（纯仓颉实现）
+│       ├── hybrid_stack.cj                        # HybridStack.getTrace 等仓颉 API
+│       └── hybrid_stack_ffi.cj                    # @C foreign：3 个 ARKTS_* cjffi 函数声明
+└── test/hybridstack/
+</code></pre><blockquote>
+<p>本仓库不再新增 C/C++ 桥接层；所有 native 调用经 arkui_napi cjffi 中转。</p>
+</blockquote>
+<h2 id="7-关键接口仅列出本设计新增">7. 关键接口（仅列出本设计新增） </h2>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token comment">// cangjie_runtime（新增）</span>
+<span class="token keyword keyword-typedef">typedef</span> <span class="token keyword keyword-void">void</span> <span class="token punctuation">(</span><span class="token operator">*</span>OnCJExceptionCreatedFn<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token operator">*</span> cjException<span class="token punctuation">)</span><span class="token punctuation">;</span>
+MRT_EXPORT <span class="token keyword keyword-void">void</span> <span class="token function">RegisterCJExceptionCreatedHandler</span><span class="token punctuation">(</span>OnCJExceptionCreatedFn fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token comment">// ets_runtime（新增，不直接对互操作开放）</span>
+<span class="token keyword keyword-void">void</span> <span class="token class-name">DFXJSNApi</span><span class="token double-colon punctuation">::</span><span class="token function">UpdateHybridStackTracePc</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> EcmaVM<span class="token operator">*</span> vm<span class="token punctuation">,</span> <span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token operator">*</span> data<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token comment">// arkui_napi/interfaces/inner_api/cjffi/ark_interop/ark_interop_napi.h（新增 3 个中转）</span>
+<span class="token keyword keyword-int">int</span> <span class="token function">ARKTS_UpdateHybridStackTracePc</span><span class="token punctuation">(</span>napi_env env<span class="token punctuation">,</span> <span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token operator">*</span> frames<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-int">int</span> <span class="token function">ARKTS_GetHybridStackTracePc</span><span class="token punctuation">(</span>napi_env env<span class="token punctuation">,</span> <span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token operator">*</span> outFrames<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span> outCount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-int">int</span> <span class="token function">ARKTS_GetHybridStackTraceStr</span><span class="token punctuation">(</span>napi_env env<span class="token punctuation">,</span> <span class="token keyword keyword-void">void</span><span class="token operator">*</span><span class="token operator">*</span> frames<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> count<span class="token punctuation">,</span>
+                                 <span class="token keyword keyword-char">char</span><span class="token operator">*</span> buf<span class="token punctuation">,</span> <span class="token class-name">size_t</span> bufLen<span class="token punctuation">,</span> <span class="token class-name">size_t</span><span class="token operator">*</span> outLen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><pre data-role="codeBlock" data-info="cangjie" class="language-cangjie cangjie"><code>// 本仓库 ohos/hybrid_stack/hybrid_stack.cj（仓颉 API）
+public class HybridStack {
+    // 经 cjffi 调 ARKTS_GetHybridStackTraceStr，返回分段混合栈字符串
+    public static func getTrace(env: JSEnv): String { ... }
+}
+</code></pre><h2 id="8-性能与可优化点">8. 性能与可优化点 </h2>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>描述</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>符号化结果缓存</td>
+<td>仓颉 API 结果缓存到 <code>BusinessException.cachedHybridTrace</code>；C++ 桥接层可选追加 thread_local 缓存</td>
+<td>v1 含实例字段；thread_local 列为可选任务</td>
+</tr>
+<tr>
+<td>PC 写入成本</td>
+<td>仅在异常构造与 toJSError 各一次，O(n)，n ≈ 数十帧</td>
+<td>启用</td>
+</tr>
+<tr>
+<td>FFI 开销</td>
+<td>仅异常路径触发，频次低</td>
+<td>启用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-兼容性--风险">9. 兼容性 / 风险 </h2>
+<ol>
+<li><strong>运行时改动可达性</strong>：本方案的 P0 必须依赖 cangjie_runtime 新增 <code>onCJExceptionCreated</code>。若该改动暂不可落地，则 P0 不可达，仅能在 toJSError 边界提供 P1 的近似方案（ArkTS 帧 + 仓颉 message）。</li>
+<li><strong>ets_runtime 接口落地</strong>：<code>UpdateHybridStackTracePc</code> 必须被接受。若拒绝，整体退化至仓颉侧符号化（P1/P2），faultlog 不含仓颉帧。</li>
+<li><strong>arkui_napi cjffi 中转函数落地</strong>：3 个新增 <code>ARKTS_*</code> 函数必须被 napi 团队接受；否则需另寻互操作访问 <code>EcmaVM</code> 与 HiDebug 的途径。</li>
+<li><strong>多 VM / worker</strong>：每个 vm 独立写入与恢复自身 PcVector，无跨 vm 状态。</li>
+<li><strong>二进制兼容</strong>：<code>BusinessException</code> 公开 API 与错误码不变；新增字段位于 <code>SharedException</code> / 内部，不破坏 ABI。</li>
+<li><strong>API Level</strong>：新增仓颉 API 需打 <code>@APILevel</code> 装饰器（参考 <code>ohos/labels/api_level.cj</code>）。</li>
+</ol>
+<h2 id="10-端到端验证策略">10. 端到端验证策略 </h2>
+<table>
+<thead>
+<tr>
+<th>验证</th>
+<th>方式</th>
+<th>工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元</td>
+<td><code>test/hybridstack/</code> 下 <code>cjpm test</code></td>
+<td><code>.agents/skills/cjpm-build</code></td>
+</tr>
+<tr>
+<td>集成构建</td>
+<td>替换兼容 SDK 产物后 hvigor 打包 VerifyBuild</td>
+<td><code>.agents/skills/verifybuild-e2e-validation</code></td>
+</tr>
+<tr>
+<td>Faultlog</td>
+<td>ArkTS 入口调用仓颉 throw → ArkTS 不 catch → 设备 hilog + faultlog 抓取，确认仓颉 PC 出现在 <code>=====Hybrid Stack=====</code> 段</td>
+<td>手工</td>
+</tr>
+<tr>
+<td>仓颉 API</td>
+<td>仓颉 try/catch 后调用 <code>e.toString()</code> / <code>e.getMixedStackTrace()</code>，输出含 Cangjie / ArkTS / Native 三段</td>
+<td>手工 + 单测</td>
+</tr>
+</tbody>
+</table>
+<h2 id="11-与历史方案的差异">11. 与历史方案的差异 </h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>旧 stitching 方案</th>
+<th>本设计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Faultlog 仓颉栈来源</td>
+<td>互操作侧字符串拼接注入</td>
+<td>ets_runtime PcVector，由 cangjie_runtime 新增回调 + 互操作经 cjffi 写入</td>
+</tr>
+<tr>
+<td>跨边界 PC 覆盖处理</td>
+<td>无</td>
+<td><code>toJSError</code> 内立即用 <code>cjPcSnapshot</code> 恢复</td>
+</tr>
+<tr>
+<td>仓颉 API 混合栈</td>
+<td>字符串拼接</td>
+<td><code>HybridStack.getTrace</code> 经 cjffi 拿 PcVector + HiDebug 符号化，<strong>不依赖 <code>napi_get_hybrid_stack_trace</code></strong></td>
+</tr>
+<tr>
+<td>多 VM 支持</td>
+<td>未考虑</td>
+<td>每 vm 独立，天然支持</td>
+</tr>
+<tr>
+<td>对仓颉运行时依赖</td>
+<td>强（自带 backtrace 抓取与拼接）</td>
+<td><strong>明确要求新增一个构造期回调</strong>，PC 采集与写入由互操作经 cjffi 完成</td>
+</tr>
+<tr>
+<td>上游协作面</td>
+<td>cangjie_runtime + interop</td>
+<td>cangjie_runtime（+1 回调）+ ets_runtime（+1 API）+ arkui_napi cjffi（+3 中转）+ interop</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-后续工作">12. 后续工作 </h2>
+<ol>
+<li>与 cangjie_runtime owner 对齐 <code>onCJExceptionCreated</code> 回调（触发点与 ABI）。</li>
+<li>与 ets_runtime owner 对齐 <code>DFXJSNApi::UpdateHybridStackTracePc</code>。</li>
+<li>与 arkui_napi owner 对齐 3 个 <code>ARKTS_*</code> 中转函数（写 PcVector / 采 PC / 符号化）。</li>
+<li>实施 plan：<a href="../docs/superpowers/plans/2026-04-24-hybridstack-redesign.md"><code>docs/superpowers/plans/2026-04-24-hybridstack-redesign.md</code></a></li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "default"
+}
+
+mermaid.initialize(MERMAID_CONFIG || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('div.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('div.mermaid')
+  })
+} else {
+  await mermaid.run({
+    nodes: document.querySelectorAll('div.mermaid')
+  })
+}
+</script>
+    
+    
+    
+  
+    </body></html>
