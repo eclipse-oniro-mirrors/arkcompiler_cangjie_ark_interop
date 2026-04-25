@@ -10,28 +10,17 @@
 
 | 优先级 | 目标 | 验证场景 |
 | ------ | ---- | -------- |
-| P0 (主要) | faultlog 中能稳定显示仓颉栈帧（异常自仓颉抛出，未被 ArkTS 捕获，最终触发进程崩溃） | ArkTS 入口 → 调用仓颉 → 仓颉 throw → ArkTS 未捕获 → 进程崩溃 → faultlog 含仓颉帧 |
-| P1 (次要) | 仓颉侧 `BusinessException.toString()` / `getMixedStackTrace()`（仓颉 API）至少呈现「Cangjie + ArkTS」混合栈 | 仓颉 try/catch 后调用 toString 打印 |
-| P2 (可选) | 上述混合栈进一步包含 Native (C/C++) 帧 | 同上 |
+| P0 (主要) | faultlog侧，能稳定显示仓颉栈帧（异常自仓颉抛出，未被 ArkTS 捕获，最终触发进程崩溃） | ArkTS 入口 → 调用仓颉 → 仓颉 throw → ArkTS 未捕获 → 进程崩溃 → faultlog 含仓颉帧 |
+| P1 (次要) | 语言侧，仓颉侧 `BusinessException.toString()` / `getMixedStackTrace()`（仓颉 API）至少呈现「Cangjie + ArkTS」混合栈 | 仓颉 try/catch 后调用 toString 打印 |
+| P2 (次要) | 语言侧，上述混合栈进一步包含 Native (C/C++) 帧 | 同上 |
 
 ## 2. 现状、目标差距与关键技术约束
 
 ### 2.1 现有 master 主干实现
 
-当前主干（`feat/mixed-exception-stack-stitching` 已合入路径）在异常跨边界点进行**字符串拼接**式的混合栈输出：
+当前 master 主干（`feat/mixed-exception-stack-stitching` 已合入，即本仓库当前的 master）在异常跨边界点进行**字符串拼接**式的混合栈输出：
 
-```mermaid
-flowchart LR
-    CJBot["Cangjie 内层（throw 点）"] -->|throw| CR[cangjie_runtime]
-    CR -->|unwind 至边界| TJ["Interop toJSError"]
-    TJ -->|createJSError| VM["EcmaVM PcVector（被 ArkTS 帧覆盖）"]
-    TJ -->|@FastNative foreign 直链 libohhidebug| HVDFX["HiViewDFX hidebug 内部接口"]
-    HVDFX -->|OH_HiDebug_BacktraceFromFp / SymbolicAddress| TJ
-    TJ -->|toString 时拼接 [HiDebug] frames=N + legacy| Biz["BusinessException 字符串"]
-    VM -.->|崩溃信号读 PcVector| FL[faultloggerd faultlog]
-    classDef cur fill:#fff5cc,stroke:#d4a017;
-    class TJ,Biz cur;
-```
+![master 主干现状 - 字符串拼接混合栈](./hybridstack_master_state.svg)
 
 要点：
 - HiViewDFX hidebug 采集与符号化已经**通过 `external_deps = [ "hiviewdfx_hidebug:libohhidebug" ]` 内部接口直链**完成，不再使用 dlopen，也不存在本仓库自有的 C++ 桥接层；
