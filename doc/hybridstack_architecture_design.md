@@ -92,7 +92,8 @@ flowchart LR
     ETSApp -->|throw / 调用 CJ| JsExc
 
     CJExc -->|跨边界| IFCallbacks
-    JsExc -->|① 创建新 JSError ② 写仓颉 PC 帧| CJFFI
+    IFCallbacks -->|① 获取 PC ② 备份到 cjPcSnapshot ③ 写入| CJFFI
+    JsExc -->|① 创建新 JSError ② 立即恢复 PC 帧| CJFFI
     CJFFI -->|UpdateHybridStackTracePc| VM
 
     JsExc -->|throw JSError| ETSApp
