@@ -4,9 +4,9 @@
 
 **Goal:** 在 `feat/hybridstack-redesign` 分支上从零实现新方案，使 faultlog 与语言层均能稳定显示仓颉栈帧。
 
-**Architecture:** 复用 ets_runtime 的 `PcVector` 与 `DFXJSNApi::GetHybridStackTrace`；在「仓颉异常对象创建时」通过互操作回调预创建 JSError 并缓存到异常对象，`toJSError` 主路径只做“取回并抛出”而不再创建。上游新增 cjffi C API：`ARKTS_GetPcVectorSnapshot`、`ARKTS_RestorePcVectorSnapshot`、`ARKTS_PushCJFramesToPcVector`。`Snapshot/Restore` 仅作为缓存缺失时的兼容兜底。详见 [`doc/hybridstack_architecture_design.md`](../../../doc/hybridstack_architecture_design.md)。
+**Architecture:** 采用 **PC 指针更新 API 统一方案** — 复用 ets_runtime 的 `PcVector` 与 `DFXJSNApi::GetHybridStackTrace`；在 `toJSError` 中创建新 JSError（自动绑定当前 vm），通过 `ARKTS_RestorePcVectorSnapshot` 恢复 Cangjie 帧的 PC 集合到新 JSError 的 PcVector，完全支持嵌套 JSRuntime 等多 VM 场景。上游新增 cjffi C API：`ARKTS_GetPcVectorSnapshot`、`ARKTS_RestorePcVectorSnapshot`、`ARKTS_AppendPcVector`。详见 [`doc/hybridstack_architecture_design.md`](../../../doc/hybridstack_architecture_design.md) 和 [`doc/multiruntime_jserror_analysis.md`](../../../doc/multiruntime_jserror_analysis.md)。
 
-**Tech Stack:** Cangjie (`.cj`) + C++ (`frameworks/native`) + GN/cjpm 双构建 + cjffi (`ARKTS_UpdateStackInfo`, `napi_get_hybrid_stack_trace`).
+**Tech Stack:** Cangjie (`.cj`) + C++ (`frameworks/native`) + GN/cjpm 双构建 + cjffi (`napi_get_hybrid_stack_trace` + 新增 PC API).
 
 ---
 
@@ -45,10 +45,10 @@
 
 ---
 
-## Task 1: 新增 C++ 桥接骨架 + cjffi 新 API 调用封装
+## Task 1: 新增 C++ 桥接骨架 + cjffi 新 PC API 调用封装
 
 > 本 Task **不修改** ets_runtime / arkui_napi。仅在本仓库内调用上游在 Task 0 spike 结果中锁定的路径：
-> - 路径主选：假定上游已接受 `ARKTS_GetPcVectorSnapshot` / `ARKTS_RestorePcVectorSnapshot` / `ARKTS_PushCJFramesToPcVector`。本 Task 只按该签名转调。
+> - 路径主选：假定上游已接受 `ARKTS_GetPcVectorSnapshot` / `ARKTS_RestorePcVectorSnapshot` / `ARKTS_AppendPcVector`。本 Task 只按该签名转调。
 > - 若 spike 表明上游接口未落地，在本 Task Step 0 中 **加入 weak 符号占位**（`__attribute__((weak))`）与运行时检测，仅语言层路径生效。
 
 **Files:**
@@ -361,36 +361,41 @@
 
 ---
 
-## Task 3: 改造 `js_exception.cj`：主路径取消 createJSError
+## Task 3: 改造 `js_exception.cj`：`toJSError` 创建新 JSError 并恢复 Cangjie PC 帧
+
+**核心思路（PC API 统一方案）：** `toJSError` 每次调用均通过 `createJSError` 创建**全新** JSError（自动绑定当前 vm，天然支持多 VM / 嵌套 JSRuntime），再通过 `HybridStack.restorePcVector(vmAddr, snap)` 将 `SharedException.cjPcSnapshot` 中保存的 Cangjie PC 数组恢复到该新 JSError 的 PcVector，无需任何构造期回调或跨 VM 传递已有 JSError 对象。
 
 **Files:**
-- Modify: `ohos/ark_interop/js_exception.cj`（重点为 `toJSError` / `createJSError`）
-- Modify: `ohos/ark_interop/js_exception.cj` 中 `SharedException` 类：增加 `var fromInteropBoundary: Bool = false`
+- Modify: `ohos/ark_interop/js_exception.cj`（重点为 `toJSError`；`SharedException` 增加 `cjPcSnapshot` 字段）
 - Add unit test: `test/hybridstack/js_exception_pc_preservation_test.cj`
 
 - [ ] **Step 1：先写失败测试**
 
   ```cangjie
   // test/hybridstack/js_exception_pc_preservation_test.cj
-  // 场景：仓颉抛出异常 → 构造期回调已预创建 JSError → toJSError 抛出 → ArkTS 捕获
+  // 场景：SharedException 已携带 cjPcSnapshot → toJSError → ArkTS 捕获
   // 过程：
-  //   1. 在异常构造回调完成后读取 pending/preCreated JSError
-  //   2. 调用 toJSError
-  //   3. 断言 toJSError 未触发 createJSError（可用计数器或 mock）
-  //   4. 断言被抛出的就是预创建对象
+  //   1. 构造一个 SharedException，手动设置非空 cjPcSnapshot
+  //   2. 调用 toJSError(env)
+  //   3. 断言总是调用了 createJSError（新建 JSError，非复用旧对象）
+  //   4. 断言调用了 HybridStack.restorePcVector（PcVector 已被恢复）
+  //   5. 断言 PcVector 帧数 == cjPcSnapshot.size()
   ```
 
 - [ ] **Step 2：运行测试确认失败**
 
   Run：按 `.agents/skills/cjpm-build` 指定的 test 命令执行；Expected: FAIL。
 
-- [ ] **Step 3：修改 `toJSError` / `createJSError`**
+- [ ] **Step 3：修改 `toJSError`；为 `SharedException` 增加 `cjPcSnapshot` 字段**
 
   主路径实现：
-  - `toJSError` 入口首先从异常对象读取预创建 JSError（构造期回调写入）。
-  - 读取成功：直接 `ARKTS_Throw(preCreatedJSError)`，**不调用 `createJSError`**。
-  - 读取失败：进入兼容兜底 `createJSError + Snapshot/Restore`，并打印告警日志（用于发现构造回调未生效）。
-  - `SharedException` 类增加 `var fromInteropBoundary: Bool = false`；仅在构造期回调预创建路径设为 `true`。
+  - `SharedException` 类增加 `var cjPcSnapshot: ?Array<UIntNative> = None`。
+  - `toJSError` 主路径：
+    1. 调用 `createJSError(env, message, stack)` 创建新 JSError（绑定当前 vm）。
+    2. 若 `cjPcSnapshot` 非 `None`，将其转为 `CPointer<UIntNative>` 后调用
+       `HybridStack.restore(vmAddr, PcSnapshot(framesPtr, count))`，将 Cangjie 帧恢复到新 JSError 的 PcVector。
+    3. 调用 `ARKTS_Throw(newJSError)`。
+  - 无兼容兜底分支、无 VM 地址比较逻辑；代码路径单一。
 
 - [ ] **Step 4：测试通过**
 
@@ -400,46 +405,55 @@
 
   ```powershell
   git add ohos/ark_interop/js_exception.cj test/hybridstack/
-  git commit -m "fix(hybridstack): make toJSError throw pre-created JSError from CJ exception creation callback"
+  git commit -m "feat(hybridstack): toJSError creates new JSError and restores CJ PC frames via HybridStack.restorePcVector"
   ```
 
 ---
 
-## Task 4: 接入仓颉异常构造回调（主路径，必做）
+## Task 4: 初始化 `cjPcSnapshot`——从仓颉异常 backtrace 提取 PC 数组
+
+**核心思路（PC API 统一方案）：** 在捕获到仓颉异常时（互操作边界 catch 块内），直接从异常对象的 backtrace 提取 PC 指针数组并赋值给 `SharedException.cjPcSnapshot`。无需注册任何构造期回调，无需跨 VM 缓存预创建对象，实现最简单的直接初始化路径。
 
 **Files:**
-- Modify: `ohos/ark_interop/js_module.cj`（扩展 `CJModuleCallbacks` / `CJUncaughtExceptionInfo`）
-- Modify: 互操作启动初始化处（`registerCJUncaughtExceptionHandler` 调用点）
+- Modify: `ohos/ark_interop/js_exception.cj`（互操作边界 catch 块中填充 `cjPcSnapshot`）
+- Add unit test: `test/hybridstack/cj_pc_snapshot_init_test.cj`
 
-- [ ] **Step 1：扩展回调结构**
+- [ ] **Step 1：先写失败测试**
 
-  在 `CJModuleCallbacks` 中追加 `onCJExceptionCreated: CFunc<(JSEnv, JSValue_) -> Unit>`，实现内部：
-  1. 基于当前仓颉异常对象创建并缓存 JSError（绑定 `SharedException.fromInteropBoundary = true`）。
-  2. 取异常对象内已记录帧并调用 `HybridStack.appendFrames(vmAddr, framesPtr, count)`。
-
-- [ ] **Step 2：注册**
-
-  在初始化点调用 cangjie_runtime 暴露的回调注册 API；确保回调触发时机是「异常对象构造完成后、抛出前」。
-
-- [ ] **Step 3：单测**
-
-  新增 `test/hybridstack/cj_exception_precreate_js_error_test.cj`：
-  1. 抛出仓颉异常，验证回调已为该异常对象写入 preCreatedJSError。
-  2. 调用 `toJSError`，验证 `createJSError` 调用计数为 0。
-  3. 验证 `HybridStack.snapshot(vmAddr).count > 0`。
-
-- [ ] **Step 4：提交**
-
-  ```powershell
-  git add ohos/ark_interop/js_module.cj ohos/ark_interop/*.cj test/hybridstack/
-  git commit -m "feat(hybridstack): create JSError at CJ exception creation callback and reuse in toJSError"
+  ```cangjie
+  // test/hybridstack/cj_pc_snapshot_init_test.cj
+  // 场景：仓颉抛出异常 → 互操作边界捕获 → cjPcSnapshot 已被正确填充
+  // 过程：
+  //   1. 在测试中抛出带有 backtrace 的仓颉异常
+  //   2. 在 catch 块中将其包装为 SharedException
+  //   3. 断言 cjPcSnapshot != None
+  //   4. 断言 cjPcSnapshot 数组长度 > 0（backtrace 至少包含一帧）
+  //   5. 断言数组中各元素为非零 PC 值
   ```
 
-### Task 4 降级兜底（仅在运行时回调短期不可用时启用）
+- [ ] **Step 2：运行测试确认失败**
 
-- [ ] **Step 1**：临时保留 `toJSError` 兼容分支（`createJSError + Snapshot/Restore`），并在日志中标注 `HYBRIDSTACK_FALLBACK_ACTIVE`。
-- [ ] **Step 2**：注释中标注该分支为临时方案，不满足“原始思路”最终目标。
-- [ ] **Step 3**：提交，commit 信息 `chore(hybridstack): add temporary fallback when CJ creation callback is unavailable`。
+  Run：按 `.agents/skills/cjpm-build` 指定的 test 命令执行；Expected: FAIL。
+
+- [ ] **Step 3：实现 `cjPcSnapshot` 初始化**
+
+  在互操作边界 catch 块（`SharedException` 构造或填充处）增加：
+  1. 从仓颉异常对象读取 backtrace（`getStackTrace()` 或等效 API）。
+  2. 遍历 backtrace 帧，提取各帧的 PC 指针（`UIntNative`）组成 `Array<UIntNative>`。
+  3. 赋值 `sharedEx.cjPcSnapshot = Some(pcArray)`。
+  - **无需注册回调**；整个初始化在同步 catch 代码路径内完成。
+  - 若 backtrace 为空或不支持，设 `cjPcSnapshot = None`（Task 3 中 `toJSError` 对 `None` 的处理已有覆盖）。
+
+- [ ] **Step 4：测试通过**
+
+  Run 同 Step 2；Expected: PASS。
+
+- [ ] **Step 5：提交**
+
+  ```powershell
+  git add ohos/ark_interop/js_exception.cj test/hybridstack/
+  git commit -m "feat(hybridstack): initialize cjPcSnapshot from CJ exception backtrace at interop boundary"
+  ```
 
 ---
 
