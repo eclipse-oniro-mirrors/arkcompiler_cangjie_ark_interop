@@ -22,6 +22,8 @@
 
 ![master 主干现状 - 字符串拼接混合栈](./hybridstack_master_state.svg)
 
+> 源文件：[hybridstack_master_state.drawio](./hybridstack_master_state.drawio)
+
 实现要点（基于 `ohos/business_exception/business_exception.cj`、`ohos/ark_interop/js_exception.cj`、`ohos/ark_interop/js_func.cj`、`ohos/ark_interop/js_constants.cj`）：
 
 - `BusinessException` 维护 `kind: Normal | CrossCangjie(Exception, Array<String>) | CrossArkTS(String, Array<String>)` 枚举；
