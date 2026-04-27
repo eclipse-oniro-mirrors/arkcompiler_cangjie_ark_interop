@@ -43,7 +43,7 @@ export default function TestExternal() {
     it('test00', 0, () => {
       let student = new lib.MyObject_test_external_00("tom", 19, 99)
       expect(student.name).assertEqual('tom');
-      lib.testExternal00(student);
+      lib.test_external_00_success(student);
     })
 
     it("test01", 0, (): Promise<void> => {
@@ -51,7 +51,7 @@ export default function TestExternal() {
     })
 
     it("test02", 0, () => {
-        lib.testRuntime()
+        lib.test_JSRuntime_mainContext_success()
     })
   })
   afterAll(()=> {

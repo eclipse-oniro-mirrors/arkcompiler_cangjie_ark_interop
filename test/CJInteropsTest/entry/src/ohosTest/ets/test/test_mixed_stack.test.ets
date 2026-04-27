@@ -29,7 +29,7 @@ export default function TestMixedStack() {
     it('TestMixedStackCangjie', 0, ()=> {
       let error: Error | undefined = undefined
       try {
-        lib.testMixedStack0((callback)=> {
+        lib.test_mixedStack_asClass_throwException34300005((callback)=> {
           try {
             callback()
           } catch (e) {
@@ -58,7 +58,7 @@ export default function TestMixedStack() {
     it('TestMixedStackArkTS', 0, ()=> {
       let error: Error | undefined = undefined
       try {
-        lib.testMixedStack1((callback)=> {
+        lib.test_mixedStack_nestedCall_propagateArkTsError_success((callback)=> {
           try {
             callback(() => {
               throw new BusinessError(123456, "This is a BusinessError")
@@ -87,13 +87,13 @@ export default function TestMixedStack() {
       }
     })
     it('TestMixedStackFirstErr', 0, ()=> {
-      let good = lib.testMixedStack2(callback => {
+      let good = lib.test_mixedStack_caughtException_identityMismatch_success(callback => {
         callback()
       })
       expect(good).assertTrue()
     })
     it('TestMixedStackGetStackTrace', 0, () => {
-      let good = lib.testMixedStack3(callback => {
+      let good = lib.test_mixedStack_stackTrace_noEtsFrame_success(callback => {
         callback()
       })
       expect(good).assertTrue()

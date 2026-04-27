@@ -51,70 +51,70 @@ export default function testBigInt01() {
     print(`${999999999999999}`);
 
     it('test13', 0, () => {
-      lib.testBigInt13(int64MinValue - 1n);
+      lib.test_JSBigInt_case_06_success(int64MinValue - 1n);
     })
     it('test14', 0, () => {
-      lib.testBigInt14(int64MinValue);
+      lib.test_JSBigInt_case_06_success(int64MinValue);
     })
     it('test15', 0, () => {
-      lib.testBigInt15(int64MinValue + 1n);
+      lib.test_JSBigInt_case_06_success(int64MinValue + 1n);
     })
     it('test16', 0, () => {
-      lib.testBigInt16(-114514n);
+      lib.test_JSBigInt_case_06_success(-114514n);
     })
     it('test17', 0, () => {
-      lib.testBigInt17(-1n);
+      lib.test_JSBigInt_case_06_success(-1n);
     })
     it('test18', 0, () => {
-      lib.testBigInt18(0n);
+      lib.test_JSBigInt_case_06_success(0n);
     })
     it('test19', 0, () => {
-      lib.testBigInt19(1n);
+      lib.test_JSBigInt_case_06_success(1n);
     })
     it('test20', 0, () => {
-      lib.testBigInt20(114514n);
+      lib.test_JSBigInt_case_06_success(114514n);
     })
     it('test21', 0, () => {
-      lib.testBigInt21(int64MaxValue - 1n);
+      lib.test_JSBigInt_case_06_success(int64MaxValue - 1n);
     })
     it('test22', 0, () => {
-      lib.testBigInt22(int64MaxValue);
+      lib.test_JSBigInt_case_06_success(int64MaxValue);
     })
     it('test23', 0, () => {
-      lib.testBigInt23(int64MaxValue + 1n);
+      lib.test_JSBigInt_case_06_success(int64MaxValue + 1n);
     })
     it('test24', 0, () => {
-      lib.testBigInt24(int64MinValue - 1n);
+      lib.test_JSBigInt_case_07_success(int64MinValue - 1n);
     })
     it('test25', 0, () => {
-      lib.testBigInt25(int64MinValue);
+      lib.test_JSBigInt_case_08_success(int64MinValue);
     })
     it('test26', 0, () => {
-      lib.testBigInt26(int64MinValue + 1n);
+      lib.test_JSBigInt_case_09_success(int64MinValue + 1n);
     })
     it('test27', 0, () => {
-      lib.testBigInt27(-114514n);
+      lib.test_JSBigInt_case_10_success(-114514n);
     })
     it('test28', 0, () => {
-      lib.testBigInt28(-1n);
+      lib.test_JSBigInt_case_11_success(-1n);
     })
     it('test29', 0, () => {
-      lib.testBigInt29(0n);
+      lib.test_JSBigInt_case_12_success(0n);
     })
     it('test30', 0, () => {
-      lib.testBigInt30(1n);
+      lib.test_JSBigInt_case_13_success(1n);
     })
     it('test31', 0, () => {
-      lib.testBigInt31(114514n);
+      lib.test_JSBigInt_case_14_success(114514n);
     })
     it('test32', 0, () => {
-      lib.testBigInt32(int64MaxValue - 1n);
+      lib.test_JSBigInt_case_15_success(int64MaxValue - 1n);
     })
     it('test33', 0, () => {
-      lib.testBigInt33(int64MaxValue);
+      lib.test_JSBigInt_case_16_success(int64MaxValue);
     })
     it('test34', 0, () => {
-      lib.testBigInt34(int64MaxValue + 1n);
+      lib.test_JSBigInt_case_17_success(int64MaxValue + 1n);
     })
   })
 }

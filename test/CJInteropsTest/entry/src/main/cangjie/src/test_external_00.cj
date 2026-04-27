@@ -17,12 +17,16 @@ package entry
 
 import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
-let _ = JSModule.registerModule { jsContext: JSContext, jsObject: JSObject => 
-    jsObject["testExternal00"] = jsContext.function(test_external_00).toJSValue()
-    jsObject["testRuntime"] = jsContext.function(testRuntime).toJSValue()
+let _ = JSModule.registerModule {
+    jsContext: JSContext, jsObject: JSObject =>
+        jsObject["test_external_00_success"] = jsContext.function(test_external).toJSValue()
+        jsObject["test_JSRuntime_mainContext_success"] = jsContext
+            .function(test_JSRuntime_mainContext_success)
+            .toJSValue()
 }
 
-func testRuntime(c: JSContext, _: JSCallInfo): JSValue {
+// JSRuntime 构造后访问 mainContext、getNapiEnv
+func test_JSRuntime_mainContext_success(c: JSContext, _: JSCallInfo): JSValue {
     let r = JSRuntime()
     let context = r.mainContext
     let env = r.getNapiEnv()
@@ -68,17 +72,17 @@ class MyObject_test_external_00 <: SharedObject {
             "name",
             getter: {
                 jsContext: JSContext, jsCallInfo: JSCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let student = MyObject_test_external_00.of(jsObject)
-                jsContext.string(student.name).toJSValue()
+                    let jsObject = jsCallInfo.thisArg.asObject()
+                    let student = MyObject_test_external_00.of(jsObject)
+                    jsContext.string(student.name).toJSValue()
             },
             setter: {
                 jsContext: JSContext, jsCallInfo: JSCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let student = MyObject_test_external_00.of(jsObject)
-                let newName = jsCallInfo[0].toString()
-                student.name = newName
-                jsContext.undefined().toJSValue()
+                    let jsObject = jsCallInfo.thisArg.asObject()
+                    let student = MyObject_test_external_00.of(jsObject)
+                    let newName = jsCallInfo[0].toString()
+                    student.name = newName
+                    jsContext.undefined().toJSValue()
             }
         )
         //        c = jsClass
@@ -86,7 +90,8 @@ class MyObject_test_external_00 <: SharedObject {
     }
 }
 
-func test_external_00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+// external：js 传入已注册对象，cj 侧校验 callInfo 单一 object 参数
+func test_external(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.equals(jsCallInfo.count, 1)
     Assert.isTrue(jsCallInfo[0].isObject())
     let jsObject = jsCallInfo[0].asObject()

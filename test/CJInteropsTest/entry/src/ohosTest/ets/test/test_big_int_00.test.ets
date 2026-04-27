@@ -21,52 +21,52 @@ export default function testBigInt00() {
   describe('TestBigInt01', () => {
     it('test00', 0, () => {
       const bigInt = 123n;
-      lib.testBigInt00(bigInt);
+      lib.test_JSBigInt_case_00_success(bigInt);
     })
     it('test01', 0, () => {
-      const bigInt = lib.testBigInt01();
+      const bigInt = lib.test_JSBigInt_case_01_success();
       expect(typeof bigInt).assertEqual('bigint');
     })
     it('test02', 0, () => {
       const bigInt = BigInt('123');
-      lib.testBigInt02(bigInt);
+      lib.test_JSBigInt_case_00_success(bigInt);
     })
     // 一般使用toInt64时，不丢失精度转换为Int64
     it('test03', 0, () => {
       const bigInt = 114514n;
-      lib.testBigInt03(bigInt);
+      lib.test_JSBigInt_case_02_success(bigInt);
     })
     // 一般使用toBigInt
     it('test04', 0, () => {
       const bigInt = 3n;
-      lib.testBigInt04(bigInt);
+      lib.test_JSBigInt_case_03_success(bigInt);
     })
     // 一般使用toInt64时，丢失精度转换为Int64
     it('test05', 0, () => {
       const int64Max = 9_223_372_036_854_775_807n;
       const bigInt = int64Max + 3n;
-      lib.testBigInt05(bigInt);
+      lib.test_JSBigInt_case_04_success(bigInt);
     })
     // cj侧构造的bigint在js侧可以与另一个bigint正常进行数学运算
     it('test06', 0, () => {
-      const bigInt = lib.testBigInt06();
+      const bigInt = lib.test_JSBigInt_case_05_success();
       const result = bigInt + 1n;
       expect(result).assertEqual(4n);
     })
     // BigInt.prototype.toString()
     it('test07', 0, () => {
-      const bigInt = lib.testBigInt07();
+      const bigInt = lib.test_JSBigInt_case_05_success();
       expect(bigInt.toString()).assertEqual('3');
     })
     // BigInt.prototype.valueOf()
     it('test08', 0, () => {
-      const bigInt = lib.testBigInt08();
+      const bigInt = lib.test_JSBigInt_case_05_success();
       expect(bigInt.valueOf()).assertEqual(bigInt);
       expect(bigInt.valueOf()).assertEqual(3n);
     })
     // BigInt.prototype.toLocaleString()
     it('test09', 0, () => {
-      const bigInt = lib.testBigInt09();
+      const bigInt = lib.test_JSBigInt_case_05_success();
       expect(bigInt.toLocaleString()).assertEqual('3');
     })
   })

@@ -18,18 +18,17 @@ package entry
 import ohos.business_exception.*
 import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
-func testException00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_throwException(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     throw Exception("message of this exception")
 }
 
-func testException01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSFunction_throwException(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsCallInfo[0].asFunction().call()
     jsContext.undefined().toJSValue()
 }
 
 let _ = JSModule.registerModule {
     jsContext, jsObject =>
-    jsObject["testException00"] = jsContext.function(testException00).toJSValue()
-    jsObject["testException01"] = jsContext.function(testException01).toJSValue()
-
+        jsObject["test_throwException"] = jsContext.function(test_throwException).toJSValue()
+        jsObject["test_JSFunction_throwException"] = jsContext.function(test_JSFunction_throwException).toJSValue()
 }

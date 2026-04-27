@@ -16,17 +16,31 @@
 package entry.pure
 
 import ohos.ark_interop.*
+import std.sync.*
+import std.runtime.*
 import std.unittest.testmacro.*
 import std.unittest.*
 
 @Test
 class TestJSCallInfo {
     @TestCase
-    func testJSCallInfo(): Unit {
+    func test_JSCallInfo_operatorGet_throwException34300004_threadMismatch() {
         let jsContext = getJSContext()
-        await (jsContext) {
-            let testMismatch: JSLambda = {
-                _, callInfo =>
+        let callback = jsContext.function {
+            context, callInfo =>
+                testThreadMismatch {
+                    callInfo[0]
+                }
+                context.undefined().toJSValue()
+        }
+        callback.call(jsContext.number(1.0).toJSValue())
+    }
+
+    @TestCase
+    func test_JSCallInfo_operatorGet_negativeIndex_throwException(): Unit {
+        let jsContext = getJSContext()
+        let testMismatch: JSLambda = {
+            _, callInfo =>
                 var mismatchResult = jsContext.boolean(false)
                 try {
                     callInfo[-1]
@@ -34,11 +48,9 @@ class TestJSCallInfo {
                     mismatchResult = jsContext.boolean(true)
                 }
                 return mismatchResult.toJSValue()
-            }
-
-            let mismatchResult = jsContext.function(testMismatch).call().asBoolean()
-            @Expect(mismatchResult.toBool())
         }
 
+        let mismatchResult = jsContext.function(testMismatch).call().asBoolean()
+        @Expect(mismatchResult.toBool())
     }
 }

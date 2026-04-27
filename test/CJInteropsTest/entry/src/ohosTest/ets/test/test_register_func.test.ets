@@ -21,10 +21,12 @@ import * as lib from "libentry.so"
 export default function testJSModule01() {
   describe('TestRegisterFunc', () => {
     it('test00', 0, () => {
-      expect(lib.testRegisterFunc00()).assertEqual('testRegisterFunc00');
+      expect(lib.test_JSModule_registerFunc_JSLambda_success()).assertEqual(
+        'test_JSModule_registerFunc_JSLambda_success');
     })
     it('test01', 0, () => {
-      expect(lib.testRegisterFunc01()).assertEqual('testRegisterFunc01');
+      expect(lib.test_JSModule_registerFunc_FuncRegister_success()).assertEqual(
+        'test_JSModule_registerFunc_FuncRegister_success');
     })
   })
 }

@@ -45,8 +45,8 @@ class HilogChannel {
     }
 }
 
-let _ = { =>
-    Process.current.setEnv("GCOV_PREFIX", "/data/storage/el1/base/cov")
+let _ = {
+    => Process.current.setEnv("GCOV_PREFIX", "/data/storage/el1/base/cov")
 }()
 
 @FastNative
@@ -60,7 +60,7 @@ func gcov_dump(): Unit {
         if (handle.isNull()) {
             return
         }
-        let call = CFunc<()->Unit>(handle)
+        let call = CFunc<() -> Unit>(handle)
         call()
     }
     Hilog.error(0, "test", "call gcov_dump")
@@ -153,9 +153,9 @@ public class Assert {
             logger.error(
                 """
 approxEquals64(expected =${expected.format(".30e")},
-                                           actual   =${actual.format(".30e")},
-                                           tolerance=${tolerance})"""
-            )
+                                           actual   =${actual
+                    .format(".30e")},
+                                           tolerance=${tolerance})""")
         } else {
             logger.info("approxEquals success: ${reason}")
         }
@@ -166,7 +166,8 @@ approxEquals64(expected =${expected.format(".30e")},
             fail(
                 """
 approxEquals32(expected =${expected.format(".20e")},
-                                           actual   =${actual.format(".20e")},
+                                           actual   =${actual
+                    .format(".20e")},
                                            tolerance=${tolerance})""",
                 reason
             )
@@ -178,7 +179,8 @@ approxEquals32(expected =${expected.format(".20e")},
             fail(
                 """
 approxEquals16(expected =${expected.format(".10e")},
-                                           actual   =${actual.format(".10e")},
+                                           actual   =${actual
+                    .format(".10e")},
                                            tolerance=${tolerance})""",
                 reason
             )
@@ -198,8 +200,7 @@ approxEquals16(expected =${expected.format(".10e")},
                 " Reason: '${reason}'"
             }
             throw AssertException(
-                "Assertion 'throws' failed: the exception with the message '${exceptionMessage}' is not what was expected.${reasonStr}"
-            )
+                "Assertion 'throws' failed: the exception with the message '${exceptionMessage}' is not what was expected.${reasonStr}")
         }
         fail("throws", reason)
     }
@@ -217,16 +218,17 @@ func isNaN<T>(item: T): Bool {
 }
 
 func fail(assertionName: String, reason: String) {
-    try {
-        throw Exception()
-    } catch (e: Exception) {
-        let sb = StringBuilder(assertionName)
-        sb.append("\n")
-        e.getStackTrace() |>
-            forEach<StackTraceElement> {
-            s: StackTraceElement => sb.append(
-                "\t\tat ${s.declaringClass}.${s.methodName}(${s.fileName}:${s.lineNumber})\n")
-        }
-        logger.error(sb.toString())
-    }
+    throw AssertException("${assertionName}, reason=${reason}")
+    // try {
+    //     throw Exception()
+    // } catch (e: Exception) {
+    //     let sb = StringBuilder(assertionName)
+    //     sb.append("\n")
+    //     e.getStackTrace() |>
+    //         forEach<StackTraceElement> {
+    //         s: StackTraceElement => sb.append(
+    //             "\t\tat ${s.declaringClass}.${s.methodName}(${s.fileName}:${s.lineNumber})\n")
+    //     }
+    //     logger.error(sb.toString())
+    // }
 }

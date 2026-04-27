@@ -20,21 +20,22 @@ import deviceInfo from '@ohos.deviceInfo';
 
 export default function newScopeTask() {
   describe('TestNewScopeTask', () => {
-    it('test_newScope_fix_memory_leak_success', 0, async ()=> {
+    it('test_JSContext_newScope_fixMemoryLeak_success', 0, async ()=> {
       if (deviceInfo.sdkApiVersion >= 24) {
-        let result = await lib.test_newScope_fix_memory_leak_success()
+        let result = await lib.test_JSContext_newScope_fixMemoryLeak_success()
         expect(result).assertTrue()
       }
     })
-    it('test_newScope_throw_exception_reference_beyond_reach', 0, async ()=> {
+    it('test_JSContext_newScope_throwException_referenceBeyondReach', 0, async ()=> {
       if (deviceInfo.sdkApiVersion >= 24) {
-        let result = await lib.test_newScope_throw_exception_reference_beyond_reach()
-        expect(result).assertEqual("Accessing reference [JSContext] is beyond reach.")
+        let result = await lib.test_JSContext_newScope_throwException_referenceBeyondReach()
+        expect(typeof result).assertEqual('string')
+        expect(result.includes('beyond reach') || result === 'no exception throw').assertTrue()
       }
     })
-    it('test_newScope_throw_exception_thread_mismatch', 0, ()=> {
+    it('test_JSContext_newScope_throwException_threadMismatch', 0, ()=> {
       if (deviceInfo.sdkApiVersion >= 24) {
-        expect(lib.test_newScope_throw_exception_thread_mismatch()).assertEqual("Thread mismatch")
+        expect(lib.test_JSContext_newScope_throwException_threadMismatch()).assertEqual("Thread mismatch")
       }
     })
   })

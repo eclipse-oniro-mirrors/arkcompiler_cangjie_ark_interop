@@ -20,71 +20,77 @@ import std.math.{MathExtension, abs}
 import std.math.numeric.BigInt
 import ohos.device_info.DeviceInfo
 
+// registerModule：导出 undefined / null / 基本类型 / 函数 / 注册类 / symbol / 数组 / 普通对象 / bigint / ArrayBuffer / external；条件编译 requireArkModule 委托
 let _ = JSModule.registerModule {
     jsContext: JSContext, jsObject: JSObject =>
-    jsObject["testRegisterModule00"] = jsContext.undefined().toJSValue()
-    jsObject["testRegisterModule01"] = jsContext.null().toJSValue()
-    jsObject["testRegisterModule02"] = jsContext.boolean(true).toJSValue()
-    jsObject["testRegisterModule03"] = jsContext.number(114.514).toJSValue()
-    jsObject["testRegisterModule04"] = jsContext.string("hello world").toJSValue()
-    jsObject["testRegisterModule05"] = jsContext.function {
-        jsContext, jsCallInfo => jsContext.number(jsCallInfo[0].toNumber() + jsCallInfo[1].toNumber()).toJSValue()
-    }.toJSValue()
-    jsObject["testRegisterModule06"] = {
-        =>
-        let jsClass = jsContext.clazz(Person.constructor)
-        jsClass.addProperty("gender", jsContext.string("male").toJSValue())
-        jsClass.addAccessor(
-            "name",
-            getter: {
-                jsContext, jsCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
-                jsContext.string(person.name).toJSValue()
-            },
-            setter: {
-                jsContext, jsCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
-                person.name = jsCallInfo[0].toString()
-                jsContext.undefined().toJSValue()
-            }
-        )
-        jsClass.addAccessor(
-            "age",
-            getter: {
-                jsContext, jsCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
-                person.age.toJSValue(jsContext)
-            },
-            setter: {
-                jsContext, jsCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
-                person.name = jsCallInfo[0].toString()
-                jsContext.undefined().toJSValue()
-            }
-        )
-        jsClass
-    }().toJSValue()
-    jsObject["testRegisterModule07"] = jsContext.symbol().toJSValue()
-    jsObject["testRegisterModule08"] = jsContext.array(
-        [jsContext.number(1.0).toJSValue(), jsContext.boolean(true).toJSValue()]).toJSValue()
-    jsObject["testRegisterModule09"] = {
-        =>
-        let jsObject = jsContext.object()
-        jsObject.defineOwnProperty("name", jsContext.string("tom").toJSValue())
-        jsObject
-    }().toJSValue()
-    jsObject["testRegisterModule10"] = jsContext.bigint(BigInt("12345678901234567890")).toJSValue()
-    jsObject["testRegisterModule11"] = jsContext.arrayBuffer(114514).toJSValue()
-    jsObject["testRegisterModule12"] = jsContext.external(Person("tom", 23)).toJSValue()
-    if (DeviceInfo.sdkApiVersion >= 23) {
-        jsObject["requireArkModule"] = jsContext.function {context, callInfo =>
-            context.requireArkModule(callInfo[0].toString())
+        jsObject["test_JSModule_registerModule_exportUndefined_success"] = jsContext.undefined().toJSValue()
+        jsObject["test_JSModule_registerModule_exportNull_success"] = jsContext.null().toJSValue()
+        jsObject["test_JSModule_registerModule_exportBoolean_success"] = jsContext.boolean(true).toJSValue()
+        jsObject["test_JSModule_registerModule_exportNumber_success"] = jsContext.number(114.514).toJSValue()
+        jsObject["test_JSModule_registerModule_exportString_success"] = jsContext.string("hello world").toJSValue()
+        jsObject["test_JSModule_registerModule_exportFuncAddTwoNumbers_success"] = jsContext.function {
+            jsContext, jsCallInfo => jsContext.number(jsCallInfo[0].toNumber() + jsCallInfo[1].toNumber()).toJSValue()
         }.toJSValue()
-    }
+        jsObject["test_JSModule_registerModule_exportClassPerson_success"] = {
+            =>
+                let jsClass = jsContext.clazz(Person.constructor)
+                jsClass.addProperty("gender", jsContext.string("male").toJSValue())
+                jsClass.addAccessor(
+                    "name",
+                    getter: {
+                        jsContext, jsCallInfo =>
+                            let jsObject = jsCallInfo.thisArg.asObject()
+                            let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                            jsContext.string(person.name).toJSValue()
+                    },
+                    setter: {
+                        jsContext, jsCallInfo =>
+                            let jsObject = jsCallInfo.thisArg.asObject()
+                            let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                            person.name = jsCallInfo[0].toString()
+                            jsContext.undefined().toJSValue()
+                    }
+                )
+                jsClass.addAccessor(
+                    "age",
+                    getter: {
+                        jsContext, jsCallInfo =>
+                            let jsObject = jsCallInfo.thisArg.asObject()
+                            let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                            person.age.toJSValue(jsContext)
+                    },
+                    setter: {
+                        jsContext, jsCallInfo =>
+                            let jsObject = jsCallInfo.thisArg.asObject()
+                            let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                            person.name = jsCallInfo[0].toString()
+                            jsContext.undefined().toJSValue()
+                    }
+                )
+                jsClass
+        }().toJSValue()
+        jsObject["test_JSModule_registerModule_exportSymbol_success"] = jsContext.symbol().toJSValue()
+        jsObject["test_JSModule_registerModule_exportArray_success"] = jsContext
+            .array([jsContext.number(1.0).toJSValue(), jsContext.boolean(true).toJSValue()])
+            .toJSValue()
+        jsObject["test_JSModule_registerModule_exportPlainObject_success"] = {
+            =>
+                let jsObject = jsContext.object()
+                jsObject.defineOwnProperty("name", jsContext.string("tom").toJSValue())
+                jsObject
+        }().toJSValue()
+        jsObject["test_JSModule_registerModule_exportBigInt_success"] = jsContext
+            .bigint(BigInt("12345678901234567890"))
+            .toJSValue()
+        jsObject["test_JSModule_registerModule_exportArrayBuffer_success"] = jsContext.arrayBuffer(114514).toJSValue()
+        jsObject["test_JSModule_registerModule_exportExternal_success"] = jsContext
+            .external(Person("tom", 23))
+            .toJSValue()
+        if (DeviceInfo.sdkApiVersion >= 23) {
+            jsObject["test_JSContext_requireArkModule_success"] = jsContext.function {
+                context, callInfo => context.requireArkModule(callInfo[0].toString())
+            }.toJSValue()
+        }
 }
 
 class Person <: SharedObject {
@@ -108,32 +114,32 @@ class Person <: SharedObject {
             "name",
             getter: {
                 jsContext, jsCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
-                jsContext.string(person.name).toJSValue()
+                    let jsObject = jsCallInfo.thisArg.asObject()
+                    let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                    jsContext.string(person.name).toJSValue()
             },
             setter: {
                 jsContext, jsCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
-                person.name = jsCallInfo[0].toString()
-                jsContext.undefined().toJSValue()
+                    let jsObject = jsCallInfo.thisArg.asObject()
+                    let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                    person.name = jsCallInfo[0].toString()
+                    jsContext.undefined().toJSValue()
             }
         )
         jsClass.addAccessor(
             "age",
             getter: {
                 jsContext, jsCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
-                person.age.toJSValue(jsContext)
+                    let jsObject = jsCallInfo.thisArg.asObject()
+                    let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                    person.age.toJSValue(jsContext)
             },
             setter: {
                 jsContext, jsCallInfo =>
-                let jsObject = jsCallInfo.thisArg.asObject()
-                let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
-                person.age = Int64(jsCallInfo[0].toNumber())
-                jsContext.undefined().toJSValue()
+                    let jsObject = jsCallInfo.thisArg.asObject()
+                    let person = jsObject.getAttachInfo().getOrThrow().cast<Person>().getOrThrow()
+                    person.age = Int64(jsCallInfo[0].toNumber())
+                    jsContext.undefined().toJSValue()
             }
         )
         jsClass

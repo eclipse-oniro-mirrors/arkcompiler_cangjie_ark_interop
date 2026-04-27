@@ -17,7 +17,7 @@ package entry
 
 import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
 
-func testPostJSTask00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSContext_isInBindThread_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.isTrue(jsContext.isInBindThread())
     spawn {
         Assert.isFalse(jsContext.isInBindThread())
@@ -25,7 +25,7 @@ func testPostJSTask00(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     jsContext.undefined().toJSValue()
 }
 
-func testPostJSTask01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+func test_JSPromiseCapability_resolve_undefined_success_1(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     let a = jsCallInfo[0].toNumber()
     let b = jsCallInfo[1].toNumber()
     let f = jsCallInfo[2].asFunction()
@@ -44,12 +44,15 @@ func testPostJSTask01(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     //            promise.resolve(jsContext.undefined().toJSValue())
     //        }
     //    }
-    logger.error("hello")
     result
 }
 
 let _ = JSModule.registerModule {
     jsContext, jsObject =>
-    jsObject["testPostJSTask00"] = jsContext.function(testPostJSTask00).toJSValue()
-    jsObject["testPostJSTask01"] = jsContext.function(testPostJSTask01).toJSValue()
+        jsObject["test_JSContext_isInBindThread_success"] = jsContext
+            .function(test_JSContext_isInBindThread_success)
+            .toJSValue()
+        jsObject["test_JSPromiseCapability_resolve_undefined_success_1"] = jsContext
+            .function(test_JSPromiseCapability_resolve_undefined_success_1)
+            .toJSValue()
 }

@@ -26,7 +26,7 @@ export default function promiseTest() {
       let promise = new Promise<number>((resolve, reject) => {
         resolve(result);
       });
-      lib.testPromise00(promise);
+      lib.test_JSPromise_then_onFulfilled_success_1(promise);
     })
     it('test01', 0, () => {
       const result = 114514;
@@ -35,19 +35,19 @@ export default function promiseTest() {
       let promise = new Promise<number>((resolve, reject) => {
         reject(result);
       });
-      lib.testPromise01(promise);
+      lib.test_JSPromise_then_onRejected_success_1(promise);
     })
     it('test02', 0, async () => {
       // cj创建promise，传给js，由js处理promise结果
       // promise结果为resolve
-      let result = await lib.testPromise02();
+      let result = await lib.test_JSPromiseCapability_resolve_success_1();
       expect(result).assertEqual('666');
     })
     it('test03', 0, () => {
       // cj创建promise，传给js，由js处理promise结果
       // promise结果为reject
       // reject结果由js的then处理
-      lib.testPromise03()
+      lib.test_JSPromiseCapability_reject_thenRejected_success_1()
         .then((result) => {
           expect().assertFail();
         }, (error: undefined) => {
@@ -62,20 +62,20 @@ export default function promiseTest() {
       // promise结果为reject
       // reject结果由js的catch处理
       try {
-        let result = await lib.testPromise04();
+        let result = await lib.test_JSPromiseCapability_reject_success_1();
       } catch (error) {
         expect(error).assertEqual('this is an error');
       }
     })
     it('test05', 0, async () => {
       try {
-        let result = await lib.testPromise05(Promise.reject("xxx"));
+        let result = await lib.test_JSPromise_catchError_success_1(Promise.reject("xxx"));
       } catch (error) {
       }
     })
     it('test06', 0, () => {
       let s = '123%Efdasdf'
-      lib.testString00(s);
+      lib.test_JSCallInfo_operatorGet_toString_returnExpectedValue(s);
     })
   })
 }

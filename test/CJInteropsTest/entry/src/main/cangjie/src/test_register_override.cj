@@ -17,21 +17,29 @@ package entry
 
 import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule}
 
+// 同名 registerFunc 多次注册，应以最后一次为准（返回 3）
 let _ = {
     =>
-    JSModule.registerFunc("testRegisterOverride00") {jsContext, jsCallInfo => jsContext.number(1.0).toJSValue()}
-    JSModule.registerFunc("testRegisterOverride00") {jsContext, jsCallInfo => jsContext.number(2.0).toJSValue()}
-    JSModule.registerFunc("testRegisterOverride00") {jsContext, jsCallInfo => jsContext.number(3.0).toJSValue()}
+        JSModule.registerFunc("test_JSModule_registerFunc_repeatedRegister_lastWins_success") {
+            jsContext, jsCallInfo => jsContext.number(1.0).toJSValue()
+        }
+        JSModule.registerFunc("test_JSModule_registerFunc_repeatedRegister_lastWins_success") {
+            jsContext, jsCallInfo => jsContext.number(2.0).toJSValue()
+        }
+        JSModule.registerFunc("test_JSModule_registerFunc_repeatedRegister_lastWins_success") {
+            jsContext, jsCallInfo => jsContext.number(3.0).toJSValue()
+        }
 }()
 
+// 先 registerFunc 再 registerModule 写同名导出，模块导出覆盖函数（lib 上为 number 2）
 let _ = {
     =>
-    JSModule.registerFunc("testRegisterOverride01") {jsContext, jsCallInfo => jsContext.number(1.0).toJSValue()}
-    JSModule.registerModule {
-        jsContext, jsObject => jsObject["testRegisterOverride01"] = jsContext.number(2.0).toJSValue()
-    }
+        JSModule.registerFunc("test_JSModule_registerModule_overridesRegisterFunc_success") {
+            jsContext, jsCallInfo => jsContext.number(1.0).toJSValue()
+        }
+        JSModule.registerModule {
+            jsContext, jsObject => jsObject["test_JSModule_registerModule_overridesRegisterFunc_success"] = jsContext
+                .number(2.0)
+                .toJSValue()
+        }
 }()
-
-let _ = {
-    =>
-}

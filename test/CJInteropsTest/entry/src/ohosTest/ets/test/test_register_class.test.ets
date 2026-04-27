@@ -26,7 +26,7 @@ interface IPerson {
 export default function testJSModule00() {
   describe('TestRegisterClass', () => {
     it('test00', 0, () => {
-      let person = new lib.testRegisterClass00("tom", 23);
+      let person = new lib.test_JSModule_registerClass_ClassPerson_success("tom", 23);
       expect(person.name).assertEqual('tom');
       expect(person.age).assertEqual(23);
     })

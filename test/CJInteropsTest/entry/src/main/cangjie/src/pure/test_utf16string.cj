@@ -19,11 +19,14 @@ import std.unittest.*
 import std.unittest.common.*
 import std.unittest.testmacro.*
 import ohos.ark_interop.*
+import ohos.business_exception.BusinessException
+import std.runtime.*
+import std.sync.*
 
 @Test
 class TestUtf16String {
     @TestCase
-    func testUtf16FromTo() {
+    func test_Utf16String_fromJSValue_roundTrip() {
         let jsContext = getJSContext()
         let cases = [
             "1234567890",
@@ -32,38 +35,80 @@ class TestUtf16String {
             "阿斯蒂芬",
             "asdafas电",
             "暗色调😊😞🚹👴🚺"
-            ]
-        await(jsContext) {
+        ]
+        for (one in cases) {
+            let u16 = Utf16String(one)
+            let value = u16.toJSValue(jsContext)
+            let received = Utf16String.fromJSValue(jsContext, value)
+            @Expect(received, u16)
+        }
+    }
+
+    // @TestCase  // TEMP_DISABLED: gc-heavy referenceBeyondReach (suite timeout)
+    func test_Utf16String_fromJSValue_throwException34300003_referenceBeyondReach() {
+        let jsContext = getJSContext()
+        let newContext = JSRuntime().mainContext
+        let value = newContext.string("abc").toJSValue()
+        testReferenceBeyondReach(jsContext) {
+            Utf16String.fromJSValue(newContext, value)
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_fromJSValue_throwException34300004_threadMismatch() {
+        let jsContext = getJSContext()
+        let value = jsContext.string("abc").toJSValue()
+        testThreadMismatch {
+            Utf16String.fromJSValue(jsContext, value)
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_toJSValue_toUtf16String_roundTrip() {
+        let jsContext = getJSContext()
+        let cases = [
+            "1234567890",
+            "abcdefg",
+            ",./[]-=",
+            "阿斯蒂芬",
+            "asdafas电",
+            "暗色调😊😞🚹👴🚺"
+        ]
         for (one in cases) {
             let u16 = Utf16String(one)
             u16.hashCode()
-            let jstr = await(jsContext) {jsContext.string(u16).toJSValue()}
-            let receive = await(jsContext) {jstr.toUtf16String()}
+            let jstr = jsContext.string(u16).toJSValue()
+            let receive = jstr.toUtf16String()
             @Expect(u16, receive)
             @Expect(one, receive.toString())
-
-            let value = await(jsContext) {u16.toJSValue(jsContext)}
-            let received1 = await(jsContext) {Utf16String.fromJSValue(jsContext, value)}
-            @Expect(received1, u16)
         }
+    }
+
+    // @TestCase  // TEMP_DISABLED: gc-heavy referenceBeyondReach (suite timeout)
+    func test_Utf16String_toJSValue_throwException34300003_referenceBeyondReach() {
+        let jsContext = getJSContext()
+        let newContext = JSRuntime().mainContext
+        let u = Utf16String("z")
+        let _ = u.toJSValue(newContext)
+
+        testReferenceBeyondReach(jsContext) {
+            u.toJSValue(jsContext)
         }
     }
 
     @TestCase
-    func testToString() {
-        let cases = [
-            "123zxcaijoad./?'[]{}",
-            "你好，世界！",
-            "i阿搜到叫哦🚹🚺😭😢"]
-        for (one in cases){
-            let src = Utf16String(one)
-            @Expect(src.toString(), one)
-            @Expect(!src.isEmpty())
+    func test_Utf16String_toJSValue_throwException34300004_threadMismatch() {
+        let jsContext = getJSContext()
+        let u = Utf16String("z")
+        let _ = u.toJSValue(jsContext)
+
+        testThreadMismatch {
+            u.toJSValue(jsContext)
         }
     }
 
     @TestCase
-    func testDispose(){
+    func test_Utf16String_dispose_accessible_throwException() {
         let src = Utf16String("123abc")
         @Expect(src.accessible)
         src.dispose()
@@ -77,7 +122,149 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testCompressed() {
+    func test_Utf16String_accessible_success() {
+        let src = Utf16String("123abc")
+        @Expect(src.accessible)
+    }
+
+    @TestCase
+    func test_Utf16String_dispose_success() {
+        let src = Utf16String("123abc")
+        @Expect(src.accessible)
+        src.dispose()
+        @Expect(!src.accessible)
+    }
+
+    @TestCase
+    func test_Utf16String_toString_roundTrip() {
+        let cases = ["123zxcaijoad./?'[]{}", "你好，世界！", "i阿搜到叫哦🚹🚺😭😢"]
+        for (one in cases) {
+            let src = Utf16String(one)
+            @Expect(src.toString(), one)
+            @Expect(!src.isEmpty())
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_toString_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            a.dispose()
+            let _ = a.toString()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_compare_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            let b = Utf16String("y")
+            a.dispose()
+            let _ = a.compare(b)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_operatorEqual_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            let b = Utf16String("x")
+            a.dispose()
+            let _ = b == a
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_hashCode_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            a.dispose()
+            let _ = a.hashCode()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_size() {
+        let cases = [("abc123,./", 9), ("你好，世界！", 6), ("😭💗√✅️", 7)]
+        for ((ori, dst) in cases) {
+            let src = Utf16String(ori)
+            @Expect(src.size, dst)
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_size_get_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            a.dispose()
+            let _ = a.size
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_totalChars() {
+        let cases = [("abc123,./", 9), ("你好，世界！", 6), ("😭💗√✅️", 5)]
+        for ((ori, dst) in cases) {
+            let src = Utf16String(ori)
+            @Expect(src.totalChars, dst)
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_totalChars_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            a.dispose()
+            let _ = a.totalChars
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_isEmpty_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            a.dispose()
+            let _ = a.isEmpty()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_isCompressed_latin1_true_utf16_false() {
         let latin1Cases = [
             "1234567890",
             "abcdefg",
@@ -87,10 +274,7 @@ class TestUtf16String {
             let src = Utf16String(one)
             @Expect(src.isCompressed())
         }
-        let utf16Cases = [
-            "阿斯蒂芬",
-            "asdsfdasd下",
-            "i阿搜到叫哦🚹🚺😭😢"]
+        let utf16Cases = ["阿斯蒂芬", "asdsfdasd下", "i阿搜到叫哦🚹🚺😭😢"]
         for (one in utf16Cases) {
             let src = Utf16String(one)
             @Expect(!src.isCompressed())
@@ -98,15 +282,41 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testCompare() {
-        let cases = [
-            ("123456", "1234567"),
-            ("asdasfsafda", "1245678"),
-            ("谢谢小星星","嘻嘻嘻嘻嘻"),
-            ("谢谢谢谢","xxxxx"),
-            ("123abc那你呢","123abc那你呢"),
-            ("xxxxx","谢谢谢谢")]
-        for ((a,b) in cases) {
+    func test_Utf16String_operatorEqual_and_operatorNotEqual() {
+        let a = Utf16String("abc")
+        let b = Utf16String("abc")
+        let c = Utf16String("xyz")
+        @Expect(a == b)
+        @Expect(a != c)
+    }
+
+    @TestCase
+    func test_Utf16String_operatorNotEqual_success() {
+        let a = Utf16String("abc")
+        let c = Utf16String("xyz")
+        @Expect(a != c)
+    }
+
+    @TestCase
+    func test_Utf16String_operatorNotEqual_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            let b = Utf16String("y")
+            a.dispose()
+            let _ = b != a
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_compare_and_orderingOperators() {
+        let cases = [("123456", "1234567"), ("asdasfsafda", "1245678"), ("谢谢小星星", "嘻嘻嘻嘻嘻"),
+            ("谢谢谢谢", "xxxxx"), ("123abc那你呢", "123abc那你呢"), ("xxxxx", "谢谢谢谢")]
+        for ((a, b) in cases) {
             let ua = Utf16String(a)
             let ub = Utf16String(b)
             let result = ua.compare(ub)
@@ -136,35 +346,68 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testSize() {
-        let cases = [
-            ("abc123,./", 9),
-            ("你好，世界！", 6),
-            ("😭💗√✅️", 7)]
-        for ((ori, dst) in cases) {
-            let src = Utf16String(ori)
-            @Expect(src.size, dst)
+    func test_Utf16String_operatorGT_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("b")
+            let b = Utf16String("a")
+            a.dispose()
+            let _ = a > b
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
         }
+        @Expect(caught)
     }
 
     @TestCase
-    func testTotalChars() {
-        let cases = [
-            ("abc123,./", 9),
-            ("你好，世界！", 6),
-            ("😭💗√✅️", 5)]
-        for ((ori, dst) in cases) {
-            let src = Utf16String(ori)
-            @Expect(src.totalChars, dst)
+    func test_Utf16String_operatorGTE_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("b")
+            let b = Utf16String("a")
+            a.dispose()
+            let _ = a >= b
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
         }
+        @Expect(caught)
     }
 
     @TestCase
-    func testIndex() {
-        let cases = [
-            ("abc123,./", 0, r'a'),
-            ("你好，世界！", 2, r'，'),
-            ("😭💗√✅️", 2, r'💗')]
+    func test_Utf16String_operatorLT_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("b")
+            let b = Utf16String("a")
+            a.dispose()
+            let _ = a < b
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_operatorLTE_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("b")
+            let b = Utf16String("a")
+            a.dispose()
+            let _ = a <= b
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_operatorGet_index() {
+        let cases = [("abc123,./", 0, r'a'), ("你好，世界！", 2, r'，'), ("😭💗√✅️", 2, r'💗')]
         for ((src, index, dst) in cases) {
             let u16 = Utf16String(src)
             let result = u16[index]
@@ -175,11 +418,28 @@ class TestUtf16String {
                 let prev = 0xD800 + ((code & 0xFFC00) >> 10)
                 @Expect(result, UInt16(prev))
             }
+        }
+    }
 
+    @TestCase
+    func test_Utf16String_operatorGet_range_toString() {
+        let cases = [("0123456789", 0..5, "01234"), ("123456", 0..6, "123456"), ("你好世界，⏰️123", 2..7,
+            "世界，⏰️")]
+        for ((src, range, dst) in cases) {
+            let uSrc = Utf16String(src)
+            let result = uSrc[range].toString()
+            @Expect(result, dst)
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_operatorGet_outOfRange_throwException() {
+        let cases = ["abc123,./", "你好，世界！", "😭💗√✅️"]
+        for (src in cases) {
+            let u16 = Utf16String(src)
             @Expect(withException<Exception> {
                 u16[10]
             })
-
             @Expect(withException<Exception> {
                 u16[-2]
             })
@@ -187,37 +447,38 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testSubstr(){
-        let cases = [
-            ("0123456789", 0..5, "01234"),
-            ("123456", 0..6, "123456"),
-            ("你好世界，⏰️123", 2..7, "世界，⏰️")]
-        for ((src, range, dst) in cases) {
-            let uSrc = Utf16String(src)
-            let result = uSrc[range].toString()
-            @Expect(result, dst)
+    func test_Utf16String_operatorGet_throwException34300001_outOfRange() {
+        let u16 = Utf16String("abc123,./")
+        expectBusinessExceptionCode(34300001) {
+            let _ = u16[10]
         }
+    }
 
+    @TestCase
+    func test_Utf16String_operatorGet_range_invalidRange_throwException() {
         let utf16Src = Utf16String("abcde")
         @Expect(withException<Exception> {
             utf16Src[-1..1]
         })
-
         @Expect(withException<Exception> {
             utf16Src[1..0]
         })
-
         @Expect(withException<Exception> {
             utf16Src[2..1]
         })
     }
 
     @TestCase
-    func testRunes() {
-        let cases = [
-            "jiasod123123<>/",
-            "嘿嘿嘿，哈哈哈，呵呵呵！",
-            "好喜欢在☔️天吃🍕"]
+    func test_Utf16String_operatorGet_range_throwException34300001_outOfRange() {
+        let utf16Src = Utf16String("abcde")
+        expectBusinessExceptionCode(34300001) {
+            let _ = utf16Src[0..999]
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_runes() {
+        let cases = ["jiasod123123<>/", "嘿嘿嘿，哈哈哈，呵呵呵！", "好喜欢在☔️天吃🍕"]
         for (one in cases) {
             let src = Utf16String(one)
             var index = 0
@@ -233,11 +494,25 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testLines() {
+    func test_Utf16String_runes_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            a.dispose()
+            let _ = a.runes()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_lines() {
         let cases = [
             "this is a line\n另一行\n",
             "没有分行"
-            ]
+        ]
         for (one in cases) {
             let u16 = Utf16String(one)
             let a = one.lines()
@@ -252,7 +527,21 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testIndexOf() {
+    func test_Utf16String_lines_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("x")
+            a.dispose()
+            let _ = a.lines()
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_indexOf_withOffset() {
         let cases = [
             ("🚒真实的自我132", 0, "我", 6),
             ("🚒真实的自我132", 0, "3", 8),
@@ -268,11 +557,8 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testIndexOf1() {
-        let cases = [
-            ("🚒真实的自我132", "我", 6),
-            ("🚒真实的自我132", "3", 8),
-            ("0123456", "123", 1)]
+    func test_Utf16String_indexOf() {
+        let cases = [("🚒真实的自我132", "我", 6), ("🚒真实的自我132", "3", 8), ("0123456", "123", 1)]
         for ((src, target, dst) in cases) {
             let uSrc = Utf16String(src)
             let uTar = Utf16String(target)
@@ -282,7 +568,37 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testLastIndexOf() {
+    func test_Utf16String_indexOf_oneArg_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("abc")
+            let b = Utf16String("b")
+            a.dispose()
+            let _ = a.indexOf(b)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_indexOf_twoArg_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("abc")
+            let b = Utf16String("b")
+            a.dispose()
+            let _ = a.indexOf(b, Int64(0))
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_lastIndexOf_withOffset() {
         let cases = [
             ("🚂好🚂3456", 8, "345", 5),
             ("0123456", 7, "123", 1)
@@ -296,10 +612,8 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testLastIndexOfIsNone() {
-        let cases = [
-            ("0123456", 7, "999", 1)
-        ]
+    func test_Utf16String_lastIndexOf_isNone_whenNotFound() {
+        let cases = [("0123456", 7, "999", 1)]
         for ((src, offset, target, dst) in cases) {
             let uSrc = Utf16String(src)
             let uTar = Utf16String(target)
@@ -309,7 +623,7 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testLastIndexOf1() {
+    func test_Utf16String_lastIndexOf() {
         let cases = [
             ("🚂好🚂3456", "345", 5),
             ("0123456", "123", 1)
@@ -323,7 +637,37 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testCountOf() {
+    func test_Utf16String_lastIndexOf_oneArg_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("abc")
+            let b = Utf16String("b")
+            a.dispose()
+            let _ = a.lastIndexOf(b)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_lastIndexOf_twoArg_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("abc")
+            let b = Utf16String("b")
+            a.dispose()
+            let _ = a.lastIndexOf(b, Int64(2))
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_count() {
         let cases = [
             ("asdf213i1o23iui0sj0f", "a"),
             ("谢谢小星星小星星小星星嘻嘻嘻嘻", "谢")
@@ -338,46 +682,68 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testSplit() {
-        let cases = [
-            ("😓😃😐🚲😄", "", 0),
-            ("😓😃😐🚲😄", "", 0),
-            ("1234", "", 0),
-            ("1234", "", 3),
-            ("12你34🚲", "", 0),
-            ("12你34🚲", "", 3),
-            ("123456789", "1", 0),
-            ("123456789", "9", 0),
-            ("1 2 3 4 568", " ", 0),
-            (" ", "", 0)]
+    func test_Utf16String_count_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("ab")
+            let b = Utf16String("a")
+            a.dispose()
+            let _ = a.count(b)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_split() {
+        let cases = [("😓😃😐🚲😄", "", 0), ("😓😃😐🚲😄", "", 0), ("1234", "", 0), ("1234", "", 3), ("12你34🚲", "", 0),
+            ("12你34🚲", "", 3), ("123456789", "1", 0), ("123456789", "9", 0), ("1 2 3 4 568", " ", 0), (" ", "", 0)]
         for ((src, tar, count) in cases) {
             let uSrc = Utf16String(src)
             let uTar = Utf16String(tar)
             let dst = src.split(tar, count)
-            let result = uSrc.split(uTar, count).map { v => v.toString() }
+            let result = uSrc.split(uTar, count).map {v => v.toString()}
             @Expect(result, dst)
             // Belows can be uncommented after the wrong logic in `split` is fixed
             // let dst1 = src.split(tar)
-            let result1 = uSrc.split(uTar).map { v => v.toString() }
+            let result1 = uSrc.split(uTar).map {v => v.toString()}
             // @Expect(result1, dst1)
             // let dst2 = src.split(tar, removeEmpty: true)
-            let result2 = uSrc.split(uTar, removeEmpty: true).map { v => v.toString() }
+            let result2 = uSrc.split(uTar, removeEmpty: true).map {v => v.toString()}
             // @Expect(result2, dst2)
         }
     }
 
     @TestCase
-    func testLazySplit() {
-        let cases = [
-            ("😓😃😐🚲😄", "", 0),
-            ("😓😃😐🚲😄", "", 0),
-            ("1234", "", 0),
-            ("1234", "", 3),
-            ("12你34🚲", "", 0),
-            ("12你34🚲", "", 3),
-            ("123456789", "1", 0),
-            ("123456789", "9", 0),
-            ("1 2 3 4 568", " ", 0)]
+    func test_Utf16String_split_maxSplit_throwException34300001_negative() {
+        expectBusinessExceptionCode(34300001) {
+            let a = Utf16String("a,b")
+            let sep = Utf16String(",")
+            let _ = a.split(sep, Int64(-1))
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_split_twoArg_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("a,b")
+            let sep = Utf16String(",")
+            a.dispose()
+            let _ = a.split(sep)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_lazySplit() {
+        let cases = [("😓😃😐🚲😄", "", 0), ("😓😃😐🚲😄", "", 0), ("1234", "", 0), ("1234", "", 3), ("12你34🚲", "", 0),
+            ("12你34🚲", "", 3), ("123456789", "1", 0), ("123456789", "9", 0), ("1 2 3 4 568", " ", 0)]
         for ((src, tar, count) in cases) {
             let uSrc = Utf16String(src)
             let uTar = Utf16String(tar)
@@ -394,12 +760,42 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testReplace() {
+    func test_Utf16String_lazySplit_twoArg_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("a,b")
+            let sep = Utf16String(",")
+            a.dispose()
+            let _ = a.lazySplit(sep)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_lazySplit_threeArg_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("a,b")
+            let sep = Utf16String(",")
+            a.dispose()
+            let _ = a.lazySplit(sep, Int64(2))
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_replace() {
         let cases = [
             ("abcdefg", "cde", "123"),
             ("amd 解决 amd", "amd", "nvidia")
         ]
-        for ((src, from ,to) in cases) {
+        for ((src, from, to) in cases) {
             let dst = src.replace(from, to)
             let uSrc = Utf16String(src)
             let uFrom = Utf16String(from)
@@ -410,12 +806,8 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testContains() {
-        let cases = [
-            ("123456789", "0254"),
-            ("123145456", "1454"),
-            ("你12看5678", "56"),
-            ("你12看看线性5678", "看线")]
+    func test_Utf16String_contains() {
+        let cases = [("123456789", "0254"), ("123145456", "1454"), ("你12看5678", "56"), ("你12看看线性5678", "看线")]
         for ((src, tar) in cases) {
             let dst = src.contains(tar)
             let uSrc = Utf16String(src)
@@ -426,10 +818,23 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testStartsWith() {
-        let cases = [
-            ("abcd123", "abc"),
-            ("abcd您那你", "abc")]
+    func test_Utf16String_contains_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("ab")
+            let b = Utf16String("a")
+            a.dispose()
+            let _ = a.contains(b)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_startsWith() {
+        let cases = [("abcd123", "abc"), ("abcd您那你", "abc")]
         for ((src, tar) in cases) {
             let dst = src.startsWith(tar)
             let uSrc = Utf16String(src)
@@ -440,12 +845,23 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testEndsWith() {
-        let cases = [
-            ("abcd123", "abc"),
-            ("abcd123", "123"),
-            ("在这种这地方12354x", "54x"),
-            ("吱吱吱吱中", "5454")]
+    func test_Utf16String_startsWith_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("ab")
+            let b = Utf16String("a")
+            a.dispose()
+            let _ = a.startsWith(b)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_endsWith() {
+        let cases = [("abcd123", "abc"), ("abcd123", "123"), ("在这种这地方12354x", "54x"), ("吱吱吱吱中", "5454")]
         for ((src, tar) in cases) {
             let dst = src.endsWith(tar)
             let uSrc = Utf16String(src)
@@ -456,12 +872,23 @@ class TestUtf16String {
     }
 
     @TestCase
-    func testAppend() {
-        let cases = [
-            ("132", "bxx"),
-            ("您那你", "xxx"),
-            ("xxfdaasdf", "嘻嘻嘻"),
-            ("嘻嘻嘻", "单独发顺丰")]
+    func test_Utf16String_endsWith_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("ab")
+            let b = Utf16String("b")
+            a.dispose()
+            let _ = a.endsWith(b)
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_operatorPlus_toString() {
+        let cases = [("132", "bxx"), ("您那你", "xxx"), ("xxfdaasdf", "嘻嘻嘻"), ("嘻嘻嘻", "单独发顺丰")]
         for ((prev, next) in cases) {
             let dst = prev + next
             let uPrev = Utf16String(prev)
@@ -470,9 +897,62 @@ class TestUtf16String {
             @Expect(result.toString(), dst)
         }
     }
+
+    @TestCase
+    func test_Utf16String_hashCode_and_isEmpty_and_operatorRange_and_operatorPlus() {
+        let src = Utf16String("abc")
+        @Expect(src.isEmpty(), false)
+        let hc = src.hashCode()
+        @Expect(hc != 0, true)
+        @Expect(src[0..2].toString(), "ab")
+        let other = Utf16String("x")
+        @Expect((src + other).toString(), "abcx")
+    }
+
+    @TestCase
+    func test_Utf16String_operatorPlus_throwException34300003_afterDispose() {
+        var caught = false
+        try {
+            let a = Utf16String("a")
+            let b = Utf16String("b")
+            a.dispose()
+            let _ = a + b
+        } catch (e: BusinessException) {
+            @Expect(e.code, 34300003)
+            caught = true
+        }
+        @Expect(caught)
+    }
+
+    @TestCase
+    func test_Utf16String_operatorGet_throwException34300003_afterDispose() {
+        let a = Utf16String("abc")
+        a.dispose()
+        expectBusinessExceptionCode(34300003) {
+            let _ = a[0]
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_operatorGet_range_throwException34300003_afterDispose() {
+        let a = Utf16String("abc")
+        a.dispose()
+        expectBusinessExceptionCode(34300003) {
+            let _ = a[0..1]
+        }
+    }
+
+    @TestCase
+    func test_Utf16String_replace_throwException34300003_afterDispose() {
+        let a = Utf16String("abc")
+        a.dispose()
+        expectBusinessExceptionCode(34300003) {
+            let _ = a.replace(Utf16String("a"), Utf16String("x"))
+        }
+    }
 }
 
-func withException<E>(callback: ()->Unit): Bool where E <: Exception {
+func withException<E>(callback: () -> Unit): Bool where E <: Exception {
     try {
         callback()
         false

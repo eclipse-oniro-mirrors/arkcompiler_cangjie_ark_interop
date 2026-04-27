@@ -21,10 +21,10 @@ import * as lib from "libentry.so"
 export default function testJSModule04() {
   describe('TestRegisterAfterStaticInit', () => {
     it('test00', 0, () => {
-      let i = Object.keys(lib).indexOf('testRegisterAfterStaticInit00_00');
+      let i = Object.keys(lib).indexOf('test_JSModule_registerFunc_afterStaticInit_registeredFunc');
       expect(i).assertEqual(-1);
-      lib.testRegisterAfterStaticInit00();
-      i = Object.keys(lib).indexOf('testRegisterAfterStaticInit00_00');
+      lib.test_JSModule_registerFunc_afterStaticInit_success();
+      i = Object.keys(lib).indexOf('test_JSModule_registerFunc_afterStaticInit_registeredFunc');
       expect(i).assertEqual(-1);
     })
     it('test01', 0, () => {

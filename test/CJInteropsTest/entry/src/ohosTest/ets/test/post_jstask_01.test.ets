@@ -20,10 +20,10 @@ import * as lib from "libentry.so"
 export default function postJSTask() {
   describe('TestPostJSTask', () => {
     it('test00', 0, () => {
-      lib.testPostJSTask00();
+      lib.test_JSContext_isInBindThread_success();
     })
     it('test01', 0, async () => {
-      let result = await lib.testPostJSTask01(1, 2, (a: number, b: number) => {
+      let result = await lib.test_JSPromiseCapability_resolve_undefined_success_1(1, 2, (a: number, b: number) => {
         return a + b;
       });
     })
