@@ -21,7 +21,7 @@ export default function TestMixedStackBadError() {
     it('TestMixedStackBadErrorString', 0, ()=> {
       let error = undefined
       try {
-        lib.test_mixedStack_nestedCall_propagateArkTsError_success_1((callback)=> {
+        lib.test_mixedStack_nestedCall_propagateArkTsError_success((callback)=> {
           try {
             callback(()=> {
               throw "This is a error text"
@@ -40,7 +40,7 @@ export default function TestMixedStackBadError() {
     it('TestMixedStackBadErrorNumber', 0, ()=> {
       let error = undefined
       try {
-        lib.test_mixedStack_nestedCall_propagateArkTsError_success_1((callback)=> {
+        lib.test_mixedStack_nestedCall_propagateArkTsError_success((callback)=> {
           try {
             callback(()=> {
               throw 123456
