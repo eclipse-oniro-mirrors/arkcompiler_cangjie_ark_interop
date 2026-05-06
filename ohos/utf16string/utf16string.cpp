@@ -1019,11 +1019,14 @@ Utf16StringHandle Utf16String::Join(const Utf16StringHandle *src, uint32_t lengt
     if (length == 0) {
         return Empty;
     }
-    uint32_t size = separator->length_ * (length - 1);
+    size_t size = separator->length_ * (length - 1);
     bool isLatin1 = separator->isLatin1_;
     for (uint32_t i = 0; i < length; i++) {
         size += src[i]->length_;
         isLatin1 = isLatin1 && src[i]->isLatin1_;
+    }
+    if (size >= UINT32_MAX) {
+        return nullptr;
     }
     auto mem = malloc(AlignedSize(sizeof(Utf16String) + size * (isLatin1 ? 1 : 2)));
     if (!mem) {
