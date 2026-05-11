@@ -88,6 +88,8 @@ ohos_cangjie_shared_library("ohos.ark_interop") {
 
   deps = [ ":utf16string" ]
 
+  cjc_args = [ "--no-sub-pkg" ]
+
   part_name = "cangjie_ark_interop"
   subsystem_name = "arkcompiler"
 }
