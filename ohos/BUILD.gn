@@ -47,6 +47,7 @@ if (!build_ohos_sdk) {
 
 ohos_cangjie_shared_library("ohos.ark_interop") {
   sources = [
+    "ark_interop/api_config.cj",
     "ark_interop/js_array_buffer.cj",
     "ark_interop/js_bigint.cj",
     "ark_interop/js_class.cj",
@@ -57,7 +58,9 @@ ohos_cangjie_shared_library("ohos.ark_interop") {
     "ark_interop/js_heap.cj",
     "ark_interop/js_idl_type.cj",
     "ark_interop/js_interop_type.cj",
+    "ark_interop/js_map.cj",
     "ark_interop/js_module.cj",
+    "ark_interop/js_module_helper.cj",
     "ark_interop/js_promise.cj",
     "ark_interop/js_raw.cj",
     "ark_interop/js_runtime.cj",
@@ -67,27 +70,20 @@ ohos_cangjie_shared_library("ohos.ark_interop") {
     "ark_interop/jscontext.cj",
     "ark_interop/jsobject.cj",
     "ark_interop/jsstring.cj",
+    "ark_interop/kit_config.cj",
     "ark_interop/slab.cj",
     "ark_interop/utf16_string.cj",
-    "ark_interop/js_map.cj",
-    "ark_interop/js_module_helper.cj",
-    "ark_interop/api_config.cj",
-    "ark_interop/kit_config.cj",
   ]
 
   external_deps = [ "napi:ark_interop" ]
   cj_deps = [
-    "./labels:ohos.labels",
     "./business_exception:ohos.business_exception",
+    "./labels:ohos.labels",
   ]
 
-  cj_external_deps = [
-    "hiviewdfx_cangjie_wrapper:ohos.hilog"
-  ]
+  cj_external_deps = [ "hiviewdfx_cangjie_wrapper:ohos.hilog" ]
 
-  deps = [
-    ":utf16string",
-  ]
+  deps = [ ":utf16string" ]
 
   part_name = "cangjie_ark_interop"
   subsystem_name = "arkcompiler"
@@ -132,9 +128,10 @@ ohos_cangjie_macro_library("ohos.ark_interop_macro") {
     "ark_interop_macro/ark_idl_comm.cj",
     "ark_interop_macro/ark_idl_declare.cj",
     "ark_interop_macro/ark_idl_define.cj",
+    "ark_interop_macro/ark_idl_enum.cj",
     "ark_interop_macro/ark_idl_func.cj",
     "ark_interop_macro/ark_idl_interface.cj",
-    "ark_interop_macro/ark_idl_enum.cj",
+    "ark_interop_macro/ark_idl_var.cj",
   ]
   compilation_config = "pipeline=NG"
   subsystem_name = "arkcompiler"

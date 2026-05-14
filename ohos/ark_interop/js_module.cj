@@ -196,16 +196,32 @@ public class JSModule {
         lastModule_.addExporter(register)
     }
 
-    // To be made public.
-    static func registerModule(name: String, register: ModuleRegister): Unit {
+    /**
+     * Register the API to be exported to ArkTS.
+     *
+     * @param { String } name - The corresponding Cangjie module name.
+     * @param { ModuleRegister } register - A function that can return an ArkTS class (constructor).
+     * @throws { BusinessException } 34300003 - Accessing reference is beyond reach.
+     * @throws { BusinessException } 34300004 - Thread mismatch.
+     */
+    @!APILevel[
+        since: "26.0.0",
+        throwexception: true
+    ]
+    public static func registerModule(name: String, register: ModuleRegister): Unit {
         if (name.isEmpty()) {
             return registerModule(register)
         }
-        if (!JSModule.LOADED_MODULES_.contains(name)) {
-            let newModule = JSModule()
-            JSModule.LOADED_MODULES_.add(name, newModule)
+        let soName = if (name.startsWith("lib") && name.endsWith(".so")) {
+            name
+        } else {
+            "lib" + name + ".so"
         }
-        LOADED_MODULES_[name].addExporter(register)
+        if (!JSModule.LOADED_MODULES_.contains(soName)) {
+            let newModule = JSModule()
+            JSModule.LOADED_MODULES_.add(soName, newModule)
+        }
+        LOADED_MODULES_[soName].addExporter(register)
     }
 
     /**

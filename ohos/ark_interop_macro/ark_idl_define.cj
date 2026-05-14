@@ -17,7 +17,7 @@
 
 macro package ohos.ark_interop_macro
 
-import std.ast.{Tokens, ClassDecl, InterfaceDecl, FuncDecl, EnumDecl, Decl, parseDecl, assertParentContext}
+import std.ast.{Tokens, ClassDecl, InterfaceDecl, FuncDecl, EnumDecl, VarDecl, Decl, parseDecl, assertParentContext}
 import std.collection.ArrayList
 
 public macro Interop(attrTokens: Tokens, input: Tokens): Tokens {
@@ -33,6 +33,13 @@ public macro Interop(attrTokens: Tokens, input: Tokens): Tokens {
     }
 }
 
+func handleVar(varDecl: VarDecl): Tokens {
+    checkVar(varDecl)
+    genVarDeclareFile(varDecl)
+    genPackageHelperFile(varDecl.identifier.value)
+    IDLVar(varDecl).genIDLVar()
+}
+
 func handleArkTS(input: Tokens): Tokens {
     let decl = parseDecl(input)
     IDLCustomTypeWL.checkDuplicate(decl)
@@ -41,10 +48,11 @@ func handleArkTS(input: Tokens): Tokens {
         case interfaceDecl: InterfaceDecl => handleInterface(interfaceDecl)
         case funcDecl: FuncDecl => handleFunc(funcDecl, false)
         case enumDecl: EnumDecl => handleEnum(enumDecl)
+        case varDecl: VarDecl => handleVar(varDecl)
         case _ =>
             IDLUtil.diagReportTEAndThrow(
                 input,
-                "Only user-defined `class`, `interface`, `enum` types and function declarations are allowed to be applied with `Interop` macro."
+                "Only user-defined `class`, `interface`, `enum` types, function and variable declarations are allowed to be applied with `Interop` macro."
             )
             input
     }

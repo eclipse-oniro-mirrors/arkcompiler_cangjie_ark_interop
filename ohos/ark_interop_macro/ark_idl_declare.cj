@@ -20,7 +20,7 @@ macro package ohos.ark_interop_macro
 import std.fs.{Path, FSException, exists, Directory, File, OpenMode}
 import std.io.{SeekPosition, readToEnd}
 import std.sync.Mutex
-import std.ast.{PropDecl, InterfaceDecl, FuncDecl, ClassDecl, EnumDecl, TypeNode, Body, VarDecl, PrimaryCtorDecl, FuncParam, FuncType, RefType, Tokens}
+import std.ast.{PropDecl, InterfaceDecl, FuncDecl, ClassDecl, EnumDecl, TypeNode, Body, VarDecl, PrimaryCtorDecl, FuncParam, FuncType, RefType, Tokens, TokenKind}
 import std.collection.{ArrayList, HashMap}
 import std.regex.Regex
 
@@ -166,6 +166,69 @@ func genEnumDeclareFile(enumDecl: EnumDecl) {
             let enumDeclare = genEnumDeclare(enumDecl)
             cieDeclareWriteIntoIndexFile(enumDeclare, file)
         }
+    }
+}
+
+func genVarDeclareFile(varDecl: VarDecl) {
+    let pkgNames = IDLCustomTypeWL.getPkgNames(varDecl)
+    for (pkgName in pkgNames) {
+        let file = genFile(currentPkg: pkgName)
+        if (!file.isEmpty()) {
+            let varDeclareIndex = genGlobalVarDeclare(varDecl)
+            varDeclareWriteIntoIndexFile(varDeclareIndex, file)
+        }
+    }
+}
+
+func genGlobalVarDeclare(varDecl: VarDecl) {
+    let identifier = varDecl.identifier
+    let declType = varDecl.declType
+    let keyword = varDecl.keyword.value
+
+    let identifierDeclare = identifier.value
+    let retDeclare = cjType2ArktsType(declType, "varArg")
+
+    let exprTokens = varDecl.expr.toTokens()
+    let isBasicTypeLiteral = exprTokens.size == 1 && (exprTokens[0].kind == TokenKind.INTEGER_LITERAL ||
+        exprTokens[0].kind == TokenKind.FLOAT_LITERAL || exprTokens[0].kind == TokenKind.BOOL_LITERAL ||
+        exprTokens[0].kind == TokenKind.STRING_LITERAL || exprTokens[0].kind == TokenKind.SINGLE_QUOTED_STRING_LITERAL)
+
+    if (keyword == "const" && isBasicTypeLiteral) {
+        return "export declare const " + identifierDeclare + ": " + exprTokens.toString() + "\n"
+    } else if (keyword == "var") {
+        return "export declare let " + identifierDeclare + ": " + retDeclare + "\n"
+    } else {
+        return "export declare const " + identifierDeclare + ": " + retDeclare + "\n"
+    }
+}
+
+func varDeclareWriteIntoIndexFile(varDecl: String, filePath: String) {
+    synchronized(MTX) {
+        let file = try {
+            File(filePath, OpenMode.ReadWrite)
+        } catch (e: FSException | IllegalArgumentException) {
+            return
+        }
+        var content = String.fromUtf8(readToEnd(file))
+
+        if (content.contains(varDecl)) {
+            return
+        }
+
+        // Get the front part of varDecl, e.g. "export declare const xxx".
+        let front = varDecl.split(":")[0]
+        let varName = front.split(" ").last.getOrThrow()
+        let re = Regex("export declare (let|const) " + varName + ": [\\s\\S]*?\\n")
+        if (re.matches(content)) {
+            content = re.replaceAll(content, varDecl)
+        } else {
+            content = content + "\n" + varDecl
+        }
+
+        file.setLength(0)
+        file.seek(SeekPosition.Begin(0))
+        file.write(content.toArray())
+        file.close()
     }
 }
 
