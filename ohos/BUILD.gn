@@ -75,7 +75,10 @@ ohos_cangjie_shared_library("ohos.ark_interop") {
     "ark_interop/utf16_string.cj",
   ]
 
-  external_deps = [ "napi:ark_interop" ]
+  external_deps = [
+    "napi:ark_interop",
+    "napi:cj_backtrace",
+  ]
   cj_deps = [
     "./business_exception:ohos.business_exception",
     "./labels:ohos.labels",

@@ -40,6 +40,7 @@ internal func outsideError(message: String): BusinessException {
 
 // throw when create Local value without any scope.
 internal func noScopeError(): BusinessException {
+    unsafe { CJDFX_IgnoreNextBacktrace() }
     return BusinessException(34300003, "Without any scope")
 }
 
@@ -151,5 +152,6 @@ func createJSError(context: JSContext, exception: BusinessException): JSValue {
     let external = context.external(SharedException(exception))
     obj.attachCJObject(external)
     context.pendingJSError = obj
+    obj["isCangjieErrorObject"] = context.boolean(true).toJSValue()
     return obj.toJSValue()
 }

@@ -88,6 +88,8 @@ foreign func ARKTS_GetExceptionAndClear(env: JSEnv): JSValue_
 
 foreign func ARKTS_RequireArkModule(env: JSEnv, path: CPointer<UInt8>, size: UIntNative, kind: Int32): JSValue_
 
+@FastNative foreign func CJDFX_IgnoreNextBacktrace(): Unit
+
 @C
 func asyncCallbackExecutor(env: JSEnv, id: Int64): Unit {
     let context = JSContext.getOrCreate(env)
@@ -978,6 +980,7 @@ public class JSContext {
         } else {
             None
         }
+        unsafe { CJDFX_IgnoreNextBacktrace() }
         let exception = BusinessException(errName, errCode, errMsg, errStack, errData)
         let ext = external(SharedException(exception))
         errObJ[constants.builtinText.stack] = string(exception.getMixedStackTrace()).toJSValue()
