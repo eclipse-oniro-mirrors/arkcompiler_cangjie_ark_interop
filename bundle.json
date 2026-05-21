@@ -22,7 +22,9 @@
         "deps": {
             "components": [
                 "ability_runtime",
-                "napi"
+                "napi",
+                "hiviewdfx_cangjie_wrapper",
+                "arkui_cangjie_wrapper"
             ]
         },
         "build": {
