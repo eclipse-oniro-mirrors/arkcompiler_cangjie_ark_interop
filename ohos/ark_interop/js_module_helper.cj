@@ -15,14 +15,45 @@
 
 package ohos.ark_interop
 
-import std.regex.*
 import std.collection.*
 
 class ArkModuleHelper {
-    private static let idReg = Regex("^[A-Za-z][A-Za-z0-9_]*$")
-    private static func isIdentifier(name: String): Bool {
-        return idReg.find(name).isSome()
+    private static func isAlpha(c: Rune) {
+        return c >= r'a' && c <= r'z' || c >= r'A' && c <= r'Z'
     }
+
+    private static func isDigit(c: Rune) {
+        return c >= r'0' && c <= r'9'
+    }
+
+    /* Check whether it matches the regular expression "^[A-Za-z][A-Za-z0-9_]*$" */
+    private static func isIdentifier(name: String): Bool {
+        let array = name.toRuneArray()
+        if (array.size == 0 || !isAlpha(array[0])) {
+            return false
+        }
+        for (i in 1..array.size) {
+            if (!(isAlpha(array[i]) || isDigit(array[i]) || array[i] == r'_')) {
+                return false
+            }
+        }
+        return true
+    }
+
+    /* Check whether it matches the regular expression "^lib[A-Za-z0-9_\\.]+\\.so$"  */
+    private static func isLibraryIdentifier(name: String): Bool {
+        if (!name.startsWith("lib") || !name.endsWith(".so")) {
+            return false
+        }
+        let array = name.toRuneArray()
+        for (i in 3..array.size - 3) {
+            if (!(isAlpha(array[i]) || isDigit(array[i]) || array[i] == r'_' || array[i] == r'.')) {
+                return false
+            }
+        }
+        return true
+    }
+
     // normalize kitConfigs to api set.
     private static let apiSets = LazyInit {
         let result = HashSet<String>()
@@ -51,8 +82,7 @@ class ArkModuleHelper {
         if (parts.size == 1) {
             // check app native module
             if (fileName.startsWith("lib") && fileName.endsWith(".so")) {
-                let reg = Regex("^lib[A-Za-z0-9_\\.]+\\.so$")
-                return reg.find(fileName).isSome()
+                return isLibraryIdentifier(fileName)
             }
             // check kit with whitelist
             if (fileName.startsWith("@kit.")) {

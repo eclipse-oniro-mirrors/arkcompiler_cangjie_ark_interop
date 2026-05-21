@@ -40,7 +40,7 @@ Utf16StringScope::~Utf16StringScope()
     Utf16StringRecorder::alive_ = last_;
 }
 
-size_t Utf16StringScope::GetRaise()
+size_t Utf16StringScope::GetRaise() const
 {
     return Utf16StringRecorder::alive_  - last_;
 }

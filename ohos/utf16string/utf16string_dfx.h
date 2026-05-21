@@ -35,7 +35,7 @@ public:
     Utf16StringScope();
     ~Utf16StringScope();
 
-    size_t GetRaise();
+    size_t GetRaise() const;
 
 private:
     size_t last_;
