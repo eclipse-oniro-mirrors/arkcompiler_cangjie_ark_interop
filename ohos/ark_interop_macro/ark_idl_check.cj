@@ -510,17 +510,18 @@ class IDLCustomTypeWL {
         }
 
         for ((out, origs) in reverseMap) {
-            if (origs.size > 1) {
-                var msg = "Duplicate declaration '${name}' found in module '${out}'. Defined in packages: "
-                for (i in 0..origs.size) {
-                    msg += "'${origs[i]}'"
-                    if (i < origs.size - 1) {
-                        msg += ", "
-                    }
-                }
-                msg += "."
-                IDLUtil.diagReportTW(tokens, msg)
+            if (origs.size <= 1) { 
+                continue
             }
+            var msg = "Duplicate declaration '${name}' found in module '${out}'. Defined in packages: "
+            for (i in 0..origs.size) {
+                msg += "'${origs[i]}'"
+                if (i < origs.size - 1) {
+                    msg += ", "
+                }
+            }
+            msg += "."
+            IDLUtil.diagReportTW(tokens, msg)
         }
     }
 
@@ -624,10 +625,8 @@ class IDLCustomTypeWL {
         match (packageNameMap.get(declName)) {
             case Some(list) =>
                 for ((_, outPkg, storedDeclStr) in list) {
-                    if (storedDeclStr == declStr) {
-                        if (!res.contains(outPkg)) {
-                            res.add(outPkg)
-                        }
+                    if (storedDeclStr == declStr && !res.contains(outPkg)) {
+                        res.add(outPkg)
                     }
                 }
             case None => ()

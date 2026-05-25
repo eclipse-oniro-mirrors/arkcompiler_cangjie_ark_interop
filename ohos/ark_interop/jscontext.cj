@@ -972,7 +972,7 @@ public class JSContext {
             if (sign == -1 && (result > -(Int32.Min / 10) || (result == -(Int32.Min / 10) && digit > -(Int32.Min % 10)))) {
                 return 0
             }
-            if (sign == -1 && (result == -(Int32.Min / 10) && digit == -(Int32.Min % 10))) {
+            if (sign == -1 && result == -(Int32.Min / 10) && digit == -(Int32.Min % 10)) {
                 if (index == array.size - 1) {
                     return Int32.Min
                 } else {

@@ -26,7 +26,7 @@ import ohos.business_exception.*
 foreign func ARKTS_RegisterAddrGetter(callback: CFunc<(JSEnv, Int64)->CPointer<Unit>>): Unit
 
 @C
-func getJSLambdaAddr_(env: JSEnv, id: Int64): CPointer<Unit> {
+func getJSLambdaAddrCallback(env: JSEnv, id: Int64): CPointer<Unit> {
     let context = JSContext.getContext(env) ?? return CPointer<Unit>()
     let lambda = context.sharedLambda_.get(id) ?? return CPointer<Unit>()
     return getJSLambdaAddr(lambda)
@@ -178,7 +178,7 @@ public class JSModule {
             disposeJSContext
         )
         unsafe { ARKTS_SetCJModuleCallback(inout moduleCallbacks) }
-        unsafe { ARKTS_RegisterAddrGetter(getJSLambdaAddr_) }
+        unsafe { ARKTS_RegisterAddrGetter(getJSLambdaAddrCallback) }
     }
 
     /**
