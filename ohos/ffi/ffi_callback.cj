@@ -26,6 +26,10 @@ protected class Callback0Param<R> <: BaseCallBack where R <: CType {
         registerSelf()
     }
 
+    protected static func create(closure: () -> R): Callback0Param<R> {
+        return Callback0Param<R>(closure)
+    }
+
     protected func invoke(argc: Int32, _: CPointer<CPointer<Unit>>, res: CPointer<Unit>): Unit {
         if (argc != 0) {
             throw InvalidArgsException()
@@ -41,6 +45,10 @@ protected class Callback0Param<R> <: BaseCallBack where R <: CType {
 protected class Callback1Param<T, R> <: BaseCallBack where T <: CType, R <: CType {
     protected Callback1Param(let closure: (T) -> R) {
         registerSelf()
+    }
+
+    protected static func create(closure: (T) -> R): Callback1Param<T, R> {
+        return Callback1Param<T, R>(closure)
     }
 
     protected func invoke(argc: Int32, argv: CPointer<CPointer<Unit>>, res: CPointer<Unit>): Unit {
@@ -63,6 +71,10 @@ protected class Callback2Param<T0, T1, R> <: BaseCallBack where T0 <: CType, T1 
         registerSelf()
     }
 
+    protected static func create(closure: (T0, T1) -> R): Callback2Param<T0, T1, R> {
+        return Callback2Param<T0, T1, R>(closure)
+    }
+
     protected func invoke(argc: Int32, argv: CPointer<CPointer<Unit>>, res: CPointer<Unit>): Unit {
         if (argc != 2) {
             throw InvalidArgsException()
@@ -82,6 +94,10 @@ protected class Callback2Param<T0, T1, R> <: BaseCallBack where T0 <: CType, T1 
 protected class Callback3Param<T0, T1, T2, R> <: BaseCallBack where T0 <: CType, T1 <: CType, T2 <: CType, R <: CType {
     protected Callback3Param(let closure: (T0, T1, T2) -> R) {
         registerSelf()
+    }
+
+    protected static func create(closure: (T0, T1, T2) -> R): Callback3Param<T0, T1, T2, R> {
+        return Callback3Param<T0, T1, T2, R>(closure)
     }
 
     protected func invoke(argc: Int32, argv: CPointer<CPointer<Unit>>, res: CPointer<Unit>): Unit {
@@ -107,6 +123,10 @@ protected class Callback4Param<T0, T1, T2, T3, R> <: BaseCallBack where T0 <: CT
         registerSelf()
     }
 
+    protected static func create(closure: (T0, T1, T2, T3) -> R): Callback4Param<T0, T1, T2, T3, R> {
+        return Callback4Param<T0, T1, T2, T3, R>(closure)
+    }
+
     protected func invoke(argc: Int32, argv: CPointer<CPointer<Unit>>, res: CPointer<Unit>): Unit {
         if (argc != 4) {
             throw InvalidArgsException()
@@ -129,6 +149,10 @@ protected class Callback5Param<T0, T1, T2, T3, T4, R> <: BaseCallBack where T0 <
     T3 <: CType, T4 <: CType, R <: CType {
     protected Callback5Param(let closure: (T0, T1, T2, T3, T4) -> R) {
         registerSelf()
+    }
+
+    protected static func create(closure: (T0, T1, T2, T3, T4) -> R): Callback5Param<T0, T1, T2, T3, T4, R> {
+        return Callback5Param<T0, T1, T2, T3, T4, R>(closure)
     }
 
     protected func invoke(argc: Int32, argv: CPointer<CPointer<Unit>>, res: CPointer<Unit>): Unit {

@@ -49,6 +49,15 @@ protected open class FFIData {
         FFIDataManager.getInstance().register(this)
     }
 
+    /**
+     * Destroy this FFIData object manually.
+     * This function should be called when the FFI interface fails to take over the object.
+     * Corresponds to registerSelf(), used to manually release the object when FFI call fails.
+     */
+    protected func destroySelf(): Unit {
+        FFIDataManager.getInstance().releaseData(id_)
+    }
+
     protected open func onDestroyed(): Unit {
     }
 }
