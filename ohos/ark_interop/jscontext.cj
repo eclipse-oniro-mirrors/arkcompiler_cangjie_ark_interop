@@ -91,9 +91,11 @@ foreign func ARKTS_RequireArkModule(env: JSEnv, path: CPointer<UInt8>, size: UIn
 
 @C
 func asyncCallbackExecutor(env: JSEnv, id: Int64): Unit {
-    let context = JSContext.getOrCreate(env)
+    let context = JSContext.getContext(env) ?? return ()
     if (let Some(callback) <- context.asyncCallbacks_.remove(id)) {
-        callback()
+        context.newScope {
+            callback()
+        }
     }
 }
 
