@@ -86,6 +86,9 @@ protected struct Slab<T> {
             return toId(result)
         }
         let result = items_.size
+        if (result >= Int64(UInt32.Max)) {
+            throw Exception("reach max capacity")
+        }
         items_.add(SlabItem<T>(data, -1))
         return toId(result)
     }
