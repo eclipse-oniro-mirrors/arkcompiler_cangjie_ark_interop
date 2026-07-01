@@ -38,5 +38,11 @@ export default function testException01() {
         hilog.error(0, 'WBT', `|${e.message.toString()}|`);
       }
     })
+    it("test_InteropType_Exception", 0, ()=> {
+      lib.test_InteropType_Exception()
+    })
+    it("test_Utf16_LazySplit", 0, ()=> {
+      lib.test_Utf16_LazySplit()
+    })
   })
 }

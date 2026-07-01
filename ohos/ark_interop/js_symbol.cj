@@ -48,17 +48,21 @@ public class JSSymbol <: JSHeapObject & JSKeyable {
         unsafe { ARKTS_DisposeGlobal(context.env_, globalValue_) }
     }
 
+    @OverflowWrapping
     static func createSymbol(context: JSContext, description: String): JSValue_ {
         if (description.isEmpty()) {
-            unsafe { ARKTS_CreateSymbol(context.env, CPointer<UInt8>(), Int32(0)) }
-        } else {
-            unsafe {
-                let rawHandle = acquireArrayRawData(description.rawData())
-                let result = ARKTS_CreateSymbol(context.env, rawHandle.pointer, Int32(description.size))
-                releaseArrayRawData(rawHandle)
-                result
-            }
+            return unsafe { ARKTS_CreateSymbol(context.env, CPointer<UInt8>(), Int32(0)) }
         }
+        if (description.size > Int64(Int32.Max)) {
+            throw outsideError("Description is too long.")
+        }
+        unsafe {
+            let rawHandle = acquireArrayRawData(description.rawData())
+            let result = ARKTS_CreateSymbol(context.env, rawHandle.pointer, Int32(description.size))
+            releaseArrayRawData(rawHandle)
+            result
+        }
+
     }
 
     /**

@@ -23,12 +23,21 @@ interface IPerson {
   age: number;
 }
 
+@Component
+struct AAA {
+  build() {
+  }
+}
+
 export default function testJSModule00() {
   describe('TestRegisterClass', () => {
     it('test00', 0, () => {
       let person = new lib.test_JSModule_registerClass_ClassPerson_success("tom", 23);
       expect(person.name).assertEqual('tom');
       expect(person.age).assertEqual(23);
+    })
+    it("testClassException", 0, ()=> {
+      lib.testClassException(AAA)
     })
   })
 }

@@ -100,6 +100,9 @@ export default function testJSModule02() {
               expect(typeof data).assertEqual("object")
           }
       })
+      it("test_JSContext_requireArkModule", 0, ()=> {
+        lib.test_JSContext_requireArkModule()
+      })
     }
   })
 }

@@ -343,10 +343,6 @@ public class JSContext {
         scopes_.add(scope)
         let result = try {
             callback()
-        } catch (e: Exception) {
-            throw e
-        } catch (e: Error) {
-            throw e
         } finally {
             scopes_.remove(at: index)
             scope.close(env_)
@@ -636,7 +632,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<Byte>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 0)
     }
 
     /**
@@ -653,7 +649,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<Int8>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 0)
     }
 
     /**
@@ -670,7 +666,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<Int16>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 1)
     }
 
     /**
@@ -687,7 +683,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<UInt16>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 1)
     }
 
     /**
@@ -704,7 +700,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<UInt32>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 2)
     }
 
     /**
@@ -721,7 +717,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<Int32>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 2)
     }
 
     /**
@@ -738,7 +734,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<Float32>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 2)
     }
 
     /**
@@ -755,7 +751,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<Int64>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 3)
     }
 
     /**
@@ -772,7 +768,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<UInt64>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 3)
     }
 
     /**
@@ -789,7 +785,7 @@ public class JSContext {
         throwexception: true
     ]
     public func arrayBuffer(data: Array<Float64>): JSArrayBuffer {
-        JSArrayBuffer(this, data)
+        JSArrayBuffer.createArrayBuffer(this, data, 3)
     }
 
     /**
@@ -937,6 +933,7 @@ public class JSContext {
         rethrowJSError(error)
     }
 
+    @OverflowWrapping
     private func tryParseInt32(rawCode: String): Int32 {
         if (rawCode.isEmpty()) {
             return 0

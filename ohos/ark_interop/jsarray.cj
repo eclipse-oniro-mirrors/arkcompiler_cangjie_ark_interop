@@ -48,6 +48,7 @@ public class JSArray <: JSHeapObject {
         super(context, createWithInit(context, arr), JSType.OBJECT)
     }
 
+    @OverflowWrapping
     static func createWithInit(context: JSContext, arr: Array<JSValue>): JSValue_ {
         if (arr.size > Int64(UInt32.Max)) {
             throw jsArrayRangeMisMatch(0, Int64(UInt32.Max), arr.size)
@@ -83,9 +84,14 @@ public class JSArray <: JSHeapObject {
     ]
     public prop size: Int64 {
         get() {
-            let env = context.env // do lifecycle check and thread check here.
-            Int64(unsafe { ARKTS_GetArrayLength(env, innerValue) })
+            getSize()
         }
+    }
+
+    @OverflowWrapping
+    private func getSize(): Int64 {
+        let env = context.env // do lifecycle check and thread check here.
+        Int64(unsafe { ARKTS_GetArrayLength(env, innerValue) })
     }
 
     /**
@@ -101,6 +107,7 @@ public class JSArray <: JSHeapObject {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public operator func [](index: Int64): JSValue {
         let env = context.env // do lifecycle check and thread check here.
         if (index < 0 || index >= size) {
@@ -123,6 +130,7 @@ public class JSArray <: JSHeapObject {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public operator func [](index: Int64, value!: JSValue): Unit {
         let env = context.env // do lifecycle check and thread check here.
         if (index < 0 || index > Int64(UInt32.Max)) {
@@ -144,6 +152,7 @@ public class JSArray <: JSHeapObject {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public operator func [](index: Int64, value!: JSHeapObject): Unit {
         let env = context.env // do lifecycle check and thread check here.
         if (index < 0 || index > Int64(UInt32.Max)) {

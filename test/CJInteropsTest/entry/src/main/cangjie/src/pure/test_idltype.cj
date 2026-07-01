@@ -199,6 +199,7 @@ class TestIDLType {
         let firstOpt = cloned.get(0)
         @Expect(firstOpt.isSome())
         @Expect(firstOpt.getOrThrow(), "aaa")
+        @Expect(array.get(1), None)
     }
 
     // @TestCase  // TEMP_DISABLED: gc-heavy referenceBeyondReach (suite timeout)

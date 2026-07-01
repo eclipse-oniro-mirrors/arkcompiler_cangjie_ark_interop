@@ -73,4 +73,18 @@ export default function functionTest() {
       expect(f(114.514)).assertEqual(115.514);
     })
   })
+  it("testJSCallInfo", 0, ()=> {
+    try {
+      lib.testJSCallInfo()
+      expect().assertFail()
+    } catch (e) {
+    }
+  })
+  it("test_ExceptionCross", 0, ()=> {
+    try {
+      lib.test_ExceptionCross()
+      expect().assertFail()
+    } catch (e) {
+    }
+  })
 }

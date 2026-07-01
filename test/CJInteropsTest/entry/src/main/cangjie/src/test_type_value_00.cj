@@ -15,8 +15,7 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime, JSBoolean, 
-    JSNumber, JSString, JSExternal, JSInteropType, JSStringEx, JSHashMapEx}
+import ohos.ark_interop.*
 import std.collection.{ArrayList, HashMap}
 
 func test_Int8_fromJSValue_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
@@ -1511,4 +1510,12 @@ let _ = JSModule.registerModule {
         jsObject["test_JSHashMapEx_fromJSValue_success"] = jsContext
             .function(test_JSHashMapEx_fromJSValue_success)
             .toJSValue()
+        jsObject["test_Utf16_LazySplit"] = jsContext.function(test_Utf16_LazySplit).toJSValue()
+}
+
+func test_Utf16_LazySplit(context: JSContext, callInfo: JSCallInfo): JSValue {
+    let src = Utf16String("a😊😞🚹👴")
+    for (r in src.lazySplit(Utf16String(""))) {
+    }
+    context.undefined().toJSValue()
 }

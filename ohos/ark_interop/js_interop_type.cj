@@ -93,6 +93,7 @@ extend Int8 <: JSInteropType<Int8> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): Int8 {
         let value = input.toNumber()
         if (value > Float64(Int8.Max) || value < Float64(Int8.Min)) {
@@ -113,6 +114,7 @@ extend Int8 <: JSInteropType<Int8> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
     }
@@ -152,6 +154,7 @@ extend Int16 <: JSInteropType<Int16> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): Int16 {
         let value = input.toNumber()
         if (value > Float64(Int16.Max) || value < Float64(Int16.Min)) {
@@ -172,6 +175,7 @@ extend Int16 <: JSInteropType<Int16> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
     }
@@ -211,6 +215,7 @@ extend Int32 <: JSInteropType<Int32> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): Int32 {
         let value = input.toNumber()
         if (value > Float64(Int32.Max) || value < Float64(Int32.Min)) {
@@ -231,6 +236,7 @@ extend Int32 <: JSInteropType<Int32> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
         context.number(this).toJSValue()
     }
@@ -270,6 +276,7 @@ extend Int64 <: JSInteropType<Int64> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): Int64 {
         let value = input.toNumber()
         if (value > Float64(Int64.Max) || value < Float64(Int64.Min)) {
@@ -291,11 +298,13 @@ extend Int64 <: JSInteropType<Int64> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
-        if (Int64(Float64(this)) != this) {
+        let dValue = Float64(this)
+        if (Int64(dValue) != this) {
             throw integerOverflow()
         }
-        return context.number(Float64(this)).toJSValue()
+        return context.number(dValue).toJSValue()
     }
 
     /**
@@ -333,6 +342,7 @@ extend UInt8 <: JSInteropType<UInt8> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): UInt8 {
         let value = Int64(input.toNumber())
         if (value < 0 || value > Int64(UInt8.Max)) {
@@ -353,6 +363,7 @@ extend UInt8 <: JSInteropType<UInt8> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
     }
@@ -392,6 +403,7 @@ extend UInt16 <: JSInteropType<UInt16> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): UInt16 {
         let value = input.toNumber()
         if (value > Float64(UInt16.Max) || value < 0.0) {
@@ -412,6 +424,7 @@ extend UInt16 <: JSInteropType<UInt16> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
         return context.number(Int32(this)).toJSValue()
     }
@@ -472,6 +485,7 @@ extend UInt32 <: JSInteropType<UInt32> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
         if (Int64(this) <= Int64(Int32.Max)) {
             return context.number(Int32(this)).toJSValue()
@@ -515,6 +529,7 @@ extend UInt64 <: JSInteropType<UInt64> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): UInt64 {
         let value = input.toNumber()
         if (value < 0.0 || value > Float64(UInt64.Max)) {
@@ -536,11 +551,13 @@ extend UInt64 <: JSInteropType<UInt64> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func toJSValue(context: JSContext): JSValue {
-        if (UInt64(Float64(this)) != this) {
+        let dValue = Float64(this)
+        if (UInt64(dValue) != this) {
             throw integerOverflow()
         }
-        return context.number(Float64(this)).toJSValue()
+        return context.number(dValue).toJSValue()
     }
 
     /**
@@ -577,6 +594,7 @@ extend Float16 <: JSInteropType<Float16> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): Float16 {
         return Float16(input.toNumber())
     }
@@ -631,6 +649,7 @@ extend Float32 <: JSInteropType<Float32> {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public static func fromJSValue(_: JSContext, input: JSValue): Float32 {
         return Float32(input.toNumber())
     }

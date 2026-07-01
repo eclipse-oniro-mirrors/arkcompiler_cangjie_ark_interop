@@ -81,46 +81,6 @@ public class JSArrayBuffer <: JSHeapObject {
         buffer_ = buffer
     }
 
-    init(context: JSContext, buffer: Array<Byte>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size), buffer)
-    }
-
-    init(context: JSContext, buffer: Array<Int8>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size), None)
-    }
-
-    init(context: JSContext, buffer: Array<Int16>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size) * 2, None)
-    }
-
-    init(context: JSContext, buffer: Array<UInt16>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size) * 2, None)
-    }
-
-    init(context: JSContext, buffer: Array<UInt32>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size) * 4, None)
-    }
-
-    init(context: JSContext, buffer: Array<Int32>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size) * 4, None)
-    }
-
-    init(context: JSContext, buffer: Array<Float32>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size) * 4, None)
-    }
-
-    init(context: JSContext, buffer: Array<Int64>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size) * 8, None)
-    }
-
-    init(context: JSContext, buffer: Array<UInt64>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size) * 8, None)
-    }
-
-    init(context: JSContext, buffer: Array<Float64>) {
-        this(context, createArrayBuffer(context, buffer), Int32(buffer.size) * 8, None)
-    }
-
     init(context: JSContext, buffer: CPointer<Byte>, length: Int32, finalizer: JSBufferFinalizer) {
         super(context, createArrayBuffer(context, buffer, length, finalizer), JSType.OBJECT)
         byteLength_ = length
@@ -165,20 +125,26 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func readBytes(): Array<Byte> {
+        return toArray<Byte>("Byte", 0)
+    }
+
+    @Frozen
+    @OverflowWrapping
+    private func toArray<T>(tyName: String, shift: Int64): Array<T> where T <: CType {
         let env = context.env // do lifecycle check and thread check here.
-        if (let Some(bytes) <- buffer_) {
-            bytes
-        } else {
-            let size = Int64(byteLength)
-            let bytes = Array<Byte>(size, repeat: 0)
-            unsafe {
-                let rawHandle = acquireArrayRawData(bytes)
-                ARKTS_ArrayBufferReadBytes(env, innerValue, rawHandle.pointer, byteLength)
-                releaseArrayRawData(rawHandle)
-            }
-            buffer_ = bytes
-            bytes
+        let byteLen = Int64(byteLength)
+        let mask = 1 << shift
+        if (byteLen % mask != 0) {
+            throw sizeError(mask, tyName)
         }
+        let size = byteLen >> shift
+        let bytes = Array<T>(size, repeat: unsafe {zeroValue<T>()})
+        unsafe {
+            let rawHandle = acquireArrayRawData(bytes)
+            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<Byte>(rawHandle.pointer), byteLength)
+            releaseArrayRawData(rawHandle)
+        }
+        return bytes
     }
 
     /**
@@ -193,15 +159,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toUInt8Array(): Array<UInt8> {
-        let env = context.env // do lifecycle check and thread check here.
-        let size = Int64(byteLength)
-        let bytes = Array<Byte>(size, repeat: 0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, rawHandle.pointer, byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<UInt8>("UInt8", 0)
     }
 
     /**
@@ -216,15 +174,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toInt8Array(): Array<Int8> {
-        let env = context.env // do lifecycle check and thread check here.
-        let size = Int64(byteLength)
-        let bytes = Array<Int8>(size, repeat: 0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<UInt8>(rawHandle.pointer), byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<Int8>("Int8", 0)
     }
 
     /**
@@ -240,18 +190,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toUInt16Array(): Array<UInt16> {
-        let env = context.env // do lifecycle check and thread check here.
-        if ((byteLength % 2) != 0) {
-            throw sizeError(2, "UInt16")
-        }
-        let size = Int64(byteLength) >> 1
-        let bytes = Array<UInt16>(size, repeat: 0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<UInt8>(rawHandle.pointer), byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<UInt16>("UInt16", 1)
     }
 
     /**
@@ -267,18 +206,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toInt16Array(): Array<Int16> {
-        let env = context.env // do lifecycle check and thread check here.
-        if ((byteLength % 2) != 0) {
-            throw sizeError(2, "Int16")
-        }
-        let size = Int64(byteLength) >> 1
-        let bytes = Array<Int16>(size, repeat: 0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<UInt8>(rawHandle.pointer), byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<Int16>("Int16", 1)
     }
 
     /**
@@ -294,18 +222,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toInt32Array(): Array<Int32> {
-        let env = context.env // do lifecycle check and thread check here.
-        if ((byteLength % 4) != 0) {
-            throw sizeError(4, "Int32")
-        }
-        let size = Int64(byteLength) >> 2
-        let bytes = Array<Int32>(size, repeat: 0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<UInt8>(rawHandle.pointer), byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<Int32>("Int32", 2)
     }
 
     /**
@@ -321,18 +238,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toUInt32Array(): Array<UInt32> {
-        let env = context.env // do lifecycle check and thread check here.
-        if ((byteLength % 4) != 0) {
-            throw sizeError(4, "UInt32")
-        }
-        let size = Int64(byteLength) >> 2
-        let bytes = Array<UInt32>(size, repeat: 0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<UInt8>(rawHandle.pointer), byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<UInt32>("UInt32", 2)
     }
 
     /**
@@ -348,18 +254,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toFloat32Array(): Array<Float32> {
-        let env = context.env // do lifecycle check and thread check here.
-        if ((byteLength % 4) != 0) {
-            throw sizeError(4, "Float32")
-        }
-        let size = Int64(byteLength) >> 2
-        let bytes = Array<Float32>(size, repeat: 0.0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<UInt8>(rawHandle.pointer), byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<Float32>("Float32", 2)
     }
 
     /**
@@ -375,18 +270,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toUInt64Array(): Array<UInt64> {
-        let env = context.env // do lifecycle check and thread check here.
-        if ((byteLength % 8) != 0) {
-            throw sizeError(8, "UInt64")
-        }
-        let size = Int64(byteLength) >> 3
-        let bytes = Array<UInt64>(size, repeat: 0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<UInt8>(rawHandle.pointer), byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<UInt64>("UInt64", 3)
     }
 
     /**
@@ -402,18 +286,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toInt64Array(): Array<Int64> {
-        let env = context.env // do lifecycle check and thread check here.
-        if ((byteLength % 8) != 0) {
-            throw sizeError(8, "Int64")
-        }
-        let size = Int64(byteLength) >> 3
-        let bytes = Array<Int64>(size, repeat: 0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<UInt8>(rawHandle.pointer), byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<Int64>("Int64", 3)
     }
 
     /**
@@ -429,18 +302,7 @@ public class JSArrayBuffer <: JSHeapObject {
         throwexception: true
     ]
     public func toFloat64Array(): Array<Float64> {
-        let env = context.env // do lifecycle check and thread check here.
-        if ((byteLength % 8) != 0) {
-            throw sizeError(8, "Float64")
-        }
-        let size = Int64(byteLength) >> 3
-        let bytes = Array<Float64>(size, repeat: 0.0)
-        unsafe {
-            let rawHandle = acquireArrayRawData(bytes)
-            ARKTS_ArrayBufferReadBytes(env, innerValue, CPointer<UInt8>(rawHandle.pointer), byteLength)
-            releaseArrayRawData(rawHandle)
-        }
-        bytes
+        return toArray<Float64>("Float64", 3)
     }
 
     /**
@@ -665,165 +527,28 @@ public class JSArrayBuffer <: JSHeapObject {
     /**
      * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
      */
-    static func copyToArrayBuffer(context: JSContext, jsArrayBuffer: JSValue_, length: Int32,
-        srcPointer: CPointer<Unit>): Unit {
-        unsafe {
-            let dst = ARKTS_GetArrayBufferRawPtr(context.env, jsArrayBuffer)
-            let status = memcpy_s(dst, UIntNative(length), srcPointer, UIntNative(length))
+    @Frozen
+    @OverflowWrapping
+    static func createArrayBuffer<T>(context: JSContext, buffer: Array<T>, shift: Int64): JSArrayBuffer where T <: CType {
+        let length = buffer.size << shift
+        if (length > Int64(Int32.Max)) {
+            throw byteLengthInvalid(length)
+        }
+        let byteLength = Int32(length)
+        let copyLength = UIntNative(length)
+        let value = unsafe {
+            let result = ARKTS_CreateArrayBuffer(context.env, byteLength)
+            context.checkJSException() // in case of ArkTS OOM
+            let rawHandle = acquireArrayRawData(buffer)
+            let dst = ARKTS_GetArrayBufferRawPtr(context.env, result)
+            let status = memcpy_s(dst, copyLength, CPointer<Unit>(rawHandle.pointer), copyLength)
+            releaseArrayRawData(rawHandle)
             if (status != 0) {
                 throw badCCall("memcpy_s", status)
             }
-        }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<UInt64>): JSValue_ {
-        let length = Int32(buffer.size) * 8
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
             result
         }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<Int64>): JSValue_ {
-        let length = Int32(buffer.size) * 8
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
-            result
-        }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<Float64>): JSValue_ {
-        let length = Int32(buffer.size) * 8
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
-            result
-        }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<Float32>): JSValue_ {
-        let length = Int32(buffer.size) * 4
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
-            result
-        }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<Int32>): JSValue_ {
-        let length = Int32(buffer.size) * 4
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
-            result
-        }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<UInt32>): JSValue_ {
-        let length = Int32(buffer.size) * 4
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
-            result
-        }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<Int16>): JSValue_ {
-        let length = Int32(buffer.size) * 2
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
-            result
-        }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<UInt16>): JSValue_ {
-        let length = Int32(buffer.size) * 2
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
-            result
-        }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<Int8>): JSValue_ {
-        let length = Int32(buffer.size)
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
-            result
-        }
-    }
-
-    /**
-     * @throws { BusinessException } 34300002 - Bad C call memcpy_s.
-     */
-    static func createArrayBuffer(context: JSContext, buffer: Array<Byte>): JSValue_ {
-        let length = Int32(buffer.size)
-        let result = unsafe { ARKTS_CreateArrayBuffer(context.env, length) }
-        context.checkJSException() // in case of ArkTS OOM
-        unsafe {
-            let rawHandle = acquireArrayRawData(buffer)
-            copyToArrayBuffer(context, result, length, CPointer<Unit>(rawHandle.pointer))
-            releaseArrayRawData(rawHandle)
-            result
-        }
+        JSArrayBuffer(context, value)
     }
 
     static func createArrayBuffer(context: JSContext, buffer: CPointer<Byte>, length: Int32,

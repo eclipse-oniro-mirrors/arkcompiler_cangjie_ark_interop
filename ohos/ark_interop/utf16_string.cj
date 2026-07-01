@@ -86,8 +86,8 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     public static let EMPTY: Utf16String = Utf16String(unsafe { CJUtf16StringCreateEmpty()})
     static let NL = Utf16String("\n")
 
-    static unsafe func create(isLatin1: Bool, length: Int64, writer: (CPointer<Unit>)->Unit): Utf16String {
-        let handle = CJUtf16StringCreateWithoutData(isLatin1, UInt32(length))
+    static unsafe func create(isLatin1: Bool, length: UInt32, writer: (CPointer<Unit>)->Unit): Utf16String {
+        let handle = CJUtf16StringCreateWithoutData(isLatin1, length)
         let src = Utf16String(handle)
         try {
             writer(src.getHeader().data)
@@ -111,7 +111,11 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public init(src: String) {
+        if (src.size > Int64(Int32.Max)) {
+            throw outsideError("String is too long.")
+        }
         handle_ = unsafe {
             let rawArr = src.rawData()
             let arrHandle = acquireArrayRawData(rawArr)
@@ -199,15 +203,16 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func toString(): String {
         acquire()
         let header = getHeader()
         let allocSize = if (header.isLatin1) {
-            header.length
+            Int64(header.length)
         } else {
-            header.length * 4;
+            Int64(header.length) << 2;
         }
-        let array = Array<UInt8>(Int64(allocSize), repeat: 0)
+        let array = Array<UInt8>(allocSize, repeat: 0)
         let size = unsafe {
             let arrHandle = acquireArrayRawData(array)
             let size = CJUtf16StringWriteToUtf8(handle_, arrHandle.pointer)
@@ -274,6 +279,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func hashCode(): Int64 {
         acquire()
         let value = unsafe {CJUtf16StringHash(handle_)}
@@ -301,8 +307,13 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     
     prop rawSize: Int64 {
         get() {
-            Int64(getHeader().length)
+            getRawSize()
         }
+    }
+
+    @OverflowWrapping
+    private func getRawSize(): Int64 {
+        Int64(getHeader().length)
     }
 
     prop length: UInt32 {
@@ -322,14 +333,19 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
     ]
     public prop totalChars: Int64 {
         get() {
-            acquire()
-            if (!charsInited_) {
-                chars_ = unsafe {CJUtf16StringTotalChars(handle_)}
-                charsInited_ = true
-            }
-            release()
-            return Int64(chars_)
+            getTotalChars()
         }
+    }
+
+    @OverflowWrapping
+    private func getTotalChars(): Int64 {
+        acquire()
+        if (!charsInited_) {
+            chars_ = unsafe {CJUtf16StringTotalChars(handle_)}
+            charsInited_ = true
+        }
+        release()
+        return Int64(chars_)
     }
 
     /**
@@ -456,6 +472,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public operator func [](index: Int64): UInt16 {
         acquire()
         let header = getHeader()
@@ -488,6 +505,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public operator func [](range: Range<Int64>): Utf16String {
         acquire()
         if (range.start < 0) {
@@ -520,6 +538,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func runes(): Iterator<Rune> {
         acquire()
         let header = getHeader()
@@ -684,6 +703,7 @@ public class Utf16String <: ToString & Equatable<Utf16String> & Hashable & JSKey
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func split(separator: Utf16String, maxSplit: Int64, removeEmpty!: Bool = false): Array<Utf16String> {
         acquire()
         separator.acquire()
@@ -929,6 +949,7 @@ class Latin1Iterator <: Iterator<Rune> {
     /**
      * Return next rune.
      */
+    @OverflowWrapping
     public func next(): ?Rune {
         if (current < size) {
             host.acquire()
@@ -956,6 +977,7 @@ class Utf16Iterator <: Iterator<Rune> {
     /**
      * Return next rune.
      */
+    @OverflowWrapping
     public func next(): ?Rune {
         if (current < size) {
             host.acquire()
@@ -988,6 +1010,7 @@ class SplitIterator <: Iterator<Utf16String> {
     let removeEmpty: Bool
     var closed = false
 
+    @OverflowWrapping
     SplitIterator(src: Utf16String, target: Utf16String, maxCount: Int64, removeEmpty: Bool) {
         this.src = src
         this.target = target
@@ -1000,6 +1023,7 @@ class SplitIterator <: Iterator<Utf16String> {
     /**
      * Return next Utf16String.
      */
+    @OverflowWrapping
     public func next(): ?Utf16String {
         if (maxCount < 0) {
             return None
@@ -1040,6 +1064,7 @@ class SplitIterator <: Iterator<Utf16String> {
         return None
     }
 
+    @OverflowWrapping
     func nextChar(): ?Utf16String {
         if (current < length) {
             if (maxCount == 0) {

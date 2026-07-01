@@ -24,16 +24,6 @@ internal func jsArrayRangeMisMatch(min: Int64, max: Int64, given: Int64, message
     return BusinessException(34300001, "${message}, allowed: [${min}, ${max}), given: ${given}")
 }
 
-internal func jsCodeError(code: Int32, jsMessage: String, jsStack: Array<String>): BusinessException {
-    return outsideError("ArkTS exception, code: ${code}, " +
-        "message: ${jsMessage}, stack: ${String.join(jsStack, delimiter: "\n")}.")
-}
-
-internal func jsCodeError(jsMessage: String, jsStack: Array<String>): BusinessException {
-    return outsideError("ArkTS exception, " +
-        "message: ${jsMessage}, stack: ${String.join(jsStack, delimiter: "\n")}.")
-}
-
 internal func outsideError(message: String): BusinessException {
     return BusinessException(34300002, "Outside error occurred, ${message}")
 }
@@ -61,11 +51,11 @@ internal func jsTypeMisMatch(acquireType: JSType, givenType: JSType): BusinessEx
 }
 
 internal func sizeError(size: Int64, tyName: String): BusinessException {
-    return outsideError("Binding memory's size is not uniformed(${tyName}'s size should be pow of ${size}).")
+    return outsideError("Binding memory's size is not uniformed(${tyName}'s size should be multiple of ${size}).")
 }
 
-internal func codecError(): BusinessException {
-    return outsideError("Codec error.")
+internal func byteLengthInvalid(value: Int64): BusinessException {
+    return outsideError("Exceeds the upper limit of byteLength, max: ${Int32.Max}.")
 }
 
 internal func nativeIdInvalid(value: Int64): BusinessException {

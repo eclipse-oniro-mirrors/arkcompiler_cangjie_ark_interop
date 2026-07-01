@@ -34,6 +34,7 @@ export function test_JSFunction_call_localLambda_success(f: (a: number) => numbe
 export function test_JSFunction_call_instanceMethod_success(f: (a: number) => number): void;
 export function test_JSFunction_call_staticMethod_success(f: (a: number) => number): void;
 export function test_JSContext_function_returnCallable_success(): (a: number) => number;
+export function testJSCallInfo(): void
 
 export function test_JSContext_isInBindThread_success(): void;
 export function test_JSPromiseCapability_resolve_undefined_success_1(
@@ -265,3 +266,12 @@ export function test_JSArrayBuffer_toArrayBufferJSValue_throwException34300002(a
 export function test_JSArrayBuffer_toUInt8ArrayJSValue_throwException34300002(array: Uint16Array): string
 export function test_JSArrayBuffer_toUInt8ClampedArrayJSValue_throwException34300002(array: Uint16Array): string
 export function test_JSArrayBuffer_toInt8ArrayJSValue_throwException34300002(array: Uint16Array): string
+
+export function test_JSArrayBuffer_WithException(): void
+export function testClassException(src: Object): void
+export function test_JSArrayEx(): void
+export function test_JSHashmapEx(): void
+export function test_InteropType_Exception(): void
+export function test_JSContext_requireArkModule(): void
+export function test_Utf16_LazySplit(): void
+export function test_ExceptionCross(): void

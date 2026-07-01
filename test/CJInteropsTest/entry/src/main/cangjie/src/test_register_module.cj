@@ -90,7 +90,52 @@ let _ = JSModule.registerModule {
             jsObject["test_JSContext_requireArkModule_success"] = jsContext.function {
                 context, callInfo => context.requireArkModule(callInfo[0].toString())
             }.toJSValue()
+            jsObject["test_JSContext_requireArkModule"] = jsContext.function(test_JSContext_requireArkModule).toJSValue()
         }
+}
+
+let _ = if (DeviceInfo.sdkApiVersion >= 26) {
+    JSModule.registerModule("entry") { context, exports =>
+        exports["testExportModule"] = context.number(1.0).toJSValue()
+    }
+    JSModule.registerModule("libentry.so") { context, exports =>
+        exports["testExportModule1"] = context.number(1.0).toJSValue()
+    }
+    JSModule.registerFunc("entry@testExportFunc") { context, _ =>
+        context.undefined().toJSValue()
+    }
+    JSModule.registerFunc("libentry.so@testExportFunc1") { context =>
+        context.function { c, _ =>
+            c.undefined().toJSValue()
+        }
+    }
+    JSModule.registerClass("entry@testExportClass") { context =>
+        context.clazz({ _, callInfo =>
+            callInfo.thisArg
+        })
+    }
+}
+
+func test_JSContext_requireArkModule(context: JSContext, callInfo: JSCallInfo): JSValue {
+    expectException<Exception> {
+        context.requireArkModule("xxx")
+    }
+    expectException<Exception> {
+        context.requireArkModule("libxxx")
+    }
+    expectException<Exception> {
+        context.requireArkModule("")
+    }
+    expectException<Exception> {
+        context.requireArkModule("lib*.so")
+    }
+    expectException<Exception> {
+        context.requireArkModule("*./xxx")
+    }
+    expectException<Exception> {
+        context.requireArkModule("entry/*/xxx")
+    }
+    context.undefined().toJSValue()
 }
 
 class Person <: SharedObject {
