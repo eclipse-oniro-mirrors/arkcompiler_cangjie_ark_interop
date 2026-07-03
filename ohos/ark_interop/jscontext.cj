@@ -573,8 +573,7 @@ public class JSContext {
         JSPromiseCapability(this)
     }
 
-    func throwJSError(exception: Exception): Unit {
-        let stack = exception.getStackTrace()
+    private func formatStackTrace(stack: Array<StackTraceElement>): String {
         let stackTexts = Array<String>(stack.size) {
             index =>
             let frame = stack[index]
@@ -585,24 +584,19 @@ public class JSContext {
             }
             "\t at ${frame.declaringClass}${packageDelimiter}${frame.methodName}(${frame.fileName}:${frame.lineNumber})"
         }
-        let message = "${exception}\n${String.join(stackTexts, delimiter: "\n")}"
+        String.join(stackTexts, delimiter: "\n")
+    }
+
+    func throwJSError(exception: Exception): Unit {
+        let stack = formatStackTrace(exception.getStackTrace())
+        let message = "${exception}\n${stack}"
         let jstr = JSString.createString(this, message)
         unsafe { ARKTS_Throw(env, jstr) }
     }
 
     func throwJSError(exception: Error): Unit {
-        let stack = exception.getStackTrace()
-        let stackTexts = Array<String>(stack.size) {
-            index =>
-            let frame = stack[index]
-            let packageDelimiter = if (frame.declaringClass.isEmpty()) {
-                ""
-            } else {
-                "."
-            }
-            "\t at ${frame.declaringClass}${packageDelimiter}${frame.methodName}(${frame.fileName}:${frame.lineNumber})"
-        }
-        let message = "${exception}\n${String.join(stackTexts, delimiter: "\n")}"
+        let stack = formatStackTrace(exception.getStackTrace())
+        let message = "${exception}\n${stack}"
         let jstr = JSString.createString(this, message)
         unsafe { ARKTS_Throw(env, jstr) }
     }
