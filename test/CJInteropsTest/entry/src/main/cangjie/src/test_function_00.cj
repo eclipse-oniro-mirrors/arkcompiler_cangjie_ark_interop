@@ -16,6 +16,7 @@
 package entry
 
 import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSClass, JSObject, SharedObject, JSRuntime}
+import ohos.business_exception.*
 
 func test_JSFunction_call_globalFunction_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
     Assert.equals(jsCallInfo.count, 1)
@@ -86,15 +87,22 @@ func test_JSFunction_call_instanceMethod_success(jsContext: JSContext, jsCallInf
 }
 
 func test_JSFunction_call_staticMethod_success(jsContext: JSContext, jsCallInfo: JSCallInfo): JSValue {
+    let f = jsCallInfo[0].asFunction()
     try {
         Assert.equals(jsCallInfo.count, 1)
         Assert.isTrue(jsCallInfo[0].isFunction())
-        let f = jsCallInfo[0].asFunction()
         let result = f.call(jsContext.number(114.514).toJSValue())
         Assert.isTrue(result.isNumber())
         Assert.equals(result.toNumber(), 117.514)
     } catch (e: Exception) {
         Assert.isUnreachable()
+    }
+    try {
+        let args = Array<JSValue>(256, repeat: jsContext.undefined().toJSValue())
+        f.call(args)
+        Assert.isUnreachable()
+    } catch (_: BusinessException) {
+        // skip
     }
     jsContext.undefined().toJSValue()
 }
@@ -113,6 +121,12 @@ func test_JSContext_function_returnCallable_success(jsContext: JSContext, jsCall
             jsContext.number(result).toJSValue()
     }.toJSValue()
     return jsValue
+}
+
+func testJSCallInfo(context: JSContext, callInfo: JSCallInfo): JSValue {
+    Assert.isTrue(callInfo[0x1_0000_0000].isUndefined())
+    Array<UInt16>(0x1_0000_0000_0000, repeat: 0) // expect throw OOM here
+    context.undefined().toJSValue()
 }
 
 let _ = JSModule.registerModule {
@@ -138,4 +152,5 @@ let _ = JSModule.registerModule {
         jsObject["test_JSContext_function_returnCallable_success"] = jsContext
             .function(test_JSContext_function_returnCallable_success)
             .toJSValue()
+        jsObject["testJSCallInfo"] = jsContext.function(testJSCallInfo).toJSValue()
 }

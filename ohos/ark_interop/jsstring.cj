@@ -105,7 +105,11 @@ extend String <: JSKeyable {
     since: "22"
 ]
 public class JSString <: JSHeapObject & ToString & JSKeyable {
+    @OverflowWrapping
     static func createString(context: JSContext, source: String): JSValue_ {
+        if (source.size > Int64(Int32.Max)) {
+            throw  outsideError("String is too long.")
+        }
         unsafe {
             let rawHandle = acquireArrayRawData(source.rawData())
             let result = ARKTS_CreateUtf8(context.env, rawHandle.pointer, Int32(rawHandle.array.size))
@@ -123,26 +127,27 @@ public class JSString <: JSHeapObject & ToString & JSKeyable {
         result
     }
 
+    @OverflowWrapping
     static func readString(context: JSContext, value: JSValue_): String {
         let env = context.env_
-        let size = unsafe { ARKTS_GetValueUtf8Size(env, value) - 1 }
-        let bytes = Array<UInt8>(Int64(size), repeat: 0)
+        let size = Int64(unsafe { ARKTS_GetValueUtf8Size(env, value)}) - 1
+        let bytes = Array<UInt8>(size, repeat: 0)
         unsafe {
             let rawHandle = acquireArrayRawData(bytes)
-            let updatedSize = ARKTS_GetValueUtf8(env, value, size, rawHandle.pointer)
+            let updatedSize = ARKTS_GetValueUtf8(env, value, Int32(size), rawHandle.pointer)
             releaseArrayRawData(rawHandle)
-
-            String.fromUtf8Unchecked(bytes.slice(0, Int64(updatedSize - 1)))
+            String.withRawData(bytes.slice(0, Int64(updatedSize - 1)))
         }
     }
 
+    @OverflowWrapping
     static func readUtf16String(context: JSContext, value: JSValue_): Utf16String {
         let env = context.env_
         let info = unsafe { ARKTS_GetStringInfo(env, value) }
         let length = info.length
         let boxValue = Box(value)
         unsafe {
-            Utf16String.create(info.isCompressed, Int64(length)) { ptr =>
+            Utf16String.create(info.isCompressed, length) { ptr =>
                 ARKTS_StringCopy(env, boxValue.value, ptr, length)
             }
         }

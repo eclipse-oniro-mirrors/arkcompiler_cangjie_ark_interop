@@ -82,9 +82,14 @@ public class JSCallInfo {
     ]
     public prop count: Int64 {
         get() {
-            context.checkLifecycleAndThread()
-            Int64(unsafe { ARKTS_GetArgCount(callInfo) })
+            getCount()
         }
+    }
+
+    @OverflowWrapping
+    private func getCount(): Int64 {
+        context.checkLifecycleAndThread()
+        Int64(unsafe { ARKTS_GetArgCount(callInfo) })
     }
 
     /**
@@ -118,6 +123,7 @@ public class JSCallInfo {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public operator func [](index: Int64): JSValue {
         context.checkLifecycleAndThread()
         // for compatibility of optional argument parsing.
@@ -232,7 +238,7 @@ public class JSFunction <: JSHeapObject {
         }
     }
 
-    static func callWithManyArgs(env: JSEnv, fun: JSValue_, thisArg: JSValue_, args: Array<JSValue_>): JSValue_ {
+    static func callWithManyArgs(env: JSEnv, fun: JSValue_, thisArg: JSValue_, args: Array<JSValue_>, argCount: Int32): JSValue_ {
         unsafe {
             let rawHandle = acquireArrayRawData(args)
             let result = try {
@@ -241,26 +247,28 @@ public class JSFunction <: JSHeapObject {
                     env,
                     fun,
                     thisArg,
-                    Int32(args.size),
+                    argCount,
                     rawHandle.pointer
                 )
-            } catch (e: Exception) {
+            } finally {
                 releaseArrayRawData(rawHandle)
-                throw e
             }
-
-            releaseArrayRawData(rawHandle)
             result
         }
     }
 
+    static let maxCallArgs = Int64(Int32.Max)
+
+    @OverflowWrapping
     static func callWithArr(env: JSEnv, fun: JSValue_, thisArg: JSValue_, args: Array<JSValue_>): JSValue_ {
         if (args.size == 0) {
             callWithNoneArg(env, fun, thisArg)
         } else if (args.size == 1) {
             callWithOneArg(env, fun, thisArg, args[0])
+        } else if (args.size < maxCallArgs) {
+            callWithManyArgs(env, fun, thisArg, args, Int32(args.size))
         } else {
-            callWithManyArgs(env, fun, thisArg, args)
+            throw OverflowException()
         }
     }
 

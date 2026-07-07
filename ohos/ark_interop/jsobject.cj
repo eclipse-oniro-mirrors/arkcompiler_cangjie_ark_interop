@@ -345,24 +345,9 @@ abstract sealed class JSObjectBase <: JSHeapObject {
     ]
     public func keys(): Array<String> {
         let keyJArr = JSValue(context, unsafe { ARKTS_EnumOwnProperties(context.env, innerValue) })
-        if (!keyJArr.isArray()) {
-            return []
-        }
         let jArr = keyJArr.asArray()
-        return Array<String>(jArr.size) {
-            index =>
-            let raw = jArr[index]
-            if (raw.isString()) {
-                return raw.toString()
-            }
-            if (raw.isSymbol()) {
-                let symbol = raw.asSymbol()
-                return "symbol[\"${symbol.description}\"]"
-            }
-            if (raw.isNumber()) {
-                return "${raw.toNumber()}"
-            }
-            return "[unknown key type]: ${raw.typeof().toString()}"
+        return Array<String>(jArr.size) { index =>
+            jArr[index].toString()
         }
     }
 

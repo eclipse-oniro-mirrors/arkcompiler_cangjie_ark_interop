@@ -73,6 +73,7 @@ public open class SharedObject {
     since: "22"
 ]
 public class JSExternal <: JSHeapObject {
+    @OverflowWrapping
     static func createExternal(context: JSContext, data: SharedObject): JSValue_ {
         let id = if (data.nativeId_ < 0) {
             let id = context.sharedObjects_.append(data)
@@ -97,11 +98,6 @@ public class JSExternal <: JSHeapObject {
     init(context: JSContext, data: SharedObject) {
         super(context, createExternal(context, data), JSType.EXTERNAL)
         id_ = data.nativeId_
-    }
-
-    private init(context: JSContext, value: JSValue, id: Int64) {
-        super(context, value.value, JSType.EXTERNAL)
-        id_ = id
     }
 
     ~init() {

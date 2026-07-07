@@ -44,26 +44,18 @@ public class JSClass <: JSHeapObject {
         return result
     }
 
-    private let prototype_: ?JSObject
+    private let prototype_: JSObject
 
     init(context: JSContext, value: JSValue_) {
         super(context, value, JSType.FUNCTION)
         let proto = unsafe { ARKTS_GetPrototype(context.env, value) }
-        prototype_ = if (unsafe { ARKTS_IsObject(context.env, proto) }) {
-            JSObject(context, proto)
-        } else {
-            None
-        }
+        prototype_ = JSObject(context, proto)
     }
 
     init(context: JSContext, constructor: JSLambda, superClass: ?JSClass) {
         super(context, createClass(context, constructor, superClass), JSType.FUNCTION)
         let proto = unsafe { ARKTS_GetPrototype(context.env, innerValue) }
-        prototype_ = if (unsafe { ARKTS_IsObject(context.env, proto) }) {
-            JSObject(context, proto)
-        } else {
-            None
-        }
+        prototype_ = JSObject(context, proto)
     }
 
     ~init() {
@@ -81,9 +73,7 @@ public class JSClass <: JSHeapObject {
     ]
     public prop prototype: JSObject {
         get() {
-            prototype_.getOrThrow {
-                propertyError("class", "prototype", "object")
-            }
+            prototype_
         }
     }
 
@@ -138,20 +128,25 @@ public class JSClass <: JSHeapObject {
         since: "22",
         throwexception: true
     ]
+    @OverflowWrapping
     public func new(args: Array<JSValue>): JSValue {
         let env = context.env // do lifecycle check and thread check here.
-        let result = if (args.size > 0) {
+        let result = if (args.size == 0) {
+            unsafe { ARKTS_New(env, innerValue, 0, CPointer<JSValue_>()) }
+        } else if (args.size < JSFunction.maxCallArgs) {
             let jsArr = Array<JSValue_>(args.size) {
                 index => args[index].value
             }
             unsafe {
                 let rawHandle = acquireArrayRawData(jsArr)
-                let result = ARKTS_New(env, innerValue, Int32(args.size), rawHandle.pointer)
-                releaseArrayRawData(rawHandle)
-                result
+                try {
+                    ARKTS_New(env, innerValue, Int32(args.size), rawHandle.pointer)
+                } finally {
+                    releaseArrayRawData(rawHandle)
+                }
             }
         } else {
-            unsafe { ARKTS_New(env, innerValue, 0, CPointer<JSValue_>()) }
+            throw OverflowException()
         }
         JSValue(context, result)
     }

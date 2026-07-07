@@ -94,5 +94,14 @@ export default function arrayTest() {
       let str = lib.test_JSArrayBuffer_toInt8ArrayJSValue_throwException34300002(buffer);
       expect(str.includes("Outside error occurred"));
     })
+    it("test_JSArrayBuffer_WithException", 0, ()=> {
+      lib.test_JSArrayBuffer_WithException()
+    })
+    it("test_JSArrayEx", 0, ()=> {
+        lib.test_JSArrayEx()
+    })
+    it("test_JSHashmapEx", 0, ()=> {
+        lib.test_JSHashmapEx()
+    })
   })
 }

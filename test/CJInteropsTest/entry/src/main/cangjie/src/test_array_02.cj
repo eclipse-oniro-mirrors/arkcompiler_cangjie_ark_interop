@@ -15,13 +15,16 @@
 
 package entry
 
-import ohos.ark_interop.{JSModule, JSContext, JSCallInfo, JSValue, JSObject}
+import ohos.ark_interop.*
 import std.math.MathExtension
+import std.collection.*
 
 let _ = JSModule.registerModule {
     jsContext: JSContext, jsObject: JSObject => jsObject["test_JSArray_OperatorSetJSValue_success_2"] = jsContext
         .function(test_JSArray_OperatorSetJSValue_success_2)
         .toJSValue()
+    jsObject["test_JSArrayEx"] = jsContext.function(test_JSArrayEx).toJSValue()
+    jsObject["test_JSHashmapEx"] = jsContext.function(test_JSHashmapEx).toJSValue()
 }
 
 // js创建空array传入cj
@@ -31,4 +34,39 @@ func test_JSArray_OperatorSetJSValue_success_2(jsContext: JSContext, jsCallInfo:
     array[0] = jsContext.number(114.514f64).toJSValue()
     array[1] = jsContext.boolean(false).toJSValue()
     array.toJSValue()
+}
+
+func test_JSArrayEx(context: JSContext, callInfo: JSCallInfo): JSValue {
+    let arr = JSArrayEx<String>("aaa")
+    try {
+        arr[-1]
+        Assert.isUnreachable()
+    } catch (_: Exception) {
+        // do nothing
+    }
+    try {
+        arr[1]
+        Assert.isUnreachable()
+    } catch (_: Exception) {
+        // do nothing
+    }
+    arr.toJSValue(context)
+    Assert.equals(arr[0], "aaa")
+    arr[0] = "bbb"
+    return context.undefined().toJSValue()
+}
+
+func test_JSHashmapEx(context: JSContext, callInfo: JSCallInfo): JSValue {
+    let map = JSHashMapEx<String, String>(HashMap<String, String>(("a", "b")))
+    map.toJSValue(context)
+    map.keys()
+    map.toHashMap()
+    try {
+        map["c"]
+        Assert.isUnreachable()
+    } catch (_: Exception) {
+        // do nothing
+    }
+
+    context.undefined().toJSValue()
 }

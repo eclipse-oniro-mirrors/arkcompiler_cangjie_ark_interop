@@ -54,29 +54,6 @@ protected struct Slab<T> {
         }
         slabId_ | index
     }
-
-    protected mut func getSlabItemsAndClear(): ArrayList<SlabItem<T>> {
-        let items = items_
-        items_ = ArrayList<SlabItem<T>>()
-        last_ = -1
-        return items
-    }
-
-    protected static func toDataList(items: ArrayList<SlabItem<T>>): ArrayList<T> {
-        let result = ArrayList<T>()
-        for (item in items) {
-            if (let Some(data) <- item.data) {
-                result.add(data)
-            }
-        }
-        return result
-    }
-
-    protected mut func getAllAndClear(): ArrayList<T> {
-        let items = getSlabItemsAndClear()
-        toDataList(items)
-    }
-
     protected mut func append(data: T): Int64 {
         if (last_ >= 0) {
             let lastPrev = items_[last_].prev
@@ -150,22 +127,5 @@ protected struct SlabMT<T> {
         synchronized(mutex_) {
             slab_.remove(id)
         }
-    }
-
-    protected func get(id: Int64): ?T {
-        synchronized(mutex_) {
-            slab_.get(id)
-        }
-    }
-
-    protected operator func [](id: Int64): T {
-        get(id).getOrThrow()
-    }
-
-    protected mut func getAllAndClear(): ArrayList<T> {
-        let items = synchronized(mutex_) {
-            slab_.getSlabItemsAndClear()
-        }
-        return Slab<T>.toDataList(items)
     }
 }

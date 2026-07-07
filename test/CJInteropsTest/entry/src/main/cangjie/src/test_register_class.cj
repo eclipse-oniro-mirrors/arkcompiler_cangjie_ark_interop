@@ -19,3 +19,18 @@ import ohos.ark_interop.{JSValue, JSRuntime, JSContext, JSCallInfo, JSModule}
 
 // registerClass(name, register: ClassRegister)
 let _ = JSModule.registerClass("test_JSModule_registerClass_ClassPerson_success", Person.getJSClass)
+
+func testClassException(context: JSContext, callInfo: JSCallInfo): JSValue {
+    let clazz = context.clazz({ c, callInfo =>
+        throw Exception("this is an exception")
+    })
+    try {
+        clazz.new([])
+        Assert.isUnreachable()
+    } catch (e: Exception) {
+        // do nothing
+    }
+    context.undefined().toJSValue()
+}
+
+let _ = JSModule.registerFunc("testClassException", testClassException)
