@@ -15,6 +15,7 @@ import("//build/templates/cangjie/cjc.gni")
 
 if (!build_ohos_sdk) {
   ohos_shared_library("utf16string") {
+    branch_protector_ret = "pac_ret"
     include_dirs = [ "utf16string" ]
 
     sources = [
