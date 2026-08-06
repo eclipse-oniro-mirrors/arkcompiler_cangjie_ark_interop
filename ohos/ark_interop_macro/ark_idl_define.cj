@@ -36,8 +36,10 @@ public macro Interop(attrTokens: Tokens, input: Tokens): Tokens {
 func handleVar(varDecl: VarDecl): Tokens {
     checkVar(varDecl)
     genVarDeclareFile(varDecl)
-    genPackageHelperFile(varDecl.identifier.value)
-    IDLVar(varDecl).genIDLVar()
+    return quote(
+        $(genPackageHelperTokens())
+        $(IDLVar(varDecl).genIDLVar())
+    )
 }
 
 func handleArkTS(input: Tokens): Tokens {
@@ -61,8 +63,10 @@ func handleArkTS(input: Tokens): Tokens {
 func handleFunc(funcDecl: FuncDecl, isAsync: Bool): Tokens {
     checkFunc(funcDecl, isAsync)
     genFuncDeclareFile(funcDecl, isAsync)
-    genPackageHelperFile(funcDecl.identifier.value)
-    IDLFunction(funcDecl, isAsync).genIDLFunction()
+    return quote(
+        $(genPackageHelperTokens())
+        $(IDLFunction(funcDecl, isAsync).genIDLFunction())
+    )
 }
 
 func handleInterface(interfaceDecl: InterfaceDecl): Tokens {
@@ -74,8 +78,10 @@ func handleInterface(interfaceDecl: InterfaceDecl): Tokens {
 func handleClass(classDecl: ClassDecl): Tokens {
     checkClass(classDecl)
     genClassDeclareFile(classDecl)
-    genPackageHelperFile(classDecl.identifier.value)
-    IDLClass(classDecl).genIDLClass()
+    return quote(
+        $(genPackageHelperTokens())
+        $(IDLClass(classDecl).genIDLClass())
+    )
 }
 
 /*
