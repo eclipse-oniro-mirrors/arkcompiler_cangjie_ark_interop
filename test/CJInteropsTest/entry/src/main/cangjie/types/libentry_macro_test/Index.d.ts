@@ -13,20 +13,11 @@
  * limitations under the License.
  */
 
-{
-  "name": "entry",
-  "version": "1.0.0",
-  "description": "Please describe the basic information.",
-  "main": "",
-  "author": "",
-  "license": "",
-  "dependencies": {
-    "libentry.so": "file:./src/main/cangjie/types/libentry",
-    "libentry.macro_test.so": "file:./src/main/cangjie/types/libentry_macro_test",
-    "libentry.pure.so": "file:./src/main/cangjie/types/libentry.pure",
-    "libentry_c.so": "file:./src/main/cpp/types/libentry",
-    "localhar": "file:../localhar",
-    "localhsp": "file:../localhsp",
-    "@ohos/lottie": "^2.0.0"
-  }
+export declare class ExportClass {
+    str: string;
+    num: number;
+    toString(): string
+    constructor(str: string, num: number)
 }
+
+export declare function exportNumber(): number

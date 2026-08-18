@@ -143,3 +143,9 @@ ohos_cangjie_macro_library("ohos.ark_interop_macro") {
   subsystem_name = "arkcompiler"
   part_name = "cangjie_ark_interop"
 }
+
+group("cj_app_build_support") {
+  deps = [
+    ":ohos.ark_interop_macro(//build/toolchain/linux:clang_x64)"
+  ]
+}
