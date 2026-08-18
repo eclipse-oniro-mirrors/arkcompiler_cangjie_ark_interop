@@ -50,14 +50,23 @@ let _ = {
 }()
 
 @FastNative
+foreign func dlopen(name: CString, mode: Int32): CPointer<Unit>
+@FastNative
 foreign func dlsym(handle: CPointer<Unit>, name: CString): CPointer<Unit>
 
 func gcov_dump(): Unit {
     unsafe {
+        let soName = LibC.mallocCString("libohos.ark_interop.so")
+        let soHandle = dlopen(soName, 0)
+        if (soHandle.isNull()) {
+            Hilog.error(0, "test", "dlopen libohos.ark_interop.so failed")
+            return
+        }
         let cName = LibC.mallocCString("__gcov_dump")
-        let handle = dlsym(CPointer<Unit>(), cName)
+        let handle = dlsym(soHandle, cName)
         LibC.free(cName)
         if (handle.isNull()) {
+            Hilog.error(0, "test", "no symbol of __gcov_dump")
             return
         }
         let call = CFunc<() -> Unit>(handle)
