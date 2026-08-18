@@ -31,6 +31,7 @@ import TestExternal from './test_external_00.test'
 import TestNewScopeTask from './test_newScope.test'
 import TestMixedStack from './test_mixed_stack.test'
 import TestMixedStackBadError from './test_mixed_stack_bad_error.test.js'
+import TestMacro from "./macro_test.test"
 
 export default function testsuite() {
   promiseTest();
@@ -52,4 +53,5 @@ export default function testsuite() {
   TestNewScopeTask();
   TestMixedStack();
   TestMixedStackBadError();
+  TestMacro();
 }
