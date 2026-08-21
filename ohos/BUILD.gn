@@ -145,7 +145,12 @@ ohos_cangjie_macro_library("ohos.ark_interop_macro") {
 }
 
 group("cj_app_build_support") {
+  if (host_os == "mac") {
+    _host_toolchain = "//build/toolchain/mac:clang_x64"
+  } else {
+    _host_toolchain = "//build/toolchain/linux:clang_x64"
+  }
   deps = [
-    ":ohos.ark_interop_macro(//build/toolchain/linux:clang_x64)"
+    ":ohos.ark_interop_macro(${_host_toolchain})"
   ]
 }
