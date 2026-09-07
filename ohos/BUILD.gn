@@ -36,6 +36,10 @@ if (!build_ohos_sdk) {
       "-Wno-unused-private-field",
     ]
 
+    external_deps = [
+      "bounds_checking_function:libsec_static"
+    ]
+
     if (current_os == "ohos") {
       cflags += [ "-fPIC" ]
     }

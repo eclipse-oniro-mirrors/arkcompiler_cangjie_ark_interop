@@ -24,7 +24,8 @@
                 "ability_runtime",
                 "napi",
                 "hiviewdfx_cangjie_wrapper",
-                "arkui_cangjie_wrapper"
+                "arkui_cangjie_wrapper",
+                "bounds_checking_function"
             ]
         },
         "build": {

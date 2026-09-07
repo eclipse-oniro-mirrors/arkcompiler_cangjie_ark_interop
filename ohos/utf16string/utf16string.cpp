@@ -17,6 +17,8 @@
 
 #include "helper.h"
 #include "utf16string_dfx.h"
+#include <securec.h>
+
 #define SHIFT_BITS_3 3
 #define SHIFT_BITS_6 6
 #define SHIFT_BITS_10 10
@@ -280,8 +282,13 @@ Utf16StringHandle Utf16String::CreateLatin1(const char *src, uint32_t length, bo
     }
     auto data = static_cast<uint8_t*>(str) + sizeof(Utf16String);
     auto result = new (str)Utf16String(true, false, length, data, isConstObJ);
-    std::copy_n(src, length, data);
-    return result;
+    auto status = memcpy_s(data, length, src, length);
+    if (status == 0) {
+        return result;
+    } else {
+        free(str);
+        return nullptr;
+    }
 }
 
 Utf16StringHandle Utf16String::CreateUtf16(const char16_t *src, uint32_t length, bool isConst, bool isConstObJ)
@@ -294,15 +301,28 @@ Utf16StringHandle Utf16String::CreateUtf16(const char16_t *src, uint32_t length,
         auto result = new (str)Utf16String(false, true, length, src, isConstObJ);
         return result;
     } else {
-        auto str = malloc(AlignedSize(sizeof(Utf16String) + (length * 2)));
+        uint64_t copyLength = length;
+        copyLength <<= 1;
+        if (copyLength > std::numeric_limits<uint32_t>::max()) {
+            return nullptr;
+        }
+        if (copyLength + sizeof(Utf16String) > std::numeric_limits<size_t>::max()) {
+            return nullptr;
+        }
+        auto str = malloc(AlignedSize(sizeof(Utf16String) + copyLength));
         if (!str) {
             return nullptr;
         }
         auto data = reinterpret_cast<char16_t*>(static_cast<char*>(str) + sizeof(Utf16String));
         auto result = new (str)Utf16String(true, false, length, data, isConstObJ);
-        std::copy_n(src, length, data);
 
-        return result;
+        auto status = memcpy_s(data, copyLength, src, copyLength);
+        if (status == 0) {
+            return result;
+        } else {
+            free(str);
+            return nullptr;
+        }
     }
 }
 
@@ -364,8 +384,12 @@ std::string Utf16String::ToString() const
 uint32_t Utf16String::WriteToUtf8(char *dst) const
 {
     if (isLatin1_) {
-        __builtin_memcpy(dst, src_, length_);
-        return length_;
+        auto status = memcpy_s(dst, length_, src_, length_);
+        if (status == 0) {
+            return length_;
+        } else {
+            return 0;
+        }
     }
     return Utf16ToUtf8(dst, Utf16Data(), length_);
 }
