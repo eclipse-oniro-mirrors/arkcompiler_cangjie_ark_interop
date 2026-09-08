@@ -20,8 +20,28 @@ package ohos.ark_interop
 import ohos.business_exception.BusinessException
 import ohos.hilog.*
 
-internal func jsArrayRangeMisMatch(min: Int64, max: Int64, given: Int64, message!: String = "The accessing index is out of range"): BusinessException {
-    return BusinessException(34300001, "${message}, allowed: [${min}, ${max}), given: ${given}")
+internal enum Limit {
+    | Include(Int64)
+    | Exclude(Int64)
+}
+
+internal func jsArrayRangeMisMatch(min: Int64, max: Int64, given: Int64,
+    message!: String = "The accessing index is out of range"): BusinessException {
+    return jsArrayRangeMisMatch(Include(min), Exclude(max), given, message)
+}
+
+internal func jsArrayRangeMisMatch(min: Limit, max: Limit, given: Int64, message: String): BusinessException {
+    let minValue = match (min) {
+        case Include(v) => "[${v}"
+        case Exclude(v) => "(${v}"
+    }
+
+    let maxValue = match (max) {
+        case Include(v) => "${v}]"
+        case Exclude(v) => "${v})"
+    }
+
+    return BusinessException(34300001, "${message}, allowed: ${minValue}, ${maxValue}, given: ${given}")
 }
 
 internal func outsideError(message: String): BusinessException {
