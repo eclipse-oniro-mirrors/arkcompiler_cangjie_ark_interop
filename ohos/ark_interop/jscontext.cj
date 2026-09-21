@@ -599,7 +599,7 @@ public class JSContext {
 
     /**
      * Create an ArkTS ArrayBuffer.
-	 *
+     *
      * @param { Int32 } length - Size of the memory block.
      * @throws { BusinessException } 34300001 - The arrayBuffer length is invalid.
      * @throws { BusinessException } 34300002 - Outside error occurred.
@@ -613,7 +613,8 @@ public class JSContext {
     ]
     public func arrayBuffer(length: Int32): JSArrayBuffer {
         if (length <= 0) {
-            throw jsArrayRangeMisMatch(0, Int64(Int32.Max), Int64(length), message: "The arrayBuffer length is invalid")
+            throw jsArrayRangeMisMatch(Exclude(0), Exclude(Int64(Int32.Max)), Int64(length),
+                "The arrayBuffer length is invalid")
         }
         JSArrayBuffer(this, length)
     }
@@ -790,7 +791,7 @@ public class JSContext {
 
     /**
      * Create an ArkTS ArrayBuffer.
-	 *
+     *
      * @param { CPointer<Byte> } rawData - Memory block address.
      * @param { Int32 } length - Size of the memory block.
      * @param { JSBufferFinalizer } finalizer - Memory block cleanup function.
